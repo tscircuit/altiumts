@@ -15,6 +15,7 @@ import type { AltiumRecord } from "../records/altium-record"
 import {
   type AltiumBinaryPcbPrimitiveFamily,
   parseAltiumBinaryPcbPrimitiveStream,
+  parseAltiumBinaryPcbWideStrings,
 } from "./parse-altium-binary-pcb-primitives"
 import { parseAltiumBinaryPropertyRecord } from "./parse-altium-binary-property-record"
 
@@ -32,7 +33,11 @@ const PROPERTY_STREAM_RECORD_KINDS: Record<string, string> = {
 
 const PRIMITIVE_STREAM_FAMILIES = new Set([
   "Arcs6",
+  "BoardRegions",
   "Pads6",
+  "Regions6",
+  "ShapeBasedRegions6",
+  "Texts6",
   "Tracks6",
   "Vias6",
 ])
@@ -72,6 +77,10 @@ export function parseAltiumBinaryPcbDoc(
   const propertyRecords = new Map<string, AltiumRecord[]>()
   const primitiveRecords = new Map<string, AltiumRecord[]>()
   const streamSummaries: AltiumPcbStreamSummary[] = []
+  const wideStringsData = compoundFile.getStream("/WideStrings6/Data")
+  const wideStrings = wideStringsData
+    ? parseAltiumBinaryPcbWideStrings(wideStringsData.content)
+    : new Map<number, string>()
 
   for (const family of [...storageFamilies].sort()) {
     const data = compoundFile.getStream([family, "Data"])
@@ -97,6 +106,7 @@ export function parseAltiumBinaryPcbDoc(
             {
               expectedRecordCount: declaredRecordCount,
               maximumRecordLength: options.maxPrimitiveRecordLength,
+              wideStrings,
             },
           )
         : []
@@ -123,6 +133,7 @@ export function parseAltiumBinaryPcbDoc(
     primitiveRecords,
     propertyRecords,
     streamSummaries,
+    wideStrings,
   })
 }
 

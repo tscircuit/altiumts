@@ -12,7 +12,8 @@
     "indentStyle": "space"
   },
   "files": {
-    "includes": ["**", "!**/dist", "!**/package.json", "!references"]
+    "includes": ["**", "!**/dist", "!**/package.json", "!references"],
+    "maxSize": 5242880
   },
   "javascript": {
     "formatter": {

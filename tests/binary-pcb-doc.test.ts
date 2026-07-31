@@ -5,6 +5,7 @@ import {
   detectAltiumFile,
   parseAltiumBinaryPcbDoc,
   parseAltiumBinaryPcbPrimitiveStream,
+  parseAltiumBinaryPcbWideStrings,
   parseAltiumFile,
 } from "../lib"
 import { readReferenceBytes } from "./svg/read-reference"
@@ -31,14 +32,39 @@ test("detects and parses binary PCB properties and primitive streams", async () 
   expect(document.arcs).toHaveLength(147)
   expect(document.vias).toHaveLength(499)
   expect(document.pads).toHaveLength(1_550)
+  expect(document.regions).toHaveLength(131)
+  expect(document.regionFills).toHaveLength(131)
+  expect(document.boardRegions).toHaveLength(1)
+  expect(document.texts).toHaveLength(1_122)
+  expect(document.wideStrings.size).toBe(1_122)
   expect(document.getRecordsByKind("Track")).toHaveLength(10_762)
   expect(document.getRecordsByKind("Pad")).toHaveLength(1_550)
+  expect(document.getRecordsByKind("Region")).toHaveLength(131)
+  expect(document.getRecordsByKind("RegionFill")).toHaveLength(131)
+  expect(document.getRecordsByKind("BoardRegion")).toHaveLength(1)
+  expect(document.getRecordsByKind("Text")).toHaveLength(1_122)
   expect(document.board?.getCaseInsensitive("KIND")).toBe("Protel_Advanced_PCB")
   expect(document.getStreamSummary("tracks6")).toMatchObject({
     dataSize: 581_148,
     declaredRecordCount: 10_762,
     decodedPrimitiveRecordCount: 10_762,
     decodedPropertyRecordCount: 0,
+  })
+  expect(document.getStreamSummary("Texts6")).toMatchObject({
+    declaredRecordCount: 1_122,
+    decodedPrimitiveRecordCount: 1_122,
+  })
+  expect(document.getStreamSummary("Regions6")).toMatchObject({
+    declaredRecordCount: 131,
+    decodedPrimitiveRecordCount: 131,
+  })
+  expect(document.getStreamSummary("ShapeBasedRegions6")).toMatchObject({
+    declaredRecordCount: 131,
+    decodedPrimitiveRecordCount: 131,
+  })
+  expect(document.getStreamSummary("BoardRegions")).toMatchObject({
+    declaredRecordCount: 1,
+    decodedPrimitiveRecordCount: 1,
   })
   expect(document.getBytes()).toEqual(source)
 
@@ -54,17 +80,73 @@ test("detects and parses binary PCB properties and primitive streams", async () 
   expect(document.vias[0]?.getCaseInsensitive("STARTLAYER")).toBe("TOP")
   expect(document.vias[0]?.getCaseInsensitive("ENDLAYER")).toBe("BOTTOM")
   expect(document.vias[0]?.getNumber("NET")).toBe(370)
+  expect(document.wideStrings.get(0)).toBe("DOUT")
+  expect(document.texts[0]?.getCaseInsensitive("WIDESTRINGINDEX")).toBe("0")
+  expect(document.texts[0]?.getCaseInsensitive("FONTNAME")).toBe("Arial")
+  expect(document.regions[0]?.getCaseInsensitive("SOURCESTREAM")).toBe(
+    "ShapeBasedRegions6",
+  )
+  expect(document.regionFills[0]?.getCaseInsensitive("SOURCESTREAM")).toBe(
+    "Regions6",
+  )
+  expect(document.boardRegions[0]?.getCaseInsensitive("SOURCESTREAM")).toBe(
+    "BoardRegions",
+  )
+  expect(document.boardRegions[0]?.getCaseInsensitive("REGIONKIND")).toBe(
+    "BOARD_CUTOUT",
+  )
+  expect(
+    document.regions.filter((record) => record.getNumber("HOLECOUNT")),
+  ).toHaveLength(83)
 })
 
 test("validates binary primitive frame counts", async () => {
   const source = await readReferenceBytes("elk-pi.PcbDoc")
   const document = parseAltiumBinaryPcbDoc(source)
   const tracks = document.compoundFile.getStream("/Tracks6/Data")?.content
+  const regions = document.compoundFile.getStream("/Regions6/Data")?.content
+  const shapeBasedRegions = document.compoundFile.getStream(
+    "/ShapeBasedRegions6/Data",
+  )?.content
+  const boardRegions =
+    document.compoundFile.getStream("/BoardRegions/Data")?.content
+  const wideStrings =
+    document.compoundFile.getStream("/WideStrings6/Data")?.content
   if (!tracks) throw new Error("Expected the Tracks6/Data fixture stream")
+  if (!regions) throw new Error("Expected the Regions6/Data fixture stream")
+  if (!shapeBasedRegions) {
+    throw new Error("Expected the ShapeBasedRegions6/Data fixture stream")
+  }
+  if (!boardRegions) {
+    throw new Error("Expected the BoardRegions/Data fixture stream")
+  }
+  if (!wideStrings) {
+    throw new Error("Expected the WideStrings6/Data fixture stream")
+  }
 
   expect(() =>
     parseAltiumBinaryPcbPrimitiveStream("Tracks6", tracks, {
       expectedRecordCount: 10_761,
     }),
   ).toThrow(AltiumFormatDetectionError)
+  expect(() =>
+    parseAltiumBinaryPcbPrimitiveStream("Regions6", regions, {
+      expectedRecordCount: 130,
+    }),
+  ).toThrow(AltiumFormatDetectionError)
+  expect(() =>
+    parseAltiumBinaryPcbPrimitiveStream(
+      "ShapeBasedRegions6",
+      shapeBasedRegions,
+      {
+        expectedRecordCount: 130,
+      },
+    ),
+  ).toThrow(AltiumFormatDetectionError)
+  expect(() =>
+    parseAltiumBinaryPcbPrimitiveStream("BoardRegions", boardRegions, {
+      expectedRecordCount: 2,
+    }),
+  ).toThrow(AltiumFormatDetectionError)
+  expect(parseAltiumBinaryPcbWideStrings(wideStrings).size).toBe(1_122)
 })

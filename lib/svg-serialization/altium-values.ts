@@ -60,10 +60,73 @@ export function getPcbVertexPoints(record: AltiumRecord): SvgPoint[] {
     const x = parsePcbMeasurement(record.getCaseInsensitive(`VX${index}`))
     const y = parsePcbMeasurement(record.getCaseInsensitive(`VY${index}`))
     if (x === undefined || y === undefined) break
-    points.push({ x, y })
+    const position = { x, y }
+    const kind = Number(record.getCaseInsensitive(`KIND${index}`) ?? 0)
+    if (kind !== 1) {
+      appendDistinctPoint(points, position)
+      continue
+    }
+
+    const centerX = parsePcbMeasurement(record.getCaseInsensitive(`CX${index}`))
+    const centerY = parsePcbMeasurement(record.getCaseInsensitive(`CY${index}`))
+    const radius = parsePcbMeasurement(record.getCaseInsensitive(`R${index}`))
+    const startAngle = Number(record.getCaseInsensitive(`SA${index}`))
+    const endAngle = Number(record.getCaseInsensitive(`EA${index}`))
+    if (
+      centerX === undefined ||
+      centerY === undefined ||
+      radius === undefined ||
+      radius <= 0 ||
+      !Number.isFinite(startAngle) ||
+      !Number.isFinite(endAngle)
+    ) {
+      appendDistinctPoint(points, position)
+      continue
+    }
+
+    for (const arcPoint of approximateAltiumVertexArc({
+      center: { x: centerX, y: centerY },
+      endAngle,
+      position,
+      radius,
+      startAngle,
+    })) {
+      appendDistinctPoint(points, arcPoint)
+    }
   }
 
   return points
+}
+
+export function getPcbRegionContours(record: AltiumRecord): SvgPoint[][] {
+  const contours = [getPcbVertexPoints(record)]
+  const declaredHoleCount = Number(record.getCaseInsensitive("HOLECOUNT") ?? 0)
+  const holeCount = Number.isInteger(declaredHoleCount)
+    ? Math.min(Math.max(declaredHoleCount, 0), 10_000)
+    : 0
+
+  for (let holeIndex = 0; holeIndex < holeCount; holeIndex++) {
+    const points: SvgPoint[] = []
+    const declaredVertexCount = Number(
+      record.getCaseInsensitive(`HOLE${holeIndex}COUNT`) ?? 0,
+    )
+    const vertexCount = Number.isInteger(declaredVertexCount)
+      ? Math.min(Math.max(declaredVertexCount, 0), 100_000)
+      : 0
+    for (let vertexIndex = 0; vertexIndex < vertexCount; vertexIndex++) {
+      const x = parsePcbMeasurement(
+        record.getCaseInsensitive(`HOLE${holeIndex}VX${vertexIndex}`),
+      )
+      const y = parsePcbMeasurement(
+        record.getCaseInsensitive(`HOLE${holeIndex}VY${vertexIndex}`),
+      )
+      if (x === undefined || y === undefined) break
+      points.push({ x, y })
+    }
+    if (points.length >= 3) contours.push(points)
+  }
+
+  return contours.filter((contour) => contour.length >= 3)
 }
 
 export function getSchematicIndexedPoints(record: AltiumRecord): SvgPoint[] {
@@ -118,4 +181,63 @@ export function altiumColorToCss(
 
 function toHex(value: number): string {
   return value.toString(16).padStart(2, "0")
+}
+
+function approximateAltiumVertexArc(init: {
+  center: SvgPoint
+  endAngle: number
+  position: SvgPoint
+  radius: number
+  startAngle: number
+}): SvgPoint[] {
+  const start = pointOnArc(init.center, init.radius, init.startAngle)
+  const end = pointOnArc(init.center, init.radius, init.endAngle)
+  const sweep = normalizePositiveAngle(init.endAngle - init.startAngle) || 360
+  const positionAtStart =
+    squaredDistance(init.position, start) <= squaredDistance(init.position, end)
+  const firstAngle = positionAtStart ? init.startAngle : init.endAngle
+  const signedSweep = positionAtStart ? sweep : -sweep
+  const segments = Math.max(2, Math.ceil(Math.abs(signedSweep) / 7.5))
+  const points: SvgPoint[] = []
+
+  for (let index = 0; index <= segments; index++) {
+    points.push(
+      pointOnArc(
+        init.center,
+        init.radius,
+        firstAngle + (signedSweep * index) / segments,
+      ),
+    )
+  }
+  return points
+}
+
+function pointOnArc(center: SvgPoint, radius: number, angle: number): SvgPoint {
+  const radians = (angle * Math.PI) / 180
+  return {
+    x: center.x + Math.cos(radians) * radius,
+    y: center.y + Math.sin(radians) * radius,
+  }
+}
+
+function normalizePositiveAngle(angle: number): number {
+  return ((angle % 360) + 360) % 360
+}
+
+function squaredDistance(left: SvgPoint, right: SvgPoint): number {
+  const dx = left.x - right.x
+  const dy = left.y - right.y
+  return dx * dx + dy * dy
+}
+
+function appendDistinctPoint(points: SvgPoint[], point: SvgPoint): void {
+  const previous = points.at(-1)
+  if (
+    previous &&
+    Math.abs(previous.x - point.x) < 0.0001 &&
+    Math.abs(previous.y - point.y) < 0.0001
+  ) {
+    return
+  }
+  points.push(point)
 }

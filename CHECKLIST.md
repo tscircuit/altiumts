@@ -313,24 +313,24 @@ writing Altium files.
 - [x] Add `AltiumRegionRecord`.
 - [x] Add `AltiumPolygonRecord`.
 - [ ] Model fill bounds and rotation.
-- [ ] Model region contours and holes.
-- [ ] Model region kind and layer.
+- [x] Model region contours and holes.
+- [x] Model region kind and layer.
 - [ ] Model polygon vertices, arcs, and contour holes.
 - [ ] Model polygon pour order and priority.
 - [ ] Model polygon connect style and thermal settings.
 - [ ] Model shelved, unpoured, and poured polygon states.
 - [ ] Model polygon cutouts.
 - [ ] Model split-plane regions.
-- [ ] Distinguish source polygon definitions from generated pour primitives.
-- [ ] Preserve generated-pour caches without treating them as authoritative.
+- [x] Distinguish source regions from generated region-fill primitives.
+- [x] Preserve generated-pour caches without treating them as authoritative.
 - [ ] Add polygon geometry validation.
 
 ### Text and dimensions
 
 - [x] Add `AltiumTextRecord`.
 - [ ] Model text content and special strings.
-- [ ] Model font selection, stroke width, and text height.
-- [ ] Model justification, mirroring, rotation, and inversion.
+- [x] Model font selection, stroke width, and text height.
+- [x] Model justification, mirroring, rotation, and inversion.
 - [ ] Model barcode and TrueType text options where present.
 - [ ] Model component designator/comment semantics.
 - [ ] Add `AltiumDimensionRecord`.
@@ -480,16 +480,20 @@ writing Altium files.
 - [x] Implement initial pad stream parsing, including nested subrecord framing
       and common geometry fields.
 - [x] Implement initial via stream parsing.
-- [ ] Implement text stream parsing.
+- [x] Implement text stream parsing.
 - [ ] Implement fill stream parsing.
-- [ ] Implement region stream parsing.
+- [x] Implement region stream parsing.
+- [x] Decode source `ShapeBasedRegions6` geometry separately from generated
+      `Regions6` fill caches.
+- [x] Decode `BoardRegions` cutout geometry.
+- [x] Decode extended region vertices with arc centers, radii, and angles.
 - [x] Implement polygon property stream parsing; binary polygon primitives and
       pours remain pending.
 - [ ] Implement dimension stream parsing.
 - [ ] Implement component-body stream parsing.
 - [ ] Implement model metadata and embedded model stream parsing.
-- [ ] Implement wide-string table parsing.
-- [ ] Resolve stream-local string/index tables.
+- [x] Implement wide-string table parsing.
+- [x] Resolve stream-local string/index tables.
 - [ ] Resolve owner, component, net, rule, and polygon indexes.
 - [x] Preserve unknown streams without decoding them.
 - [ ] Preserve unknown records inside known streams.

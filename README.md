@@ -69,6 +69,8 @@ if (document instanceof AltiumBinaryPcbDoc) {
     document.tracks.length,
     document.arcs.length,
     document.vias.length,
+    document.regions.length,
+    document.texts.length,
   )
 }
 
@@ -79,8 +81,9 @@ if (document instanceof AltiumSchDoc) {
 
 Binary `.PcbDoc` parsing currently inventories every CFB storage family,
 decodes common property streams, and creates semantic records for pads, tracks,
-arcs, and vias. Binary `.SchDoc` parsing decodes its framed `FileHeader`
-property records, `%UTF8%` fields, and owner indexes.
+arcs, vias, polygon-fill regions with contour holes, and wide-string-backed
+text. Binary `.SchDoc` parsing decodes its framed `FileHeader` property
+records, `%UTF8%` fields, and owner indexes.
 
 ## Render SVG previews
 
@@ -170,11 +173,12 @@ generated `.snap.svg` visual baselines are committed and compared with
 
 Binary support is currently read-only: untouched documents can return their
 original bytes, but edits are not serialized back into CFB streams. The PCB
-parser does not yet semantically decode text, fills, regions, primitive
-polygons, component bodies, or embedded 3D models. Per-layer full-stack pad
-details beyond the top/middle/bottom shape model also remain pending. Those
-streams remain available through `AltiumCompoundFile` and appear in stream
-summaries.
+parser now distinguishes source shape-based regions from generated region-fill
+caches and decodes board cutout regions. It does not yet semantically decode
+fills, component bodies, dimensions, or embedded 3D models. Text barcode/frame
+metadata and per-layer full-stack pad details beyond the top/middle/bottom shape
+model also remain pending. Those streams remain available through
+`AltiumCompoundFile` and appear in stream summaries.
 
 Schematic property records are parsed generically and visualized, but the
 numeric record IDs do not yet have a complete typed semantic model. Library,

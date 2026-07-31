@@ -17,11 +17,13 @@ export type AltiumRecordConstructor = new (
 export const recordConstructors = new Map<string, AltiumRecordConstructor>([
   ["Arc", AltiumArcRecord],
   ["Board", AltiumBoardRecord],
+  ["BoardRegion", AltiumRegionRecord],
   ["Component", AltiumComponentRecord],
   ["Net", AltiumNetRecord],
   ["Pad", AltiumPadRecord],
   ["Polygon", AltiumPolygonRecord],
   ["Region", AltiumRegionRecord],
+  ["RegionFill", AltiumRegionRecord],
   ["Text", AltiumTextRecord],
   ["Track", AltiumTrackRecord],
   ["Via", AltiumViaRecord],

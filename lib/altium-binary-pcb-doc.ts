@@ -19,18 +19,21 @@ export class AltiumBinaryPcbDoc extends AltiumNode {
   readonly primitiveRecords: ReadonlyMap<string, AltiumRecord[]>
   readonly propertyRecords: ReadonlyMap<string, AltiumRecord[]>
   readonly streamSummaries: AltiumPcbStreamSummary[]
+  readonly wideStrings: ReadonlyMap<number, string>
 
   constructor(init: {
     compoundFile: AltiumCompoundFile
     primitiveRecords: Map<string, AltiumRecord[]>
     propertyRecords: Map<string, AltiumRecord[]>
     streamSummaries: AltiumPcbStreamSummary[]
+    wideStrings?: ReadonlyMap<number, string>
   }) {
     super()
     this.compoundFile = init.compoundFile
     this.primitiveRecords = init.primitiveRecords
     this.propertyRecords = init.propertyRecords
     this.streamSummaries = init.streamSummaries
+    this.wideStrings = init.wideStrings ?? new Map()
   }
 
   get records(): AltiumRecord[] {
@@ -66,6 +69,26 @@ export class AltiumBinaryPcbDoc extends AltiumNode {
 
   get pads(): AltiumRecord[] {
     return this.primitiveRecords.get("Pads6") ?? []
+  }
+
+  get regions(): AltiumRecord[] {
+    return (
+      this.primitiveRecords.get("ShapeBasedRegions6") ??
+      this.primitiveRecords.get("Regions6") ??
+      []
+    )
+  }
+
+  get regionFills(): AltiumRecord[] {
+    return this.primitiveRecords.get("Regions6") ?? []
+  }
+
+  get boardRegions(): AltiumRecord[] {
+    return this.primitiveRecords.get("BoardRegions") ?? []
+  }
+
+  get texts(): AltiumRecord[] {
+    return this.primitiveRecords.get("Texts6") ?? []
   }
 
   getRecordsByKind(kind: string): AltiumRecord[] {
