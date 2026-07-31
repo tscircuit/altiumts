@@ -74,6 +74,19 @@ export function pointsToSvg(points: SvgPoint[], viewport: SvgViewport): string {
     .join(" ")
 }
 
+export function pointsToClosedPath(
+  points: SvgPoint[],
+  viewport: SvgViewport,
+): string {
+  return points
+    .map((point, index) => {
+      const command = index === 0 ? "M" : "L"
+      return `${command} ${formatSvgNumber(viewport.toX(point.x))} ${formatSvgNumber(viewport.toY(point.y))}`
+    })
+    .concat("Z")
+    .join(" ")
+}
+
 export function boundsFromPoints(points: SvgPoint[]): SvgBounds | undefined {
   if (points.length === 0) return undefined
 

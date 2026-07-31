@@ -11,6 +11,10 @@ import type {
   AltiumDiagnosticSeverity,
 } from "../diagnostics/altium-diagnostic"
 import { AltiumIniDocument, AltiumIniSectionLine } from "../ini/altium-ini"
+import {
+  isAltiumPcbNoLayerSentinel,
+  isKnownAltiumPcbLayerName,
+} from "../pcb-layers"
 import { getDanglingPcbReferences } from "../pcb-reference-resolution"
 import { AltiumArcRecord } from "../records/altium-arc-record"
 import { AltiumPadRecord } from "../records/altium-pad-record"
@@ -189,6 +193,8 @@ function validatePcbDocument(
     validatePcbLayerStack(document.board, profile, report)
   }
 
+  validatePcbPrimitiveLayerReferences(document, profile, report)
+
   for (const dangling of getDanglingPcbReferences(document)) {
     report({
       code: `PCB_DANGLING_${dangling.field}`,
@@ -221,6 +227,44 @@ function validatePcbDocument(
 
   for (const record of document.records) {
     validatePcbRecord(record, profile, report)
+  }
+}
+
+function validatePcbPrimitiveLayerReferences(
+  document: AltiumPcbDocument,
+  profile: AltiumValidationProfile,
+  report: (issue: AltiumValidationIssue) => void,
+): void {
+  const stack = document.board?.layerStack
+  for (const record of document.records) {
+    if (record.recordKind === "Board") continue
+    for (const fieldName of [
+      "LAYER",
+      "STARTLAYER",
+      "ENDLAYER",
+      "FROMLAYER",
+      "TOLAYER",
+    ]) {
+      const layer = record.getDecoded(fieldName)
+      if (layer === undefined) continue
+      if (
+        (fieldName === "FROMLAYER" || fieldName === "TOLAYER") &&
+        isAltiumPcbNoLayerSentinel(layer)
+      ) {
+        continue
+      }
+      if (isKnownAltiumPcbLayerName(layer, stack)) continue
+      report({
+        code: "PCB_PRIMITIVE_LAYER_UNKNOWN",
+        context: { fieldName, recordKind: record.recordKind },
+        location: record.sourceLocation,
+        message: `${record.recordKind ?? "Record"} references unknown layer ${layer} in ${fieldName}`,
+        nodeId: record.nodeId,
+        severity: profile === "strict" ? "error" : "warning",
+        suggestion:
+          "Preserve the raw layer name and verify it against the document layer stack before editing it.",
+      })
+    }
   }
 }
 

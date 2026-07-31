@@ -1,4 +1,8 @@
+import { normalizeAltiumPcbLayerName } from "../pcb-layers"
 import type { AltiumRecord } from "../records/altium-record"
+
+export const PCB_BOARD_FILL_COLOR = "#123d32"
+export const PCB_BOARD_OUTLINE_COLOR = "#6ee7b7"
 
 const LAYER_COLORS: Record<string, string> = {
   BOTTOM: "#3b82f6",
@@ -13,9 +17,7 @@ const LAYER_COLORS: Record<string, string> = {
   TOPSOLDER: "#4ade80",
 }
 
-export function normalizeLayerName(layer: string): string {
-  return layer.replace(/[\s_-]/gu, "").toUpperCase()
-}
+export const normalizeLayerName = normalizeAltiumPcbLayerName
 
 export function getPcbLayerColor(layer: string | undefined): string {
   if (!layer) return "#f59e0b"

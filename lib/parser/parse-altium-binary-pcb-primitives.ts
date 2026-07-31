@@ -578,7 +578,10 @@ function decodeContourPrimitive(
     family === "ShapeBasedRegions6"
   ) {
     extraFields.push(
-      field("REGIONKIND", getAltiumRegionKindName(propertyKind, isBoardCutout)),
+      field(
+        "REGIONKIND",
+        getAltiumRegionKindName(family, propertyKind, isBoardCutout),
+      ),
     )
   }
 
@@ -876,7 +879,12 @@ function assertVertexArrayFits(
   }
 }
 
-function getAltiumRegionKindName(kind: number, isBoardCutout: boolean): string {
+function getAltiumRegionKindName(
+  family: AltiumBinaryPcbPrimitiveFamily,
+  kind: number,
+  isBoardCutout: boolean,
+): string {
+  if (family === "BoardRegions") return "LAYER_STACK_REGION"
   if (kind === 0) return isBoardCutout ? "BOARD_CUTOUT" : "COPPER"
   if (kind === 1) return "POLYGON_CUTOUT"
   if (kind === 2) return "DASHED_OUTLINE"

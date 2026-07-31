@@ -1,3 +1,4 @@
+import { getPcbRegionSemanticKind } from "../pcb-contours"
 import type { AltiumRecord } from "../records/altium-record"
 import {
   decodeAltiumWideString,
@@ -6,10 +7,15 @@ import {
   getPcbVertexPoints,
   parsePcbMeasurement,
 } from "./altium-values"
-import { getPcbLayerColor } from "./pcb-layer"
+import { getPcbLayerColor, PCB_BOARD_FILL_COLOR } from "./pcb-layer"
 import { getPcbPadGeometry } from "./pcb-pad-geometry"
 import type { AltiumPcbSvgOptions, SvgPoint, SvgViewport } from "./svg-types"
-import { escapeXml, formatSvgNumber, pointsToSvg } from "./svg-utils"
+import {
+  escapeXml,
+  formatSvgNumber,
+  pointsToClosedPath,
+  pointsToSvg,
+} from "./svg-utils"
 
 export function renderPcbRecord(
   record: AltiumRecord,
@@ -54,9 +60,16 @@ export function renderPcbRecord(
   if (kind === "Region") {
     const contours = getPcbRegionContours(record)
     if (contours.length === 0) return undefined
+    const regionKind = getPcbRegionSemanticKind(record)
+    if (regionKind === "BOARD_CUTOUT" || regionKind === "LAYER_STACK_REGION") {
+      return undefined
+    }
     const path = contours
       .map((contour) => pointsToClosedPath(contour, viewport))
       .join(" ")
+    if (regionKind === "POLYGON_CUTOUT") {
+      return `<path ${metadata} data-region-kind="POLYGON_CUTOUT" d="${path}" fill="${PCB_BOARD_FILL_COLOR}" fill-rule="evenodd" stroke="${PCB_BOARD_FILL_COLOR}" stroke-width="1.5"/>`
+    }
     return `<path ${metadata} d="${path}" fill="${color}" fill-opacity="0.32" fill-rule="evenodd" stroke="${color}" stroke-width="1.5"/>`
   }
 
@@ -129,16 +142,6 @@ export function renderPcbRecord(
   }
 
   return undefined
-}
-
-function pointsToClosedPath(points: SvgPoint[], viewport: SvgViewport): string {
-  return points
-    .map((point, index) => {
-      const command = index === 0 ? "M" : "L"
-      return `${command} ${formatSvgNumber(viewport.toX(point.x))} ${formatSvgNumber(viewport.toY(point.y))}`
-    })
-    .concat("Z")
-    .join(" ")
 }
 
 function renderPad(

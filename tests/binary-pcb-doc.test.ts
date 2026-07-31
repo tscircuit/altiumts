@@ -108,8 +108,10 @@ test("detects and parses binary PCB properties and primitive streams", async () 
     "BoardRegions",
   )
   expect(document.boardRegions[0]?.getCaseInsensitive("REGIONKIND")).toBe(
-    "BOARD_CUTOUT",
+    "LAYER_STACK_REGION",
   )
+  expect(document.boardRegions[0]?.isLayerStackRegion).toBeTrue()
+  expect(document.boardRegions[0]?.isBoardCutout).toBeFalse()
   expect(
     document.regions.filter((record) => record.getNumber("HOLECOUNT")),
   ).toHaveLength(83)

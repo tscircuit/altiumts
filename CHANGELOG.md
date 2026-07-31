@@ -20,6 +20,11 @@ minor release and are called out explicitly.
   serialization, Node filesystem helpers, and the `altiumts` CLI.
 - Added rule-range and layer-stack relationship validation for typed PCB
   constraint models.
+- Added typed board outlines; board-cutout, layer-stack-region, and
+  polygon-cutout geometry; and cutout-aware SVG rendering with a focused Elk
+  Pi visual snapshot.
+- Added normalized PCB layer-name helpers and primitive layer-reference
+  validation across standard, legacy, and document stack-specific names.
 - Added compatibility metadata, incremental ASCII parsing/serialization, and
   binary source-payload retention.
 - Added validated PCB edit transactions, undoable/conflict-checked change

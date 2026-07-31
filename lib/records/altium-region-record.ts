@@ -1,3 +1,8 @@
+import {
+  type AltiumPcbRegionGeometry,
+  getPcbRegionGeometry,
+  getPcbRegionSemanticKind,
+} from "../pcb-contours"
 import { AltiumRecord, type AltiumRecordInit } from "./altium-record"
 import { getFirstDecoded } from "./pcb-record-helpers"
 
@@ -13,7 +18,7 @@ export class AltiumRegionRecord extends AltiumRecord {
   }
 
   get regionKind(): string | undefined {
-    return getFirstDecoded(this, "KIND", "REGIONKIND")
+    return getPcbRegionSemanticKind(this)
   }
 
   get componentIndex(): number | undefined {
@@ -37,6 +42,22 @@ export class AltiumRegionRecord extends AltiumRecord {
   }
 
   get isBoardCutout(): boolean {
-    return this.recordKind === "BoardRegion"
+    return this.regionKind === "BOARD_CUTOUT"
+  }
+
+  get isLayerStackRegion(): boolean {
+    return this.regionKind === "LAYER_STACK_REGION"
+  }
+
+  get isPolygonCutout(): boolean {
+    return this.regionKind === "POLYGON_CUTOUT"
+  }
+
+  get layerStackId(): string | undefined {
+    return getFirstDecoded(this, "LAYERSTACKID")
+  }
+
+  get geometry(): AltiumPcbRegionGeometry {
+    return getPcbRegionGeometry(this)
   }
 }

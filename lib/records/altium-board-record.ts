@@ -1,4 +1,5 @@
 import type { AltiumPoint, AltiumSize } from "../geometry/altium-geometry"
+import { type AltiumPcbContour, getPcbContour } from "../pcb-contours"
 import { type AltiumPcbLayerStack, getPcbLayerStack } from "../pcb-layer-stack"
 import { AltiumRecord, type AltiumRecordInit } from "./altium-record"
 import {
@@ -82,6 +83,10 @@ export class AltiumBoardRecord extends AltiumRecord {
       visibleGridMultiplier: this.getNumber("VISIBLEGRIDMULTFACTOR"),
       visibleGridSize: this.getNumber("VISIBLEGRIDSIZE"),
     }
+  }
+
+  get outline(): AltiumPcbContour {
+    return getPcbContour(this)
   }
 
   get layerStack(): AltiumPcbLayerStack {

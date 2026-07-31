@@ -10,11 +10,7 @@ import type { SvgBounds, SvgPoint } from "./svg-types"
 import { boundsFromPoints, expandBounds, mergeBounds } from "./svg-utils"
 
 export function getPcbBoardOutline(document: AltiumPcbDocument): SvgPoint[] {
-  for (const boardRecord of document.getRecordsByKind("Board")) {
-    const points = getPcbVertexPoints(boardRecord)
-    if (points.length >= 3) return points
-  }
-  return []
+  return document.boardGeometry.outline.points
 }
 
 export function getPcbDocumentBounds(document: AltiumPcbDocument): SvgBounds {

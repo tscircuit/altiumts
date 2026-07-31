@@ -11,6 +11,10 @@ import {
   getPcbConnectivityGraph,
 } from "./pcb-connectivity"
 import {
+  type AltiumPcbBoardGeometry,
+  getPcbBoardGeometry,
+} from "./pcb-contours"
+import {
   type AltiumPcbDocumentIndex,
   getPcbComponentByIndex,
   getPcbDocumentIndex,
@@ -130,6 +134,10 @@ export class AltiumPcbDoc extends AltiumNode {
 
   get connectivity(): AltiumPcbConnectivityGraph {
     return getPcbConnectivityGraph(this)
+  }
+
+  get boardGeometry(): AltiumPcbBoardGeometry {
+    return getPcbBoardGeometry(this)
   }
 
   get polygons(): AltiumPolygonRecord[] {

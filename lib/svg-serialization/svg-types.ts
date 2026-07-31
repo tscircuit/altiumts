@@ -37,6 +37,7 @@ export interface AltiumPcbSvgOptions extends AltiumSvgRenderOptions {
   componentIndices?: number[]
   layers?: string[]
   netIndices?: number[]
+  showBoardCutouts?: boolean
   showBoardOutline?: boolean
   viewBox?: AltiumPcbViewBox
 }

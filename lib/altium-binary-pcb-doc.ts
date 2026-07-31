@@ -9,6 +9,10 @@ import {
   getPcbConnectivityGraph,
 } from "./pcb-connectivity"
 import {
+  type AltiumPcbBoardGeometry,
+  getPcbBoardGeometry,
+} from "./pcb-contours"
+import {
   type AltiumPcbDocumentIndex,
   getPcbComponentByIndex,
   getPcbDocumentIndex,
@@ -30,6 +34,7 @@ import type { AltiumModelRecord } from "./records/altium-model-record"
 import type { AltiumNetRecord } from "./records/altium-net-record"
 import type { AltiumPolygonRecord } from "./records/altium-polygon-record"
 import type { AltiumRecord } from "./records/altium-record"
+import type { AltiumRegionRecord } from "./records/altium-region-record"
 import type { AltiumRuleRecord } from "./records/altium-rule-record"
 
 export interface AltiumPcbStreamSummary {
@@ -113,6 +118,10 @@ export class AltiumBinaryPcbDoc extends AltiumNode {
 
   get connectivity(): AltiumPcbConnectivityGraph {
     return getPcbConnectivityGraph(this)
+  }
+
+  get boardGeometry(): AltiumPcbBoardGeometry {
+    return getPcbBoardGeometry(this)
   }
 
   get polygons(): AltiumPolygonRecord[] {
@@ -251,20 +260,19 @@ export class AltiumBinaryPcbDoc extends AltiumNode {
     return this.primitiveRecords.get("Fills6") ?? []
   }
 
-  get regions(): AltiumRecord[] {
-    return (
-      this.primitiveRecords.get("ShapeBasedRegions6") ??
+  get regions(): AltiumRegionRecord[] {
+    return (this.primitiveRecords.get("ShapeBasedRegions6") ??
       this.primitiveRecords.get("Regions6") ??
-      []
-    )
+      []) as AltiumRegionRecord[]
   }
 
-  get regionFills(): AltiumRecord[] {
-    return this.primitiveRecords.get("Regions6") ?? []
+  get regionFills(): AltiumRegionRecord[] {
+    return (this.primitiveRecords.get("Regions6") ?? []) as AltiumRegionRecord[]
   }
 
-  get boardRegions(): AltiumRecord[] {
-    return this.primitiveRecords.get("BoardRegions") ?? []
+  get boardRegions(): AltiumRegionRecord[] {
+    return (this.primitiveRecords.get("BoardRegions") ??
+      []) as AltiumRegionRecord[]
   }
 
   get texts(): AltiumRecord[] {

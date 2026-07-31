@@ -232,8 +232,9 @@ writing Altium files.
 - [ ] Model board-level view configurations.
 - [ ] Model 2D and 3D configuration payloads.
 - [x] Model board-level unique IDs.
-- [ ] Model board outline vertices and arcs.
-- [ ] Model board cutouts.
+- [x] Model board outline vertices and arcs.
+- [x] Model board cutouts.
+- [ ] Verify physical board cutouts against a non-degenerate real fixture.
 - [ ] Reconcile ASCII files whose physical contour is represented by connected
       `POLYGONOUTLINE` keepout primitives instead of the larger `Board` contour.
 - [x] Model embedded board settings.
@@ -334,7 +335,7 @@ writing Altium files.
 - [x] Model polygon pour order and priority.
 - [ ] Model polygon connect style and thermal settings.
 - [x] Model shelved, unpoured, and poured polygon states.
-- [ ] Model polygon cutouts.
+- [x] Model polygon cutouts.
 - [ ] Model split-plane regions.
 - [x] Distinguish source regions from generated region-fill primitives.
 - [x] Preserve generated-pour caches without treating them as authoritative.
@@ -426,7 +427,8 @@ writing Altium files.
 - [x] Add geometry bounds for every currently rendered primitive.
 - [x] Add transforms for component-owned primitives.
 - [x] Add board-coordinate and component-local-coordinate conversions.
-- [ ] Add rigid-flex stack-region geometry.
+- [x] Add layer-stack region geometry.
+- [ ] Verify rigid-flex stack-region geometry against a true flex fixture.
 - [x] Add tolerance-aware comparisons for tests only.
 
 ## 10. OLE/CFB compound-file container support
@@ -506,7 +508,9 @@ writing Altium files.
 - [x] Implement region stream parsing.
 - [x] Decode source `ShapeBasedRegions6` geometry separately from generated
       `Regions6` fill caches.
-- [x] Decode `BoardRegions` cutout geometry.
+- [x] Decode and classify `BoardRegions` layer-stack-region geometry in the
+      current binary corpus.
+- [ ] Verify binary physical board-cutout regions against a real fixture.
 - [x] Decode extended region vertices with arc centers, radii, and angles.
 - [x] Implement polygon property stream parsing; binary polygon primitives and
       pours remain pending.
@@ -726,7 +730,7 @@ writing Altium files.
 - [x] Add owner/index bounds validation.
 - [x] Add unique-ID collision validation.
 - [x] Add layer-stack, layer-pair, and impedance-profile reference validation.
-- [ ] Add primitive layer-reference validation for every verified layer naming
+- [x] Add primitive layer-reference validation for every verified layer naming
       variant.
 - [x] Add net-reference validation.
 - [x] Add rule constraint range validation.
@@ -794,6 +798,7 @@ writing Altium files.
 - [x] Add board-coordinate `viewBox` crops for focused PCB snapshots.
 - [x] Add focused snapshots for pad stacks, rounded rectangles, and slots.
 - [x] Add focused snapshots for rotated binary fills.
+- [x] Add a focused polygon-cutout snapshot.
 - [x] Add an isolated mechanical-layer snapshot for component-body contours.
 - [x] Add component-owned and net-isolated PCB snapshots.
 - [ ] Add tests for every public class and helper.

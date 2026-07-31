@@ -1,4 +1,5 @@
 import type { AltiumPcbDocument } from "../altium-pcb-document"
+import { getPcbRegionSemanticKind } from "../pcb-contours"
 import {
   getPcbRecordComponentIndex,
   getPcbRecordNetIndex,
@@ -9,7 +10,11 @@ import {
   getPcbDocumentBounds,
   getPcbRecordBounds,
 } from "./pcb-geometry"
-import { recordAppliesToLayers } from "./pcb-layer"
+import {
+  PCB_BOARD_FILL_COLOR,
+  PCB_BOARD_OUTLINE_COLOR,
+  recordAppliesToLayers,
+} from "./pcb-layer"
 import { renderPcbRecord } from "./render-pcb-record"
 import type {
   AltiumPcbSvgOptions,
@@ -20,6 +25,7 @@ import {
   boundsIntersect,
   createSvgDocument,
   createSvgViewport,
+  pointsToClosedPath,
   pointsToSvg,
 } from "./svg-utils"
 
@@ -49,12 +55,28 @@ export function serializeAltiumPcbToSvg(
   })
   const content: string[] = []
   const outline = getPcbBoardOutline(document)
+  const boardCutouts =
+    options.showBoardCutouts === false ? [] : document.boardGeometry.cutouts
   const componentLookup = createComponentLookup(document)
 
   if (outline.length >= 3 && options.showBoardOutline !== false) {
-    content.push(
-      `<polygon data-record="BoardOutline" points="${pointsToSvg(outline, viewport)}" fill="#123d32" stroke="#6ee7b7" stroke-width="3"/>`,
-    )
+    if (boardCutouts.length === 0) {
+      content.push(
+        `<polygon data-record="BoardOutline" points="${pointsToSvg(outline, viewport)}" fill="${PCB_BOARD_FILL_COLOR}" stroke="${PCB_BOARD_OUTLINE_COLOR}" stroke-width="3"/>`,
+      )
+    } else {
+      const path = [
+        pointsToClosedPath(outline, viewport),
+        ...boardCutouts.flatMap(({ holes, outline: cutout }) =>
+          [cutout, ...holes].map((contour) =>
+            pointsToClosedPath(contour.points, viewport),
+          ),
+        ),
+      ].join(" ")
+      content.push(
+        `<path data-record="BoardOutline" data-board-cutouts="${boardCutouts.length}" d="${path}" fill="${PCB_BOARD_FILL_COLOR}" fill-rule="evenodd" stroke="${PCB_BOARD_OUTLINE_COLOR}" stroke-width="3"/>`,
+      )
+    }
   }
 
   const records = document.records
@@ -71,9 +93,7 @@ export function serializeAltiumPcbToSvg(
       return !recordBounds || boundsIntersect(recordBounds, bounds)
     })
     .toSorted(
-      (left, right) =>
-        (RECORD_PAINT_ORDER[left.recordKind ?? ""] ?? 100) -
-        (RECORD_PAINT_ORDER[right.recordKind ?? ""] ?? 100),
+      (left, right) => getRecordPaintOrder(left) - getRecordPaintOrder(right),
     )
 
   for (const record of records) {
@@ -95,6 +115,16 @@ export function serializeAltiumPcbToSvg(
     title: options.title ?? `Altium PCB${layerTitle}`,
     viewport,
   })
+}
+
+function getRecordPaintOrder(record: AltiumRecord): number {
+  if (
+    record.recordKind === "Region" &&
+    getPcbRegionSemanticKind(record) === "POLYGON_CUTOUT"
+  ) {
+    return 25
+  }
+  return RECORD_PAINT_ORDER[record.recordKind ?? ""] ?? 100
 }
 
 function recordAppliesToReferences(

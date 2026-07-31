@@ -93,7 +93,9 @@ metadata, components, nets, classes, rules, polygons, pads, tracks, arcs, vias,
 fills, regions with contour holes, bodies, models, and wide-string-backed
 text. Extended pad records include top/middle/bottom and full-stack
 layer geometry, custom corner radii, hole shapes and offsets, slot dimensions,
-and plating state. Binary `.SchDoc` parsing decodes framed property records,
+and plating state. Board geometry retains the source contour vertices and arc
+metadata while exposing approximated points, bounds, winding, board cutouts,
+layer-stack regions, and polygon cutouts. Binary `.SchDoc` parsing decodes framed property records,
 `%UTF8%` fields, typed common record IDs, owner indexes, hierarchy links, and
 schematic connectivity.
 
@@ -155,6 +157,11 @@ designator/comment text follows the parent component's `NAMEON` and `COMMENTON`
 visibility flags; pass `{ showHidden: true }` when debugging hidden source
 text.
 
+Board cutouts are combined with the board outline using even-odd SVG fill.
+Polygon cutouts erase poured-region color before independent fills, tracks,
+pads, and vias are painted. Pass `{ showBoardCutouts: false }` to inspect the
+uncut board substrate during debugging.
+
 Single-layer PCB renders select the corresponding pad-stack geometry. Round,
 rectangular, rounded-rectangle, octagonal, and obround pads are rendered
 directly, along with round, square, and slotted holes.
@@ -176,8 +183,10 @@ directly, along with round, square, and slotted holes.
   accepts `componentIndices` and `netIndices` for focused debugging renders.
 - PCB documents expose lazy `index` and `connectivity` models, layer-stack
   metadata (including V8/V9 sub-stacks, layer pairs, and controlled-impedance
-  profiles), board-grid settings, typed rule constraints, polygon/rule
-  references, unique-ID lookup, and component bounds. Rule helpers cover
+  profiles), `boardGeometry`, board-grid settings, typed rule constraints,
+  polygon/rule references, unique-ID lookup, and component bounds. Individual
+  board and region records expose `outline`/`geometry` helpers without changing
+  their source fields. Rule helpers cover
   routing width/layers/vias, differential-pair gaps, impedance, matched-length
   tolerance, thermal relief, masks, holes, heights, silk clearances, and
   test-point dimensions.
@@ -188,7 +197,9 @@ directly, along with round, square, and slotted holes.
   on any host.
 - `validateAltiumDocument()` returns machine-readable structural diagnostics.
   `serializeAltiumDocument()` validates by default and refuses unsafe modified
-  binary output.
+  binary output. PCB validation checks primitive layer references against
+  standard, legacy, and document stack-specific names while preserving unknown
+  names for inspection.
 - `cloneAltiumNode()`, `transformAltiumTree()`, and
   `searchAltiumRecords()` support copy-on-write tooling and generic AST work.
 - `altiumCompatibilityManifest` and `supportsAltiumOperation()` let callers
