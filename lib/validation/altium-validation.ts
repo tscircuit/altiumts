@@ -16,7 +16,11 @@ import { AltiumArcRecord } from "../records/altium-arc-record"
 import { AltiumPadRecord } from "../records/altium-pad-record"
 import { AltiumPolygonRecord } from "../records/altium-polygon-record"
 import type { AltiumRecord } from "../records/altium-record"
-import { AltiumRuleRecord } from "../records/altium-rule-record"
+import {
+  type AltiumRuleMeasurementRange,
+  type AltiumRuleNumericRange,
+  AltiumRuleRecord,
+} from "../records/altium-rule-record"
 import { AltiumTrackRecord } from "../records/altium-track-record"
 import { AltiumViaRecord } from "../records/altium-via-record"
 import { getPcbVertexPoints } from "../svg-serialization/altium-values"
@@ -181,6 +185,8 @@ function validatePcbDocument(
       severity: "fatal",
       suggestion: "Add or restore the Board root record.",
     })
+  } else {
+    validatePcbLayerStack(document.board, profile, report)
   }
 
   for (const dangling of getDanglingPcbReferences(document)) {
@@ -335,6 +341,202 @@ function validatePcbRecord(
       "PCB_RULE_KIND_MISSING",
       "Rule is missing its rule kind",
     )
+    validateRuleMeasurementRange(
+      record,
+      "width",
+      record.widthConstraint,
+      report,
+    )
+    validateRuleMeasurementRange(
+      record,
+      "via diameter",
+      record.viaDiameterConstraint,
+      report,
+    )
+    validateRuleMeasurementRange(
+      record,
+      "via hole",
+      record.viaHoleConstraint,
+      report,
+    )
+    validateRuleMeasurementRange(
+      record,
+      "differential-pair gap",
+      record.differentialPairGap,
+      report,
+    )
+    validateRuleMeasurementRange(
+      record,
+      "height",
+      record.heightConstraint,
+      report,
+    )
+    validateRuleMeasurementRange(
+      record,
+      "hole size",
+      record.holeSizeConstraint,
+      report,
+    )
+    validateRuleNumericRange(
+      record,
+      "impedance",
+      record.impedanceConstraint,
+      report,
+    )
+    for (const constraint of record.layerConstraints) {
+      validateRuleMeasurementRange(
+        record,
+        `${constraint.layer} width`,
+        constraint,
+        report,
+      )
+      validateRuleMeasurementRange(
+        record,
+        `${constraint.layer} gap`,
+        constraint.gap,
+        report,
+      )
+    }
+    const testPoint = record.testPointSettings
+    validateRuleMeasurementRange(
+      record,
+      "testpoint hole size",
+      testPoint?.holeSize,
+      report,
+    )
+    validateRuleMeasurementRange(
+      record,
+      "testpoint pad size",
+      testPoint?.padSize,
+      report,
+    )
+  }
+}
+
+function validatePcbLayerStack(
+  board: NonNullable<AltiumPcbDocument["board"]>,
+  profile: AltiumValidationProfile,
+  report: (issue: AltiumValidationIssue) => void,
+): void {
+  const stack = board.layerStack
+  const subStackIds = new Set(
+    stack.subStacks.flatMap(({ id }) =>
+      id === undefined ? [] : [id.toUpperCase()],
+    ),
+  )
+  const profileIds = new Set(
+    stack.impedanceProfiles.flatMap(({ id }) =>
+      id === undefined ? [] : [id.toUpperCase()],
+    ),
+  )
+  const severity = profile === "strict" ? "error" : "warning"
+
+  for (const pair of stack.layerPairs) {
+    for (const subStackId of pair.subStackIds) {
+      if (subStackIds.has(subStackId.toUpperCase())) continue
+      report({
+        code: "PCB_LAYER_PAIR_SUBSTACK_MISSING",
+        location: board.sourceLocation,
+        message: `Layer pair ${pair.index} references missing sub-stack ${subStackId}`,
+        nodeId: board.nodeId,
+        severity,
+        suggestion:
+          "Restore the referenced sub-stack or remove the dangling ID.",
+      })
+    }
+  }
+
+  for (const configuration of stack.traceImpedanceConfigurations) {
+    if (
+      configuration.subStackId !== undefined &&
+      !subStackIds.has(configuration.subStackId.toUpperCase())
+    ) {
+      report({
+        code: "PCB_IMPEDANCE_SUBSTACK_MISSING",
+        location: board.sourceLocation,
+        message: `Trace-impedance configuration ${configuration.index} references missing sub-stack ${configuration.subStackId}`,
+        nodeId: board.nodeId,
+        severity,
+      })
+    }
+    if (
+      configuration.profileId !== undefined &&
+      !profileIds.has(configuration.profileId.toUpperCase())
+    ) {
+      report({
+        code: "PCB_IMPEDANCE_PROFILE_MISSING",
+        location: board.sourceLocation,
+        message: `Trace-impedance configuration ${configuration.index} references missing profile ${configuration.profileId}`,
+        nodeId: board.nodeId,
+        severity,
+      })
+    }
+  }
+}
+
+function validateRuleMeasurementRange(
+  record: AltiumRuleRecord,
+  label: string,
+  range: AltiumRuleMeasurementRange | undefined,
+  report: (issue: AltiumValidationIssue) => void,
+): void {
+  validateRuleRange(
+    record,
+    label,
+    range?.minimumMils,
+    range?.preferredMils,
+    range?.maximumMils,
+    report,
+  )
+}
+
+function validateRuleNumericRange(
+  record: AltiumRuleRecord,
+  label: string,
+  range: AltiumRuleNumericRange | undefined,
+  report: (issue: AltiumValidationIssue) => void,
+): void {
+  validateRuleRange(
+    record,
+    label,
+    range?.minimum,
+    range?.preferred,
+    range?.maximum,
+    report,
+  )
+}
+
+function validateRuleRange(
+  record: AltiumRuleRecord,
+  label: string,
+  minimum: number | undefined,
+  preferred: number | undefined,
+  maximum: number | undefined,
+  report: (issue: AltiumValidationIssue) => void,
+): void {
+  if (minimum !== undefined && maximum !== undefined && minimum > maximum) {
+    report({
+      code: "PCB_RULE_RANGE_INVERTED",
+      context: { recordKind: record.recordKind },
+      location: record.sourceLocation,
+      message: `${record.name ?? record.ruleKind ?? "Rule"} has ${label} minimum ${minimum} greater than maximum ${maximum}`,
+      nodeId: record.nodeId,
+      severity: "error",
+    })
+  }
+  if (
+    preferred !== undefined &&
+    ((minimum !== undefined && preferred < minimum) ||
+      (maximum !== undefined && preferred > maximum))
+  ) {
+    report({
+      code: "PCB_RULE_PREFERRED_OUT_OF_RANGE",
+      context: { recordKind: record.recordKind },
+      location: record.sourceLocation,
+      message: `${record.name ?? record.ruleKind ?? "Rule"} has ${label} preferred value ${preferred} outside its minimum/maximum range`,
+      nodeId: record.nodeId,
+      severity: "error",
+    })
   }
 }
 

@@ -220,11 +220,15 @@ writing Altium files.
 - [x] Model file kind, format version, date, and time.
 - [x] Model board origin and sheet settings.
 - [x] Model display units.
-- [ ] Model board grid settings.
+- [x] Model board grid settings.
 - [x] Model layer stack records.
-- [ ] Model rigid-flex sub-stacks.
+- [x] Model layer sub-stack and layer-pair metadata.
+- [ ] Verify true rigid-flex sub-stack behavior against a fixture with a flex
+      stack region.
 - [x] Model dielectric properties.
 - [x] Model copper thickness and material metadata.
+- [x] Model V9 controlled-impedance profiles and per-layer/sub-stack
+      calculations.
 - [ ] Model board-level view configurations.
 - [ ] Model 2D and 3D configuration payloads.
 - [x] Model board-level unique IDs.
@@ -371,16 +375,20 @@ writing Altium files.
 - [x] Add `AltiumRuleRecord`.
 - [x] Add `AltiumDxpRuleRecord`.
 - [x] Model rule name, priority, scope expressions, and enabled state.
-- [ ] Model clearance rules.
-- [ ] Model width rules.
-- [ ] Model via-style rules.
-- [ ] Model routing-layer rules.
-- [ ] Model differential-pair rules.
-- [ ] Model length and matched-length rules.
-- [ ] Model impedance rules.
-- [ ] Model plane and polygon-connect rules.
-- [ ] Model solder-mask and paste-mask rules.
-- [ ] Model manufacturing and assembly rules.
+- [x] Model clearance rules.
+- [x] Model width rules, including per-layer constraints.
+- [x] Model via-style rules.
+- [x] Model routing-layer rules.
+- [x] Model differential-pair rules.
+- [x] Model matched-length rules.
+- [ ] Model absolute length rules from a real fixture.
+- [x] Model impedance rules.
+- [x] Model plane and polygon-connect rules.
+- [x] Model solder-mask and paste-mask rules.
+- [x] Model manufacturing height, hole-size, silk, mask-sliver, and testpoint
+      rule fields.
+- [ ] Model remaining manufacturing and assembly rule kinds from verified
+      fixtures.
 - [x] Preserve unknown rule kinds and opaque scope expressions.
 - [x] Add `AltiumClassRecord`.
 - [x] Model net, component, layer, pad, and rule classes.
@@ -717,8 +725,11 @@ writing Altium files.
 - [ ] Add enum-value validation while preserving unknown values.
 - [x] Add owner/index bounds validation.
 - [x] Add unique-ID collision validation.
-- [ ] Add layer-reference validation.
+- [x] Add layer-stack, layer-pair, and impedance-profile reference validation.
+- [ ] Add primitive layer-reference validation for every verified layer naming
+      variant.
 - [x] Add net-reference validation.
+- [x] Add rule constraint range validation.
 - [x] Add geometry sanity validation.
 - [x] Add polygon contour validation.
 - [x] Add schematic ownership-cycle validation.

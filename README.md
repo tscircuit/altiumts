@@ -175,8 +175,12 @@ directly, along with round, square, and slotted holes.
   `getRecordsOwnedByComponent()`, and `getRecordsOnNet()`. The SVG serializer
   accepts `componentIndices` and `netIndices` for focused debugging renders.
 - PCB documents expose lazy `index` and `connectivity` models, layer-stack
-  metadata, typed rules, polygon/rule references, unique-ID lookup, and
-  component bounds.
+  metadata (including V8/V9 sub-stacks, layer pairs, and controlled-impedance
+  profiles), board-grid settings, typed rule constraints, polygon/rule
+  references, unique-ID lookup, and component bounds. Rule helpers cover
+  routing width/layers/vias, differential-pair gaps, impedance, matched-length
+  tolerance, thermal relief, masks, holes, heights, silk clearances, and
+  test-point dimensions.
 - Schematic documents expose typed components, pins, wires, labels, ports,
   power ports, sheets, ownership indexes, sheet links, and `netGraph`.
 - `parseAltiumPrjPcb()` and `parseAltiumOutJob()` provide source-preserving

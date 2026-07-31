@@ -3,9 +3,22 @@ import { type AltiumPcbLayerStack, getPcbLayerStack } from "../pcb-layer-stack"
 import { AltiumRecord, type AltiumRecordInit } from "./altium-record"
 import {
   getFirstDecoded,
+  getPcbRecordMeasurementMils,
   getPcbRecordPoint,
   getPcbRecordSize,
 } from "./pcb-record-helpers"
+
+export interface AltiumPcbGridSettings {
+  dotGrid?: boolean
+  electricalGridEnabled?: boolean
+  electricalGridRangeMils?: number
+  largeVisibleGridMultiplier?: number
+  largeVisibleGridSize?: number
+  snapEnabled?: boolean
+  snapSizeMils?: number
+  visibleGridMultiplier?: number
+  visibleGridSize?: number
+}
 
 export class AltiumBoardRecord extends AltiumRecord {
   override readonly type = "board-record"
@@ -52,6 +65,23 @@ export class AltiumBoardRecord extends AltiumRecord {
 
   get uniqueId(): string | undefined {
     return getFirstDecoded(this, "UNIQUEID")
+  }
+
+  get grid(): AltiumPcbGridSettings {
+    return {
+      dotGrid: this.getBoolean("DOTGRID"),
+      electricalGridEnabled: this.getBoolean("ELECTRICALGRIDENABLED"),
+      electricalGridRangeMils: getPcbRecordMeasurementMils(
+        this,
+        "ELECTRICALGRIDRANGE",
+      ),
+      largeVisibleGridMultiplier: this.getNumber("BIGVISIBLEGRIDMULTFACTOR"),
+      largeVisibleGridSize: this.getNumber("BIGVISIBLEGRIDSIZE"),
+      snapEnabled: this.getBoolean("GRIDSNAPENABLED"),
+      snapSizeMils: getPcbRecordMeasurementMils(this, "GRIDSIZE"),
+      visibleGridMultiplier: this.getNumber("VISIBLEGRIDMULTFACTOR"),
+      visibleGridSize: this.getNumber("VISIBLEGRIDSIZE"),
+    }
   }
 
   get layerStack(): AltiumPcbLayerStack {
