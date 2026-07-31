@@ -143,10 +143,17 @@ function renderPad(
     rotation === 0
       ? ""
       : ` transform="rotate(${formatSvgNumber(-rotation)} ${formatSvgNumber(x)} ${formatSvgNumber(y)})"`
-  const body =
-    shape === "ROUND" || shape === "CIRCLE"
-      ? `<ellipse cx="${formatSvgNumber(x)}" cy="${formatSvgNumber(y)}" rx="${formatSvgNumber(width / 2)}" ry="${formatSvgNumber(height / 2)}" fill="${color}" stroke="#111827" stroke-width="1"${transform}/>`
-      : `<rect x="${formatSvgNumber(x - width / 2)}" y="${formatSvgNumber(y - height / 2)}" width="${formatSvgNumber(width)}" height="${formatSvgNumber(height)}" rx="${formatSvgNumber(shape.includes("ROUND") ? Math.min(width, height) * 0.18 : 0)}" fill="${color}" stroke="#111827" stroke-width="1"${transform}/>`
+  let body: string
+  if (shape === "ROUND" || shape === "CIRCLE") {
+    if (Math.abs(width - height) < 0.0001) {
+      body = `<circle cx="${formatSvgNumber(x)}" cy="${formatSvgNumber(y)}" r="${formatSvgNumber(width / 2)}" fill="${color}" stroke="#111827" stroke-width="1"${transform}/>`
+    } else {
+      const radius = Math.min(width, height) / 2
+      body = `<rect x="${formatSvgNumber(x - width / 2)}" y="${formatSvgNumber(y - height / 2)}" width="${formatSvgNumber(width)}" height="${formatSvgNumber(height)}" rx="${formatSvgNumber(radius)}" ry="${formatSvgNumber(radius)}" fill="${color}" stroke="#111827" stroke-width="1"${transform}/>`
+    }
+  } else {
+    body = `<rect x="${formatSvgNumber(x - width / 2)}" y="${formatSvgNumber(y - height / 2)}" width="${formatSvgNumber(width)}" height="${formatSvgNumber(height)}" rx="${formatSvgNumber(shape.includes("ROUND") ? Math.min(width, height) * 0.18 : 0)}" fill="${color}" stroke="#111827" stroke-width="1"${transform}/>`
+  }
   const holeSize = getPcbMeasurement(record, "HOLESIZE")
   const hole =
     options.showHoles !== false && holeSize > 0

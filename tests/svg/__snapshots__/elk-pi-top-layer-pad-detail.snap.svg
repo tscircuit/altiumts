@@ -99,14 +99,14 @@
     <g data-record="Pad" data-layer="TOP"><rect x="108.3564" y="329.1487" width="39.3701" height="43.3071" rx="0" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
     <g data-record="Pad" data-layer="TOP"><rect x="486.3565" y="102.6966" width="39.3701" height="43.3071" rx="0" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-180 506.0415 124.3502)"/></g>
     <g data-record="Pad" data-layer="TOP"><rect x="464.8444" y="297.6686" width="39.3701" height="43.3071" rx="0" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="323.584" cy="285.956" rx="11.811" ry="43.3071" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-270 323.584 285.956)"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="323.584" cy="235.956" rx="11.811" ry="43.3071" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-270 323.584 235.956)"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="323.584" cy="185.956" rx="11.811" ry="43.3071" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-270 323.584 185.956)"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="323.584" cy="135.956" rx="11.811" ry="43.3071" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-270 323.584 135.956)"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="134.608" cy="285.956" rx="11.811" ry="43.3071" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-270 134.608 285.956)"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="134.608" cy="235.956" rx="11.811" ry="43.3071" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-270 134.608 235.956)"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="134.608" cy="185.956" rx="11.811" ry="43.3071" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-270 134.608 185.956)"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="134.608" cy="135.956" rx="11.811" ry="43.3071" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-270 134.608 135.956)"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="311.773" y="242.6489" width="23.622" height="86.6142" rx="11.811" ry="11.811" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-270 323.584 285.956)"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="311.773" y="192.6489" width="23.622" height="86.6142" rx="11.811" ry="11.811" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-270 323.584 235.956)"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="311.773" y="142.6489" width="23.622" height="86.6142" rx="11.811" ry="11.811" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-270 323.584 185.956)"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="311.773" y="92.6489" width="23.622" height="86.6142" rx="11.811" ry="11.811" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-270 323.584 135.956)"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="122.797" y="242.6489" width="23.622" height="86.6142" rx="11.811" ry="11.811" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-270 134.608 285.956)"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="122.797" y="192.6489" width="23.622" height="86.6142" rx="11.811" ry="11.811" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-270 134.608 235.956)"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="122.797" y="142.6489" width="23.622" height="86.6142" rx="11.811" ry="11.811" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-270 134.608 185.956)"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="122.797" y="92.6489" width="23.622" height="86.6142" rx="11.811" ry="11.811" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-270 134.608 135.956)"/></g>
     <g data-record="Pad" data-layer="TOP"><rect x="495.5527" y="-78.1771" width="72.8346" height="133.8583" rx="0" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
     <g data-record="Via" data-layer="MULTILAYER"><circle cx="474.266" cy="75.956" r="13.7796" fill="#22c55e" stroke="#d1fae5" stroke-width="1.5"/><circle cx="474.266" cy="75.956" r="5.9055" fill="#111827"/></g>
     <g data-record="Via" data-layer="MULTILAYER"><circle cx="329.764" cy="106.3577" r="13.7796" fill="#22c55e" stroke="#d1fae5" stroke-width="1.5"/><circle cx="329.764" cy="106.3577" r="5.9055" fill="#111827"/></g>

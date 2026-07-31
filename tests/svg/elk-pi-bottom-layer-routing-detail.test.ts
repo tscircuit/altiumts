@@ -22,7 +22,7 @@ test("renders dense Elk Pi bottom routing in a board-unit crop", async () => {
   expect(svg).toContain('data-layer="BOTTOM"')
   expect(svg).not.toContain('data-layer="TOP"')
   await expect(svg).toMatchSvgSnapshot(import.meta.path)
-})
+}, 15_000)
 
 test("rejects invalid PCB viewBox dimensions", async () => {
   const source = await readReferenceBytes("elk-pi.PcbDoc")

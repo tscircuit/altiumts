@@ -21,6 +21,8 @@ test("renders rotated Elk Pi top-layer pads in a board-unit crop", async () => {
   expect(svg).toContain('viewBox="0 0 500 400"')
   expect(svg).toContain('height="800"')
   expect(svg).toContain('transform="rotate(-270')
+  expect(svg).toContain('rx="11.811" ry="11.811"')
+  expect(svg).not.toContain("<ellipse")
   expect(svg).toContain('data-layer="TOP"')
   await expect(svg).toMatchSvgSnapshot(import.meta.path)
 })

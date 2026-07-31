@@ -271,6 +271,7 @@ writing Altium files.
 - [ ] Model through-hole, SMD, connector, and test-point behavior.
 - [ ] Model top, middle, bottom, and full-stack shapes.
 - [ ] Model rounded rectangle, octagonal, custom, and region-based shapes.
+- [x] Render asymmetric round pads as rotated obround/stadium shapes.
 - [ ] Model X/Y size by layer.
 - [ ] Model hole size and hole shape.
 - [ ] Model slot length and rotation.

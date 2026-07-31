@@ -285,16 +285,16 @@
     <g data-record="Pad" data-layer="TOP"><rect x="719.1245" y="537.409" width="31.751" height="34.016" rx="0" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-90 735 554.417)"/></g>
     <g data-record="Pad" data-layer="TOP"><rect x="620.9845" y="706.14" width="137.795" height="47.244" rx="0" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
     <g data-record="Pad" data-layer="TOP"><rect x="831.2205" y="706.14" width="137.795" height="47.244" rx="0" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="MULTILAYER"><ellipse cx="240" cy="244.762" rx="33.4645" ry="33.4645" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 240 244.762)"/><circle cx="240" cy="244.762" r="21.654" fill="#111827"/></g>
-    <g data-record="Pad" data-layer="MULTILAYER"><ellipse cx="240" cy="144.762" rx="33.4645" ry="33.4645" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 240 144.762)"/><circle cx="240" cy="144.762" r="21.654" fill="#111827"/></g>
-    <g data-record="Pad" data-layer="MULTILAYER"><ellipse cx="340" cy="244.762" rx="33.4645" ry="33.4645" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 340 244.762)"/><circle cx="340" cy="244.762" r="21.654" fill="#111827"/></g>
-    <g data-record="Pad" data-layer="MULTILAYER"><ellipse cx="340" cy="144.762" rx="33.4645" ry="33.4645" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 340 144.762)"/><circle cx="340" cy="144.762" r="21.654" fill="#111827"/></g>
-    <g data-record="Pad" data-layer="MULTILAYER"><ellipse cx="440" cy="244.762" rx="33.4645" ry="33.4645" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 440 244.762)"/><circle cx="440" cy="244.762" r="21.654" fill="#111827"/></g>
-    <g data-record="Pad" data-layer="MULTILAYER"><ellipse cx="440" cy="144.762" rx="33.4645" ry="33.4645" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 440 144.762)"/><circle cx="440" cy="144.762" r="21.654" fill="#111827"/></g>
-    <g data-record="Pad" data-layer="MULTILAYER"><ellipse cx="540" cy="244.762" rx="33.4645" ry="33.4645" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 540 244.762)"/><circle cx="540" cy="244.762" r="21.654" fill="#111827"/></g>
-    <g data-record="Pad" data-layer="MULTILAYER"><ellipse cx="540" cy="144.762" rx="33.4645" ry="33.4645" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 540 144.762)"/><circle cx="540" cy="144.762" r="21.654" fill="#111827"/></g>
-    <g data-record="Pad" data-layer="MULTILAYER"><ellipse cx="640" cy="244.762" rx="33.4645" ry="33.4645" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 640 244.762)"/><circle cx="640" cy="244.762" r="21.654" fill="#111827"/></g>
-    <g data-record="Pad" data-layer="MULTILAYER"><ellipse cx="640" cy="144.762" rx="31" ry="31" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 640 144.762)"/><circle cx="640" cy="144.762" r="21.654" fill="#111827"/></g>
+    <g data-record="Pad" data-layer="MULTILAYER"><circle cx="240" cy="244.762" r="33.4645" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 240 244.762)"/><circle cx="240" cy="244.762" r="21.654" fill="#111827"/></g>
+    <g data-record="Pad" data-layer="MULTILAYER"><circle cx="240" cy="144.762" r="33.4645" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 240 144.762)"/><circle cx="240" cy="144.762" r="21.654" fill="#111827"/></g>
+    <g data-record="Pad" data-layer="MULTILAYER"><circle cx="340" cy="244.762" r="33.4645" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 340 244.762)"/><circle cx="340" cy="244.762" r="21.654" fill="#111827"/></g>
+    <g data-record="Pad" data-layer="MULTILAYER"><circle cx="340" cy="144.762" r="33.4645" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 340 144.762)"/><circle cx="340" cy="144.762" r="21.654" fill="#111827"/></g>
+    <g data-record="Pad" data-layer="MULTILAYER"><circle cx="440" cy="244.762" r="33.4645" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 440 244.762)"/><circle cx="440" cy="244.762" r="21.654" fill="#111827"/></g>
+    <g data-record="Pad" data-layer="MULTILAYER"><circle cx="440" cy="144.762" r="33.4645" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 440 144.762)"/><circle cx="440" cy="144.762" r="21.654" fill="#111827"/></g>
+    <g data-record="Pad" data-layer="MULTILAYER"><circle cx="540" cy="244.762" r="33.4645" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 540 244.762)"/><circle cx="540" cy="244.762" r="21.654" fill="#111827"/></g>
+    <g data-record="Pad" data-layer="MULTILAYER"><circle cx="540" cy="144.762" r="33.4645" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 540 144.762)"/><circle cx="540" cy="144.762" r="21.654" fill="#111827"/></g>
+    <g data-record="Pad" data-layer="MULTILAYER"><circle cx="640" cy="244.762" r="33.4645" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 640 244.762)"/><circle cx="640" cy="244.762" r="21.654" fill="#111827"/></g>
+    <g data-record="Pad" data-layer="MULTILAYER"><circle cx="640" cy="144.762" r="31" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 640 144.762)"/><circle cx="640" cy="144.762" r="21.654" fill="#111827"/></g>
     <g data-record="Pad" data-layer="TOP"><rect x="719.4695" y="227.754" width="31.751" height="34.016" rx="0" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-180 735.345 244.762)"/></g>
     <g data-record="Pad" data-layer="TOP"><rect x="778.7795" y="227.754" width="31.751" height="34.016" rx="0" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-180 794.655 244.762)"/></g>
     <g data-record="Pad" data-layer="TOP"><rect x="719.4695" y="297.754" width="31.751" height="34.016" rx="0" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-180 735.345 314.762)"/></g>
@@ -309,45 +309,45 @@
     <g data-record="Pad" data-layer="TOP"><rect x="231.807" y="827.0455" width="31.496" height="35.433" rx="0" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-180 247.555 844.762)"/></g>
     <g data-record="Pad" data-layer="TOP"><rect x="644.252" y="404.4905" width="31.496" height="35.433" rx="0" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-90 660 422.207)"/></g>
     <g data-record="Pad" data-layer="TOP"><rect x="644.252" y="459.6005" width="31.496" height="35.433" rx="0" fill="#ef4444" stroke="#111827" stroke-width="1" transform="rotate(-90 660 477.317)"/></g>
-    <g data-record="Pad" data-layer="MULTILAYER"><ellipse cx="340" cy="839.762" rx="31" ry="31" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 340 839.762)"/><circle cx="340" cy="839.762" r="20.079" fill="#111827"/></g>
-    <g data-record="Pad" data-layer="MULTILAYER"><ellipse cx="440" cy="839.762" rx="31" ry="31" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 440 839.762)"/><circle cx="440" cy="839.762" r="20.079" fill="#111827"/></g>
+    <g data-record="Pad" data-layer="MULTILAYER"><circle cx="340" cy="839.762" r="31" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 340 839.762)"/><circle cx="340" cy="839.762" r="20.079" fill="#111827"/></g>
+    <g data-record="Pad" data-layer="MULTILAYER"><circle cx="440" cy="839.762" r="31" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 440 839.762)"/><circle cx="440" cy="839.762" r="20.079" fill="#111827"/></g>
     <g data-record="Pad" data-layer="MULTILAYER"><rect x="509" y="808.762" width="62" height="62" rx="0" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 540 839.762)"/><circle cx="540" cy="839.762" r="20.079" fill="#111827"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="258.661" cy="652.582" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="284.252" cy="652.582" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="309.843" cy="652.582" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="335.433" cy="652.582" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="361.024" cy="652.582" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="386.614" cy="652.582" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="412.205" cy="652.582" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="437.795" cy="652.582" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="463.386" cy="652.582" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="488.976" cy="652.582" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="514.567" cy="652.582" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="540.157" cy="652.582" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="565.748" cy="652.582" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="591.339" cy="652.582" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="258.661" cy="426.932" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="284.252" cy="426.932" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="309.843" cy="426.932" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="335.433" cy="426.932" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="361.024" cy="426.932" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="386.614" cy="426.932" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="412.205" cy="426.932" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="437.795" cy="426.932" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="463.386" cy="426.932" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="488.976" cy="426.932" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="514.567" cy="426.932" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="540.157" cy="426.932" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="565.748" cy="426.932" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="TOP"><ellipse cx="591.339" cy="426.932" rx="6.752" ry="34.0845" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="251.909" y="618.4975" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="277.5" y="618.4975" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="303.091" y="618.4975" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="328.681" y="618.4975" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="354.272" y="618.4975" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="379.862" y="618.4975" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="405.453" y="618.4975" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="431.043" y="618.4975" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="456.634" y="618.4975" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="482.224" y="618.4975" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="507.815" y="618.4975" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="533.405" y="618.4975" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="558.996" y="618.4975" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="584.587" y="618.4975" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="251.909" y="392.8475" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="277.5" y="392.8475" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="303.091" y="392.8475" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="328.681" y="392.8475" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="354.272" y="392.8475" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="379.862" y="392.8475" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="405.453" y="392.8475" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="431.043" y="392.8475" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="456.634" y="392.8475" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="482.224" y="392.8475" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="507.815" y="392.8475" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="533.405" y="392.8475" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="558.996" y="392.8475" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
+    <g data-record="Pad" data-layer="TOP"><rect x="584.587" y="392.8475" width="13.504" height="68.169" rx="6.752" ry="6.752" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
     <g data-record="Pad" data-layer="TOP"><rect x="302.953" y="485.623" width="244.094" height="108.268" rx="0" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <g data-record="Pad" data-layer="MULTILAYER"><ellipse cx="924.999" cy="294.762" rx="33.4645" ry="49.2125" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-90 924.999 294.762)"/><circle cx="924.999" cy="294.762" r="21.654" fill="#111827"/></g>
-    <g data-record="Pad" data-layer="MULTILAYER"><ellipse cx="925" cy="489.762" rx="33.4645" ry="49.2125" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-90 925 489.762)"/><circle cx="925" cy="489.762" r="21.654" fill="#111827"/></g>
-    <g data-record="Pad" data-layer="MULTILAYER"><ellipse cx="1000" cy="824.762" rx="39.37" ry="39.37" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 1000 824.762)"/><circle cx="1000" cy="824.762" r="39.37" fill="#111827"/></g>
-    <g data-record="Pad" data-layer="MULTILAYER"><ellipse cx="110" cy="134.762" rx="39.37" ry="39.37" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 110 134.762)"/><circle cx="110" cy="134.762" r="39.37" fill="#111827"/></g>
-    <g data-record="Pad" data-layer="MULTILAYER"><ellipse cx="110" cy="829.762" rx="39.37" ry="39.37" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 110 829.762)"/><circle cx="110" cy="829.762" r="39.37" fill="#111827"/></g>
-    <g data-record="Pad" data-layer="MULTILAYER"><ellipse cx="1000" cy="139.762" rx="39.37" ry="39.37" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 1000 139.762)"/><circle cx="1000" cy="139.762" r="39.37" fill="#111827"/></g>
-    <g data-record="Pad" data-layer="MULTILAYER"><ellipse cx="740" cy="144.762" rx="31" ry="31" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 740 144.762)"/><circle cx="740" cy="144.762" r="21.654" fill="#111827"/></g>
+    <g data-record="Pad" data-layer="MULTILAYER"><rect x="891.5345" y="245.5495" width="66.929" height="98.425" rx="33.4645" ry="33.4645" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-90 924.999 294.762)"/><circle cx="924.999" cy="294.762" r="21.654" fill="#111827"/></g>
+    <g data-record="Pad" data-layer="MULTILAYER"><rect x="891.5355" y="440.5495" width="66.929" height="98.425" rx="33.4645" ry="33.4645" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-90 925 489.762)"/><circle cx="925" cy="489.762" r="21.654" fill="#111827"/></g>
+    <g data-record="Pad" data-layer="MULTILAYER"><circle cx="1000" cy="824.762" r="39.37" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 1000 824.762)"/><circle cx="1000" cy="824.762" r="39.37" fill="#111827"/></g>
+    <g data-record="Pad" data-layer="MULTILAYER"><circle cx="110" cy="134.762" r="39.37" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 110 134.762)"/><circle cx="110" cy="134.762" r="39.37" fill="#111827"/></g>
+    <g data-record="Pad" data-layer="MULTILAYER"><circle cx="110" cy="829.762" r="39.37" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 110 829.762)"/><circle cx="110" cy="829.762" r="39.37" fill="#111827"/></g>
+    <g data-record="Pad" data-layer="MULTILAYER"><circle cx="1000" cy="139.762" r="39.37" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 1000 139.762)"/><circle cx="1000" cy="139.762" r="39.37" fill="#111827"/></g>
+    <g data-record="Pad" data-layer="MULTILAYER"><circle cx="740" cy="144.762" r="31" fill="#22c55e" stroke="#111827" stroke-width="1" transform="rotate(-180 740 144.762)"/><circle cx="740" cy="144.762" r="21.654" fill="#111827"/></g>
     <g data-record="Via"><circle cx="365.95" cy="559.452" r="11.811" fill="#22c55e" stroke="#d1fae5" stroke-width="1.5"/><circle cx="365.95" cy="559.452" r="5.906" fill="#111827"/></g>
     <g data-record="Via"><circle cx="365.95" cy="520.082" r="11.811" fill="#22c55e" stroke="#d1fae5" stroke-width="1.5"/><circle cx="365.95" cy="520.082" r="5.906" fill="#111827"/></g>
     <g data-record="Via"><circle cx="405.32" cy="559.452" r="11.811" fill="#22c55e" stroke="#d1fae5" stroke-width="1.5"/><circle cx="405.32" cy="559.452" r="5.906" fill="#111827"/></g>
