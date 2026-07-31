@@ -108,3 +108,12 @@ export function expandBounds(bounds: SvgBounds, amount: number): SvgBounds {
     maxY: bounds.maxY + amount,
   }
 }
+
+export function boundsIntersect(left: SvgBounds, right: SvgBounds): boolean {
+  return !(
+    left.maxX < right.minX ||
+    left.minX > right.maxX ||
+    left.maxY < right.minY ||
+    left.minY > right.maxY
+  )
+}

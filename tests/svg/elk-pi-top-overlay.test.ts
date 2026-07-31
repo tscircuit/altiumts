@@ -15,5 +15,6 @@ test("renders the binary Elk Pi top overlay", async () => {
   expect(svg).toContain('data-record="Text"')
   expect(svg).toContain('data-layer="TOPOVERLAY"')
   expect(svg).toContain(">DOUT</text>")
+  expect(svg).not.toContain(">T491C107K010AT</text>")
   await expect(svg).toMatchSvgSnapshot(import.meta.path)
 })

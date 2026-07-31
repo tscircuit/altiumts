@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="864" viewBox="0 0 1100 950" role="img" aria-label="SimpleFOC Mini top overlay detail" class="altium-pcb" data-renderer="altiumts">
+  <title>SimpleFOC Mini top overlay detail</title>
+  <rect width="100%" height="100%" fill="#071a16"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <polygon data-record="BoardOutline" points="2147.584,1750 -550,1750 -550,-732.538 2147.584,-732.538 2147.584,1750" fill="#123d32" stroke="#6ee7b7" stroke-width="3"/>
+    <path data-record="Region" data-layer="TOPOVERLAY" d="M 917.126 785.628 L 917.126 793.423 L 885.945 793.423 L 885.945 785.628 L 917.126 785.628 Z" fill="#f8fafc" fill-opacity="0.32" fill-rule="evenodd" stroke="#f8fafc" stroke-width="1.5"/>
+    <path data-record="Region" data-layer="TOPOVERLAY" d="M 672.874 785.628 L 672.874 793.423 L 704.055 793.423 L 704.055 785.628 L 672.874 785.628 Z" fill="#f8fafc" fill-opacity="0.32" fill-rule="evenodd" stroke="#f8fafc" stroke-width="1.5"/>
+    <path data-record="Region" data-layer="TOPOVERLAY" d="M 684.567 763.542 L 684.567 815.51 L 692.362 815.51 L 692.362 763.542 L 684.567 763.542 Z" fill="#f8fafc" fill-opacity="0.32" fill-rule="evenodd" stroke="#f8fafc" stroke-width="1.5"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="700" y1="94.762" x2="775" y2="94.762" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="775" y1="94.762" x2="785" y2="104.762" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="785" y1="104.762" x2="785" y2="184.762" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="785" y1="184.762" x2="775" y2="194.762" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="775" y1="194.762" x2="700" y2="194.762" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="776" y1="584.262" x2="844" y2="584.262" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="844" y1="584.262" x2="844" y2="526.262" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="776" y1="584.262" x2="776" y2="526.262" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="844" y1="503.262" x2="844" y2="457.262" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="776" y1="502.262" x2="776" y2="457.262" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="776" y1="457.262" x2="790" y2="443.262" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="790" y1="443.262" x2="830" y2="443.262" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="830" y1="443.262" x2="844" y2="457.262" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="794" y1="517.762" x2="825" y2="517.762" stroke="#f8fafc" stroke-width="7.992"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="809.687" y1="517.762" x2="809.687" y2="510.858" stroke="#f8fafc" stroke-width="7.992"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="761.008" y1="507.982" x2="761.008" y2="470.231" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="761.008" y1="470.231" x2="708.992" y2="470.231" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="708.992" y1="470.231" x2="708.992" y2="507.982" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="761.008" y1="541.542" x2="761.008" y2="579.293" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="761.008" y1="579.293" x2="708.992" y2="579.293" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="708.992" y1="579.293" x2="708.992" y2="541.542" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="927.111" y1="758.867" x2="927.9" y2="862.662" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="927.9" y1="862.662" x2="717" y2="862.662" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="717" y1="862.662" x2="662.1" y2="807.762" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="662.1" y1="807.762" x2="662.626" y2="756.762" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="927.657" y1="701.9" x2="927.92" y2="596.842" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="927.92" y1="596.842" x2="717.046" y2="596.842" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="717.046" y1="596.842" x2="662.08" y2="651.808" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="662.08" y1="651.808" x2="662.08" y2="702.762" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="700" y1="294.762" x2="180" y2="294.762" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="180" y1="294.762" x2="180" y2="94.762" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="180" y1="94.762" x2="700" y2="94.762" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="700" y1="94.762" x2="700" y2="294.762" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="700" y1="194.762" x2="590" y2="194.762" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="590" y1="194.762" x2="590" y2="94.762" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="590" y1="94.762" x2="700" y2="94.762" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="700" y1="94.762" x2="700" y2="194.762" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="748.22" y1="218.754" x2="710.469" y2="218.754" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="710.469" y1="218.754" x2="710.469" y2="270.77" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="710.469" y1="270.77" x2="748.22" y2="270.77" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="781.78" y1="218.754" x2="819.531" y2="218.754" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="819.531" y1="218.754" x2="819.531" y2="270.77" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="819.531" y1="270.77" x2="781.78" y2="270.77" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="748.22" y1="288.754" x2="710.469" y2="288.754" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="710.469" y1="288.754" x2="710.469" y2="340.77" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="710.469" y1="340.77" x2="748.22" y2="340.77" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="781.78" y1="288.754" x2="819.531" y2="288.754" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="819.531" y1="288.754" x2="819.531" y2="340.77" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="819.531" y1="340.77" x2="781.78" y2="340.77" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="748.22" y1="353.754" x2="710.469" y2="353.754" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="710.469" y1="353.754" x2="710.469" y2="405.77" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="710.469" y1="405.77" x2="748.22" y2="405.77" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="781.78" y1="353.754" x2="819.531" y2="353.754" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="819.531" y1="353.754" x2="819.531" y2="405.77" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="819.531" y1="405.77" x2="781.78" y2="405.77" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="168.992" y1="411.542" x2="168.992" y2="449.293" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="168.992" y1="449.293" x2="221.008" y2="449.293" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="221.008" y1="449.293" x2="221.008" y2="411.542" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="168.992" y1="377.982" x2="168.992" y2="340.231" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="168.992" y1="340.231" x2="221.008" y2="340.231" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="221.008" y1="340.231" x2="221.008" y2="377.982" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="165.275" y1="785.501" x2="165.275" y2="754.004" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="208.966" y1="797.7" x2="177.471" y2="797.7" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="208.966" y1="741.808" x2="177.471" y2="741.808" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="231.639" y1="797.929" x2="263.135" y2="797.929" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="275.333" y1="785.731" x2="275.333" y2="754.236" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="231.639" y1="742.039" x2="263.135" y2="742.039" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="165.275" y1="860.501" x2="165.275" y2="829.004" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="208.966" y1="872.7" x2="177.471" y2="872.7" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="208.966" y1="816.808" x2="177.471" y2="816.808" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="231.639" y1="872.929" x2="263.135" y2="872.929" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="275.333" y1="860.731" x2="275.333" y2="829.236" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="231.639" y1="817.039" x2="263.135" y2="817.039" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="644.261" y1="395.037" x2="675.758" y2="395.037" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="632.062" y1="438.728" x2="632.062" y2="407.233" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="687.954" y1="438.728" x2="687.954" y2="407.233" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="631.833" y1="461.401" x2="631.833" y2="492.897" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="644.031" y1="505.095" x2="675.526" y2="505.095" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="687.723" y1="461.401" x2="687.723" y2="492.897" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="590" y1="889.762" x2="290" y2="889.762" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="290" y1="889.762" x2="290" y2="789.762" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="590" y1="789.762" x2="290" y2="789.762" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="590" y1="889.762" x2="590" y2="789.762" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="488.093" y1="889.762" x2="488.093" y2="789.762" stroke="#f8fafc" stroke-width="10"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="231.055" y1="609.497" x2="231.055" y2="470.017" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="231.055" y1="470.017" x2="618.945" y2="470.017" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="618.945" y1="470.017" x2="618.945" y2="609.497" stroke="#f8fafc" stroke-width="6"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="618.945" y1="609.497" x2="231.055" y2="609.497" stroke="#f8fafc" stroke-width="6"/>
+    <polyline data-record="Arc" data-layer="TOPOVERLAY" points="263.137,797.929 264.7292,797.8246 266.2941,797.5134 267.805,797.0005 269.236,796.2948 270.5627,795.4083 271.7623,794.3563 272.8143,793.1567 273.7008,791.83 274.4065,790.399 274.9194,788.8881 275.2306,787.3232 275.335,785.731" fill="none" stroke="#f8fafc" stroke-width="10"/>
+    <polyline data-record="Arc" data-layer="TOPOVERLAY" points="275.335,754.236 275.2462,752.7656 274.9808,751.3166 274.5426,749.9102 273.9381,748.5669 273.1761,747.3063 272.2677,746.1466 271.2261,745.105 270.0666,744.1965 268.806,743.4344 267.4627,742.8298 266.0563,742.3915 264.6074,742.1259 263.137,742.037" fill="none" stroke="#f8fafc" stroke-width="10"/>
+    <polyline data-record="Arc" data-layer="TOPOVERLAY" points="165.275,785.501 165.3638,786.9714 165.6292,788.4204 166.0674,789.8268 166.6719,791.1701 167.4339,792.4307 168.3423,793.5904 169.3839,794.632 170.5434,795.5405 171.804,796.3026 173.1473,796.9072 174.5537,797.3455 176.0026,797.6111 177.473,797.7" fill="none" stroke="#f8fafc" stroke-width="10"/>
+    <polyline data-record="Arc" data-layer="TOPOVERLAY" points="177.473,741.808 175.8808,741.9124 174.3159,742.2236 172.805,742.7365 171.374,743.4422 170.0473,744.3287 168.8477,745.3807 167.7957,746.5803 166.9092,747.907 166.2035,749.338 165.6906,750.8489 165.3794,752.4138 165.275,754.006" fill="none" stroke="#f8fafc" stroke-width="10"/>
+    <polyline data-record="Arc" data-layer="TOPOVERLAY" points="263.137,872.929 264.7292,872.8246 266.2941,872.5134 267.805,872.0005 269.236,871.2948 270.5627,870.4083 271.7623,869.3563 272.8143,868.1567 273.7008,866.83 274.4065,865.399 274.9194,863.8881 275.2306,862.3232 275.335,860.731" fill="none" stroke="#f8fafc" stroke-width="10"/>
+    <polyline data-record="Arc" data-layer="TOPOVERLAY" points="275.335,829.236 275.2462,827.7656 274.9808,826.3166 274.5426,824.9102 273.9381,823.5669 273.1761,822.3063 272.2677,821.1466 271.2261,820.105 270.0666,819.1965 268.806,818.4344 267.4627,817.8298 266.0563,817.3915 264.6074,817.1259 263.137,817.037" fill="none" stroke="#f8fafc" stroke-width="10"/>
+    <polyline data-record="Arc" data-layer="TOPOVERLAY" points="165.275,860.501 165.3638,861.9714 165.6292,863.4204 166.0674,864.8268 166.6719,866.1701 167.4339,867.4307 168.3423,868.5904 169.3839,869.632 170.5434,870.5405 171.804,871.3026 173.1473,871.9072 174.5537,872.3455 176.0026,872.6111 177.473,872.7" fill="none" stroke="#f8fafc" stroke-width="10"/>
+    <polyline data-record="Arc" data-layer="TOPOVERLAY" points="177.473,816.808 175.8808,816.9124 174.3159,817.2236 172.805,817.7365 171.374,818.4422 170.0473,819.3287 168.8477,820.3807 167.7957,821.5803 166.9092,822.907 166.2035,824.338 165.6906,825.8489 165.3794,827.4138 165.275,829.006" fill="none" stroke="#f8fafc" stroke-width="10"/>
+    <polyline data-record="Arc" data-layer="TOPOVERLAY" points="631.833,492.899 631.9374,494.4912 632.2486,496.0561 632.7615,497.567 633.4672,498.998 634.3537,500.3247 635.4057,501.5243 636.6053,502.5763 637.932,503.4628 639.363,504.1685 640.8739,504.6814 642.4388,504.9926 644.031,505.097" fill="none" stroke="#f8fafc" stroke-width="10"/>
+    <polyline data-record="Arc" data-layer="TOPOVERLAY" points="675.526,505.097 676.9964,505.0082 678.4454,504.7428 679.8518,504.3046 681.1951,503.7001 682.4557,502.9381 683.6154,502.0297 684.657,500.9881 685.5655,499.8286 686.3276,498.568 686.9322,497.2247 687.3705,495.8183 687.6361,494.3694 687.725,492.899" fill="none" stroke="#f8fafc" stroke-width="10"/>
+    <polyline data-record="Arc" data-layer="TOPOVERLAY" points="644.261,395.037 642.7906,395.1258 641.3416,395.3912 639.9352,395.8294 638.5919,396.4339 637.3313,397.1959 636.1716,398.1043 635.13,399.1459 634.2215,400.3054 633.4594,401.566 632.8548,402.9093 632.4165,404.3157 632.1509,405.7646 632.062,407.235" fill="none" stroke="#f8fafc" stroke-width="10"/>
+    <polyline data-record="Arc" data-layer="TOPOVERLAY" points="687.954,407.235 687.8496,405.6428 687.5384,404.0779 687.0255,402.567 686.3198,401.136 685.4333,399.8093 684.3813,398.6097 683.1817,397.5577 681.855,396.6712 680.424,395.9655 678.9131,395.4526 677.3482,395.1414 675.756,395.037" fill="none" stroke="#f8fafc" stroke-width="10"/>
+    <polyline data-record="Arc" data-layer="TOPOVERLAY" points="264.57,579.882 264.5194,579.1106 264.3686,578.3524 264.1201,577.6203 263.7782,576.927 263.3487,576.2842 262.839,575.703 262.2578,575.1933 261.615,574.7638 260.9217,574.4219 260.1896,574.1734 259.4314,574.0226 258.66,573.972 257.8886,574.0226 257.1304,574.1734 256.3983,574.4219 255.705,574.7638 255.0622,575.1933 254.481,575.703 253.9713,576.2842 253.5418,576.927 253.1999,577.6203 252.9514,578.3524 252.8006,579.1106 252.75,579.882 252.8006,580.6534 252.9514,581.4116 253.1999,582.1437 253.5418,582.837 253.9713,583.4798 254.481,584.061 255.0622,584.5707 255.705,585.0002 256.3983,585.3421 257.1304,585.5906 257.8886,585.7414 258.66,585.792 259.4314,585.7414 260.1896,585.5906 260.9217,585.3421 261.615,585.0002 262.2578,584.5707 262.839,584.061 263.3487,583.4798 263.7782,582.837 264.1201,582.1437 264.3686,581.4116 264.5194,580.6534 264.57,579.882" fill="none" stroke="#f8fafc" stroke-width="11.811"/>
+    <polyline data-record="Arc" data-layer="TOPOVERLAY" points="240.01,652.592 239.9594,651.8206 239.8086,651.0624 239.5601,650.3303 239.2182,649.637 238.7887,648.9942 238.279,648.413 237.6978,647.9033 237.055,647.4738 236.3617,647.1319 235.6296,646.8834 234.8714,646.7326 234.1,646.682 233.3286,646.7326 232.5704,646.8834 231.8383,647.1319 231.145,647.4738 230.5022,647.9033 229.921,648.413 229.4113,648.9942 228.9818,649.637 228.6399,650.3303 228.3914,651.0624 228.2406,651.8206 228.19,652.592 228.2406,653.3634 228.3914,654.1216 228.6399,654.8537 228.9818,655.547 229.4113,656.1898 229.921,656.771 230.5022,657.2807 231.145,657.7102 231.8383,658.0521 232.5704,658.3006 233.3286,658.4514 234.1,658.502 234.8714,658.4514 235.6296,658.3006 236.3617,658.0521 237.055,657.7102 237.6978,657.2807 238.279,656.771 238.7887,656.1898 239.2182,655.547 239.5601,654.8537 239.8086,654.1216 239.9594,653.3634 240.01,652.592" fill="none" stroke="#f8fafc" stroke-width="11.811"/>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="39.37" font-weight="normal" font-style="normal" dominant-baseline="central" transform="translate(948.9194 560.8426) rotate(-135) scale(1 1)">+</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="39.37" font-weight="normal" font-style="normal" dominant-baseline="central" transform="translate(980 230.077) rotate(-180) scale(1 1)">-</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="31.496" font-weight="normal" font-style="normal" dominant-baseline="central" transform="translate(880.748 429.762) rotate(-90) scale(1 1)">8-35V</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="35.433" font-weight="normal" font-style="normal" dominant-baseline="central" transform="translate(217.7165 724.762) rotate(-90) scale(1 1)">SimpleFOC</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="35.433" font-weight="normal" font-style="normal" dominant-baseline="central" transform="translate(870.1798 201.7044) rotate(-17) scale(1 1)">v1.1</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="27.559" font-weight="normal" font-style="normal" dominant-baseline="central" transform="translate(315 793.5415) rotate(0) scale(1 1)">M1</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="27.559" font-weight="normal" font-style="normal" dominant-baseline="central" transform="translate(415 793.5415) rotate(0) scale(1 1)">M2</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="27.559" font-weight="normal" font-style="normal" dominant-baseline="central" transform="translate(520 793.5415) rotate(0) scale(1 1)">M3</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="47.244" font-weight="normal" font-style="normal" dominant-baseline="central" transform="translate(830 163.384) rotate(0) scale(1 1)">Mini</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="27.559" font-weight="normal" font-style="normal" dominant-baseline="central" transform="translate(610 353.5415) rotate(0) scale(1 1)">3V3</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="27.559" font-weight="normal" font-style="normal" dominant-baseline="central" transform="translate(231.4691 346.9286) rotate(-28) scale(1 1)">nFT</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="27.559" font-weight="normal" font-style="normal" dominant-baseline="central" transform="translate(310 348.5415) rotate(0) scale(1 1)">nSP</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="27.559" font-weight="normal" font-style="normal" dominant-baseline="central" transform="translate(411.6804 351.8138) rotate(-29) scale(1 1)">nRT</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="27.559" font-weight="normal" font-style="normal" dominant-baseline="central" transform="translate(505 348.5415) rotate(0) scale(1 1)">GND</text>
+  </g>
+</svg>

@@ -139,10 +139,14 @@ function renderPad(
     width
   const rotation = Number(record.getCaseInsensitive("ROTATION") ?? 0)
   const shape = record.getCaseInsensitive("SHAPE")?.toUpperCase() ?? "ROUND"
+  const transform =
+    rotation === 0
+      ? ""
+      : ` transform="rotate(${formatSvgNumber(-rotation)} ${formatSvgNumber(x)} ${formatSvgNumber(y)})"`
   const body =
     shape === "ROUND" || shape === "CIRCLE"
-      ? `<ellipse cx="${formatSvgNumber(x)}" cy="${formatSvgNumber(y)}" rx="${formatSvgNumber(width / 2)}" ry="${formatSvgNumber(height / 2)}" fill="${color}" stroke="#111827" stroke-width="1"/>`
-      : `<rect x="${formatSvgNumber(x - width / 2)}" y="${formatSvgNumber(y - height / 2)}" width="${formatSvgNumber(width)}" height="${formatSvgNumber(height)}" rx="${formatSvgNumber(shape.includes("ROUND") ? Math.min(width, height) * 0.18 : 0)}" fill="${color}" stroke="#111827" stroke-width="1" transform="rotate(${formatSvgNumber(-rotation)} ${formatSvgNumber(x)} ${formatSvgNumber(y)})"/>`
+      ? `<ellipse cx="${formatSvgNumber(x)}" cy="${formatSvgNumber(y)}" rx="${formatSvgNumber(width / 2)}" ry="${formatSvgNumber(height / 2)}" fill="${color}" stroke="#111827" stroke-width="1"${transform}/>`
+      : `<rect x="${formatSvgNumber(x - width / 2)}" y="${formatSvgNumber(y - height / 2)}" width="${formatSvgNumber(width)}" height="${formatSvgNumber(height)}" rx="${formatSvgNumber(shape.includes("ROUND") ? Math.min(width, height) * 0.18 : 0)}" fill="${color}" stroke="#111827" stroke-width="1"${transform}/>`
   const holeSize = getPcbMeasurement(record, "HOLESIZE")
   const hole =
     options.showHoles !== false && holeSize > 0

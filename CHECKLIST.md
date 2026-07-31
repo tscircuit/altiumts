@@ -228,6 +228,8 @@ writing Altium files.
 - [ ] Model board-level unique IDs.
 - [ ] Model board outline vertices and arcs.
 - [ ] Model board cutouts.
+- [ ] Reconcile ASCII files whose physical contour is represented by connected
+      `POLYGONOUTLINE` keepout primitives instead of the larger `Board` contour.
 - [ ] Model embedded board settings.
 - [ ] Preserve application-specific configuration fields that are not semantic
       PCB data.
@@ -765,6 +767,7 @@ writing Altium files.
 - [x] Add `bun-match-svg` visual regression infrastructure.
 - [x] Add SVG snapshots for every imported PCB and schematic reference.
 - [x] Add full-PCB and per-layer visual snapshots.
+- [x] Add board-coordinate `viewBox` crops for focused PCB snapshots.
 - [ ] Add tests for every public class and helper.
 - [ ] Add tests for every known ASCII record kind.
 - [ ] Add tests for every binary record codec.

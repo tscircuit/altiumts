@@ -22,9 +22,21 @@ export interface AltiumSvgRenderOptions {
   width?: number
 }
 
+/**
+ * A crop rectangle expressed in Altium board coordinates. `x` and `y` locate
+ * the lower-left corner; all values use the document's normalized board unit.
+ */
+export interface AltiumPcbViewBox {
+  height: number
+  width: number
+  x: number
+  y: number
+}
+
 export interface AltiumPcbSvgOptions extends AltiumSvgRenderOptions {
   layers?: string[]
   showBoardOutline?: boolean
+  viewBox?: AltiumPcbViewBox
 }
 
 export interface AltiumSheetSvgOptions extends AltiumSvgRenderOptions {

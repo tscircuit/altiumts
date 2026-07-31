@@ -34,7 +34,7 @@ export function getPcbRecordBounds(
   const kind = record.recordKind
 
   if (kind === "Track") {
-    return boundsFromPoints([
+    const bounds = boundsFromPoints([
       {
         x: getPcbMeasurement(record, "X1"),
         y: getPcbMeasurement(record, "Y1"),
@@ -44,6 +44,8 @@ export function getPcbRecordBounds(
         y: getPcbMeasurement(record, "Y2"),
       },
     ])
+    const width = getPcbMeasurement(record, "WIDTH")
+    return bounds && width > 0 ? expandBounds(bounds, width / 2) : bounds
   }
 
   if (kind === "Pad") {
@@ -57,11 +59,21 @@ export function getPcbRecordBounds(
       parsePcbMeasurement(record.getCaseInsensitive("YSIZE")) ??
       parsePcbMeasurement(record.getCaseInsensitive("TOPYSIZE")) ??
       width
+    const rotation =
+      (Number(record.getCaseInsensitive("ROTATION") ?? 0) * Math.PI) / 180
+    const halfWidth = width / 2
+    const halfHeight = height / 2
+    const extentX =
+      Math.abs(Math.cos(rotation)) * halfWidth +
+      Math.abs(Math.sin(rotation)) * halfHeight
+    const extentY =
+      Math.abs(Math.sin(rotation)) * halfWidth +
+      Math.abs(Math.cos(rotation)) * halfHeight
     return {
-      minX: x - width / 2,
-      minY: y - height / 2,
-      maxX: x + width / 2,
-      maxY: y + height / 2,
+      minX: x - extentX,
+      minY: y - extentY,
+      maxX: x + extentX,
+      maxY: y + extentY,
     }
   }
 
@@ -84,11 +96,13 @@ export function getPcbRecordBounds(
     const x = getPcbMeasurement(record, "LOCATION.X")
     const y = getPcbMeasurement(record, "LOCATION.Y")
     const radius = getPcbMeasurement(record, "RADIUS")
+    const width = getPcbMeasurement(record, "WIDTH")
+    const extent = radius + Math.max(width / 2, 0)
     return {
-      minX: x - radius,
-      minY: y - radius,
-      maxX: x + radius,
-      maxY: y + radius,
+      minX: x - extent,
+      minY: y - extent,
+      maxX: x + extent,
+      maxY: y + extent,
     }
   }
 

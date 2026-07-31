@@ -105,6 +105,13 @@ await writeFile(
   "board-top.svg",
   serializeAltiumPcbLayerToSvg(board, "TOP"),
 )
+await writeFile(
+  "board-top-detail.svg",
+  serializeAltiumPcbLayerToSvg(board, "TOP", {
+    // Lower-left origin and dimensions in normalized Altium board units.
+    viewBox: { x: 4200, y: 2500, width: 1200, height: 900 },
+  }),
+)
 ```
 
 `serializeAltiumSheetToSvg()` accepts `AltiumSchDoc`, `AltiumPcbDoc`, or the
@@ -112,7 +119,12 @@ lines returned by `parseAltiumAscii()`. The PCB serializers accept either
 ASCII or binary PCB documents. PCB rendering currently prioritizes outlines,
 tracks, arcs, pads, vias, regions, polygons, fills, and text. The renderer is
 intentionally source-model based, so visual snapshot differences expose parser
-or geometry regressions directly.
+or geometry regressions directly. A PCB `viewBox` crops in board coordinates,
+uses no implicit margin, and omits primitives that cannot intersect the crop;
+this keeps focused visual tests small and makes dense features easier to
+inspect. Component designator/comment text follows the parent component's
+`NAMEON` and `COMMENTON` visibility flags; pass `{ showHidden: true }` when
+debugging hidden source text.
 
 ## API
 
