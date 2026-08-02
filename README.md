@@ -15,6 +15,28 @@ be inspected and round-tripped untouched, but modified binary serialization is
 refused. See [Compatibility](./docs/compatibility.md) for tested versions and
 explicit exclusions.
 
+## Altium File Viewer by tscircuit
+
+The repository includes a browser-local project viewer for opening a project
+folder, a ZIP archive, a public GitHub repository or folder URL, or individual
+`.PrjPcb`, `.SchDoc`, and `.PcbDoc` files. It renders schematic sheets,
+complete PCBs, and individual PCB layers as SVGs. Local project contents stay
+in the browser and are never uploaded; GitHub projects are downloaded directly
+from GitHub and parsed locally.
+
+[Open the hosted Altium File Viewer by tscircuit](https://altiumviewer.tscircuit.com)
+
+This is an open-source community tool by tscircuit. It is not affiliated with
+or endorsed by Altium.
+
+```sh
+bun run site:dev
+```
+
+Run `bun run site:typecheck` and `bun run site:build` to verify a production
+build. If a design cannot be processed, the viewer prepares a GitHub bug report
+containing filenames and parser errors, without including design contents.
+
 ## Install
 
 ```sh

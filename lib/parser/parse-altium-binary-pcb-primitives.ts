@@ -686,7 +686,15 @@ function decodeContourPrimitive(
       ),
     )
   }
-  record.items.splice(1, 0, ...extraFields)
+  const originalItems = record.items
+  const mergedItems = []
+  if (originalItems[0]) mergedItems.push(originalItems[0])
+  for (const item of extraFields) mergedItems.push(item.setParent(record))
+  for (let index = 1; index < originalItems.length; index += 1) {
+    const item = originalItems[index]
+    if (item) mergedItems.push(item)
+  }
+  record.items = mergedItems
   record.setOriginalBinaryPayload(payload)
   return record
 }

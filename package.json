@@ -44,6 +44,10 @@
     "inventory-schema": "bun run scripts/audit-record-schema.ts",
     "lint": "biome check .",
     "prepack": "bun run build",
+    "site:build": "vite build --config site/vite.config.ts",
+    "site:dev": "vite --config site/vite.config.ts",
+    "site:preview": "vite preview --config site/vite.config.ts",
+    "site:typecheck": "bunx tsc -p site/tsconfig.json --noEmit",
     "test": "bun test",
     "test:update-svg": "BUN_UPDATE_SNAPSHOTS=1 bun test tests/svg",
     "typecheck": "bunx tsc --noEmit",
@@ -56,7 +60,8 @@
     "bun-match-svg": "^0.0.15",
     "sharp": "^0.35.3",
     "tsup": "^8.5.1",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vite": "^8.2.0"
   },
   "overrides": {
     "esbuild": "^0.28.1",

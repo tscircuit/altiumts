@@ -30,6 +30,9 @@ test("parses and strictly validates the TI TMDS62LEVM Rev. B PCB", async () => {
   expect(document.pads).toHaveLength(14_464)
   expect(document.fills).toHaveLength(83)
   expect(document.regions).toHaveLength(3_903)
+  expect(
+    Math.max(...document.regions.map((region) => region.items.length)),
+  ).toBe(73_111)
   expect(document.regionFills).toHaveLength(3_903)
   expect(document.boardRegions).toHaveLength(1)
   expect(document.texts).toHaveLength(18_556)

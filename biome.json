@@ -12,7 +12,13 @@
     "indentStyle": "space"
   },
   "files": {
-    "includes": ["**", "!**/dist", "!**/package.json", "!references"],
+    "includes": [
+      "**",
+      "!**/dist",
+      "!site-dist",
+      "!**/package.json",
+      "!references"
+    ],
     "maxSize": 5242880
   },
   "javascript": {

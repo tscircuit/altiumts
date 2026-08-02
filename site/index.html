@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A community-built browser viewer by tscircuit for inspecting Altium schematic, PCB, and layer SVGs."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href="https://altiumviewer.tscircuit.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://altiumviewer.tscircuit.com/" />
+    <meta property="og:title" content="Altium File Viewer by tscircuit" />
+    <meta
+      property="og:description"
+      content="Open Altium projects locally and inspect schematic, PCB, and layer SVGs with a community-built tscircuit tool."
+    />
+    <meta
+      property="og:image"
+      content="https://altiumviewer.tscircuit.com/og.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Altium File Viewer by tscircuit" />
+    <meta
+      name="twitter:description"
+      content="A community-built browser viewer for Altium schematics and PCBs."
+    />
+    <meta
+      name="twitter:image"
+      content="https://altiumviewer.tscircuit.com/og.png"
+    />
+    <title>Altium File Viewer by tscircuit</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Altium File Viewer by tscircuit home">
+          <span class="brand-mark" aria-hidden="true">ts</span>
+          <span class="brand-copy">
+            <strong>Altium File Viewer</strong>
+            <span>by tscircuit</span>
+          </span>
+        </a>
+        <div class="header-actions">
+          <span class="local-badge"><span class="status-dot"></span>Runs in your browser</span>
+          <a
+            class="github-link"
+            href="https://github.com/tscircuit/altiumts"
+            target="_blank"
+            rel="noreferrer"
+          >GitHub ↗</a>
+        </div>
+      </header>
+
+      <main>
+        <section id="welcome-screen" class="welcome-screen">
+          <div class="hero-copy">
+            <p class="eyebrow">A TSCIRCUIT OPEN-SOURCE TOOL</p>
+            <h1>Open Altium files.<br /><span>See the circuit.</span></h1>
+            <p class="hero-description">
+              Inspect schematic sheets, complete PCBs, and individual board layers
+              with a community-built viewer by tscircuit.
+            </p>
+            <p class="non-affiliation">Not affiliated with or endorsed by Altium.</p>
+          </div>
+
+          <div id="drop-zone" class="drop-zone" tabindex="0" role="button" aria-label="Choose or drop an Altium project">
+            <div class="drop-graphic" aria-hidden="true">
+              <span class="file-card file-card-back">Sch</span>
+              <span class="file-card file-card-front">PCB</span>
+            </div>
+            <div>
+              <h2>Drop an Altium project folder or ZIP here</h2>
+              <p>Select a complete project for the best results, or open individual design files.</p>
+            </div>
+            <div class="picker-actions">
+              <button id="choose-folder-button" class="primary-button" type="button">Choose project folder</button>
+              <button id="choose-files-button" class="secondary-button" type="button">Choose files or ZIP</button>
+            </div>
+            <p class="supported-files">.PrjPcb · .SchDoc · .PcbDoc · .OutJob · .DsnWrk · .ZIP</p>
+            <div class="source-divider"><span>OR OPEN FROM GITHUB</span></div>
+            <form id="github-url-form" class="github-import-form">
+              <label class="visually-hidden" for="github-url-input">Public GitHub project URL</label>
+              <span class="github-input-mark" aria-hidden="true">GH</span>
+              <input
+                id="github-url-input"
+                type="url"
+                inputmode="url"
+                autocomplete="url"
+                spellcheck="false"
+                placeholder="https://github.com/owner/repo/tree/main/project"
+                aria-describedby="github-import-hint"
+                required
+              />
+              <button id="github-url-button" type="submit">Open URL</button>
+            </form>
+            <p id="github-import-hint" class="github-import-hint">Public repositories only. The project is downloaded directly from GitHub, then parsed here.</p>
+          </div>
+
+          <div class="privacy-note">
+            <span class="privacy-icon" aria-hidden="true">✓</span>
+            <div><strong>Your designs are never uploaded to our servers.</strong><span>Local files stay on this device; GitHub imports are fetched from GitHub and parsed inside this tab.</span></div>
+          </div>
+        </section>
+
+        <section id="loading-screen" class="state-screen" hidden>
+          <div class="loader-orbit" aria-hidden="true"><span></span></div>
+          <p class="eyebrow">PROCESSING LOCALLY BY TSCIRCUIT</p>
+          <h1 id="loading-title">Opening your project…</h1>
+          <p id="loading-message">Reading design files and building SVG previews.</p>
+        </section>
+
+        <section id="error-screen" class="state-screen" hidden>
+          <div class="error-mark" aria-hidden="true">!</div>
+          <p class="eyebrow error-eyebrow">WE COULDN’T OPEN THIS PROJECT</p>
+          <h1>Help us support this design.</h1>
+          <p id="fatal-error-message" class="error-description"></p>
+          <div class="state-actions">
+            <button id="error-retry-button" class="primary-button" type="button">Try another project</button>
+            <a id="fatal-report-link" class="secondary-button report-button" target="_blank" rel="noreferrer">Open a bug report ↗</a>
+          </div>
+          <p class="report-privacy">The report includes filenames and the error message, never the contents of your design.</p>
+        </section>
+
+        <section id="viewer-screen" class="viewer-screen" hidden>
+          <aside class="project-sidebar">
+            <div class="project-summary">
+              <div class="project-icon" aria-hidden="true">ts</div>
+              <div>
+                <p class="sidebar-label">PROJECT</p>
+                <h2 id="project-title"></h2>
+                <p id="project-subtitle"></p>
+              </div>
+            </div>
+            <nav id="document-navigation" class="document-navigation" aria-label="Project documents"></nav>
+            <div id="project-warning" class="project-warning" hidden>
+              <div><strong id="warning-title"></strong><span id="warning-summary"></span></div>
+              <a id="warning-report-link" target="_blank" rel="noreferrer">Report issue ↗</a>
+            </div>
+            <button id="open-another-button" class="open-another-button" type="button">＋ Open another project</button>
+          </aside>
+
+          <div class="document-workspace">
+            <div class="document-toolbar">
+              <div class="document-heading">
+                <div class="document-kind-icon" id="document-kind-icon" aria-hidden="true">PCB</div>
+                <div>
+                  <div class="document-title-row">
+                    <h2 id="document-title"></h2>
+                    <span id="document-format-badge" class="format-badge"></span>
+                  </div>
+                  <p id="document-metadata"></p>
+                </div>
+              </div>
+              <div class="toolbar-actions">
+                <label class="view-selector-label" for="view-selector">View</label>
+                <select id="view-selector" class="view-selector"></select>
+                <div class="zoom-controls" aria-label="Zoom controls">
+                  <button id="zoom-out-button" type="button" aria-label="Zoom out">−</button>
+                  <button id="fit-button" class="fit-button" type="button">Fit</button>
+                  <button id="zoom-in-button" type="button" aria-label="Zoom in">＋</button>
+                </div>
+                <button id="download-svg-button" class="download-button" type="button">Download SVG</button>
+              </div>
+            </div>
+
+            <div id="canvas-viewport" class="canvas-viewport">
+              <div id="render-loader" class="render-loader" hidden><span></span>Rendering SVG locally…</div>
+              <div id="svg-stage" class="svg-stage">
+                <img id="svg-image" alt="Rendered Altium document" draggable="false" />
+              </div>
+            </div>
+            <div class="workspace-statusbar">
+              <span id="view-status">Ready</span>
+              <span id="zoom-status">Fit to view</span>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <input id="folder-input" type="file" webkitdirectory multiple hidden />
+      <input id="file-input" type="file" accept=".PrjPcb,.SchDoc,.PcbDoc,.OutJob,.DsnWrk,.zip" multiple hidden />
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

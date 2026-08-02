@@ -1,0 +1,12 @@
+.git
+.github
+coverage
+dist
+docs
+references
+scripts
+site-dist
+tests
+*.lcov
+*.tgz
+*.tsbuildinfo
