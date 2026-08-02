@@ -125,11 +125,6 @@ dropZone.addEventListener("click", (event) => {
   if ((event.target as HTMLElement).closest("button, input, form")) return
   fileInput.click()
 })
-dropZone.addEventListener("keydown", (event) => {
-  if (event.key !== "Enter" && event.key !== " ") return
-  event.preventDefault()
-  fileInput.click()
-})
 for (const eventName of ["dragenter", "dragover"]) {
   dropZone.addEventListener(eventName, (event) => {
     event.preventDefault()

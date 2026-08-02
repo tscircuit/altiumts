@@ -32,10 +32,15 @@ test("opens loose schematic and PCB files and renders their SVG views", async ()
   expect(pcb?.views.some(({ id }) => id === "board")).toBeTrue()
   expect(pcb?.views.some(({ layer }) => layer === "TOP")).toBeTrue()
 
-  const schematicSvg = renderProjectDocument(state, schematic!.id, "sheet")
-  const boardSvg = renderProjectDocument(state, pcb!.id, "board")
-  const topLayer = pcb?.views.find(({ layer }) => layer === "TOP")
-  const topLayerSvg = renderProjectDocument(state, pcb!.id, topLayer!.id)
+  if (!schematic || !pcb) {
+    throw new Error("Expected both schematic and PCB documents")
+  }
+
+  const schematicSvg = renderProjectDocument(state, schematic.id, "sheet")
+  const boardSvg = renderProjectDocument(state, pcb.id, "board")
+  const topLayer = pcb.views.find(({ layer }) => layer === "TOP")
+  if (!topLayer) throw new Error("Expected a top copper layer view")
+  const topLayerSvg = renderProjectDocument(state, pcb.id, topLayer.id)
 
   expect(schematicSvg).toStartWith("<svg")
   expect(schematicSvg).toContain("Schematic sheet")

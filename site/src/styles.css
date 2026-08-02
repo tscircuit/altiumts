@@ -67,6 +67,7 @@ select:focus-visible,
 }
 
 [hidden] {
+  /* biome-ignore lint/complexity/noImportantStyles: The native hidden state must override component display rules. */
   display: none !important;
 }
 
@@ -352,7 +353,7 @@ main {
   letter-spacing: -0.02em;
 }
 
-.drop-zone > div > p {
+.drop-zone-description {
   max-width: 420px;
   margin: 10px auto 0;
   color: var(--muted);
@@ -936,6 +937,8 @@ main {
   display: inline-flex;
   height: 36px;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
   border: 1px solid var(--line);
   border-radius: 8px;
 }
@@ -1179,7 +1182,7 @@ main {
     overflow-y: hidden;
   }
 
-  .navigation-group {
+  .document-navigation .navigation-group {
     display: flex;
     gap: 5px;
   }
@@ -1222,9 +1225,13 @@ main {
   *,
   *::before,
   *::after {
+    /* biome-ignore lint/complexity/noImportantStyles: Reduced-motion preferences must override animated component rules. */
     scroll-behavior: auto !important;
+    /* biome-ignore lint/complexity/noImportantStyles: Reduced-motion preferences must override animated component rules. */
     animation-duration: 0.01ms !important;
+    /* biome-ignore lint/complexity/noImportantStyles: Reduced-motion preferences must override animated component rules. */
     animation-iteration-count: 1 !important;
+    /* biome-ignore lint/complexity/noImportantStyles: Reduced-motion preferences must override animated component rules. */
     transition-duration: 0.01ms !important;
   }
 }

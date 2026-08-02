@@ -65,14 +65,14 @@
             <p class="non-affiliation">Not affiliated with or endorsed by Altium.</p>
           </div>
 
-          <div id="drop-zone" class="drop-zone" tabindex="0" role="button" aria-label="Choose or drop an Altium project">
+          <div id="drop-zone" class="drop-zone">
             <div class="drop-graphic" aria-hidden="true">
               <span class="file-card file-card-back">Sch</span>
               <span class="file-card file-card-front">PCB</span>
             </div>
             <div>
               <h2>Drop an Altium project folder or ZIP here</h2>
-              <p>Select a complete project for the best results, or open individual design files.</p>
+              <p class="drop-zone-description">Select a complete project for the best results, or open individual design files.</p>
             </div>
             <div class="picker-actions">
               <button id="choose-folder-button" class="primary-button" type="button">Choose project folder</button>
@@ -118,7 +118,7 @@
           <p id="fatal-error-message" class="error-description"></p>
           <div class="state-actions">
             <button id="error-retry-button" class="primary-button" type="button">Try another project</button>
-            <a id="fatal-report-link" class="secondary-button report-button" target="_blank" rel="noreferrer">Open a bug report ↗</a>
+            <a id="fatal-report-link" class="secondary-button report-button" href="https://github.com/tscircuit/altiumts/issues/new" target="_blank" rel="noreferrer">Open a bug report ↗</a>
           </div>
           <p class="report-privacy">The report includes filenames and the error message, never the contents of your design.</p>
         </section>
@@ -129,14 +129,14 @@
               <div class="project-icon" aria-hidden="true">ts</div>
               <div>
                 <p class="sidebar-label">PROJECT</p>
-                <h2 id="project-title"></h2>
+                <h2 id="project-title">Altium project</h2>
                 <p id="project-subtitle"></p>
               </div>
             </div>
             <nav id="document-navigation" class="document-navigation" aria-label="Project documents"></nav>
             <div id="project-warning" class="project-warning" hidden>
               <div><strong id="warning-title"></strong><span id="warning-summary"></span></div>
-              <a id="warning-report-link" target="_blank" rel="noreferrer">Report issue ↗</a>
+              <a id="warning-report-link" href="https://github.com/tscircuit/altiumts/issues/new" target="_blank" rel="noreferrer">Report issue ↗</a>
             </div>
             <button id="open-another-button" class="open-another-button" type="button">＋ Open another project</button>
           </aside>
@@ -147,7 +147,7 @@
                 <div class="document-kind-icon" id="document-kind-icon" aria-hidden="true">PCB</div>
                 <div>
                   <div class="document-title-row">
-                    <h2 id="document-title"></h2>
+                    <h2 id="document-title">Altium document</h2>
                     <span id="document-format-badge" class="format-badge"></span>
                   </div>
                   <p id="document-metadata"></p>
@@ -156,11 +156,12 @@
               <div class="toolbar-actions">
                 <label class="view-selector-label" for="view-selector">View</label>
                 <select id="view-selector" class="view-selector"></select>
-                <div class="zoom-controls" aria-label="Zoom controls">
+                <fieldset class="zoom-controls">
+                  <legend class="visually-hidden">Zoom controls</legend>
                   <button id="zoom-out-button" type="button" aria-label="Zoom out">−</button>
                   <button id="fit-button" class="fit-button" type="button">Fit</button>
                   <button id="zoom-in-button" type="button" aria-label="Zoom in">＋</button>
-                </div>
+                </fieldset>
                 <button id="download-svg-button" class="download-button" type="button">Download SVG</button>
               </div>
             </div>
