@@ -1,14 +1,25 @@
 import { expect, test } from "bun:test"
 import { readFile } from "node:fs/promises"
 import { resolve } from "node:path"
-import { zipSync } from "fflate"
+import { unzipSync, zipSync } from "fflate"
 import { createBugReportUrl } from "../site/src/bug-report"
+import {
+  createProjectExportPlan,
+  prepareProjectExport,
+  splitProjectExportPlan,
+} from "../site/src/project-export"
 import {
   expandBrowserProjectFiles,
   parseBrowserProjectFiles,
   renderProjectDocument,
 } from "../site/src/parse-project"
 import type { BrowserProjectFile } from "../site/src/project-viewer-types"
+import type {
+  ProjectDocumentManifest,
+  ProjectViewerManifest,
+  ProjectWorkerRequest,
+} from "../site/src/project-viewer-types"
+import { ProjectRenderCoordinator } from "../site/src/render-coordinator"
 
 const referencesDirectory = resolve(import.meta.dir, "..", "references")
 
@@ -48,6 +59,180 @@ test("opens loose schematic and PCB files and renders their SVG views", async ()
   expect(boardSvg).toContain("Complete board")
   expect(topLayerSvg).toStartWith("<svg")
   expect(topLayerSvg).toContain("Top copper")
+})
+
+test("plans SVG exports for every manifest view in order", () => {
+  const manifest = createViewerManifest([
+    createDocument("schematic-0", "Schematics/Power.SchDoc", ["sheet"]),
+    createDocument("pcb-1", "Boards/Controller.PcbDoc", [
+      "overview",
+      "board",
+      "layer:TOP",
+      "layer:BOTTOM",
+    ]),
+  ])
+
+  const plan = createProjectExportPlan(manifest)
+  expect(plan.archiveName).toBe("demo-project-rendered-views.zip")
+  expect(plan.items).toEqual([
+    {
+      documentId: "schematic-0",
+      svgPath: "svg/schematics--power--sheet.svg",
+      viewId: "sheet",
+    },
+    {
+      documentId: "pcb-1",
+      svgPath: "svg/boards--controller--overview.svg",
+      viewId: "overview",
+    },
+    {
+      documentId: "pcb-1",
+      svgPath: "svg/boards--controller--board.svg",
+      viewId: "board",
+    },
+    {
+      documentId: "pcb-1",
+      svgPath: "svg/boards--controller--layer-top.svg",
+      viewId: "layer:TOP",
+    },
+    {
+      documentId: "pcb-1",
+      svgPath: "svg/boards--controller--layer-bottom.svg",
+      viewId: "layer:BOTTOM",
+    },
+  ])
+})
+
+test("splits large exports into deterministic bounded archives", () => {
+  const plan = createProjectExportPlan(
+    createViewerManifest([
+      createDocument(
+        "pcb-0",
+        "Boards/Main.PcbDoc",
+        Array.from({ length: 12 }, (_, index) => `view-${index + 1}`),
+      ),
+    ]),
+  )
+
+  const archives = splitProjectExportPlan(plan)
+  expect(archives.map(({ archiveName }) => archiveName)).toEqual([
+    "demo-project-rendered-views-part-01-of-03.zip",
+    "demo-project-rendered-views-part-02-of-03.zip",
+    "demo-project-rendered-views-part-03-of-03.zip",
+  ])
+  expect(archives.map(({ items }) => items.length)).toEqual([5, 5, 2])
+  expect(archives.flatMap(({ items }) => items)).toEqual(plan.items)
+  expect(
+    splitProjectExportPlan({ ...plan, items: plan.items.slice(0, 5) }),
+  ).toEqual([{ ...plan, items: plan.items.slice(0, 5) }])
+})
+
+test("creates traversal-safe, reserved-safe, collision-safe export names", () => {
+  const manifest = createViewerManifest([
+    createDocument("a", "../CON.SchDoc", ["sheet"]),
+    createDocument("b", "Dir/Main.SchDoc", ["sheet"]),
+    createDocument("c", "dir/main.schdoc", ["SHEET"]),
+    createDocument("d", "Other/Main.SchDoc", ["sheet"]),
+    createDocument("e", "<>:/?.SchDoc", ["../"]),
+  ])
+
+  const plan = createProjectExportPlan(manifest)
+  const svgPaths = plan.items.map(({ svgPath }) => svgPath)
+  expect(svgPaths).toEqual([
+    "svg/unnamed--con-file--sheet.svg",
+    "svg/dir--main--sheet.svg",
+    "svg/dir--main--sheet-2.svg",
+    "svg/other--main--sheet.svg",
+    "svg/unnamed--unnamed--view.svg",
+  ])
+  expect(new Set(svgPaths.map((path) => path.toLowerCase())).size).toBe(
+    svgPaths.length,
+  )
+  expect(svgPaths.every((path) => !path.includes("../"))).toBeTrue()
+})
+
+test("does not produce an archive after a render failure", async () => {
+  const plan = createProjectExportPlan(
+    createViewerManifest([
+      createDocument("schematic-0", "Demo/Main.SchDoc", ["sheet", "second"]),
+    ]),
+  )
+  let renderCount = 0
+
+  await expect(
+    prepareProjectExport(plan, {
+      renderSvg: async () => {
+        renderCount += 1
+        if (renderCount === 2) throw new Error("Render failed")
+        return '<svg width="1" height="1"></svg>'
+      },
+    }),
+  ).rejects.toThrow("Render failed")
+  expect(renderCount).toBe(2)
+})
+
+test("builds one archive containing only SVG views", async () => {
+  const plan = createProjectExportPlan(
+    createViewerManifest([
+      createDocument("schematic-0", "Demo/Main.SchDoc", ["sheet"]),
+      createDocument("pcb-1", "Demo/Main.PcbDoc", ["board"]),
+    ]),
+  )
+  const archive = await prepareProjectExport(plan, {
+    renderSvg: async (documentId, viewId) =>
+      `<svg><title>${documentId}:${viewId}</title></svg>`,
+  })
+  const files = unzipSync(new Uint8Array(await archive.arrayBuffer()))
+
+  expect(Object.keys(files).sort()).toEqual(
+    ["svg/demo--main--board.svg", "svg/demo--main--sheet.svg"].sort(),
+  )
+  expect(new TextDecoder().decode(files["svg/demo--main--sheet.svg"])).toBe(
+    "<svg><title>schematic-0:sheet</title></svg>",
+  )
+})
+
+test("correlates background render responses independently of active order", async () => {
+  const requests: ProjectWorkerRequest[] = []
+  let nextRequestId = 10
+  const coordinator = new ProjectRenderCoordinator(
+    () => nextRequestId++,
+    (request) => requests.push(request),
+  )
+  const active = coordinator.request("document-a", "sheet")
+  const background = coordinator.request("document-b", "layer:TOP")
+
+  const backgroundRequest = requests[1]
+  const activeRequest = requests[0]
+  if (
+    !backgroundRequest ||
+    backgroundRequest.type !== "render" ||
+    !activeRequest ||
+    activeRequest.type !== "render"
+  ) {
+    throw new Error("Expected two render requests")
+  }
+  expect(
+    coordinator.handleResponse({
+      documentId: backgroundRequest.documentId,
+      requestId: backgroundRequest.requestId,
+      svg: "<svg>background</svg>",
+      type: "rendered",
+      viewId: backgroundRequest.viewId,
+    }),
+  ).toBeTrue()
+  expect(
+    coordinator.handleResponse({
+      documentId: activeRequest.documentId,
+      requestId: activeRequest.requestId,
+      svg: "<svg>active</svg>",
+      type: "rendered",
+      viewId: activeRequest.viewId,
+    }),
+  ).toBeTrue()
+
+  expect(await background).toBe("<svg>background</svg>")
+  expect(await active).toBe("<svg>active</svg>")
 })
 
 test("uses project references to order uploaded documents", async () => {
@@ -192,4 +377,35 @@ function toArrayBuffer(bytes: Uint8Array): ArrayBuffer {
     bytes.byteOffset,
     bytes.byteOffset + bytes.byteLength,
   ) as ArrayBuffer
+}
+
+function createDocument(
+  id: string,
+  path: string,
+  viewIds: string[],
+): ProjectDocumentManifest {
+  return {
+    componentCount: 0,
+    container: "fixture",
+    format: "fixture",
+    id,
+    kind: path.toLowerCase().endsWith(".pcbdoc") ? "pcb" : "schematic",
+    name: path.split("/").at(-1) ?? path,
+    path,
+    recordCount: 0,
+    views: viewIds.map((viewId) => ({ id: viewId, label: viewId })),
+  }
+}
+
+function createViewerManifest(
+  documents: ProjectDocumentManifest[],
+): ProjectViewerManifest {
+  return {
+    documents,
+    failures: [],
+    ignoredFileCount: 0,
+    name: "Demo Project",
+    projects: [],
+    sourceFileCount: documents.length,
+  }
 }

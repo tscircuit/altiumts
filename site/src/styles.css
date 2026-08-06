@@ -689,6 +689,53 @@ main {
   font-size: 11px;
 }
 
+.project-export {
+  display: grid;
+  gap: 6px;
+  padding: 12px 12px 4px;
+}
+
+.project-export button {
+  min-height: 38px;
+  padding: 0 12px;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  color: var(--accent-ink);
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 750;
+  background: var(--accent);
+}
+
+.project-export button:hover:not(:disabled) {
+  background: var(--accent-strong);
+}
+
+.project-export button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+.project-export-status,
+.project-export-error {
+  min-height: 0;
+  margin: 0 2px;
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+.project-export-status:empty {
+  display: none;
+}
+
+.project-export-status {
+  color: var(--muted);
+}
+
+.project-export-error {
+  color: var(--danger);
+}
+
 .document-navigation {
   flex: 1;
   min-height: 0;
@@ -1161,7 +1208,7 @@ main {
 
   .viewer-screen {
     grid-template-columns: 1fr;
-    grid-template-rows: 180px minmax(0, 1fr);
+    grid-template-rows: 210px minmax(0, 1fr);
     height: calc(100vh - 66px);
   }
 
@@ -1172,6 +1219,16 @@ main {
 
   .project-summary {
     padding: 12px 14px 10px;
+  }
+
+  .project-export {
+    grid-template-columns: minmax(145px, 180px) minmax(0, 1fr);
+    align-items: center;
+    padding: 6px 10px 2px;
+  }
+
+  .project-export-error {
+    grid-column: 1 / -1;
   }
 
   .document-navigation {
