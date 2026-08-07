@@ -60,7 +60,7 @@
     "bun-match-svg": "^0.0.15",
     "sharp": "^0.35.3",
     "tsup": "^8.5.1",
-    "typescript": "^5.9.3",
+    "typescript": "^7.0.2",
     "vite": "^8.2.0"
   },
   "overrides": {
