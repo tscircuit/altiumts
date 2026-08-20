@@ -8,6 +8,7 @@ import {
 import { getAltiumPcbLayerId } from "./altium-pcb-binary-layers"
 
 export type SupportedAltiumPcbPrimitiveKind =
+  | "ComponentBody"
   | "Fill"
   | "Pad"
   | "Region"
@@ -28,6 +29,44 @@ const SUPPORTED_PRIMITIVE_FIELDS: Record<
   SupportedAltiumPcbPrimitiveKind,
   ReadonlySet<string>
 > = {
+  ComponentBody: new Set([
+    ...COMMON_PRIMITIVE_FIELDS,
+    "ARCRESOLUTION",
+    "BODYCOLOR3D",
+    "BODYOPACITY3D",
+    "BODYPROJECTION",
+    "CAVITYHEIGHT",
+    "HOLECOUNT",
+    "IDENTIFIER",
+    "ISSHAPEBASED",
+    "KEEPOUT",
+    "KIND",
+    "MODEL.2D.ROTATION",
+    "MODEL.2D.X",
+    "MODEL.2D.Y",
+    "MODEL.3D.DZ",
+    "MODEL.3D.ROTX",
+    "MODEL.3D.ROTY",
+    "MODEL.3D.ROTZ",
+    "MODEL.CHECKSUM",
+    "MODEL.EMBED",
+    "MODEL.MODELTYPE",
+    "MODEL.SNAPCOUNT",
+    "MODELID",
+    "NAME",
+    "OVERALLHEIGHT",
+    "STANDOFFHEIGHT",
+    "SUBPOLYINDEX",
+    "TEARDROP",
+    "TEXTURE",
+    "TEXTURECENTERX",
+    "TEXTURECENTERY",
+    "TEXTUREROTATION",
+    "TEXTURESIZEX",
+    "TEXTURESIZEY",
+    "UNIONINDEX",
+    "V7_LAYER",
+  ]),
   Fill: new Set([
     ...COMMON_PRIMITIVE_FIELDS,
     "KEEPOUT",
@@ -153,9 +192,11 @@ function validateSupportedPrimitiveFieldText(
     "INVERTED",
     "INVERTEDRECT",
     "ITALIC",
+    "ISSHAPEBASED",
     "KEEPOUT",
     "LOCKED",
     "MIRROR",
+    "MODEL.EMBED",
     "PLATED",
     "TENTEDBOTTOM",
     "TENTEDTOP",
@@ -205,7 +246,7 @@ function isSupportedPrimitiveFieldName(
   recordKind: SupportedAltiumPcbPrimitiveKind,
 ): boolean {
   if (SUPPORTED_PRIMITIVE_FIELDS[recordKind].has(fieldName)) return true
-  if (recordKind !== "Region") return false
+  if (recordKind !== "Region" && recordKind !== "ComponentBody") return false
   return (
     /^(?:KIND|VX|VY|CX|CY|R|SA|EA)\d+$/u.test(fieldName) ||
     /^HOLE\d+(?:COUNT|V[XY]\d+)$/u.test(fieldName)

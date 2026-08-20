@@ -25,6 +25,7 @@ const KEEPOUT_PRIMITIVE_FLAG = 0x0200
 const NATIVE_VIA_PAYLOAD_LENGTH = 209
 
 export const PCB_OBJECT_ID = {
+  componentBody: 12,
   fill: 6,
   pad: 2,
   region: 11,

@@ -29,6 +29,7 @@ import {
   getPcbRuleByIndex,
 } from "./pcb-reference-resolution"
 import type { AltiumBoardRecord } from "./records/altium-board-record"
+import type { AltiumClassRecord } from "./records/altium-class-record"
 import type { AltiumComponentRecord } from "./records/altium-component-record"
 import type { AltiumModelRecord } from "./records/altium-model-record"
 import type { AltiumNetRecord } from "./records/altium-net-record"
@@ -94,6 +95,10 @@ export class AltiumBinaryPcbDoc extends AltiumNode {
   get components(): AltiumComponentRecord[] {
     return (this.propertyRecords.get("Components6") ??
       []) as AltiumComponentRecord[]
+  }
+
+  get classes(): AltiumClassRecord[] {
+    return (this.propertyRecords.get("Classes6") ?? []) as AltiumClassRecord[]
   }
 
   get componentBodies(): AltiumRecord[] {

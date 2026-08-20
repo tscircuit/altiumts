@@ -16,6 +16,12 @@ import {
   writeBinaryTypeLengthPrefixedAltiumRecords,
   writeLengthPrefixedAltiumRecords,
 } from "./altium-binary-record-encoding"
+import { serializeAltiumComponentBodyRecord } from "./serialize-altium-pcb-component-body"
+import {
+  type AltiumEmbeddedModelInput,
+  addAltiumEmbeddedModelStreams,
+  writeAltiumModelRecords,
+} from "./serialize-altium-pcb-models"
 import {
   PCB_OBJECT_ID,
   serializeAltiumFillRecord,
@@ -34,10 +40,14 @@ import {
 
 type SupportedAltiumPcbRecordKind =
   | "Board"
+  | "Class"
   | "Component"
+  | "ComponentBody"
   | "Dimension"
+  | "Model"
   | "Net"
   | "Polygon"
+  | "Rule"
   | SupportedAltiumPcbPrimitiveKind
 
 type AltiumPcbRecordSources = Record<SupportedAltiumPcbRecordKind, string[]>
@@ -46,10 +56,13 @@ const EMPTY_PCB_SECTION_NAMES = [
   "Arcs6",
   "Regions6",
   "ComponentBodies6",
-  "Classes6",
   "DifferentialPairs6",
   "Connections6",
 ] as const
+
+export type SerializeAltiumPcbDocToBinaryOptions = {
+  embeddedModels?: readonly AltiumEmbeddedModelInput[]
+}
 
 /**
  * Encodes the supported subset of an ASCII PCB document into Altium's native
@@ -58,6 +71,7 @@ const EMPTY_PCB_SECTION_NAMES = [
  */
 export function serializeAltiumPcbDocToBinary(
   document: string | AltiumPcbDoc,
+  options: SerializeAltiumPcbDocToBinaryOptions = {},
 ): Uint8Array {
   const asciiDocument = getAsciiAltiumSource(document)
   const parsedDocument = parseAltiumPcbDoc(asciiDocument)
@@ -88,6 +102,24 @@ export function serializeAltiumPcbDocToBinary(
     content: writeLengthPrefixedAltiumRecords(recordSources.Component),
     name: "Components6",
     recordCount: recordSources.Component.length,
+  })
+  addAltiumBinarySection({
+    compoundFile,
+    content: writeLengthPrefixedAltiumRecords(recordSources.Class),
+    name: "Classes6",
+    recordCount: recordSources.Class.length,
+  })
+  addAltiumBinarySection({
+    compoundFile,
+    content: writeBinaryTypeLengthPrefixedAltiumRecords(recordSources.Rule),
+    name: "Rules6",
+    recordCount: recordSources.Rule.length,
+  })
+  addAltiumBinarySection({
+    compoundFile,
+    content: writeAltiumModelRecords(recordSources.Model),
+    name: "Models",
+    recordCount: recordSources.Model.length,
   })
   addAltiumBinarySection({
     compoundFile,
@@ -151,6 +183,15 @@ export function serializeAltiumPcbDocToBinary(
   addAltiumBinarySection({
     compoundFile,
     content: writeAltiumPrimitiveRecords(
+      PCB_OBJECT_ID.componentBody,
+      recordSources.ComponentBody.map(serializeAltiumComponentBodyRecord),
+    ),
+    name: "ShapeBasedComponentBodies6",
+    recordCount: recordSources.ComponentBody.length,
+  })
+  addAltiumBinarySection({
+    compoundFile,
+    content: writeAltiumPrimitiveRecords(
       PCB_OBJECT_ID.text,
       recordSources.Text.map(serializeAltiumTextRecord),
     ),
@@ -173,6 +214,12 @@ export function serializeAltiumPcbDocToBinary(
     })
   }
 
+  addAltiumEmbeddedModelStreams({
+    compoundFile,
+    embeddedModels: options.embeddedModels ?? [],
+    modelRecordCount: recordSources.Model.length,
+  })
+
   return writeAltiumCompoundFile(compoundFile)
 }
 
@@ -181,13 +228,17 @@ function collectSupportedPcbRecordSources(
 ): AltiumPcbRecordSources {
   const recordSources: AltiumPcbRecordSources = {
     Board: [],
+    Class: [],
     Component: [],
+    ComponentBody: [],
     Dimension: [],
     Fill: [],
     Net: [],
+    Model: [],
     Pad: [],
     Polygon: [],
     Region: [],
+    Rule: [],
     Text: [],
     Track: [],
     Via: [],
@@ -212,13 +263,17 @@ function isSupportedAltiumPcbRecordKind(
 ): recordKind is SupportedAltiumPcbRecordKind {
   return [
     "Board",
+    "Class",
     "Component",
+    "ComponentBody",
     "Dimension",
     "Fill",
     "Net",
+    "Model",
     "Pad",
     "Polygon",
     "Region",
+    "Rule",
     "Text",
     "Track",
     "Via",
@@ -228,7 +283,15 @@ function isSupportedAltiumPcbRecordKind(
 function isSupportedAltiumPcbPrimitiveKind(
   recordKind: SupportedAltiumPcbRecordKind,
 ): recordKind is SupportedAltiumPcbPrimitiveKind {
-  return ["Fill", "Pad", "Region", "Text", "Track", "Via"].includes(recordKind)
+  return [
+    "ComponentBody",
+    "Fill",
+    "Pad",
+    "Region",
+    "Text",
+    "Track",
+    "Via",
+  ].includes(recordKind)
 }
 
 function addPcbFileHeaders(compoundFile: AltiumCompoundFile): void {
