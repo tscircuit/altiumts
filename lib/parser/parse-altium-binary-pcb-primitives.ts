@@ -271,6 +271,7 @@ function decodePrimitive(
       items: [
         field("RECORD", "Arc"),
         ...commonFields,
+        field("KEEPOUT", booleanText((view.getUint16(1, true) & 0x0200) !== 0)),
         measurementField("LOCATION.X", view.getInt32(13, true)),
         measurementField("LOCATION.Y", view.getInt32(17, true)),
         measurementField("RADIUS", view.getInt32(21, true)),

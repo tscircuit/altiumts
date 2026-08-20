@@ -25,6 +25,7 @@ const KEEPOUT_PRIMITIVE_FLAG = 0x0200
 const NATIVE_VIA_PAYLOAD_LENGTH = 209
 
 export const PCB_OBJECT_ID = {
+  arc: 1,
   fill: 6,
   pad: 2,
   region: 11,
@@ -92,6 +93,24 @@ export function serializeAltiumTrackRecord(recordSource: string): Uint8Array[] {
     .int32(parseAltiumInternalUnits(fields.get("Y2")))
     .int32(parseAltiumInternalUnits(fields.get("WIDTH")))
     .uint16(0)
+  return [writer.toUint8Array()]
+}
+
+export function serializeAltiumArcRecord(recordSource: string): Uint8Array[] {
+  const fields = getAltiumRecordFields(recordSource)
+  const writer = new AltiumBinaryWriter()
+  writeAltiumPcbPrimitiveCommon({
+    defaultLayerId: getAltiumPcbLayerId(fields.get("LAYER")),
+    fields,
+    writer,
+  })
+  writer
+    .int32(parseAltiumInternalUnits(fields.get("LOCATION.X")))
+    .int32(parseAltiumInternalUnits(fields.get("LOCATION.Y")))
+    .int32(parseAltiumInternalUnits(fields.get("RADIUS")))
+    .float64(parseAltiumFiniteNumber(fields.get("STARTANGLE")))
+    .float64(parseAltiumFiniteNumber(fields.get("ENDANGLE")))
+    .int32(parseAltiumInternalUnits(fields.get("WIDTH")))
   return [writer.toUint8Array()]
 }
 
