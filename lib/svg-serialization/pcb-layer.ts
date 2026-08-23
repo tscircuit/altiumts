@@ -3,6 +3,8 @@ import type { AltiumRecord } from "../records/altium-record"
 
 export const PCB_BOARD_FILL_COLOR = "#123d32"
 export const PCB_BOARD_OUTLINE_COLOR = "#6ee7b7"
+const BOTTOM_COURTYARD_COLOR = "#26e9ff"
+const MECHANICAL_LAYER_COLOR = "#ec4899"
 
 const LAYER_COLORS: Record<string, string> = {
   BOTTOM: "#3b82f6",
@@ -22,7 +24,8 @@ export const normalizeLayerName = normalizeAltiumPcbLayerName
 export function getPcbLayerColor(layer: string | undefined): string {
   if (!layer) return "#f59e0b"
   const normalized = normalizeLayerName(layer)
-  if (normalized.startsWith("MECHANICAL")) return "#ec4899"
+  if (normalized === "MECHANICAL16") return BOTTOM_COURTYARD_COLOR
+  if (normalized.startsWith("MECHANICAL")) return MECHANICAL_LAYER_COLOR
   if (normalized.startsWith("MID") || normalized.startsWith("INTERNALPLANE")) {
     return "#f97316"
   }
