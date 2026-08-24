@@ -6,6 +6,7 @@ import {
   AltiumSchImageRecord,
   type AltiumSchSheetRecord,
 } from "../records/altium-schematic-records"
+import { resolveSchematicParameterReference } from "../schematic-parameter-reference"
 import {
   altiumColorToCss,
   getSchematicCoordinate,
@@ -266,11 +267,16 @@ function renderSchematicRecord(
     const location = getSchematicLocation(record)
     const x = viewport.toX(location.x)
     const y = viewport.toY(location.y)
-    const text =
+    const sourceText =
       record.getDecoded("TEXT") ??
       record.getDecoded("NAME") ??
       record.getDecoded("DESIGNATOR") ??
       ""
+    const text =
+      context.document && !hasSchematicComponentAncestor(record, context)
+        ? (resolveSchematicParameterReference(context.document, sourceText) ??
+          sourceText)
+        : sourceText
     if (!text) return undefined
     const font = getSchematicFont(record, context.sheetRecord, 9)
     const positioning = getSchematicTextPositioning(record)
@@ -451,6 +457,22 @@ function getSchematicSheetEntryPolygon({
     return `${formatSvgNumber(x - halfWidth)},${formatSvgNumber(y)} ${formatSvgNumber(x)},${formatSvgNumber(y - depth)} ${formatSvgNumber(x + halfWidth)},${formatSvgNumber(y)}`
   }
   return `${formatSvgNumber(x)},${formatSvgNumber(y - halfWidth)} ${formatSvgNumber(x + depth)},${formatSvgNumber(y)} ${formatSvgNumber(x)},${formatSvgNumber(y + halfWidth)}`
+}
+
+function hasSchematicComponentAncestor(
+  record: AltiumRecord,
+  context: SchematicRenderContext,
+): boolean {
+  let current = context.document?.getParent(record)
+  const visited = new Set<AltiumRecord>()
+
+  while (current && !visited.has(current)) {
+    if (current.recordKind === "1") return true
+    visited.add(current)
+    current = context.document?.getParent(current)
+  }
+
+  return false
 }
 
 function renderSchematicRectangle(
