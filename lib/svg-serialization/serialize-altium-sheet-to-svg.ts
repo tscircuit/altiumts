@@ -42,8 +42,35 @@ interface SchematicPinRenderContext {
   viewport: SvgViewport
 }
 
+interface SchematicSheetChromeGeometry {
+  innerHeight: number
+  innerLeft: number
+  innerTop: number
+  innerWidth: number
+  margin: number
+  paperHeight: number
+  paperLeft: number
+  paperTop: number
+  paperWidth: number
+}
+
+interface SchematicSheetChromeRenderInput {
+  sheetHeight: number
+  sheetRecord: AltiumSchSheetRecord | undefined
+  sheetWidth: number
+  viewport: SvgViewport
+}
+
 const SCHEMATIC_COMPONENT_OUTLINE_COLOR = "#840000"
 const SCHEMATIC_COMPONENT_FILL_COLOR = "#ffffc2"
+const STANDARD_TITLE_BLOCK_WIDTH = 460
+const STANDARD_TITLE_BLOCK_HEIGHT = 100
+const STANDARD_TITLE_BLOCK_SIZE_COLUMN_WIDTH = 65
+const STANDARD_TITLE_BLOCK_LEFT_DETAILS_WIDTH = 263
+const STANDARD_TITLE_BLOCK_NUMBER_COLUMN_RIGHT = 329
+const STANDARD_TITLE_BLOCK_FIRST_ROW_RATIO = 0.375
+const STANDARD_TITLE_BLOCK_SECOND_ROW_RATIO = 0.75
+const STANDARD_TITLE_BLOCK_THIRD_ROW_RATIO = 0.875
 
 export function serializeAltiumSheetToSvg(
   source: AltiumPcbDoc | AltiumSchDoc | AltiumLine[],
@@ -98,12 +125,12 @@ export function serializeAltiumSheetToSvg(
 
   if (options.showBorder !== false) {
     content.push(
-      renderSchematicSheetBorder(
-        sheetRecord,
-        viewport,
-        sheetWidth,
+      ...renderSchematicSheetChrome({
         sheetHeight,
-      ),
+        sheetRecord,
+        sheetWidth,
+        viewport,
+      }),
     )
   }
 
@@ -628,46 +655,276 @@ function renderSchematicPowerPort(
   return `<g ${metadata}>${symbol}<text x="${formatSvgNumber(label.x)}" y="${formatSvgNumber(label.y)}" text-anchor="${textAnchor}" dominant-baseline="${baseline}" fill="${color}" ${font.attributes}>${escapeXml(text)}</text></g>`
 }
 
-function renderSchematicSheetBorder(
-  sheetRecord: AltiumSchSheetRecord | undefined,
-  viewport: SvgViewport,
-  sheetWidth: number,
-  sheetHeight: number,
-): string {
-  const left = viewport.toX(0)
-  const top = viewport.toY(sheetHeight)
-  const margin = Math.max(
-    Number(sheetRecord?.getCaseInsensitive("CUSTOMMARGINWIDTH") ?? 10),
-    4,
+function getSchematicSheetChromeGeometry({
+  sheetHeight,
+  sheetRecord,
+  sheetWidth,
+  viewport,
+}: SchematicSheetChromeRenderInput): SchematicSheetChromeGeometry {
+  const requestedMargin = Number(
+    sheetRecord?.getCaseInsensitive("CUSTOMMARGINWIDTH") ?? 10,
   )
-  const innerLeft = viewport.toX(margin)
-  const innerTop = viewport.toY(sheetHeight - margin)
-  const innerWidth = Math.max(sheetWidth - margin * 2, 1)
-  const innerHeight = Math.max(sheetHeight - margin * 2, 1)
-  const xZones = Math.max(
-    Math.round(Number(sheetRecord?.getCaseInsensitive("CUSTOMXZONES") ?? 6)),
-    1,
+  const margin = Number.isFinite(requestedMargin)
+    ? Math.max(requestedMargin, 4)
+    : 10
+  return {
+    innerHeight: Math.max(sheetHeight - margin * 2, 1),
+    innerLeft: viewport.toX(margin),
+    innerTop: viewport.toY(sheetHeight - margin),
+    innerWidth: Math.max(sheetWidth - margin * 2, 1),
+    margin,
+    paperHeight: sheetHeight,
+    paperLeft: viewport.toX(0),
+    paperTop: viewport.toY(sheetHeight),
+    paperWidth: sheetWidth,
+  }
+}
+
+function getSchematicSheetChromeFont({
+  fontSize,
+  sheetRecord,
+}: {
+  fontSize: number
+  sheetRecord: AltiumSchSheetRecord | undefined
+}): string {
+  const requestedSystemFontId = Number(
+    sheetRecord?.getCaseInsensitive("SYSTEMFONT") ?? 1,
   )
-  const yZones = Math.max(
-    Math.round(Number(sheetRecord?.getCaseInsensitive("CUSTOMYZONES") ?? 4)),
-    1,
+  const systemFontId = Number.isFinite(requestedSystemFontId)
+    ? Math.max(Math.round(requestedSystemFontId), 1)
+    : 1
+  const fontFamily =
+    sheetRecord?.getDecoded(`FONTNAME${systemFontId}`) ?? "Times New Roman"
+  return `font-family="${escapeXml(fontFamily)}" font-size="${formatSvgNumber(fontSize)}"`
+}
+
+function getSchematicSheetZoneCount({
+  fallbackCount,
+  fieldName,
+  maximum,
+  sheetRecord,
+}: {
+  fallbackCount: number
+  fieldName: string
+  maximum: number
+  sheetRecord: AltiumSchSheetRecord | undefined
+}): number {
+  const requestedZoneCount = Number(
+    sheetRecord?.getCaseInsensitive(fieldName) ?? fallbackCount,
   )
+  if (!Number.isFinite(requestedZoneCount)) return fallbackCount
+  return Math.min(Math.max(Math.round(requestedZoneCount), 1), maximum)
+}
+
+function renderSchematicSheetChrome({
+  sheetHeight,
+  sheetRecord,
+  sheetWidth,
+  viewport,
+}: SchematicSheetChromeRenderInput): string[] {
+  const chromeGeometry = getSchematicSheetChromeGeometry({
+    sheetHeight,
+    sheetRecord,
+    sheetWidth,
+    viewport,
+  })
+  const renderedChrome: string[] = []
+  if (sheetRecord?.getBoolean("BORDERON") !== false) {
+    renderedChrome.push(
+      renderSchematicSheetBorder({ chromeGeometry, sheetRecord }),
+    )
+  }
+  if (sheetRecord?.getBoolean("TITLEBLOCKON") === true) {
+    renderedChrome.push(
+      renderSchematicSheetTitleBlock({ chromeGeometry, sheetRecord }),
+    )
+  }
+  return renderedChrome
+}
+
+function renderSchematicSheetBorder({
+  chromeGeometry,
+  sheetRecord,
+}: {
+  chromeGeometry: SchematicSheetChromeGeometry
+  sheetRecord: AltiumSchSheetRecord | undefined
+}): string {
+  const {
+    innerHeight,
+    innerLeft,
+    innerTop,
+    innerWidth,
+    margin,
+    paperHeight,
+    paperLeft,
+    paperTop,
+    paperWidth,
+  } = chromeGeometry
+  const xZones = getSchematicSheetZoneCount({
+    fallbackCount: 6,
+    fieldName: "CUSTOMXZONES",
+    maximum: 99,
+    sheetRecord,
+  })
+  const yZones = getSchematicSheetZoneCount({
+    fallbackCount: 4,
+    fieldName: "CUSTOMYZONES",
+    maximum: 26,
+    sheetRecord,
+  })
   const zoneMarks: string[] = []
+  const zoneLabels: string[] = []
+  const referenceZoneMarksVisible =
+    sheetRecord?.getBoolean("REFERENCEZONESON") !== false
+  const zoneFont = getSchematicSheetChromeFont({
+    fontSize: Math.min(8, Math.max(margin * 0.6, 3)),
+    sheetRecord,
+  })
 
-  for (let index = 1; index < xZones; index++) {
-    const x = innerLeft + (innerWidth * index) / xZones
-    zoneMarks.push(
-      `<path d="M ${formatSvgNumber(x)} ${formatSvgNumber(top)} V ${formatSvgNumber(innerTop)} M ${formatSvgNumber(x)} ${formatSvgNumber(innerTop + innerHeight)} V ${formatSvgNumber(top + sheetHeight)}"/>`,
-    )
-  }
-  for (let index = 1; index < yZones; index++) {
-    const y = innerTop + (innerHeight * index) / yZones
-    zoneMarks.push(
-      `<path d="M ${formatSvgNumber(left)} ${formatSvgNumber(y)} H ${formatSvgNumber(innerLeft)} M ${formatSvgNumber(innerLeft + innerWidth)} ${formatSvgNumber(y)} H ${formatSvgNumber(left + sheetWidth)}"/>`,
-    )
+  if (referenceZoneMarksVisible) {
+    for (let zoneIndex = 1; zoneIndex < xZones; zoneIndex++) {
+      const x = innerLeft + (innerWidth * zoneIndex) / xZones
+      zoneMarks.push(
+        `<path d="M ${formatSvgNumber(x)} ${formatSvgNumber(paperTop)} V ${formatSvgNumber(innerTop)} M ${formatSvgNumber(x)} ${formatSvgNumber(innerTop + innerHeight)} V ${formatSvgNumber(paperTop + paperHeight)}"/>`,
+      )
+    }
+    for (let zoneIndex = 0; zoneIndex < xZones; zoneIndex++) {
+      const x = innerLeft + (innerWidth * (zoneIndex + 0.5)) / xZones
+      zoneLabels.push(
+        `<text x="${formatSvgNumber(x)}" y="${formatSvgNumber(paperTop + margin / 2)}" text-anchor="middle" dominant-baseline="central" ${zoneFont}>${zoneIndex + 1}</text>`,
+        `<text x="${formatSvgNumber(x)}" y="${formatSvgNumber(innerTop + innerHeight + margin / 2)}" text-anchor="middle" dominant-baseline="central" ${zoneFont}>${zoneIndex + 1}</text>`,
+      )
+    }
+    for (let zoneIndex = 1; zoneIndex < yZones; zoneIndex++) {
+      const y = innerTop + (innerHeight * zoneIndex) / yZones
+      zoneMarks.push(
+        `<path d="M ${formatSvgNumber(paperLeft)} ${formatSvgNumber(y)} H ${formatSvgNumber(innerLeft)} M ${formatSvgNumber(innerLeft + innerWidth)} ${formatSvgNumber(y)} H ${formatSvgNumber(paperLeft + paperWidth)}"/>`,
+      )
+    }
+    for (let zoneIndex = 0; zoneIndex < yZones; zoneIndex++) {
+      const y = innerTop + (innerHeight * (zoneIndex + 0.5)) / yZones
+      const zoneLetter = String.fromCharCode("A".charCodeAt(0) + zoneIndex)
+      zoneLabels.push(
+        `<text x="${formatSvgNumber(paperLeft + margin / 2)}" y="${formatSvgNumber(y)}" text-anchor="middle" dominant-baseline="central" ${zoneFont}>${zoneLetter}</text>`,
+        `<text x="${formatSvgNumber(innerLeft + innerWidth + margin / 2)}" y="${formatSvgNumber(y)}" text-anchor="middle" dominant-baseline="central" ${zoneFont}>${zoneLetter}</text>`,
+      )
+    }
   }
 
-  return `<g data-record="SheetBorder" fill="#fffef8" stroke="#334155" stroke-width="1"><rect x="${formatSvgNumber(left)}" y="${formatSvgNumber(top)}" width="${formatSvgNumber(sheetWidth)}" height="${formatSvgNumber(sheetHeight)}"/><rect x="${formatSvgNumber(innerLeft)}" y="${formatSvgNumber(innerTop)}" width="${formatSvgNumber(innerWidth)}" height="${formatSvgNumber(innerHeight)}" fill="none"/>${zoneMarks.join("")}</g>`
+  const renderedZoneLabels =
+    zoneLabels.length > 0
+      ? `<g fill="#334155" stroke="none">${zoneLabels.join("")}</g>`
+      : ""
+  return `<g data-record="SheetBorder" fill="#fffef8" stroke="#334155" stroke-width="1"><rect x="${formatSvgNumber(paperLeft)}" y="${formatSvgNumber(paperTop)}" width="${formatSvgNumber(paperWidth)}" height="${formatSvgNumber(paperHeight)}"/><rect x="${formatSvgNumber(innerLeft)}" y="${formatSvgNumber(innerTop)}" width="${formatSvgNumber(innerWidth)}" height="${formatSvgNumber(innerHeight)}" fill="none"/>${zoneMarks.join("")}${renderedZoneLabels}</g>`
+}
+
+function renderSchematicSheetChromeLabel({
+  fontAttributes,
+  text,
+  x,
+  y,
+}: {
+  fontAttributes: string
+  text: string
+  x: number
+  y: number
+}): string {
+  return `<text x="${formatSvgNumber(x)}" y="${formatSvgNumber(y)}" dominant-baseline="hanging" ${fontAttributes}>${text}</text>`
+}
+
+function renderSchematicSheetTitleBlock({
+  chromeGeometry,
+  sheetRecord,
+}: {
+  chromeGeometry: SchematicSheetChromeGeometry
+  sheetRecord: AltiumSchSheetRecord | undefined
+}): string {
+  const { innerHeight, innerLeft, innerTop, innerWidth } = chromeGeometry
+  const titleBlockWidth = Math.min(STANDARD_TITLE_BLOCK_WIDTH, innerWidth)
+  const titleBlockHeight = Math.min(STANDARD_TITLE_BLOCK_HEIGHT, innerHeight)
+  const titleBlockLeft = innerLeft + innerWidth - titleBlockWidth
+  const titleBlockTop = innerTop + innerHeight - titleBlockHeight
+  const firstRowBottom =
+    titleBlockTop + titleBlockHeight * STANDARD_TITLE_BLOCK_FIRST_ROW_RATIO
+  const secondRowBottom =
+    titleBlockTop + titleBlockHeight * STANDARD_TITLE_BLOCK_SECOND_ROW_RATIO
+  const thirdRowBottom =
+    titleBlockTop + titleBlockHeight * STANDARD_TITLE_BLOCK_THIRD_ROW_RATIO
+  const sizeColumnRight =
+    titleBlockLeft +
+    titleBlockWidth *
+      (STANDARD_TITLE_BLOCK_SIZE_COLUMN_WIDTH / STANDARD_TITLE_BLOCK_WIDTH)
+  const leftDetailsRight =
+    titleBlockLeft +
+    titleBlockWidth *
+      (STANDARD_TITLE_BLOCK_LEFT_DETAILS_WIDTH / STANDARD_TITLE_BLOCK_WIDTH)
+  const numberColumnRight =
+    titleBlockLeft +
+    titleBlockWidth *
+      (STANDARD_TITLE_BLOCK_NUMBER_COLUMN_RIGHT / STANDARD_TITLE_BLOCK_WIDTH)
+  const labelInset = Math.min(7, titleBlockWidth / 20)
+  const fontAttributes = getSchematicSheetChromeFont({
+    fontSize: 10,
+    sheetRecord,
+  })
+  const titleBlockLabels = [
+    renderSchematicSheetChromeLabel({
+      fontAttributes,
+      text: "Title",
+      x: titleBlockLeft + labelInset,
+      y: titleBlockTop + 2,
+    }),
+    renderSchematicSheetChromeLabel({
+      fontAttributes,
+      text: "Size",
+      x: titleBlockLeft + labelInset,
+      y: firstRowBottom + 2,
+    }),
+    renderSchematicSheetChromeLabel({
+      fontAttributes,
+      text: "Number",
+      x: sizeColumnRight + labelInset,
+      y: firstRowBottom + 2,
+    }),
+    renderSchematicSheetChromeLabel({
+      fontAttributes,
+      text: "Revision",
+      x: numberColumnRight + labelInset,
+      y: firstRowBottom + 2,
+    }),
+    renderSchematicSheetChromeLabel({
+      fontAttributes,
+      text: "Date:",
+      x: titleBlockLeft + labelInset,
+      y: secondRowBottom + 1,
+    }),
+    renderSchematicSheetChromeLabel({
+      fontAttributes,
+      text: "Sheet",
+      x: leftDetailsRight + labelInset,
+      y: secondRowBottom + 1,
+    }),
+    renderSchematicSheetChromeLabel({
+      fontAttributes,
+      text: "of",
+      x: numberColumnRight + labelInset,
+      y: secondRowBottom + 1,
+    }),
+    renderSchematicSheetChromeLabel({
+      fontAttributes,
+      text: "File:",
+      x: titleBlockLeft + labelInset,
+      y: thirdRowBottom + 1,
+    }),
+    renderSchematicSheetChromeLabel({
+      fontAttributes,
+      text: "Drawn By:",
+      x: leftDetailsRight + labelInset,
+      y: thirdRowBottom + 1,
+    }),
+  ].join("")
+
+  return `<g data-record="SheetTitleBlock" fill="none" stroke="#334155" stroke-width="1"><rect x="${formatSvgNumber(titleBlockLeft)}" y="${formatSvgNumber(titleBlockTop)}" width="${formatSvgNumber(titleBlockWidth)}" height="${formatSvgNumber(titleBlockHeight)}"/><path d="M ${formatSvgNumber(titleBlockLeft)} ${formatSvgNumber(firstRowBottom)} H ${formatSvgNumber(titleBlockLeft + titleBlockWidth)} M ${formatSvgNumber(titleBlockLeft)} ${formatSvgNumber(secondRowBottom)} H ${formatSvgNumber(titleBlockLeft + titleBlockWidth)} M ${formatSvgNumber(titleBlockLeft)} ${formatSvgNumber(thirdRowBottom)} H ${formatSvgNumber(titleBlockLeft + titleBlockWidth)} M ${formatSvgNumber(sizeColumnRight)} ${formatSvgNumber(firstRowBottom)} V ${formatSvgNumber(secondRowBottom)} M ${formatSvgNumber(leftDetailsRight)} ${formatSvgNumber(secondRowBottom)} V ${formatSvgNumber(titleBlockTop + titleBlockHeight)} M ${formatSvgNumber(numberColumnRight)} ${formatSvgNumber(firstRowBottom)} V ${formatSvgNumber(secondRowBottom)}"/><g fill="#334155" stroke="none">${titleBlockLabels}</g></g>`
 }
 
 function renderSchematicTextFrame(

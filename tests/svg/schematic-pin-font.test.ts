@@ -10,10 +10,11 @@ test("renders schematic pin text with its sheet font", async () => {
   const svg = serializeAltiumSheetToSvg(parseAltiumAscii(source), {
     title: "Schematic pin font",
   })
+  const renderedPin = svg.match(/<g data-record="2">.*?<\/g>/su)?.[0]
 
-  expect(svg).toContain(
+  expect(renderedPin).toContain(
     'font-family="Helvetica" font-size="4" font-style="italic" font-weight="bold"',
   )
-  expect(svg).not.toContain('font-size="6"')
+  expect(renderedPin).not.toContain('font-size="6"')
   await expect(svg).toMatchSvgSnapshot(import.meta.path)
 })
