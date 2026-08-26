@@ -18,6 +18,7 @@ import {
 } from "./altium-binary-record-encoding"
 import {
   PCB_OBJECT_ID,
+  serializeAltiumArcRecord,
   serializeAltiumFillRecord,
   serializeAltiumPadRecord,
   serializeAltiumTextRecord,
@@ -33,6 +34,7 @@ import {
 } from "./validate-altium-pcb-binary-primitive"
 
 type SupportedAltiumPcbRecordKind =
+  | "Arc"
   | "Board"
   | "Component"
   | "Dimension"
@@ -43,7 +45,6 @@ type SupportedAltiumPcbRecordKind =
 type AltiumPcbRecordSources = Record<SupportedAltiumPcbRecordKind, string[]>
 
 const EMPTY_PCB_SECTION_NAMES = [
-  "Arcs6",
   "Regions6",
   "ComponentBodies6",
   "Classes6",
@@ -133,6 +134,15 @@ export function serializeAltiumPcbDocToBinary(
   addAltiumBinarySection({
     compoundFile,
     content: writeAltiumPrimitiveRecords(
+      PCB_OBJECT_ID.arc,
+      recordSources.Arc.map(serializeAltiumArcRecord),
+    ),
+    name: "Arcs6",
+    recordCount: recordSources.Arc.length,
+  })
+  addAltiumBinarySection({
+    compoundFile,
+    content: writeAltiumPrimitiveRecords(
       PCB_OBJECT_ID.fill,
       recordSources.Fill.map(serializeAltiumFillRecord),
     ),
@@ -180,6 +190,7 @@ function collectSupportedPcbRecordSources(
   asciiDocument: string,
 ): AltiumPcbRecordSources {
   const recordSources: AltiumPcbRecordSources = {
+    Arc: [],
     Board: [],
     Component: [],
     Dimension: [],
@@ -211,6 +222,7 @@ function isSupportedAltiumPcbRecordKind(
   recordKind: string,
 ): recordKind is SupportedAltiumPcbRecordKind {
   return [
+    "Arc",
     "Board",
     "Component",
     "Dimension",
@@ -228,7 +240,9 @@ function isSupportedAltiumPcbRecordKind(
 function isSupportedAltiumPcbPrimitiveKind(
   recordKind: SupportedAltiumPcbRecordKind,
 ): recordKind is SupportedAltiumPcbPrimitiveKind {
-  return ["Fill", "Pad", "Region", "Text", "Track", "Via"].includes(recordKind)
+  return ["Arc", "Fill", "Pad", "Region", "Text", "Track", "Via"].includes(
+    recordKind,
+  )
 }
 
 function addPcbFileHeaders(compoundFile: AltiumCompoundFile): void {
