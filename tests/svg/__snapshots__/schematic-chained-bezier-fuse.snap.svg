@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="640" height="520" viewBox="0 0 171.2 141.2" role="img" aria-label="Chained Bezier fuse body reproduction" class="altium-sheet" data-renderer="altiumts">
+  <title>Chained Bezier fuse body reproduction</title>
+  <rect width="100%" height="100%" fill="#fffdf8"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <defs><clipPath id="altium-sheet-paper"><rect x="5.6" y="5.6" width="160" height="130"/></clipPath></defs>
+    <g data-sheet-content="true" clip-path="url(#altium-sheet-paper)">
+    <g data-record="2"><line x1="65.6" y1="55.6" x2="35.6" y2="55.6" stroke="#1f2937" stroke-width="1"/></g>
+    <g data-record="2"><line x1="105.6" y1="55.6" x2="135.6" y2="55.6" stroke="#1f2937" stroke-width="1"/></g>
+    <text data-record="34" x="0" y="0" fill="#000080" font-family="Arial" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(75.6 25.6) rotate(0)">F1</text>
+    <text data-record="41" x="0" y="0" fill="#000080" font-family="Arial" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(70.6 80.6) rotate(0)">6V 0.5A</text>
+    <text data-record="25" x="0" y="0" fill="#800000" font-family="Arial" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(32.6 55.6) rotate(0)">VIN-F</text>
+    <text data-record="25" x="0" y="0" fill="#800000" font-family="Arial" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(138.6 55.6) rotate(0)">VIN</text>
+    </g>
+  </g>
+</svg>
