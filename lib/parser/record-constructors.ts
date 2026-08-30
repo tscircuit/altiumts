@@ -43,6 +43,7 @@ import {
 } from "../records/altium-rule-record"
 import {
   AltiumSchArcRecord,
+  AltiumSchBezierRecord,
   AltiumSchBusRecord,
   AltiumSchComponentRecord,
   AltiumSchDesignatorRecord,
@@ -91,6 +92,7 @@ export const recordConstructors = new Map<string, AltiumRecordConstructor>([
   ["1", AltiumSchComponentRecord],
   ["2", AltiumSchPinRecord],
   ["4", AltiumSchLabelRecord],
+  ["5", AltiumSchBezierRecord],
   ["6", AltiumSchPolylineRecord],
   ["7", AltiumSchPolygonRecord],
   ["8", AltiumSchEllipseRecord],

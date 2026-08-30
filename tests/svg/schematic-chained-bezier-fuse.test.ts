@@ -1,7 +1,11 @@
 import { expect, test } from "bun:test"
-import { parseAltiumSchDoc, serializeAltiumSheetToSvg } from "../../lib"
+import {
+  AltiumSchBezierRecord,
+  parseAltiumSchDoc,
+  serializeAltiumSheetToSvg,
+} from "../../lib"
 
-test("repro: chained Bezier fuse body is not rendered", async () => {
+test("renders a chained Bezier fuse body", async () => {
   const source = [
     "|HEADER=Protel for Windows - Schematic Capture Ascii File Version 5.0",
     "|RECORD=31|FONTIDCOUNT=1|SIZE1=10|FONTNAME1=Arial|CUSTOMX=160|CUSTOMY=130",
@@ -18,6 +22,7 @@ test("repro: chained Bezier fuse body is not rendered", async () => {
   const [bezier] = document.getRecordsByKind("5")
 
   expect(bezier).toBeDefined()
+  expect(bezier).toBeInstanceOf(AltiumSchBezierRecord)
   expect(bezier?.getNumber("LOCATIONCOUNT")).toBe(7)
 
   const svg = serializeAltiumSheetToSvg(document, {
@@ -31,6 +36,8 @@ test("repro: chained Bezier fuse body is not rendered", async () => {
   expect(svg).toContain(">F1</text>")
   expect(svg).toContain(">6V 0.5A</text>")
   expect(svg.match(/data-record="2"/g)).toHaveLength(2)
-  expect(svg).not.toContain('data-record="5"')
+  expect(svg).toContain(
+    '<path data-record="5" d="M 65.6 55.6 C 70.6 40.6 75.6 40.6 85.6 55.6 C 95.6 70.6 100.6 70.6 105.6 55.6" fill="none" stroke="#0000ff" stroke-width="1"/>',
+  )
   await expect(svg).toMatchSvgSnapshot(import.meta.path)
 })

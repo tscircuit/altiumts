@@ -169,6 +169,14 @@ function renderSchematicRecord(
     0.7,
   )
 
+  if (kind === "5") {
+    const points = getSchematicIndexedPoints(record)
+    if (points.length < 4) return undefined
+    const path = renderSchematicBezierPath(points, viewport)
+    if (!path) return undefined
+    return `<path ${metadata} d="${path}" fill="none" stroke="${color}" stroke-width="${formatSvgNumber(lineWidth)}"/>`
+  }
+
   if (kind === "6" || kind === "27" || kind === "7") {
     const points = getSchematicIndexedPoints(record)
     if (points.length < 2) return undefined
@@ -375,6 +383,29 @@ function renderSchematicRecord(
   }
 
   return undefined
+}
+
+function renderSchematicBezierPath(
+  points: SvgPoint[],
+  viewport: SvgViewport,
+): string | undefined {
+  const startPoint = points[0]
+  if (!startPoint || points.length < 4) return undefined
+
+  const commands = [
+    `M ${formatSvgNumber(viewport.toX(startPoint.x))} ${formatSvgNumber(viewport.toY(startPoint.y))}`,
+  ]
+  for (let index = 1; index + 2 < points.length; index += 3) {
+    const controlPoint1 = points[index]
+    const controlPoint2 = points[index + 1]
+    const endPoint = points[index + 2]
+    if (!controlPoint1 || !controlPoint2 || !endPoint) break
+    commands.push(
+      `C ${formatSvgNumber(viewport.toX(controlPoint1.x))} ${formatSvgNumber(viewport.toY(controlPoint1.y))} ${formatSvgNumber(viewport.toX(controlPoint2.x))} ${formatSvgNumber(viewport.toY(controlPoint2.y))} ${formatSvgNumber(viewport.toX(endPoint.x))} ${formatSvgNumber(viewport.toY(endPoint.y))}`,
+    )
+  }
+
+  return commands.length > 1 ? commands.join(" ") : undefined
 }
 
 function renderSchematicRectangle(

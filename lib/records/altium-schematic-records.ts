@@ -59,6 +59,9 @@ export class AltiumSchLabelRecord extends AltiumSchematicRecord {
     return getFirstDecoded(this, "TEXT")
   }
 }
+export class AltiumSchBezierRecord extends AltiumSchematicRecord {
+  override readonly type = "schematic-bezier-record"
+}
 export class AltiumSchPolylineRecord extends AltiumSchematicRecord {
   override readonly type = "schematic-polyline-record"
 }
