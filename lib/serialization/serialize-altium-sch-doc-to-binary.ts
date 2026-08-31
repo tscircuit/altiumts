@@ -1,8 +1,8 @@
-import type { AltiumSchDoc } from "../altium-sch-doc"
 import {
-  encodeAltiumSchematicImageStorage,
   type AltiumSchematicPngStorageInput,
+  encodeAltiumSchematicImageStorage,
 } from "../altium-embedded-schematic-image"
+import type { AltiumSchDoc } from "../altium-sch-doc"
 import {
   addAltiumCompoundStream,
   concatAltiumBinaryBytes,
