@@ -1,5 +1,9 @@
 import type { AltiumSchDoc } from "../altium-sch-doc"
 import {
+  encodeAltiumSchematicImageStorage,
+  type AltiumSchematicPngStorageInput,
+} from "../altium-embedded-schematic-image"
+import {
   addAltiumCompoundStream,
   concatAltiumBinaryBytes,
   createAltiumCompoundFile,
@@ -11,9 +15,14 @@ import {
   toAltiumBinaryRecordBytes,
 } from "./altium-binary-record-encoding"
 
+export interface SerializeAltiumSchDocToBinaryOptions {
+  embeddedPngImages?: readonly AltiumSchematicPngStorageInput[]
+}
+
 /** Encodes an ASCII schematic into Altium's native OLE/CFB SchDoc container. */
 export function serializeAltiumSchDocToBinary(
   document: string | AltiumSchDoc,
+  options: SerializeAltiumSchDocToBinaryOptions = {},
 ): Uint8Array {
   const asciiDocument = getAsciiAltiumSource(document)
   const recordSources = asciiDocument
@@ -41,9 +50,9 @@ export function serializeAltiumSchDocToBinary(
   })
   addAltiumCompoundStream({
     compoundFile,
-    content: toLengthPrefixedTextBlock(
-      toAltiumBinaryRecordBytes("|HEADER=Icon storage"),
-    ),
+    content: encodeAltiumSchematicImageStorage({
+      images: options.embeddedPngImages ?? [],
+    }),
     path: "/Storage",
   })
   addAltiumCompoundStream({

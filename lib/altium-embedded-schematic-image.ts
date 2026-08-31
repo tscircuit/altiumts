@@ -1,7 +1,15 @@
 import { Unzlib, zlibSync } from "fflate"
 import type { AltiumCompoundStream } from "./compound-file/altium-compound-file"
-import { AltiumCorruptContainerError } from "./errors/altium-error"
+import {
+  AltiumCorruptContainerError,
+  AltiumSerializationError,
+} from "./errors/altium-error"
 import type { AltiumSchImageRecord } from "./records/altium-schematic-records"
+import {
+  concatAltiumBinaryBytes,
+  uint32AltiumBytes,
+} from "./serialization/altium-binary-container"
+import { toAltiumBinaryRecordBytes } from "./serialization/altium-binary-record-encoding"
 
 export interface DecodeAltiumSchematicImageOptions {
   maximumBitmapSize?: number
@@ -19,6 +27,11 @@ export interface AltiumSchematicImagePayload {
 export interface AltiumSchematicImageStorageEntry {
   compressedBytes: Uint8Array
   name: string
+}
+
+export interface AltiumSchematicPngStorageInput {
+  name: string
+  pngBytes: Uint8Array
 }
 
 export class AltiumEmbeddedSchematicImage {
@@ -185,6 +198,87 @@ export function parseSchematicImageStorage(
     offset = frameEnd
   }
   return entries
+}
+
+/** Encodes PNG images into the `/Storage` stream used by binary SchDoc files. */
+export function encodeAltiumSchematicImageStorage({
+  images,
+}: {
+  images: readonly AltiumSchematicPngStorageInput[]
+}): Uint8Array {
+  const header = toAltiumBinaryRecordBytes("|HEADER=Icon storage")
+  return concatAltiumBinaryBytes([
+    uint32AltiumBytes(header.byteLength),
+    header,
+    ...images.map(encodeAltiumSchematicImageStorageFrame),
+  ])
+}
+
+function encodeAltiumSchematicImageStorageFrame(
+  image: AltiumSchematicPngStorageInput,
+): Uint8Array {
+  const nameBytes = encodeSchematicImageName(image.name)
+  const nativePngBytes = extractPng(image.pngBytes, 32 * 1024 * 1024)
+  if (!nativePngBytes) {
+    throw new AltiumSerializationError(
+      `Embedded schematic image ${JSON.stringify(image.name)} is not a complete PNG`,
+    )
+  }
+
+  const nativeClassName = new TextEncoder().encode("TdxPNGImage")
+  const uncompressedPayload = concatAltiumBinaryBytes([
+    createTransparentBitmapPreview(),
+    Uint8Array.of(nativeClassName.byteLength),
+    nativeClassName,
+    nativePngBytes,
+  ])
+  const compressedPayload = zlibSync(uncompressedPayload, { level: 6 })
+  const framePayload = concatAltiumBinaryBytes([
+    Uint8Array.of(0xd0, nameBytes.byteLength),
+    nameBytes,
+    uint32AltiumBytes(compressedPayload.byteLength),
+    compressedPayload,
+  ])
+  if (framePayload.byteLength > 0x00ff_ffff) {
+    throw new AltiumSerializationError(
+      `Embedded schematic image ${JSON.stringify(image.name)} exceeds the Altium storage frame limit`,
+    )
+  }
+  return concatAltiumBinaryBytes([
+    uint32AltiumBytes(framePayload.byteLength),
+    framePayload,
+  ])
+}
+
+function encodeSchematicImageName(name: string): Uint8Array {
+  if (name.length === 0 || /[^\x20-\x7e]/u.test(name)) {
+    throw new AltiumSerializationError(
+      "Embedded schematic image names must contain printable ASCII characters",
+    )
+  }
+  const nameBytes = new TextEncoder().encode(name)
+  if (nameBytes.byteLength > 255) {
+    throw new AltiumSerializationError(
+      "Embedded schematic image names must be at most 255 bytes",
+    )
+  }
+  return nameBytes
+}
+
+function createTransparentBitmapPreview(): Uint8Array {
+  const bitmap = new Uint8Array(58)
+  const view = new DataView(bitmap.buffer)
+  bitmap[0] = 0x42
+  bitmap[1] = 0x4d
+  view.setUint32(2, bitmap.byteLength, true)
+  view.setUint32(10, 54, true)
+  view.setUint32(14, 40, true)
+  view.setInt32(18, 1, true)
+  view.setInt32(22, -1, true)
+  view.setUint16(26, 1, true)
+  view.setUint16(28, 32, true)
+  view.setUint32(34, 4, true)
+  return bitmap
 }
 
 export function decodeAltiumSchematicBitmap(
