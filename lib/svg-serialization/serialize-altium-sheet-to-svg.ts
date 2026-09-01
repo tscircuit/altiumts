@@ -123,7 +123,9 @@ export function serializeAltiumSheetToSvg(
   content.push("</g>")
 
   return createSvgDocument({
-    backgroundColor: options.backgroundColor ?? "#e2e8f0",
+    backgroundColor:
+      options.backgroundColor ??
+      altiumColorToCss(sheetRecord?.getCaseInsensitive("AREACOLOR"), "#000000"),
     className: "altium-sheet",
     content,
     title: options.title ?? "Altium schematic sheet",

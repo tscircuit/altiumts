@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="813" viewBox="0 0 1070 870" role="img" aria-label="Sample Schematic Sheet" class="altium-sheet" data-renderer="altiumts">
   <title>Sample Schematic Sheet</title>
-  <rect width="100%" height="100%" fill="#e2e8f0"/>
+  <rect width="100%" height="100%" fill="#fffcf8"/>
   <g stroke-linecap="round" stroke-linejoin="round">
     <defs><clipPath id="altium-sheet-paper"><rect x="35" y="35" width="1000" height="800"/></clipPath></defs>
     <g data-record="SheetBorder" fill="#fffef8" stroke="#334155" stroke-width="1"><rect x="35" y="35" width="1000" height="800"/><rect x="45" y="45" width="980" height="780" fill="none"/><path d="M 208.3333 35 V 45 M 208.3333 825 V 835"/><path d="M 371.6667 35 V 45 M 371.6667 825 V 835"/><path d="M 535 35 V 45 M 535 825 V 835"/><path d="M 698.3333 35 V 45 M 698.3333 825 V 835"/><path d="M 861.6667 35 V 45 M 861.6667 825 V 835"/><path d="M 35 240 H 45 M 1025 240 H 1035"/><path d="M 35 435 H 45 M 1025 435 H 1035"/><path d="M 35 630 H 45 M 1025 630 H 1035"/></g>

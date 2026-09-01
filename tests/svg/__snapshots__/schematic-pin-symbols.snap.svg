@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000" viewBox="0 0 149.8 149.8" role="img" aria-label="Schematic pin symbols" class="altium-sheet" data-renderer="altiumts">
   <title>Schematic pin symbols</title>
-  <rect width="100%" height="100%" fill="#e2e8f0"/>
+  <rect width="100%" height="100%" fill="#000000"/>
   <g stroke-linecap="round" stroke-linejoin="round">
     <defs><clipPath id="altium-sheet-paper"><rect x="4.9" y="4.9" width="140" height="140"/></clipPath></defs>
     <g data-sheet-content="true" clip-path="url(#altium-sheet-paper)">

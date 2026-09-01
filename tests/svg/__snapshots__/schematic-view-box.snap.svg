@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="600" viewBox="0 0 200 200" role="img" aria-label="Expanded schematic view" class="altium-sheet" data-renderer="altiumts">
   <title>Expanded schematic view</title>
-  <rect width="100%" height="100%" fill="#e2e8f0"/>
+  <rect width="100%" height="100%" fill="#000000"/>
   <g stroke-linecap="round" stroke-linejoin="round">
-    <defs><clipPath id="altium-sheet-view"><rect x="0" y="0" width="200" height="200"/></clipPath></defs>
+    <defs><clipPath id="altium-sheet-paper"><rect x="0" y="0" width="200" height="200"/></clipPath></defs>
     <g data-record="SheetBorder" fill="#fffef8" stroke="#334155" stroke-width="1"><rect x="0" y="40" width="200" height="160"/><rect x="10" y="50" width="180" height="140" fill="none"/><path d="M 40 40 V 50 M 40 190 V 200"/><path d="M 70 40 V 50 M 70 190 V 200"/><path d="M 100 40 V 50 M 100 190 V 200"/><path d="M 130 40 V 50 M 130 190 V 200"/><path d="M 160 40 V 50 M 160 190 V 200"/><path d="M 0 85 H 10 M 190 85 H 200"/><path d="M 0 120 H 10 M 190 120 H 200"/><path d="M 0 155 H 10 M 190 155 H 200"/></g>
-    <g data-sheet-content="true" clip-path="url(#altium-sheet-view)">
+    <g data-sheet-content="true" clip-path="url(#altium-sheet-paper)">
     <text data-record="25" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="12" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(20 20) rotate(0)">Above paper</text>
     <text data-record="25" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="12" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(20 120) rotate(0)">Inside paper</text>
     </g>

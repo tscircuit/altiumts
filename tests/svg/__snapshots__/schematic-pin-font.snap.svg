@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="813" viewBox="0 0 107 87" role="img" aria-label="Schematic pin font" class="altium-sheet" data-renderer="altiumts">
   <title>Schematic pin font</title>
-  <rect width="100%" height="100%" fill="#e2e8f0"/>
+  <rect width="100%" height="100%" fill="#000000"/>
   <g stroke-linecap="round" stroke-linejoin="round">
     <defs><clipPath id="altium-sheet-paper"><rect x="3.5" y="3.5" width="100" height="80"/></clipPath></defs>
     <g data-record="SheetBorder" fill="#fffef8" stroke="#334155" stroke-width="1"><rect x="3.5" y="3.5" width="100" height="80"/><rect x="13.5" y="13.5" width="80" height="60" fill="none"/><path d="M 26.8333 3.5 V 13.5 M 26.8333 73.5 V 83.5"/><path d="M 40.1667 3.5 V 13.5 M 40.1667 73.5 V 83.5"/><path d="M 53.5 3.5 V 13.5 M 53.5 73.5 V 83.5"/><path d="M 66.8333 3.5 V 13.5 M 66.8333 73.5 V 83.5"/><path d="M 80.1667 3.5 V 13.5 M 80.1667 73.5 V 83.5"/><path d="M 3.5 28.5 H 13.5 M 93.5 28.5 H 103.5"/><path d="M 3.5 43.5 H 13.5 M 93.5 43.5 H 103.5"/><path d="M 3.5 58.5 H 13.5 M 93.5 58.5 H 103.5"/></g>

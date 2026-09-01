@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="796" viewBox="0 0 1347.13 1072.13" role="img" aria-label="STM32 ST-Link V2 component value special-string reproduction" class="altium-sheet" data-renderer="altiumts">
   <title>STM32 ST-Link V2 component value special-string reproduction</title>
-  <rect width="100%" height="100%" fill="#e2e8f0"/>
+  <rect width="100%" height="100%" fill="#fffcf8"/>
   <g stroke-linecap="round" stroke-linejoin="round">
     <defs><clipPath id="altium-sheet-paper"><rect x="44.065" y="44.065" width="1259" height="984"/></clipPath></defs>
     <g data-record="SheetBorder" fill="#fffef8" stroke="#334155" stroke-width="1"><rect x="44.065" y="44.065" width="1259" height="984"/><rect x="64.065" y="64.065" width="1219" height="944" fill="none"/><path d="M 267.2317 44.065 V 64.065 M 267.2317 1008.065 V 1028.065"/><path d="M 470.3983 44.065 V 64.065 M 470.3983 1008.065 V 1028.065"/><path d="M 673.565 44.065 V 64.065 M 673.565 1008.065 V 1028.065"/><path d="M 876.7317 44.065 V 64.065 M 876.7317 1008.065 V 1028.065"/><path d="M 1079.8983 44.065 V 64.065 M 1079.8983 1008.065 V 1028.065"/><path d="M 44.065 300.065 H 64.065 M 1283.065 300.065 H 1303.065"/><path d="M 44.065 536.065 H 64.065 M 1283.065 536.065 H 1303.065"/><path d="M 44.065 772.065 H 64.065 M 1283.065 772.065 H 1303.065"/></g>
