@@ -21,10 +21,11 @@ export function serializeAltiumRegionRecord(
 function createRegionPropertyBytes(fields: AltiumRecordFields): Uint8Array {
   const layer = fields.get("LAYER") ?? "TOP"
   const polygonIndex = parseAltiumIndex(fields.get("POLYGON"))
+  const regionKind = getAltiumRegionKindId(fields.get("REGIONKIND"))
   const propertySource = [
     `V7_LAYER=${layer}`,
     "NAME= ",
-    "KIND=0",
+    `KIND=${regionKind}`,
     `SUBPOLYINDEX=${polygonIndex === NO_INDEX ? -1 : polygonIndex}`,
     "UNIONINDEX=0",
     "ARCRESOLUTION=0.5mil",
@@ -32,4 +33,8 @@ function createRegionPropertyBytes(fields: AltiumRecordFields): Uint8Array {
     "CAVITYHEIGHT=0mil",
   ].join("|")
   return toAltiumBinaryRecordBytes(`|${propertySource}`).subarray(1)
+}
+
+function getAltiumRegionKindId(regionKind: string | undefined): number {
+  return regionKind?.toUpperCase() === "POLYGON_CUTOUT" ? 1 : 0
 }
