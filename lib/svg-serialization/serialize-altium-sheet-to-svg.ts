@@ -307,7 +307,8 @@ function renderSchematicRecord(
   ) {
     if (record.getBoolean("ISHIDDEN") && !options.showHidden) return undefined
     if (options.showText === false) return undefined
-    const location = getSchematicLocation(record)
+    const location = getSchematicLocationIfPresent(record)
+    if (!location) return undefined
     const x = viewport.toX(location.x)
     const y = viewport.toY(location.y)
     const sourceText =
