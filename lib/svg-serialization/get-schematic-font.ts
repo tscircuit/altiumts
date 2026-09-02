@@ -15,6 +15,10 @@ export type SchematicFont = {
   size: number
 }
 
+// Altium stores schematic font sizes in points, but schematic geometry uses
+// 10 mil coordinate units. One point is 1/72 inch, or 100/72 schematic units.
+const ALTIUM_SCHEMATIC_UNITS_PER_POINT = 100 / 72
+
 export function getSchematicFont({
   fallbackSize,
   fontIdFieldName = "FONTID",
@@ -25,10 +29,11 @@ export function getSchematicFont({
     Math.round(Number(record.getCaseInsensitive(fontIdFieldName) ?? 1)),
     1,
   )
-  const size = Math.max(
+  const sizePoints = Math.max(
     Number(sheetRecord?.getCaseInsensitive(`SIZE${fontId}`) ?? fallbackSize),
     1,
   )
+  const size = sizePoints * ALTIUM_SCHEMATIC_UNITS_PER_POINT
   const family =
     sheetRecord?.getDecoded(`FONTNAME${fontId}`) ?? "Arial, sans-serif"
   const weight =

@@ -15,7 +15,7 @@ test("renders Altium text orientation and justification without font rotation", 
     title: "Altium schematic text positioning",
   })
 
-  expect(svg).toContain('font-size="14"')
+  expect(svg).toContain('font-size="19.4444"')
   expect(svg).toContain(
     'text-anchor="start" dominant-baseline="text-after-edge"',
   )
