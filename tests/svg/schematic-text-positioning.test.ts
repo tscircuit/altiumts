@@ -15,7 +15,9 @@ test("renders Altium text orientation and justification without font rotation", 
     title: "Altium schematic text positioning",
   })
 
-  expect(svg).toContain('font-size="14"')
+  // Altium stores schematic font sizes in points while schematic geometry uses
+  // DXP default units (10 mil). 14 pt therefore occupies 19.4444 DXP units.
+  expect(svg).toContain('font-size="19.4444"')
   expect(svg).toContain(
     'text-anchor="start" dominant-baseline="text-after-edge"',
   )
