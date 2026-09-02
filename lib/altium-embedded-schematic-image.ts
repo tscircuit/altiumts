@@ -115,12 +115,11 @@ export function parseAltiumEmbeddedSchematicImages(
 
   return records.flatMap((record, index) => {
     const normalizedFileName = normalizeImageName(record.fileName)
-    const entry =
-      entries.find(
-        (candidate) =>
-          unusedEntries.has(candidate) &&
-          normalizeImageName(candidate.name) === normalizedFileName,
-      ) ?? entries.find((candidate) => unusedEntries.has(candidate))
+    const entry = entries.find(
+      (candidate) =>
+        unusedEntries.has(candidate) &&
+        normalizeImageName(candidate.name) === normalizedFileName,
+    )
     if (!entry) return []
     unusedEntries.delete(entry)
     return [

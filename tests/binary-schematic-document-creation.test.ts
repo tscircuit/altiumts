@@ -49,3 +49,27 @@ test("writes embedded PNG images into native binary schematic documents", () => 
     "data:image/png;base64,iVBORw0KGgo",
   )
 })
+
+test("does not associate embedded image storage with an external image record", () => {
+  const pngBytes = Uint8Array.from(
+    atob(
+      "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4nGNgYGD4DwABBAEAHnOcQAAAAABJRU5ErkJggg==",
+    ),
+    (character) => character.charCodeAt(0),
+  )
+  const bytes = serializeAltiumSchDocToBinary(
+    [
+      "|HEADER=Protel for Windows - Schematic Capture Ascii File Version 5.0|WEIGHT=2",
+      "|RECORD=30|FILENAME=external.png|LOCATION.X=0|LOCATION.Y=0|CORNER.X=10|CORNER.Y=10",
+      "|RECORD=30|FILENAME=embedded.png|EMBEDIMAGE=T|LOCATION.X=20|LOCATION.Y=20|CORNER.X=30|CORNER.Y=30",
+    ].join("\r\n"),
+    {
+      embeddedPngImages: [{ name: "embedded.png", pngBytes }],
+    },
+  )
+  const document = parseAltiumSchDoc(bytes)
+
+  expect(document.embeddedImages).toHaveLength(1)
+  expect(document.embeddedImages[0]?.record.fileName).toBe("embedded.png")
+  expect(document.embeddedImages[0]?.getPngBytes()).toEqual(pngBytes)
+})
