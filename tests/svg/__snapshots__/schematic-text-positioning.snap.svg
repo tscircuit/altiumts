@@ -5,11 +5,11 @@
     <defs><clipPath id="altium-sheet-paper"><rect x="7" y="7" width="200" height="160"/></clipPath></defs>
     <g data-record="SheetBorder" fill="#fffef8" stroke="#334155" stroke-width="1"><rect x="7" y="7" width="200" height="160"/><rect x="17" y="17" width="180" height="140" fill="none"/><path d="M 47 7 V 17 M 47 157 V 167"/><path d="M 77 7 V 17 M 77 157 V 167"/><path d="M 107 7 V 17 M 107 157 V 167"/><path d="M 137 7 V 17 M 137 157 V 167"/><path d="M 167 7 V 17 M 167 157 V 167"/><path d="M 7 52 H 17 M 197 52 H 207"/><path d="M 7 87 H 17 M 197 87 H 207"/><path d="M 7 122 H 17 M 197 122 H 207"/></g>
     <g data-sheet-content="true" clip-path="url(#altium-sheet-paper)">
-    <text data-record="25" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="14" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(27 37) rotate(0)">Right</text>
-    <text data-record="25" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="14" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(67 67) rotate(-90)">Up</text>
-    <text data-record="25" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="14" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(107 97) rotate(0)">Left</text>
-    <text data-record="25" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="14" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(147 127) rotate(-90)">Down</text>
-    <text data-record="4" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="14" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-before-edge" transform="translate(187 147) rotate(0)">Top right</text>
+    <text data-record="25" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="19.4444" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(27 37) rotate(0)">Right</text>
+    <text data-record="25" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="19.4444" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(67 67) rotate(-90)">Up</text>
+    <text data-record="25" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="19.4444" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(107 97) rotate(0)">Left</text>
+    <text data-record="25" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="19.4444" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(147 127) rotate(-90)">Down</text>
+    <text data-record="4" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="19.4444" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-before-edge" transform="translate(187 147) rotate(0)">Top right</text>
     </g>
   </g>
 </svg>

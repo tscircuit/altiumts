@@ -520,8 +520,22 @@ function renderSchematicPin(
     x: body.x - screenDirection.x * 2,
     y: body.y - screenDirection.y * 2,
   }
-  const font = getSchematicFont({
+  const fallbackFontIdFieldName = "FONTID"
+  const designatorFont = getSchematicFont({
     fallbackSize: 6,
+    fontIdFieldName:
+      (record.getNumber("DESIGNATOR_CUSTOMFONTID") ?? 0) > 0
+        ? "DESIGNATOR_CUSTOMFONTID"
+        : fallbackFontIdFieldName,
+    record,
+    sheetRecord,
+  })
+  const nameFont = getSchematicFont({
+    fallbackSize: 6,
+    fontIdFieldName:
+      (record.getNumber("NAME_CUSTOMFONTID") ?? 0) > 0
+        ? "NAME_CUSTOMFONTID"
+        : fallbackFontIdFieldName,
     record,
     sheetRecord,
   })
@@ -530,7 +544,7 @@ function renderSchematicPin(
         anchor: designatorAnchor,
         color,
         dominantBaseline: "text-after-edge",
-        fontAttributes: font.attributes,
+        fontAttributes: designatorFont.attributes,
         clockwiseRotationDegrees,
         svgPosition: designatorPosition,
         text: designator,
@@ -541,7 +555,7 @@ function renderSchematicPin(
         anchor: nameAnchor,
         color,
         dominantBaseline: "central",
-        fontAttributes: font.attributes,
+        fontAttributes: nameFont.attributes,
         clockwiseRotationDegrees,
         svgPosition: namePosition,
         text: name,
