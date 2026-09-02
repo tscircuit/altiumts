@@ -1,6 +1,6 @@
 {
   "name": "altiumts",
-  "version": "0.0.40",
+  "version": "0.0.41",
   "description": "TypeScript-first parser and serializer for Altium document formats",
   "type": "module",
   "bin": {
