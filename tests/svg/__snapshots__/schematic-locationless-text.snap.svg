@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="688" viewBox="0 0 256.8 176.8" role="img" aria-label="Altium schematic sheet" class="altium-sheet" data-renderer="altiumts">
+  <title>Altium schematic sheet</title>
+  <rect width="100%" height="100%" fill="#e2e8f0"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <defs><clipPath id="altium-sheet-paper"><rect x="8.4" y="8.4" width="240" height="160"/></clipPath></defs>
+    <g data-record="SheetBorder" fill="#fffef8" stroke="#334155" stroke-width="1"><rect x="8.4" y="8.4" width="240" height="160"/><rect x="18.4" y="18.4" width="220" height="140" fill="none"/><path d="M 55.0667 8.4 V 18.4 M 55.0667 158.4 V 168.4"/><path d="M 91.7333 8.4 V 18.4 M 91.7333 158.4 V 168.4"/><path d="M 128.4 8.4 V 18.4 M 128.4 158.4 V 168.4"/><path d="M 165.0667 8.4 V 18.4 M 165.0667 158.4 V 168.4"/><path d="M 201.7333 8.4 V 18.4 M 201.7333 158.4 V 168.4"/><path d="M 8.4 53.4 H 18.4 M 238.4 53.4 H 248.4"/><path d="M 8.4 88.4 H 18.4 M 238.4 88.4 H 248.4"/><path d="M 8.4 123.4 H 18.4 M 238.4 123.4 H 248.4"/></g>
+    <g data-sheet-content="true" clip-path="url(#altium-sheet-paper)">
+    <text data-record="25" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(128.4 88.4) rotate(0)">Visible annotation</text>
+    </g>
+  </g>
+</svg>
