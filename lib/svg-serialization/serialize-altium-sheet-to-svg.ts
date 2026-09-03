@@ -13,6 +13,8 @@ import {
   getSchematicIndexedPoints,
 } from "./altium-values"
 import { getSchematicFont } from "./get-schematic-font"
+import { getSchematicSheetSize } from "./get-schematic-sheet-size"
+import { renderAltiumNegatedText } from "./render-altium-negated-text"
 import { renderSchematicPinEdgeSymbols } from "./render-schematic-pin-edge-symbols"
 import {
   renderSchematicSheetEntry,
@@ -62,14 +64,7 @@ export function serializeAltiumSheetToSvg(
   const sheetRecord = records.find(
     (record): record is AltiumSchSheetRecord => record.recordKind === "31",
   )
-  const sheetWidth = Math.max(
-    Number(sheetRecord?.getCaseInsensitive("CUSTOMX") ?? 1000),
-    1,
-  )
-  const sheetHeight = Math.max(
-    Number(sheetRecord?.getCaseInsensitive("CUSTOMY") ?? 800),
-    1,
-  )
+  const [sheetWidth, sheetHeight] = getSchematicSheetSize(sheetRecord)
   const paperBounds: SvgBounds = {
     minX: 0,
     minY: 0,
@@ -115,7 +110,8 @@ export function serializeAltiumSheetToSvg(
   content.push(
     '<g data-sheet-content="true" clip-path="url(#altium-sheet-paper)">',
   )
-  for (const record of records) {
+  const recordsForPainting = getSchematicRecordsInPaintOrder(records, context)
+  for (const record of recordsForPainting) {
     if (!shouldRenderSchematicRecord(record, context)) continue
     const rendered = renderSchematicRecord(record, viewport, options, context)
     if (rendered) content.push(rendered)
@@ -184,9 +180,10 @@ function renderSchematicRecord(
     if (points.length < 2) return undefined
     const polygon = kind === "7"
     const tag = polygon ? "polygon" : "polyline"
-    const fill = polygon
-      ? altiumColorToCss(record.getCaseInsensitive("AREACOLOR"), "none")
-      : "none"
+    const fill =
+      polygon && record.getBoolean("ISSOLID") === true
+        ? altiumColorToCss(record.getCaseInsensitive("AREACOLOR"), "none")
+        : "none"
     return `<${tag} ${metadata} points="${pointsToSvg(points, viewport)}" fill="${fill}" stroke="${color}" stroke-width="${formatSvgNumber(lineWidth)}"/>`
   }
 
@@ -294,7 +291,7 @@ function renderSchematicRecord(
         : ioType === 2
           ? `M ${formatSvgNumber(x)} ${formatSvgNumber(y - halfHeight)} H ${formatSvgNumber(x + width - pointDepth)} L ${formatSvgNumber(x + width)} ${formatSvgNumber(y)} L ${formatSvgNumber(x + width - pointDepth)} ${formatSvgNumber(y + halfHeight)} H ${formatSvgNumber(x)} Z`
           : `M ${formatSvgNumber(x)} ${formatSvgNumber(y - halfHeight)} H ${formatSvgNumber(x + width)} V ${formatSvgNumber(y + halfHeight)} H ${formatSvgNumber(x)} Z`
-    return `<g ${metadata}><path d="${path}" fill="${fillColor}" stroke="${color}" stroke-width="1"/><text x="${formatSvgNumber(x + width / 2)}" y="${formatSvgNumber(y)}" text-anchor="middle" dominant-baseline="central" fill="${textColor}" ${font.attributes}>${escapeXml(name)}</text></g>`
+    return `<g ${metadata}><path d="${path}" fill="${fillColor}" stroke="${color}" stroke-width="1"/><text x="${formatSvgNumber(x + width / 2)}" y="${formatSvgNumber(y)}" text-anchor="middle" dominant-baseline="central" fill="${textColor}" ${font.attributes}>${renderAltiumNegatedText(name)}</text></g>`
   }
 
   if (
@@ -332,7 +329,9 @@ function renderSchematicRecord(
       sheetRecord: context.sheetRecord,
     })
     const positioning = getSchematicTextPositioning(record)
-    return `<text ${metadata} x="0" y="0" fill="${color}" ${font.attributes} text-anchor="${positioning.anchor}" dominant-baseline="${positioning.baseline}" transform="translate(${formatSvgNumber(x)} ${formatSvgNumber(y)}) rotate(${formatSvgNumber(positioning.rotation)})">${escapeXml(text)}</text>`
+    const renderedText =
+      kind === "25" ? renderAltiumNegatedText(text) : escapeXml(text)
+    return `<text ${metadata} x="0" y="0" fill="${color}" ${font.attributes} text-anchor="${positioning.anchor}" dominant-baseline="${positioning.baseline}" transform="translate(${formatSvgNumber(x)} ${formatSvgNumber(y)}) rotate(${formatSvgNumber(positioning.rotation)})">${renderedText}</text>`
   }
 
   if (kind === "28") {
@@ -437,6 +436,7 @@ function renderSchematicPinText(params: {
   clockwiseRotationDegrees: number
   svgPosition: SvgPoint
   text: string
+  useAltiumNegation?: boolean
 }): string {
   const {
     anchor,
@@ -446,10 +446,14 @@ function renderSchematicPinText(params: {
     clockwiseRotationDegrees,
     svgPosition,
     text,
+    useAltiumNegation,
   } = params
   if (!text) return ""
 
-  return `<text x="0" y="0" fill="${color}" ${fontAttributes} text-anchor="${anchor}" dominant-baseline="${dominantBaseline}" transform="translate(${formatSvgNumber(svgPosition.x)} ${formatSvgNumber(svgPosition.y)}) rotate(${formatSvgNumber(clockwiseRotationDegrees)})">${escapeXml(text)}</text>`
+  const renderedText = useAltiumNegation
+    ? renderAltiumNegatedText(text)
+    : escapeXml(text)
+  return `<text x="0" y="0" fill="${color}" ${fontAttributes} text-anchor="${anchor}" dominant-baseline="${dominantBaseline}" transform="translate(${formatSvgNumber(svgPosition.x)} ${formatSvgNumber(svgPosition.y)}) rotate(${formatSvgNumber(clockwiseRotationDegrees)})">${renderedText}</text>`
 }
 
 function renderSchematicPin(
@@ -545,6 +549,7 @@ function renderSchematicPin(
         clockwiseRotationDegrees,
         svgPosition: namePosition,
         text: name,
+        useAltiumNegation: true,
       })
     : ""
 
@@ -613,7 +618,7 @@ function renderSchematicPowerPort(
   const vertical = direction.y !== 0
   const textAnchor = vertical ? "middle" : direction.x > 0 ? "start" : "end"
   const baseline = vertical ? (direction.y > 0 ? "hanging" : "auto") : "central"
-  return `<g ${metadata}>${symbol}<text x="${formatSvgNumber(label.x)}" y="${formatSvgNumber(label.y)}" text-anchor="${textAnchor}" dominant-baseline="${baseline}" fill="${color}" ${font.attributes}>${escapeXml(text)}</text></g>`
+  return `<g ${metadata}>${symbol}<text x="${formatSvgNumber(label.x)}" y="${formatSvgNumber(label.y)}" text-anchor="${textAnchor}" dominant-baseline="${baseline}" fill="${color}" ${font.attributes}>${renderAltiumNegatedText(text)}</text></g>`
 }
 
 function renderSchematicSheetBorder(
@@ -735,12 +740,7 @@ function shouldRenderSchematicRecord(
 
   while (current && !visited.has(current)) {
     visited.add(current)
-    const ownerIndex = current.getNumber("OWNERINDEX")
-    const parent: AltiumRecord | undefined = context.document
-      ? context.document.getParent(current)
-      : ownerIndex === undefined || ownerIndex < 0
-        ? undefined
-        : context.records[ownerIndex]
+    const parent = getParentSchematicRecord(current, context)
     if (!parent) return true
 
     if (ownerPartId === undefined || ownerPartId <= 0) {
@@ -765,6 +765,98 @@ function shouldRenderSchematicRecord(
   }
 
   return true
+}
+
+function getSchematicRecordsInPaintOrder(
+  records: AltiumRecord[],
+  context: SchematicRenderContext,
+): AltiumRecord[] {
+  const recordsInPaintOrder = [...records]
+  const componentRecordIndexes = new Map<AltiumRecord, number[]>()
+
+  for (const [recordIndex, record] of records.entries()) {
+    const component = getOwningSchematicComponent(record, context)
+    if (!component) continue
+
+    const indexes = componentRecordIndexes.get(component)
+    if (indexes) indexes.push(recordIndex)
+    else componentRecordIndexes.set(component, [recordIndex])
+  }
+
+  for (const indexes of componentRecordIndexes.values()) {
+    const componentRecords = indexes
+      .map((index) => records[index])
+      .filter((record): record is AltiumRecord => record !== undefined)
+    const firstPinIndex = componentRecords.findIndex(
+      (record) => record.recordKind === "2",
+    )
+    if (firstPinIndex < 0) continue
+
+    const lateOpaqueGraphics = componentRecords
+      .slice(firstPinIndex + 1)
+      .filter(isOpaqueSchematicGraphic)
+    if (lateOpaqueGraphics.length === 0) continue
+
+    const lateOpaqueGraphicSet = new Set(lateOpaqueGraphics)
+    const reorderedComponentRecords = componentRecords.filter(
+      (record) => !lateOpaqueGraphicSet.has(record),
+    )
+    const insertionIndex = reorderedComponentRecords.findIndex(
+      (record) => record.recordKind === "2",
+    )
+    reorderedComponentRecords.splice(insertionIndex, 0, ...lateOpaqueGraphics)
+
+    for (const [indexOffset, recordIndex] of indexes.entries()) {
+      const record = reorderedComponentRecords[indexOffset]
+      if (record) recordsInPaintOrder[recordIndex] = record
+    }
+  }
+
+  return recordsInPaintOrder
+}
+
+function getOwningSchematicComponent(
+  record: AltiumRecord,
+  context: SchematicRenderContext,
+): AltiumRecord | undefined {
+  const visited = new Set<AltiumRecord>()
+  let parent = getParentSchematicRecord(record, context)
+
+  while (parent && !visited.has(parent)) {
+    if (parent.recordKind === "1") return parent
+    visited.add(parent)
+    parent = getParentSchematicRecord(parent, context)
+  }
+
+  return undefined
+}
+
+function getParentSchematicRecord(
+  record: AltiumRecord,
+  context: SchematicRenderContext,
+): AltiumRecord | undefined {
+  if (context.document) return context.document.getParent(record)
+
+  const ownerIndex = record.getNumber("OWNERINDEX")
+  return ownerIndex === undefined || ownerIndex < 0
+    ? undefined
+    : context.records[ownerIndex]
+}
+
+function isOpaqueSchematicGraphic(record: AltiumRecord): boolean {
+  if (record.recordKind === "7") {
+    return (
+      record.getBoolean("ISSOLID") === true &&
+      record.getCaseInsensitive("AREACOLOR") !== undefined
+    )
+  }
+
+  return (
+    (record.recordKind === "8" ||
+      record.recordKind === "10" ||
+      record.recordKind === "14") &&
+    record.getBoolean("ISSOLID") === true
+  )
 }
 
 function getSchematicTextPositioning(record: AltiumRecord): {

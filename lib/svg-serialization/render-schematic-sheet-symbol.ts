@@ -1,9 +1,10 @@
 import type { AltiumRecord } from "../records/altium-record"
 import { getSchematicCoordinate } from "./altium-values"
 import { getSchematicFont } from "./get-schematic-font"
+import { renderAltiumNegatedText } from "./render-altium-negated-text"
 import type { SchematicRenderContext } from "./schematic-render-context"
 import type { SvgPoint, SvgViewport } from "./svg-types"
-import { escapeXml, formatSvgNumber } from "./svg-utils"
+import { formatSvgNumber } from "./svg-utils"
 
 type SchematicSheetEntrySide = 0 | 1 | 2 | 3
 
@@ -122,7 +123,7 @@ export function renderSchematicSheetEntry({
       ? "hanging"
       : "text-after-edge"
 
-  return `<g ${metadata}><polygon points="${entryPolygonPoints}" fill="${SCHEMATIC_COMPONENT_FILL_COLOR}" stroke="${SCHEMATIC_COMPONENT_OUTLINE_COLOR}" stroke-width="1"/>${name ? `<text x="${formatSvgNumber(textPosition.x)}" y="${formatSvgNumber(textPosition.y)}" text-anchor="${textAnchor}" dominant-baseline="${baseline}" fill="${SCHEMATIC_COMPONENT_OUTLINE_COLOR}" ${font.attributes}>${escapeXml(name)}</text>` : ""}</g>`
+  return `<g ${metadata}><polygon points="${entryPolygonPoints}" fill="${SCHEMATIC_COMPONENT_FILL_COLOR}" stroke="${SCHEMATIC_COMPONENT_OUTLINE_COLOR}" stroke-width="1"/>${name ? `<text x="${formatSvgNumber(textPosition.x)}" y="${formatSvgNumber(textPosition.y)}" text-anchor="${textAnchor}" dominant-baseline="${baseline}" fill="${SCHEMATIC_COMPONENT_OUTLINE_COLOR}" ${font.attributes}>${renderAltiumNegatedText(name)}</text>` : ""}</g>`
 }
 
 function getSchematicRecordParent({

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="735" viewBox="0 0 1658.5 1218.5" role="img" aria-label="PowerSupply.SchDoc blank sheet reproduction" class="altium-sheet" data-renderer="altiumts">
+  <title>PowerSupply.SchDoc blank sheet reproduction</title>
+  <rect width="100%" height="100%" fill="#fffcf8"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <defs><clipPath id="altium-sheet-paper"><rect x="54.25" y="54.25" width="1550" height="1110"/></clipPath></defs>
+    <g data-record="SheetBorder" fill="#fffef8" stroke="#334155" stroke-width="1"><rect x="54.25" y="54.25" width="1550" height="1110"/><rect x="74.25" y="74.25" width="1510" height="1070" fill="none"/><path d="M 325.9167 54.25 V 74.25 M 325.9167 1144.25 V 1164.25"/><path d="M 577.5833 54.25 V 74.25 M 577.5833 1144.25 V 1164.25"/><path d="M 829.25 54.25 V 74.25 M 829.25 1144.25 V 1164.25"/><path d="M 1080.9167 54.25 V 74.25 M 1080.9167 1144.25 V 1164.25"/><path d="M 1332.5833 54.25 V 74.25 M 1332.5833 1144.25 V 1164.25"/><path d="M 54.25 341.75 H 74.25 M 1584.25 341.75 H 1604.25"/><path d="M 54.25 609.25 H 74.25 M 1584.25 609.25 H 1604.25"/><path d="M 54.25 876.75 H 74.25 M 1584.25 876.75 H 1604.25"/></g>
+    <g data-sheet-content="true" clip-path="url(#altium-sheet-paper)">
+    <text data-record="4" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1634.25 1095.25) rotate(0)">=Title</text>
+    <text data-record="4" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1854.25 1165.25) rotate(0)">=Author</text>
+    <text data-record="4" x="0" y="0" fill="#000080" font-family="Tahoma" font-size="24" font-style="normal" font-weight="bold" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(94.25 115.25) rotate(0)">Battery</text>
+    <g data-record="17"><path d="M 193.25 144.25 L 188.25 134.25 L 198.25 134.25 Z" fill="#800000"/><text x="193.25" y="130.25" text-anchor="middle" dominant-baseline="auto" fill="#800000" font-family="Tahoma" font-size="10" font-style="normal" font-weight="bold" text-decoration="none">+9V</text></g>
+    <g data-record="17"><path d="M 193.25 174.25 L 193.25 178.25 M 200.25 178.25 L 186.25 178.25 M 197.75 182.25 L 188.75 182.25 M 195.25 186.25 L 191.25 186.25" fill="none" stroke="#800000" stroke-width="1"/><text x="193.25" y="190.25" text-anchor="middle" dominant-baseline="hanging" fill="#800000" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none">GND</text></g>
+    <g data-record="17"><path d="M 239.25 122.25 L 234.25 112.25 L 244.25 112.25 Z" fill="#800000"/><text x="239.25" y="108.25" text-anchor="middle" dominant-baseline="auto" fill="#800000" font-family="Tahoma" font-size="10" font-style="normal" font-weight="bold" text-decoration="none">+9V</text></g>
+    <g data-record="17"><path d="M 239.25 172.25 L 239.25 176.25 M 246.25 176.25 L 232.25 176.25 M 243.75 180.25 L 234.75 180.25 M 241.25 184.25 L 237.25 184.25" fill="none" stroke="#800000" stroke-width="1"/><text x="239.25" y="188.25" text-anchor="middle" dominant-baseline="hanging" fill="#800000" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none">GND</text></g>
+    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(495.25 139.25) rotate(0)">3.3V</text>
+    <rect data-record="14" x="494.25" y="139.25" width="100" height="40" rx="0" fill="#ffffb0" stroke="#800000" stroke-width="1"/>
+    <g data-record="2"><line x1="494.25" y1="149.25" x2="464.25" y2="149.25" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(492.25 149.25) rotate(0)">0</text><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(496.25 149.25) rotate(0)">VIN</text></g>
+    <g data-record="2"><line x1="594.25" y1="149.25" x2="624.25" y2="149.25" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(596.25 149.25) rotate(0)">2</text><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="central" transform="translate(592.25 149.25) rotate(0)">VOUT</text></g>
+    <g data-record="2"><line x1="544.25" y1="179.25" x2="544.25" y2="209.25" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(544.25 181.25) rotate(-90)">1</text><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(544.25 177.25) rotate(-90)">GND</text></g>
+    <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(495.25 131.25) rotate(0)">U1</text>
+    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(494.25 129.25) rotate(0)">Comment</text>
+    <text data-record="4" x="0" y="0" fill="#000080" font-family="Tahoma" font-size="24" font-style="normal" font-weight="bold" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(385.25 116.25) rotate(0)">Power Supply</text>
+    <g data-record="17"><path d="M 544.25 226.25 L 544.25 230.25 M 551.25 230.25 L 537.25 230.25 M 548.75 234.25 L 539.75 234.25 M 546.25 238.25 L 542.25 238.25" fill="none" stroke="#800000" stroke-width="1"/><text x="544.25" y="242.25" text-anchor="middle" dominant-baseline="hanging" fill="#800000" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none">GND</text></g>
+    <g data-record="17"><path d="M 395.25 149.25 L 390.25 139.25 L 400.25 139.25 Z" fill="#800000"/><text x="395.25" y="135.25" text-anchor="middle" dominant-baseline="auto" fill="#800000" font-family="Tahoma" font-size="10" font-style="normal" font-weight="bold" text-decoration="none">+9V</text></g>
+    <g data-record="17"><path d="M 674.25 149.25 L 674.25 141.25 M 669.25 141.25 L 679.25 141.25" fill="none" stroke="#800000" stroke-width="1"/><text x="674.25" y="137.25" text-anchor="middle" dominant-baseline="auto" fill="#800000" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none">+3.3V</text></g>
+    <rect data-record="14" x="124.25" y="144.25" width="30" height="30" rx="0" fill="#ffffb0" stroke="#800000" stroke-width="1"/>
+    <g data-record="2"><line x1="154.25" y1="164.25" x2="174.25" y2="164.25" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="central" transform="translate(152.25 164.25) rotate(0)">1</text></g>
+    <g data-record="2"><line x1="154.25" y1="154.25" x2="174.25" y2="154.25" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="central" transform="translate(152.25 154.25) rotate(0)">2</text></g>
+    <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(124.25 144.25) rotate(0)">P1</text>
+    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(94.25 184.25) rotate(0)">Battery Connection 9V</text>
+    <g data-record="2"><line x1="239.25" y1="152.25" x2="239.25" y2="162.25" stroke="#1f2937" stroke-width="1"/></g>
+    <g data-record="2"><line x1="239.25" y1="142.25" x2="239.25" y2="132.25" stroke="#1f2937" stroke-width="1"/></g>
+    <line data-record="13" x1="231.25" y1="145.25" x2="247.25" y2="145.25" stroke="#0000ff" stroke-width="1"/>
+    <line data-record="13" x1="247.25" y1="149.25" x2="231.25" y2="149.25" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="239.25,152.25 239.25,149.25" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="239.25,142.25 239.25,145.25" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(248.25 171.25) rotate(0)">100nF</text>
+    <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(248.25 151.25) rotate(0)">C1</text>
+    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(248.25 161.25) rotate(0)">tantalum cap</text>
+    <g data-record="2"><line x1="424.25" y1="180.25" x2="424.25" y2="190.25" stroke="#1f2937" stroke-width="1"/></g>
+    <g data-record="2"><line x1="424.25" y1="170.25" x2="424.25" y2="160.25" stroke="#1f2937" stroke-width="1"/></g>
+    <line data-record="13" x1="416.25" y1="173.25" x2="432.25" y2="173.25" stroke="#0000ff" stroke-width="1"/>
+    <line data-record="13" x1="432.25" y1="177.25" x2="416.25" y2="177.25" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="424.25,180.25 424.25,177.25" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="424.25,170.25 424.25,173.25" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(433.25 199.25) rotate(0)">10uF</text>
+    <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(433.25 179.25) rotate(0)">C2</text>
+    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(433.25 189.25) rotate(0)">tantalum cap</text>
+    <g data-record="2"><line x1="644.25" y1="180.25" x2="644.25" y2="190.25" stroke="#1f2937" stroke-width="1"/></g>
+    <g data-record="2"><line x1="644.25" y1="170.25" x2="644.25" y2="160.25" stroke="#1f2937" stroke-width="1"/></g>
+    <line data-record="13" x1="636.25" y1="173.25" x2="652.25" y2="173.25" stroke="#0000ff" stroke-width="1"/>
+    <line data-record="13" x1="652.25" y1="177.25" x2="636.25" y2="177.25" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="644.25,180.25 644.25,177.25" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="644.25,170.25 644.25,173.25" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(653.25 199.25) rotate(0)">100uF</text>
+    <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(653.25 179.25) rotate(0)">C3</text>
+    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(653.25 189.25) rotate(0)">tantalum cap</text>
+    <g data-record="2"><line x1="759.25" y1="179.25" x2="759.25" y2="159.25" stroke="#1f2937" stroke-width="1"/></g>
+    <g data-record="2"><line x1="759.25" y1="189.25" x2="759.25" y2="209.25" stroke="#1f2937" stroke-width="1"/></g>
+    <polygon data-record="7" points="749.25,179.25 759.25,189.25 769.25,179.25" fill="#0000ff" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="769.25,193.25 776.25,200.25" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="773.25,189.25 780.25,196.25" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polygon data-record="7" points="776.25,200.25 774.25,196.25 772.25,198.25" fill="#0000ff" stroke="#0000ff" stroke-width="1"/>
+    <polygon data-record="7" points="780.25,196.25 778.25,192.25 776.25,194.25" fill="#0000ff" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="769.25,189.25 749.25,189.25" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(781.25 188.25) rotate(0)">D1</text>
+    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(781.25 198.25) rotate(0)">LED</text>
+    <g data-record="2"><line x1="734.25" y1="149.25" x2="744.25" y2="149.25" stroke="#1f2937" stroke-width="1"/></g>
+    <g data-record="2"><line x1="714.25" y1="149.25" x2="704.25" y2="149.25" stroke="#1f2937" stroke-width="1"/></g>
+    <polyline data-record="6" points="734.25,149.25 730.25,149.25 729.25,151.25 727.25,147.25 725.25,151.25 723.25,147.25 721.25,151.25 719.25,147.25 718.25,149.25 714.25,149.25" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(713.25 162.25) rotate(0)">330R</text>
+    <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(713.25 146.25) rotate(0)">R2</text>
+    <polyline data-record="27" points="193.25,144.25 193.25,154.25 174.25,154.25" fill="none" stroke="#000080" stroke-width="1"/>
+    <polyline data-record="27" points="174.25,164.25 193.25,164.25 193.25,174.25" fill="none" stroke="#000080" stroke-width="1"/>
+    <polyline data-record="27" points="239.25,172.25 239.25,162.25" fill="none" stroke="#000080" stroke-width="1"/>
+    <polyline data-record="27" points="239.25,122.25 239.25,132.25" fill="none" stroke="#000080" stroke-width="1"/>
+    <polyline data-record="27" points="624.25,149.25 644.25,149.25 644.25,160.25" fill="none" stroke="#000080" stroke-width="1"/>
+    <polyline data-record="27" points="544.25,209.25 544.25,219.25 544.25,226.25" fill="none" stroke="#000080" stroke-width="1"/>
+    <polyline data-record="27" points="544.25,219.25 644.25,219.25 644.25,190.25" fill="none" stroke="#000080" stroke-width="1"/>
+    <polyline data-record="27" points="424.25,190.25 424.25,219.25 544.25,219.25" fill="none" stroke="#000080" stroke-width="1"/>
+    <polyline data-record="27" points="644.25,149.25 674.25,149.25" fill="none" stroke="#000080" stroke-width="1"/>
+    <polyline data-record="27" points="395.25,149.25 424.25,149.25 464.25,149.25" fill="none" stroke="#000080" stroke-width="1"/>
+    <polyline data-record="27" points="424.25,160.25 424.25,149.25" fill="none" stroke="#000080" stroke-width="1"/>
+    <polyline data-record="27" points="644.25,219.25 759.25,219.25 759.25,209.25" fill="none" stroke="#000080" stroke-width="1"/>
+    <polyline data-record="27" points="674.25,149.25 704.25,149.25" fill="none" stroke="#000080" stroke-width="1"/>
+    <polyline data-record="27" points="744.25,149.25 759.25,149.25 759.25,159.25" fill="none" stroke="#000080" stroke-width="1"/>
+    <circle data-record="29" cx="424.25" cy="149.25" r="1.8" fill="#800000"/>
+    <circle data-record="29" cx="544.25" cy="219.25" r="1.8" fill="#800000"/>
+    <circle data-record="29" cx="644.25" cy="219.25" r="1.8" fill="#800000"/>
+    <circle data-record="29" cx="644.25" cy="149.25" r="1.8" fill="#800000"/>
+    <circle data-record="29" cx="674.25" cy="149.25" r="1.8" fill="#800000"/>
+    </g>
+  </g>
+</svg>

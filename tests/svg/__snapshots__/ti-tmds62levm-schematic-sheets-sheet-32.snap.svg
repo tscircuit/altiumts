@@ -300,6 +300,7 @@
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Arial" font-size="7" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(640.7 257.7) rotate(0)">16V</text>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(640.7 230.7) rotate(0)">C71</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(639.7 249.7) rotate(0)">1uF</text>
+    <rect data-record="14" x="510.7" y="960.7" width="50" height="40" rx="0" fill="#ffffb0" stroke="#000bff" stroke-width="1"/>
     <g data-record="2"><line x1="510.7" y1="970.7" x2="480.7" y2="970.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(508.7 970.7) rotate(0)">1</text></g>
     <g data-record="2"><line x1="510.7" y1="990.7" x2="480.7" y2="990.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(508.7 990.7) rotate(0)">2</text></g>
     <g data-record="2"><line x1="560.7" y1="980.7" x2="590.7" y2="980.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(562.7 980.7) rotate(0)">4</text></g>
@@ -314,7 +315,6 @@
     <line data-record="13" x1="510.7" y1="990.7" x2="520.7" y2="990.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="530.7" y1="967.7" x2="530.7" y2="960.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="530.7" y1="993.7" x2="530.7" y2="1000.7" stroke="#000bff" stroke-width="1"/>
-    <rect data-record="14" x="510.7" y="960.7" width="50" height="40" rx="0" fill="#ffffb0" stroke="#000bff" stroke-width="1"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(490.7 950.7) rotate(0)">U8</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(540.7 1010.7) rotate(0)">SN74LVC1G08DBVRE4</text>
     <g data-record="2"><line x1="1120.7" y1="220.7" x2="1120.7" y2="210.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -353,6 +353,10 @@
     <g data-record="2"><line x1="870.7" y1="650.7" x2="880.7" y2="650.7" stroke="#1f2937" stroke-width="1"/></g>
     <ellipse data-record="8" cx="865.7" cy="650.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(830.7 650.7) rotate(0)">TP136</text>
+    <ellipse data-record="8" cx="1900.7" cy="1330.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1900.7" cy="1304.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <polygon data-record="7" points="1891.7,1320.7 1896.7,1318.7 1896.7,1322.7 1891.7,1320.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <polygon data-record="7" points="1905.7,1320.7 1915.7,1320.7 1910.7,1315.7 1905.7,1320.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <g data-record="2"><line x1="1880.7" y1="1280.7" x2="1880.7" y2="1250.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1880.7 1278.7) rotate(-90)">1</text></g>
     <g data-record="2"><line x1="1890.7" y1="1280.7" x2="1890.7" y2="1250.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1890.7 1278.7) rotate(-90)">2</text></g>
     <g data-record="2"><line x1="1900.7" y1="1280.7" x2="1900.7" y2="1250.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1900.7 1278.7) rotate(-90)">5</text></g>
@@ -374,20 +378,16 @@
     <line data-record="13" x1="1885.7" y1="1320.7" x2="1900.7" y2="1320.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1900.7" y1="1290.7" x2="1900.7" y2="1310.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1885.7" y1="1313.7" x2="1885.7" y2="1307.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1900.7" cy="1330.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1900.7" y1="1350.7" x2="1900.7" y2="1320.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1885.7" y1="1333.7" x2="1885.7" y2="1327.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1885.7" y1="1310.7" x2="1900.7" y2="1310.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1900.7" cy="1304.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1885.7" y1="1323.7" x2="1885.7" y2="1317.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1910.7" y1="1304.7" x2="1910.7" y2="1308.7" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" points="1891.7,1320.7 1896.7,1318.7 1896.7,1322.7 1891.7,1320.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1910.7" y1="1330.7" x2="1910.7" y2="1308.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1882.7" y1="1309.7" x2="1882.7" y2="1330.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1890.7" y1="1342.7" x2="1890.7" y2="1350.7" stroke="#000bff" stroke-width="1"/>
     <ellipse data-record="8" cx="1897.7" cy="1319.7" rx="21" ry="21" fill="none" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1900.7" y1="1342.7" x2="1890.7" y2="1342.7" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" points="1905.7,1320.7 1915.7,1320.7 1910.7,1315.7 1905.7,1320.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1915.7" y1="1315.7" x2="1905.7" y2="1315.7" stroke="#000bff" stroke-width="1"/>
     <text data-record="4" x="0" y="0" fill="#000080" font-family="Courier New" font-size="7" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1901.7 1349.7) rotate(0)">S</text>
     <text data-record="4" x="0" y="0" fill="#000080" font-family="Courier New" font-size="7" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1874.7 1289.7) rotate(0)">D</text>
@@ -591,6 +591,7 @@
     <g data-record="2"><line x1="1390.7" y1="580.7" x2="1380.7" y2="580.7" stroke="#1f2937" stroke-width="1"/></g>
     <ellipse data-record="8" cx="1395.7" cy="580.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1404.7 580.7) rotate(0)">TP55</text>
+    <rect data-record="14" x="1520.7" y="370.7" width="70" height="40" rx="0" fill="#ffffb0" stroke="#000bff" stroke-width="1"/>
     <g data-record="2"><line x1="1520.7" y1="390.7" x2="1510.7" y2="390.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1518.7 390.7) rotate(0)">1</text></g>
     <g data-record="2"><line x1="1590.7" y1="390.7" x2="1600.7" y2="390.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1592.7 390.7) rotate(0)">2</text></g>
     <polyline data-record="11" points="1530.7,390.7 1530.6572,390.0474 1530.5296,389.4059 1530.3194,388.7866 1530.0301,388.2 1529.6668,387.6562 1529.2355,387.1645 1528.7438,386.7332 1528.2,386.3699 1527.6134,386.0806 1526.9941,385.8704 1526.3526,385.7428 1525.7,385.7" fill="none" stroke="#0000ff" stroke-width="1"/>
@@ -608,9 +609,12 @@
     <line data-record="13" x1="1550.7" y1="390.7" x2="1560.7" y2="390.7" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1561.526,381.4101 1560.2916,382.2599 1559.1727,383.2569 1558.1869,384.3856 1557.3494,385.6284 1556.6733,386.9659 1556.1692,388.3772 1555.845,389.8404 1555.7056,391.3325 1555.7534,392.8304 1555.9874,394.3106 1556.4042,395.7502 1556.9971,397.1265 1557.7569,398.4183 1558.6718,399.6052 1559.7276,400.6688" fill="none" stroke="#0000ff" stroke-width="1"/>
     <polyline data-record="11" points="1584.4138,399.9848 1583.1886,400.3854 1581.9221,400.625 1580.6352,400.6998 1579.3495,400.6084 1578.0861,400.3523 1576.8662,399.9359 1575.71,399.366 1574.6367,398.6521 1573.6642,397.8061 1572.8085,396.842 1572.084,395.7759 1571.5027,394.6254 1571.0741,393.4097 1570.8055,392.149 1570.7013,390.8642 1570.7633,389.5766 1570.9904,388.3078 1571.3787,387.0786 1571.922,385.9097 1572.6111,384.8203 1573.4347,383.8287 1574.3789,382.9512 1575.4282,382.2025 1576.5651,381.5949 1577.7706,381.1387 1579.0249,380.8413 1580.307,380.7077 1581.5956,380.7402 1582.8693,380.9381" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <rect data-record="14" x="1520.7" y="370.7" width="70" height="40" rx="0" fill="#ffffb0" stroke="#000bff" stroke-width="1"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1520.7 370.7) rotate(0)">FL7</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1570.7 370.7) rotate(0)">120E</text>
+    <ellipse data-record="8" cx="1520.7" cy="1330.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1520.7" cy="1304.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <polygon data-record="7" points="1511.7,1320.7 1516.7,1318.7 1516.7,1322.7 1511.7,1320.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <polygon data-record="7" points="1525.7,1320.7 1535.7,1320.7 1530.7,1315.7 1525.7,1320.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <g data-record="2"><line x1="1500.7" y1="1280.7" x2="1500.7" y2="1250.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1500.7 1278.7) rotate(-90)">1</text></g>
     <g data-record="2"><line x1="1510.7" y1="1280.7" x2="1510.7" y2="1250.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1510.7 1278.7) rotate(-90)">2</text></g>
     <g data-record="2"><line x1="1520.7" y1="1280.7" x2="1520.7" y2="1250.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1520.7 1278.7) rotate(-90)">5</text></g>
@@ -632,20 +636,16 @@
     <line data-record="13" x1="1505.7" y1="1320.7" x2="1520.7" y2="1320.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1520.7" y1="1290.7" x2="1520.7" y2="1310.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1505.7" y1="1313.7" x2="1505.7" y2="1307.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1520.7" cy="1330.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1520.7" y1="1350.7" x2="1520.7" y2="1320.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1505.7" y1="1333.7" x2="1505.7" y2="1327.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1505.7" y1="1310.7" x2="1520.7" y2="1310.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1520.7" cy="1304.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1505.7" y1="1323.7" x2="1505.7" y2="1317.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1530.7" y1="1304.7" x2="1530.7" y2="1308.7" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" points="1511.7,1320.7 1516.7,1318.7 1516.7,1322.7 1511.7,1320.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1530.7" y1="1330.7" x2="1530.7" y2="1308.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1502.7" y1="1309.7" x2="1502.7" y2="1330.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1510.7" y1="1342.7" x2="1510.7" y2="1350.7" stroke="#000bff" stroke-width="1"/>
     <ellipse data-record="8" cx="1517.7" cy="1319.7" rx="21" ry="21" fill="none" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1520.7" y1="1342.7" x2="1510.7" y2="1342.7" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" points="1525.7,1320.7 1535.7,1320.7 1530.7,1315.7 1525.7,1320.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1535.7" y1="1315.7" x2="1525.7" y2="1315.7" stroke="#000bff" stroke-width="1"/>
     <text data-record="4" x="0" y="0" fill="#000080" font-family="Courier New" font-size="7" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1521.7 1349.7) rotate(0)">S</text>
     <text data-record="4" x="0" y="0" fill="#000080" font-family="Courier New" font-size="7" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1494.7 1289.7) rotate(0)">D</text>
@@ -741,6 +741,10 @@
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Arial" font-size="7" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(540.7 257.7) rotate(0)">16V</text>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(540.7 230.7) rotate(0)">C72</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(540.7 250.7) rotate(0)">0.1uF</text>
+    <ellipse data-record="8" cx="1140.7" cy="1330.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1140.7" cy="1304.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <polygon data-record="7" points="1131.7,1320.7 1136.7,1318.7 1136.7,1322.7 1131.7,1320.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <polygon data-record="7" points="1145.7,1320.7 1155.7,1320.7 1150.7,1315.7 1145.7,1320.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <g data-record="2"><line x1="1120.7" y1="1280.7" x2="1120.7" y2="1250.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1120.7 1278.7) rotate(-90)">1</text></g>
     <g data-record="2"><line x1="1130.7" y1="1280.7" x2="1130.7" y2="1250.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1130.7 1278.7) rotate(-90)">2</text></g>
     <g data-record="2"><line x1="1140.7" y1="1280.7" x2="1140.7" y2="1250.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1140.7 1278.7) rotate(-90)">5</text></g>
@@ -762,26 +766,23 @@
     <line data-record="13" x1="1125.7" y1="1320.7" x2="1140.7" y2="1320.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1140.7" y1="1290.7" x2="1140.7" y2="1310.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1125.7" y1="1313.7" x2="1125.7" y2="1307.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1140.7" cy="1330.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1140.7" y1="1350.7" x2="1140.7" y2="1320.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1125.7" y1="1333.7" x2="1125.7" y2="1327.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1125.7" y1="1310.7" x2="1140.7" y2="1310.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1140.7" cy="1304.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1125.7" y1="1323.7" x2="1125.7" y2="1317.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1150.7" y1="1304.7" x2="1150.7" y2="1308.7" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" points="1131.7,1320.7 1136.7,1318.7 1136.7,1322.7 1131.7,1320.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1150.7" y1="1330.7" x2="1150.7" y2="1308.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1122.7" y1="1309.7" x2="1122.7" y2="1330.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1130.7" y1="1342.7" x2="1130.7" y2="1350.7" stroke="#000bff" stroke-width="1"/>
     <ellipse data-record="8" cx="1137.7" cy="1319.7" rx="21" ry="21" fill="none" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1140.7" y1="1342.7" x2="1130.7" y2="1342.7" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" points="1145.7,1320.7 1155.7,1320.7 1150.7,1315.7 1145.7,1320.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1155.7" y1="1315.7" x2="1145.7" y2="1315.7" stroke="#000bff" stroke-width="1"/>
     <text data-record="4" x="0" y="0" fill="#000080" font-family="Courier New" font-size="7" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1141.7 1349.7) rotate(0)">S</text>
     <text data-record="4" x="0" y="0" fill="#000080" font-family="Courier New" font-size="7" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1114.7 1289.7) rotate(0)">D</text>
     <text data-record="4" x="0" y="0" fill="#000080" font-family="Courier New" font-size="7" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1113.7 1338.7) rotate(0)">G</text>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1176.7 1290.7) rotate(0)">Q8</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1176.7 1302.7) rotate(0)">CSD16301Q2</text>
+    <rect data-record="14" x="920.7" y="440.7" width="280" height="340" rx="0" fill="#ffffb0" stroke="#000bff" stroke-width="1"/>
     <g data-record="2"><line x1="920.7" y1="490.7" x2="890.7" y2="490.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(918.7 490.7) rotate(0)">29</text><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(922.7 490.7) rotate(0)">GTX_CLK</text></g>
     <g data-record="2"><line x1="920.7" y1="500.7" x2="890.7" y2="500.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(918.7 500.7) rotate(0)">37</text><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(922.7 500.7) rotate(0)">TX_EN/TX_CTRL</text></g>
     <g data-record="2"><line x1="920.7" y1="570.7" x2="890.7" y2="570.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(918.7 570.7) rotate(0)">38</text><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(922.7 570.7) rotate(0)">RX_DV/RX_CTRL</text></g>
@@ -831,7 +832,6 @@
     <g data-record="2"><line x1="1100.7" y1="440.7" x2="1100.7" y2="410.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1100.7 438.7) rotate(-90)">24</text><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="central" transform="translate(1100.7 442.7) rotate(-90)">VDD1P0</text></g>
     <g data-record="2"><line x1="1110.7" y1="440.7" x2="1110.7" y2="410.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1110.7 438.7) rotate(-90)">31</text><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="central" transform="translate(1110.7 442.7) rotate(-90)">VDD1P0</text></g>
     <g data-record="2"><line x1="1120.7" y1="440.7" x2="1120.7" y2="410.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1120.7 438.7) rotate(-90)">42</text><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="central" transform="translate(1120.7 442.7) rotate(-90)">VDD1P0</text></g>
-    <rect data-record="14" x="920.7" y="440.7" width="280" height="340" rx="0" fill="#ffffb0" stroke="#000bff" stroke-width="1"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(927.7 436.7) rotate(0)">U87</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(928.7 794.7) rotate(0)">DP83867IRRGZ</text>
     <g data-record="2"><line x1="470.7" y1="940.7" x2="470.7" y2="950.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -917,6 +917,53 @@
     <line data-record="13" x1="317.7" y1="1373.7" x2="320.7" y2="1370.7" stroke="#000bff" stroke-width="1"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(330.7 1380.7) rotate(0)">R375</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(330.7 1392.7) rotate(0)">2.49K_1%</text>
+    <ellipse data-record="8" cx="1788.7" cy="485.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1888.7" cy="485.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1825.7" cy="491.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1770.7" cy="486.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1890.7" cy="470.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1826.7" cy="509.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1890.7" cy="530.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1888.7" cy="575.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1770.7" cy="576.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1788.7" cy="575.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1890.7" cy="620.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1890.7" cy="560.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1950.7" cy="590.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1825.7" cy="581.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1826.7" cy="599.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1788.7" cy="665.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1888.7" cy="665.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1890.7" cy="650.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1826.7" cy="689.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1825.7" cy="671.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1770.7" cy="666.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1950.7" cy="680.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1890.7" cy="710.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1826.7" cy="779.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1890.7" cy="740.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1890.7" cy="800.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1770.7" cy="756.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1825.7" cy="761.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1788.7" cy="755.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1950.7" cy="770.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1888.7" cy="755.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1750.7" cy="500.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1750.7" cy="590.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1750.7" cy="680.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1750.7" cy="770.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1720.7" cy="590.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1720.7" cy="680.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1720.7" cy="770.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <polygon data-record="7" points="1720.7,880.7 1720.7,880.7 1710.7,887.7 1710.7,873.7 1720.7,880.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <polygon data-record="7" points="1710.7,861.7 1710.7,861.7 1720.7,854.7 1720.7,868.7 1710.7,861.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <polygon data-record="7" points="1710.7,921.7 1710.7,921.7 1720.7,914.7 1720.7,928.7 1710.7,921.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <polygon data-record="7" points="1720.7,940.7 1720.7,940.7 1710.7,947.7 1710.7,933.7 1720.7,940.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1700.7" cy="870.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1730.7" cy="870.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1730.7" cy="930.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1700.7" cy="930.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <rect data-record="14" x="1690.7" y="430.7" width="310" height="540" rx="0" fill="#ffffb0" stroke="#000bff" stroke-width="1"/>
     <g data-record="2"><line x1="1690.7" y1="820.7" x2="1660.7" y2="820.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1688.7 820.7) rotate(0)">1</text></g>
     <g data-record="2"><line x1="1690.7" y1="440.7" x2="1660.7" y2="440.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1688.7 440.7) rotate(0)">2</text></g>
     <g data-record="2"><line x1="1690.7" y1="560.7" x2="1660.7" y2="560.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1688.7 560.7) rotate(0)">7</text></g>
@@ -933,7 +980,6 @@
     <g data-record="2"><line x1="1690.7" y1="960.7" x2="1660.7" y2="960.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1688.7 960.7) rotate(0)">14</text></g>
     <g data-record="2"><line x1="2000.7" y1="820.7" x2="2030.7" y2="820.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(2002.7 820.7) rotate(0)">15</text></g>
     <g data-record="2"><line x1="2000.7" y1="830.7" x2="2030.7" y2="830.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(2002.7 830.7) rotate(0)">16</text></g>
-    <ellipse data-record="8" cx="1788.7" cy="485.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1850.7,490.7 1850.7428,491.3526 1850.8704,491.9941 1851.0806,492.6134 1851.3699,493.2 1851.7332,493.7438 1852.1645,494.2355 1852.6562,494.6668 1853.2,495.0301 1853.7866,495.3194 1854.4059,495.5296 1855.0474,495.6572 1855.7,495.7 1856.3526,495.6572 1856.9941,495.5296 1857.6134,495.3194 1858.2,495.0301 1858.7438,494.6668 1859.2355,494.2355 1859.6668,493.7438 1860.0301,493.2 1860.3194,492.6134 1860.5296,491.9941 1860.6572,491.3526 1860.7,490.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <polyline data-record="11" points="1890.7,510.7 1890.0474,510.7428 1889.4059,510.8704 1888.7866,511.0806 1888.2,511.3699 1887.6562,511.7332 1887.1645,512.1645 1886.7332,512.6562 1886.3699,513.2 1886.0806,513.7866 1885.8704,514.4059 1885.7428,515.0474 1885.7,515.7 1885.7428,516.3526 1885.8704,516.9941 1886.0806,517.6134 1886.3699,518.2 1886.7332,518.7438 1887.1645,519.2355 1887.6562,519.6668 1888.2,520.0301 1888.7866,520.3194 1889.4059,520.5296 1890.0474,520.6572 1890.7,520.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <line data-record="13" x1="1870.7" y1="470.7" x2="2000.7" y2="470.7" stroke="#000bff" stroke-width="1"/>
@@ -971,44 +1017,34 @@
     <polyline data-record="11" points="1850.7,510.7 1850.6572,510.0474 1850.5296,509.4059 1850.3194,508.7866 1850.0301,508.2 1849.6668,507.6562 1849.2355,507.1645 1848.7438,506.7332 1848.2,506.3699 1847.6134,506.0806 1846.9941,505.8704 1846.3526,505.7428 1845.7,505.7 1845.0474,505.7428 1844.4059,505.8704 1843.7866,506.0806 1843.2,506.3699 1842.6562,506.7332 1842.1645,507.1645 1841.7332,507.6562 1841.3699,508.2 1841.0806,508.7866 1840.8704,509.4059 1840.7428,510.0474 1840.7,510.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <line data-record="13" x1="1912.7" y1="496.7" x2="1910.7" y2="500.7" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1789.7,490.7 1789.0474,490.7428 1788.4059,490.8704 1787.7866,491.0806 1787.2,491.3699 1786.6562,491.7332 1786.1645,492.1645 1785.7332,492.6562 1785.3699,493.2 1785.0806,493.7866 1784.8704,494.4059 1784.7428,495.0474 1784.7,495.7 1784.7428,496.3526 1784.8704,496.9941 1785.0806,497.6134 1785.3699,498.2 1785.7332,498.7438 1786.1645,499.2355 1786.6562,499.6668 1787.2,500.0301 1787.7866,500.3194 1788.4059,500.5296 1789.0474,500.6572 1789.7,500.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1888.7" cy="485.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1790.7,480.7 1790.0474,480.7428 1789.4059,480.8704 1788.7866,481.0806 1788.2,481.3699 1787.6562,481.7332 1787.1645,482.1645 1786.7332,482.6562 1786.3699,483.2 1786.0806,483.7866 1785.8704,484.4059 1785.7428,485.0474 1785.7,485.7 1785.7428,486.3526 1785.8704,486.9941 1786.0806,487.6134 1786.3699,488.2 1786.7332,488.7438 1787.1645,489.2355 1787.6562,489.6668 1788.2,490.0301 1788.7866,490.3194 1789.4059,490.5296 1790.0474,490.6572 1790.7,490.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1825.7" cy="491.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1770.7,520.7 1770.0474,520.6572 1769.4059,520.5296 1768.7866,520.3194 1768.2,520.0301 1767.6562,519.6668 1767.1645,519.2355 1766.7332,518.7438 1766.3699,518.2 1766.0806,517.6134 1765.8704,516.9941 1765.7428,516.3526 1765.7,515.7 1765.7428,515.0474 1765.8704,514.4059 1766.0806,513.7866 1766.3699,513.2 1766.7332,512.6562 1767.1645,512.1645 1767.6562,511.7332 1768.2,511.3699 1768.7866,511.0806 1769.4059,510.8704 1770.0474,510.7428 1770.7,510.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <line data-record="13" x1="1860.7" y1="490.7" x2="1870.7" y2="490.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1810.7" y1="510.7" x2="1810.7" y2="530.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1770.7" cy="486.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1771.7,500.7 1771.0474,500.6572 1770.4059,500.5296 1769.7866,500.3194 1769.2,500.0301 1768.6562,499.6668 1768.1645,499.2355 1767.7332,498.7438 1767.3699,498.2 1767.0806,497.6134 1766.8704,496.9941 1766.7428,496.3526 1766.7,495.7 1766.7428,495.0474 1766.8704,494.4059 1767.0806,493.7866 1767.3699,493.2 1767.7332,492.6562 1768.1645,492.1645 1768.6562,491.7332 1769.2,491.3699 1769.7866,491.0806 1770.4059,490.8704 1771.0474,490.7428 1771.7,490.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <line data-record="13" x1="1890.7" y1="470.7" x2="1890.7" y2="480.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1890.7" cy="470.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1770.7,490.7 1770.0474,490.6572 1769.4059,490.5296 1768.7866,490.3194 1768.2,490.0301 1767.6562,489.6668 1767.1645,489.2355 1766.7332,488.7438 1766.3699,488.2 1766.0806,487.6134 1765.8704,486.9941 1765.7428,486.3526 1765.7,485.7 1765.7428,485.0474 1765.8704,484.4059 1766.0806,483.7866 1766.3699,483.2 1766.7332,482.6562 1767.1645,482.1645 1767.6562,481.7332 1768.2,481.3699 1768.7866,481.0806 1769.4059,480.8704 1770.0474,480.7428 1770.7,480.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <line data-record="13" x1="1770.7" y1="520.7" x2="1770.7" y2="530.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1858.7" y1="501.7" x2="1821.7" y2="501.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1879.7" y1="518.7" x2="1879.7" y2="481.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1929.7" y1="495.7" x2="1924.7" y2="507.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1826.7" cy="509.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1781.7" y1="518.7" x2="1781.7" y2="481.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1924.7" y1="507.7" x2="1920.7" y2="496.7" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1890.7,500.7 1890.0474,500.7428 1889.4059,500.8704 1888.7866,501.0806 1888.2,501.3699 1887.6562,501.7332 1887.1645,502.1645 1886.7332,502.6562 1886.3699,503.2 1886.0806,503.7866 1885.8704,504.4059 1885.7428,505.0474 1885.7,505.7 1885.7428,506.3526 1885.8704,506.9941 1886.0806,507.6134 1886.3699,508.2 1886.7332,508.7438 1887.1645,509.2355 1887.6562,509.6668 1888.2,510.0301 1888.7866,510.3194 1889.4059,510.5296 1890.0474,510.6572 1890.7,510.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <polyline data-record="11" points="1830.7,510.7 1830.6572,510.0474 1830.5296,509.4059 1830.3194,508.7866 1830.0301,508.2 1829.6668,507.6562 1829.2355,507.1645 1828.7438,506.7332 1828.2,506.3699 1827.6134,506.0806 1826.9941,505.8704 1826.3526,505.7428 1825.7,505.7 1825.0474,505.7428 1824.4059,505.8704 1823.7866,506.0806 1823.2,506.3699 1822.6562,506.7332 1822.1645,507.1645 1821.7332,507.6562 1821.3699,508.2 1821.0806,508.7866 1820.8704,509.4059 1820.7428,510.0474 1820.7,510.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1890.7" cy="530.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1881.7" y1="518.7" x2="1881.7" y2="481.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1770.7" y1="470.7" x2="1690.7" y2="470.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1770.7" y1="530.7" x2="1690.7" y2="530.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1888.7" cy="575.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1924.7" y1="597.7" x2="1920.7" y2="586.7" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1830.7,581.7 1830.7428,582.3526 1830.8704,582.9941 1831.0806,583.6134 1831.3699,584.2 1831.7332,584.7438 1832.1645,585.2355 1832.6562,585.6668 1833.2,586.0301 1833.7866,586.3194 1834.4059,586.5296 1835.0474,586.6572 1835.7,586.7 1836.3526,586.6572 1836.9941,586.5296 1837.6134,586.3194 1838.2,586.0301 1838.7438,585.6668 1839.2355,585.2355 1839.6668,584.7438 1840.0301,584.2 1840.3194,583.6134 1840.5296,582.9941 1840.6572,582.3526 1840.7,581.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1770.7" cy="576.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1790.7,570.7 1790.0474,570.7428 1789.4059,570.8704 1788.7866,571.0806 1788.2,571.3699 1787.6562,571.7332 1787.1645,572.1645 1786.7332,572.6562 1786.3699,573.2 1786.0806,573.7866 1785.8704,574.4059 1785.7428,575.0474 1785.7,575.7 1785.7428,576.3526 1785.8704,576.9941 1786.0806,577.6134 1786.3699,578.2 1786.7332,578.7438 1787.1645,579.2355 1787.6562,579.6668 1788.2,580.0301 1788.7866,580.3194 1789.4059,580.5296 1790.0474,580.6572 1790.7,580.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <polyline data-record="11" points="1890.7,590.7 1890.0474,590.7428 1889.4059,590.8704 1888.7866,591.0806 1888.2,591.3699 1887.6562,591.7332 1887.1645,592.1645 1886.7332,592.6562 1886.3699,593.2 1886.0806,593.7866 1885.8704,594.4059 1885.7428,595.0474 1885.7,595.7 1885.7428,596.3526 1885.8704,596.9941 1886.0806,597.6134 1886.3699,598.2 1886.7332,598.7438 1887.1645,599.2355 1887.6562,599.6668 1888.2,600.0301 1888.7866,600.3194 1889.4059,600.5296 1890.0474,600.6572 1890.7,600.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <line data-record="13" x1="1890.7" y1="610.7" x2="1890.7" y2="620.7" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1771.7,590.7 1771.0474,590.6572 1770.4059,590.5296 1769.7866,590.3194 1769.2,590.0301 1768.6562,589.6668 1768.1645,589.2355 1767.7332,588.7438 1767.3699,588.2 1767.0806,587.6134 1766.8704,586.9941 1766.7428,586.3526 1766.7,585.7 1766.7428,585.0474 1766.8704,584.4059 1767.0806,583.7866 1767.3699,583.2 1767.7332,582.6562 1768.1645,582.1645 1768.6562,581.7332 1769.2,581.3699 1769.7866,581.0806 1770.4059,580.8704 1771.0474,580.7428 1771.7,580.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1788.7" cy="575.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1860.7" y1="580.7" x2="1870.7" y2="580.7" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1830.7,600.7 1830.6572,600.0474 1830.5296,599.4059 1830.3194,598.7866 1830.0301,598.2 1829.6668,597.6562 1829.2355,597.1645 1828.7438,596.7332 1828.2,596.3699 1827.6134,596.0806 1826.9941,595.8704 1826.3526,595.7428 1825.7,595.7 1825.0474,595.7428 1824.4059,595.8704 1823.7866,596.0806 1823.2,596.3699 1822.6562,596.7332 1822.1645,597.1645 1821.7332,597.6562 1821.3699,598.2 1821.0806,598.7866 1820.8704,599.4059 1820.7428,600.0474 1820.7,600.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <line data-record="13" x1="1890.7" y1="560.7" x2="1890.7" y2="570.7" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1850.7,580.7 1850.7428,581.3526 1850.8704,581.9941 1851.0806,582.6134 1851.3699,583.2 1851.7332,583.7438 1852.1645,584.2355 1852.6562,584.6668 1853.2,585.0301 1853.7866,585.3194 1854.4059,585.5296 1855.0474,585.6572 1855.7,585.7 1856.3526,585.6572 1856.9941,585.5296 1857.6134,585.3194 1858.2,585.0301 1858.7438,584.6668 1859.2355,584.2355 1859.6668,583.7438 1860.0301,583.2 1860.3194,582.6134 1860.5296,581.9941 1860.6572,581.3526 1860.7,580.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1890.7" cy="620.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1810.7" y1="580.7" x2="1810.7" y2="560.7" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1890.7,600.7 1890.0474,600.7428 1889.4059,600.8704 1888.7866,601.0806 1888.2,601.3699 1887.6562,601.7332 1887.1645,602.1645 1886.7332,602.6562 1886.3699,603.2 1886.0806,603.7866 1885.8704,604.4059 1885.7428,605.0474 1885.7,605.7 1885.7428,606.3526 1885.8704,606.9941 1886.0806,607.6134 1886.3699,608.2 1886.7332,608.7438 1887.1645,609.2355 1887.6562,609.6668 1888.2,610.0301 1888.7866,610.3194 1889.4059,610.5296 1890.0474,610.6572 1890.7,610.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <line data-record="13" x1="1881.7" y1="608.7" x2="1881.7" y2="571.7" stroke="#000bff" stroke-width="1"/>
@@ -1020,7 +1056,6 @@
     <line data-record="13" x1="1950.7" y1="590.7" x2="1936.7" y2="590.7" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1860.7,600.7 1860.6572,600.0474 1860.5296,599.4059 1860.3194,598.7866 1860.0301,598.2 1859.6668,597.6562 1859.2355,597.1645 1858.7438,596.7332 1858.2,596.3699 1857.6134,596.0806 1856.9941,595.8704 1856.3526,595.7428 1855.7,595.7 1855.0474,595.7428 1854.4059,595.8704 1853.7866,596.0806 1853.2,596.3699 1852.6562,596.7332 1852.1645,597.1645 1851.7332,597.6562 1851.3699,598.2 1851.0806,598.7866 1850.8704,599.4059 1850.7428,600.0474 1850.7,600.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <polyline data-record="11" points="1850.7,600.7 1850.6572,600.0474 1850.5296,599.4059 1850.3194,598.7866 1850.0301,598.2 1849.6668,597.6562 1849.2355,597.1645 1848.7438,596.7332 1848.2,596.3699 1847.6134,596.0806 1846.9941,595.8704 1846.3526,595.7428 1845.7,595.7 1845.0474,595.7428 1844.4059,595.8704 1843.7866,596.0806 1843.2,596.3699 1842.6562,596.7332 1842.1645,597.1645 1841.7332,597.6562 1841.3699,598.2 1841.0806,598.7866 1840.8704,599.4059 1840.7428,600.0474 1840.7,600.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1890.7" cy="560.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1790.7" y1="620.7" x2="1810.7" y2="620.7" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1790.7,590.7 1790.0474,590.7428 1789.4059,590.8704 1788.7866,591.0806 1788.2,591.3699 1787.6562,591.7332 1787.1645,592.1645 1786.7332,592.6562 1786.3699,593.2 1786.0806,593.7866 1785.8704,594.4059 1785.7428,595.0474 1785.7,595.7 1785.7428,596.3526 1785.8704,596.9941 1786.0806,597.6134 1786.3699,598.2 1786.7332,598.7438 1787.1645,599.2355 1787.6562,599.6668 1788.2,600.0301 1788.7866,600.3194 1789.4059,600.5296 1790.0474,600.6572 1790.7,600.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <polyline data-record="11" points="1770.7,600.7 1770.0474,600.6572 1769.4059,600.5296 1768.7866,600.3194 1768.2,600.0301 1767.6562,599.6668 1767.1645,599.2355 1766.7332,598.7438 1766.3699,598.2 1766.0806,597.6134 1765.8704,596.9941 1765.7428,596.3526 1765.7,595.7 1765.7428,595.0474 1765.8704,594.4059 1766.0806,593.7866 1766.3699,593.2 1766.7332,592.6562 1767.1645,592.1645 1767.6562,591.7332 1768.2,591.3699 1768.7866,591.0806 1769.4059,590.8704 1770.0474,590.7428 1770.7,590.7" fill="none" stroke="#0000ff" stroke-width="1"/>
@@ -1046,12 +1081,9 @@
     <line data-record="13" x1="1779.7" y1="608.7" x2="1779.7" y2="571.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1820.7" y1="600.7" x2="1810.7" y2="600.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1790.7" y1="560.7" x2="1810.7" y2="560.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1950.7" cy="590.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1910.7" y1="590.7" x2="1890.7" y2="590.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1825.7" cy="581.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1920.7" y1="586.7" x2="1916.7" y2="597.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1770.7" y1="620.7" x2="1690.7" y2="620.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1826.7" cy="599.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1870.7" y1="580.7" x2="1870.7" y2="560.7" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1770.7,610.7 1770.0474,610.6572 1769.4059,610.5296 1768.7866,610.3194 1768.2,610.0301 1767.6562,609.6668 1767.1645,609.2355 1766.7332,608.7438 1766.3699,608.2 1766.0806,607.6134 1765.8704,606.9941 1765.7428,606.3526 1765.7,605.7 1765.7428,605.0474 1765.8704,604.4059 1766.0806,603.7866 1766.3699,603.2 1766.7332,602.6562 1767.1645,602.1645 1767.6562,601.7332 1768.2,601.3699 1768.7866,601.0806 1769.4059,600.8704 1770.0474,600.7428 1770.7,600.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <polyline data-record="11" points="1789.7,580.7 1789.0474,580.7428 1788.4059,580.8704 1787.7866,581.0806 1787.2,581.3699 1786.6562,581.7332 1786.1645,582.1645 1785.7332,582.6562 1785.3699,583.2 1785.0806,583.7866 1784.8704,584.4059 1784.7428,585.0474 1784.7,585.7 1784.7428,586.3526 1784.8704,586.9941 1785.0806,587.6134 1785.3699,588.2 1785.7332,588.7438 1786.1645,589.2355 1786.6562,589.6668 1787.2,590.0301 1787.7866,590.3194 1788.4059,590.5296 1789.0474,590.6572 1789.7,590.7" fill="none" stroke="#0000ff" stroke-width="1"/>
@@ -1066,13 +1098,11 @@
     <polyline data-record="11" points="1830.7,690.7 1830.6572,690.0474 1830.5296,689.4059 1830.3194,688.7866 1830.0301,688.2 1829.6668,687.6562 1829.2355,687.1645 1828.7438,686.7332 1828.2,686.3699 1827.6134,686.0806 1826.9941,685.8704 1826.3526,685.7428 1825.7,685.7 1825.0474,685.7428 1824.4059,685.8704 1823.7866,686.0806 1823.2,686.3699 1822.6562,686.7332 1822.1645,687.1645 1821.7332,687.6562 1821.3699,688.2 1821.0806,688.7866 1820.8704,689.4059 1820.7428,690.0474 1820.7,690.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <line data-record="13" x1="1870.7" y1="690.7" x2="1870.7" y2="710.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1916.7" y1="687.7" x2="1912.7" y2="676.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1788.7" cy="665.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1858.7" y1="679.7" x2="1821.7" y2="679.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1770.7" y1="650.7" x2="1690.7" y2="650.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1770.7" y1="660.7" x2="1770.7" y2="650.7" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1890.7,690.7 1890.0474,690.7428 1889.4059,690.8704 1888.7866,691.0806 1888.2,691.3699 1887.6562,691.7332 1887.1645,692.1645 1886.7332,692.6562 1886.3699,693.2 1886.0806,693.7866 1885.8704,694.4059 1885.7428,695.0474 1885.7,695.7 1885.7428,696.3526 1885.8704,696.9941 1886.0806,697.6134 1886.3699,698.2 1886.7332,698.7438 1887.1645,699.2355 1887.6562,699.6668 1888.2,700.0301 1888.7866,700.3194 1889.4059,700.5296 1890.0474,700.6572 1890.7,700.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <line data-record="13" x1="1820.7" y1="690.7" x2="1810.7" y2="690.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1888.7" cy="665.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1860.7" y1="670.7" x2="1870.7" y2="670.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1810.7" y1="670.7" x2="1820.7" y2="670.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1881.7" y1="698.7" x2="1881.7" y2="661.7" stroke="#000bff" stroke-width="1"/>
@@ -1080,7 +1110,6 @@
     <line data-record="13" x1="1912.7" y1="676.7" x2="1910.7" y2="680.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1910.7" y1="680.7" x2="1890.7" y2="680.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1924.7" y1="687.7" x2="1920.7" y2="676.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1890.7" cy="650.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1840.7,670.7 1840.7428,671.3526 1840.8704,671.9941 1841.0806,672.6134 1841.3699,673.2 1841.7332,673.7438 1842.1645,674.2355 1842.6562,674.6668 1843.2,675.0301 1843.7866,675.3194 1844.4059,675.5296 1845.0474,675.6572 1845.7,675.7 1846.3526,675.6572 1846.9941,675.5296 1847.6134,675.3194 1848.2,675.0301 1848.7438,674.6668 1849.2355,674.2355 1849.6668,673.7438 1850.0301,673.2 1850.3194,672.6134 1850.5296,671.9941 1850.6572,671.3526 1850.7,670.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <polyline data-record="11" points="1790.7,660.7 1790.0474,660.7428 1789.4059,660.8704 1788.7866,661.0806 1788.2,661.3699 1787.6562,661.7332 1787.1645,662.1645 1786.7332,662.6562 1786.3699,663.2 1786.0806,663.7866 1785.8704,664.4059 1785.7428,665.0474 1785.7,665.7 1785.7428,666.3526 1785.8704,666.9941 1786.0806,667.6134 1786.3699,668.2 1786.7332,668.7438 1787.1645,669.2355 1787.6562,669.6668 1788.2,670.0301 1788.7866,670.3194 1789.4059,670.5296 1790.0474,670.6572 1790.7,670.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <line data-record="13" x1="1870.7" y1="650.7" x2="2000.7" y2="650.7" stroke="#000bff" stroke-width="1"/>
@@ -1089,7 +1118,6 @@
     <line data-record="13" x1="1870.7" y1="670.7" x2="1870.7" y2="650.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1936.7" y1="680.7" x2="1933.7" y2="687.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1810.7" y1="690.7" x2="1810.7" y2="710.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1826.7" cy="689.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1770.7" y1="710.7" x2="1690.7" y2="710.7" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1790.7,680.7 1790.0474,680.7428 1789.4059,680.8704 1788.7866,681.0806 1788.2,681.3699 1787.6562,681.7332 1787.1645,682.1645 1786.7332,682.6562 1786.3699,683.2 1786.0806,683.7866 1785.8704,684.4059 1785.7428,685.0474 1785.7,685.7 1785.7428,686.3526 1785.8704,686.9941 1786.0806,687.6134 1786.3699,688.2 1786.7332,688.7438 1787.1645,689.2355 1787.6562,689.6668 1788.2,690.0301 1788.7866,690.3194 1789.4059,690.5296 1790.0474,690.6572 1790.7,690.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <line data-record="13" x1="1950.7" y1="680.7" x2="1936.7" y2="680.7" stroke="#000bff" stroke-width="1"/>
@@ -1100,19 +1128,15 @@
     <line data-record="13" x1="1790.7" y1="710.7" x2="1810.7" y2="710.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1933.7" y1="687.7" x2="1929.7" y2="675.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1858.7" y1="681.7" x2="1821.7" y2="681.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1825.7" cy="671.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1850.7,690.7 1850.6572,690.0474 1850.5296,689.4059 1850.3194,688.7866 1850.0301,688.2 1849.6668,687.6562 1849.2355,687.1645 1848.7438,686.7332 1848.2,686.3699 1847.6134,686.0806 1846.9941,685.8704 1846.3526,685.7428 1845.7,685.7 1845.0474,685.7428 1844.4059,685.8704 1843.7866,686.0806 1843.2,686.3699 1842.6562,686.7332 1842.1645,687.1645 1841.7332,687.6562 1841.3699,688.2 1841.0806,688.7866 1840.8704,689.4059 1840.7428,690.0474 1840.7,690.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <polyline data-record="11" points="1820.7,670.7 1820.7428,671.3526 1820.8704,671.9941 1821.0806,672.6134 1821.3699,673.2 1821.7332,673.7438 1822.1645,674.2355 1822.6562,674.6668 1823.2,675.0301 1823.7866,675.3194 1824.4059,675.5296 1825.0474,675.6572 1825.7,675.7 1826.3526,675.6572 1826.9941,675.5296 1827.6134,675.3194 1828.2,675.0301 1828.7438,674.6668 1829.2355,674.2355 1829.6668,673.7438 1830.0301,673.2 1830.3194,672.6134 1830.5296,671.9941 1830.6572,671.3526 1830.7,670.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <polyline data-record="11" points="1789.7,670.7 1789.0474,670.7428 1788.4059,670.8704 1787.7866,671.0806 1787.2,671.3699 1786.6562,671.7332 1786.1645,672.1645 1785.7332,672.6562 1785.3699,673.2 1785.0806,673.7866 1784.8704,674.4059 1784.7428,675.0474 1784.7,675.7 1784.7428,676.3526 1784.8704,676.9941 1785.0806,677.6134 1785.3699,678.2 1785.7332,678.7438 1786.1645,679.2355 1786.6562,679.6668 1787.2,680.0301 1787.7866,680.3194 1788.4059,680.5296 1789.0474,680.6572 1789.7,680.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <line data-record="13" x1="1781.7" y1="698.7" x2="1781.7" y2="661.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1890.7" y1="700.7" x2="1890.7" y2="710.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1860.7" y1="690.7" x2="1870.7" y2="690.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1770.7" cy="666.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1790.7" y1="650.7" x2="1790.7" y2="660.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1879.7" y1="698.7" x2="1879.7" y2="661.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1790.7" y1="700.7" x2="1790.7" y2="710.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1950.7" cy="680.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1890.7" cy="710.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1770.7,670.7 1770.0474,670.6572 1769.4059,670.5296 1768.7866,670.3194 1768.2,670.0301 1767.6562,669.6668 1767.1645,669.2355 1766.7332,668.7438 1766.3699,668.2 1766.0806,667.6134 1765.8704,666.9941 1765.7428,666.3526 1765.7,665.7 1765.7428,665.0474 1765.8704,664.4059 1766.0806,663.7866 1766.3699,663.2 1766.7332,662.6562 1767.1645,662.1645 1767.6562,661.7332 1768.2,661.3699 1768.7866,661.0806 1769.4059,660.8704 1770.0474,660.7428 1770.7,660.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <polyline data-record="11" points="1890.7,680.7 1890.0474,680.7428 1889.4059,680.8704 1888.7866,681.0806 1888.2,681.3699 1887.6562,681.7332 1887.1645,682.1645 1886.7332,682.6562 1886.3699,683.2 1886.0806,683.7866 1885.8704,684.4059 1885.7428,685.0474 1885.7,685.7 1885.7428,686.3526 1885.8704,686.9941 1886.0806,687.6134 1886.3699,688.2 1886.7332,688.7438 1887.1645,689.2355 1887.6562,689.6668 1888.2,690.0301 1888.7866,690.3194 1889.4059,690.5296 1890.0474,690.6572 1890.7,690.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <polyline data-record="11" points="1830.7,671.7 1830.7428,672.3526 1830.8704,672.9941 1831.0806,673.6134 1831.3699,674.2 1831.7332,674.7438 1832.1645,675.2355 1832.6562,675.6668 1833.2,676.0301 1833.7866,676.3194 1834.4059,676.5296 1835.0474,676.6572 1835.7,676.7 1836.3526,676.6572 1836.9941,676.5296 1837.6134,676.3194 1838.2,676.0301 1838.7438,675.6668 1839.2355,675.2355 1839.6668,674.7438 1840.0301,674.2 1840.3194,673.6134 1840.5296,672.9941 1840.6572,672.3526 1840.7,671.7" fill="none" stroke="#0000ff" stroke-width="1"/>
@@ -1142,8 +1166,6 @@
     <line data-record="13" x1="1879.7" y1="788.7" x2="1879.7" y2="751.7" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1771.7,770.7 1771.0474,770.6572 1770.4059,770.5296 1769.7866,770.3194 1769.2,770.0301 1768.6562,769.6668 1768.1645,769.2355 1767.7332,768.7438 1767.3699,768.2 1767.0806,767.6134 1766.8704,766.9941 1766.7428,766.3526 1766.7,765.7 1766.7428,765.0474 1766.8704,764.4059 1767.0806,763.7866 1767.3699,763.2 1767.7332,762.6562 1768.1645,762.1645 1768.6562,761.7332 1769.2,761.3699 1769.7866,761.0806 1770.4059,760.8704 1771.0474,760.7428 1771.7,760.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <line data-record="13" x1="1933.7" y1="777.7" x2="1929.7" y2="765.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1826.7" cy="779.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1890.7" cy="740.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1910.7" y1="770.7" x2="1890.7" y2="770.7" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1789.7,760.7 1789.0474,760.7428 1788.4059,760.8704 1787.7866,761.0806 1787.2,761.3699 1786.6562,761.7332 1786.1645,762.1645 1785.7332,762.6562 1785.3699,763.2 1785.0806,763.7866 1784.8704,764.4059 1784.7428,765.0474 1784.7,765.7 1784.7428,766.3526 1784.8704,766.9941 1785.0806,767.6134 1785.3699,768.2 1785.7332,768.7438 1786.1645,769.2355 1786.6562,769.6668 1787.2,770.0301 1787.7866,770.3194 1788.4059,770.5296 1789.0474,770.6572 1789.7,770.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <line data-record="13" x1="1929.7" y1="765.7" x2="1924.7" y2="777.7" stroke="#000bff" stroke-width="1"/>
@@ -1155,8 +1177,6 @@
     <line data-record="13" x1="1790.7" y1="800.7" x2="1810.7" y2="800.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1858.7" y1="771.7" x2="1821.7" y2="771.7" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1890.7,770.7 1890.0474,770.7428 1889.4059,770.8704 1888.7866,771.0806 1888.2,771.3699 1887.6562,771.7332 1887.1645,772.1645 1886.7332,772.6562 1886.3699,773.2 1886.0806,773.7866 1885.8704,774.4059 1885.7428,775.0474 1885.7,775.7 1885.7428,776.3526 1885.8704,776.9941 1886.0806,777.6134 1886.3699,778.2 1886.7332,778.7438 1887.1645,779.2355 1887.6562,779.6668 1888.2,780.0301 1888.7866,780.3194 1889.4059,780.5296 1890.0474,780.6572 1890.7,780.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1890.7" cy="800.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1770.7" cy="756.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1810.7" y1="760.7" x2="1810.7" y2="740.7" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1790.7,780.7 1790.0474,780.7428 1789.4059,780.8704 1788.7866,781.0806 1788.2,781.3699 1787.6562,781.7332 1787.1645,782.1645 1786.7332,782.6562 1786.3699,783.2 1786.0806,783.7866 1785.8704,784.4059 1785.7428,785.0474 1785.7,785.7 1785.7428,786.3526 1785.8704,786.9941 1786.0806,787.6134 1786.3699,788.2 1786.7332,788.7438 1787.1645,789.2355 1787.6562,789.6668 1788.2,790.0301 1788.7866,790.3194 1789.4059,790.5296 1790.0474,790.6572 1790.7,790.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <line data-record="13" x1="1860.7" y1="780.7" x2="1870.7" y2="780.7" stroke="#000bff" stroke-width="1"/>
@@ -1164,8 +1184,6 @@
     <line data-record="13" x1="1770.7" y1="790.7" x2="1770.7" y2="800.7" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1860.7,780.7 1860.6572,780.0474 1860.5296,779.4059 1860.3194,778.7866 1860.0301,778.2 1859.6668,777.6562 1859.2355,777.1645 1858.7438,776.7332 1858.2,776.3699 1857.6134,776.0806 1856.9941,775.8704 1856.3526,775.7428 1855.7,775.7 1855.0474,775.7428 1854.4059,775.8704 1853.7866,776.0806 1853.2,776.3699 1852.6562,776.7332 1852.1645,777.1645 1851.7332,777.6562 1851.3699,778.2 1851.0806,778.7866 1850.8704,779.4059 1850.7428,780.0474 1850.7,780.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <polyline data-record="11" points="1790.7,770.7 1790.0474,770.7428 1789.4059,770.8704 1788.7866,771.0806 1788.2,771.3699 1787.6562,771.7332 1787.1645,772.1645 1786.7332,772.6562 1786.3699,773.2 1786.0806,773.7866 1785.8704,774.4059 1785.7428,775.0474 1785.7,775.7 1785.7428,776.3526 1785.8704,776.9941 1786.0806,777.6134 1786.3699,778.2 1786.7332,778.7438 1787.1645,779.2355 1787.6562,779.6668 1788.2,780.0301 1788.7866,780.3194 1789.4059,780.5296 1790.0474,780.6572 1790.7,780.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1825.7" cy="761.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1788.7" cy="755.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1890.7" y1="740.7" x2="1890.7" y2="750.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1870.7" y1="760.7" x2="1870.7" y2="740.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1870.7" y1="780.7" x2="1870.7" y2="800.7" stroke="#000bff" stroke-width="1"/>
@@ -1177,14 +1195,12 @@
     <line data-record="13" x1="1950.7" y1="770.7" x2="1936.7" y2="770.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1916.7" y1="777.7" x2="1912.7" y2="766.7" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1770.7,790.7 1770.0474,790.6572 1769.4059,790.5296 1768.7866,790.3194 1768.2,790.0301 1767.6562,789.6668 1767.1645,789.2355 1766.7332,788.7438 1766.3699,788.2 1766.0806,787.6134 1765.8704,786.9941 1765.7428,786.3526 1765.7,785.7 1765.7428,785.0474 1765.8704,784.4059 1766.0806,783.7866 1766.3699,783.2 1766.7332,782.6562 1767.1645,782.1645 1767.6562,781.7332 1768.2,781.3699 1768.7866,781.0806 1769.4059,780.8704 1770.0474,780.7428 1770.7,780.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1950.7" cy="770.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1820.7" y1="780.7" x2="1810.7" y2="780.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1950.7" y1="790.7" x2="1950.7" y2="750.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1810.7" y1="780.7" x2="1810.7" y2="800.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1770.7" y1="740.7" x2="1690.7" y2="740.7" stroke="#000bff" stroke-width="1"/>
     <polyline data-record="11" points="1830.7,761.7 1830.7428,762.3526 1830.8704,762.9941 1831.0806,763.6134 1831.3699,764.2 1831.7332,764.7438 1832.1645,765.2355 1832.6562,765.6668 1833.2,766.0301 1833.7866,766.3194 1834.4059,766.5296 1835.0474,766.6572 1835.7,766.7 1836.3526,766.6572 1836.9941,766.5296 1837.6134,766.3194 1838.2,766.0301 1838.7438,765.6668 1839.2355,765.2355 1839.6668,764.7438 1840.0301,764.2 1840.3194,763.6134 1840.5296,762.9941 1840.6572,762.3526 1840.7,761.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <polyline data-record="11" points="1790.7,750.7 1790.0474,750.7428 1789.4059,750.8704 1788.7866,751.0806 1788.2,751.3699 1787.6562,751.7332 1787.1645,752.1645 1786.7332,752.6562 1786.3699,753.2 1786.0806,753.7866 1785.8704,754.4059 1785.7428,755.0474 1785.7,755.7 1785.7428,756.3526 1785.8704,756.9941 1786.0806,757.6134 1786.3699,758.2 1786.7332,758.7438 1787.1645,759.2355 1787.6562,759.6668 1788.2,760.0301 1788.7866,760.3194 1789.4059,760.5296 1790.0474,760.6572 1790.7,760.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1888.7" cy="755.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1950.7" y1="730.7" x2="1950.7" y2="720.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1950.7" y1="700.7" x2="1950.7" y2="660.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1950.7" y1="640.7" x2="1950.7" y2="630.7" stroke="#000bff" stroke-width="1"/>
@@ -1202,25 +1218,21 @@
     <line data-record="13" x1="1750.7" y1="640.7" x2="1750.7" y2="630.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1750.7" y1="550.7" x2="1750.7" y2="540.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1770.7" y1="500.7" x2="1742.7" y2="500.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1750.7" cy="500.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1742.7" y1="503.7" x2="1742.7" y2="496.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1740.7" y1="503.7" x2="1740.7" y2="496.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1720.7" y1="500.7" x2="1740.7" y2="500.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1750.7" y1="520.7" x2="1750.7" y2="480.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1750.7" cy="590.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1742.7" y1="593.7" x2="1742.7" y2="586.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1770.7" y1="590.7" x2="1742.7" y2="590.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1750.7" y1="610.7" x2="1750.7" y2="570.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1720.7" y1="590.7" x2="1740.7" y2="590.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1740.7" y1="593.7" x2="1740.7" y2="586.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1750.7" cy="680.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1742.7" y1="683.7" x2="1742.7" y2="676.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1720.7" y1="680.7" x2="1740.7" y2="680.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1770.7" y1="680.7" x2="1742.7" y2="680.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1750.7" y1="700.7" x2="1750.7" y2="660.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1740.7" y1="683.7" x2="1740.7" y2="676.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1740.7" y1="773.7" x2="1740.7" y2="766.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1750.7" cy="770.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1720.7" y1="770.7" x2="1740.7" y2="770.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1750.7" y1="770.7" x2="1750.7" y2="750.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1742.7" y1="773.7" x2="1742.7" y2="766.7" stroke="#000bff" stroke-width="1"/>
@@ -1249,9 +1261,6 @@
     <polyline data-record="11" points="1720.7,570.7 1719.3947,570.6144 1718.1118,570.3593 1716.8732,569.9388 1715.7,569.3603 1714.6124,568.6335 1713.6289,567.7711 1712.7665,566.7876 1712.0397,565.7 1711.4612,564.5268 1711.0407,563.2882 1710.7856,562.0053 1710.7,560.7 1710.7856,559.3947 1711.0407,558.1118 1711.4612,556.8732 1712.0397,555.7 1712.7665,554.6124 1713.6289,553.6289 1714.6124,552.7665 1715.7,552.0397 1716.8732,551.4612 1718.1118,551.0407 1719.3947,550.7856 1720.7,550.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <polyline data-record="11" points="1720.7,540.7 1719.3947,540.6144 1718.1118,540.3593 1716.8732,539.9388 1715.7,539.3603 1714.6124,538.6335 1713.6289,537.7711 1712.7665,536.7876 1712.0397,535.7 1711.4612,534.5268 1711.0407,533.2882 1710.7856,532.0053 1710.7,530.7 1710.7856,529.3947 1711.0407,528.1118 1711.4612,526.8732 1712.0397,525.7 1712.7665,524.6124 1713.6289,523.6289 1714.6124,522.7665 1715.7,522.0397 1716.8732,521.4612 1718.1118,521.0407 1719.3947,520.7856 1720.7,520.7" fill="none" stroke="#0000ff" stroke-width="1"/>
     <line data-record="13" x1="1750.7" y1="440.7" x2="1690.7" y2="440.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1720.7" cy="590.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1720.7" cy="680.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1720.7" cy="770.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1720.7" y1="820.7" x2="1690.7" y2="820.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1953.7" y1="818.7" x2="1946.7" y2="818.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1950.7" y1="810.7" x2="1950.7" y2="818.7" stroke="#000bff" stroke-width="1"/>
@@ -1263,14 +1272,12 @@
     <line data-record="13" x1="1710.7" y1="875.7" x2="1710.7" y2="885.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1720.7" y1="875.7" x2="1720.7" y2="885.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1730.7" y1="861.7" x2="1720.7" y2="861.7" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" points="1720.7,880.7 1720.7,880.7 1710.7,887.7 1710.7,873.7 1720.7,880.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1710.7" y1="880.7" x2="1700.7" y2="880.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1720.7" y1="866.7" x2="1710.7" y2="861.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1720.7" y1="866.7" x2="1720.7" y2="856.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1710.7" y1="861.7" x2="1700.7" y2="861.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1710.7" y1="885.7" x2="1720.7" y2="880.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1720.7" y1="856.7" x2="1710.7" y2="861.7" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" points="1710.7,861.7 1710.7,861.7 1720.7,854.7 1720.7,868.7 1710.7,861.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1730.7" y1="870.7" x2="1740.7" y2="870.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1730.7" y1="880.7" x2="1720.7" y2="880.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1730.7" y1="861.7" x2="1730.7" y2="880.7" stroke="#000bff" stroke-width="1"/>
@@ -1285,8 +1292,6 @@
     <line data-record="13" x1="1730.7" y1="940.7" x2="1720.7" y2="940.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1730.7" y1="930.7" x2="1740.7" y2="930.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1710.7" y1="940.7" x2="1700.7" y2="940.7" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" points="1710.7,921.7 1710.7,921.7 1720.7,914.7 1720.7,928.7 1710.7,921.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" points="1720.7,940.7 1720.7,940.7 1710.7,947.7 1710.7,933.7 1720.7,940.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1720.7" y1="916.7" x2="1710.7" y2="921.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1710.7" y1="945.7" x2="1720.7" y2="940.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1730.7" y1="921.7" x2="1720.7" y2="921.7" stroke="#000bff" stroke-width="1"/>
@@ -1300,11 +1305,6 @@
     <line data-record="13" x1="1700.7" y1="930.7" x2="1690.7" y2="930.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1710.7" y1="935.7" x2="1720.7" y2="940.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1740.7" y1="930.7" x2="1740.7" y2="960.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1700.7" cy="870.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1730.7" cy="870.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1730.7" cy="930.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" cx="1700.7" cy="930.7" rx="1" ry="1" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <rect data-record="14" x="1690.7" y="430.7" width="310" height="540" rx="0" fill="#ffffb0" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1950.7" y1="820.7" x2="2000.7" y2="820.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1970.7" y1="820.7" x2="1970.7" y2="830.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1970.7" y1="830.7" x2="2000.7" y2="830.7" stroke="#000bff" stroke-width="1"/>
