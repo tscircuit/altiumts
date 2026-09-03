@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000" viewBox="0 0 1070 1070" role="img" aria-label="Visible board-cutout contour" class="altium-pcb" data-renderer="altiumts">
+  <title>Visible board-cutout contour</title>
+  <rect width="100%" height="100%" fill="#071a16"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path data-record="BoardOutline" data-board-cutouts="1" d="M 35 1035 L 1035 1035 L 1035 35 L 35 35 L 35 1035 Z M 335 735 L 735 735 L 735 335 L 335 335 L 335 735 Z" fill="#123d32" fill-rule="evenodd" stroke="#6ee7b7" stroke-width="3"/>
+    <rect data-record="Fill" data-layer="TOP" data-keepout="false" x="135" y="135" width="800" height="800" fill="#ef4444" fill-opacity="0.6"/>
+    <path data-record="BoardCutoutOutline" data-board-cutouts="1" d="M 335 735 L 735 735 L 735 335 L 335 335 L 335 735 Z" fill="none" stroke="#6ee7b7" stroke-width="3"/>
+  </g>
+</svg>

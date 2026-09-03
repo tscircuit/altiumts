@@ -116,6 +116,20 @@ export function serializeAltiumPcbToSvg(
     if (rendered) content.push(rendered)
   }
 
+  if (
+    outline.length >= 3 &&
+    options.showBoardOutline !== false &&
+    boardCutouts.length > 0
+  ) {
+    const cutoutPath = boardCutouts
+      .flatMap(({ holes, outline: cutout }) => [cutout, ...holes])
+      .map((contour) => pointsToClosedPath(contour.points, viewport))
+      .join(" ")
+    content.push(
+      `<path data-record="BoardCutoutOutline" data-board-cutouts="${boardCutouts.length}" d="${cutoutPath}" fill="none" stroke="${PCB_BOARD_OUTLINE_COLOR}" stroke-width="3"/>`,
+    )
+  }
+
   const layerTitle = options.layers?.length
     ? ` — ${options.layers.join(", ")}`
     : ""

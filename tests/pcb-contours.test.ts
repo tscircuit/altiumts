@@ -102,9 +102,10 @@ test("renders explicit board-cutout regions with even-odd fill", () => {
 
   const svg = serializeAltiumPcbToSvg(document, { title: "Board cutout" })
   expect(svg).toContain('data-record="BoardOutline"')
+  expect(svg).toContain('data-record="BoardCutoutOutline"')
   expect(svg).toContain('data-board-cutouts="1"')
   expect(svg).toContain('fill-rule="evenodd"')
-  expect(svg.match(/\bM /gu)).toHaveLength(3)
+  expect(svg.match(/\bM /gu)).toHaveLength(5)
   expect(svg).not.toContain('data-record="Region"')
 
   const solidSvg = serializeAltiumPcbToSvg(document, {
@@ -112,5 +113,6 @@ test("renders explicit board-cutout regions with even-odd fill", () => {
     title: "Board without cutouts",
   })
   expect(solidSvg).toContain('data-record="BoardOutline"')
+  expect(solidSvg).not.toContain('data-record="BoardCutoutOutline"')
   expect(solidSvg).not.toContain("data-board-cutouts")
 })
