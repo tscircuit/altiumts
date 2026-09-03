@@ -8,6 +8,7 @@ import {
 import { getAltiumPcbLayerId } from "./altium-pcb-binary-layers"
 
 export type SupportedAltiumPcbPrimitiveKind =
+  | "Arc"
   | "ComponentBody"
   | "Fill"
   | "Pad"
@@ -29,6 +30,16 @@ const SUPPORTED_PRIMITIVE_FIELDS: Record<
   SupportedAltiumPcbPrimitiveKind,
   ReadonlySet<string>
 > = {
+  Arc: new Set([
+    ...COMMON_PRIMITIVE_FIELDS,
+    "ENDANGLE",
+    "KEEPOUT",
+    "LOCATION.X",
+    "LOCATION.Y",
+    "RADIUS",
+    "STARTANGLE",
+    "WIDTH",
+  ]),
   ComponentBody: new Set([
     ...COMMON_PRIMITIVE_FIELDS,
     "ARCRESOLUTION",
