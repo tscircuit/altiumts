@@ -228,7 +228,7 @@ function validateSupportedPrimitiveFieldText(
   }
   if (recordKind === "Region") {
     const regionKind = fields.get("REGIONKIND")?.toUpperCase() ?? "COPPER"
-    if (regionKind !== "COPPER") {
+    if (regionKind !== "COPPER" && regionKind !== "POLYGON_CUTOUT") {
       throw new AltiumSerializationError(
         `Unsupported Altium region kind: ${JSON.stringify(regionKind)}`,
       )
