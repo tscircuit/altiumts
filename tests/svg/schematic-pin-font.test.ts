@@ -15,7 +15,7 @@ test("renders schematic pin text with its sheet font", async () => {
     'font-family="Helvetica" font-size="4" font-style="italic" font-weight="bold"',
   )
   expect(svg).toContain(
-    'dominant-baseline="text-after-edge" transform="translate(41.5 43.5) rotate(0)">1</text>',
+    'dominant-baseline="text-after-edge" transform="translate(36.075 43.5) rotate(0)">1</text>',
   )
   expect(svg).toContain(
     'dominant-baseline="central" transform="translate(45.5 43.5) rotate(0)">INPUT</text>',

@@ -16,6 +16,7 @@ import { approximateAltiumArc } from "./approximate-altium-arc"
 import { getSchematicFont } from "./get-schematic-font"
 import { getSchematicSheetSize } from "./get-schematic-sheet-size"
 import { renderAltiumNegatedText } from "./render-altium-negated-text"
+import { renderSchematicPinDirectionSymbol } from "./render-schematic-pin-direction-symbol"
 import { renderSchematicPinEdgeSymbols } from "./render-schematic-pin-edge-symbols"
 import {
   renderSchematicSheetEntry,
@@ -45,6 +46,9 @@ interface SchematicPinRenderContext {
   sheetRecord: AltiumSchSheetRecord | undefined
   viewport: SvgViewport
 }
+
+const PIN_DESIGNATOR_DISTANCE_FROM_BODY_SVG_UNITS = 7.425
+
 export function serializeAltiumSheetToSvg(
   source: AltiumPcbDoc | AltiumSchDoc | AltiumLine[],
   options: AltiumSheetSvgOptions = {},
@@ -512,21 +516,33 @@ function renderSchematicPin(
     x: direction.x,
     y: -direction.y,
   }
+  const hasClockSymbol = record.getNumber("SYMBOL_INNEREDGE") === 3
+  const hasInversionSymbol = record.getNumber("SYMBOL_OUTEREDGE") === 1
   const pinEdgeSymbols = renderSchematicPinEdgeSymbols({
     bodyPosition: body,
     color,
-    hasClockSymbol: record.getNumber("SYMBOL_INNEREDGE") === 3,
-    hasInversionSymbol: record.getNumber("SYMBOL_OUTEREDGE") === 1,
+    hasClockSymbol,
+    hasInversionSymbol,
     screenDirection,
   })
+  const renderedPinDirection =
+    options.showPinDirections !== false && !hasInversionSymbol
+      ? renderSchematicPinDirectionSymbol({
+          color,
+          connectionPosition: connection,
+          electricalType: record.getNumber("ELECTRICAL"),
+          screenDirection,
+          symbolStartPosition: pinEdgeSymbols.lineStartPosition,
+        })
+      : ""
   const clockwiseRotationDegrees =
     orientation === 1 || orientation === 3 ? -90 : 0
   const directionMatchesText = orientation === 0 || orientation === 1
   const designatorAnchor = directionMatchesText ? "start" : "end"
   const nameAnchor = directionMatchesText ? "end" : "start"
   const designatorPosition = {
-    x: pinEdgeSymbols.outerSymbolEdgePosition.x + screenDirection.x * 2,
-    y: pinEdgeSymbols.outerSymbolEdgePosition.y + screenDirection.y * 2,
+    x: body.x + screenDirection.x * PIN_DESIGNATOR_DISTANCE_FROM_BODY_SVG_UNITS,
+    y: body.y + screenDirection.y * PIN_DESIGNATOR_DISTANCE_FROM_BODY_SVG_UNITS,
   }
   const namePosition = {
     x: body.x - screenDirection.x * 2,
@@ -561,7 +577,7 @@ function renderSchematicPin(
       })
     : ""
 
-  return `<g ${metadata}><line x1="${formatSvgNumber(pinEdgeSymbols.lineStartPosition.x)}" y1="${formatSvgNumber(pinEdgeSymbols.lineStartPosition.y)}" x2="${formatSvgNumber(connection.x)}" y2="${formatSvgNumber(connection.y)}" stroke="${color}" stroke-width="1"/>${pinEdgeSymbols.svg}${designatorSvg}${nameSvg}</g>`
+  return `<g ${metadata}><line x1="${formatSvgNumber(pinEdgeSymbols.lineStartPosition.x)}" y1="${formatSvgNumber(pinEdgeSymbols.lineStartPosition.y)}" x2="${formatSvgNumber(connection.x)}" y2="${formatSvgNumber(connection.y)}" stroke="${color}" stroke-width="1"/>${renderedPinDirection}${pinEdgeSymbols.svg}${designatorSvg}${nameSvg}</g>`
 }
 
 function renderSchematicPowerPort(

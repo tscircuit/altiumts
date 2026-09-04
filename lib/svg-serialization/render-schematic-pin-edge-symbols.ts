@@ -15,7 +15,6 @@ interface RenderSchematicPinEdgeSymbolsOptions {
 
 interface RenderedSchematicPinEdgeSymbols {
   lineStartPosition: SvgPoint
-  outerSymbolEdgePosition: SvgPoint
   svg: string
 }
 
@@ -28,7 +27,6 @@ export function renderSchematicPinEdgeSymbols({
 }: RenderSchematicPinEdgeSymbolsOptions): RenderedSchematicPinEdgeSymbols {
   const renderedSymbols: string[] = []
   let lineStartPosition = bodyPosition
-  let outerSymbolEdgePosition = bodyPosition
 
   if (hasInversionSymbol) {
     const inversionCircleCenter = {
@@ -43,39 +41,37 @@ export function renderSchematicPinEdgeSymbols({
         bodyPosition.y +
         screenDirection.y * INVERSION_SYMBOL_RADIUS_SVG_UNITS * 2,
     }
-    outerSymbolEdgePosition = lineStartPosition
     renderedSymbols.push(
       `<circle class="altium-schematic-pin-inversion-symbol" cx="${formatSvgNumber(inversionCircleCenter.x)}" cy="${formatSvgNumber(inversionCircleCenter.y)}" r="${formatSvgNumber(INVERSION_SYMBOL_RADIUS_SVG_UNITS)}" fill="#fff" stroke="${color}" stroke-width="1"/>`,
     )
   }
 
   if (hasClockSymbol) {
-    const clockSymbolBaseCenter = {
-      x: lineStartPosition.x + screenDirection.x * CLOCK_SYMBOL_DEPTH_SVG_UNITS,
-      y: lineStartPosition.y + screenDirection.y * CLOCK_SYMBOL_DEPTH_SVG_UNITS,
+    const clockSymbolTip = {
+      x: bodyPosition.x - screenDirection.x * CLOCK_SYMBOL_DEPTH_SVG_UNITS,
+      y: bodyPosition.y - screenDirection.y * CLOCK_SYMBOL_DEPTH_SVG_UNITS,
     }
-    outerSymbolEdgePosition = clockSymbolBaseCenter
     const perpendicularDirection = {
       x: -screenDirection.y,
       y: screenDirection.x,
     }
     const clockSymbolBaseStart = {
       x:
-        clockSymbolBaseCenter.x +
+        bodyPosition.x +
         perpendicularDirection.x * CLOCK_SYMBOL_HALF_WIDTH_SVG_UNITS,
       y:
-        clockSymbolBaseCenter.y +
+        bodyPosition.y +
         perpendicularDirection.y * CLOCK_SYMBOL_HALF_WIDTH_SVG_UNITS,
     }
     const clockSymbolBaseEnd = {
       x:
-        clockSymbolBaseCenter.x -
+        bodyPosition.x -
         perpendicularDirection.x * CLOCK_SYMBOL_HALF_WIDTH_SVG_UNITS,
       y:
-        clockSymbolBaseCenter.y -
+        bodyPosition.y -
         perpendicularDirection.y * CLOCK_SYMBOL_HALF_WIDTH_SVG_UNITS,
     }
-    const points = [lineStartPosition, clockSymbolBaseStart, clockSymbolBaseEnd]
+    const points = [clockSymbolTip, clockSymbolBaseStart, clockSymbolBaseEnd]
       .map((point) => `${formatSvgNumber(point.x)},${formatSvgNumber(point.y)}`)
       .join(" ")
     renderedSymbols.push(
@@ -85,7 +81,6 @@ export function renderSchematicPinEdgeSymbols({
 
   return {
     lineStartPosition,
-    outerSymbolEdgePosition,
     svg: renderedSymbols.join(""),
   }
 }

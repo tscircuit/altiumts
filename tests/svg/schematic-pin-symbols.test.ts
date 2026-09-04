@@ -22,5 +22,8 @@ test("renders schematic clock and inversion pin symbols", async () => {
   expect(
     svg.match(/class="altium-schematic-pin-inversion-symbol"/g),
   ).toHaveLength(2)
+  expect(
+    svg.match(/class="altium-schematic-pin-direction-symbol"/g),
+  ).toHaveLength(2)
   await expect(svg).toMatchSvgSnapshot(import.meta.path)
 })

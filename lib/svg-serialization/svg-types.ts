@@ -73,6 +73,8 @@ export interface AltiumSheetSvgOptions extends AltiumSvgRenderOptions {
   /** Current project filename, including its extension. */
   projectName?: string
   showBorder?: boolean
+  /** Show Altium electrical direction markers on schematic pins. Defaults to true. */
+  showPinDirections?: boolean
   /**
    * Region to render and clip. Defaults to the declared schematic paper,
    * which intentionally hides off-sheet records.
