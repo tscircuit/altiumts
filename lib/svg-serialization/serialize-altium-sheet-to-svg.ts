@@ -760,12 +760,15 @@ function shouldRenderSchematicRecord(
 
     if (parent.recordKind === "1") {
       const currentPartId = parent.getNumber("CURRENTPARTID") ?? 1
+      const currentDisplayMode = parent.getNumber("DISPLAYMODE") ?? 0
       const partMatches =
         ownerPartId === undefined ||
         ownerPartId <= 0 ||
         ownerPartId === currentPartId
       const displayModeMatches =
-        ownerPartDisplayMode === undefined || ownerPartDisplayMode === 0
+        ownerPartId !== undefined && ownerPartId <= 0
+          ? true
+          : (ownerPartDisplayMode ?? 0) === currentDisplayMode
       return partMatches && displayModeMatches
     }
 
