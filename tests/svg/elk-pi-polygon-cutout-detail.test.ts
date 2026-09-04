@@ -5,11 +5,11 @@ import {
 } from "../../lib"
 import { readReferenceBytes } from "./read-reference"
 
-test("renders the Elk Pi multilayer polygon cutout in a board-unit crop", async () => {
+test("reproduces an Elk Pi polygon cutout painted over solid copper", async () => {
   const source = await readReferenceBytes("elk-pi.PcbDoc")
   const document = parseAltiumBinaryPcbDoc(source)
   const svg = serializeAltiumPcbLayerToSvg(document, "TOP", {
-    title: "Elk Pi polygon-cutout detail",
+    title: "Elk Pi polygon cutout painted over solid copper reproduction",
     viewBox: {
       x: 7000,
       y: 4350,
@@ -23,5 +23,11 @@ test("renders the Elk Pi multilayer polygon cutout in a board-unit crop", async 
   expect(svg).toContain('data-region-kind="POLYGON_CUTOUT"')
   expect(svg).toContain('fill="#123d32"')
   expect(svg).toContain('stroke="#123d32"')
+  expect(svg).toMatch(
+    /<path data-record="Region" data-layer="TOP"[^>]*fill="#ef4444"/,
+  )
+  expect(svg.indexOf('data-region-kind="POLYGON_CUTOUT"')).toBeGreaterThan(
+    svg.indexOf('data-record="Region" data-layer="TOP"'),
+  )
   await expect(svg).toMatchSvgSnapshot(import.meta.path)
 }, 15_000)
