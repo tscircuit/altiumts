@@ -14,6 +14,10 @@ import {
 } from "./altium-values"
 import { approximateAltiumArc } from "./approximate-altium-arc"
 import { getSchematicFont } from "./get-schematic-font"
+import {
+  getSchematicConnectionSegments,
+  getSchematicPortDirection,
+} from "./get-schematic-port-direction"
 import { getSchematicSheetSize } from "./get-schematic-sheet-size"
 import { renderAltiumNegatedText } from "./render-altium-negated-text"
 import { renderSchematicPinEdgeSymbols } from "./render-schematic-pin-edge-symbols"
@@ -111,6 +115,15 @@ export function serializeAltiumSheetToSvg(
     '<g data-sheet-content="true" clip-path="url(#altium-sheet-paper)">',
   )
   const recordsForPainting = getSchematicRecordsInPaintOrder(records, context)
+  context.portConnectionSegments = getSchematicConnectionSegments(
+    recordsForPainting.filter(
+      (record) =>
+        (record.recordKind === "2" ||
+          record.recordKind === "26" ||
+          record.recordKind === "27") &&
+        shouldRenderSchematicRecord(record, context),
+    ),
+  )
   for (const record of recordsForPainting) {
     if (!shouldRenderSchematicRecord(record, context)) continue
     const rendered = renderSchematicRecord(record, viewport, options, context)
@@ -271,14 +284,15 @@ function renderSchematicRecord(
     const location = getSchematicLocation(record)
     const x = viewport.toX(location.x)
     const y = viewport.toY(location.y)
-    const width = Math.max(Number(record.getCaseInsensitive("WIDTH") ?? 16), 10)
-    const height = Math.max(
-      Number(record.getCaseInsensitive("HEIGHT") ?? 10),
-      4,
-    )
+    const width = Math.max(getSchematicCoordinate(record, "WIDTH", 16), 10)
+    const height = Math.max(getSchematicCoordinate(record, "HEIGHT", 10), 4)
     const halfHeight = height / 2
     const pointDepth = Math.min(width * 0.22, height)
-    const ioType = Number(record.getCaseInsensitive("IOTYPE") ?? 0)
+    const { pointAtStart, pointAtEnd, vertical } = getSchematicPortDirection({
+      record,
+      segments: context.portConnectionSegments ?? [],
+      width,
+    })
     const name = record.getDecoded("NAME") ?? ""
     const font = getSchematicFont({
       fallbackSize: 8,
@@ -294,12 +308,14 @@ function renderSchematicRecord(
       color,
     )
     const path =
-      ioType === 1
-        ? `M ${formatSvgNumber(x)} ${formatSvgNumber(y)} L ${formatSvgNumber(x + pointDepth)} ${formatSvgNumber(y - halfHeight)} H ${formatSvgNumber(x + width)} V ${formatSvgNumber(y + halfHeight)} H ${formatSvgNumber(x + pointDepth)} Z`
-        : ioType === 2
-          ? `M ${formatSvgNumber(x)} ${formatSvgNumber(y - halfHeight)} H ${formatSvgNumber(x + width - pointDepth)} L ${formatSvgNumber(x + width)} ${formatSvgNumber(y)} L ${formatSvgNumber(x + width - pointDepth)} ${formatSvgNumber(y + halfHeight)} H ${formatSvgNumber(x)} Z`
-          : `M ${formatSvgNumber(x)} ${formatSvgNumber(y - halfHeight)} H ${formatSvgNumber(x + width)} V ${formatSvgNumber(y + halfHeight)} H ${formatSvgNumber(x)} Z`
-    return `<g ${metadata}><path d="${path}" fill="${fillColor}" stroke="${color}" stroke-width="1"/><text x="${formatSvgNumber(x + width / 2)}" y="${formatSvgNumber(y)}" text-anchor="middle" dominant-baseline="central" fill="${textColor}" ${font.attributes}>${renderAltiumNegatedText(name)}</text></g>`
+      pointAtStart && pointAtEnd
+        ? `M ${formatSvgNumber(x)} ${formatSvgNumber(y)} L ${formatSvgNumber(x + pointDepth)} ${formatSvgNumber(y - halfHeight)} H ${formatSvgNumber(x + width - pointDepth)} L ${formatSvgNumber(x + width)} ${formatSvgNumber(y)} L ${formatSvgNumber(x + width - pointDepth)} ${formatSvgNumber(y + halfHeight)} H ${formatSvgNumber(x + pointDepth)} Z`
+        : pointAtStart
+          ? `M ${formatSvgNumber(x)} ${formatSvgNumber(y)} L ${formatSvgNumber(x + pointDepth)} ${formatSvgNumber(y - halfHeight)} H ${formatSvgNumber(x + width)} V ${formatSvgNumber(y + halfHeight)} H ${formatSvgNumber(x + pointDepth)} Z`
+          : pointAtEnd
+            ? `M ${formatSvgNumber(x)} ${formatSvgNumber(y - halfHeight)} H ${formatSvgNumber(x + width - pointDepth)} L ${formatSvgNumber(x + width)} ${formatSvgNumber(y)} L ${formatSvgNumber(x + width - pointDepth)} ${formatSvgNumber(y + halfHeight)} H ${formatSvgNumber(x)} Z`
+            : `M ${formatSvgNumber(x)} ${formatSvgNumber(y - halfHeight)} H ${formatSvgNumber(x + width)} V ${formatSvgNumber(y + halfHeight)} H ${formatSvgNumber(x)} Z`
+    return `<g ${metadata}${vertical ? ` transform="rotate(-90 ${formatSvgNumber(x)} ${formatSvgNumber(y)})"` : ""}><path d="${path}" fill="${fillColor}" stroke="${color}" stroke-width="1"/><text x="${formatSvgNumber(x + width / 2)}" y="${formatSvgNumber(y)}" text-anchor="middle" dominant-baseline="central" fill="${textColor}" ${font.attributes}>${renderAltiumNegatedText(name)}</text></g>`
   }
 
   if (
