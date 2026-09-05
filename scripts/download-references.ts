@@ -32,6 +32,13 @@ const references: DirectReferenceSpec[] = [
     url: "https://raw.githubusercontent.com/AmirhosseinR/Altium_DSP_FPGA/61e66e61a6b7fbcfbc370a0b756b2958f38ad493/power.SchDoc",
   },
   {
+    filename: "dsp5509-ciii.PcbDoc",
+    sha256: "20ab6308a67eb4b694c53e55095c6fe18fd0a9bb49fe69575d8eb32fc74579fd",
+    source:
+      "AmirhosseinR/Altium_DSP_FPGA@61e66e61a6b7fbcfbc370a0b756b2958f38ad493 (MIT)",
+    url: "https://raw.githubusercontent.com/AmirhosseinR/Altium_DSP_FPGA/61e66e61a6b7fbcfbc370a0b756b2958f38ad493/DSP5509_CIII.PcbDoc",
+  },
+  {
     filename: "stm32-st-link-v2.SchDoc",
     sha256: "e571d8b66e23d73ebc7ecac53d17c116194c6117f534947d420fef87c6cd50c2",
     source:
