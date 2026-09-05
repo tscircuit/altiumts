@@ -64,38 +64,24 @@
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Tech</text>
     <g data-record="2"><line x1="497.5" y1="467.5" x2="497.5" y2="457.5" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="497.5" y1="477.5" x2="497.5" y2="487.5" stroke="#1f2937" stroke-width="1"/></g>
-    <line data-record="13" x1="489.5" y1="470.5" x2="505.5" y2="470.5" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="497.5,467.5 497.5,470.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="497.5,477.5 497.5,474.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="502.5,467.5 502.5,463.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="500.5,465.5 504.5,465.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="489.5,474.5 505.5,474.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <line data-record="13" x1="489.5" y1="467.5" x2="505.5" y2="467.5" stroke="#0000ff" stroke-width="1"/>
+    <line data-record="13" x1="497.5" y1="471.5" x2="497.5" y2="477.5" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="12" points="505.257,473.5061 504.3567,473.0436 503.4289,472.639 502.4775,472.2939 501.5061,472.0096 500.5187,471.7873 499.5192,471.6279 498.5116,471.532 497.5,471.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="12" points="497.5,471.5 496.4884,471.532 495.4808,471.6279 494.4813,471.7873 493.4939,472.0096 492.5225,472.2939 491.5711,472.639 490.6433,473.0436 489.743,473.5061" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="502.5,464.5 502.5,460.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="500.5,462.5 504.5,462.5" fill="none" stroke="#0000ff" stroke-width="1"/>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(506.5 489.5) rotate(0)">10uF</text>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(506.5 469.5) rotate(0)">C70</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">C</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">@DESIGNATOR %1 %2 @VALUE ?&quot;INITIAL VOLTAGE&quot;ŽIC=@&quot;INITIAL VOLTAGE&quot;Ž</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">General</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Capacitor</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Initial Voltage</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Capacitor</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Tech</text>
     <g data-record="2"><line x1="612.5" y1="467.5" x2="612.5" y2="457.5" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="612.5" y1="477.5" x2="612.5" y2="487.5" stroke="#1f2937" stroke-width="1"/></g>
-    <line data-record="13" x1="604.5" y1="470.5" x2="620.5" y2="470.5" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="612.5,467.5 612.5,470.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="612.5,477.5 612.5,474.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="617.5,467.5 617.5,463.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="615.5,465.5 619.5,465.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="604.5,474.5 620.5,474.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <line data-record="13" x1="604.5" y1="467.5" x2="620.5" y2="467.5" stroke="#0000ff" stroke-width="1"/>
+    <line data-record="13" x1="612.5" y1="471.5" x2="612.5" y2="477.5" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="12" points="620.257,473.5061 619.3567,473.0436 618.4289,472.639 617.4775,472.2939 616.5061,472.0096 615.5187,471.7873 614.5192,471.6279 613.5116,471.532 612.5,471.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="12" points="612.5,471.5 611.4884,471.532 610.4808,471.6279 609.4813,471.7873 608.4939,472.0096 607.5225,472.2939 606.5711,472.639 605.6433,473.0436 604.743,473.5061" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="617.5,464.5 617.5,460.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="615.5,462.5 619.5,462.5" fill="none" stroke="#0000ff" stroke-width="1"/>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(592.5 487.5) rotate(0)">22uF</text>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(597.5 467.5) rotate(0)">C69</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">C</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">@DESIGNATOR %1 %2 @VALUE ?&quot;INITIAL VOLTAGE&quot;ŽIC=@&quot;INITIAL VOLTAGE&quot;Ž</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">General</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Capacitor</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Initial Voltage</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Capacitor</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Tech</text>
     <g data-record="17"><path d="M 642.5 447.5 L 642.5 439.5 M 637.5 439.5 L 647.5 439.5" fill="none" stroke="#800000" stroke-width="1"/><text x="642.5" y="435.5" text-anchor="middle" dominant-baseline="auto" fill="#800000" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none">DSP_IOVCC</text></g>
     <g data-record="17"><path d="M 557.5 492.5 L 557.5 496.5 M 564.5 496.5 L 550.5 496.5 M 562 500.5 L 553 500.5 M 559.5 504.5 L 555.5 504.5" fill="none" stroke="#800000" stroke-width="1"/><text x="557.5" y="508.5" text-anchor="middle" dominant-baseline="hanging" fill="#800000" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none">GND</text></g>
     <g data-record="2"><line x1="117.5" y1="752.5" x2="127.5" y2="752.5" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(119.5 752.5) rotate(0)">1</text></g>
@@ -515,38 +501,24 @@
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(572.5 537.5) rotate(0)">FAN1112</text>
     <g data-record="2"><line x1="497.5" y1="577.5" x2="497.5" y2="567.5" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="497.5" y1="587.5" x2="497.5" y2="597.5" stroke="#1f2937" stroke-width="1"/></g>
-    <line data-record="13" x1="489.5" y1="580.5" x2="505.5" y2="580.5" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="497.5,577.5 497.5,580.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="497.5,587.5 497.5,584.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="502.5,577.5 502.5,573.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="500.5,575.5 504.5,575.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="489.5,584.5 505.5,584.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <line data-record="13" x1="489.5" y1="577.5" x2="505.5" y2="577.5" stroke="#0000ff" stroke-width="1"/>
+    <line data-record="13" x1="497.5" y1="581.5" x2="497.5" y2="587.5" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="12" points="505.257,583.5061 504.3567,583.0436 503.4289,582.639 502.4775,582.2939 501.5061,582.0096 500.5187,581.7873 499.5192,581.6279 498.5116,581.532 497.5,581.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="12" points="497.5,581.5 496.4884,581.532 495.4808,581.6279 494.4813,581.7873 493.4939,582.0096 492.5225,582.2939 491.5711,582.639 490.6433,583.0436 489.743,583.5061" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="502.5,574.5 502.5,570.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="500.5,572.5 504.5,572.5" fill="none" stroke="#0000ff" stroke-width="1"/>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(507.5 592.5) rotate(0)">10uF</text>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(506.5 579.5) rotate(0)">C82</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">C</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">@DESIGNATOR %1 %2 @VALUE ?&quot;INITIAL VOLTAGE&quot;ŽIC=@&quot;INITIAL VOLTAGE&quot;Ž</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">General</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Capacitor</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Initial Voltage</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Capacitor</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Tech</text>
     <g data-record="2"><line x1="622.5" y1="572.5" x2="622.5" y2="562.5" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="622.5" y1="582.5" x2="622.5" y2="592.5" stroke="#1f2937" stroke-width="1"/></g>
-    <line data-record="13" x1="614.5" y1="575.5" x2="630.5" y2="575.5" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="622.5,572.5 622.5,575.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="622.5,582.5 622.5,579.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="627.5,572.5 627.5,568.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="625.5,570.5 629.5,570.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="614.5,579.5 630.5,579.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <line data-record="13" x1="614.5" y1="572.5" x2="630.5" y2="572.5" stroke="#0000ff" stroke-width="1"/>
+    <line data-record="13" x1="622.5" y1="576.5" x2="622.5" y2="582.5" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="12" points="630.257,578.5061 629.3567,578.0436 628.4289,577.639 627.4775,577.2939 626.5061,577.0096 625.5187,576.7873 624.5192,576.6279 623.5116,576.532 622.5,576.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="12" points="622.5,576.5 621.4884,576.532 620.4808,576.6279 619.4813,576.7873 618.4939,577.0096 617.5225,577.2939 616.5711,577.639 615.6433,578.0436 614.743,578.5061" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="627.5,569.5 627.5,565.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="625.5,567.5 629.5,567.5" fill="none" stroke="#0000ff" stroke-width="1"/>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(602.5 587.5) rotate(0)">22uF</text>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(607.5 572.5) rotate(0)">C73</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">C</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">@DESIGNATOR %1 %2 @VALUE ?&quot;INITIAL VOLTAGE&quot;ŽIC=@&quot;INITIAL VOLTAGE&quot;Ž</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">General</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Capacitor</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Initial Voltage</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Capacitor</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Tech</text>
     <g data-record="17"><path d="M 562.5 602.5 L 562.5 606.5 M 569.5 606.5 L 555.5 606.5 M 567 610.5 L 558 610.5 M 564.5 614.5 L 560.5 614.5" fill="none" stroke="#800000" stroke-width="1"/><text x="562.5" y="618.5" text-anchor="middle" dominant-baseline="hanging" fill="#800000" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none">GND</text></g>
     <polyline data-record="27" points="612.5,552.5 652.5,552.5" fill="none" stroke="#000080" stroke-width="1"/>
     <polyline data-record="27" points="622.5,562.5 622.5,552.5" fill="none" stroke="#000080" stroke-width="1"/>
@@ -554,21 +526,14 @@
     <polyline data-record="27" points="562.5,592.5 562.5,602.5" fill="none" stroke="#000080" stroke-width="1"/>
     <g data-record="2"><line x1="667.5" y1="732.5" x2="667.5" y2="722.5" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="667.5" y1="742.5" x2="667.5" y2="752.5" stroke="#1f2937" stroke-width="1"/></g>
-    <line data-record="13" x1="659.5" y1="735.5" x2="675.5" y2="735.5" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="667.5,732.5 667.5,735.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="667.5,742.5 667.5,739.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="672.5,732.5 672.5,728.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="670.5,730.5 674.5,730.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="659.5,739.5 675.5,739.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <line data-record="13" x1="659.5" y1="732.5" x2="675.5" y2="732.5" stroke="#0000ff" stroke-width="1"/>
+    <line data-record="13" x1="667.5" y1="736.5" x2="667.5" y2="742.5" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="12" points="675.257,738.5061 674.3567,738.0436 673.4289,737.639 672.4775,737.2939 671.5061,737.0096 670.5187,736.7873 669.5192,736.6279 668.5116,736.532 667.5,736.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="12" points="667.5,736.5 666.4884,736.532 665.4808,736.6279 664.4813,736.7873 663.4939,737.0096 662.5225,737.2939 661.5711,737.639 660.6433,738.0436 659.743,738.5061" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="672.5,729.5 672.5,725.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="670.5,727.5 674.5,727.5" fill="none" stroke="#0000ff" stroke-width="1"/>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(676.5 754.5) rotate(0)">1uF</text>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(676.5 734.5) rotate(0)">C85</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">C</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">@DESIGNATOR %1 %2 @VALUE ?&quot;INITIAL VOLTAGE&quot;ŽIC=@&quot;INITIAL VOLTAGE&quot;Ž</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">General</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Capacitor</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Initial Voltage</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Capacitor</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Tech</text>
     <g data-record="2"><line x1="557.5" y1="777.5" x2="557.5" y2="787.5" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="557.5" y1="747.5" x2="557.5" y2="737.5" stroke="#1f2937" stroke-width="1"/></g>
     <polyline data-record="6" points="557.5,747.5 554.5,750.5 560.5,756.5 554.5,762.5 560.5,768.5 554.5,774.5 557.5,777.5" fill="none" stroke="#0000ff" stroke-width="1"/>
@@ -1046,21 +1011,14 @@
     <polyline data-record="27" points="507.5,447.5 482.5,447.5 482.5,677.5 497.5,677.5" fill="none" stroke="#000080" stroke-width="1"/>
     <g data-record="2"><line x1="672.5" y1="902.5" x2="672.5" y2="892.5" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="672.5" y1="912.5" x2="672.5" y2="922.5" stroke="#1f2937" stroke-width="1"/></g>
-    <line data-record="13" x1="664.5" y1="905.5" x2="680.5" y2="905.5" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="672.5,902.5 672.5,905.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="672.5,912.5 672.5,909.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="677.5,902.5 677.5,898.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="675.5,900.5 679.5,900.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="664.5,909.5 680.5,909.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <line data-record="13" x1="664.5" y1="902.5" x2="680.5" y2="902.5" stroke="#0000ff" stroke-width="1"/>
+    <line data-record="13" x1="672.5" y1="906.5" x2="672.5" y2="912.5" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="12" points="680.257,908.5061 679.3567,908.0436 678.4289,907.639 677.4775,907.2939 676.5061,907.0096 675.5187,906.7873 674.5192,906.6279 673.5116,906.532 672.5,906.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="12" points="672.5,906.5 671.4884,906.532 670.4808,906.6279 669.4813,906.7873 668.4939,907.0096 667.5225,907.2939 666.5711,907.639 665.6433,908.0436 664.743,908.5061" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="677.5,899.5 677.5,895.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="675.5,897.5 679.5,897.5" fill="none" stroke="#0000ff" stroke-width="1"/>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(681.5 924.5) rotate(0)">1uF</text>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(681.5 904.5) rotate(0)">C90</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">C</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">@DESIGNATOR %1 %2 @VALUE ?&quot;INITIAL VOLTAGE&quot;ŽIC=@&quot;INITIAL VOLTAGE&quot;Ž</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">General</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Capacitor</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Initial Voltage</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Capacitor</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Tech</text>
     <g data-record="2"><line x1="632.5" y1="882.5" x2="632.5" y2="892.5" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="632.5" y1="852.5" x2="632.5" y2="842.5" stroke="#1f2937" stroke-width="1"/></g>
     <polyline data-record="6" points="632.5,852.5 629.5,855.5 635.5,861.5 629.5,867.5 635.5,873.5 629.5,879.5 632.5,882.5" fill="none" stroke="#0000ff" stroke-width="1"/>
@@ -1147,73 +1105,45 @@
     <g data-record="17"><path d="M 727.5 722.5 L 727.5 726.5 M 734.5 726.5 L 720.5 726.5 M 732 730.5 L 723 730.5 M 729.5 734.5 L 725.5 734.5" fill="none" stroke="#800000" stroke-width="1"/><text x="727.5" y="738.5" text-anchor="middle" dominant-baseline="hanging" fill="#800000" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none">GND</text></g>
     <g data-record="2"><line x1="497.5" y1="712.5" x2="497.5" y2="702.5" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="497.5" y1="722.5" x2="497.5" y2="732.5" stroke="#1f2937" stroke-width="1"/></g>
-    <line data-record="13" x1="489.5" y1="715.5" x2="505.5" y2="715.5" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="497.5,712.5 497.5,715.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="497.5,722.5 497.5,719.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="502.5,712.5 502.5,708.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="500.5,710.5 504.5,710.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="489.5,719.5 505.5,719.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <line data-record="13" x1="489.5" y1="712.5" x2="505.5" y2="712.5" stroke="#0000ff" stroke-width="1"/>
+    <line data-record="13" x1="497.5" y1="716.5" x2="497.5" y2="722.5" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="12" points="505.257,718.5061 504.3567,718.0436 503.4289,717.639 502.4775,717.2939 501.5061,717.0096 500.5187,716.7873 499.5192,716.6279 498.5116,716.532 497.5,716.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="12" points="497.5,716.5 496.4884,716.532 495.4808,716.6279 494.4813,716.7873 493.4939,717.0096 492.5225,717.2939 491.5711,717.639 490.6433,718.0436 489.743,718.5061" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="502.5,709.5 502.5,705.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="500.5,707.5 504.5,707.5" fill="none" stroke="#0000ff" stroke-width="1"/>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(506.5 734.5) rotate(0)">1uF</text>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(506.5 714.5) rotate(0)">C84</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">C</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">@DESIGNATOR %1 %2 @VALUE ?&quot;INITIAL VOLTAGE&quot;ŽIC=@&quot;INITIAL VOLTAGE&quot;Ž</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">General</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Capacitor</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Initial Voltage</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Capacitor</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Tech</text>
     <g data-record="2"><line x1="502.5" y1="877.5" x2="502.5" y2="867.5" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="502.5" y1="887.5" x2="502.5" y2="897.5" stroke="#1f2937" stroke-width="1"/></g>
-    <line data-record="13" x1="494.5" y1="880.5" x2="510.5" y2="880.5" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="502.5,877.5 502.5,880.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="502.5,887.5 502.5,884.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="507.5,877.5 507.5,873.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="505.5,875.5 509.5,875.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="494.5,884.5 510.5,884.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <line data-record="13" x1="494.5" y1="877.5" x2="510.5" y2="877.5" stroke="#0000ff" stroke-width="1"/>
+    <line data-record="13" x1="502.5" y1="881.5" x2="502.5" y2="887.5" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="12" points="510.257,883.5061 509.3567,883.0436 508.4289,882.639 507.4775,882.2939 506.5061,882.0096 505.5187,881.7873 504.5192,881.6279 503.5116,881.532 502.5,881.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="12" points="502.5,881.5 501.4884,881.532 500.4808,881.6279 499.4813,881.7873 498.4939,882.0096 497.5225,882.2939 496.5711,882.639 495.6433,883.0436 494.743,883.5061" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="507.5,874.5 507.5,870.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="505.5,872.5 509.5,872.5" fill="none" stroke="#0000ff" stroke-width="1"/>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(511.5 899.5) rotate(0)">1uF</text>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(511.5 879.5) rotate(0)">C89</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">C</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">@DESIGNATOR %1 %2 @VALUE ?&quot;INITIAL VOLTAGE&quot;ŽIC=@&quot;INITIAL VOLTAGE&quot;Ž</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">General</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Capacitor</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Initial Voltage</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Capacitor</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Tech</text>
     <polyline data-record="27" points="437.5,752.5 427.5,752.5" fill="none" stroke="#000080" stroke-width="1"/>
     <g data-record="2"><line x1="462.5" y1="802.5" x2="462.5" y2="792.5" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="462.5" y1="812.5" x2="462.5" y2="822.5" stroke="#1f2937" stroke-width="1"/></g>
-    <line data-record="13" x1="454.5" y1="805.5" x2="470.5" y2="805.5" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="462.5,802.5 462.5,805.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="462.5,812.5 462.5,809.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="467.5,802.5 467.5,798.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="465.5,800.5 469.5,800.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="454.5,809.5 470.5,809.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <line data-record="13" x1="454.5" y1="802.5" x2="470.5" y2="802.5" stroke="#0000ff" stroke-width="1"/>
+    <line data-record="13" x1="462.5" y1="806.5" x2="462.5" y2="812.5" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="12" points="470.257,808.5061 469.3567,808.0436 468.4289,807.639 467.4775,807.2939 466.5061,807.0096 465.5187,806.7873 464.5192,806.6279 463.5116,806.532 462.5,806.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="12" points="462.5,806.5 461.4884,806.532 460.4808,806.6279 459.4813,806.7873 458.4939,807.0096 457.5225,807.2939 456.5711,807.639 455.6433,808.0436 454.743,808.5061" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="467.5,799.5 467.5,795.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="465.5,797.5 469.5,797.5" fill="none" stroke="#0000ff" stroke-width="1"/>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(462.5 822.5) rotate(0)">10uF</text>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(462.5 797.5) rotate(0)">C87</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">C</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">@DESIGNATOR %1 %2 @VALUE ?&quot;INITIAL VOLTAGE&quot;ŽIC=@&quot;INITIAL VOLTAGE&quot;Ž</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">General</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Capacitor</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Initial Voltage</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Capacitor</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Tech</text>
     <g data-record="2"><line x1="327.5" y1="802.5" x2="327.5" y2="792.5" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="327.5" y1="812.5" x2="327.5" y2="822.5" stroke="#1f2937" stroke-width="1"/></g>
-    <line data-record="13" x1="319.5" y1="805.5" x2="335.5" y2="805.5" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="327.5,802.5 327.5,805.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="327.5,812.5 327.5,809.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="332.5,802.5 332.5,798.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="330.5,800.5 334.5,800.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="319.5,809.5 335.5,809.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <line data-record="13" x1="319.5" y1="802.5" x2="335.5" y2="802.5" stroke="#0000ff" stroke-width="1"/>
+    <line data-record="13" x1="327.5" y1="806.5" x2="327.5" y2="812.5" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="12" points="335.257,808.5061 334.3567,808.0436 333.4289,807.639 332.4775,807.2939 331.5061,807.0096 330.5187,806.7873 329.5192,806.6279 328.5116,806.532 327.5,806.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="12" points="327.5,806.5 326.4884,806.532 325.4808,806.6279 324.4813,806.7873 323.4939,807.0096 322.5225,807.2939 321.5711,807.639 320.6433,808.0436 319.743,808.5061" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="332.5,799.5 332.5,795.5" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="330.5,797.5 334.5,797.5" fill="none" stroke="#0000ff" stroke-width="1"/>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(335.5 816.5) rotate(0)">10uF</text>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(336.5 804.5) rotate(0)">C88</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">C</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">@DESIGNATOR %1 %2 @VALUE ?&quot;INITIAL VOLTAGE&quot;ŽIC=@&quot;INITIAL VOLTAGE&quot;Ž</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">General</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Capacitor</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Initial Voltage</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Capacitor</text>
-    <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(52.5 1002.5) rotate(0)">Tech</text>
     <rect data-record="14" x="347.5" y="742.5" width="60" height="30" rx="0" fill="#ffffb0" stroke="#800000" stroke-width="1"/>
     <g data-record="2"><line x1="377.5" y1="772.5" x2="377.5" y2="792.5" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(377.5 774.5) rotate(-90)">1</text></g>
     <g data-record="2"><line x1="347.5" y1="752.5" x2="327.5" y2="752.5" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(345.5 752.5) rotate(0)">3</text><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(349.5 752.5) rotate(0)">IN</text></g>
