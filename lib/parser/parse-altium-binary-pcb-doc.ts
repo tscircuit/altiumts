@@ -21,12 +21,16 @@ import { parseAltiumBinaryPropertyRecord } from "./parse-altium-binary-property-
 
 const PROPERTY_STREAM_CONFIG: Record<
   string,
-  { headerSize?: 4 | 6; recordKind: string }
+  {
+    allowOpaqueRecords?: boolean
+    headerSize?: 4 | 6
+    recordKind: string
+  }
 > = {
   Board6: { recordKind: "Board" },
   Classes6: { recordKind: "Class" },
   Components6: { recordKind: "Component" },
-  Connections6: { recordKind: "Connection" },
+  Connections6: { allowOpaqueRecords: true, recordKind: "Connection" },
   Dimensions6: { headerSize: 6, recordKind: "Dimension" },
   FileVersionInfo: { recordKind: "FileVersionInfo" },
   FromTos6: { recordKind: "FromTo" },
@@ -105,6 +109,7 @@ export function parseAltiumBinaryPcbDoc(
     const decodedRecords =
       data && propertyConfig
         ? parsePropertyRecordStream({
+            allowOpaqueRecords: propertyConfig.allowOpaqueRecords,
             allowMissingLeadingDelimiter: family === "Models",
             bytes: data.content,
             expectedRecordCount: declaredRecordCount,
@@ -154,6 +159,7 @@ export function parseAltiumBinaryPcbDoc(
 }
 
 function parsePropertyRecordStream({
+  allowOpaqueRecords = false,
   allowMissingLeadingDelimiter = false,
   bytes,
   expectedRecordCount,
@@ -162,6 +168,7 @@ function parsePropertyRecordStream({
   headerSize = 4,
   maximumRecordLength = 16 * 1024 * 1024,
 }: {
+  allowOpaqueRecords?: boolean
   allowMissingLeadingDelimiter?: boolean
   bytes: Uint8Array
   expectedRecordCount: number | undefined
@@ -174,6 +181,7 @@ function parsePropertyRecordStream({
   const records: AltiumRecord[] = []
   const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength)
   let offset = 0
+  let parsedRecordCount = 0
 
   while (offset < bytes.byteLength) {
     const lengthOffset = offset
@@ -205,11 +213,16 @@ function parsePropertyRecordStream({
     }
     const payload = bytes.subarray(offset, offset + length)
     if (payload[0] !== 0x7c && !allowMissingLeadingDelimiter) {
+      if (allowOpaqueRecords) {
+        parsedRecordCount += 1
+        offset += length
+        continue
+      }
       throw new AltiumFormatDetectionError(
         `${recordKind} property record at offset ${lengthOffset} does not begin with "|"`,
       )
     }
-    const recordIndex = records.length
+    const recordIndex = parsedRecordCount
     const sourceLocation = {
       byteOffset: lengthOffset,
       recordIndex,
@@ -227,15 +240,16 @@ function parsePropertyRecordStream({
       record.clearDirty(true)
     }
     records.push(record)
+    parsedRecordCount += 1
     offset += length
   }
 
   if (
     expectedRecordCount !== undefined &&
-    records.length !== expectedRecordCount
+    parsedRecordCount !== expectedRecordCount
   ) {
     throw new AltiumFormatDetectionError(
-      `${recordKind} stream declares ${expectedRecordCount} records but contains ${records.length}`,
+      `${recordKind} stream declares ${expectedRecordCount} records but contains ${parsedRecordCount}`,
     )
   }
   return records
