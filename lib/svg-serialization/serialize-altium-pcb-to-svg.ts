@@ -1,4 +1,5 @@
 import type { AltiumPcbDocument } from "../altium-pcb-document"
+import { getPcbRegionSemanticKind } from "../pcb-contours"
 import {
   getPcbRecordComponentIndex,
   getPcbRecordNetIndex,
@@ -48,7 +49,12 @@ export function serializeAltiumPcbToSvg(
   const componentLookup = createComponentLookup(document)
   const polygonIndexesWithRegionRecords = new Set(
     document.records.flatMap((record) => {
-      if (record.recordKind !== "Region") return []
+      if (
+        record.recordKind !== "Region" ||
+        getPcbRegionSemanticKind(record) !== "COPPER"
+      ) {
+        return []
+      }
       const polygonIndex = getPcbRecordPolygonIndex(document, record)
       return polygonIndex === undefined ? [] : [polygonIndex]
     }),
