@@ -16,3 +16,24 @@ test("creates native binary schematic documents", () => {
   expect(document.components).toHaveLength(1)
   expect(document.components[0]?.getDecoded("COMMENT")).toBe("10k Ω")
 })
+
+test("creates native schematic image storage", () => {
+  const compressedBytes = Uint8Array.of(0x78, 0x9c, 0x01, 0x02, 0x03)
+  const bytes = serializeAltiumSchDocToBinary(
+    [
+      "|HEADER=Protel for Windows - Schematic Capture Ascii File Version 5.0|WEIGHT=2",
+      "|RECORD=31|CUSTOMX=1000|CUSTOMY=800|USECUSTOMSHEET=T",
+      "|RECORD=30|OWNERINDEX=-1|FILENAME=logo.png|LOCATION.X=10|LOCATION.Y=10|CORNER.X=20|CORNER.Y=20",
+    ].join("\r\n"),
+    {
+      embeddedImages: [{ compressedBytes, name: "logo.png" }],
+    },
+  )
+  const document = parseAltiumSchDoc(bytes)
+
+  expect(document.embeddedImages).toHaveLength(1)
+  expect(document.embeddedImages[0]?.name).toBe("logo.png")
+  expect(document.embeddedImages[0]?.getCompressedBytes()).toEqual(
+    compressedBytes,
+  )
+})
