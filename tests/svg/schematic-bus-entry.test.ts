@@ -25,7 +25,7 @@ test("renders a wire entering a schematic bus through a 45-degree bus entry", ()
   })
 
   expect(svg).toContain(
-    '<polyline data-record="26" points="100,100 100,20" fill="none" stroke="#000080" stroke-width="2"/>',
+    '<polyline data-record="26" points="100,100 100,20" fill="none" stroke="#000080" stroke-width="3"/>',
   )
   expect(svg).toContain(
     '<polyline data-record="27" points="30,60 90,60" fill="none" stroke="#800000" stroke-width="1"/>',

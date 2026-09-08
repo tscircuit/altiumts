@@ -92,12 +92,12 @@ test("pins use SYSTEMFONT and independent enabled custom name/designator fonts",
   expect(textElement(designatorOverride, "SIGNAL")).toContain('font-size="4"')
 })
 
-test("zero font ID inherits SYSTEMFONT and separate fractional size is supported", () => {
+test("zero font ID inherits SYSTEMFONT and unsupported font fractions are ignored", () => {
   const svg = render(
     ["|RECORD=4|FONTID=0|TEXT=system"],
     "|SYSTEMFONT=1|FONTIDCOUNT=1|SIZE1=4|SIZE1_FRAC=50000|FONTNAME1=Arial",
   )
-  expect(textElement(svg, "system")).toContain('font-size="4.5"')
+  expect(textElement(svg, "system")).toContain('font-size="4"')
 })
 
 test("net labels remain visible alongside graphics while hidden parameters stay hidden", () => {
@@ -134,4 +134,40 @@ test("rendering preserves original malformed fields and native serialization", (
   expect(doc.getString()).toBe(before)
   expect(doc.netLabels[0]?.getCaseInsensitive("LOCATION.X")).toBe("258.8")
   expect(doc.netLabels[0]?.getBoolean("ISHIDDEN")).toBe(true)
+})
+
+test("native pin text margins and custom colors are independent of the pin line", () => {
+  const defaults = render([`${pin}|COLOR=132`], fonts)
+  expect(textElement(defaults, "SIGNAL")).toContain("translate(93 200)")
+  expect(textElement(defaults, "1")).toContain("translate(109 200)")
+  const custom = render(
+    [
+      `${pin}|COLOR=132|PINNAME_POSITIONCONGLOMERATE=17|NAME_CUSTOMPOSITION_MARGIN=-2|NAME_CUSTOMFONTID=1|NAME_CUSTOMCOLOR=255|PINDESIGNATOR_POSITIONCONGLOMERATE=17|DESIGNATOR_CUSTOMPOSITION_MARGIN=2|DESIGNATOR_CUSTOMFONTID=1|DESIGNATOR_CUSTOMCOLOR=16711680`,
+    ],
+    fonts,
+  )
+  expect(textElement(custom, "SIGNAL")).toContain("translate(98 200)")
+  expect(textElement(custom, "SIGNAL")).toContain('fill="#ff0000"')
+  expect(textElement(custom, "1")).toContain("translate(102 200)")
+  expect(textElement(custom, "1")).toContain('fill="#0000ff"')
+  const omittedColor = render(
+    [`${pin}|COLOR=132|PINNAME_POSITIONCONGLOMERATE=16|NAME_CUSTOMFONTID=1`],
+    fonts,
+  )
+  expect(textElement(omittedColor, "SIGNAL")).toContain('fill="#000000"')
+})
+
+test("native line-width enum applies equally to wires and rectangles", () => {
+  for (const [width, expected] of [1, 1, 3, 5].entries()) {
+    const svg = render([
+      `|RECORD=27|LINEWIDTH=${width}|LOCATIONCOUNT=2|X1=10|Y1=10|X2=20|Y2=10`,
+      `|RECORD=14|LINEWIDTH=${width}|LOCATION.X=10|LOCATION.Y=20|CORNER.X=20|CORNER.Y=30`,
+    ])
+    if (width === 0) expect(svg).toContain('vector-effect="non-scaling-stroke"')
+    for (const kind of ["27", "14"]) {
+      expect(
+        svg.match(new RegExp(`<[^>]+data-record="${kind}"[^>]*>`))?.[0],
+      ).toContain(`stroke-width="${expected}"`)
+    }
+  }
 })

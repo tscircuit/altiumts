@@ -176,11 +176,20 @@ function renderSchematicRecord(
 ): string | undefined {
   const kind = record.recordKind
   const color = altiumColorToCss(record.getCaseInsensitive("COLOR"), "#1f2937")
-  const metadata = `data-record="${escapeXml(kind ?? "Unknown")}"`
-  const lineWidth = Math.max(
-    Number(record.getCaseInsensitive("LINEWIDTH") ?? 1),
-    0.7,
+  const widthEnum = readSchematicInteger(
+    record.getCaseInsensitive("LINEWIDTH"),
+    0,
   )
+  const hairline =
+    widthEnum === 0 &&
+    ["5", "6", "7", "8", "10", "11", "12", "13", "14", "27", "37"].includes(
+      kind ?? "",
+    )
+  const metadata = `data-record="${escapeXml(kind ?? "Unknown")}"${hairline ? ' vector-effect="non-scaling-stroke"' : ""}`
+  // TSize widths are 0 (device hairline), 10, 30 and 50 mils. Bus widths
+  // use their own 20/30/50/70-mil table. One schematic unit is 10 mils.
+  const lineWidth =
+    (kind === "26" ? [2, 3, 5, 7] : [1, 1, 3, 5])[widthEnum] ?? 1
 
   if (kind === "5") {
     const points = getSchematicIndexedPoints(record)
@@ -199,7 +208,7 @@ function renderSchematicRecord(
       polygon && record.getBoolean("ISSOLID") === true
         ? altiumColorToCss(record.getCaseInsensitive("AREACOLOR"), "none")
         : "none"
-    const strokeWidth = kind === "26" ? Math.max(lineWidth, 2) : lineWidth
+    const strokeWidth = lineWidth
     return `<${tag} ${metadata} points="${pointsToSvg(points, viewport)}" fill="${fill}" stroke="${color}" stroke-width="${formatSvgNumber(strokeWidth)}"/>`
   }
 
@@ -211,7 +220,13 @@ function renderSchematicRecord(
   }
 
   if (kind === "10" || kind === "14") {
-    return renderSchematicRectangle(record, viewport, metadata, color)
+    return renderSchematicRectangle(
+      record,
+      viewport,
+      metadata,
+      color,
+      lineWidth,
+    )
   }
 
   if (kind === "15") {
@@ -441,6 +456,7 @@ function renderSchematicRectangle(
   viewport: SvgViewport,
   metadata: string,
   color: string,
+  lineWidth: number,
 ): string | undefined {
   const rectangle = getSchematicRectangle(record)
   if (!rectangle) return undefined
@@ -452,7 +468,7 @@ function renderSchematicRectangle(
   const fill = record.getBoolean("ISSOLID")
     ? altiumColorToCss(record.getCaseInsensitive("AREACOLOR"), "#fff")
     : "none"
-  return `<rect ${metadata} x="${formatSvgNumber(left)}" y="${formatSvgNumber(top)}" width="${formatSvgNumber(width)}" height="${formatSvgNumber(height)}" rx="${formatSvgNumber(radius)}" fill="${fill}" stroke="${color}" stroke-width="${formatSvgNumber(Math.max(Number(record.getCaseInsensitive("LINEWIDTH") ?? 1), 0.7))}"/>`
+  return `<rect ${metadata} x="${formatSvgNumber(left)}" y="${formatSvgNumber(top)}" width="${formatSvgNumber(width)}" height="${formatSvgNumber(height)}" rx="${formatSvgNumber(radius)}" fill="${fill}" stroke="${color}" stroke-width="${formatSvgNumber(lineWidth)}"/>`
 }
 
 function renderSchematicPinText(params: {
@@ -540,13 +556,36 @@ function renderSchematicPin(
   const directionMatchesText = orientation === 0 || orientation === 1
   const designatorAnchor = directionMatchesText ? "start" : "end"
   const nameAnchor = directionMatchesText ? "end" : "start"
+  const textSettings = (kind: "NAME" | "DESIGNATOR") => {
+    const flags = readSchematicInteger(
+      record.getCaseInsensitive(`PIN${kind}_POSITIONCONGLOMERATE`),
+      0,
+    )
+    return {
+      margin:
+        (flags & 1) !== 0
+          ? getSchematicCoordinate(record, `${kind}_CUSTOMPOSITION_MARGIN`, 0)
+          : kind === "NAME"
+            ? -7
+            : 9,
+      color:
+        (flags & 16) !== 0
+          ? altiumColorToCss(
+              record.getCaseInsensitive(`${kind}_CUSTOMCOLOR`),
+              "#000000",
+            )
+          : color,
+    }
+  }
+  const nameSettings = textSettings("NAME")
+  const designatorSettings = textSettings("DESIGNATOR")
   const designatorPosition = {
-    x: pinEdgeSymbols.outerSymbolEdgePosition.x + screenDirection.x * 2,
-    y: pinEdgeSymbols.outerSymbolEdgePosition.y + screenDirection.y * 2,
+    x: body.x + screenDirection.x * designatorSettings.margin,
+    y: body.y + screenDirection.y * designatorSettings.margin,
   }
   const namePosition = {
-    x: body.x - screenDirection.x * 2,
-    y: body.y - screenDirection.y * 2,
+    x: body.x + screenDirection.x * nameSettings.margin,
+    y: body.y + screenDirection.y * nameSettings.margin,
   }
   const designatorFont = getSchematicFont({
     pinText: "DESIGNATOR",
@@ -562,7 +601,7 @@ function renderSchematicPin(
     showDesignator && options.showText !== false
       ? renderSchematicPinText({
           anchor: designatorAnchor,
-          color,
+          color: designatorSettings.color,
           dominantBaseline: "text-after-edge",
           fontAttributes: designatorFont.attributes,
           clockwiseRotationDegrees,
@@ -574,7 +613,7 @@ function renderSchematicPin(
     showName && options.showText !== false
       ? renderSchematicPinText({
           anchor: nameAnchor,
-          color,
+          color: nameSettings.color,
           dominantBaseline: "central",
           fontAttributes: nameFont.attributes,
           clockwiseRotationDegrees,

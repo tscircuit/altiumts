@@ -1,8 +1,8 @@
 import type { SvgPoint } from "./svg-types"
 import { formatSvgNumber } from "./svg-utils"
 
-const CLOCK_SYMBOL_DEPTH_SVG_UNITS = 5
-const CLOCK_SYMBOL_HALF_WIDTH_SVG_UNITS = 3
+const CLOCK_SYMBOL_DEPTH_SVG_UNITS = 4
+const CLOCK_SYMBOL_HALF_WIDTH_SVG_UNITS = 2
 const INVERSION_SYMBOL_RADIUS_SVG_UNITS = 2.5
 
 interface RenderSchematicPinEdgeSymbolsOptions {
@@ -51,10 +51,9 @@ export function renderSchematicPinEdgeSymbols({
 
   if (hasClockSymbol) {
     const clockSymbolBaseCenter = {
-      x: lineStartPosition.x + screenDirection.x * CLOCK_SYMBOL_DEPTH_SVG_UNITS,
-      y: lineStartPosition.y + screenDirection.y * CLOCK_SYMBOL_DEPTH_SVG_UNITS,
+      x: bodyPosition.x,
+      y: bodyPosition.y,
     }
-    outerSymbolEdgePosition = clockSymbolBaseCenter
     const perpendicularDirection = {
       x: -screenDirection.y,
       y: screenDirection.x,
@@ -75,11 +74,18 @@ export function renderSchematicPinEdgeSymbols({
         clockSymbolBaseCenter.y -
         perpendicularDirection.y * CLOCK_SYMBOL_HALF_WIDTH_SVG_UNITS,
     }
-    const points = [lineStartPosition, clockSymbolBaseStart, clockSymbolBaseEnd]
+    const points = [
+      {
+        x: bodyPosition.x - screenDirection.x * CLOCK_SYMBOL_DEPTH_SVG_UNITS,
+        y: bodyPosition.y - screenDirection.y * CLOCK_SYMBOL_DEPTH_SVG_UNITS,
+      },
+      clockSymbolBaseStart,
+      clockSymbolBaseEnd,
+    ]
       .map((point) => `${formatSvgNumber(point.x)},${formatSvgNumber(point.y)}`)
       .join(" ")
     renderedSymbols.push(
-      `<polygon class="altium-schematic-pin-clock-symbol" points="${points}" fill="#fff" stroke="${color}" stroke-width="1"/>`,
+      `<polygon class="altium-schematic-pin-clock-symbol" points="${points}" fill="none" stroke="${color}" stroke-width="0.25"/>`,
     )
   }
 

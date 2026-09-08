@@ -1,6 +1,6 @@
 import type { AltiumRecord } from "../records/altium-record"
 import type { AltiumSchSheetRecord } from "../records/altium-schematic-records"
-import { getSchematicCoordinate, readSchematicInteger } from "./altium-values"
+import { readSchematicInteger } from "./altium-values"
 import { escapeXml, formatSvgNumber } from "./svg-utils"
 
 type GetSchematicFontInput = {
@@ -51,8 +51,10 @@ export function getSchematicFont({
   // invalid SIZE token falls back to 10, retaining the selected family;
   // this reproduces the fallback seen in the supplied Altium 365 capture.
   const fontId = requestedFontId > 0 ? requestedFontId : systemFontId
+  // SIZE is a native integer font-table entry, not a coordinate.
+  // In particular, SIZE*_FRAC does not increase the native font size.
   const selectedSize = sheetRecord
-    ? getSchematicCoordinate(sheetRecord, `SIZE${fontId}`, 10)
+    ? readSchematicInteger(sheetRecord.getCaseInsensitive(`SIZE${fontId}`), 10)
     : 10
   const size = selectedSize > 0 ? selectedSize : 10
   const family =
