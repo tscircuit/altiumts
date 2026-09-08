@@ -1,4 +1,5 @@
 import type { AltiumPcbDocument } from "../altium-pcb-document"
+import { getPcbComponentByIndex } from "../pcb-reference-resolution"
 import type { AltiumRecord } from "../records/altium-record"
 import {
   getPcbMeasurement,
@@ -6,6 +7,7 @@ import {
   parsePcbMeasurement,
 } from "./altium-values"
 import { getPcbDimensionGeometry } from "./pcb-dimension-geometry"
+import { normalizeLayerName, recordAppliesToLayers } from "./pcb-layer"
 import { getPcbPadGeometry } from "./pcb-pad-geometry"
 import type { SvgBounds, SvgPoint } from "./svg-types"
 import { boundsFromPoints, expandBounds, mergeBounds } from "./svg-utils"
@@ -14,12 +16,21 @@ export function getPcbBoardOutline(document: AltiumPcbDocument): SvgPoint[] {
   return document.boardGeometry.outline.points
 }
 
-export function getPcbDocumentBounds(document: AltiumPcbDocument): SvgBounds {
+export function getPcbDocumentBounds(
+  document: AltiumPcbDocument,
+  requestedLayers?: string[],
+): SvgBounds {
   const outlineBounds = boundsFromPoints(getPcbBoardOutline(document))
   if (outlineBounds) {
     return document.records.reduce(
       (bounds, record) =>
-        record.recordKind === "Dimension"
+        record.recordKind === "Dimension" ||
+        isBoardMountedOverlayTrack(
+          document,
+          record,
+          outlineBounds,
+          requestedLayers,
+        )
           ? (mergeBounds(bounds, getPcbRecordBounds(record)) ?? bounds)
           : bounds,
       outlineBounds,
@@ -32,6 +43,30 @@ export function getPcbDocumentBounds(document: AltiumPcbDocument): SvgBounds {
   }
 
   return bounds ?? { minX: 0, minY: 0, maxX: 1000, maxY: 800 }
+}
+
+function isBoardMountedOverlayTrack(
+  document: AltiumPcbDocument,
+  record: AltiumRecord,
+  boardBounds: SvgBounds,
+  requestedLayers?: string[],
+): boolean {
+  if (record.recordKind !== "Track") return false
+  const layer = normalizeLayerName(record.getDecoded("LAYER") ?? "")
+  if (layer !== "TOPOVERLAY" && layer !== "BOTTOMOVERLAY") return false
+  if (!recordAppliesToLayers(record, requestedLayers)) return false
+  const componentIndex = record.getNumber("COMPONENT")
+  if (componentIndex === undefined) return false
+  const component = getPcbComponentByIndex(document, componentIndex)
+  if (!component) return false
+  const x = getPcbMeasurement(component, "X")
+  const y = getPcbMeasurement(component, "Y")
+  return (
+    x >= boardBounds.minX &&
+    x <= boardBounds.maxX &&
+    y >= boardBounds.minY &&
+    y <= boardBounds.maxY
+  )
 }
 
 export function getPcbRecordBounds(

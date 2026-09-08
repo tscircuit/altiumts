@@ -37,7 +37,7 @@ export function serializeAltiumPcbToSvg(
 ): string {
   const bounds = options.viewBox
     ? pcbViewBoxToBounds(options.viewBox)
-    : getPcbDocumentBounds(document)
+    : getPcbDocumentBounds(document, options.layers)
   const viewport = createSvgViewport(bounds, {
     ...options,
     margin: options.margin ?? (options.viewBox ? 0 : undefined),
