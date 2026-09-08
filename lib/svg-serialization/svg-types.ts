@@ -66,6 +66,10 @@ export interface AltiumSchematicViewBox {
 }
 
 export interface AltiumSheetSvgOptions extends AltiumSvgRenderOptions {
+  /** Current date text used for Altium's built-in `=CurrentDate` reference. */
+  currentDate?: string
+  /** Current time text used for Altium's built-in `=CurrentTime` reference. */
+  currentTime?: string
   /** Current schematic filename, including its extension. */
   documentName?: string
   /** Parsed project that supplies user-defined project parameters. */

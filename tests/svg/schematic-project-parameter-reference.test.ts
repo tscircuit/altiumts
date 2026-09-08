@@ -25,16 +25,22 @@ test("renders schematic project and document-name references", async () => {
       "|RECORD=4|LOCATION.X=20|LOCATION.Y=110|FONTID=1|TEXT==ProjectName",
       "|RECORD=4|LOCATION.X=20|LOCATION.Y=80|FONTID=1|TEXT==ProjectRevision",
       "|RECORD=4|LOCATION.X=20|LOCATION.Y=50|FONTID=1|TEXT==ProjectDrawnBy",
+      "|RECORD=4|LOCATION.X=160|LOCATION.Y=140|FONTID=1|TEXT==CurrentDate",
+      "|RECORD=4|LOCATION.X=160|LOCATION.Y=110|FONTID=1|TEXT==CurrentTime",
       "|RECORD=4|LOCATION.X=20|LOCATION.Y=20|FONTID=1|TEXT==UnavailableParameter",
     ].join("\n"),
   )
   const parameterContext = {
+    currentDate: "2026-09-08",
+    currentTime: "14:30",
     document,
     documentName: "systems_pcb.SchDoc",
     project,
     projectName: "systems_pcb.PrjPCB",
   }
   const svg = serializeAltiumSheetToSvg(document, {
+    currentDate: parameterContext.currentDate,
+    currentTime: parameterContext.currentTime,
     documentName: parameterContext.documentName,
     project,
     projectName: parameterContext.projectName,
@@ -51,6 +57,8 @@ test("renders schematic project and document-name references", async () => {
   expect(svg).toContain(">systems_pcb.PrjPCB</text>")
   expect(svg).toContain(">v3.3</text>")
   expect(svg).toContain(">Bruno Almeida</text>")
+  expect(svg).toContain(">2026-09-08</text>")
+  expect(svg).toContain(">14:30</text>")
   expect(svg).toContain(">=UnavailableParameter</text>")
   await expect(svg).toMatchSvgSnapshot(import.meta.path)
 })

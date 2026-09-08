@@ -10,6 +10,10 @@ interface CachedSchematicParameters {
 }
 
 export interface ResolveSchematicParameterReferenceInput {
+  /** Current date text used for Altium's built-in `=CurrentDate` reference. */
+  currentDate?: string
+  /** Current time text used for Altium's built-in `=CurrentTime` reference. */
+  currentTime?: string
   document: AltiumSchDoc
   /** Current schematic filename, including its extension. */
   documentName?: string
@@ -53,6 +57,8 @@ export function resolveSchematicParameterReference(
 }
 
 export function resolveSchematicParameterReferenceWithContext({
+  currentDate,
+  currentTime,
   document,
   documentName,
   project,
@@ -70,6 +76,8 @@ export function resolveSchematicParameterReferenceWithContext({
   for (const [name, text] of getSchematicDocumentParameters(document)) {
     parameters.set(name, text)
   }
+  if (currentDate !== undefined) parameters.set("currentdate", currentDate)
+  if (currentTime !== undefined) parameters.set("currenttime", currentTime)
   if (projectName) parameters.set("projectname", projectName)
   if (documentName) parameters.set("documentname", documentName)
   if (record) {

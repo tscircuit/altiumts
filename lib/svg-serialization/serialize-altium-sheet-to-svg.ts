@@ -338,6 +338,8 @@ function renderSchematicRecord(
       ""
     const text = context.document
       ? (resolveSchematicParameterReferenceWithContext({
+          currentDate: options.currentDate,
+          currentTime: options.currentTime,
           document: context.document,
           documentName: options.documentName,
           project: options.project,
