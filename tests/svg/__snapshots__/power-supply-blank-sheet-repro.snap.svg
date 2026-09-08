@@ -55,13 +55,13 @@
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(653.25 199.25) rotate(0)">100uF</text>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(653.25 179.25) rotate(0)">C3</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(653.25 189.25) rotate(0)">tantalum cap</text>
-    <g data-record="2"><line x1="759.25" y1="179.25" x2="759.25" y2="159.25" stroke="#1f2937" stroke-width="1"/></g>
-    <g data-record="2"><line x1="759.25" y1="189.25" x2="759.25" y2="209.25" stroke="#1f2937" stroke-width="1"/></g>
     <polygon data-record="7" points="749.25,179.25 759.25,189.25 769.25,179.25" fill="#0000ff" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="769.25,193.25 776.25,200.25" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="6" points="773.25,189.25 780.25,196.25" fill="none" stroke="#0000ff" stroke-width="1"/>
     <polygon data-record="7" points="776.25,200.25 774.25,196.25 772.25,198.25" fill="#0000ff" stroke="#0000ff" stroke-width="1"/>
     <polygon data-record="7" points="780.25,196.25 778.25,192.25 776.25,194.25" fill="#0000ff" stroke="#0000ff" stroke-width="1"/>
+    <g data-record="2"><line x1="759.25" y1="179.25" x2="759.25" y2="159.25" stroke="#1f2937" stroke-width="1"/></g>
+    <g data-record="2"><line x1="759.25" y1="189.25" x2="759.25" y2="209.25" stroke="#1f2937" stroke-width="1"/></g>
+    <polyline data-record="6" points="769.25,193.25 776.25,200.25" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="6" points="773.25,189.25 780.25,196.25" fill="none" stroke="#0000ff" stroke-width="1"/>
     <polyline data-record="6" points="769.25,189.25 749.25,189.25" fill="none" stroke="#0000ff" stroke-width="1"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(781.25 188.25) rotate(0)">D1</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(781.25 198.25) rotate(0)">LED</text>

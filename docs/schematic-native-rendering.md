@@ -24,3 +24,5 @@ bun run build
 ```
 
 A passing snapshot establishes a regression baseline, not correct conversion or pixel-identical Altium output. The corresponding circuit-json-to-altium baseline PR pins the commit containing these changes. Exporter fixes are reviewed separately on top of that baseline.
+
+To refresh SVG baselines after reviewing a rendering change, set both `BUN_UPDATE_SNAPSHOTS=1` and `FORCE_BUN_UPDATE_SNAPSHOTS=1`. The ordinary update flag can leave old SVG text unchanged when raster comparison reports equal images.
