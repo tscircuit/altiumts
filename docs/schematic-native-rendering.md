@@ -14,10 +14,10 @@ The integer/fraction representation is supported by [KiCad's Altium importer](ht
 
 Invalid-value fallback and net-label visibility are modeled from the Altium 365 screenshot supplied during the circuit-json-to-altium investigation. Exact fallback behavior across Altium versions still needs isolated native reference captures. This remains a local rendering implementation, not the official Altium engine. Default pin margins and enabled custom margins/colors are handled. Exact glyph metrics, custom text rotation/vertical margins, clipping/borders, inferred junction dots and other electrical symbol types remain incomplete.
 
-The regressions in [schematic-native-rendering.test.ts](../tests/svg/schematic-native-rendering.test.ts) exercise native documents directly, including valid fields, malformed values and preserved document data. The existing pin-font fixture now specifies its native system font; the port-width fixtures encode half a unit as `50000` rather than `5`.
+The `schematic-native-*.test.ts` regressions each contain one test and exercise native documents directly, including [coordinate encoding](../tests/svg/schematic-native-fixed-point-coordinates.test.ts), [independent pin fonts](../tests/svg/schematic-native-pin-custom-fonts.test.ts) and [preserved document data](../tests/svg/schematic-native-preserved-fields.test.ts). Shared document construction lives in [the native fixture helper](../tests/fixtures/native-schematic-rendering.ts). Detailed renderer behavior is tested here; circuit-json-to-altium uses a small export-to-render integration test instead of copying these cases. The existing pin-font fixture now specifies its native system font; the port-width fixtures encode half a unit as `50000` rather than `5`.
 
 ```sh
-bun test tests/svg/schematic-native-rendering.test.ts tests/svg/schematic-pin-font.test.ts tests/svg/schematic-port-direction.test.ts
+bun test tests/svg/schematic-native-*.test.ts tests/svg/schematic-pin-font.test.ts tests/svg/schematic-port-direction.test.ts
 bun run typecheck
 bun run format:check
 bun run build
