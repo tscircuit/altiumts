@@ -127,7 +127,7 @@ test("unconnected and doubly connected ports use a stable default", () => {
 })
 
 test("fractional port width is retained in rendering", () => {
-  const { svg } = renderPort("|STYLE=2|WIDTH_FRAC=5")
+  const { svg } = renderPort("|STYLE=2|WIDTH_FRAC=50000")
   expect(svg).toContain("L 90.5 150 L ")
 })
 
@@ -150,7 +150,7 @@ test("nearby wires do not count as connections", () => {
 })
 
 test("fractional widths locate the far connection correctly", () => {
-  const wire = rightWire.replace("X1=90", "X1=90|X1_FRAC=5")
-  const { svg } = renderPort("|IOTYPE=1|WIDTH_FRAC=5", [wire])
+  const wire = rightWire.replace("X1=90", "X1=90|X1_FRAC=50000")
+  const { svg } = renderPort("|IOTYPE=1|WIDTH_FRAC=50000", [wire])
   expect(svg).toContain('d="M 50 150 L ')
 })

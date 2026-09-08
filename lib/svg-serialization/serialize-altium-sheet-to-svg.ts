@@ -11,6 +11,7 @@ import {
   altiumColorToCss,
   getSchematicCoordinate,
   getSchematicIndexedPoints,
+  readSchematicInteger,
 } from "./altium-values"
 import { approximateAltiumArc } from "./approximate-altium-arc"
 import { getSchematicFont } from "./get-schematic-font"
@@ -21,6 +22,7 @@ import {
 import { getSchematicSheetSize } from "./get-schematic-sheet-size"
 import { renderAltiumNegatedText } from "./render-altium-negated-text"
 import { renderSchematicPinEdgeSymbols } from "./render-schematic-pin-edge-symbols"
+import { renderSchematicPinElectricalSymbol } from "./render-schematic-pin-electrical-symbol"
 import {
   renderSchematicSheetEntry,
   renderSchematicSheetSymbol,
@@ -295,7 +297,6 @@ function renderSchematicRecord(
     })
     const name = record.getDecoded("NAME") ?? ""
     const font = getSchematicFont({
-      fallbackSize: 8,
       record,
       sheetRecord: context.sheetRecord,
     })
@@ -326,7 +327,10 @@ function renderSchematicRecord(
     kind === "34" ||
     kind === "41"
   ) {
-    if (record.getBoolean("ISHIDDEN") && !options.showHidden) return undefined
+    // A net label names a net and remains visible in Altium 365 even when
+    // an exporter adds ISHIDDEN. Parameters/designators can be hidden.
+    if (kind !== "25" && record.getBoolean("ISHIDDEN") && !options.showHidden)
+      return undefined
     if (options.showText === false) return undefined
     const location = getSchematicLocation(record)
     const x = viewport.toX(location.x)
@@ -348,7 +352,6 @@ function renderSchematicRecord(
       : sourceText
     if (!text) return undefined
     const font = getSchematicFont({
-      fallbackSize: 9,
       record,
       sheetRecord: context.sheetRecord,
     })
@@ -486,10 +489,7 @@ function renderSchematicPin(
 ): string {
   const { color, metadata, options, sheetRecord, viewport } = context
   const location = getSchematicLocation(record)
-  const length = Math.max(
-    Number(record.getCaseInsensitive("PINLENGTH") ?? 10),
-    1,
-  )
+  const length = Math.max(getSchematicCoordinate(record, "PINLENGTH", 10), 0)
   const pinConglomerate = record.getNumber("PINCONGLOMERATE")
   const orientation =
     (pinConglomerate ?? Number(record.getCaseInsensitive("ORIENTATION") ?? 0)) &
@@ -548,36 +548,52 @@ function renderSchematicPin(
     x: body.x - screenDirection.x * 2,
     y: body.y - screenDirection.y * 2,
   }
-  const font = getSchematicFont({
-    fallbackSize: 6,
+  const designatorFont = getSchematicFont({
+    pinText: "DESIGNATOR",
     record,
     sheetRecord,
   })
-  const designatorSvg = showDesignator
-    ? renderSchematicPinText({
-        anchor: designatorAnchor,
-        color,
-        dominantBaseline: "text-after-edge",
-        fontAttributes: font.attributes,
-        clockwiseRotationDegrees,
-        svgPosition: designatorPosition,
-        text: designator,
-      })
-    : ""
-  const nameSvg = showName
-    ? renderSchematicPinText({
-        anchor: nameAnchor,
-        color,
-        dominantBaseline: "central",
-        fontAttributes: font.attributes,
-        clockwiseRotationDegrees,
-        svgPosition: namePosition,
-        text: name,
-        useAltiumNegation: true,
-      })
-    : ""
+  const nameFont = getSchematicFont({
+    pinText: "NAME",
+    record,
+    sheetRecord,
+  })
+  const designatorSvg =
+    showDesignator && options.showText !== false
+      ? renderSchematicPinText({
+          anchor: designatorAnchor,
+          color,
+          dominantBaseline: "text-after-edge",
+          fontAttributes: designatorFont.attributes,
+          clockwiseRotationDegrees,
+          svgPosition: designatorPosition,
+          text: designator,
+        })
+      : ""
+  const nameSvg =
+    showName && options.showText !== false
+      ? renderSchematicPinText({
+          anchor: nameAnchor,
+          color,
+          dominantBaseline: "central",
+          fontAttributes: nameFont.attributes,
+          clockwiseRotationDegrees,
+          svgPosition: namePosition,
+          text: name,
+          useAltiumNegation: true,
+        })
+      : ""
 
-  return `<g ${metadata}><line x1="${formatSvgNumber(pinEdgeSymbols.lineStartPosition.x)}" y1="${formatSvgNumber(pinEdgeSymbols.lineStartPosition.y)}" x2="${formatSvgNumber(connection.x)}" y2="${formatSvgNumber(connection.y)}" stroke="${color}" stroke-width="1"/>${pinEdgeSymbols.svg}${designatorSvg}${nameSvg}</g>`
+  const electricalSymbol = renderSchematicPinElectricalSymbol({
+    bodyPosition: body,
+    color,
+    electricalType: readSchematicInteger(
+      record.getCaseInsensitive("ELECTRICAL"),
+      0,
+    ),
+    screenDirection,
+  })
+  return `<g ${metadata}><line x1="${formatSvgNumber(pinEdgeSymbols.lineStartPosition.x)}" y1="${formatSvgNumber(pinEdgeSymbols.lineStartPosition.y)}" x2="${formatSvgNumber(connection.x)}" y2="${formatSvgNumber(connection.y)}" stroke="${color}" stroke-width="1"/>${pinEdgeSymbols.svg}${electricalSymbol}${designatorSvg}${nameSvg}</g>`
 }
 
 function renderSchematicPowerPort(
@@ -634,7 +650,6 @@ function renderSchematicPowerPort(
   if (!text || !showNetName) return `<g ${metadata}>${symbol}</g>`
 
   const font = getSchematicFont({
-    fallbackSize: 10,
     record,
     sheetRecord,
   })
@@ -703,7 +718,6 @@ function renderSchematicTextFrame(
   const width = rectangle.maxX - rectangle.minX
   const height = rectangle.maxY - rectangle.minY
   const font = getSchematicFont({
-    fallbackSize: 9,
     record,
     sheetRecord,
   })
