@@ -5,6 +5,7 @@ import { escapeXml, formatSvgNumber } from "./svg-utils"
 
 type GetSchematicFontInput = {
   fontIdFieldName?: string
+  inheritSystemFont?: boolean
   pinText?: "NAME" | "DESIGNATOR"
   record: AltiumRecord
   sheetRecord: AltiumSchSheetRecord | undefined
@@ -18,14 +19,14 @@ export type SchematicFont = {
 
 export function getSchematicFont({
   fontIdFieldName = "FONTID",
+  inheritSystemFont = true,
   pinText,
   record,
   sheetRecord,
 }: GetSchematicFontInput): SchematicFont {
-  const systemFontId = readSchematicInteger(
-    sheetRecord?.getCaseInsensitive("SYSTEMFONT"),
-    0,
-  )
+  const systemFontId = inheritSystemFont
+    ? readSchematicInteger(sheetRecord?.getCaseInsensitive("SYSTEMFONT"), 0)
+    : 0
   // Pin name and number each have an independent custom-font flag and ID.
   // Older pin records instead store their shared font in FONTID.
   const customPinFont = pinText

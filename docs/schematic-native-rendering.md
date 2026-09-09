@@ -5,7 +5,7 @@ The renderer changes expose native-format mistakes that were hidden by the previ
 The implementation covers:
 
 - Signed integer coordinate fields plus `_FRAC / 100000`, including omitted zero fields. Decimal base values such as `X2=258.08` use the invalid-integer fallback instead of being accepted as valid coordinates.
-- Sheet `SYSTEMFONT`, legacy pin `FONTID`, independently enabled pin name/designator custom-font IDs, and the missing-system-font fallback.
+- Sheet `SYSTEMFONT`, default power-port fonts, legacy pin `FONTID`, independently enabled pin name/designator custom-font IDs, and the missing-system-font fallback.
 - Integer font-size fields (font-table `SIZE*_FRAC` is ignored). Invalid decimal base sizes use the fallback size while retaining the selected family.
 - Visible native net labels even when an exporter adds `ISHIDDEN=T`; supported hidden parameters/designators continue to be hidden.
 - Separate input, output and bidirectional electrical-type indicators. Missing `ELECTRICAL` defaults to input; passive and power pins have no direction indicator.
