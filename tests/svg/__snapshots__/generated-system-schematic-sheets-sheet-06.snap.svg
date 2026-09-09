@@ -1,0 +1,227 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="483" viewBox="0 0 787.52 380.52" role="img" aria-label="GeneratedSystem-06 LM74202 and TPS7E81-Q1 Power Supply" class="altium-sheet" data-renderer="altiumts">
+  <title>GeneratedSystem-06 LM74202 and TPS7E81-Q1 Power Supply</title>
+  <rect width="100%" height="100%" fill="#fffcf8"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <defs><clipPath id="altium-sheet-paper"><rect x="25.76" y="25.76" width="736" height="329"/></clipPath></defs>
+    <g data-record="SheetBorder" fill="#fffef8" stroke="#334155" stroke-width="1"><rect x="25.76" y="25.76" width="736" height="329"/><rect x="35.76" y="35.76" width="716" height="309" fill="none"/><path d="M 155.0933 25.76 V 35.76 M 155.0933 344.76 V 354.76"/><path d="M 274.4267 25.76 V 35.76 M 274.4267 344.76 V 354.76"/><path d="M 393.76 25.76 V 35.76 M 393.76 344.76 V 354.76"/><path d="M 513.0933 25.76 V 35.76 M 513.0933 344.76 V 354.76"/><path d="M 632.4267 25.76 V 35.76 M 632.4267 344.76 V 354.76"/><path d="M 25.76 113.01 H 35.76 M 751.76 113.01 H 761.76"/><path d="M 25.76 190.26 H 35.76 M 751.76 190.26 H 761.76"/><path d="M 25.76 267.51 H 35.76 M 751.76 267.51 H 761.76"/></g>
+    <g data-sheet-content="true" clip-path="url(#altium-sheet-paper)">
+    <line data-record="13" x1="135.76" y1="173.76" x2="135.76" y2="187.76" stroke="#840000" stroke-width="1"/>
+    <line data-record="13" x1="135.76" y1="221.76" x2="135.76" y2="207.76" stroke="#840000" stroke-width="1"/>
+    <polygon data-record="7" points="128.76,187.76 142.76,187.76 135.76,197.76 128.76,187.76" fill="#840000" stroke="#840000" stroke-width="1"/>
+    <polygon data-record="7" points="128.76,207.76 142.76,207.76 135.76,197.76 128.76,207.76" fill="#840000" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="125.76,203.76 129.76,197.76 135.76,197.76" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="135.76,197.76 141.76,197.76 145.76,191.76" fill="none" stroke="#840000" stroke-width="1"/>
+    <text data-record="4" x="0" y="0" fill="#000000" font-family="Arial" font-size="4.4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(137.76 213.76) rotate(0)">TVS</text>
+    <g data-record="2"><line x1="135.76" y1="187.76" x2="135.76" y2="173.76" stroke="#840000" stroke-width="1"/></g>
+    <g data-record="2"><line x1="135.76" y1="207.76" x2="135.76" y2="221.76" stroke="#840000" stroke-width="1"/></g>
+    <polyline data-record="6" points="169.76,135.76 169.76,141.7469" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="169.76,142.5337 169.76,147.76" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="166.5596,143.2451 166.5596,143.2451 166.773,143.1509 166.9863,143.0625 167.1997,142.9801 167.413,142.9036 167.6264,142.8333 167.8398,142.769 168.0531,142.7109 168.2665,142.6591 168.4798,142.6137 168.6932,142.5746 168.9066,142.5421 169.1199,142.516 169.3333,142.4966 169.5466,142.4839 169.76,142.4779 169.9734,142.4839 170.1867,142.4966 170.4001,142.516 170.6134,142.5421 170.8268,142.5746 171.0402,142.6137 171.2535,142.6591 171.4669,142.7109 171.6802,142.769 171.8936,142.8333 172.107,142.9036 172.3203,142.9801 172.5337,143.0625 172.747,143.1509 172.9604,143.2451 172.9604,143.2451" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="166.5596,141.7677 172.9604,141.7677" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="165.76,138.6395 165.76,140.0431" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="166.4618,139.3413 165.0582,139.3413" fill="none" stroke="#840000" stroke-width="1"/>
+    <ellipse data-record="8" cx="180.76" cy="147.76" rx="1" ry="1" fill="none" stroke="#840000" stroke-width="1"/>
+    <ellipse data-record="8" cx="158.76" cy="135.76" rx="1" ry="1" fill="none" stroke="#840000" stroke-width="1"/>
+    <text data-record="34" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(175.76 135.76) rotate(0)">CIN</text>
+    <text data-record="41" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(175.76 147.76) rotate(0)">1uF</text>
+    <g data-record="2"><line x1="169.76" y1="142.76" x2="169.76" y2="147.76" stroke="#840000" stroke-width="1"/></g>
+    <g data-record="2"><line x1="169.76" y1="141.76" x2="169.76" y2="135.76" stroke="#840000" stroke-width="1"/></g>
+    <polyline data-record="6" points="201.76,131.76 201.76,133.7604" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="201.76,141.7596 201.76,143.76" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="203.3596,133.7604 203.3596,141.7596 200.1604,141.7596 200.1604,133.7604 203.3596,133.7604" fill="none" stroke="#840000" stroke-width="1"/>
+    <text data-record="34" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(204.76 134.76) rotate(0)">R1</text>
+    <text data-record="41" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(204.76 140.76) rotate(0)">97.6kΩ</text>
+    <g data-record="2"><line x1="201.76" y1="133.76" x2="201.76" y2="131.76" stroke="#840000" stroke-width="1"/></g>
+    <g data-record="2"><line x1="201.76" y1="141.76" x2="201.76" y2="143.76" stroke="#840000" stroke-width="1"/></g>
+    <polyline data-record="6" points="201.76,187.76 201.76,189.7604" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="201.76,197.7596 201.76,199.76" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="203.3596,189.7604 203.3596,197.7596 200.1604,197.7596 200.1604,189.7604 203.3596,189.7604" fill="none" stroke="#840000" stroke-width="1"/>
+    <text data-record="34" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(204.76 190.76) rotate(0)">R2</text>
+    <text data-record="41" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(204.76 196.76) rotate(0)">5.11kΩ</text>
+    <g data-record="2"><line x1="201.76" y1="189.76" x2="201.76" y2="187.76" stroke="#840000" stroke-width="1"/></g>
+    <g data-record="2"><line x1="201.76" y1="197.76" x2="201.76" y2="199.76" stroke="#840000" stroke-width="1"/></g>
+    <rect data-record="14" x="290.76" y="115.76" width="70" height="100" rx="0" fill="#ffffc2" stroke="#880000" stroke-width="1"/>
+    <text data-record="34" x="0" y="0" fill="#006464" font-family="Arial" font-size="3.6" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(290.76 104.76) rotate(0)">U1</text>
+    <g data-record="2"><line x1="290.76" y1="135.76" x2="282.76" y2="135.76" stroke="#840000" stroke-width="1"/><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(288.76 135.76) rotate(0)">2</text><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(292.76 135.76) rotate(0)">IN</text></g>
+    <g data-record="2"><line x1="290.76" y1="145.76" x2="282.76" y2="145.76" stroke="#840000" stroke-width="1"/><polygon class="altium-schematic-pin-clock-symbol" points="290.76,145.76 285.76,142.76 285.76,148.76" fill="#fff" stroke="#840000" stroke-width="1"/><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(283.76 145.76) rotate(0)">3</text><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(292.76 145.76) rotate(0)">UVLO</text></g>
+    <g data-record="2"><line x1="290.76" y1="153.76" x2="282.76" y2="153.76" stroke="#840000" stroke-width="1"/><polygon class="altium-schematic-pin-clock-symbol" points="290.76,153.76 285.76,150.76 285.76,156.76" fill="#fff" stroke="#840000" stroke-width="1"/><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(283.76 153.76) rotate(0)">5</text><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(292.76 153.76) rotate(0)">OVP</text></g>
+    <g data-record="2"><line x1="290.76" y1="181.76" x2="282.76" y2="181.76" stroke="#840000" stroke-width="1"/><polygon class="altium-schematic-pin-clock-symbol" points="290.76,181.76 285.76,178.76 285.76,184.76" fill="#fff" stroke="#840000" stroke-width="1"/><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(283.76 181.76) rotate(0)">6</text><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(292.76 181.76) rotate(0)">MODE</text></g>
+    <g data-record="2"><line x1="360.76" y1="170.76" x2="368.76" y2="170.76" stroke="#840000" stroke-width="1"/><polygon class="altium-schematic-pin-clock-symbol" points="360.76,170.76 365.76,173.76 365.76,167.76" fill="#fff" stroke="#840000" stroke-width="1"/><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(367.76 170.76) rotate(0)">7</text><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="central" transform="translate(358.76 170.76) rotate(0)">SHDN</text></g>
+    <g data-record="2"><line x1="290.76" y1="195.76" x2="282.76" y2="195.76" stroke="#840000" stroke-width="1"/><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(288.76 195.76) rotate(0)">8</text><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(292.76 195.76) rotate(0)">RTN</text></g>
+    <g data-record="2"><line x1="325.76" y1="215.76" x2="325.76" y2="223.76" stroke="#840000" stroke-width="1"/><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(325.76 217.76) rotate(-90)">9</text><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(325.76 213.76) rotate(-90)">GND</text></g>
+    <g data-record="2"><line x1="360.76" y1="190.76" x2="368.76" y2="190.76" stroke="#840000" stroke-width="1"/><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(362.76 190.76) rotate(0)">10</text><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="central" transform="translate(358.76 190.76) rotate(0)">IMON</text></g>
+    <g data-record="2"><line x1="360.76" y1="204.76" x2="368.76" y2="204.76" stroke="#840000" stroke-width="1"/><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(362.76 204.76) rotate(0)">11</text><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="central" transform="translate(358.76 204.76) rotate(0)">ILIM</text></g>
+    <g data-record="2"><line x1="290.76" y1="167.76" x2="282.76" y2="167.76" stroke="#840000" stroke-width="1"/><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(288.76 167.76) rotate(0)">12</text><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(292.76 167.76) rotate(0)">DVDT</text></g>
+    <g data-record="2"><line x1="360.76" y1="150.76" x2="368.76" y2="150.76" stroke="#840000" stroke-width="1"/><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(362.76 150.76) rotate(0)">14</text><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="central" transform="translate(358.76 150.76) rotate(0)">FLT</text></g>
+    <g data-record="2"><line x1="360.76" y1="126.76" x2="368.76" y2="126.76" stroke="#840000" stroke-width="1"/><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(362.76 126.76) rotate(0)">15</text><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="central" transform="translate(358.76 126.76) rotate(0)">OUT</text></g>
+    <text data-record="4" x="0" y="0" fill="#006464" font-family="Arial" font-size="3.6" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(290.76 108.76) rotate(0)">LM74202QPWPRQ1</text>
+    <polyline data-record="6" points="249.76,247.76 249.76,242.96" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="249.76,240.56 249.76,235.76" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="252.9604,242.96 246.5596,242.96" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="252.9604,240.56 246.5596,240.56" fill="none" stroke="#840000" stroke-width="1"/>
+    <text data-record="34" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(251.76 237.76) rotate(0)">CdVdT</text>
+    <text data-record="41" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-before-edge" transform="translate(251.76 245.76) rotate(0)">12nF</text>
+    <g data-record="2"><line x1="249.76" y1="240.76" x2="249.76" y2="235.76" stroke="#840000" stroke-width="1"/></g>
+    <g data-record="2"><line x1="249.76" y1="242.76" x2="249.76" y2="247.76" stroke="#840000" stroke-width="1"/></g>
+    <polyline data-record="6" points="425.76,133.76 425.76,135.7604" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="425.76,143.7596 425.76,145.76" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="427.3596,135.7604 427.3596,143.7596 424.1604,143.7596 424.1604,135.7604 427.3596,135.7604" fill="none" stroke="#840000" stroke-width="1"/>
+    <text data-record="34" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(428.76 136.76) rotate(0)">RFLTb</text>
+    <text data-record="41" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(428.76 142.76) rotate(0)">100kΩ</text>
+    <g data-record="2"><line x1="425.76" y1="135.76" x2="425.76" y2="133.76" stroke="#840000" stroke-width="1"/></g>
+    <g data-record="2"><line x1="425.76" y1="143.76" x2="425.76" y2="145.76" stroke="#840000" stroke-width="1"/></g>
+    <polyline data-record="6" points="459.76,199.76 459.76,201.7604" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="459.76,209.7596 459.76,211.76" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="461.3596,201.7604 461.3596,209.7596 458.1604,209.7596 458.1604,201.7604 461.3596,201.7604" fill="none" stroke="#840000" stroke-width="1"/>
+    <text data-record="34" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(462.76 202.76) rotate(0)">RIMON</text>
+    <text data-record="41" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(462.76 208.76) rotate(0)">20kΩ</text>
+    <g data-record="2"><line x1="459.76" y1="201.76" x2="459.76" y2="199.76" stroke="#840000" stroke-width="1"/></g>
+    <g data-record="2"><line x1="459.76" y1="209.76" x2="459.76" y2="211.76" stroke="#840000" stroke-width="1"/></g>
+    <polyline data-record="6" points="435.76,215.76 435.76,217.7604" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="435.76,225.7596 435.76,227.76" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="437.3596,217.7604 437.3596,225.7596 434.1604,225.7596 434.1604,217.7604 437.3596,217.7604" fill="none" stroke="#840000" stroke-width="1"/>
+    <text data-record="34" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(438.76 218.76) rotate(0)">RILIM</text>
+    <text data-record="41" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(438.76 224.76) rotate(0)">5.36kΩ</text>
+    <g data-record="2"><line x1="435.76" y1="217.76" x2="435.76" y2="215.76" stroke="#840000" stroke-width="1"/></g>
+    <g data-record="2"><line x1="435.76" y1="225.76" x2="435.76" y2="227.76" stroke="#840000" stroke-width="1"/></g>
+    <polyline data-record="6" points="515.76,139.76 515.76,145.7469" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="515.76,146.5337 515.76,151.76" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="512.5596,147.2451 512.5596,147.2451 512.773,147.1509 512.9863,147.0625 513.1997,146.9801 513.413,146.9036 513.6264,146.8333 513.8398,146.769 514.0531,146.7109 514.2665,146.6591 514.4798,146.6137 514.6932,146.5746 514.9066,146.5421 515.1199,146.516 515.3333,146.4966 515.5466,146.4839 515.76,146.4779 515.9734,146.4839 516.1867,146.4966 516.4001,146.516 516.6134,146.5421 516.8268,146.5746 517.0402,146.6137 517.2535,146.6591 517.4669,146.7109 517.6802,146.769 517.8936,146.8333 518.107,146.9036 518.3203,146.9801 518.5337,147.0625 518.747,147.1509 518.9604,147.2451 518.9604,147.2451" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="512.5596,145.7677 518.9604,145.7677" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="511.76,142.6395 511.76,144.0431" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="512.4618,143.3413 511.0582,143.3413" fill="none" stroke="#840000" stroke-width="1"/>
+    <ellipse data-record="8" cx="526.76" cy="151.76" rx="1" ry="1" fill="none" stroke="#840000" stroke-width="1"/>
+    <ellipse data-record="8" cx="504.76" cy="139.76" rx="1" ry="1" fill="none" stroke="#840000" stroke-width="1"/>
+    <text data-record="34" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(521.76 139.76) rotate(0)">COUT</text>
+    <text data-record="41" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(521.76 151.76) rotate(0)">47uF</text>
+    <g data-record="2"><line x1="515.76" y1="146.76" x2="515.76" y2="151.76" stroke="#840000" stroke-width="1"/></g>
+    <g data-record="2"><line x1="515.76" y1="145.76" x2="515.76" y2="139.76" stroke="#840000" stroke-width="1"/></g>
+    <polyline data-record="6" points="555.76,203.76 555.76,198.96" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="555.76,196.56 555.76,191.76" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="558.9604,198.96 552.5596,198.96" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="558.9604,196.56 552.5596,196.56" fill="none" stroke="#840000" stroke-width="1"/>
+    <text data-record="34" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(557.76 193.76) rotate(0)">C_LDO_IN</text>
+    <text data-record="41" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-before-edge" transform="translate(557.76 201.76) rotate(0)">1uF</text>
+    <g data-record="2"><line x1="555.76" y1="196.76" x2="555.76" y2="191.76" stroke="#840000" stroke-width="1"/></g>
+    <g data-record="2"><line x1="555.76" y1="198.76" x2="555.76" y2="203.76" stroke="#840000" stroke-width="1"/></g>
+    <rect data-record="14" x="585.76" y="145.76" width="40" height="40" rx="0" fill="#ffffc2" stroke="#880000" stroke-width="1"/>
+    <text data-record="34" x="0" y="0" fill="#006464" font-family="Arial" font-size="3.6" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(585.76 134.76) rotate(0)">U2</text>
+    <g data-record="2"><line x1="585.76" y1="153.76" x2="577.76" y2="153.76" stroke="#840000" stroke-width="1"/><polygon class="altium-schematic-pin-clock-symbol" points="585.76,153.76 580.76,150.76 580.76,156.76" fill="#fff" stroke="#840000" stroke-width="1"/><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(578.76 153.76) rotate(0)">1</text><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(587.76 153.76) rotate(0)">IN</text></g>
+    <g data-record="2"><line x1="605.76" y1="185.76" x2="605.76" y2="193.76" stroke="#840000" stroke-width="1"/><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(605.76 187.76) rotate(-90)">2</text><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(605.76 183.76) rotate(-90)">GND</text></g>
+    <g data-record="2"><line x1="585.76" y1="177.76" x2="577.76" y2="177.76" stroke="#840000" stroke-width="1"/><polygon class="altium-schematic-pin-clock-symbol" points="585.76,177.76 580.76,174.76 580.76,180.76" fill="#fff" stroke="#840000" stroke-width="1"/><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(578.76 177.76) rotate(0)">3</text><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(587.76 177.76) rotate(0)">EN</text></g>
+    <g data-record="2"><line x1="625.76" y1="177.76" x2="633.76" y2="177.76" stroke="#840000" stroke-width="1"/><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(627.76 177.76) rotate(0)">4</text><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="central" transform="translate(623.76 177.76) rotate(0)">NC</text></g>
+    <g data-record="2"><line x1="625.76" y1="153.76" x2="633.76" y2="153.76" stroke="#840000" stroke-width="1"/><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(627.76 153.76) rotate(0)">5</text><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="central" transform="translate(623.76 153.76) rotate(0)">OUT</text></g>
+    <text data-record="4" x="0" y="0" fill="#006464" font-family="Arial" font-size="3.6" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(585.76 138.76) rotate(0)">TPS7E8133QDBVRQ1</text>
+    <polyline data-record="6" points="661.76,203.76 661.76,198.96" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="661.76,196.56 661.76,191.76" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="664.9604,198.96 658.5596,198.96" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="664.9604,196.56 658.5596,196.56" fill="none" stroke="#840000" stroke-width="1"/>
+    <text data-record="34" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(663.76 193.76) rotate(0)">C_LDO_OUT</text>
+    <text data-record="41" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-before-edge" transform="translate(663.76 201.76) rotate(0)">2.2uF</text>
+    <g data-record="2"><line x1="661.76" y1="196.76" x2="661.76" y2="191.76" stroke="#840000" stroke-width="1"/></g>
+    <g data-record="2"><line x1="661.76" y1="198.76" x2="661.76" y2="203.76" stroke="#840000" stroke-width="1"/></g>
+    <polyline data-record="27" points="201.76,187.76 201.76,143.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="282.76,153.76 201.76,153.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="201.76,153.76 201.76,143.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="249.76,235.76 249.76,233.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="249.76,233.76 249.76,167.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="249.76,167.76 282.76,167.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="435.76,215.76 435.76,204.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="435.76,204.76 368.76,204.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="169.76,135.76 169.76,133.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="169.76,133.76 169.76,127.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="169.76,127.76 135.76,127.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="135.76,127.76 135.76,173.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="201.76,131.76 201.76,127.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="201.76,127.76 169.76,127.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="169.76,127.76 169.76,133.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="169.76,133.76 169.76,135.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="282.76,135.76 278.76,135.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="278.76,135.76 278.76,127.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="278.76,127.76 201.76,127.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="201.76,127.76 201.76,131.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="282.76,145.76 278.76,145.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="278.76,145.76 278.76,135.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="278.76,135.76 282.76,135.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="201.76,199.76 201.76,232.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="201.76,232.76 135.76,232.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="135.76,232.76 135.76,228.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="135.76,228.76 135.76,221.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="169.76,147.76 169.76,149.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="169.76,149.76 169.76,203.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="169.76,203.76 201.76,203.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="201.76,203.76 201.76,199.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="282.76,195.76 250.76,195.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="250.76,195.76 248.76,195.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="248.76,195.76 242.76,195.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="242.76,195.76 242.76,203.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="242.76,203.76 201.76,203.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="201.76,203.76 201.76,199.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="282.76,181.76 278.76,181.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="278.76,181.76 278.76,195.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="278.76,195.76 282.76,195.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="249.76,247.76 249.76,249.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="249.76,249.76 249.76,253.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="249.76,253.76 266.76,253.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="266.76,253.76 266.76,195.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="266.76,195.76 282.76,195.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="435.76,227.76 435.76,231.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="435.76,231.76 459.76,231.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="459.76,231.76 459.76,211.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="555.76,203.76 555.76,205.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="555.76,205.76 555.76,209.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="555.76,209.76 515.76,209.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="515.76,209.76 515.76,153.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="515.76,153.76 515.76,151.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="515.76,139.76 515.76,137.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="515.76,137.76 515.76,129.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="515.76,129.76 425.76,129.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="425.76,129.76 425.76,133.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="577.76,153.76 539.76,153.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="539.76,153.76 539.76,133.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="539.76,133.76 515.76,133.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="515.76,133.76 515.76,137.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="515.76,137.76 515.76,139.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="555.76,191.76 555.76,189.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="555.76,189.76 555.76,181.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="555.76,181.76 539.76,181.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="539.76,181.76 539.76,153.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="539.76,153.76 577.76,153.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="325.76,223.76 325.76,226.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="325.76,226.76 324.76,226.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="605.76,193.76 605.76,196.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="605.76,196.76 604.76,196.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="368.76,170.76 396.76,170.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="577.76,177.76 549.76,177.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="425.76,145.76 425.76,173.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="459.76,199.76 459.76,174.76" fill="none" stroke="#008800" stroke-width="1"/>
+    <circle data-record="29" cx="201.76" cy="153.76" r="1.8" fill="#008800"/>
+    <circle data-record="29" cx="169.76" cy="127.76" r="1.8" fill="#008800"/>
+    <circle data-record="29" cx="201.76" cy="127.76" r="1.8" fill="#008800"/>
+    <circle data-record="29" cx="278.76" cy="135.76" r="1.8" fill="#008800"/>
+    <circle data-record="29" cx="201.76" cy="203.76" r="1.8" fill="#008800"/>
+    <circle data-record="29" cx="278.76" cy="195.76" r="1.8" fill="#008800"/>
+    <circle data-record="29" cx="266.76" cy="195.76" r="1.8" fill="#008800"/>
+    <circle data-record="29" cx="515.76" cy="133.76" r="1.8" fill="#008800"/>
+    <circle data-record="29" cx="539.76" cy="153.76" r="1.8" fill="#008800"/>
+    <g data-record="17"><path d="M 201.76 127.76 L 201.76 119.76 M 196.76 119.76 L 206.76 119.76" fill="none" stroke="#840000" stroke-width="1"/><text x="201.76" y="115.76" text-anchor="middle" dominant-baseline="auto" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none">VIN</text></g>
+    <g data-record="17"><path d="M 249.76 253.76 L 249.76 261.76 M 254.76 261.76 L 244.76 261.76" fill="none" stroke="#840000" stroke-width="1"/><text x="249.76" y="265.76" text-anchor="middle" dominant-baseline="hanging" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none">GND</text></g>
+    <g data-record="17"><path d="M 435.76 231.76 L 435.76 239.76 M 440.76 239.76 L 430.76 239.76" fill="none" stroke="#840000" stroke-width="1"/><text x="435.76" y="243.76" text-anchor="middle" dominant-baseline="hanging" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none">GND</text></g>
+    <g data-record="17"><path d="M 555.76 209.76 L 555.76 217.76 M 560.76 217.76 L 550.76 217.76" fill="none" stroke="#840000" stroke-width="1"/><text x="555.76" y="221.76" text-anchor="middle" dominant-baseline="hanging" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none">GND</text></g>
+    <g data-record="17"><path d="M 661.76 203.76 L 661.76 211.76 M 666.76 211.76 L 656.76 211.76" fill="none" stroke="#840000" stroke-width="1"/><text x="661.76" y="215.76" text-anchor="middle" dominant-baseline="hanging" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none">GND</text></g>
+    <text data-record="25" x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="central" transform="translate(324.76 226.76) rotate(0)">U9_GND</text>
+    <text data-record="25" x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(368.76 190.76) rotate(0)">U1_GPIO_PA14</text>
+    <text data-record="25" x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(368.76 150.76) rotate(0)">U1_GPIO_PA15</text>
+    <text data-record="25" x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(368.76 126.76) rotate(0)">D3_pin1</text>
+    <g data-record="17"><path d="M 515.76 129.76 L 515.76 121.76 M 510.76 121.76 L 520.76 121.76" fill="none" stroke="#840000" stroke-width="1"/><text x="515.76" y="117.76" text-anchor="middle" dominant-baseline="auto" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none">VOUT</text></g>
+    <text data-record="25" x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="central" transform="translate(604.76 196.76) rotate(0)">U6_GND</text>
+    <text data-record="25" x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(633.76 153.76) rotate(0)">R22_pin1</text>
+    <g data-record="17"><path d="M 661.76 191.76 L 661.76 183.76 M 656.76 183.76 L 666.76 183.76" fill="none" stroke="#840000" stroke-width="1"/><text x="661.76" y="179.76" text-anchor="middle" dominant-baseline="auto" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none">V3P3</text></g>
+    <path data-record="22" d="M 629.76 173.76 L 637.76 181.76 M 637.76 173.76 L 629.76 181.76" fill="none" stroke="#ff0000" stroke-width="1"/>
+    <text data-record="4" x="0" y="0" fill="#840000" font-family="Arial" font-size="2.4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(370.76 169.76) rotate(0)">ON_OFF_CONTROL</text>
+    <text data-record="4" x="0" y="0" fill="#840000" font-family="Arial" font-size="2.4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="central" transform="translate(575.76 176.76) rotate(0)">ON_OFF_CONTROL</text>
+    <text data-record="4" x="0" y="0" fill="#840000" font-family="Arial" font-size="2.4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="central" transform="translate(424.76 147.76) rotate(-90)">HEALTH_MONITOR</text>
+    <text data-record="4" x="0" y="0" fill="#840000" font-family="Arial" font-size="2.4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(458.76 197.76) rotate(-90)">LOAD_MONITOR</text>
+    </g>
+  </g>
+</svg>
