@@ -25,12 +25,12 @@ export function getPcbDocumentBounds(
     return document.records.reduce(
       (bounds, record) =>
         record.recordKind === "Dimension" ||
-        isBoardMountedOverlayTrack(
+        isBoardMountedOverlayTrack({
           document,
           record,
-          outlineBounds,
+          boardBounds: outlineBounds,
           requestedLayers,
-        )
+        })
           ? (mergeBounds(bounds, getPcbRecordBounds(record)) ?? bounds)
           : bounds,
       outlineBounds,
@@ -45,12 +45,17 @@ export function getPcbDocumentBounds(
   return bounds ?? { minX: 0, minY: 0, maxX: 1000, maxY: 800 }
 }
 
-function isBoardMountedOverlayTrack(
-  document: AltiumPcbDocument,
-  record: AltiumRecord,
-  boardBounds: SvgBounds,
-  requestedLayers?: string[],
-): boolean {
+function isBoardMountedOverlayTrack({
+  boardBounds,
+  document,
+  record,
+  requestedLayers,
+}: {
+  boardBounds: SvgBounds
+  document: AltiumPcbDocument
+  record: AltiumRecord
+  requestedLayers?: string[]
+}): boolean {
   if (record.recordKind !== "Track") return false
   const layer = normalizeLayerName(record.getDecoded("LAYER") ?? "")
   if (layer !== "TOPOVERLAY" && layer !== "BOTTOMOVERLAY") return false
