@@ -4,8 +4,8 @@ import { parseAltiumAscii, serializeAltiumSheetToSvg } from "../../lib"
 test("renders schematic pin text with its sheet font", async () => {
   const source = [
     "|HEADER=Protel for Windows - Schematic Capture Ascii File Version 5.0",
-    "|RECORD=31|FONTIDCOUNT=2|SIZE2=4|FONTNAME2=Helvetica|BOLD2=T|ITALIC2=T|CUSTOMX=100|CUSTOMY=80",
-    "|RECORD=2|PINCONGLOMERATE=58|PINLENGTH=10|LOCATION.X=40|LOCATION.Y=40|FONTID=2|NAME=INPUT|DESIGNATOR=1",
+    "|RECORD=31|SYSTEMFONT=2|FONTIDCOUNT=2|SIZE2=4|FONTNAME2=Helvetica|BOLD2=T|ITALIC2=T|CUSTOMX=100|CUSTOMY=80",
+    "|RECORD=2|PINCONGLOMERATE=58|PINLENGTH=10|LOCATION.X=40|LOCATION.Y=40|FONTID=1|NAME=INPUT|DESIGNATOR=1",
   ].join("\n")
   const svg = serializeAltiumSheetToSvg(parseAltiumAscii(source), {
     title: "Schematic pin font",
@@ -15,10 +15,10 @@ test("renders schematic pin text with its sheet font", async () => {
     'font-family="Helvetica" font-size="4" font-style="italic" font-weight="bold"',
   )
   expect(svg).toContain(
-    'dominant-baseline="text-after-edge" transform="translate(41.5 43.5) rotate(0)">1</text>',
+    'dominant-baseline="text-after-edge" transform="translate(34.5 43.5) rotate(0)">1</text>',
   )
   expect(svg).toContain(
-    'dominant-baseline="central" transform="translate(45.5 43.5) rotate(0)">INPUT</text>',
+    'dominant-baseline="central" transform="translate(50.5 43.5) rotate(0)">INPUT</text>',
   )
   expect(svg).not.toContain('font-size="6"')
   await expect(svg).toMatchSvgSnapshot(import.meta.path)

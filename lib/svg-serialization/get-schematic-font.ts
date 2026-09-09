@@ -1,10 +1,11 @@
 import type { AltiumRecord } from "../records/altium-record"
 import type { AltiumSchSheetRecord } from "../records/altium-schematic-records"
+import { readSchematicInteger } from "./altium-values"
 import { escapeXml, formatSvgNumber } from "./svg-utils"
 
 type GetSchematicFontInput = {
-  fallbackSize: number
   fontIdFieldName?: string
+  pinText?: "NAME" | "DESIGNATOR"
   record: AltiumRecord
   sheetRecord: AltiumSchSheetRecord | undefined
 }
@@ -16,21 +17,48 @@ export type SchematicFont = {
 }
 
 export function getSchematicFont({
-  fallbackSize,
   fontIdFieldName = "FONTID",
+  pinText,
   record,
   sheetRecord,
 }: GetSchematicFontInput): SchematicFont {
-  const fontId = Math.max(
-    Math.round(Number(record.getCaseInsensitive(fontIdFieldName) ?? 1)),
-    1,
+  const systemFontId = readSchematicInteger(
+    sheetRecord?.getCaseInsensitive("SYSTEMFONT"),
+    0,
   )
-  const size = Math.max(
-    Number(sheetRecord?.getCaseInsensitive(`SIZE${fontId}`) ?? fallbackSize),
-    1,
-  )
+  // Pin name and number each have an independent custom-font flag and ID.
+  // Generic FONTID on RECORD=2 is not a native pin font override.
+  const customPinFont = pinText
+    ? (readSchematicInteger(
+        record.getCaseInsensitive(`PIN${pinText}_POSITIONCONGLOMERATE`),
+        0,
+      ) &
+        0x10) !==
+      0
+    : false
+  const requestedFontId = pinText
+    ? customPinFont
+      ? readSchematicInteger(
+          record.getCaseInsensitive(`${pinText}_CUSTOMFONTID`),
+          systemFontId,
+        )
+      : systemFontId
+    : readSchematicInteger(
+        record.getCaseInsensitive(fontIdFieldName),
+        systemFontId,
+      )
+  // A missing system font uses Altium's Times New Roman 10 default. An
+  // invalid SIZE token falls back to 10, retaining the selected family;
+  // this reproduces the fallback seen in the supplied Altium 365 capture.
+  const fontId = requestedFontId > 0 ? requestedFontId : systemFontId
+  // SIZE is a native integer font-table entry, not a coordinate.
+  // In particular, SIZE*_FRAC does not increase the native font size.
+  const selectedSize = sheetRecord
+    ? readSchematicInteger(sheetRecord.getCaseInsensitive(`SIZE${fontId}`), 10)
+    : 10
+  const size = selectedSize > 0 ? selectedSize : 10
   const family =
-    sheetRecord?.getDecoded(`FONTNAME${fontId}`) ?? "Arial, sans-serif"
+    sheetRecord?.getDecoded(`FONTNAME${fontId}`) ?? "Times New Roman"
   const weight =
     sheetRecord?.getBoolean(`BOLD${fontId}`) === true ? "bold" : "normal"
   const style =

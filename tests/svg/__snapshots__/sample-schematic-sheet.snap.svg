@@ -18,12 +18,12 @@
     <text data-record="4" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(688.5 858.5) rotate(0)">=CurrentDate</text>
     <text data-record="4" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(773.5 858.5) rotate(0)">=CurrentTime</text>
     <text data-record="4" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(688.5 868.5) rotate(0)">=DocumentFullPathAndName</text>
-    <polyline data-record="6" points="1018.5,808.5 658.5,808.5 658.5,868.5" fill="none" stroke="#1f2937" stroke-width="1"/>
-    <polyline data-record="6" points="658.5,828.5 908.5,828.5" fill="none" stroke="#1f2937" stroke-width="1"/>
-    <polyline data-record="6" points="728.5,828.5 728.5,848.5" fill="none" stroke="#1f2937" stroke-width="1"/>
-    <polyline data-record="6" points="1018.5,858.5 658.5,858.5" fill="none" stroke="#1f2937" stroke-width="1"/>
-    <polyline data-record="6" points="818.5,828.5 818.5,858.5" fill="none" stroke="#1f2937" stroke-width="1"/>
-    <polyline data-record="6" points="1118.5,808.5 1018.5,808.5 1018.5,858.5" fill="none" stroke="#1f2937" stroke-width="1"/>
+    <polyline data-record="6" vector-effect="non-scaling-stroke" points="1018.5,808.5 658.5,808.5 658.5,868.5" fill="none" stroke="#1f2937" stroke-width="1"/>
+    <polyline data-record="6" vector-effect="non-scaling-stroke" points="658.5,828.5 908.5,828.5" fill="none" stroke="#1f2937" stroke-width="1"/>
+    <polyline data-record="6" vector-effect="non-scaling-stroke" points="728.5,828.5 728.5,848.5" fill="none" stroke="#1f2937" stroke-width="1"/>
+    <polyline data-record="6" vector-effect="non-scaling-stroke" points="1018.5,858.5 658.5,858.5" fill="none" stroke="#1f2937" stroke-width="1"/>
+    <polyline data-record="6" vector-effect="non-scaling-stroke" points="818.5,828.5 818.5,858.5" fill="none" stroke="#1f2937" stroke-width="1"/>
+    <polyline data-record="6" vector-effect="non-scaling-stroke" points="1118.5,808.5 1018.5,808.5 1018.5,858.5" fill="none" stroke="#1f2937" stroke-width="1"/>
     <text data-record="4" x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(663.5 823.5) rotate(0)">Title</text>
     <text data-record="4" x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(663.5 843.5) rotate(0)">Size:</text>
     <text data-record="4" x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(733.5 843.5) rotate(0)">Number:</text>
@@ -32,12 +32,13 @@
     <text data-record="4" x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(823.5 843.5) rotate(0)">Revision:</text>
     <text data-record="4" x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(823.5 858.5) rotate(0)">Sheet</text>
     <text data-record="4" x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(857.5 858.5) rotate(0)">of</text>
-    <polyline data-record="6" points="908.5,808.5 908.5,858.5" fill="none" stroke="#1f2937" stroke-width="1"/>
+    <polyline data-record="6" vector-effect="non-scaling-stroke" points="908.5,808.5 908.5,858.5" fill="none" stroke="#1f2937" stroke-width="1"/>
     <text data-record="4" x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(748.5 858.5) rotate(0)">Time:</text>
     <text data-record="4" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="12" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(688.5 844.5) rotate(0)">Letter</text>
-    <polyline data-record="6" points="658.5,848.5 908.5,848.5" fill="none" stroke="#1f2937" stroke-width="1"/>
-    <polyline data-record="6" points="1018.5,858.5 1118.5,858.5" fill="none" stroke="#1f2937" stroke-width="1"/>
+    <polyline data-record="6" vector-effect="non-scaling-stroke" points="658.5,848.5 908.5,848.5" fill="none" stroke="#1f2937" stroke-width="1"/>
+    <polyline data-record="6" vector-effect="non-scaling-stroke" points="1018.5,858.5 1118.5,858.5" fill="none" stroke="#1f2937" stroke-width="1"/>
     <g data-record="30"><rect x="1023.5" y="813.5" width="90" height="40" fill="#f1f5f9" stroke="#64748b"/><path d="M 1023.5 813.5 l 90 40 M 1113.5 813.5 l -90 40" stroke="#94a3b8"/></g>
+    <polygon data-record="7" vector-effect="non-scaling-stroke" points="528.5,388.5 534.5,390.5 534.5,386.5" fill="#0000ff" stroke="#0000ff" stroke-width="1"/>
     <g data-record="2"><line x1="538.5" y1="378.5" x2="538.5" y2="358.5" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="518.5" y1="388.5" x2="498.5" y2="388.5" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="538.5" y1="398.5" x2="538.5" y2="418.5" stroke="#1f2937" stroke-width="1"/></g>
@@ -50,7 +51,6 @@
     <polyline data-record="6" points="528.5,390.5 528.5,386.5" fill="none" stroke="#0000ff" stroke-width="1"/>
     <polyline data-record="6" points="528.5,397.5 528.5,393.5" fill="none" stroke="#0000ff" stroke-width="1"/>
     <polyline data-record="6" points="518.5,388.5 526.5,388.5" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polygon data-record="7" points="528.5,388.5 534.5,390.5 534.5,386.5" fill="#0000ff" stroke="#0000ff" stroke-width="1"/>
     <polyline data-record="6" points="538.5,381.5 538.5,378.5" fill="none" stroke="#0000ff" stroke-width="1"/>
     <polyline data-record="6" points="538.5,381.5 538.5,378.5" fill="none" stroke="#0000ff" stroke-width="1"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(541.5 387.5) rotate(0)">Q1</text>

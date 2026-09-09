@@ -106,7 +106,6 @@ export function renderSchematicSheetEntry({
   })
   const name = record.getDecoded("NAME") ?? ""
   const font = getSchematicFont({
-    fallbackSize: 8,
     fontIdFieldName: "TEXTFONTID",
     record,
     sheetRecord: context.sheetRecord,
