@@ -18,7 +18,6 @@ export function getPcbBoardOutline(document: AltiumPcbDocument): SvgPoint[] {
 
 export function getPcbDocumentBounds(
   document: AltiumPcbDocument,
-  requestedLayers?: string[],
 ): SvgBounds {
   const outlineBounds = boundsFromPoints(getPcbBoardOutline(document))
   if (outlineBounds) {
