@@ -7,7 +7,7 @@ import {
   parsePcbMeasurement,
 } from "./altium-values"
 import { getPcbDimensionGeometry } from "./pcb-dimension-geometry"
-import { normalizeLayerName, recordAppliesToLayers } from "./pcb-layer"
+import { normalizeLayerName } from "./pcb-layer"
 import { getPcbPadGeometry } from "./pcb-pad-geometry"
 import type { SvgBounds, SvgPoint } from "./svg-types"
 import { boundsFromPoints, expandBounds, mergeBounds } from "./svg-utils"
@@ -16,9 +16,7 @@ export function getPcbBoardOutline(document: AltiumPcbDocument): SvgPoint[] {
   return document.boardGeometry.outline.points
 }
 
-export function getPcbDocumentBounds(
-  document: AltiumPcbDocument,
-): SvgBounds {
+export function getPcbDocumentBounds(document: AltiumPcbDocument): SvgBounds {
   const outlineBounds = boundsFromPoints(getPcbBoardOutline(document))
   if (outlineBounds) {
     return document.records.reduce(
@@ -28,7 +26,6 @@ export function getPcbDocumentBounds(
           document,
           record,
           boardBounds: outlineBounds,
-          requestedLayers,
         })
           ? (mergeBounds(bounds, getPcbRecordBounds(record)) ?? bounds)
           : bounds,
@@ -48,17 +45,14 @@ function isBoardMountedOverlayTrack({
   boardBounds,
   document,
   record,
-  requestedLayers,
 }: {
   boardBounds: SvgBounds
   document: AltiumPcbDocument
   record: AltiumRecord
-  requestedLayers?: string[]
 }): boolean {
   if (record.recordKind !== "Track") return false
   const layer = normalizeLayerName(record.getDecoded("LAYER") ?? "")
   if (layer !== "TOPOVERLAY" && layer !== "BOTTOMOVERLAY") return false
-  if (!recordAppliesToLayers(record, requestedLayers)) return false
   const componentIndex = record.getNumber("COMPONENT")
   if (componentIndex === undefined) return false
   const component = getPcbComponentByIndex(document, componentIndex)
