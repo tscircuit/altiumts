@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="720" viewBox="0 0 1070 770" role="img" aria-label="Mechanical 7 component designator repro" class="altium-pcb" data-renderer="altiumts">
-  <title>Mechanical 7 component designator repro</title>
-  <rect width="100%" height="100%" fill="#071a16"/>
-  <g stroke-linecap="round" stroke-linejoin="round">
-    <polygon data-record="BoardOutline" points="35,735 1035,735 1035,35 35,35 35,735" fill="#123d32" stroke="#6ee7b7" stroke-width="3"/>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="80" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="central" transform="translate(535 235) rotate(0) scale(1 1)">.Designator</text>
-    <rect data-record="Fill" data-layer="TOPOVERLAY" data-keepout="false" x="385" y="285" width="300" height="200" fill="#f8fafc" fill-opacity="0.6"/>
-  </g>
-</svg>
