@@ -27,7 +27,7 @@ export function getSchematicFont({
     0,
   )
   // Pin name and number each have an independent custom-font flag and ID.
-  // Generic FONTID on RECORD=2 is not a native pin font override.
+  // Older pin records instead store their shared font in FONTID.
   const customPinFont = pinText
     ? (readSchematicInteger(
         record.getCaseInsensitive(`PIN${pinText}_POSITIONCONGLOMERATE`),
@@ -36,13 +36,25 @@ export function getSchematicFont({
         0x10) !==
       0
     : false
+  const recordFontId = readSchematicInteger(
+    record.getCaseInsensitive("FONTID"),
+    systemFontId,
+  )
+  const legacyPinFontId =
+    pinText &&
+    record.getCaseInsensitive("PINNAME_POSITIONCONGLOMERATE") === undefined &&
+    record.getCaseInsensitive("PINDESIGNATOR_POSITIONCONGLOMERATE") ===
+      undefined &&
+    sheetRecord?.getCaseInsensitive(`SIZE${recordFontId}`) !== undefined
+      ? recordFontId
+      : systemFontId
   const requestedFontId = pinText
     ? customPinFont
       ? readSchematicInteger(
           record.getCaseInsensitive(`${pinText}_CUSTOMFONTID`),
           systemFontId,
         )
-      : systemFontId
+      : legacyPinFontId
     : readSchematicInteger(
         record.getCaseInsensitive(fontIdFieldName),
         systemFontId,
