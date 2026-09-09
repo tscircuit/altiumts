@@ -55,7 +55,8 @@ for (const sheetNumber of sheetNumbers) {
     }
     // Native image payloads are large and are covered by focused extraction
     // and renderer tests instead of duplicating megabytes of data URLs here.
-    if (!imageSheets.has(sheetNumber)) {
+    // Sheet 57 is snapshotted to verify text sizing and component image layout.
+    if (!imageSheets.has(sheetNumber) || sheetNumber === "57") {
       await expect(svg).toMatchSvgSnapshot(
         import.meta.path,
         `sheet-${sheetNumber}`,

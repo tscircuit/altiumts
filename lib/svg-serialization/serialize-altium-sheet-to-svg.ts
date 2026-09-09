@@ -408,7 +408,11 @@ function renderSchematicRecord(
         if (record.getBoolean("KEEPASPECT") === false) {
           preserveAspectRatio = "none"
         }
-        return `<image ${metadata} x="${formatSvgNumber(left)}" y="${formatSvgNumber(top)}" width="${formatSvgNumber(width)}" height="${formatSvgNumber(height)}" xlink:href="${dataUrl}" preserveAspectRatio="${preserveAspectRatio}"/>`
+        const border =
+          record.getCaseInsensitive("COLOR") !== undefined
+            ? `\n<rect ${metadata} x="${formatSvgNumber(left)}" y="${formatSvgNumber(top)}" width="${formatSvgNumber(width)}" height="${formatSvgNumber(height)}" fill="none" stroke="${color}" stroke-width="${formatSvgNumber(lineWidth)}"/>`
+            : ""
+        return `<image ${metadata} x="${formatSvgNumber(left)}" y="${formatSvgNumber(top)}" width="${formatSvgNumber(width)}" height="${formatSvgNumber(height)}" xlink:href="${dataUrl}" preserveAspectRatio="${preserveAspectRatio}"/>${border}`
       }
     }
     return `<g ${metadata}><rect x="${formatSvgNumber(left)}" y="${formatSvgNumber(top)}" width="${formatSvgNumber(width)}" height="${formatSvgNumber(height)}" fill="#f1f5f9" stroke="#64748b"/><path d="M ${formatSvgNumber(left)} ${formatSvgNumber(top)} l ${formatSvgNumber(width)} ${formatSvgNumber(height)} M ${formatSvgNumber(left + width)} ${formatSvgNumber(top)} l ${formatSvgNumber(-width)} ${formatSvgNumber(height)}" stroke="#94a3b8"/></g>`
