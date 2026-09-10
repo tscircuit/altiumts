@@ -1,6 +1,6 @@
+import { describe, expect, test } from "bun:test"
 import { readFile } from "node:fs/promises"
 import { resolve } from "node:path"
-import { describe, expect, test } from "bun:test"
 import {
   AltiumSchDifferentialPairRecord,
   AltiumSchDoc,

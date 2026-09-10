@@ -8,10 +8,12 @@ test("renders component =Value special strings from a real board", async () => {
   const crystal = document.components.find(
     (component) => component.getDecoded("LibReference") === "XTAL",
   )
-  expect(crystal).toBeDefined()
+  if (!crystal) {
+    throw new Error("Expected an XTAL component in stm32-st-link-v2.SchDoc")
+  }
   expect(
     document
-      .getOwnedRecords(crystal!)
+      .getOwnedRecords(crystal)
       .some((record) => record.getDecoded("Text") === "8MHz(12pF)"),
   ).toBe(true)
   const svg = serializeAltiumSheetToSvg(document, {
