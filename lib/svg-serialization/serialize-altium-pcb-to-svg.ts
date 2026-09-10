@@ -1,4 +1,5 @@
 import type { AltiumPcbDocument } from "../altium-pcb-document"
+import { decodeAltiumWideString } from "../decode-altium-wide-string"
 import { getPcbRegionSemanticKind } from "../pcb-contours"
 import {
   getPcbRecordComponentIndex,
@@ -111,6 +112,7 @@ export function serializeAltiumPcbToSvg(
         !polygonIndexesWithRegionRecords.has(polygonIndex))
     const rendered = renderPcbRecord({
       record,
+      text: resolveComponentText(record, componentLookup),
       shouldFillPolygon,
       svgOptions: {
         showHoles: true,
@@ -132,6 +134,27 @@ export function serializeAltiumPcbToSvg(
     title: options.title ?? `Altium PCB${layerTitle}`,
     viewport,
   })
+}
+
+function resolveComponentText(
+  record: AltiumRecord,
+  componentLookup: ReadonlyMap<number, AltiumRecord>,
+): string | undefined {
+  if (record.recordKind !== "Text") return undefined
+  const text =
+    decodeAltiumWideString(record.getDecoded("WIDESTRING")) ||
+    record.getDecoded("TEXT")
+  if (text !== ".Designator" && text !== ".Comment") return undefined
+  const componentIndex = record.getNumber("COMPONENT")
+  const component =
+    componentIndex === undefined
+      ? undefined
+      : componentLookup.get(componentIndex)
+  const value =
+    text === ".Designator"
+      ? component?.getDecoded("SOURCEDESIGNATOR")
+      : component?.getDecoded("SOURCECOMMENT")
+  return value ?? ""
 }
 
 function recordAppliesToReferences(

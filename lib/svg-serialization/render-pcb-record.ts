@@ -24,11 +24,13 @@ const COPPER_FILL_OPACITY = 0.32
 
 export function renderPcbRecord({
   record,
+  text,
   shouldFillPolygon,
   svgOptions,
   viewport,
 }: {
   record: AltiumRecord
+  text?: string
   shouldFillPolygon: boolean
   svgOptions: AltiumPcbSvgOptions
   viewport: SvgViewport
@@ -131,11 +133,12 @@ export function renderPcbRecord({
   }
 
   if (kind === "Text" && svgOptions.showText !== false) {
-    const text =
-      decodeAltiumWideString(record.getDecoded("WIDESTRING")) ||
-      record.getDecoded("TEXT") ||
-      ""
-    const normalizedText = text.replace(/[ \t]+$/gm, "")
+    const recordText =
+      text ??
+      (decodeAltiumWideString(record.getDecoded("WIDESTRING")) ||
+        record.getDecoded("TEXT") ||
+        "")
+    const normalizedText = trimPcbTextLineEnds(recordText)
     if (!normalizedText) return undefined
     const x = viewport.toX(getPcbMeasurement(record, "X"))
     const y = viewport.toY(getPcbMeasurement(record, "Y"))
@@ -166,6 +169,21 @@ export function renderPcbRecord({
   }
 
   return undefined
+}
+
+function trimPcbTextLineEnds(text: string): string {
+  // Match the previous /[ \t]+$/gm behavior exactly. trimEnd() would also
+  // remove other Unicode whitespace that can be meaningful in PCB text.
+  return text
+    .split("\n")
+    .map((line) => {
+      let end = line.length
+      while (end > 0 && (line[end - 1] === " " || line[end - 1] === "\t")) {
+        end--
+      }
+      return line.slice(0, end)
+    })
+    .join("\n")
 }
 
 function renderPad(

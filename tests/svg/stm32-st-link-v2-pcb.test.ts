@@ -16,5 +16,6 @@ test("renders the complete STM32 ST-Link V2.1 binary PCB", async () => {
     maxX: 2501.1024,
     maxY: 2477.7401,
   })
+  expect(svg).not.toContain(".Designator")
   await expect(svg).toMatchSvgSnapshot(import.meta.path)
 }, 20_000)
