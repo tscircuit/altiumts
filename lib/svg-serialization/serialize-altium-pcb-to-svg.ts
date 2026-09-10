@@ -48,6 +48,7 @@ export function serializeAltiumPcbToSvg(
   const boardCutouts =
     options.showBoardCutouts === false ? [] : document.boardGeometry.cutouts
   const componentLookup = createComponentLookup(document)
+  const componentCommentLookup = createComponentCommentLookup(document)
   const polygonIndexesWithRegionRecords = new Set(
     document.records.flatMap((record) => {
       if (
@@ -112,7 +113,11 @@ export function serializeAltiumPcbToSvg(
         !polygonIndexesWithRegionRecords.has(polygonIndex))
     const rendered = renderPcbRecord({
       record,
-      text: resolveComponentText(record, componentLookup),
+      text: resolveComponentText(
+        record,
+        componentLookup,
+        componentCommentLookup,
+      ),
       shouldFillPolygon,
       svgOptions: {
         showHoles: true,
@@ -139,22 +144,56 @@ export function serializeAltiumPcbToSvg(
 function resolveComponentText(
   record: AltiumRecord,
   componentLookup: ReadonlyMap<number, AltiumRecord>,
+  componentCommentLookup: ReadonlyMap<number, string>,
 ): string | undefined {
   if (record.recordKind !== "Text") return undefined
-  const text =
-    decodeAltiumWideString(record.getDecoded("WIDESTRING")) ||
-    record.getDecoded("TEXT")
-  if (text !== ".Designator" && text !== ".Comment") return undefined
+  const text = getPcbText(record)
+  const specialString = text.toLowerCase()
+  if (specialString !== ".designator" && specialString !== ".comment") {
+    return undefined
+  }
   const componentIndex = record.getNumber("COMPONENT")
   const component =
     componentIndex === undefined
       ? undefined
       : componentLookup.get(componentIndex)
   const value =
-    text === ".Designator"
-      ? component?.getDecoded("SOURCEDESIGNATOR")
-      : component?.getDecoded("SOURCECOMMENT")
+    specialString === ".designator"
+      ? (component?.getDecoded("SOURCEDESIGNATOR") ??
+        component?.getDecoded("DESIGNATOR"))
+      : ((componentIndex === undefined
+          ? undefined
+          : componentCommentLookup.get(componentIndex)) ??
+        component?.getDecoded("SOURCEDESCRIPTION") ??
+        component?.getDecoded("COMMENT"))
   return value ?? ""
+}
+
+function createComponentCommentLookup(
+  document: AltiumPcbDocument,
+): ReadonlyMap<number, string> {
+  const lookup = new Map<number, string>()
+
+  for (const record of document.records) {
+    if (record.recordKind !== "Text" || record.getBoolean("COMMENT") !== true) {
+      continue
+    }
+    const componentIndex = record.getNumber("COMPONENT")
+    const text = getPcbText(record)
+    if (componentIndex !== undefined && text && !lookup.has(componentIndex)) {
+      lookup.set(componentIndex, text)
+    }
+  }
+
+  return lookup
+}
+
+function getPcbText(record: AltiumRecord): string {
+  return (
+    decodeAltiumWideString(record.getDecoded("WIDESTRING")) ||
+    record.getDecoded("TEXT") ||
+    ""
+  )
 }
 
 function recordAppliesToReferences(
