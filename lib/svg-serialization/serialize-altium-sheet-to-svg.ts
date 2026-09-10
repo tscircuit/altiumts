@@ -387,6 +387,24 @@ function renderSchematicRecord(
     )
   }
 
+  if (kind === "47") {
+    const desIntf = record.getDecoded("DESINTF") ?? ""
+    const count =
+      record.getNumber("DESIMPCOUNT") ?? (record.get("DESIMP0") ? 1 : 0)
+    const desIntfAttr = desIntf ? ` data-desintf="${escapeXml(desIntf)}"` : ""
+    const desImpCountAttr = count
+      ? ` data-desimpcount="${formatSvgNumber(count)}"`
+      : ""
+    let impAttrs = ""
+    for (let i = 0; i < count; i++) {
+      const imp = record.getDecoded(`DESIMP${i}`)
+      if (imp !== undefined) {
+        impAttrs += ` data-desimp${i}="${escapeXml(imp)}"`
+      }
+    }
+    return `<g ${metadata}${desIntfAttr}${desImpCountAttr}${impAttrs} display="none"/>`
+  }
+
   if (kind === "30") {
     const rectangle = getSchematicRectangle(record)
     if (!rectangle) return undefined

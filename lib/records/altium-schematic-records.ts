@@ -191,6 +191,36 @@ export class AltiumSchImplementationRecord extends AltiumSchematicRecord {
 export class AltiumSchImplementationMapRecord extends AltiumSchematicRecord {
   override readonly type = "schematic-implementation-map-record"
 }
+export class AltiumSchImplementationMapDefinerRecord extends AltiumSchematicRecord {
+  override readonly type = "schematic-implementation-map-definer-record"
+
+  get designatorInterface(): string | undefined {
+    return getFirstDecoded(this, "DESINTF")
+  }
+
+  get implementationCount(): number | undefined {
+    return this.getNumber("DESIMPCOUNT")
+  }
+
+  get implementationDesignator(): string | undefined {
+    return getFirstDecoded(this, "DESIMP0")
+  }
+
+  get implementationDesignators(): string[] {
+    const count = this.getNumber("DESIMPCOUNT") ?? 0
+    const designators: string[] = []
+    for (let index = 0; index < count; index++) {
+      const value = getFirstDecoded(this, `DESIMP${index}`)
+      if (value !== undefined) designators.push(value)
+    }
+    return designators
+  }
+
+  getImplementationDesignator(index: number): string | undefined {
+    return getFirstDecoded(this, `DESIMP${index}`)
+  }
+}
+export { AltiumSchImplementationMapDefinerRecord as AltiumSchMapDefinerRecord }
 export class AltiumSchImplementationParameterRecord extends AltiumSchematicRecord {
   override readonly type = "schematic-implementation-parameter-record"
 }
