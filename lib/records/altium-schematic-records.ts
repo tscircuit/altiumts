@@ -160,7 +160,21 @@ export class AltiumSchDesignatorRecord extends AltiumSchematicRecord {
 }
 export class AltiumSchParameterSetRecord extends AltiumSchematicRecord {
   override readonly type = "schematic-parameter-set-record"
+
+  get name(): string | undefined {
+    return getFirstDecoded(this, "NAME")
+  }
+
+  get color(): number | undefined {
+    return this.getNumber("COLOR")
+  }
+
+  get isDifferentialPair(): boolean {
+    return this.name?.toUpperCase() === "DIFFPAIR"
+  }
 }
+
+export { AltiumSchParameterSetRecord as AltiumSchDifferentialPairRecord }
 export class AltiumSchTemplateRecord extends AltiumSchematicRecord {
   override readonly type = "schematic-template-record"
   get fileName(): string | undefined {

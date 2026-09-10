@@ -472,6 +472,8 @@
     <path data-record="22" d="M 465.065 544.065 L 473.065 552.065 M 473.065 544.065 L 465.065 552.065" fill="none" stroke="#ff0000" stroke-width="1"/>
     <path data-record="22" d="M 485.065 544.065 L 493.065 552.065 M 493.065 544.065 L 485.065 552.065" fill="none" stroke="#ff0000" stroke-width="1"/>
     <text data-record="25" x="0" y="0" fill="#800000" font-family="Arial" font-size="9" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(509.065 518.065) rotate(-90)">PB10</text>
+    <g data-record="43"><circle data-record="43" cx="714.065" cy="358.065" r="2.5" fill="#ff0000" stroke="#ff0000" stroke-width="1"/><text x="718.065" y="354.065" fill="#ff0000" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="auto">DIFFPAIR</text></g>
+    <g data-record="43"><circle data-record="43" cx="714.065" cy="368.065" r="2.5" fill="#ff0000" stroke="#ff0000" stroke-width="1"/><text x="718.065" y="364.065" fill="#ff0000" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="auto">DIFFPAIR</text></g>
     <polyline data-record="27" points="449.065,518.065 449.065,548.065" fill="none" stroke="#000080" stroke-width="1"/>
     <polyline data-record="27" points="459.065,518.065 459.065,548.065" fill="none" stroke="#000080" stroke-width="1"/>
     <polyline data-record="27" points="469.065,518.065 469.065,548.065" fill="none" stroke="#000080" stroke-width="1"/>

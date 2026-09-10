@@ -368,6 +368,7 @@
     <polyline data-record="6" points="158.5,308.5 156,308.5 156,306" fill="none" stroke="#0000ff" stroke-width="1"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(147.5 287.5) rotate(0)">D1</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(147.5 319.5) rotate(0)">NSVR0320MW2T1G</text>
+    <g data-record="43"><circle data-record="43" cx="178.5" cy="298.5" r="2.5" fill="#ff0000" stroke="#ff0000" stroke-width="1"/><text x="182.5" y="294.5" fill="#ff0000" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="auto">1A</text></g>
     <polyline data-record="27" points="528.5,518.5 448.5,518.5" fill="none" stroke="#000080" stroke-width="1"/>
     <polyline data-record="27" points="528.5,498.5 528.5,438.5 488.5,438.5" fill="none" stroke="#000080" stroke-width="1"/>
     <polyline data-record="27" points="528.5,658.5 528.5,668.5 528.5,678.5 528.5,688.5" fill="none" stroke="#000080" stroke-width="1"/>

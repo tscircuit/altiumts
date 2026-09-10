@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="766" viewBox="0 0 256.8 196.8" role="img" aria-label="Altium schematic differential pair directive" class="altium-sheet" data-renderer="altiumts">
+  <title>Altium schematic differential pair directive</title>
+  <rect width="100%" height="100%" fill="#000000"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <defs><clipPath id="altium-sheet-paper"><rect x="8.4" y="8.4" width="240" height="180"/></clipPath></defs>
+    <g data-record="SheetBorder" fill="#fffef8" stroke="#334155" stroke-width="1"><rect x="8.4" y="8.4" width="240" height="180"/><rect x="18.4" y="18.4" width="220" height="160" fill="none"/><path d="M 55.0667 8.4 V 18.4 M 55.0667 178.4 V 188.4"/><path d="M 91.7333 8.4 V 18.4 M 91.7333 178.4 V 188.4"/><path d="M 128.4 8.4 V 18.4 M 128.4 178.4 V 188.4"/><path d="M 165.0667 8.4 V 18.4 M 165.0667 178.4 V 188.4"/><path d="M 201.7333 8.4 V 18.4 M 201.7333 178.4 V 188.4"/><path d="M 8.4 58.4 H 18.4 M 238.4 58.4 H 248.4"/><path d="M 8.4 98.4 H 18.4 M 238.4 98.4 H 248.4"/><path d="M 8.4 138.4 H 18.4 M 238.4 138.4 H 248.4"/></g>
+    <g data-sheet-content="true" clip-path="url(#altium-sheet-paper)">
+    <polyline data-record="27" points="38.4,88.4 218.4,88.4" fill="none" stroke="#000080" stroke-width="1"/>
+    <polyline data-record="27" points="38.4,118.4 218.4,118.4" fill="none" stroke="#000080" stroke-width="1"/>
+    <text data-record="25" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(58.4 88.4) rotate(0)">USB_DP</text>
+    <text data-record="25" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(58.4 118.4) rotate(0)">USB_DM</text>
+    <g data-record="43"><circle data-record="43" cx="128.4" cy="88.4" r="2.5" fill="#ff0000" stroke="#ff0000" stroke-width="1"/><text x="132.4" y="84.4" fill="#ff0000" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="auto">DIFFPAIR</text></g>
+    <g data-record="43"><circle data-record="43" cx="128.4" cy="118.4" r="2.5" fill="#ff0000" stroke="#ff0000" stroke-width="1"/><text x="132.4" y="114.4" fill="#ff0000" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="auto">DIFFPAIR</text></g>
+    </g>
+  </g>
+</svg>

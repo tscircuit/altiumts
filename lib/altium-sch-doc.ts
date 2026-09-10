@@ -16,6 +16,7 @@ import {
   AltiumSchImageRecord,
   AltiumSchLabelRecord,
   AltiumSchNetLabelRecord,
+  AltiumSchParameterSetRecord,
   AltiumSchPinRecord,
   AltiumSchPortRecord,
   AltiumSchPowerPortRecord,
@@ -171,6 +172,17 @@ export class AltiumSchDoc extends AltiumNode {
       (record): record is AltiumSchSheetSymbolRecord =>
         record instanceof AltiumSchSheetSymbolRecord,
     )
+  }
+
+  get parameterSets(): AltiumSchParameterSetRecord[] {
+    return this.records.filter(
+      (record): record is AltiumSchParameterSetRecord =>
+        record instanceof AltiumSchParameterSetRecord,
+    )
+  }
+
+  get differentialPairs(): AltiumSchParameterSetRecord[] {
+    return this.parameterSets.filter((record) => record.isDifferentialPair)
   }
 
   get sheetLinks(): AltiumSchematicSheetLink[] {

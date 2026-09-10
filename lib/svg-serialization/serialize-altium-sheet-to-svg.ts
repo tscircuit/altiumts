@@ -387,6 +387,23 @@ function renderSchematicRecord(
     )
   }
 
+  if (kind === "43") {
+    const location = getSchematicLocation(record)
+    const x = viewport.toX(location.x)
+    const y = viewport.toY(location.y)
+    const name = record.getDecoded("NAME") ?? ""
+    const markerRadius = 2.5
+    const marker = `<circle ${metadata} cx="${formatSvgNumber(x)}" cy="${formatSvgNumber(y)}" r="${formatSvgNumber(markerRadius)}" fill="${color}" stroke="${color}" stroke-width="1"/>`
+    if (!name || options.showText === false) return marker
+    const font = getSchematicFont({
+      record,
+      sheetRecord: context.sheetRecord,
+    })
+    const textX = x + 4
+    const textY = y - 4
+    return `<g ${metadata}>${marker}<text x="${formatSvgNumber(textX)}" y="${formatSvgNumber(textY)}" fill="${color}" ${font.attributes} text-anchor="start" dominant-baseline="auto">${escapeXml(name)}</text></g>`
+  }
+
   if (kind === "30") {
     const rectangle = getSchematicRectangle(record)
     if (!rectangle) return undefined
