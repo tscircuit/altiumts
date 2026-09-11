@@ -19,6 +19,8 @@ export type AltiumSchematicEmbeddedImageInput = {
 
 export type SerializeAltiumSchDocToBinaryOptions = {
   embeddedImages?: readonly AltiumSchematicEmbeddedImageInput[]
+  /** RECORD=129 definitions followed by their owned graphic records, without a header. */
+  objectDefinitionRecords?: readonly string[]
 }
 
 /** Encodes an ASCII schematic into Altium's native OLE/CFB SchDoc container. */
@@ -40,7 +42,9 @@ export function serializeAltiumSchDocToBinary(
       ),
     ),
     ...recordSources.map((recordSource) => {
-      return toLengthPrefixedTextBlock(toAltiumBinaryRecordBytes(recordSource))
+      return toLengthPrefixedTextBlock(
+        toAltiumBinaryRecordBytes(recordSource, true),
+      )
     }),
   ]
 
@@ -50,6 +54,23 @@ export function serializeAltiumSchDocToBinary(
     content: concatAltiumBinaryBytes(fileHeaderBlocks),
     path: "/FileHeader",
   })
+  if (options.objectDefinitionRecords?.length) {
+    const definitions = options.objectDefinitionRecords
+    addAltiumCompoundStream({
+      compoundFile,
+      path: "/ObjectDefinitions",
+      content: concatAltiumBinaryBytes([
+        toLengthPrefixedTextBlock(
+          toAltiumBinaryRecordBytes(
+            `|HEADER=${binaryHeader}|WEIGHT=${definitions.length}`,
+          ),
+        ),
+        ...definitions.map((record) =>
+          toLengthPrefixedTextBlock(toAltiumBinaryRecordBytes(record, true)),
+        ),
+      ]),
+    })
+  }
   addAltiumCompoundStream({
     compoundFile,
     content: serializeSchematicImageStorage(options.embeddedImages ?? []),

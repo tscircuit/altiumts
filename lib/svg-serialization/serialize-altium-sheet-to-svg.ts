@@ -288,12 +288,37 @@ function renderSchematicRecord(
   }
 
   if (kind === "17") {
+    const definitionId = record.getCaseInsensitive("ObjectDefinitionId")
+    const graphics = definitionId
+      ? context.document?.getObjectDefinitionGraphics(definitionId)
+      : undefined
+    const location = getSchematicLocation(record)
+    const customSymbol =
+      graphics === undefined
+        ? undefined
+        : `<g transform="translate(${formatSvgNumber(viewport.toX(location.x))} ${formatSvgNumber(viewport.toY(location.y))}) rotate(${-90 * (record.getNumber("ORIENTATION") ?? 0)})">${graphics
+            .filter((child) =>
+              ["5", "6", "7", "8", "10", "11", "12", "13", "14"].includes(
+                child.recordKind ?? "",
+              ),
+            )
+            .map(
+              (child) =>
+                renderSchematicRecord(
+                  child,
+                  { ...viewport, toX: (x) => x, toY: (y) => -y },
+                  options,
+                  context,
+                ) ?? "",
+            )
+            .join("")}</g>`
     return renderSchematicPowerPort(
       record,
       viewport,
       metadata,
       color,
       context.sheetRecord,
+      customSymbol,
     )
   }
 
@@ -632,6 +657,7 @@ function renderSchematicPowerPort(
   metadata: string,
   color: string,
   sheetRecord: AltiumSchSheetRecord | undefined,
+  customSymbol?: string,
 ): string {
   const location = getSchematicLocation(record)
   const origin = {
@@ -674,6 +700,8 @@ function renderSchematicPowerPort(
     symbol = `<path d="M ${svgPoint(origin)} L ${svgPoint(point(10, -5))} L ${svgPoint(point(10, 5))} Z" fill="${color}"/>`
     labelDistance = 14
   }
+
+  if (customSymbol !== undefined) symbol = customSymbol
 
   const text = record.getDecoded("TEXT") ?? record.getDecoded("NAME") ?? ""
   const showNetName = record.getBoolean("SHOWNETNAME") !== false

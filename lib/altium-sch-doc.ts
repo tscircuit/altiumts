@@ -38,6 +38,7 @@ export class AltiumSchDoc extends AltiumNode {
 
   readonly compoundFile?: AltiumCompoundFile
   readonly embeddedImages: AltiumEmbeddedSchematicImage[]
+  readonly objectDefinitionRecords: AltiumRecord[]
   readonly originalBytes?: Uint8Array
   readonly originalText?: string
   readonly sourceEncoding?: AltiumTextEncoding
@@ -47,6 +48,7 @@ export class AltiumSchDoc extends AltiumNode {
   constructor(init: {
     compoundFile?: AltiumCompoundFile
     lines?: AltiumLine[]
+    objectDefinitionRecords?: AltiumRecord[]
     originalBytes?: Uint8Array
     originalText?: string
     sourceEncoding?: AltiumTextEncoding
@@ -65,6 +67,7 @@ export class AltiumSchDoc extends AltiumNode {
     })
     this.compoundFile = init.compoundFile
     this._lines = init.lines ?? []
+    this.objectDefinitionRecords = init.objectDefinitionRecords ?? []
     this.originalBytes = init.originalBytes
     this.originalText = init.originalText
     this.sourceEncoding = init.sourceEncoding
@@ -79,6 +82,7 @@ export class AltiumSchDoc extends AltiumNode {
     this.adoptChildren([
       ...(this.compoundFile ? [this.compoundFile] : []),
       ...this._lines,
+      ...this.objectDefinitionRecords,
     ])
     this.clearDirty(true)
   }
@@ -199,6 +203,22 @@ export class AltiumSchDoc extends AltiumNode {
     return this.index.getRecordByUniqueId(uniqueId)
   }
 
+  getObjectDefinitionGraphics(id: string): AltiumRecord[] | undefined {
+    const start = this.objectDefinitionRecords.findIndex(
+      (record) =>
+        record.recordKind === "129" &&
+        record.getCaseInsensitive("ObjectDefinitionId")?.toLowerCase() ===
+          id.toLowerCase(),
+    )
+    if (start < 0) return undefined
+    const graphics: AltiumRecord[] = []
+    for (const record of this.objectDefinitionRecords.slice(start + 1)) {
+      if (record.recordKind === "129") break
+      graphics.push(record)
+    }
+    return graphics
+  }
+
   getBytes(): Uint8Array {
     if (!this.isDirty && this.originalBytes) return this.originalBytes.slice()
     if (this.sourceFormat === "binary") {
@@ -210,7 +230,11 @@ export class AltiumSchDoc extends AltiumNode {
   }
 
   override getChildren(): AltiumNode[] {
-    return [...(this.compoundFile ? [this.compoundFile] : []), ...this.lines]
+    return [
+      ...(this.compoundFile ? [this.compoundFile] : []),
+      ...this.lines,
+      ...this.objectDefinitionRecords,
+    ]
   }
 
   override getString(): string {

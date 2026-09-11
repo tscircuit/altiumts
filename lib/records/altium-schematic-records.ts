@@ -215,3 +215,10 @@ function getSchematicCoordinateValue(
   if (!Number.isFinite(fractionValue)) return integer
   return integer < 0 ? integer - fractionValue : integer + fractionValue
 }
+
+export class AltiumSchObjectDefinitionRecord extends AltiumSchematicRecord {
+  override readonly type = "schematic-object-definition-record"
+  get objectDefinitionId(): string | undefined {
+    return this.getCaseInsensitive("ObjectDefinitionId")
+  }
+}

@@ -41,10 +41,14 @@ export function getAltiumRecordKind(recordSource: string): string {
   return getAltiumRecordFields(recordSource).get("RECORD") ?? ""
 }
 
-export function toAltiumBinaryRecordBytes(recordSource: string): Uint8Array {
+export function toAltiumBinaryRecordBytes(
+  recordSource: string,
+  preserveFieldNameCase = false,
+): Uint8Array {
   const output: number[] = []
   for (const { fieldName, fieldText } of getAltiumRecordSegments(
     recordSource,
+    preserveFieldNameCase,
   )) {
     if (/[^\x20-\x7e]/u.test(fieldText)) {
       output.push(
@@ -180,7 +184,10 @@ export function toLegacyAltiumText(text: string): string {
   return text.replace(/[^\x20-\x7e]/gu, "?")
 }
 
-function getAltiumRecordSegments(recordSource: string): Array<{
+function getAltiumRecordSegments(
+  recordSource: string,
+  preserveFieldNameCase = false,
+): Array<{
   fieldName: AltiumFieldName
   fieldText: string
 }> {
@@ -195,7 +202,9 @@ function getAltiumRecordSegments(recordSource: string): Array<{
         )
       }
       return {
-        fieldName: segment.slice(0, equalsIndex).toUpperCase(),
+        fieldName: preserveFieldNameCase
+          ? segment.slice(0, equalsIndex)
+          : segment.slice(0, equalsIndex).toUpperCase(),
         fieldText: segment.slice(equalsIndex + 1),
       }
     })

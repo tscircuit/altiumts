@@ -78,6 +78,13 @@ export function parseAltiumSchDoc(
   return new AltiumSchDoc({
     compoundFile,
     lines,
+    objectDefinitionRecords: compoundFile.getStream("/ObjectDefinitions")
+      ? parseBinarySchematicRecords(
+          compoundFile.getStream("/ObjectDefinitions")!.content,
+          options.maxRecordLength,
+          "/ObjectDefinitions",
+        )
+      : [],
     originalBytes: source.slice(),
     sourceFormat: "binary",
   })
@@ -98,6 +105,7 @@ function validateSchematicDocument(document: AltiumSchDoc): void {
 function parseBinarySchematicRecords(
   bytes: Uint8Array,
   maximumRecordLength = 16 * 1024 * 1024,
+  streamPath = "/FileHeader",
 ): AltiumRecord[] {
   const records: AltiumRecord[] = []
   const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength)
@@ -133,7 +141,7 @@ function parseBinarySchematicRecords(
       {
         byteOffset: lengthOffset,
         recordIndex: records.length,
-        streamPath: "/FileHeader",
+        streamPath,
       },
     )
     const terminator: AltiumLineTerminator =
