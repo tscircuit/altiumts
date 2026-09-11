@@ -35,6 +35,7 @@ export function serializeAltiumPcbToSvg(
   document: AltiumPcbDocument,
   options: AltiumPcbSvgOptions = {},
 ): string {
+  const backgroundColor = options.backgroundColor ?? "#071a16"
   const bounds = options.viewBox
     ? pcbViewBoxToBounds(options.viewBox)
     : getPcbDocumentBounds(document)
@@ -122,11 +123,28 @@ export function serializeAltiumPcbToSvg(
     if (rendered) content.push(rendered)
   }
 
+  if (
+    outline.length >= 3 &&
+    options.showBoardOutline !== false &&
+    boardCutouts.length > 0
+  ) {
+    const path = boardCutouts
+      .flatMap(({ holes, outline: cutout }) =>
+        [cutout, ...holes].map((contour) =>
+          pointsToClosedPath(contour.points, viewport),
+        ),
+      )
+      .join(" ")
+    content.push(
+      `<path data-record="BoardCutoutMask" d="${path}" fill="${backgroundColor}" fill-rule="evenodd" stroke="${PCB_BOARD_OUTLINE_COLOR}" stroke-width="3"/>`,
+    )
+  }
+
   const layerTitle = options.layers?.length
     ? ` — ${options.layers.join(", ")}`
     : ""
   return createSvgDocument({
-    backgroundColor: options.backgroundColor ?? "#071a16",
+    backgroundColor,
     className: "altium-pcb",
     content,
     title: options.title ?? `Altium PCB${layerTitle}`,
