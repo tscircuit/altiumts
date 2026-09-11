@@ -26,7 +26,7 @@ export class AltiumComponentRecord extends AltiumRecord {
   }
 
   get comment(): string | undefined {
-    return this.getDecoded("COMMENT")
+    return getFirstDecoded(this, "SOURCECOMMENT", "COMMENT")
   }
 
   get footprint(): string | undefined {

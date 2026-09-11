@@ -38,6 +38,7 @@ test("resolves PCB comment special strings from real Altium data", async () => {
     layers: ["MECHANICAL6"],
   })
 
+  expect(capacitor?.getDecoded("COMMENT")).toBeUndefined()
   expect(capacitor?.comment).toBeUndefined()
   expect(capacitor?.getDecoded("SOURCEDESCRIPTION")).toBe("Cap Ceramic 10%")
   expect(svg).toContain(">CL21B105KAFNNNE</text>")
