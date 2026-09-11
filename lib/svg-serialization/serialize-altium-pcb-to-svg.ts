@@ -163,6 +163,8 @@ function resolveComponentText(
   }
   const componentIndex = record.getNumber("COMPONENT")
   const component = getPcbRecordComponent(document, record)
+  // Resolve SVG text from placed records or raw board fields. The component
+  // accessor retains SOURCECOMMENT compatibility for API callers.
   const value =
     specialString === ".designator"
       ? ((componentIndex === undefined
