@@ -19,6 +19,8 @@ export type AltiumSchematicEmbeddedImageInput = {
 
 export type SerializeAltiumSchDocToBinaryOptions = {
   embeddedImages?: readonly AltiumSchematicEmbeddedImageInput[]
+  /** RECORD=129 definitions and owned primitives, without a stream header. OwnerIndex is local to this array. */
+  objectDefinitionRecords?: readonly string[]
 }
 
 /** Encodes an ASCII schematic into Altium's native OLE/CFB SchDoc container. */
@@ -40,7 +42,12 @@ export function serializeAltiumSchDocToBinary(
       ),
     ),
     ...recordSources.map((recordSource) => {
-      return toLengthPrefixedTextBlock(toAltiumBinaryRecordBytes(recordSource))
+      // Native custom-power references use the mixed-case ObjectDefinitionId field.
+      return toLengthPrefixedTextBlock(
+        toAltiumBinaryRecordBytes(recordSource, {
+          preserveFieldNameCase: true,
+        }),
+      )
     }),
   ]
 
@@ -50,6 +57,25 @@ export function serializeAltiumSchDocToBinary(
     content: concatAltiumBinaryBytes(fileHeaderBlocks),
     path: "/FileHeader",
   })
+  if (options.objectDefinitionRecords?.length) {
+    const definitions = options.objectDefinitionRecords
+    addAltiumCompoundStream({
+      compoundFile,
+      path: "/ObjectDefinitions",
+      content: concatAltiumBinaryBytes([
+        toLengthPrefixedTextBlock(
+          toAltiumBinaryRecordBytes(
+            `|HEADER=${binaryHeader}|WEIGHT=${definitions.length}`,
+          ),
+        ),
+        ...definitions.map((record) =>
+          toLengthPrefixedTextBlock(
+            toAltiumBinaryRecordBytes(record, { preserveFieldNameCase: true }),
+          ),
+        ),
+      ]),
+    })
+  }
   addAltiumCompoundStream({
     compoundFile,
     content: serializeSchematicImageStorage(options.embeddedImages ?? []),

@@ -39,6 +39,8 @@ export class AltiumSchDoc extends AltiumNode {
 
   readonly compoundFile?: AltiumCompoundFile
   readonly embeddedImages: AltiumEmbeddedSchematicImage[]
+  /** Native definition-stream records, including its header, in original order. */
+  readonly objectDefinitionRecords: AltiumRecord[]
   readonly originalBytes?: Uint8Array
   readonly originalText?: string
   readonly sourceEncoding?: AltiumTextEncoding
@@ -48,6 +50,7 @@ export class AltiumSchDoc extends AltiumNode {
   constructor(init: {
     compoundFile?: AltiumCompoundFile
     lines?: AltiumLine[]
+    objectDefinitionRecords?: AltiumRecord[]
     originalBytes?: Uint8Array
     originalText?: string
     sourceEncoding?: AltiumTextEncoding
@@ -66,6 +69,7 @@ export class AltiumSchDoc extends AltiumNode {
     })
     this.compoundFile = init.compoundFile
     this._lines = init.lines ?? []
+    this.objectDefinitionRecords = init.objectDefinitionRecords ?? []
     this.originalBytes = init.originalBytes
     this.originalText = init.originalText
     this.sourceEncoding = init.sourceEncoding
@@ -80,6 +84,7 @@ export class AltiumSchDoc extends AltiumNode {
     this.adoptChildren([
       ...(this.compoundFile ? [this.compoundFile] : []),
       ...this._lines,
+      ...this.objectDefinitionRecords,
     ])
     this.clearDirty(true)
   }
@@ -200,15 +205,48 @@ export class AltiumSchDoc extends AltiumNode {
   }
 
   getParent(record: AltiumRecord): AltiumRecord | undefined {
+    if (this.objectDefinitionRecords.includes(record)) {
+      const ownerIndex = record.getNumber("OWNERINDEX")
+      return ownerIndex === undefined || ownerIndex < 0
+        ? undefined
+        : this.objectDefinitionRecords.filter(
+            (child) => child.recordKind !== undefined,
+          )[ownerIndex]
+    }
     return this.index.getParent(record)
   }
 
   getOwnedRecords(owner: AltiumRecord | number): AltiumRecord[] {
+    if (
+      typeof owner !== "number" &&
+      this.objectDefinitionRecords.includes(owner)
+    ) {
+      const records = this.objectDefinitionRecords.filter(
+        (record) => record.recordKind !== undefined,
+      )
+      const ownerIndex = records.indexOf(owner)
+      return ownerIndex < 0
+        ? []
+        : records.filter(
+            (record) => record.getNumber("OWNERINDEX") === ownerIndex,
+          )
+    }
     return this.index.getOwnedRecords(owner)
   }
 
   getRecordByUniqueId(uniqueId: string): AltiumRecord | undefined {
     return this.index.getRecordByUniqueId(uniqueId)
+  }
+
+  /** Resolve direct children using indices local to ObjectDefinitions, excluding its header. */
+  getObjectDefinitionGraphics(id: string): AltiumRecord[] | undefined {
+    const definition = this.objectDefinitionRecords.find(
+      (record) =>
+        record.recordKind === "129" &&
+        record.getCaseInsensitive("ObjectDefinitionId")?.toLowerCase() ===
+          id.toLowerCase(),
+    )
+    return definition ? this.getOwnedRecords(definition) : undefined
   }
 
   getBytes(): Uint8Array {
@@ -222,7 +260,11 @@ export class AltiumSchDoc extends AltiumNode {
   }
 
   override getChildren(): AltiumNode[] {
-    return [...(this.compoundFile ? [this.compoundFile] : []), ...this.lines]
+    return [
+      ...(this.compoundFile ? [this.compoundFile] : []),
+      ...this.lines,
+      ...this.objectDefinitionRecords,
+    ]
   }
 
   override getString(): string {

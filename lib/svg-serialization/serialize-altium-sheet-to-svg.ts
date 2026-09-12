@@ -288,12 +288,48 @@ function renderSchematicRecord(
   }
 
   if (kind === "17") {
+    const definitionId = record.getCaseInsensitive("ObjectDefinitionId")
+    const graphics = definitionId
+      ? context.document?.getObjectDefinitionGraphics(definitionId)
+      : undefined
+    let customSymbol: string | undefined
+    if (graphics !== undefined && context.document) {
+      const location = getSchematicLocation(record)
+      const definitionContext: SchematicRenderContext = {
+        document: context.document,
+        records: context.document.objectDefinitionRecords.filter(
+          (child) => child.recordKind !== undefined,
+        ),
+        sheetRecord: context.sheetRecord,
+      }
+      const content = graphics
+        .filter((child) =>
+          ["5", "6", "7", "8", "10", "11", "12", "13", "14"].includes(
+            child.recordKind ?? "",
+          ),
+        )
+        .filter((child) =>
+          shouldRenderSchematicRecord(child, definitionContext),
+        )
+        .map(
+          (child) =>
+            renderSchematicRecord(
+              child,
+              { ...viewport, toX: (x) => x, toY: (y) => -y },
+              options,
+              definitionContext,
+            ) ?? "",
+        )
+        .join("")
+      customSymbol = `<g transform="translate(${formatSvgNumber(viewport.toX(location.x))} ${formatSvgNumber(viewport.toY(location.y))}) rotate(${-90 * getPowerPortOrientation(record)})">${content}</g>`
+    }
     return renderSchematicPowerPort(
       record,
       viewport,
       metadata,
       color,
       context.sheetRecord,
+      customSymbol,
     )
   }
 
@@ -643,20 +679,24 @@ function renderSchematicPin(
   return `<g ${metadata}><line x1="${formatSvgNumber(pinEdgeSymbols.lineStartPosition.x)}" y1="${formatSvgNumber(pinEdgeSymbols.lineStartPosition.y)}" x2="${formatSvgNumber(connection.x)}" y2="${formatSvgNumber(connection.y)}" stroke="${color}" stroke-width="1"/>${pinEdgeSymbols.svg}${electricalSymbol}${designatorSvg}${nameSvg}</g>`
 }
 
+function getPowerPortOrientation(record: AltiumRecord): number {
+  return ((Math.round(record.getNumber("ORIENTATION") ?? 0) % 4) + 4) % 4
+}
+
 function renderSchematicPowerPort(
   record: AltiumRecord,
   viewport: SvgViewport,
   metadata: string,
   color: string,
   sheetRecord: AltiumSchSheetRecord | undefined,
+  customSymbol?: string,
 ): string {
   const location = getSchematicLocation(record)
   const origin = {
     x: viewport.toX(location.x),
     y: viewport.toY(location.y),
   }
-  const orientation =
-    ((Math.round(record.getNumber("ORIENTATION") ?? 0) % 4) + 4) % 4
+  const orientation = getPowerPortOrientation(record)
   const direction = [
     { x: 1, y: 0 },
     { x: 0, y: -1 },
@@ -691,6 +731,8 @@ function renderSchematicPowerPort(
     symbol = `<path d="M ${svgPoint(origin)} L ${svgPoint(point(10, -5))} L ${svgPoint(point(10, 5))} Z" fill="${color}"/>`
     labelDistance = 14
   }
+
+  if (customSymbol !== undefined) symbol = customSymbol
 
   const text = record.getDecoded("TEXT") ?? record.getDecoded("NAME") ?? ""
   const showNetName = record.getBoolean("SHOWNETNAME") !== false
@@ -836,7 +878,7 @@ function shouldRenderSchematicRecord(
       ownerPartDisplayMode = current.getNumber("OWNERPARTDISPLAYMODE")
     }
 
-    if (parent.recordKind === "1") {
+    if (parent.recordKind === "1" || parent.recordKind === "129") {
       const currentPartId = parent.getNumber("CURRENTPARTID") ?? 1
       const currentDisplayMode = parent.getNumber("DISPLAYMODE") ?? 0
       const partMatches =

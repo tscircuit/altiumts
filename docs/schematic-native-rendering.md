@@ -41,3 +41,36 @@ KiCad's acceptance of a fractional font field is not proof that Altium uses it.
 The integer font handling now deliberately ignores those unsupported fractions.
 New exporter files still need a fresh Altium 365 render to verify the final
 appearance; local SVG snapshots alone do not establish parity.
+
+## Custom power definitions
+
+`serializeAltiumSchDocToBinary(source, { objectDefinitionRecords })` accepts
+`RECORD=129` definitions followed by their owned graphic records. The array
+has no header; `OwnerIndex` values refer to positions in that array. The
+serializer writes a separate `/ObjectDefinitions` stream and preserves field
+name case, including `ObjectDefinitionId` references on native power ports.
+
+`parseAltiumSchDoc()` exposes these records as `objectDefinitionRecords`,
+including the stream header. `getObjectDefinitionGraphics(id)` resolves a
+definition's children by their stream-local owner indices, excluding that
+header. Lookup is case-insensitive. Definition graphics stay outside the
+electrical sheet's records and net graph. `getParent(record)` and
+`getOwnedRecords(definitionRecord)` resolve ownership within the definition
+stream; numeric `getOwnedRecords(index)` continues to address the sheet.
+Unmodified binary documents retain
+their original bytes; editing binary records still triggers the existing
+unsupported-serialization error.
+
+When given the parsed document, the SVG renderer places supported line,
+polygon, curve, arc and ellipse graphics at each referring power port's
+location and orientation. It honors the definition's active part and the
+graphics' native line-width/color fields. Power-port text keeps its existing
+font and visibility handling. An unresolved definition uses the built-in
+symbol; a resolved empty definition draws no symbol.
+
+[The generated native review file](../tests/fixtures/native-custom-power-symbols.SchDoc)
+contains bar and ground definitions in all four orientations, with
+`LineWidth=0` and Arial 4-point port text.
+[Its snapshot](../tests/svg/__snapshots__/schematic-custom-power-definitions.snap.svg)
+and tests cover the serialized stream and local preview; the file is an
+exported review fixture, not a captured Altium Viewer render.
