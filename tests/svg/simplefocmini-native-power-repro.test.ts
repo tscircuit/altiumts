@@ -22,11 +22,31 @@ test("renders the converted SimpleFOC Mini power-symbol repro", async () => {
   expect(new Set(definitionIds).size).toBe(2)
   expect(document.getBytes()).toEqual(bytes)
 
+  const graphics = definitionIds.flatMap((id) => {
+    const ownedGraphics = document.getObjectDefinitionGraphics(id!)
+    expect(ownedGraphics).toBeDefined()
+    return ownedGraphics ?? []
+  })
+  expect(graphics).toHaveLength(48)
+  expect(graphics.every((record) => record.getNumber("LINEWIDTH") === 0)).toBe(
+    true,
+  )
+
   const svg = serializeAltiumSheetToSvg(document, {
     width: 1500,
     height: 940,
     showBorder: false,
     title: "SimpleFOC Mini converted schematic — native power definitions",
   })
+  const powerPortSvg = svg
+    .split("\n")
+    .filter((line) => line.includes('<g data-record="17">'))
+    .join("\n")
+  expect(
+    powerPortSvg.match(
+      /<line data-record="13" vector-effect="non-scaling-stroke"/g,
+    ),
+  ).toHaveLength(48)
+  expect(powerPortSvg).not.toContain("<path ")
   await expect(svg).toMatchSvgSnapshot(import.meta.path)
 })
