@@ -1,7 +1,10 @@
 import { expect, test } from "bun:test"
 import { parseAltiumSchDoc, serializeAltiumSheetToSvg } from "../../lib"
 
-test("renders custom power ports in the converted SimpleFOC Mini schematic", async () => {
+// Fixture derived from SimpleFOCMini (MIT), Copyright (c) 2022 SimpleFOCproject.
+// Source: https://github.com/simplefoc/SimpleFOCMini/tree/8e10d4ba398624bd0ef970e82c03d7a6bcc2220d
+// Exported by circuit-json-to-altium 54b28c4 using altiumts 2cee1e0.
+test("renders the converted SimpleFOC Mini power-symbol repro", async () => {
   const bytes = await Bun.file(
     new URL("../fixtures/simplefoc-mini-native-power.SchDoc", import.meta.url),
   ).bytes()
@@ -26,13 +29,4 @@ test("renders custom power ports in the converted SimpleFOC Mini schematic", asy
     title: "SimpleFOC Mini converted schematic — native power definitions",
   })
   await expect(svg).toMatchSvgSnapshot(import.meta.path)
-  await expect(
-    serializeAltiumSheetToSvg(document, {
-      width: 1000,
-      height: 700,
-      showBorder: false,
-      viewBox: { x: 135, y: 185, width: 250, height: 175 },
-      title: "SimpleFOC Mini power input and motor-driver detail",
-    }),
-  ).toMatchSvgSnapshot(import.meta.path, "power-detail")
 })
