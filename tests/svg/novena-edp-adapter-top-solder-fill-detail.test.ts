@@ -20,6 +20,7 @@ test("renders 45-degree Novena top-solder fills in a board-unit crop", async () 
 
   expect(svg).toContain('viewBox="0 0 480 480"')
   expect(svg).toContain('data-record="Fill"')
+  expect(svg).toContain('data-record="Pad"')
   expect(svg).toContain('data-layer="TOPSOLDER"')
   expect(svg).toContain('transform="rotate(-45')
   await expect(svg).toMatchSvgSnapshot(import.meta.path)

@@ -103,7 +103,11 @@ export function serializeAltiumPcbToSvg(
       )
       .filter((record) => {
         if (!options.viewBox) return true
-        const recordBounds = getPcbRecordBounds(record, options.layers)
+        const recordBounds = getPcbRecordBounds(
+          record,
+          options.layers,
+          document,
+        )
         return !recordBounds || boundsIntersect(recordBounds, bounds)
       }),
   })
@@ -119,6 +123,7 @@ export function serializeAltiumPcbToSvg(
       (polygonIndex === undefined ||
         !polygonIndexesWithRegionRecords.has(polygonIndex))
     const rendered = renderPcbRecord({
+      document,
       record,
       text: resolveComponentText(
         document,

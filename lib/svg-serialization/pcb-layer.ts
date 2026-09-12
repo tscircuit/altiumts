@@ -21,6 +21,8 @@ const LAYER_COLORS: Record<string, string> = {
 
 export const normalizeLayerName = normalizeAltiumPcbLayerName
 
+export type PcbSolderMaskLayer = "BOTTOMSOLDER" | "TOPSOLDER"
+
 export function getPcbLayerColor(layer: string | undefined): string {
   if (!layer) return "#f59e0b"
   const normalized = normalizeLayerName(layer)
@@ -44,6 +46,13 @@ export function recordAppliesToLayers(
     const normalizedRecordLayer = normalizeLayerName(recordLayer)
     if (normalizedRequested.has(normalizedRecordLayer)) return true
     if (
+      [...normalizedRequested].some((layer) =>
+        recordHasSolderMaskOpening(record, normalizedRecordLayer, layer),
+      )
+    ) {
+      return true
+    }
+    if (
       normalizedRecordLayer === "MULTILAYER" &&
       [...normalizedRequested].some(isCopperLayer)
     ) {
@@ -53,10 +62,79 @@ export function recordAppliesToLayers(
   }
 
   if (record.recordKind === "Via") {
-    return [...normalizedRequested].some(isCopperLayer)
+    return [...normalizedRequested].some(
+      (layer) =>
+        isCopperLayer(layer) || recordHasSolderMaskOpening(record, "", layer),
+    )
   }
 
   return record.recordKind === "Board"
+}
+
+export function getPcbRecordRenderLayer(
+  record: AltiumRecord,
+  requestedLayers: string[] | undefined,
+): string | undefined {
+  const recordLayer = record.getCaseInsensitive("LAYER")
+  if (!requestedLayers?.length) return recordLayer
+
+  const normalizedRecordLayer = normalizeLayerName(recordLayer ?? "")
+  const normalizedRequestedLayers = requestedLayers.map(normalizeLayerName)
+  if (normalizedRequestedLayers.includes(normalizedRecordLayer)) {
+    return recordLayer
+  }
+  for (const normalizedRequestedLayer of normalizedRequestedLayers) {
+    if (
+      recordHasSolderMaskOpening(
+        record,
+        normalizedRecordLayer,
+        normalizedRequestedLayer,
+      )
+    ) {
+      return normalizedRequestedLayer
+    }
+  }
+
+  return recordLayer
+}
+
+export function isPcbSolderMaskLayer(layer: string | undefined): boolean {
+  const normalized = normalizeLayerName(layer ?? "")
+  return normalized === "TOPSOLDER" || normalized === "BOTTOMSOLDER"
+}
+
+function recordHasSolderMaskOpening(
+  record: AltiumRecord,
+  recordLayer: string,
+  requestedLayer: string,
+): boolean {
+  if (!isPcbSolderMaskLayer(requestedLayer)) return false
+
+  const isTop = requestedLayer === "TOPSOLDER"
+  if (record.getBoolean(isTop ? "TENTEDTOP" : "TENTEDBOTTOM") === true) {
+    return false
+  }
+
+  if (record.recordKind === "Pad") {
+    return (
+      recordLayer === "MULTILAYER" || recordLayer === (isTop ? "TOP" : "BOTTOM")
+    )
+  }
+
+  if (record.recordKind !== "Via") return false
+  const startLayer = normalizeLayerName(
+    record.getCaseInsensitive("STARTLAYER") ??
+      record.getCaseInsensitive("FROMLAYER") ??
+      "",
+  )
+  const endLayer = normalizeLayerName(
+    record.getCaseInsensitive("ENDLAYER") ??
+      record.getCaseInsensitive("TOLAYER") ??
+      "",
+  )
+  if (!startLayer && !endLayer) return true
+  const outerLayer = isTop ? "TOP" : "BOTTOM"
+  return startLayer === outerLayer || endLayer === outerLayer
 }
 
 function isCopperLayer(layer: string): boolean {

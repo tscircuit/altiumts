@@ -9,6 +9,7 @@ import {
 import { getPcbDimensionGeometry } from "./pcb-dimension-geometry"
 import { normalizeLayerName } from "./pcb-layer"
 import { getPcbPadGeometry } from "./pcb-pad-geometry"
+import { getPcbSolderMaskExpansion } from "./pcb-solder-mask"
 import type { SvgBounds, SvgPoint } from "./svg-types"
 import { boundsFromPoints, expandBounds, mergeBounds } from "./svg-utils"
 
@@ -70,6 +71,7 @@ function isBoardMountedOverlayTrack({
 export function getPcbRecordBounds(
   record: AltiumRecord,
   requestedLayers?: string[],
+  document?: AltiumPcbDocument,
 ): SvgBounds | undefined {
   const kind = record.recordKind
 
@@ -127,7 +129,11 @@ export function getPcbRecordBounds(
   }
 
   if (kind === "Pad") {
-    const geometry = getPcbPadGeometry(record, requestedLayers)
+    const layer = requestedLayers?.length === 1 ? requestedLayers[0] : undefined
+    const expansion = document
+      ? getPcbSolderMaskExpansion(document, record, layer)
+      : undefined
+    const geometry = getPcbPadGeometry(record, requestedLayers, expansion ?? 0)
     const rotation = (geometry.rotation * Math.PI) / 180
     const halfWidth = geometry.width / 2
     const halfHeight = geometry.height / 2
@@ -152,11 +158,16 @@ export function getPcbRecordBounds(
       parsePcbMeasurement(record.getCaseInsensitive("DIAMETER")) ??
       parsePcbMeasurement(record.getCaseInsensitive("TOPLAYERSIZE")) ??
       20
+    const layer = requestedLayers?.length === 1 ? requestedLayers[0] : undefined
+    const expansion = document
+      ? getPcbSolderMaskExpansion(document, record, layer)
+      : undefined
+    const expandedDiameter = Math.max(diameter + (expansion ?? 0) * 2, 0)
     return {
-      minX: x - diameter / 2,
-      minY: y - diameter / 2,
-      maxX: x + diameter / 2,
-      maxY: y + diameter / 2,
+      minX: x - expandedDiameter / 2,
+      minY: y - expandedDiameter / 2,
+      maxX: x + expandedDiameter / 2,
+      maxY: y + expandedDiameter / 2,
     }
   }
 

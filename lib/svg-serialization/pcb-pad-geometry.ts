@@ -23,6 +23,7 @@ export interface PcbPadGeometry {
 export function getPcbPadGeometry(
   record: AltiumRecord,
   requestedLayers?: string[],
+  expansion = 0,
 ): PcbPadGeometry {
   const layerOrdinal = getRequestedPadLayerOrdinal(record, requestedLayers)
   const padMode = record.getNumber("PADMODE") ?? 0
@@ -33,7 +34,7 @@ export function getPcbPadGeometry(
   const cornerRadiusValue = Number(
     record.getCaseInsensitive(`LAYER${layerOrdinal}CORNERRADIUS`) ?? 0,
   )
-  const cornerRadius =
+  const baseCornerRadius =
     alternateShape === "ROUNDRECT" && Number.isFinite(cornerRadiusValue)
       ? (Math.min(sizeAndShape.width, sizeAndShape.height) *
           cornerRadiusValue) /
@@ -52,8 +53,8 @@ export function getPcbPadGeometry(
     holeSize
 
   return {
-    cornerRadius,
-    height: sizeAndShape.height,
+    cornerRadius: Math.max(baseCornerRadius + expansion, 0),
+    height: Math.max(sizeAndShape.height + expansion * 2, 0),
     holeOffsetX: getPcbMeasurement(
       record,
       `LAYER${layerOrdinal}HOLEXOFFSET`,
@@ -76,7 +77,7 @@ export function getPcbPadGeometry(
     rotation: Number(record.getCaseInsensitive("ROTATION") ?? 0),
     shape: alternateShape === "ROUNDRECT" ? alternateShape : sizeAndShape.shape,
     slotLength,
-    width: sizeAndShape.width,
+    width: Math.max(sizeAndShape.width + expansion * 2, 0),
     x: getPcbMeasurement(record, "X"),
     y: getPcbMeasurement(record, "Y"),
   }
@@ -175,8 +176,10 @@ function getRequestedPadLayerOrdinal(
     requestedLayers?.length === 1
       ? normalizeLayerName(requestedLayers[0] ?? "")
       : normalizeLayerName(record.getCaseInsensitive("LAYER") ?? "")
-  if (requestedLayer === "BOTTOM") return 31
-  if (requestedLayer === "TOP") return 0
+  if (requestedLayer === "BOTTOM" || requestedLayer === "BOTTOMSOLDER") {
+    return 31
+  }
+  if (requestedLayer === "TOP" || requestedLayer === "TOPSOLDER") return 0
 
   const innerMatch = /^(?:MIDLAYER|MID|INTERNALPLANE)(\d+)$/u.exec(
     requestedLayer,

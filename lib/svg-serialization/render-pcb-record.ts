@@ -1,3 +1,4 @@
+import type { AltiumPcbDocument } from "../altium-pcb-document"
 import { decodeAltiumWideString } from "../decode-altium-wide-string"
 import { getPcbRegionSemanticKind } from "../pcb-contours"
 import type { AltiumRecord } from "../records/altium-record"
@@ -8,8 +9,14 @@ import {
   parsePcbMeasurement,
 } from "./altium-values"
 import { approximateAltiumArc } from "./approximate-altium-arc"
-import { getPcbLayerColor, PCB_BOARD_FILL_COLOR } from "./pcb-layer"
+import {
+  getPcbLayerColor,
+  getPcbRecordRenderLayer,
+  isPcbSolderMaskLayer,
+  PCB_BOARD_FILL_COLOR,
+} from "./pcb-layer"
 import { getPcbPadGeometry } from "./pcb-pad-geometry"
+import { getPcbSolderMaskExpansion } from "./pcb-solder-mask"
 import { getPcbTextPositioning } from "./pcb-text-positioning"
 import { renderPcbDimension } from "./render-pcb-dimension"
 import type { AltiumPcbSvgOptions, SvgViewport } from "./svg-types"
@@ -23,12 +30,14 @@ import {
 const COPPER_FILL_OPACITY = 0.32
 
 export function renderPcbRecord({
+  document,
   record,
   text,
   shouldFillPolygon,
   svgOptions,
   viewport,
 }: {
+  document: AltiumPcbDocument
   record: AltiumRecord
   text?: string
   shouldFillPolygon: boolean
@@ -36,7 +45,7 @@ export function renderPcbRecord({
   viewport: SvgViewport
 }): string | undefined {
   const kind = record.recordKind
-  const layer = record.getCaseInsensitive("LAYER")
+  const layer = getPcbRecordRenderLayer(record, svgOptions.layers)
   const color = getPcbLayerColor(layer)
   const metadata = `data-record="${escapeXml(kind ?? "Unknown")}"${layer ? ` data-layer="${escapeXml(layer)}"` : ""}`
 
@@ -72,11 +81,38 @@ export function renderPcbRecord({
   }
 
   if (kind === "Pad") {
-    return renderPad(record, viewport, svgOptions, metadata, color)
+    const isSolderMask = isPcbSolderMaskLayer(layer)
+    const expansion = isSolderMask
+      ? getPcbSolderMaskExpansion(document, record, layer)
+      : 0
+    if (expansion === undefined) return undefined
+    return renderPad(
+      record,
+      viewport,
+      svgOptions,
+      metadata,
+      color,
+      expansion,
+      isSolderMask,
+    )
   }
 
   if (kind === "Via") {
-    return renderVia(record, viewport, svgOptions, metadata)
+    const isSolderMask = isPcbSolderMaskLayer(layer)
+    const expansion = isSolderMask
+      ? getPcbSolderMaskExpansion(document, record, layer)
+      : 0
+    if (expansion === undefined) return undefined
+    const viaColor = isSolderMask ? color : "#22c55e"
+    return renderVia(
+      record,
+      viewport,
+      svgOptions,
+      metadata,
+      viaColor,
+      expansion,
+      isSolderMask,
+    )
   }
 
   if (kind === "Region") {
@@ -192,8 +228,11 @@ function renderPad(
   options: AltiumPcbSvgOptions,
   metadata: string,
   color: string,
+  expansion: number,
+  isSolderMask: boolean,
 ): string {
-  const geometry = getPcbPadGeometry(record, options.layers)
+  const geometry = getPcbPadGeometry(record, options.layers, expansion)
+  if (geometry.width === 0 || geometry.height === 0) return ""
   const x = viewport.toX(geometry.x)
   const y = viewport.toY(geometry.y)
   const transform =
@@ -234,7 +273,7 @@ function renderPad(
   }
 
   const hole =
-    options.showHoles !== false && geometry.holeSize > 0
+    !isSolderMask && options.showHoles !== false && geometry.holeSize > 0
       ? renderPadHole(geometry, x, y)
       : ""
   const padName = record.getDecoded("NAME")
@@ -310,6 +349,9 @@ function renderVia(
   viewport: SvgViewport,
   options: AltiumPcbSvgOptions,
   metadata: string,
+  color: string,
+  expansion: number,
+  isSolderMask: boolean,
 ): string {
   const x = viewport.toX(getPcbMeasurement(record, "X"))
   const y = viewport.toY(getPcbMeasurement(record, "Y"))
@@ -318,9 +360,11 @@ function renderVia(
     parsePcbMeasurement(record.getCaseInsensitive("TOPLAYERSIZE")) ??
     20
   const holeSize = getPcbMeasurement(record, "HOLESIZE", diameter * 0.45)
+  const expandedDiameter = Math.max(diameter + expansion * 2, 0)
+  if (expandedDiameter === 0) return ""
   const hole =
-    options.showHoles !== false
+    !isSolderMask && options.showHoles !== false
       ? `<circle cx="${formatSvgNumber(x)}" cy="${formatSvgNumber(y)}" r="${formatSvgNumber(holeSize / 2)}" fill="#111827"/>`
       : ""
-  return `<g ${metadata}><circle cx="${formatSvgNumber(x)}" cy="${formatSvgNumber(y)}" r="${formatSvgNumber(diameter / 2)}" fill="#22c55e" stroke="#d1fae5" stroke-width="1.5"/>${hole}</g>`
+  return `<g ${metadata}><circle cx="${formatSvgNumber(x)}" cy="${formatSvgNumber(y)}" r="${formatSvgNumber(expandedDiameter / 2)}" fill="${color}" stroke="#d1fae5" stroke-width="1.5"/>${hole}</g>`
 }
