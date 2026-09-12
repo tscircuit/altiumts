@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="369" viewBox="0 0 1945.5033 717.8271" role="img" aria-label="stm32-st-link-v2.PcbDoc — Top Solder Mask" class="altium-pcb" data-renderer="altiumts">
+  <title>stm32-st-link-v2.PcbDoc — Top Solder Mask</title>
+  <rect width="100%" height="100%" fill="#071a16"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path data-record="BoardOutline" data-board-cutouts="1" d="M 700.763 632.142 L 811.3492 632.142 L 834.6213 654.1892 L 1881.8654 654.1892 L 1881.8654 63.638 L 834.6213 63.638 L 810.9992 87.2601 L 700.763 87.2601 L 700.763 632.142 Z M 652.102 119.1892 L 652.102 599.1892 L 62.102 599.1892 L 62.102 119.1892 L 652.102 119.1892 Z" fill="#123d32" fill-rule="evenodd" stroke="#6ee7b7" stroke-width="3"/>
+  </g>
+</svg>

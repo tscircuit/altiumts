@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="808" viewBox="0 0 2102.0866 1698.5433" role="img" aria-label="novena-edp-adapter-dvt1.PcbDoc — Top Solder Mask" class="altium-pcb" data-renderer="altiumts">
+  <title>novena-edp-adapter-dvt1.PcbDoc — Top Solder Mask</title>
+  <rect width="100%" height="100%" fill="#071a16"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <polygon data-record="BoardOutline" points="68.7598,1446.7126 1804.9802,1446.7126 1804.9802,1092.3819 1867.9723,1029.3898 2033.3267,1029.3898 2033.3267,68.7598 68.7598,68.7598 68.7598,1446.7126" fill="#123d32" stroke="#6ee7b7" stroke-width="3"/>
+    <rect data-record="Fill" data-layer="TOPSOLDER" data-keepout="false" x="1094.3504" y="759.6229" width="66.9292" height="66.9291" fill="#4ade80" fill-opacity="0.6" transform="rotate(-45 1127.815 793.0875)"/>
+    <rect data-record="Fill" data-layer="TOPSOLDER" data-keepout="false" x="1146.5157" y="707.4574" width="66.9292" height="66.9291" fill="#4ade80" fill-opacity="0.6" transform="rotate(-45 1179.9803 740.922)"/>
+    <rect data-record="Fill" data-layer="TOPSOLDER" data-keepout="false" x="1199.6653" y="654.3078" width="66.9292" height="66.9291" fill="#4ade80" fill-opacity="0.6" transform="rotate(-45 1233.1299 687.7724)"/>
+    <rect data-record="Fill" data-layer="TOPSOLDER" data-keepout="false" x="1251.8307" y="602.1426" width="66.9292" height="66.9291" fill="#4ade80" fill-opacity="0.6" transform="rotate(-45 1285.2953 635.6072)"/>
+    <rect data-record="Fill" data-layer="TOPSOLDER" data-keepout="false" x="1199.6653" y="549.9771" width="66.9292" height="66.9291" fill="#4ade80" fill-opacity="0.6" transform="rotate(-45 1233.1299 583.4417)"/>
+    <rect data-record="Fill" data-layer="TOPSOLDER" data-keepout="false" x="1147.4999" y="602.1423" width="66.9292" height="66.9291" fill="#4ade80" fill-opacity="0.6" transform="rotate(-45 1180.9645 635.6069)"/>
+    <rect data-record="Fill" data-layer="TOPSOLDER" data-keepout="false" x="1094.3503" y="655.2919" width="66.9292" height="66.9291" fill="#4ade80" fill-opacity="0.6" transform="rotate(-45 1127.8149 688.7565)"/>
+    <rect data-record="Fill" data-layer="TOPSOLDER" data-keepout="false" x="1042.185" y="707.4574" width="66.9292" height="66.9291" fill="#4ade80" fill-opacity="0.6" transform="rotate(-45 1075.6496 740.922)"/>
+    <rect data-record="Fill" data-layer="TOPSOLDER" data-keepout="false" x="1094.3504" y="444.6622" width="66.9292" height="66.9291" fill="#4ade80" fill-opacity="0.6" transform="rotate(-45 1127.815 478.1268)"/>
+    <rect data-record="Fill" data-layer="TOPSOLDER" data-keepout="false" x="1042.185" y="496.8274" width="66.9292" height="66.9291" fill="#4ade80" fill-opacity="0.6" transform="rotate(-45 1075.6496 530.292)"/>
+    <rect data-record="Fill" data-layer="TOPSOLDER" data-keepout="false" x="989.0354" y="549.977" width="66.9292" height="66.9291" fill="#4ade80" fill-opacity="0.6" transform="rotate(-45 1022.5 583.4416)"/>
+    <rect data-record="Fill" data-layer="TOPSOLDER" data-keepout="false" x="936.8701" y="602.1425" width="66.9292" height="66.9291" fill="#4ade80" fill-opacity="0.6" transform="rotate(-45 970.3347 635.6071)"/>
+    <rect data-record="Fill" data-layer="TOPSOLDER" data-keepout="false" x="1147.5" y="497.8118" width="66.9292" height="66.9291" fill="#4ade80" fill-opacity="0.6" transform="rotate(-45 1180.9646 531.2764)"/>
+    <rect data-record="Fill" data-layer="TOPSOLDER" data-keepout="false" x="1095.3346" y="549.977" width="66.9292" height="66.9291" fill="#4ade80" fill-opacity="0.6" transform="rotate(-45 1128.7992 583.4416)"/>
+    <rect data-record="Fill" data-layer="TOPSOLDER" data-keepout="false" x="1042.185" y="603.1266" width="66.9292" height="66.9291" fill="#4ade80" fill-opacity="0.6" transform="rotate(-45 1075.6496 636.5912)"/>
+    <rect data-record="Fill" data-layer="TOPSOLDER" data-keepout="false" x="990.0197" y="655.2921" width="66.9292" height="66.9291" fill="#4ade80" fill-opacity="0.6" transform="rotate(-45 1023.4843 688.7567)"/>
+  </g>
+</svg>
