@@ -70,7 +70,8 @@ symbol; a resolved empty definition draws no symbol.
 
 [The generated native review file](../tests/fixtures/native-custom-power-symbols.SchDoc)
 contains bar and ground definitions in all four orientations, with
-`LineWidth=0` and Arial 4-point port text.
+`LineWidth=0` and Arial 4-point port text. Each wire approaches the connection
+point from the side opposite the symbol graphics.
 [Its snapshot](../tests/svg/__snapshots__/schematic-custom-power-definitions.snap.svg)
 and tests cover the serialized stream and local preview; the file is an
 exported review fixture, not a captured Altium Viewer render.

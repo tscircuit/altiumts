@@ -14,6 +14,11 @@ test("renders native custom power hairlines at all four orientations", async () 
   const bytes = await Bun.file(
     new URL("../fixtures/native-custom-power-symbols.SchDoc", import.meta.url),
   ).bytes()
+  expect(
+    serializeAltiumSchDocToBinary(customPowerSheet, {
+      objectDefinitionRecords: customPowerDefinitions,
+    }),
+  ).toEqual(bytes)
   const document = parseAltiumSchDoc(bytes)
   const svg = serializeAltiumSheetToSvg(document, {
     width: 900,

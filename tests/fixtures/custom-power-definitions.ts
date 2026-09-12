@@ -17,13 +17,20 @@ export const customPowerDefinitions = [
 export const customPowerSheet = [
   "|HEADER=Protel for Windows - Schematic Capture Ascii File Version 5.0",
   "|RECORD=31|USECUSTOMSHEET=T|CUSTOMX=300|CUSTOMY=180|AREACOLOR=16777215|FONTIDCOUNT=1|FONTNAME1=Arial|SIZE1=4",
-  ...[0, 1, 2, 3].flatMap((orientation) =>
+  ...(
+    [
+      [-8, 0],
+      [0, -8],
+      [8, 0],
+      [0, 8],
+    ] as const
+  ).flatMap(([wireDx, wireDy], orientation) =>
     (["bar", "ground"] as const).flatMap((kind, index) => {
       const x = 45 + 70 * orientation
       const y = 50 + 80 * index
       return [
         `|RECORD=17|OWNERINDEX=-1|LOCATION.X=${x}|LOCATION.Y=${y}|ORIENTATION=${orientation}|STYLE=${kind === "bar" ? 2 : 4}|TEXT=${kind === "bar" ? "VDD" : "GND"}|SHOWNETNAME=T|FONTID=1|COLOR=136|ObjectDefinitionId=${powerDefinitionIds[kind]}`,
-        `|RECORD=27|OWNERINDEX=-1|LOCATIONCOUNT=2|X1=${x}|Y1=${y}|X2=${x - 8}|Y2=${y}|LINEWIDTH=0|COLOR=32768`,
+        `|RECORD=27|OWNERINDEX=-1|LOCATIONCOUNT=2|X1=${x}|Y1=${y}|X2=${x + wireDx}|Y2=${y + wireDy}|LINEWIDTH=0|COLOR=32768`,
       ]
     }),
   ),
