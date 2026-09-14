@@ -6,7 +6,7 @@ import {
 } from "../../lib"
 import { readReferenceBytes } from "./read-reference"
 
-test("reproduces missing top-solder openings in c17-main.PcbDoc", async () => {
+test("renders top-solder pad openings in c17-main.PcbDoc", async () => {
   const source = await readReferenceBytes("c17-main.PcbDoc")
   const result = parseAltiumFile(source)
 
@@ -27,7 +27,10 @@ test("reproduces missing top-solder openings in c17-main.PcbDoc", async () => {
 
   expect(pads).toHaveLength(189)
   expect(vias).toHaveLength(0)
-  expect(svg).not.toContain('data-record="Pad"')
+  expect(svg.match(/data-record="Pad"/g)).toHaveLength(pads.length)
+  expect(svg).toContain(
+    'data-layer="TOPSOLDER" data-solder-mask-opening="true"',
+  )
   expect(svg).not.toContain('data-record="Via"')
   await expect(svg).toMatchSvgSnapshot(import.meta.path)
 }, 30_000)
