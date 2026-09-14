@@ -3,7 +3,7 @@ import { AltiumPadRecord } from "../records/altium-pad-record"
 import type { AltiumRecord } from "../records/altium-record"
 import type { AltiumRuleRecord } from "../records/altium-rule-record"
 import { AltiumViaRecord } from "../records/altium-via-record"
-import { getPcbMeasurement, parsePcbMeasurement } from "./altium-values"
+import { parsePcbMeasurement } from "./altium-values"
 import { normalizeLayerName } from "./pcb-layer"
 import { getPcbPadGeometry } from "./pcb-pad-geometry"
 
@@ -79,11 +79,9 @@ export function getPcbSolderMaskRecords(
         }
       } else {
         const diameter =
-          getPcbMeasurement(
-            record,
-            "DIAMETER",
-            getPcbMeasurement(record, "TOPLAYERSIZE", 20),
-          ) +
+          (parsePcbMeasurement(record.getCaseInsensitive("DIAMETER")) ??
+            parsePcbMeasurement(record.getCaseInsensitive("TOPLAYERSIZE")) ??
+            20) +
           expansion * 2
         if (diameter <= 0) continue
         opening = new AltiumViaRecord()
@@ -92,8 +90,8 @@ export function getPcbSolderMaskRecords(
       }
       opening.set("LAYER", layer)
       for (const key of ["X", "Y", "NAME", "COMPONENT", "NET", "PLATED"]) {
-        const value = record.getCaseInsensitive(key)
-        if (value !== undefined) opening.set(key, value)
+        const fieldContent = record.getCaseInsensitive(key)
+        if (fieldContent !== undefined) opening.set(key, fieldContent)
       }
       openings.push(opening)
     }
