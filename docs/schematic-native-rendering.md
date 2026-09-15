@@ -31,7 +31,11 @@ To refresh SVG baselines after reviewing a rendering change, set both `BUN_UPDAT
 The September 9 Altium 365 capture exposed further preview-only assumptions:
 custom-font pin text defaults to black unless `NAME_CUSTOMCOLOR` or
 `DESIGNATOR_CUSTOMCOLOR` is present; position bit 0 enables the independent
-signed name/designator margin. The default margins are -7 and +9. `LINEWIDTH`
+signed name/designator margin. With custom positioning enabled, native names
+start `2 + NAME_CUSTOMPOSITION_MARGIN` units inward from the pin body; positive
+margins move farther into the component. Native Viewer probes on September 15
+confirmed this gap with Arial 3, 6, 10 and 14 pt fonts. Designator margins measure
+outward instead. The non-custom renderer defaults remain -7 and +9. `LINEWIDTH`
 is the TSize enum (0–3), including the smallest line style, rather than a raw
 coordinate. An IEEE clock symbol belongs inside the component boundary.
 

@@ -605,10 +605,19 @@ function renderSchematicPin(
       record.getCaseInsensitive(`PIN${kind}_POSITIONCONGLOMERATE`),
       0,
     )
+    const customMargin = getSchematicCoordinate(
+      record,
+      `${kind}_CUSTOMPOSITION_MARGIN`,
+      0,
+    )
+    // Native name margins increase the 2-unit inward gap. Designator margins
+    // measure outward from the body; the two fields use opposite directions.
     return {
       margin:
         (flags & 1) !== 0
-          ? getSchematicCoordinate(record, `${kind}_CUSTOMPOSITION_MARGIN`, 0)
+          ? kind === "NAME"
+            ? -2 - customMargin
+            : customMargin
           : kind === "NAME"
             ? -7
             : 9,
