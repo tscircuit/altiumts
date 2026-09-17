@@ -1,6 +1,7 @@
 import { unzipSync } from "fflate"
 import {
   AltiumBinaryPcbDoc,
+  AltiumBoardRecord,
   AltiumPcbDoc,
   type AltiumPcbDocument,
   AltiumPrjPcb,
@@ -398,11 +399,14 @@ function getDocumentLayerNames(document: AltiumPcbDocument): string[] {
     const normalizedLayer = normalizeAltiumPcbLayerName(layer)
     if (!layerNames.has(normalizedLayer)) layerNames.set(normalizedLayer, layer)
   }
-  for (const { name } of document.board?.layerStack.entries ?? []) {
-    if (!name || !isPcbSolderMaskLayer(name)) continue
-    const normalizedLayer = normalizeAltiumPcbLayerName(name)
-    if (!layerNames.has(normalizedLayer)) {
-      layerNames.set(normalizedLayer, normalizedLayer)
+  for (const record of document.records) {
+    if (!(record instanceof AltiumBoardRecord)) continue
+    for (const { name } of record.layerStack.entries) {
+      if (!name || !isPcbSolderMaskLayer(name)) continue
+      const normalizedLayer = normalizeAltiumPcbLayerName(name)
+      if (!layerNames.has(normalizedLayer)) {
+        layerNames.set(normalizedLayer, normalizedLayer)
+      }
     }
   }
   return [...layerNames.values()]

@@ -31,6 +31,22 @@ test("opens loose schematic and PCB files and renders their SVG views", async ()
   expect(schematic?.views).toEqual([{ id: "sheet", label: "Schematic sheet" }])
   expect(pcb?.views.some(({ id }) => id === "board")).toBeTrue()
   expect(pcb?.views.some(({ layer }) => layer === "TOP")).toBeTrue()
+  expect(
+    pcb?.views.filter(
+      ({ layer }) => layer === "TOPSOLDER" || layer === "BOTTOMSOLDER",
+    ),
+  ).toEqual([
+    {
+      id: "layer:TOPSOLDER",
+      label: "Top solder mask",
+      layer: "TOPSOLDER",
+    },
+    {
+      id: "layer:BOTTOMSOLDER",
+      label: "Bottom solder mask",
+      layer: "BOTTOMSOLDER",
+    },
+  ])
 
   if (!schematic || !pcb) {
     throw new Error("Expected both schematic and PCB documents")
@@ -41,6 +57,11 @@ test("opens loose schematic and PCB files and renders their SVG views", async ()
   const topLayer = pcb.views.find(({ layer }) => layer === "TOP")
   if (!topLayer) throw new Error("Expected a top copper layer view")
   const topLayerSvg = renderProjectDocument(state, pcb.id, topLayer.id)
+  const topSolderMaskSvg = renderProjectDocument(
+    state,
+    pcb.id,
+    "layer:TOPSOLDER",
+  )
 
   expect(schematicSvg).toStartWith("<svg")
   expect(schematicSvg).toContain("Schematic sheet")
@@ -48,6 +69,8 @@ test("opens loose schematic and PCB files and renders their SVG views", async ()
   expect(boardSvg).toContain("Complete board")
   expect(topLayerSvg).toStartWith("<svg")
   expect(topLayerSvg).toContain("Top copper")
+  expect(topSolderMaskSvg).toContain('data-layer="TOPSOLDER"')
+  expect(topSolderMaskSvg).toContain('data-solder-mask-opening="true"')
 })
 
 test("offers declared solder mask layers as PCB views", async () => {
