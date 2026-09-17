@@ -1,5 +1,7 @@
 import type { AltiumPcbLayerStack } from "./pcb-layer-stack"
 
+export type NormalizedAltiumPcbLayerName = string
+
 const STANDARD_PCB_LAYERS = new Set([
   "BACKGROUND",
   "BOTTOM",
@@ -30,7 +32,9 @@ const STANDARD_PCB_LAYERS = new Set([
   "VISIBLEGRID2",
 ])
 
-export function normalizeAltiumPcbLayerName(layer: string): string {
+export function normalizeAltiumPcbLayerName(
+  layer: string,
+): NormalizedAltiumPcbLayerName {
   return layer.replace(/[\s_-]/gu, "").toUpperCase()
 }
 

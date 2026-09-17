@@ -6,6 +6,7 @@ import {
   AltiumPrjPcb,
   AltiumSchDoc,
   isPcbSolderMaskLayer,
+  type NormalizedAltiumPcbLayerName,
   normalizeAltiumPcbLayerName,
   parseAltiumFile,
   resolveAltiumProjectPath,
@@ -390,7 +391,7 @@ function getProjectDisplayName(
 }
 
 function getDocumentLayerNames(document: AltiumPcbDocument): string[] {
-  const layerNames = new Map<string, string>()
+  const layerNames = new Map<NormalizedAltiumPcbLayerName, string>()
   for (const record of document.records) {
     const layer = record.getCaseInsensitive("LAYER")?.trim()
     if (!layer || layer.toUpperCase() === "UNKNOWN") continue
