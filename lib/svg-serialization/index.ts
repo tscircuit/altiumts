@@ -1,3 +1,4 @@
+export { isPcbSolderMaskLayer } from "./pcb-solder-mask"
 export * from "./serialize-altium-pcb-layer-to-svg"
 export * from "./serialize-altium-pcb-to-svg"
 export * from "./serialize-altium-sheet-to-svg"

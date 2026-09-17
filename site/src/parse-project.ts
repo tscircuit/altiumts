@@ -5,6 +5,8 @@ import {
   type AltiumPcbDocument,
   AltiumPrjPcb,
   AltiumSchDoc,
+  isPcbSolderMaskLayer,
+  normalizeAltiumPcbLayerName,
   parseAltiumFile,
   resolveAltiumProjectPath,
   serializeAltiumPcbLayerToSvg,
@@ -388,13 +390,21 @@ function getProjectDisplayName(
 }
 
 function getDocumentLayerNames(document: AltiumPcbDocument): string[] {
-  const layerCounts = new Map<string, number>()
+  const layerNames = new Map<string, string>()
   for (const record of document.records) {
     const layer = record.getCaseInsensitive("LAYER")?.trim()
     if (!layer || layer.toUpperCase() === "UNKNOWN") continue
-    layerCounts.set(layer, (layerCounts.get(layer) ?? 0) + 1)
+    const normalizedLayer = normalizeAltiumPcbLayerName(layer)
+    if (!layerNames.has(normalizedLayer)) layerNames.set(normalizedLayer, layer)
   }
-  return [...layerCounts.keys()]
+  for (const { name } of document.board?.layerStack.entries ?? []) {
+    if (!name || !isPcbSolderMaskLayer(name)) continue
+    const normalizedLayer = normalizeAltiumPcbLayerName(name)
+    if (!layerNames.has(normalizedLayer)) {
+      layerNames.set(normalizedLayer, normalizedLayer)
+    }
+  }
+  return [...layerNames.values()]
     .sort(
       (left, right) =>
         getLayerPriority(left) - getLayerPriority(right) ||

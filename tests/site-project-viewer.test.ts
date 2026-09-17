@@ -50,6 +50,35 @@ test("opens loose schematic and PCB files and renders their SVG views", async ()
   expect(topLayerSvg).toContain("Top copper")
 })
 
+test("offers declared solder mask layers as PCB views", async () => {
+  const file = await readReferenceFile("c17-main.PcbDoc", "Demo/board.PcbDoc")
+  const state = parseBrowserProjectFiles([file])
+  const pcb = state.manifest.documents[0]
+  if (!pcb) throw new Error("Expected a PCB document")
+
+  const solderMaskViews = pcb.views.filter(
+    ({ layer }) => layer === "TOPSOLDER" || layer === "BOTTOMSOLDER",
+  )
+  expect(solderMaskViews).toEqual([
+    {
+      id: "layer:TOPSOLDER",
+      label: "Top solder mask",
+      layer: "TOPSOLDER",
+    },
+    {
+      id: "layer:BOTTOMSOLDER",
+      label: "Bottom solder mask",
+      layer: "BOTTOMSOLDER",
+    },
+  ])
+
+  for (const view of solderMaskViews) {
+    const svg = renderProjectDocument(state, pcb.id, view.id)
+    expect(svg).toContain(`data-layer="${view.layer}"`)
+    expect(svg).toContain('data-solder-mask-opening="true"')
+  }
+}, 30_000)
+
 test("uses project references to order uploaded documents", async () => {
   const project = new TextEncoder().encode(
     [
