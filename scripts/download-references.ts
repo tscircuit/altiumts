@@ -25,6 +25,12 @@ type NestedZipBundleSpec = {
 
 const references: DirectReferenceSpec[] = [
   {
+    filename: "cobra.PcbDoc",
+    sha256: "d0913643166660cfdcc5490d63283b12f4ff08b0dbbaa05e409a9cd9196aa9c5",
+    source: "pengwon/cobra@1347008d7985d8c3dbecc3d81e4bf4e1ace2c33d (MIT)",
+    url: "https://media.githubusercontent.com/media/pengwon/cobra/1347008d7985d8c3dbecc3d81e4bf4e1ace2c33d/hw/pcb/cobra.PcbDoc",
+  },
+  {
     filename: "altium-dsp-fpga-power.SchDoc",
     sha256: "a0e51aeb708bcb7d8f444073a16e5edf9e8aee63ce28329122942ca27150373f",
     source:
