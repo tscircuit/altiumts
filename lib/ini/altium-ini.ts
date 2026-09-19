@@ -251,9 +251,9 @@ export class AltiumIniDocument extends AltiumNode {
       return this
     }
 
+    const terminator = inferTerminator(this)
     let insertionIndex = this.lines.length
     if (!section) {
-      const terminator = inferTerminator(this)
       const previous = this.lines.at(-1)
       if (previous && previous.terminator === "") {
         previous.terminator = terminator
@@ -276,9 +276,14 @@ export class AltiumIniDocument extends AltiumNode {
       insertionIndex =
         nextSectionIndex < 0 ? this.lines.length : nextSectionIndex
     }
+    const previous = this.lines[insertionIndex - 1]
+    if (previous && previous.terminator === "") {
+      previous.terminator = terminator
+      previous.markDirty()
+    }
     const entry = new AltiumIniKeyValueLine({
       key,
-      terminator: inferTerminator(this),
+      terminator,
       value,
     }).setParent(this)
     this.lines.splice(insertionIndex, 0, entry)
