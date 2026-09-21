@@ -44,6 +44,18 @@ export function getPcbPadGeometry(
     record.getCaseInsensitive("HOLESHAPE")?.toUpperCase() ??
     (holeType === 1 ? "SQUARE" : holeType === 2 ? "SLOT" : "ROUND")
   const holeSize = getPcbMeasurement(record, "HOLESIZE")
+  const holeOffsetX = getPcbMeasurement(
+    record,
+    `LAYER${layerOrdinal}HOLEXOFFSET`,
+    getPcbMeasurement(record, `PADXOFFSET${layerOrdinal}`),
+  )
+  const holeOffsetY = getPcbMeasurement(
+    record,
+    `LAYER${layerOrdinal}HOLEYOFFSET`,
+    getPcbMeasurement(record, `PADYOFFSET${layerOrdinal}`),
+  )
+  const x = getPcbMeasurement(record, "X")
+  const y = getPcbMeasurement(record, "Y")
   const slotLength =
     parsePcbMeasurement(record.getCaseInsensitive("SLOTLENGTH")) ??
     (holeShape === "SLOT"
@@ -54,16 +66,8 @@ export function getPcbPadGeometry(
   return {
     cornerRadius,
     height: sizeAndShape.height,
-    holeOffsetX: getPcbMeasurement(
-      record,
-      `LAYER${layerOrdinal}HOLEXOFFSET`,
-      getPcbMeasurement(record, `PADXOFFSET${layerOrdinal}`),
-    ),
-    holeOffsetY: getPcbMeasurement(
-      record,
-      `LAYER${layerOrdinal}HOLEYOFFSET`,
-      getPcbMeasurement(record, `PADYOFFSET${layerOrdinal}`),
-    ),
+    holeOffsetX,
+    holeOffsetY,
     holeRotation: Number(
       record.getCaseInsensitive("SLOTROTATION") ??
         record.getCaseInsensitive("HOLEROTATION") ??
@@ -77,8 +81,8 @@ export function getPcbPadGeometry(
     shape: alternateShape === "ROUNDRECT" ? alternateShape : sizeAndShape.shape,
     slotLength,
     width: sizeAndShape.width,
-    x: getPcbMeasurement(record, "X"),
-    y: getPcbMeasurement(record, "Y"),
+    x: x + (holeSize === 0 ? holeOffsetX : 0),
+    y: y + (holeSize === 0 ? holeOffsetY : 0),
   }
 }
 
