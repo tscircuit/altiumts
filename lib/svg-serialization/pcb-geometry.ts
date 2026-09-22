@@ -138,15 +138,15 @@ export function getPcbRecordBounds(
 
   if (record instanceof AltiumPadRecord) {
     const geometry = getAltiumPcbPadGeometry({ record, requestedLayers })
-    const rotation = (geometry.rotationDegrees * Math.PI) / 180
+    const ccwRotationRadians = (geometry.ccwRotationDegrees * Math.PI) / 180
     const halfWidth = geometry.widthMils / 2
     const halfHeight = geometry.heightMils / 2
     const extentX =
-      Math.abs(Math.cos(rotation)) * halfWidth +
-      Math.abs(Math.sin(rotation)) * halfHeight
+      Math.abs(Math.cos(ccwRotationRadians)) * halfWidth +
+      Math.abs(Math.sin(ccwRotationRadians)) * halfHeight
     const extentY =
-      Math.abs(Math.sin(rotation)) * halfWidth +
-      Math.abs(Math.cos(rotation)) * halfHeight
+      Math.abs(Math.sin(ccwRotationRadians)) * halfWidth +
+      Math.abs(Math.cos(ccwRotationRadians)) * halfHeight
     return {
       minX: geometry.xMils - extentX,
       minY: geometry.yMils - extentY,

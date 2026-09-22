@@ -73,6 +73,7 @@
   },
   "dependencies": {
     "cfb": "^1.2.2",
-    "fflate": "^0.8.3"
+    "fflate": "^0.8.3",
+    "transformation-matrix": "^2.16.1"
   }
 }

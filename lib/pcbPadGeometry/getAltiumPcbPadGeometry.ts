@@ -56,7 +56,7 @@ export function getAltiumPcbPadGeometry({
         `LAYER${layerOrdinal}HOLEYOFFSET`,
         `PADYOFFSET${layerOrdinal}`,
       ) ?? 0,
-    holeRotationDegrees: Number(
+    holeCcwRotationDegrees: Number(
       record.getCaseInsensitive("SLOTROTATION") ??
         record.getCaseInsensitive("HOLEROTATION") ??
         0,
@@ -65,7 +65,7 @@ export function getAltiumPcbPadGeometry({
     holeSizeMils,
     layerOrdinal,
     plated: record.plated !== false,
-    rotationDegrees: Number(record.getCaseInsensitive("ROTATION") ?? 0),
+    ccwRotationDegrees: Number(record.getCaseInsensitive("ROTATION") ?? 0),
     shape: alternateShape === "ROUNDRECT" ? alternateShape : sizeAndShape.shape,
     slotLengthMils,
     widthMils: sizeAndShape.widthMils,

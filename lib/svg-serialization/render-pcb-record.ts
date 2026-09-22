@@ -207,9 +207,9 @@ function renderPad(
   const x = viewport.toX(geometry.xMils)
   const y = viewport.toY(geometry.yMils)
   const transform =
-    geometry.rotationDegrees === 0
+    geometry.ccwRotationDegrees === 0
       ? ""
-      : ` transform="rotate(${formatSvgNumber(-geometry.rotationDegrees)} ${formatSvgNumber(x)} ${formatSvgNumber(y)})"`
+      : ` transform="rotate(${formatSvgNumber(-geometry.ccwRotationDegrees)} ${formatSvgNumber(x)} ${formatSvgNumber(y)})"`
   let body: string
   if (geometry.shape === "ROUND" || geometry.shape === "CIRCLE") {
     if (Math.abs(geometry.widthMils - geometry.heightMils) < 0.0001) {
@@ -317,9 +317,9 @@ function renderPadHole(
   if (geometry.holeShape === "SLOT") {
     const length = Math.max(geometry.slotLengthMils, geometry.holeSizeMils)
     const transform =
-      geometry.holeRotationDegrees === 0
+      geometry.holeCcwRotationDegrees === 0
         ? ""
-        : ` transform="rotate(${formatSvgNumber(-geometry.holeRotationDegrees)} ${formatSvgNumber(x)} ${formatSvgNumber(y)})"`
+        : ` transform="rotate(${formatSvgNumber(-geometry.holeCcwRotationDegrees)} ${formatSvgNumber(x)} ${formatSvgNumber(y)})"`
     return `<rect data-hole-shape="SLOT" x="${formatSvgNumber(x - length / 2)}" y="${formatSvgNumber(y - geometry.holeSizeMils / 2)}" width="${formatSvgNumber(length)}" height="${formatSvgNumber(geometry.holeSizeMils)}" rx="${formatSvgNumber(geometry.holeSizeMils / 2)}" ry="${formatSvgNumber(geometry.holeSizeMils / 2)}" fill="#111827"${stroke}${transform}/>`
   }
 

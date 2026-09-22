@@ -5,12 +5,12 @@ export interface AltiumPcbPadGeometry {
   heightMils: number
   holeOffsetXMils: number
   holeOffsetYMils: number
-  holeRotationDegrees: number
+  holeCcwRotationDegrees: number
   holeShape: string
   holeSizeMils: number
   layerOrdinal: number
   plated: boolean
-  rotationDegrees: number
+  ccwRotationDegrees: number
   shape: string
   slotLengthMils: number
   widthMils: number

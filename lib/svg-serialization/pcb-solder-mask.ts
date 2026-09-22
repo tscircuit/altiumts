@@ -62,7 +62,7 @@ export function getPcbSolderMaskRecords(
           .setMeasurement("XSIZE", width)
           .setMeasurement("YSIZE", height)
           .set("SHAPE", geometry.shape)
-          .set("ROTATION", String(geometry.rotationDegrees))
+          .set("ROTATION", String(geometry.ccwRotationDegrees))
         if (
           geometry.shape === "ROUNDRECT" ||
           geometry.shape === "ROUNDEDRECTANGLE"

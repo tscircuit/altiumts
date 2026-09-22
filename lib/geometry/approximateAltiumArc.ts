@@ -1,5 +1,11 @@
 import type { AltiumPoint } from "./altium-geometry"
 import { getCcwSweepDegrees } from "./altium-geometry"
+import {
+  applyToPoint,
+  compose,
+  rotateDEG,
+  translate,
+} from "transformation-matrix"
 
 export interface ApproximateAltiumArcOptions {
   center: AltiumPoint
@@ -21,10 +27,10 @@ export function approximateAltiumArc({
   return Array.from({ length: segments + 1 }, (_, index) => {
     const angleDegrees =
       startAngleDegrees + (ccwSweepDegrees * index) / segments
-    const radians = (angleDegrees * Math.PI) / 180
-    return {
-      x: center.x + Math.cos(radians) * radius,
-      y: center.y + Math.sin(radians) * radius,
-    }
+    const radialToAltiumTransform = compose(
+      translate(center.x, center.y),
+      rotateDEG(angleDegrees),
+    )
+    return applyToPoint(radialToAltiumTransform, { x: radius, y: 0 })
   })
 }
