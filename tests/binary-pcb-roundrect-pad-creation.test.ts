@@ -1,5 +1,6 @@
 import { expect, test } from "bun:test"
 import {
+  AltiumPadRecord,
   getAltiumPcbPadGeometry,
   parseAltiumBinaryPcbDoc,
   serializeAltiumPcbDocToBinary,
@@ -28,7 +29,12 @@ test("serializes rounded-rectangle pad stack metadata", () => {
 
   const topPad = document.pads[0]
   const bottomPad = document.pads[1]
-  if (!topPad || !bottomPad) throw new Error("Expected two serialized pads")
+  if (
+    !(topPad instanceof AltiumPadRecord) ||
+    !(bottomPad instanceof AltiumPadRecord)
+  ) {
+    throw new Error("Expected two serialized pads")
+  }
   const topGeometry = getAltiumPcbPadGeometry({
     record: topPad,
     requestedLayers: ["TOP"],

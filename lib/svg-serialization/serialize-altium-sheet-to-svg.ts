@@ -1,7 +1,7 @@
 import { AltiumPcbDoc } from "../altium-pcb-doc"
 import { AltiumSchDoc } from "../altium-sch-doc"
 import type { AltiumLine } from "../base/altium-line"
-import { approximateAltiumArc } from "../geometry/approximate-altium-arc"
+import { approximateAltiumArc } from "../geometry/approximateAltiumArc"
 import { AltiumRecord } from "../records/altium-record"
 import {
   AltiumSchImageRecord,

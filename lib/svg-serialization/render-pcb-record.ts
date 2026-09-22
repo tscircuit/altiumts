@@ -1,7 +1,7 @@
 import { decodeAltiumWideString } from "../decode-altium-wide-string"
-import { approximateAltiumArc } from "../geometry/approximate-altium-arc"
+import { approximateAltiumArc } from "../geometry/approximateAltiumArc"
 import { getPcbRegionSemanticKind } from "../pcb-contours"
-import { getAltiumPcbPadGeometry } from "../pcb-pad-geometry"
+import { getAltiumPcbPadGeometry } from "../pcbPadGeometry"
 import { AltiumPadRecord } from "../records/altium-pad-record"
 import type { AltiumRecord } from "../records/altium-record"
 import {

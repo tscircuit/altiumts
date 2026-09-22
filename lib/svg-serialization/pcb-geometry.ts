@@ -1,6 +1,6 @@
 import type { AltiumPcbDocument } from "../altium-pcb-document"
-import { getAltiumPcbPadGeometry } from "../pcb-pad-geometry"
 import { getPcbComponentByIndex } from "../pcb-reference-resolution"
+import { getAltiumPcbPadGeometry } from "../pcbPadGeometry"
 import { AltiumPadRecord } from "../records/altium-pad-record"
 import type { AltiumRecord } from "../records/altium-record"
 import {
