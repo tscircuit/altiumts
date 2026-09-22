@@ -1,8 +1,8 @@
-import { getCcwSweepDegrees } from "../geometry/altium-geometry"
-import type { SvgPoint } from "./svg-types"
+import type { AltiumPoint } from "./altium-geometry"
+import { getCcwSweepDegrees } from "./altium-geometry"
 
-interface ApproximateAltiumArcOptions {
-  center: SvgPoint
+export interface ApproximateAltiumArcOptions {
+  center: AltiumPoint
   radius: number
   startAngleDegrees: number
   endAngleDegrees: number
@@ -10,14 +10,15 @@ interface ApproximateAltiumArcOptions {
 
 /**
  * Samples an Altium arc in its native counterclockwise direction. Altium
- * angles wrap through zero, so an arc from 360° to 90° sweeps 90°, not -270°.
+ * angles wrap through zero, so an arc from 360 degrees to 90 degrees sweeps
+ * 90 degrees rather than -270 degrees.
  */
 export function approximateAltiumArc({
   center,
   radius,
   startAngleDegrees,
   endAngleDegrees,
-}: ApproximateAltiumArcOptions): SvgPoint[] {
+}: ApproximateAltiumArcOptions): AltiumPoint[] {
   const ccwSweepDegrees = getCcwSweepDegrees(startAngleDegrees, endAngleDegrees)
   const segments = Math.max(8, Math.ceil(ccwSweepDegrees / 7.5))
 

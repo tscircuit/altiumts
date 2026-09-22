@@ -28,14 +28,20 @@ import {
   getPcbRecordsOwnedByComponent,
   getPcbRuleByIndex,
 } from "./pcb-reference-resolution"
+import { AltiumArcRecord } from "./records/altium-arc-record"
 import type { AltiumBoardRecord } from "./records/altium-board-record"
 import type { AltiumComponentRecord } from "./records/altium-component-record"
+import { AltiumFillRecord } from "./records/altium-fill-record"
 import type { AltiumModelRecord } from "./records/altium-model-record"
 import type { AltiumNetRecord } from "./records/altium-net-record"
+import { AltiumPadRecord } from "./records/altium-pad-record"
 import type { AltiumPolygonRecord } from "./records/altium-polygon-record"
 import type { AltiumRecord } from "./records/altium-record"
-import type { AltiumRegionRecord } from "./records/altium-region-record"
+import { AltiumRegionRecord } from "./records/altium-region-record"
 import type { AltiumRuleRecord } from "./records/altium-rule-record"
+import { AltiumTextRecord } from "./records/altium-text-record"
+import { AltiumTrackRecord } from "./records/altium-track-record"
+import { AltiumViaRecord } from "./records/altium-via-record"
 
 export interface AltiumPcbStreamSummary {
   dataSize?: number
@@ -240,43 +246,53 @@ export class AltiumBinaryPcbDoc extends AltiumNode {
     return this.embeddedModels.find((embedded) => embedded.record === model)
   }
 
-  get tracks(): AltiumRecord[] {
-    return this.primitiveRecords.get("Tracks6") ?? []
+  get tracks(): AltiumTrackRecord[] {
+    return recordsOfType(
+      this.primitiveRecords.get("Tracks6"),
+      AltiumTrackRecord,
+    )
   }
 
-  get arcs(): AltiumRecord[] {
-    return this.primitiveRecords.get("Arcs6") ?? []
+  get arcs(): AltiumArcRecord[] {
+    return recordsOfType(this.primitiveRecords.get("Arcs6"), AltiumArcRecord)
   }
 
-  get vias(): AltiumRecord[] {
-    return this.primitiveRecords.get("Vias6") ?? []
+  get vias(): AltiumViaRecord[] {
+    return recordsOfType(this.primitiveRecords.get("Vias6"), AltiumViaRecord)
   }
 
-  get pads(): AltiumRecord[] {
-    return this.primitiveRecords.get("Pads6") ?? []
+  get pads(): AltiumPadRecord[] {
+    return recordsOfType(this.primitiveRecords.get("Pads6"), AltiumPadRecord)
   }
 
-  get fills(): AltiumRecord[] {
-    return this.primitiveRecords.get("Fills6") ?? []
+  get fills(): AltiumFillRecord[] {
+    return recordsOfType(this.primitiveRecords.get("Fills6"), AltiumFillRecord)
   }
 
   get regions(): AltiumRegionRecord[] {
-    return (this.primitiveRecords.get("ShapeBasedRegions6") ??
-      this.primitiveRecords.get("Regions6") ??
-      []) as AltiumRegionRecord[]
+    return recordsOfType(
+      this.primitiveRecords.get("ShapeBasedRegions6") ??
+        this.primitiveRecords.get("Regions6"),
+      AltiumRegionRecord,
+    )
   }
 
   get regionFills(): AltiumRegionRecord[] {
-    return (this.primitiveRecords.get("Regions6") ?? []) as AltiumRegionRecord[]
+    return recordsOfType(
+      this.primitiveRecords.get("Regions6"),
+      AltiumRegionRecord,
+    )
   }
 
   get boardRegions(): AltiumRegionRecord[] {
-    return (this.primitiveRecords.get("BoardRegions") ??
-      []) as AltiumRegionRecord[]
+    return recordsOfType(
+      this.primitiveRecords.get("BoardRegions"),
+      AltiumRegionRecord,
+    )
   }
 
-  get texts(): AltiumRecord[] {
-    return this.primitiveRecords.get("Texts6") ?? []
+  get texts(): AltiumTextRecord[] {
+    return recordsOfType(this.primitiveRecords.get("Texts6"), AltiumTextRecord)
   }
 
   getRecordsByKind(kind: string): AltiumRecord[] {
@@ -305,6 +321,15 @@ export class AltiumBinaryPcbDoc extends AltiumNode {
   override getString(): string {
     return this.records.map((record) => record.getString()).join("\n")
   }
+}
+
+function recordsOfType<RecordType extends AltiumRecord>(
+  records: AltiumRecord[] | undefined,
+  RecordClass: new (...constructorArgs: never[]) => RecordType,
+): RecordType[] {
+  return (records ?? []).filter(
+    (record): record is RecordType => record instanceof RecordClass,
+  )
 }
 
 function sameNumber(

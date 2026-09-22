@@ -37,6 +37,18 @@ export class AltiumSchComponentRecord extends AltiumSchematicRecord {
   get libraryReference(): string | undefined {
     return getFirstDecoded(this, "LIBREFERENCE")
   }
+  get designator(): string | undefined {
+    return getFirstDecoded(this, "DESIGNATOR")
+  }
+  get comment(): string | undefined {
+    return getFirstDecoded(this, "COMMENT")
+  }
+  get designItemId(): string | undefined {
+    return getFirstDecoded(this, "DESIGNITEMID")
+  }
+  get currentPartId(): number | undefined {
+    return this.getNumber("CURRENTPARTID")
+  }
 }
 export class AltiumSchPinRecord extends AltiumSchematicRecord {
   override readonly type = "schematic-pin-record"
@@ -51,6 +63,15 @@ export class AltiumSchPinRecord extends AltiumSchematicRecord {
   }
   get hidden(): boolean | undefined {
     return this.getBoolean("ISHIDDEN")
+  }
+  get pinConglomerate(): number | undefined {
+    return this.getNumber("PINCONGLOMERATE")
+  }
+  get orientationQuarterTurns(): number | undefined {
+    return this.getNumber("ORIENTATION")
+  }
+  get pinLengthSchematicUnits(): number | undefined {
+    return this.getNumber("PINLENGTH")
   }
 }
 export class AltiumSchLabelRecord extends AltiumSchematicRecord {

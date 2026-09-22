@@ -95,3 +95,30 @@ test("models schematic ownership and named electrical connectivity", async () =>
   ).toBeTrue()
   expect(document.getBytes()).toEqual(source)
 })
+
+test("exposes common component and pin fields through typed records", () => {
+  const document = parseAltiumSchDoc(
+    [
+      "|RECORD=31",
+      "|RECORD=1|LIBREFERENCE=Resistor|DESIGNATOR=R1|COMMENT=10k|DESIGNITEMID=RES-10K|CURRENTPARTID=2",
+      "|RECORD=2|OWNERINDEX=1|NAME=A|DESIGNATOR=1|PINCONGLOMERATE=11|ORIENTATION=2|PINLENGTH=30",
+    ].join("\n"),
+  )
+  const [component] = document.components
+  const [pin] = document.pins
+
+  expect(component).toMatchObject({
+    comment: "10k",
+    currentPartId: 2,
+    designator: "R1",
+    designItemId: "RES-10K",
+    libraryReference: "Resistor",
+  })
+  expect(pin).toMatchObject({
+    designator: "1",
+    name: "A",
+    orientationQuarterTurns: 2,
+    pinConglomerate: 11,
+    pinLengthSchematicUnits: 30,
+  })
+})

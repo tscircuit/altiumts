@@ -23,7 +23,8 @@ test("renders the converted SimpleFOC Mini power-symbol repro", async () => {
   expect(document.getBytes()).toEqual(bytes)
 
   const graphics = definitionIds.flatMap((id) => {
-    const ownedGraphics = document.getObjectDefinitionGraphics(id!)
+    if (!id) return []
+    const ownedGraphics = document.getObjectDefinitionGraphics(id)
     expect(ownedGraphics).toBeDefined()
     return ownedGraphics ?? []
   })

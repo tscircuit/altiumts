@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test"
-import { approximateAltiumArc } from "../../lib/svg-serialization/approximate-altium-arc"
+import { approximateAltiumArc } from "../../lib"
 
 test("wraps Altium arcs counterclockwise through zero degrees", () => {
   const points = approximateAltiumArc({

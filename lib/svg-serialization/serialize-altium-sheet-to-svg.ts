@@ -1,6 +1,7 @@
 import { AltiumPcbDoc } from "../altium-pcb-doc"
 import { AltiumSchDoc } from "../altium-sch-doc"
 import type { AltiumLine } from "../base/altium-line"
+import { approximateAltiumArc } from "../geometry/approximate-altium-arc"
 import { AltiumRecord } from "../records/altium-record"
 import {
   AltiumSchImageRecord,
@@ -13,7 +14,6 @@ import {
   getSchematicIndexedPoints,
   readSchematicInteger,
 } from "./altium-values"
-import { approximateAltiumArc } from "./approximate-altium-arc"
 import { getSchematicFont } from "./get-schematic-font"
 import {
   getSchematicConnectionSegments,

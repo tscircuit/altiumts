@@ -1,11 +1,11 @@
 import type { AltiumPcbDocument } from "../altium-pcb-document"
+import { getAltiumPcbPadGeometry } from "../pcb-pad-geometry"
 import { AltiumPadRecord } from "../records/altium-pad-record"
 import type { AltiumRecord } from "../records/altium-record"
 import type { AltiumRuleRecord } from "../records/altium-rule-record"
 import { AltiumViaRecord } from "../records/altium-via-record"
 import { parsePcbMeasurement } from "./altium-values"
 import { normalizeLayerName } from "./pcb-layer"
-import { getPcbPadGeometry } from "./pcb-pad-geometry"
 
 export function isPcbSolderMaskLayer(layer: string | undefined): boolean {
   const normalized = normalizeLayerName(layer ?? "")
@@ -31,7 +31,12 @@ export function getPcbSolderMaskRecords(
   const openings: AltiumRecord[] = []
 
   for (const record of document.records) {
-    if (record.recordKind !== "Pad" && record.recordKind !== "Via") continue
+    if (
+      !(record instanceof AltiumPadRecord) &&
+      !(record instanceof AltiumViaRecord)
+    ) {
+      continue
+    }
     if (isPcbSolderMaskLayer(record.getCaseInsensitive("LAYER"))) continue
     for (const layer of layers) {
       const side = layer === "TOPSOLDER" ? "TOP" : "BOTTOM"
@@ -44,24 +49,27 @@ export function getPcbSolderMaskRecords(
       }
       const expansion = getMaskExpansion(record, rules)
       let opening: AltiumRecord
-      if (record.recordKind === "Pad") {
-        const geometry = getPcbPadGeometry(record, [side])
-        const width = geometry.width + expansion * 2
-        const height = geometry.height + expansion * 2
+      if (record instanceof AltiumPadRecord) {
+        const geometry = getAltiumPcbPadGeometry({
+          record,
+          requestedLayers: [side],
+        })
+        const width = geometry.widthMils + expansion * 2
+        const height = geometry.heightMils + expansion * 2
         if (width <= 0 || height <= 0) continue
         opening = new AltiumPadRecord()
           .set("RECORD", "Pad")
           .setMeasurement("XSIZE", width)
           .setMeasurement("YSIZE", height)
           .set("SHAPE", geometry.shape)
-          .set("ROTATION", String(geometry.rotation))
+          .set("ROTATION", String(geometry.rotationDegrees))
         if (
           geometry.shape === "ROUNDRECT" ||
           geometry.shape === "ROUNDEDRECTANGLE"
         ) {
           const padRadius =
-            geometry.cornerRadius ||
-            Math.min(geometry.width, geometry.height) * 0.18
+            geometry.cornerRadiusMils ||
+            Math.min(geometry.widthMils, geometry.heightMils) * 0.18
           const radius = Math.min(
             Math.max(padRadius + expansion, 0),
             Math.min(width, height) / 2,
@@ -100,7 +108,7 @@ export function getPcbSolderMaskRecords(
 }
 
 function reachesSide(record: AltiumRecord, side: string): boolean {
-  if (record.recordKind === "Pad") {
+  if (record instanceof AltiumPadRecord) {
     const layer = normalizeLayerName(record.getCaseInsensitive("LAYER") ?? "")
     return layer === "MULTILAYER" || layer === side || layer === `${side}LAYER`
   }

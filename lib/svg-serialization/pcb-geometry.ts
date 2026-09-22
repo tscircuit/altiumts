@@ -1,5 +1,7 @@
 import type { AltiumPcbDocument } from "../altium-pcb-document"
+import { getAltiumPcbPadGeometry } from "../pcb-pad-geometry"
 import { getPcbComponentByIndex } from "../pcb-reference-resolution"
+import { AltiumPadRecord } from "../records/altium-pad-record"
 import type { AltiumRecord } from "../records/altium-record"
 import {
   getPcbMeasurement,
@@ -8,7 +10,6 @@ import {
 } from "./altium-values"
 import { getPcbDimensionGeometry } from "./pcb-dimension-geometry"
 import { normalizeLayerName } from "./pcb-layer"
-import { getPcbPadGeometry } from "./pcb-pad-geometry"
 import type { SvgBounds, SvgPoint } from "./svg-types"
 import { boundsFromPoints, expandBounds, mergeBounds } from "./svg-utils"
 
@@ -135,11 +136,11 @@ export function getPcbRecordBounds(
     return bounds && width > 0 ? expandBounds(bounds, width / 2) : bounds
   }
 
-  if (kind === "Pad") {
-    const geometry = getPcbPadGeometry(record, requestedLayers)
-    const rotation = (geometry.rotation * Math.PI) / 180
-    const halfWidth = geometry.width / 2
-    const halfHeight = geometry.height / 2
+  if (record instanceof AltiumPadRecord) {
+    const geometry = getAltiumPcbPadGeometry({ record, requestedLayers })
+    const rotation = (geometry.rotationDegrees * Math.PI) / 180
+    const halfWidth = geometry.widthMils / 2
+    const halfHeight = geometry.heightMils / 2
     const extentX =
       Math.abs(Math.cos(rotation)) * halfWidth +
       Math.abs(Math.sin(rotation)) * halfHeight
@@ -147,10 +148,10 @@ export function getPcbRecordBounds(
       Math.abs(Math.sin(rotation)) * halfWidth +
       Math.abs(Math.cos(rotation)) * halfHeight
     return {
-      minX: geometry.x - extentX,
-      minY: geometry.y - extentY,
-      maxX: geometry.x + extentX,
-      maxY: geometry.y + extentY,
+      minX: geometry.xMils - extentX,
+      minY: geometry.yMils - extentY,
+      maxX: geometry.xMils + extentX,
+      maxY: geometry.yMils + extentY,
     }
   }
 
