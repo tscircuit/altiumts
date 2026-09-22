@@ -44,15 +44,19 @@ test("serializes rounded-rectangle pad stack metadata", () => {
     requestedLayers: ["BOTTOM"],
   })
   expect(topGeometry).toMatchObject({
+    ccwRotationDegrees: 0,
     cornerRadiusMils: 20,
     heightMils: 40,
+    holeCcwRotationDegrees: 0,
     layerOrdinal: 0,
     shape: "ROUNDRECT",
     widthMils: 80,
   })
   expect(bottomGeometry).toMatchObject({
+    ccwRotationDegrees: 0,
     cornerRadiusMils: 10,
     heightMils: 40,
+    holeCcwRotationDegrees: 0,
     layerOrdinal: 31,
     shape: "ROUNDRECT",
     widthMils: 80,

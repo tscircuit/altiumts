@@ -1,11 +1,11 @@
-import type { AltiumPoint } from "./altium-geometry"
-import { getCcwSweepDegrees } from "./altium-geometry"
 import {
   applyToPoint,
   compose,
   rotateDEG,
   translate,
 } from "transformation-matrix"
+import type { AltiumPoint } from "./altium-geometry"
+import { getCcwSweepDegrees } from "./altium-geometry"
 
 export interface ApproximateAltiumArcOptions {
   center: AltiumPoint

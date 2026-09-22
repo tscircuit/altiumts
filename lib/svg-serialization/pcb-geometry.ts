@@ -8,6 +8,7 @@ import {
   getPcbVertexPoints,
   parsePcbMeasurement,
 } from "./altium-values"
+import { getRotatedRectangleBounds } from "./getRotatedRectangleBounds"
 import { getPcbDimensionGeometry } from "./pcb-dimension-geometry"
 import { normalizeLayerName } from "./pcb-layer"
 import type { SvgBounds, SvgPoint } from "./svg-types"
@@ -138,21 +139,12 @@ export function getPcbRecordBounds(
 
   if (record instanceof AltiumPadRecord) {
     const geometry = getAltiumPcbPadGeometry({ record, requestedLayers })
-    const ccwRotationRadians = (geometry.ccwRotationDegrees * Math.PI) / 180
-    const halfWidth = geometry.widthMils / 2
-    const halfHeight = geometry.heightMils / 2
-    const extentX =
-      Math.abs(Math.cos(ccwRotationRadians)) * halfWidth +
-      Math.abs(Math.sin(ccwRotationRadians)) * halfHeight
-    const extentY =
-      Math.abs(Math.sin(ccwRotationRadians)) * halfWidth +
-      Math.abs(Math.cos(ccwRotationRadians)) * halfHeight
-    return {
-      minX: geometry.xMils - extentX,
-      minY: geometry.yMils - extentY,
-      maxX: geometry.xMils + extentX,
-      maxY: geometry.yMils + extentY,
-    }
+    return getRotatedRectangleBounds({
+      center: { x: geometry.xMils, y: geometry.yMils },
+      width: geometry.widthMils,
+      height: geometry.heightMils,
+      ccwRotationDegrees: geometry.ccwRotationDegrees,
+    })
   }
 
   if (kind === "Via") {
@@ -207,22 +199,12 @@ export function getPcbRecordBounds(
     const y2 = getPcbMeasurement(record, "Y2")
     const centerX = (x1 + x2) / 2
     const centerY = (y1 + y2) / 2
-    const halfWidth = Math.abs(x2 - x1) / 2
-    const halfHeight = Math.abs(y2 - y1) / 2
-    const rotation =
-      (Number(record.getCaseInsensitive("ROTATION") ?? 0) * Math.PI) / 180
-    const extentX =
-      Math.abs(Math.cos(rotation)) * halfWidth +
-      Math.abs(Math.sin(rotation)) * halfHeight
-    const extentY =
-      Math.abs(Math.sin(rotation)) * halfWidth +
-      Math.abs(Math.cos(rotation)) * halfHeight
-    return {
-      minX: centerX - extentX,
-      minY: centerY - extentY,
-      maxX: centerX + extentX,
-      maxY: centerY + extentY,
-    }
+    return getRotatedRectangleBounds({
+      center: { x: centerX, y: centerY },
+      width: Math.abs(x2 - x1),
+      height: Math.abs(y2 - y1),
+      ccwRotationDegrees: Number(record.getCaseInsensitive("ROTATION") ?? 0),
+    })
   }
 
   return undefined
