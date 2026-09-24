@@ -2,6 +2,7 @@ import { createHash } from "node:crypto"
 import { mkdir, writeFile } from "node:fs/promises"
 import { dirname, resolve } from "node:path"
 import { unzipSync } from "fflate"
+import { TI_POWER_REFERENCE_ZIP_BUNDLES } from "./references/ti-power-references"
 
 type DirectReferenceSpec = {
   filename: string
@@ -10,15 +11,20 @@ type DirectReferenceSpec = {
   url: string
 }
 
-type NestedZipBundleSpec = {
+type ZipOutputSpec = {
+  archivePath: string
+  filename: string
+  sha256: string
+}
+
+type ZipBundleSpec = {
   archiveSha256: string
-  nestedArchivePath: string
-  nestedArchiveSha256: string
-  outputs: Array<{
-    filename: string
-    nestedFilePath: string
+  nestedArchives: Array<{
+    archivePath: string
+    outputs: ZipOutputSpec[]
     sha256: string
   }>
+  outputs: ZipOutputSpec[]
   source: string
   url: string
 }
@@ -189,30 +195,36 @@ const tiSchematicHashes: Record<string, string> = {
   "57": "8505b9f046ebae2d6bd8c9df7464928a73867e123d1bf760477e9262cc4be7f8",
 }
 
-const nestedZipBundles: NestedZipBundleSpec[] = [
+const zipBundles: ZipBundleSpec[] = [
   {
     archiveSha256:
       "40e6c4d0bea5381bf7b4e0ef26ec4ec9adae156be308e4a3838bd344972b7615",
-    nestedArchivePath:
-      "TMDS62LEVM Design File Package Altium (Rev. B)/PROC180/PROC181E1_1/3_BoardFile/Altium/PROC181E1-1_PRJPCB.zip",
-    nestedArchiveSha256:
-      "636a654aa21de431d5c80519c5b8910a9e0e629cba5216dc3b1cbb4b0e598532",
-    outputs: [
+    nestedArchives: [
       {
-        filename: "ti-tmds62levm-rev-b.PcbDoc",
-        nestedFilePath: "PROC181E1-1_BRD_11_3.pcbdoc",
+        archivePath:
+          "TMDS62LEVM Design File Package Altium (Rev. B)/PROC180/PROC181E1_1/3_BoardFile/Altium/PROC181E1-1_PRJPCB.zip",
         sha256:
-          "8444ad8456ff028b7aa11389362ba2fbc01291e87ff46e394576cb044c3612fc",
+          "636a654aa21de431d5c80519c5b8910a9e0e629cba5216dc3b1cbb4b0e598532",
+        outputs: [
+          {
+            filename: "ti-tmds62levm-rev-b.PcbDoc",
+            archivePath: "PROC181E1-1_BRD_11_3.pcbdoc",
+            sha256:
+              "8444ad8456ff028b7aa11389362ba2fbc01291e87ff46e394576cb044c3612fc",
+          },
+          ...Object.entries(tiSchematicHashes).map(([sheet, sha256]) => ({
+            filename: `ti-tmds62levm-rev-b/${sheet}.SchDoc`,
+            archivePath: `${sheet}.SchDoc`,
+            sha256,
+          })),
+        ],
       },
-      ...Object.entries(tiSchematicHashes).map(([sheet, sha256]) => ({
-        filename: `ti-tmds62levm-rev-b/${sheet}.SchDoc`,
-        nestedFilePath: `${sheet}.SchDoc`,
-        sha256,
-      })),
     ],
+    outputs: [],
     source: "Texas Instruments TMDS62LEVM design files SPRCAL9 Rev. B",
     url: "https://www.ti.com/lit/zip/sprcal9",
   },
+  ...TI_POWER_REFERENCE_ZIP_BUNDLES,
 ]
 
 const referencesDirectory = resolve(import.meta.dir, "..", "references")
@@ -235,9 +247,7 @@ async function downloadReference(
   )
 }
 
-async function downloadNestedBundle(
-  reference: NestedZipBundleSpec,
-): Promise<void> {
+async function downloadZipBundle(reference: ZipBundleSpec): Promise<void> {
   const response = await fetch(reference.url)
   if (!response.ok) {
     throw new Error(
@@ -250,30 +260,39 @@ async function downloadNestedBundle(
     archiveBytes,
     reference.archiveSha256,
   )
-  const nestedArchive = getOnlyExtractedEntry(
-    unzipSync(archiveBytes, {
-      filter: ({ name }) => name === reference.nestedArchivePath,
-    }),
-    reference.nestedArchivePath,
-  )
-  verifySha256(
-    `${reference.source} nested archive`,
-    nestedArchive,
-    reference.nestedArchiveSha256,
-  )
-
-  const outputPaths = new Set(
-    reference.outputs.map((output) => output.nestedFilePath),
-  )
-  const entries = unzipSync(nestedArchive, {
-    filter: ({ name }) => outputPaths.has(name),
+  const archivePaths = new Set([
+    ...reference.outputs.map((output) => output.archivePath),
+    ...reference.nestedArchives.map((archive) => archive.archivePath),
+  ])
+  const entries = unzipSync(archiveBytes, {
+    filter: ({ name }) => archivePaths.has(name),
   })
-  for (const output of reference.outputs) {
-    const bytes = getOnlyExtractedEntry(entries, output.nestedFilePath)
+  await writeZipOutputs(entries, reference.outputs, reference.source)
+
+  for (const archive of reference.nestedArchives) {
+    const bytes = getOnlyExtractedEntry(entries, archive.archivePath)
+    verifySha256(archive.archivePath, bytes, archive.sha256)
+    const outputPaths = new Set(
+      archive.outputs.map((output) => output.archivePath),
+    )
+    const nestedEntries = unzipSync(bytes, {
+      filter: ({ name }) => outputPaths.has(name),
+    })
+    await writeZipOutputs(nestedEntries, archive.outputs, reference.source)
+  }
+}
+
+async function writeZipOutputs(
+  entries: Record<string, Uint8Array>,
+  outputs: ZipOutputSpec[],
+  source: string,
+): Promise<void> {
+  for (const output of outputs) {
+    const bytes = getOnlyExtractedEntry(entries, output.archivePath)
     verifySha256(output.filename, bytes, output.sha256)
     await writeReference(output.filename, bytes)
     console.log(
-      `Saved ${output.filename} (${bytes.byteLength} bytes) from ${reference.source}`,
+      `Saved ${output.filename} (${bytes.byteLength} bytes) from ${source}`,
     )
   }
 }
@@ -312,5 +331,5 @@ function verifySha256(
 await mkdir(referencesDirectory, { recursive: true })
 await Promise.all([
   ...references.map(downloadReference),
-  ...nestedZipBundles.map(downloadNestedBundle),
+  ...zipBundles.map(downloadZipBundle),
 ])

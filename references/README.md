@@ -46,6 +46,22 @@ Run `bun run download-references` to download:
   SPRCAL9 Rev. B. The script verifies the outer ZIP, nested Altium project ZIP,
   extracted PCB, and every extracted schematic independently. TI's archive
   notice and website terms apply to these downloaded fixtures.
+- `ti-pmp22650-main.PcbDoc`, `ti-pmp22712.PcbDoc`, and `ti-pmp22773.PcbDoc`
+  from the official Texas Instruments [PMP22650 CAD/CAE files](https://www.ti.com/lit/zip/TIDM925),
+  TIDM925. The three boards are extracted from separate nested Altium ZIPs.
+- `ti-pmp23595.PcbDoc` from the official Texas Instruments
+  [PMP23595 CAD/CAE files](https://www.ti.com/lit/zip/SLVMEP2), SLVMEP2A.
+- `ti-pmp23653-main.PcbDoc` and `ti-pmp23653-planar-transformer.PcbDoc`
+  from the official Texas Instruments [PMP23653 CAD/CAE files](https://www.ti.com/lit/zip/SLVMF61),
+  SLVMF61. TI's archive notices and website terms apply to all six power-board
+  fixtures. Archive, nested archive, and extracted PCB hashes match the fixtures
+  used by `altium-to-circuit-json`.
+
+The six TI power boards have parser, byte-preserving round-trip, and PCB SVG
+snapshot coverage. Snapshots focus on each board outline with 5% padding so
+external fabrication drawings do not shrink the PCB. Strict validation passes
+for five boards; PMP22650 retains its two original negative-pad-size diagnostics
+(`/Pads6/Data` records 26 and 27), which the parser test explicitly checks.
 
 Downloaded `.PcbDoc` and `.SchDoc` files are ignored by git. Each imported
 file has a corresponding SVG visual snapshot test. The download script stores
