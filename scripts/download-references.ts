@@ -267,7 +267,11 @@ async function downloadZipBundle(reference: ZipBundleSpec): Promise<void> {
   const entries = unzipSync(archiveBytes, {
     filter: ({ name }) => archivePaths.has(name),
   })
-  await writeZipOutputs(entries, reference.outputs, reference.source)
+  await writeZipOutputs({
+    entries,
+    outputs: reference.outputs,
+    source: reference.source,
+  })
 
   for (const archive of reference.nestedArchives) {
     const bytes = getOnlyExtractedEntry(entries, archive.archivePath)
@@ -278,15 +282,23 @@ async function downloadZipBundle(reference: ZipBundleSpec): Promise<void> {
     const nestedEntries = unzipSync(bytes, {
       filter: ({ name }) => outputPaths.has(name),
     })
-    await writeZipOutputs(nestedEntries, archive.outputs, reference.source)
+    await writeZipOutputs({
+      entries: nestedEntries,
+      outputs: archive.outputs,
+      source: reference.source,
+    })
   }
 }
 
-async function writeZipOutputs(
-  entries: Record<string, Uint8Array>,
-  outputs: ZipOutputSpec[],
-  source: string,
-): Promise<void> {
+async function writeZipOutputs({
+  entries,
+  outputs,
+  source,
+}: {
+  entries: Record<string, Uint8Array>
+  outputs: ZipOutputSpec[]
+  source: string
+}): Promise<void> {
   for (const output of outputs) {
     const bytes = getOnlyExtractedEntry(entries, output.archivePath)
     verifySha256(output.filename, bytes, output.sha256)
