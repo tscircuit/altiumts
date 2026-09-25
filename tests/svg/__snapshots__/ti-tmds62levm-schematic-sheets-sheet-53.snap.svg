@@ -120,9 +120,9 @@
     <line data-record="13" x1="1293.7" y1="593.7" x2="1290.7" y2="590.7" stroke="#000bff" stroke-width="1"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1270.7 590.7) rotate(0)">R416</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1320.7 590.7) rotate(0)">100E_1%</text>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="1420.7,780.7 1420.7,780.7 1413.7,770.7 1427.7,770.7 1420.7,780.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="1428.7,792.7 1428.7,792.7 1430.7,796.7 1426.7,794.7 1428.7,792.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="1428.7,786.7 1428.7,786.7 1430.7,790.7 1426.7,788.7 1428.7,786.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <polygon data-record="7" points="1420.7,780.7 1420.7,780.7 1413.7,770.7 1427.7,770.7 1420.7,780.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
+    <polygon data-record="7" points="1428.7,792.7 1428.7,792.7 1430.7,796.7 1426.7,794.7 1428.7,792.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
+    <polygon data-record="7" points="1428.7,786.7 1428.7,786.7 1430.7,790.7 1426.7,788.7 1428.7,786.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
     <g data-record="2"><line x1="1420.7" y1="760.7" x2="1420.7" y2="750.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1420.7 751.7) rotate(-90)">2</text></g>
     <g data-record="2"><line x1="1420.7" y1="800.7" x2="1420.7" y2="810.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1420.7 809.7) rotate(-90)">1</text></g>
     <line data-record="13" x1="1427.7" y1="780.7" x2="1413.7" y2="780.7" stroke="#000bff" stroke-width="1"/>
@@ -180,7 +180,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1730.7 260.7) rotate(0)">C63</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1729.7 269.7) rotate(0)">0.01uF</text>
     <g data-record="2"><line x1="870.7" y1="700.7" x2="880.7" y2="700.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="865.7" cy="700.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="865.7" cy="700.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(830.7 700.7) rotate(0)">TP64</text>
     <g data-record="2"><line x1="1530.7" y1="250.7" x2="1530.7" y2="240.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1530.7" y1="260.7" x2="1530.7" y2="270.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -202,7 +202,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1400.7 1240.7) rotate(0)">R403</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1400.7 1250.7) rotate(0)">10K</text>
     <g data-record="2"><line x1="420.7" y1="190.7" x2="420.7" y2="200.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="420.7" cy="185.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="420.7" cy="185.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(410.7 166.7) rotate(0)">TP56</text>
     <g data-record="2"><line x1="1750.7" y1="410.7" x2="1750.7" y2="400.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1750.7" y1="420.7" x2="1750.7" y2="430.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -333,7 +333,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1657.7 1236.7) rotate(0)">U14</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1660.7 1374.7) rotate(0)">TM4C1294NCPDTT3R</text>
     <g data-record="2"><line x1="1490.7" y1="200.7" x2="1490.7" y2="210.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1490.7" cy="195.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1490.7" cy="195.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1480.7 176.7) rotate(0)">TP66</text>
     <g data-record="2"><line x1="1800.7" y1="420.7" x2="1800.7" y2="430.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1800.7" y1="410.7" x2="1800.7" y2="400.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -377,7 +377,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(258.7 570.7) rotate(0)">R94</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(218.7 570.7) rotate(0)">0E</text>
     <g data-record="2"><line x1="1260.7" y1="820.7" x2="1250.7" y2="820.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1265.7" cy="820.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1265.7" cy="820.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1260.7 805.7) rotate(0)">TP43</text>
     <g data-record="2"><line x1="1590.7" y1="400.7" x2="1590.7" y2="390.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1590.7" y1="410.7" x2="1590.7" y2="420.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -435,7 +435,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1360.7 580.7) rotate(0)">R104</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1410.7 580.7) rotate(0)">0E</text>
     <g data-record="2"><line x1="870.7" y1="670.7" x2="880.7" y2="670.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="865.7" cy="670.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="865.7" cy="670.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(830.7 670.7) rotate(0)">TP59</text>
     <g data-record="2"><line x1="1400.7" y1="250.7" x2="1400.7" y2="240.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1400.7" y1="260.7" x2="1400.7" y2="270.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -466,8 +466,8 @@
     <line data-record="13" x1="1523.7" y1="637.7" x2="1520.7" y2="640.7" stroke="#000bff" stroke-width="1"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1530.7 620.7) rotate(0)">R51</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1530.7 630.7) rotate(0)">30K_1%</text>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="600.7,265.7 600.7,265.7 606.7,271.7 595.7,271.7 594.7,271.7 600.7,265.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="600.7,295.7 600.7,295.7 594.7,289.7 605.7,289.7 606.7,289.7 600.7,295.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <polygon data-record="7" points="600.7,265.7 600.7,265.7 606.7,271.7 595.7,271.7 594.7,271.7 600.7,265.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
+    <polygon data-record="7" points="600.7,295.7 600.7,295.7 594.7,289.7 605.7,289.7 606.7,289.7 600.7,295.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
     <g data-record="2"><line x1="600.7" y1="300.7" x2="600.7" y2="330.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(600.7 309.7) rotate(-90)">1</text></g>
     <g data-record="2"><line x1="600.7" y1="260.7" x2="600.7" y2="230.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(600.7 251.7) rotate(-90)">2</text></g>
     <polyline data-record="6" points="608.7,268.7 608.7,268.7 605.7,265.7" fill="none" stroke="#000bff" stroke-width="3"/>
@@ -665,7 +665,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1130.7 200.7) rotate(0)">U93</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1080.7 310.7) rotate(0)">TPS79601DRBR</text>
     <g data-record="2"><line x1="870.7" y1="680.7" x2="880.7" y2="680.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="865.7" cy="680.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="865.7" cy="680.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(830.7 680.7) rotate(0)">TP60</text>
     <g data-record="2"><line x1="1960.7" y1="870.7" x2="1960.7" y2="880.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1960.7" y1="840.7" x2="1960.7" y2="830.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -708,7 +708,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1020.7 250.7) rotate(0)">R406</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1070.7 250.7) rotate(0)">0E</text>
     <rect data-record="14" x="1960.7" y="1290.7" width="40" height="50" rx="0" fill="#ffffb0" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="1980.7,1310.7 1980.7,1310.7 1987.7,1320.7 1973.7,1320.7 1980.7,1310.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <polygon data-record="7" points="1980.7,1310.7 1980.7,1310.7 1987.7,1320.7 1973.7,1320.7 1980.7,1310.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
     <g data-record="2"><line x1="1980.7" y1="1340.7" x2="1980.7" y2="1370.7" stroke="#1f2937" stroke-width="1"/><polygon class="altium-schematic-pin-electrical-symbol" data-electrical="2" points="1980.7,1346.7 1978.7,1340.7 1982.7,1340.7" fill="none" stroke="#1f2937" stroke-width="0.25"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1980.7 1349.7) rotate(-90)">1</text></g>
     <g data-record="2"><line x1="1980.7" y1="1290.7" x2="1980.7" y2="1260.7" stroke="#1f2937" stroke-width="1"/><polygon class="altium-schematic-pin-electrical-symbol" data-electrical="1" points="1980.7,1290.7 1982.7,1287.7 1980.7,1284.7 1978.7,1287.7" fill="none" stroke="#1f2937" stroke-width="0.25"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1980.7 1281.7) rotate(-90)">3</text></g>
     <g data-record="2"><line x1="2000.7" y1="1300.7" x2="2030.7" y2="1300.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(2009.7 1300.7) rotate(0)">2</text></g>
@@ -767,7 +767,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1590.7 260.7) rotate(0)">C248</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1590.7 270.7) rotate(0)">0.1uF</text>
     <g data-record="2"><line x1="1490.7" y1="1180.7" x2="1490.7" y2="1190.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1490.7" cy="1175.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1490.7" cy="1175.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1480.7 1168.7) rotate(0)">TP67</text>
     <g data-record="2"><line x1="250.7" y1="600.7" x2="260.7" y2="600.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="240.7" y1="600.7" x2="230.7" y2="600.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -788,11 +788,11 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1300.7 1410.7) rotate(0)">C83</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1330.7 1410.7) rotate(0)">12pF</text>
     <g data-record="2"><line x1="870.7" y1="690.7" x2="880.7" y2="690.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="865.7" cy="690.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="865.7" cy="690.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(830.7 690.7) rotate(0)">TP62</text>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="1370.7,780.7 1370.7,780.7 1363.7,770.7 1377.7,770.7 1370.7,780.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="1378.7,792.7 1378.7,792.7 1380.7,796.7 1376.7,794.7 1378.7,792.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="1378.7,786.7 1378.7,786.7 1380.7,790.7 1376.7,788.7 1378.7,786.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <polygon data-record="7" points="1370.7,780.7 1370.7,780.7 1363.7,770.7 1377.7,770.7 1370.7,780.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
+    <polygon data-record="7" points="1378.7,792.7 1378.7,792.7 1380.7,796.7 1376.7,794.7 1378.7,792.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
+    <polygon data-record="7" points="1378.7,786.7 1378.7,786.7 1380.7,790.7 1376.7,788.7 1378.7,786.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
     <g data-record="2"><line x1="1370.7" y1="760.7" x2="1370.7" y2="750.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1370.7 751.7) rotate(-90)">2</text></g>
     <g data-record="2"><line x1="1370.7" y1="800.7" x2="1370.7" y2="810.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1370.7 809.7) rotate(-90)">1</text></g>
     <line data-record="13" x1="1377.7" y1="780.7" x2="1363.7" y2="780.7" stroke="#000bff" stroke-width="1"/>
@@ -905,7 +905,7 @@
     <line data-record="13" x1="650.7" y1="440.7" x2="645.7" y2="446.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="638.7" y1="446.7" x2="645.7" y2="446.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="623.7" y1="440.7" x2="633.7" y2="440.7" stroke="#008200" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="618.7" cy="462.7" rx="5" ry="15" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <ellipse data-record="8" cx="618.7" cy="462.7" rx="5" ry="15" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
     <text data-record="4" x="0" y="0" fill="#0000ff" font-family="Calibri" font-size="40" font-style="normal" font-weight="bold" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(920.7 160.7) rotate(0)">XDS110 DEBUGGER</text>
     <text data-record="4" x="0" y="0" fill="#1f2937" font-family="Calibri" font-size="15" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1600.7 945.7) rotate(0)">Sets the unique ID of the Debugger</text>
     <text data-record="4" x="0" y="0" fill="#00ff00" font-family="Calibri Light" font-size="11" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1310.7 811.7) rotate(0)">GREEN</text>
@@ -1086,101 +1086,101 @@
     <polyline data-record="27" points="420.7,450.7 420.7,220.7 540.7,220.7 540.7,260.7" fill="none" stroke="#800040" stroke-width="1"/>
     <polyline data-record="27" points="330.7,450.7 490.7,450.7 490.7,490.7" fill="none" stroke="#800040" stroke-width="1"/>
     <polyline data-record="27" points="230.7,600.7 150.7,600.7 150.7,570.7" fill="none" stroke="#800040" stroke-width="1"/>
-    <circle data-record="29" cx="150.7" cy="600.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="150.7" cy="570.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="150.7" cy="530.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="150.7" cy="480.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="150.7" cy="460.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="330.7" cy="600.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="330.7" cy="570.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="370.7" cy="480.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="420.7" cy="450.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="420.7" cy="220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="490.7" cy="490.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="540.7" cy="340.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="540.7" cy="220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="570.7" cy="470.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="590.7" cy="460.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="600.7" cy="220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="620.7" cy="220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="840.7" cy="220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1000.7" cy="220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1070.7" cy="220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1180.7" cy="340.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1260.7" cy="590.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1260.7" cy="220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1280.7" cy="1410.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1280.7" cy="290.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1290.7" cy="290.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1290.7" cy="220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1350.7" cy="220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1390.7" cy="1410.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1390.7" cy="1320.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1390.7" cy="1200.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1400.7" cy="220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1420.7" cy="220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1480.7" cy="370.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1480.7" cy="220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1490.7" cy="1200.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1490.7" cy="220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1520.7" cy="660.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1520.7" cy="590.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1530.7" cy="290.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1530.7" cy="220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1580.7" cy="290.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1580.7" cy="220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1590.7" cy="1320.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1590.7" cy="440.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1590.7" cy="370.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1630.7" cy="290.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1630.7" cy="220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1640.7" cy="370.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1670.7" cy="290.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1670.7" cy="220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1700.7" cy="450.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1720.7" cy="290.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1720.7" cy="220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1750.7" cy="450.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1750.7" cy="390.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1770.7" cy="220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1800.7" cy="630.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1800.7" cy="390.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1810.7" cy="920.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1820.7" cy="340.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1820.7" cy="330.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1820.7" cy="320.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1820.7" cy="310.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1820.7" cy="300.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1820.7" cy="290.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1820.7" cy="280.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1820.7" cy="270.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1820.7" cy="260.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1820.7" cy="250.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1820.7" cy="240.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1820.7" cy="230.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1820.7" cy="220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1840.7" cy="390.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1850.7" cy="500.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1860.7" cy="1010.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1860.7" cy="910.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1860.7" cy="810.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1870.7" cy="1250.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1890.7" cy="1380.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1890.7" cy="1250.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1910.7" cy="1010.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1910.7" cy="900.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1910.7" cy="810.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1920.7" cy="1380.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1920.7" cy="1250.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1960.7" cy="1010.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1960.7" cy="890.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1960.7" cy="810.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="2050.7" cy="290.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="2050.7" cy="280.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="2050.7" cy="270.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="2050.7" cy="260.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="2050.7" cy="250.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="2050.7" cy="240.7" r="1.8" fill="#800000"/>
+    <circle data-record="29" cx="150.7" cy="600.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="150.7" cy="570.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="150.7" cy="530.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="150.7" cy="480.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="150.7" cy="460.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="330.7" cy="600.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="330.7" cy="570.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="370.7" cy="480.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="420.7" cy="450.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="420.7" cy="220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="490.7" cy="490.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="540.7" cy="340.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="540.7" cy="220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="570.7" cy="470.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="590.7" cy="460.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="600.7" cy="220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="620.7" cy="220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="840.7" cy="220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1000.7" cy="220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1070.7" cy="220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1180.7" cy="340.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1260.7" cy="590.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1260.7" cy="220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1280.7" cy="1410.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1280.7" cy="290.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1290.7" cy="290.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1290.7" cy="220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1350.7" cy="220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1390.7" cy="1410.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1390.7" cy="1320.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1390.7" cy="1200.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1400.7" cy="220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1420.7" cy="220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1480.7" cy="370.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1480.7" cy="220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1490.7" cy="1200.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1490.7" cy="220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1520.7" cy="660.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1520.7" cy="590.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1530.7" cy="290.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1530.7" cy="220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1580.7" cy="290.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1580.7" cy="220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1590.7" cy="1320.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1590.7" cy="440.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1590.7" cy="370.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1630.7" cy="290.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1630.7" cy="220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1640.7" cy="370.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1670.7" cy="290.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1670.7" cy="220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1700.7" cy="450.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1720.7" cy="290.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1720.7" cy="220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1750.7" cy="450.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1750.7" cy="390.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1770.7" cy="220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1800.7" cy="630.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1800.7" cy="390.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1810.7" cy="920.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1820.7" cy="340.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1820.7" cy="330.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1820.7" cy="320.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1820.7" cy="310.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1820.7" cy="300.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1820.7" cy="290.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1820.7" cy="280.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1820.7" cy="270.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1820.7" cy="260.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1820.7" cy="250.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1820.7" cy="240.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1820.7" cy="230.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1820.7" cy="220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1840.7" cy="390.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1850.7" cy="500.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1860.7" cy="1010.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1860.7" cy="910.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1860.7" cy="810.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1870.7" cy="1250.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1890.7" cy="1380.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1890.7" cy="1250.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1910.7" cy="1010.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1910.7" cy="900.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1910.7" cy="810.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1920.7" cy="1380.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1920.7" cy="1250.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1960.7" cy="1010.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1960.7" cy="890.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1960.7" cy="810.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="2050.7" cy="290.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="2050.7" cy="280.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="2050.7" cy="270.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="2050.7" cy="260.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="2050.7" cy="250.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="2050.7" cy="240.7" r="2" fill="#800000"/>
     </g>
   </g>
 </svg>

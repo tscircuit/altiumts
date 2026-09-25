@@ -217,10 +217,10 @@
     <line data-record="13" x1="555.7" y1="1470.7" x2="580.7" y2="1470.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="580.7" y1="1440.7" x2="574.7" y2="1440.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="580.7" y1="1460.7" x2="574.7" y2="1460.7" stroke="#000bff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="555.7,1430.7 551.0366,1430.9728 546.4369,1431.7873 541.9634,1433.1326 537.6774,1434.9903 533.6371,1437.3349 529.8977,1440.1346 526.5102,1443.3512 523.5208,1446.9408 520.9703,1450.8544" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="580.901,1430.901 579.0557,1432.937 577.4189,1435.144 576.0062,1437.5009 574.8314,1439.9849 573.9057,1442.572 573.238,1445.2375 572.8348,1447.9555 572.7,1450.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="572.7,1450.7 572.8348,1453.4445 573.238,1456.1625 573.9057,1458.828 574.8314,1461.4151 576.0062,1463.8991 577.4189,1466.256 579.0557,1468.463 580.901,1470.499" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="520.9703,1450.5456 523.5208,1454.4592 526.5102,1458.0488 529.8977,1461.2654 533.6371,1464.0651 537.6774,1466.4097 541.9634,1468.2674 546.4369,1469.6127 551.0366,1470.4272 555.7,1470.7" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="11" points="555.7,1430.7 551.0366,1430.9728 546.4369,1431.7873 541.9634,1433.1326 537.6774,1434.9903 533.6371,1437.3349 529.8977,1440.1346 526.5102,1443.3512 523.5208,1446.9408 520.9703,1450.8544" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="580.901,1430.901 579.0557,1432.937 577.4189,1435.144 576.0062,1437.5009 574.8314,1439.9849 573.9057,1442.572 573.238,1445.2375 572.8348,1447.9555 572.7,1450.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="572.7,1450.7 572.8348,1453.4445 573.238,1456.1625 573.9057,1458.828 574.8314,1461.4151 576.0062,1463.8991 577.4189,1466.256 579.0557,1468.463 580.901,1470.499" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="520.9703,1450.5456 523.5208,1454.4592 526.5102,1458.0488 529.8977,1461.2654 533.6371,1464.0651 537.6774,1466.4097 541.9634,1468.2674 546.4369,1469.6127 551.0366,1470.4272 555.7,1470.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
     <text data-record="4" x="0" y="0" fill="#000080" font-family="Courier New" font-size="9" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(531.7 1454.7) rotate(0)">Y</text>
     <text data-record="4" x="0" y="0" fill="#000080" font-family="Courier New" font-size="9" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(570.7 1463.7) rotate(0)">B</text>
     <text data-record="4" x="0" y="0" fill="#000080" font-family="Courier New" font-size="9" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(570.7 1446.7) rotate(0)">A</text>
@@ -563,10 +563,10 @@
     <line data-record="13" x1="555.7" y1="1190.7" x2="580.7" y2="1190.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="580.7" y1="1160.7" x2="574.7" y2="1160.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="580.7" y1="1180.7" x2="574.7" y2="1180.7" stroke="#000bff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="555.7,1150.7 551.0366,1150.9728 546.4369,1151.7873 541.9634,1153.1326 537.6774,1154.9903 533.6371,1157.3349 529.8977,1160.1346 526.5102,1163.3512 523.5208,1166.9408 520.9703,1170.8544" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="580.901,1150.901 579.0557,1152.937 577.4189,1155.144 576.0062,1157.5009 574.8314,1159.9849 573.9057,1162.572 573.238,1165.2375 572.8348,1167.9555 572.7,1170.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="572.7,1170.7 572.8348,1173.4445 573.238,1176.1625 573.9057,1178.828 574.8314,1181.4151 576.0062,1183.8991 577.4189,1186.256 579.0557,1188.463 580.901,1190.499" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="520.9703,1170.5456 523.5208,1174.4592 526.5102,1178.0488 529.8977,1181.2654 533.6371,1184.0651 537.6774,1186.4097 541.9634,1188.2674 546.4369,1189.6127 551.0366,1190.4272 555.7,1190.7" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="11" points="555.7,1150.7 551.0366,1150.9728 546.4369,1151.7873 541.9634,1153.1326 537.6774,1154.9903 533.6371,1157.3349 529.8977,1160.1346 526.5102,1163.3512 523.5208,1166.9408 520.9703,1170.8544" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="580.901,1150.901 579.0557,1152.937 577.4189,1155.144 576.0062,1157.5009 574.8314,1159.9849 573.9057,1162.572 573.238,1165.2375 572.8348,1167.9555 572.7,1170.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="572.7,1170.7 572.8348,1173.4445 573.238,1176.1625 573.9057,1178.828 574.8314,1181.4151 576.0062,1183.8991 577.4189,1186.256 579.0557,1188.463 580.901,1190.499" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="520.9703,1170.5456 523.5208,1174.4592 526.5102,1178.0488 529.8977,1181.2654 533.6371,1184.0651 537.6774,1186.4097 541.9634,1188.2674 546.4369,1189.6127 551.0366,1190.4272 555.7,1190.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
     <text data-record="4" x="0" y="0" fill="#000080" font-family="Courier New" font-size="9" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(531.7 1174.7) rotate(0)">Y</text>
     <text data-record="4" x="0" y="0" fill="#000080" font-family="Courier New" font-size="9" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(570.7 1183.7) rotate(0)">B</text>
     <text data-record="4" x="0" y="0" fill="#000080" font-family="Courier New" font-size="9" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(570.7 1166.7) rotate(0)">A</text>
@@ -697,40 +697,40 @@
     <g data-record="18"><path d="M 240.7 1165.7 H 300.7 V 1175.7 H 240.7 Z" fill="#ffff80" stroke="#800000" stroke-width="1"/><text x="270.7" y="1170.7" text-anchor="middle" dominant-baseline="central" fill="#800000" font-family="Times New Roman" font-size="8" font-style="normal" font-weight="normal" text-decoration="none">JTAG_TCK</text></g>
     <g data-record="18"><path d="M 150.7 1445.7 H 270.7 V 1455.7 H 150.7 Z" fill="#ffff80" stroke="#800000" stroke-width="1"/><text x="210.7" y="1450.7" text-anchor="middle" dominant-baseline="central" fill="#800000" font-family="Times New Roman" font-size="8" font-style="normal" font-weight="normal" text-decoration="none">JTAG_cTI_RTCK</text></g>
     <g data-record="28"><defs><clipPath id="altium-text-frame-RIYTDOVP"><rect x="1410.7" y="490.7" width="325" height="120"/></clipPath></defs><text x="1410.7001" y="506.7001" fill="#1f2937" text-anchor="start" font-family="Courier New" font-size="16" font-style="normal" font-weight="normal" text-decoration="none" clip-path="url(#altium-text-frame-RIYTDOVP)"><tspan x="1410.7001" dy="0">D-Note:</tspan><tspan x="1410.7001" dy="16">Add an external ESD protection to</tspan><tspan x="1410.7001" dy="16">provide system level ESD</tspan><tspan x="1410.7001" dy="16">protection</tspan></text></g>
-    <circle data-record="29" cx="420.7" cy="410.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="460.7" cy="690.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="460.7" cy="280.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="530.7" cy="530.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="560.7" cy="1390.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="560.7" cy="1110.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="610.7" cy="280.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="630.7" cy="1180.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="630.7" cy="690.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="640.7" cy="410.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="670.7" cy="1180.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="760.7" cy="430.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="880.7" cy="770.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1000.7" cy="650.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1080.7" cy="870.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1160.7" cy="650.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1280.7" cy="390.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1390.7" cy="1200.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1400.7" cy="1410.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1400.7" cy="1190.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1420.7" cy="390.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1580.7" cy="250.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1590.7" cy="1050.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1590.7" cy="770.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1610.7" cy="770.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1710.7" cy="410.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1710.7" cy="390.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1710.7" cy="370.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1750.7" cy="1050.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1760.7" cy="870.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1760.7" cy="660.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1850.7" cy="1190.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1900.7" cy="1200.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1900.7" cy="1120.7" r="1.8" fill="#800000"/>
+    <circle data-record="29" cx="420.7" cy="410.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="460.7" cy="690.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="460.7" cy="280.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="530.7" cy="530.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="560.7" cy="1390.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="560.7" cy="1110.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="610.7" cy="280.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="630.7" cy="1180.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="630.7" cy="690.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="640.7" cy="410.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="670.7" cy="1180.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="760.7" cy="430.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="880.7" cy="770.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1000.7" cy="650.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1080.7" cy="870.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1160.7" cy="650.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1280.7" cy="390.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1390.7" cy="1200.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1400.7" cy="1410.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1400.7" cy="1190.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1420.7" cy="390.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1580.7" cy="250.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1590.7" cy="1050.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1590.7" cy="770.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1610.7" cy="770.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1710.7" cy="410.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1710.7" cy="390.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1710.7" cy="370.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1750.7" cy="1050.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1760.7" cy="870.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1760.7" cy="660.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1850.7" cy="1190.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1900.7" cy="1200.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1900.7" cy="1120.7" r="2" fill="#800000"/>
     </g>
   </g>
 </svg>

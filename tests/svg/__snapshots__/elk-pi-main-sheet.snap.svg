@@ -14,22 +14,22 @@
     <text data-record="4" x="0" y="0" fill="#1f2937" font-family="Inter" font-size="12" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(956 791) rotate(0)">C</text>
     <text data-record="4" x="0" y="0" fill="#1f2937" font-family="Inter" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(976 805) rotate(0)">=CurrentDate</text>
     <text data-record="4" x="0" y="0" fill="#1f2937" font-family="Inter" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1029 805) rotate(0)">=CurrentTime</text>
-    <polyline data-record="6" vector-effect="non-scaling-stroke" points="1165,755 865,755 865,815" fill="none" stroke="#1f2937" stroke-width="1"/>
-    <polyline data-record="6" vector-effect="non-scaling-stroke" points="865,775 975,775" fill="none" stroke="#1f2937" stroke-width="1"/>
-    <polyline data-record="6" vector-effect="non-scaling-stroke" points="1165,755 1065,755 1065,805" fill="none" stroke="#1f2937" stroke-width="1"/>
+    <polyline data-record="6" points="1165,755 865,755 865,815" fill="none" stroke="#1f2937" stroke-width="0.5351"/>
+    <polyline data-record="6" points="865,775 975,775" fill="none" stroke="#1f2937" stroke-width="0.5351"/>
+    <polyline data-record="6" points="1165,755 1065,755 1065,805" fill="none" stroke="#1f2937" stroke-width="0.5351"/>
     <text data-record="4" x="0" y="0" fill="#1f2937" font-family="Inter" font-size="12" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(935 791) rotate(0)">Rev</text>
     <text data-record="4" x="0" y="0" fill="#1f2937" font-family="Inter" font-size="11" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(894 805) rotate(0)">Sheet</text>
     <text data-record="4" x="0" y="0" fill="#1f2937" font-family="Inter" font-size="11" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(939 805) rotate(0)">/</text>
-    <polyline data-record="6" vector-effect="non-scaling-stroke" points="975,755 975,805" fill="none" stroke="#1f2937" stroke-width="1"/>
-    <polyline data-record="6" vector-effect="non-scaling-stroke" points="865,795 955,795" fill="none" stroke="#1f2937" stroke-width="1"/>
-    <polyline data-record="6" vector-effect="non-scaling-stroke" points="1065,805 1165,805" fill="none" stroke="#1f2937" stroke-width="1"/>
-    <polyline data-record="6" vector-effect="non-scaling-stroke" points="955,795 1065,795" fill="none" stroke="#1f2937" stroke-width="1"/>
-    <rect data-record="14" vector-effect="non-scaling-stroke" x="1065" y="755" width="100" height="50" rx="0" fill="#fff" stroke="#800000" stroke-width="1"/>
+    <polyline data-record="6" points="975,755 975,805" fill="none" stroke="#1f2937" stroke-width="0.5351"/>
+    <polyline data-record="6" points="865,795 955,795" fill="none" stroke="#1f2937" stroke-width="0.5351"/>
+    <polyline data-record="6" points="1065,805 1165,805" fill="none" stroke="#1f2937" stroke-width="0.5351"/>
+    <polyline data-record="6" points="955,795 1065,795" fill="none" stroke="#1f2937" stroke-width="0.5351"/>
+    <rect data-record="14" x="1065" y="755" width="100" height="50" rx="0" fill="#fff" stroke="#800000" stroke-width="0.5351"/>
     <g data-record="30"><rect x="1075" y="756.8091" width="81" height="47.1909" fill="#f1f5f9" stroke="#64748b"/><path d="M 1075 756.8091 l 81 47.1909 M 1156 756.8091 l -81 47.1909" stroke="#94a3b8"/></g>
-    <polyline data-record="6" vector-effect="non-scaling-stroke" points="925,775 925,795" fill="none" stroke="#1f2937" stroke-width="1"/>
+    <polyline data-record="6" points="925,775 925,795" fill="none" stroke="#1f2937" stroke-width="0.5351"/>
     <text data-record="4" x="0" y="0" fill="#1f2937" font-family="Inter" font-size="12" font-style="normal" font-weight="bold" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(875 791) rotate(0)">Elk Pi hat</text>
     <text data-record="4" x="0" y="0" fill="#1f2937" font-family="Inter" font-size="9" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(900 815) rotate(0)">Copyright Modern Ancient Instruments Networked AB, dba Elk</text>
-    <polyline data-record="6" vector-effect="non-scaling-stroke" points="865,805 1165,805" fill="none" stroke="#1f2937" stroke-width="1"/>
+    <polyline data-record="6" points="865,805 1165,805" fill="none" stroke="#1f2937" stroke-width="0.5351"/>
     <rect data-record="15" x="552" y="316" width="165" height="290" fill="#ffffc2" stroke="#840000" stroke-width="1"/>
     <g data-record="16"><polygon points="552,402 559,406 552,410" fill="#ffffc2" stroke="#840000" stroke-width="1"/><text x="561" y="406" text-anchor="start" dominant-baseline="central" fill="#840000" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none">PCM_DOUT</text></g>
     <g data-record="16"><polygon points="552,392 559,396 552,400" fill="#ffffc2" stroke="#840000" stroke-width="1"/><text x="561" y="396" text-anchor="start" dominant-baseline="central" fill="#840000" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none">PCM_DIN</text></g>
@@ -551,13 +551,13 @@
     <polyline data-record="26" points="922,411 942,411" fill="none" stroke="#000080" stroke-width="3"/>
     <polyline data-record="26" points="922,421 942,421" fill="none" stroke="#000080" stroke-width="3"/>
     <polyline data-record="26" points="892,346 892,141 1032,141 1032,226" fill="none" stroke="#000080" stroke-width="3"/>
-    <circle data-record="29" cx="727" cy="206" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="727" cy="196" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="727" cy="186" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="807" cy="206" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="807" cy="196" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="807" cy="186" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="807" cy="176" r="1.8" fill="#800000"/>
+    <circle data-record="29" cx="727" cy="206" r="2" fill="#800000"/>
+    <circle data-record="29" cx="727" cy="196" r="2" fill="#800000"/>
+    <circle data-record="29" cx="727" cy="186" r="2" fill="#800000"/>
+    <circle data-record="29" cx="807" cy="206" r="2" fill="#800000"/>
+    <circle data-record="29" cx="807" cy="196" r="2" fill="#800000"/>
+    <circle data-record="29" cx="807" cy="186" r="2" fill="#800000"/>
+    <circle data-record="29" cx="807" cy="176" r="2" fill="#800000"/>
     </g>
   </g>
 </svg>

@@ -439,38 +439,38 @@
     <text data-record="25" x="0" y="0" fill="#ff0000" font-family="Arial" font-size="7" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(460.7 550.7) rotate(0)">VDD_LPDDR4_N1</text>
     <text data-record="25" x="0" y="0" fill="#ff0000" font-family="Arial" font-size="7" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(460.7 520.7) rotate(0)">VDD_LPDDR4_P1</text>
     <text data-record="4" x="0" y="0" fill="#008200" font-family="Courier New" font-size="16" font-style="normal" font-weight="bold" text-decoration="none" text-anchor="start" dominant-baseline="text-before-edge" transform="translate(680.7 250.7) rotate(0)">CAD Note :</text>
-    <circle data-record="29" cx="410.7" cy="610.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="410.7" cy="440.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="420.7" cy="1050.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="420.7" cy="880.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="440.7" cy="610.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="440.7" cy="580.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="440.7" cy="440.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="470.7" cy="1050.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="470.7" cy="1020.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="470.7" cy="880.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="570.7" cy="460.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="580.7" cy="1070.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="580.7" cy="900.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="650.7" cy="560.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="660.7" cy="1000.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="780.7" cy="530.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1310.7" cy="1040.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1310.7" cy="900.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1310.7" cy="580.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1310.7" cy="440.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1360.7" cy="1040.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1360.7" cy="1020.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1360.7" cy="900.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1360.7" cy="580.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1360.7" cy="560.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1360.7" cy="440.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1480.7" cy="900.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1480.7" cy="440.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1560.7" cy="1000.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1560.7" cy="540.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1590.7" cy="960.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1590.7" cy="500.7" r="1.8" fill="#800000"/>
+    <circle data-record="29" cx="410.7" cy="610.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="410.7" cy="440.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="420.7" cy="1050.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="420.7" cy="880.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="440.7" cy="610.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="440.7" cy="580.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="440.7" cy="440.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="470.7" cy="1050.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="470.7" cy="1020.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="470.7" cy="880.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="570.7" cy="460.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="580.7" cy="1070.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="580.7" cy="900.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="650.7" cy="560.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="660.7" cy="1000.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="780.7" cy="530.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1310.7" cy="1040.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1310.7" cy="900.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1310.7" cy="580.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1310.7" cy="440.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1360.7" cy="1040.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1360.7" cy="1020.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1360.7" cy="900.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1360.7" cy="580.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1360.7" cy="560.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1360.7" cy="440.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1480.7" cy="900.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1480.7" cy="440.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1560.7" cy="1000.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1560.7" cy="540.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1590.7" cy="960.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1590.7" cy="500.7" r="2" fill="#800000"/>
     </g>
   </g>
 </svg>

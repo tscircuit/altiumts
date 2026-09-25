@@ -25,7 +25,7 @@
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Arial" font-size="7" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(890.7 1057.7) rotate(0)">16V</text>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(860.7 1040.7) rotate(0)">C110</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(910.7 1040.7) rotate(0)">0.01uF</text>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="1537.7,350.7 1531.7,352.7 1531.7,348.7 1537.7,350.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <polygon data-record="7" points="1537.7,350.7 1531.7,352.7 1531.7,348.7 1537.7,350.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
     <g data-record="2"><line x1="1540.7" y1="330.7" x2="1540.7" y2="320.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1540.7 321.7) rotate(-90)">1</text></g>
     <g data-record="2"><line x1="1540.7" y1="370.7" x2="1540.7" y2="380.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1540.7 379.7) rotate(-90)">3</text></g>
     <g data-record="2"><line x1="1530.7" y1="350.7" x2="1520.7" y2="350.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1521.7 350.7) rotate(0)">2</text></g>
@@ -59,8 +59,8 @@
     <line data-record="13" x1="537.7" y1="327.7" x2="540.7" y2="330.7" stroke="#000bff" stroke-width="1"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(550.7 310.7) rotate(0)">R227</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(550.7 320.7) rotate(0)">10K</text>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="1330.7,615.7 1330.7,615.7 1324.7,621.7 1335.7,621.7 1336.7,621.7 1330.7,615.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="1330.7,645.7 1330.7,645.7 1336.7,639.7 1325.7,639.7 1324.7,639.7 1330.7,645.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <polygon data-record="7" points="1330.7,615.7 1330.7,615.7 1324.7,621.7 1335.7,621.7 1336.7,621.7 1330.7,615.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
+    <polygon data-record="7" points="1330.7,645.7 1330.7,645.7 1336.7,639.7 1325.7,639.7 1324.7,639.7 1330.7,645.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
     <g data-record="2"><line x1="1330.7" y1="650.7" x2="1330.7" y2="680.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1330.7 659.7) rotate(-90)">1</text></g>
     <g data-record="2"><line x1="1330.7" y1="610.7" x2="1330.7" y2="580.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1330.7 601.7) rotate(-90)">2</text></g>
     <polyline data-record="6" points="1322.7,618.7 1322.7,618.7 1325.7,615.7" fill="none" stroke="#000bff" stroke-width="3"/>
@@ -85,8 +85,8 @@
     <line data-record="13" x1="537.7" y1="527.7" x2="540.7" y2="530.7" stroke="#000bff" stroke-width="1"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(550.7 510.7) rotate(0)">R229</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(550.7 520.7) rotate(0)">10K</text>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="1550.7,615.7 1550.7,615.7 1544.7,621.7 1555.7,621.7 1556.7,621.7 1550.7,615.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="1550.7,645.7 1550.7,645.7 1556.7,639.7 1545.7,639.7 1544.7,639.7 1550.7,645.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <polygon data-record="7" points="1550.7,615.7 1550.7,615.7 1544.7,621.7 1555.7,621.7 1556.7,621.7 1550.7,615.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
+    <polygon data-record="7" points="1550.7,645.7 1550.7,645.7 1556.7,639.7 1545.7,639.7 1544.7,639.7 1550.7,645.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
     <g data-record="2"><line x1="1550.7" y1="650.7" x2="1550.7" y2="680.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1550.7 659.7) rotate(-90)">1</text></g>
     <g data-record="2"><line x1="1550.7" y1="610.7" x2="1550.7" y2="580.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1550.7 601.7) rotate(-90)">2</text></g>
     <polyline data-record="6" points="1542.7,618.7 1542.7,618.7 1545.7,615.7" fill="none" stroke="#000bff" stroke-width="3"/>
@@ -101,8 +101,8 @@
     <line data-record="13" x1="1550.7" y1="640.7" x2="1550.7" y2="650.7" stroke="#000bff" stroke-width="1"/>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Arial" font-size="7" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1560.7 647.7) rotate(0)">TPD1E10B06DPYR</text>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1560.7 630.7) rotate(0)">D4</text>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="1770.7,615.7 1770.7,615.7 1764.7,621.7 1775.7,621.7 1776.7,621.7 1770.7,615.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="1770.7,645.7 1770.7,645.7 1776.7,639.7 1765.7,639.7 1764.7,639.7 1770.7,645.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <polygon data-record="7" points="1770.7,615.7 1770.7,615.7 1764.7,621.7 1775.7,621.7 1776.7,621.7 1770.7,615.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
+    <polygon data-record="7" points="1770.7,645.7 1770.7,645.7 1776.7,639.7 1765.7,639.7 1764.7,639.7 1770.7,645.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
     <g data-record="2"><line x1="1770.7" y1="650.7" x2="1770.7" y2="680.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1770.7 659.7) rotate(-90)">1</text></g>
     <g data-record="2"><line x1="1770.7" y1="610.7" x2="1770.7" y2="580.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1770.7 601.7) rotate(-90)">2</text></g>
     <polyline data-record="6" points="1762.7,618.7 1762.7,618.7 1765.7,615.7" fill="none" stroke="#000bff" stroke-width="3"/>
@@ -147,7 +147,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1550.7 420.7) rotate(0)">R134</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1550.7 430.7) rotate(0)">0E</text>
     <g data-record="2"><line x1="1190.7" y1="1310.7" x2="1180.7" y2="1310.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1195.7" cy="1310.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1195.7" cy="1310.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1200.7 1310.7) rotate(0)">TP72</text>
     <g data-record="2"><line x1="590.7" y1="1120.7" x2="590.7" y2="1110.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="590.7" y1="1150.7" x2="590.7" y2="1160.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -169,8 +169,8 @@
     <line data-record="13" x1="1147.7" y1="1057.7" x2="1150.7" y2="1060.7" stroke="#000bff" stroke-width="1"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1160.7 1040.7) rotate(0)">R124</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1160.7 1050.7) rotate(0)">10K</text>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="1440.7,615.7 1440.7,615.7 1434.7,621.7 1445.7,621.7 1446.7,621.7 1440.7,615.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="1440.7,645.7 1440.7,645.7 1446.7,639.7 1435.7,639.7 1434.7,639.7 1440.7,645.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <polygon data-record="7" points="1440.7,615.7 1440.7,615.7 1434.7,621.7 1445.7,621.7 1446.7,621.7 1440.7,615.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
+    <polygon data-record="7" points="1440.7,645.7 1440.7,645.7 1446.7,639.7 1435.7,639.7 1434.7,639.7 1440.7,645.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
     <g data-record="2"><line x1="1440.7" y1="650.7" x2="1440.7" y2="680.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1440.7 659.7) rotate(-90)">1</text></g>
     <g data-record="2"><line x1="1440.7" y1="610.7" x2="1440.7" y2="580.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1440.7 601.7) rotate(-90)">2</text></g>
     <polyline data-record="6" points="1432.7,618.7 1432.7,618.7 1435.7,615.7" fill="none" stroke="#000bff" stroke-width="3"/>
@@ -244,10 +244,10 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1820.7 490.7) rotate(0)">J11</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1820.7 590.7) rotate(0)">HDR_2X5</text>
     <g data-record="2"><line x1="1160.7" y1="1290.7" x2="1150.7" y2="1290.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1165.7" cy="1290.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1165.7" cy="1290.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1170.7 1290.7) rotate(0)">TP74</text>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="1660.7,615.7 1660.7,615.7 1654.7,621.7 1665.7,621.7 1666.7,621.7 1660.7,615.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="1660.7,645.7 1660.7,645.7 1666.7,639.7 1655.7,639.7 1654.7,639.7 1660.7,645.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <polygon data-record="7" points="1660.7,615.7 1660.7,615.7 1654.7,621.7 1665.7,621.7 1666.7,621.7 1660.7,615.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
+    <polygon data-record="7" points="1660.7,645.7 1660.7,645.7 1666.7,639.7 1655.7,639.7 1654.7,639.7 1660.7,645.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
     <g data-record="2"><line x1="1660.7" y1="650.7" x2="1660.7" y2="680.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1660.7 659.7) rotate(-90)">1</text></g>
     <g data-record="2"><line x1="1660.7" y1="610.7" x2="1660.7" y2="580.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1660.7 601.7) rotate(-90)">2</text></g>
     <polyline data-record="6" points="1652.7,618.7 1652.7,618.7 1655.7,615.7" fill="none" stroke="#000bff" stroke-width="3"/>
@@ -401,22 +401,22 @@
     <text data-record="25" x="0" y="0" fill="#800000" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1090.7 1310.7) rotate(0)">SoC_I2C1_SDA</text>
     <text data-record="25" x="0" y="0" fill="#800000" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1080.7 1290.7) rotate(0)">SoC_I2C1_SCL</text>
     <text data-record="25" x="0" y="0" fill="#800000" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1230.7 1130.7) rotate(0)">SoC_I2C1_SDA</text>
-    <circle data-record="29" cx="430.7" cy="700.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="500.7" cy="550.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="550.7" cy="1170.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="780.7" cy="540.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="780.7" cy="360.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="840.7" cy="1040.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1330.7" cy="530.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1400.7" cy="1040.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1440.7" cy="540.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1550.7" cy="550.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1660.7" cy="560.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1770.7" cy="520.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1930.7" cy="560.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1930.7" cy="550.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1930.7" cy="540.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1930.7" cy="530.7" r="1.8" fill="#800000"/>
+    <circle data-record="29" cx="430.7" cy="700.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="500.7" cy="550.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="550.7" cy="1170.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="780.7" cy="540.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="780.7" cy="360.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="840.7" cy="1040.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1330.7" cy="530.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1400.7" cy="1040.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1440.7" cy="540.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1550.7" cy="550.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1660.7" cy="560.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1770.7" cy="520.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1930.7" cy="560.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1930.7" cy="550.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1930.7" cy="540.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1930.7" cy="530.7" r="2" fill="#800000"/>
     </g>
   </g>
 </svg>

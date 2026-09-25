@@ -261,17 +261,17 @@
     <polyline data-record="27" points="210.7,740.7 220.7,740.7 250.7,740.7 340.7,740.7" fill="none" stroke="#800040" stroke-width="1"/>
     <polyline data-record="27" points="250.7,720.7 250.7,740.7" fill="none" stroke="#000080" stroke-width="1"/>
     <g data-record="18"><path d="M 600.7 735.7 H 690.7 V 745.7 H 600.7 Z" fill="#ffff80" stroke="#800000" stroke-width="1"/><text x="645.7" y="740.7" text-anchor="middle" dominant-baseline="central" fill="#800000" font-family="Times New Roman" font-size="8" font-style="normal" font-weight="normal" text-decoration="none">MCASP0_FET_EN</text></g>
-    <circle data-record="29" cx="220.7" cy="740.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="250.7" cy="740.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="480.7" cy="1130.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="490.7" cy="740.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="750.7" cy="500.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="760.7" cy="530.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="770.7" cy="560.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="780.7" cy="590.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1060.7" cy="1010.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1060.7" cy="440.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1120.7" cy="1010.7" r="1.8" fill="#800000"/>
+    <circle data-record="29" cx="220.7" cy="740.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="250.7" cy="740.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="480.7" cy="1130.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="490.7" cy="740.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="750.7" cy="500.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="760.7" cy="530.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="770.7" cy="560.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="780.7" cy="590.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1060.7" cy="1010.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1060.7" cy="440.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1120.7" cy="1010.7" r="2" fill="#800000"/>
     </g>
   </g>
 </svg>

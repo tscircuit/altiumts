@@ -25,7 +25,7 @@ test("renders the real scaled TI board without changing its native content", asy
   await expect(svg).toMatchSvgSnapshot(import.meta.path)
 })
 
-test("hairlines stay one output pixel at different document scales and aspect ratios", async () => {
+test("hairlines stay half an output pixel at different document scales and aspect ratios", async () => {
   for (const scale of [1, 10 / 3]) {
     for (const [width, height] of [
       [200, 100],
@@ -46,7 +46,7 @@ test("hairlines stay one output pixel at different document scales and aspect ra
         .map(Number)
       const fit = Math.min(width! / viewBox[2]!, height! / viewBox[3]!)
       const stroke = Number(svg.match(/stroke-width="([^"]+)"/)![1])
-      expect(stroke * fit).toBeCloseTo(1, 4)
+      expect(stroke * fit).toBeCloseTo(0.5, 4)
       const { data, info } = await sharp(Buffer.from(svg))
         .flatten({ background: "white" })
         .removeAlpha()
@@ -59,7 +59,7 @@ test("hairlines stay one output pixel at different document scales and aspect ra
           data[(y * info.width + Math.floor(info.width / 2)) * info.channels]! /
             255
       }
-      expect(coverage).toBeCloseTo(1, 1)
+      expect(coverage).toBeCloseTo(0.5, 1)
     }
   }
 })

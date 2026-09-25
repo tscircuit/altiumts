@@ -390,7 +390,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1120.7 1310.7) rotate(0)">U134</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1190.7 1400.7) rotate(0)">TCA9517DR</text>
     <g data-record="2"><line x1="1000.7" y1="870.7" x2="990.7" y2="870.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1005.7" cy="870.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1005.7" cy="870.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(990.7 860.7) rotate(0)">TP107</text>
     <g data-record="17"><path d="M 370.7 360.7 L 370.7 352.7 M 365.7 352.7 L 375.7 352.7" fill="none" stroke="#800000" stroke-width="1"/><text x="370.7" y="348.7" text-anchor="middle" dominant-baseline="auto" fill="#800000" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none">VCC_CORE_P</text></g>
     <g data-record="17"><path d="M 370.7 510.7 L 370.7 502.7 M 365.7 502.7 L 375.7 502.7" fill="none" stroke="#800000" stroke-width="1"/><text x="370.7" y="498.7" text-anchor="middle" dominant-baseline="auto" fill="#800000" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none">VCC_CORE_N</text></g>
@@ -562,47 +562,47 @@
     <g data-record="18"><path d="M 1750.7 835.7 H 1870.7 V 845.7 H 1750.7 Z" fill="#ffff80" stroke="#800000" stroke-width="1"/><text x="1810.7" y="840.7" text-anchor="middle" dominant-baseline="central" fill="#800000" font-family="Times New Roman" font-size="8" font-style="normal" font-weight="normal" text-decoration="none">SoC_I2C1_SCL_INA</text></g>
     <text data-record="4" x="0" y="0" fill="#008200" font-family="Courier New" font-size="16" font-style="normal" font-weight="bold" text-decoration="none" text-anchor="start" dominant-baseline="text-before-edge" transform="translate(770.7 180.7) rotate(0)">Follow Kelvin current sense routing while using 2 terminal resistors</text>
     <text data-record="4" x="0" y="0" fill="#008200" font-family="Courier New" font-size="16" font-style="normal" font-weight="bold" text-decoration="none" text-anchor="start" dominant-baseline="text-before-edge" transform="translate(680.7 180.7) rotate(0)">CAD Note :</text>
-    <circle data-record="29" cx="430.7" cy="910.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="430.7" cy="770.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="460.7" cy="910.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="460.7" cy="890.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="460.7" cy="770.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="490.7" cy="520.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="490.7" cy="370.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="510.7" cy="520.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="510.7" cy="470.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="510.7" cy="370.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="580.7" cy="940.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="580.7" cy="770.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="620.7" cy="520.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="620.7" cy="350.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="660.7" cy="870.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="700.7" cy="450.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="710.7" cy="470.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="770.7" cy="840.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="950.7" cy="870.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="980.7" cy="870.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1130.7" cy="1230.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1220.7" cy="1230.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1380.7" cy="1320.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1410.7" cy="940.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1410.7" cy="780.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1410.7" cy="530.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1410.7" cy="360.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1420.7" cy="1340.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1420.7" cy="1210.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1440.7" cy="940.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1440.7" cy="890.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1440.7" cy="780.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1440.7" cy="530.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1440.7" cy="450.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1440.7" cy="360.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1540.7" cy="770.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1540.7" cy="340.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1620.7" cy="870.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1620.7" cy="430.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1630.7" cy="450.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1730.7" cy="840.7" r="1.8" fill="#800000"/>
+    <circle data-record="29" cx="430.7" cy="910.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="430.7" cy="770.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="460.7" cy="910.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="460.7" cy="890.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="460.7" cy="770.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="490.7" cy="520.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="490.7" cy="370.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="510.7" cy="520.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="510.7" cy="470.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="510.7" cy="370.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="580.7" cy="940.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="580.7" cy="770.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="620.7" cy="520.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="620.7" cy="350.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="660.7" cy="870.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="700.7" cy="450.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="710.7" cy="470.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="770.7" cy="840.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="950.7" cy="870.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="980.7" cy="870.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1130.7" cy="1230.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1220.7" cy="1230.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1380.7" cy="1320.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1410.7" cy="940.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1410.7" cy="780.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1410.7" cy="530.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1410.7" cy="360.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1420.7" cy="1340.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1420.7" cy="1210.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1440.7" cy="940.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1440.7" cy="890.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1440.7" cy="780.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1440.7" cy="530.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1440.7" cy="450.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1440.7" cy="360.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1540.7" cy="770.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1540.7" cy="340.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1620.7" cy="870.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1620.7" cy="430.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1630.7" cy="450.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1730.7" cy="840.7" r="2" fill="#800000"/>
     </g>
   </g>
 </svg>

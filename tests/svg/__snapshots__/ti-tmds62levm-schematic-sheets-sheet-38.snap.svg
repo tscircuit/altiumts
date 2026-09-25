@@ -565,20 +565,20 @@
     <polyline data-record="27" points="420.7,340.7 540.7,340.7" fill="none" stroke="#800040" stroke-width="1"/>
     <polyline data-record="27" points="440.7,340.7 440.7,320.7 420.7,320.7" fill="none" stroke="#800040" stroke-width="1"/>
     <polyline data-record="27" points="430.7,830.7 430.7,810.7 380.7,810.7" fill="none" stroke="#800040" stroke-width="1"/>
-    <circle data-record="29" cx="330.7" cy="810.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="380.7" cy="810.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="430.7" cy="920.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="440.7" cy="340.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="620.7" cy="680.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="630.7" cy="680.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="630.7" cy="260.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="640.7" cy="680.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1160.7" cy="1210.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1160.7" cy="960.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1510.7" cy="680.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1520.7" cy="680.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1520.7" cy="250.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1530.7" cy="680.7" r="1.8" fill="#800000"/>
+    <circle data-record="29" cx="330.7" cy="810.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="380.7" cy="810.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="430.7" cy="920.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="440.7" cy="340.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="620.7" cy="680.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="630.7" cy="680.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="630.7" cy="260.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="640.7" cy="680.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1160.7" cy="1210.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1160.7" cy="960.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1510.7" cy="680.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1520.7" cy="680.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1520.7" cy="250.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1530.7" cy="680.7" r="2" fill="#800000"/>
     </g>
   </g>
 </svg>

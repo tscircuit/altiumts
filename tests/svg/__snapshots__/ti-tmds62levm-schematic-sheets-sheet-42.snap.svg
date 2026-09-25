@@ -260,7 +260,7 @@
     <line data-record="13" x1="603.7" y1="397.7" x2="608.7" y2="391.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="620.7" y1="397.7" x2="615.7" y2="391.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="593.7" y1="397.7" x2="603.7" y2="397.7" stroke="#008200" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="590.7" cy="384.7" rx="2" ry="7" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <ellipse data-record="8" cx="590.7" cy="384.7" rx="2" ry="7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
     <line data-record="13" x1="630.7" y1="397.7" x2="620.7" y2="397.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="603.7" y1="400.7" x2="608.7" y2="406.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="608.7" y1="391.7" x2="615.7" y2="391.7" stroke="#008200" stroke-width="1"/>
@@ -272,7 +272,7 @@
     <line data-record="13" x1="603.7" y1="427.7" x2="608.7" y2="421.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="620.7" y1="427.7" x2="615.7" y2="421.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="593.7" y1="427.7" x2="603.7" y2="427.7" stroke="#008200" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="590.7" cy="414.7" rx="2" ry="7" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <ellipse data-record="8" cx="590.7" cy="414.7" rx="2" ry="7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
     <line data-record="13" x1="630.7" y1="427.7" x2="620.7" y2="427.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="603.7" y1="430.7" x2="608.7" y2="436.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="608.7" y1="421.7" x2="615.7" y2="421.7" stroke="#008200" stroke-width="1"/>
@@ -284,7 +284,7 @@
     <line data-record="13" x1="603.7" y1="457.7" x2="608.7" y2="451.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="620.7" y1="457.7" x2="615.7" y2="451.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="593.7" y1="457.7" x2="603.7" y2="457.7" stroke="#008200" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="590.7" cy="444.7" rx="2" ry="7" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <ellipse data-record="8" cx="590.7" cy="444.7" rx="2" ry="7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
     <line data-record="13" x1="630.7" y1="457.7" x2="620.7" y2="457.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="603.7" y1="460.7" x2="608.7" y2="466.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="608.7" y1="451.7" x2="615.7" y2="451.7" stroke="#008200" stroke-width="1"/>
@@ -296,7 +296,7 @@
     <line data-record="13" x1="603.7" y1="487.7" x2="608.7" y2="481.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="620.7" y1="487.7" x2="615.7" y2="481.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="593.7" y1="487.7" x2="603.7" y2="487.7" stroke="#008200" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="590.7" cy="474.7" rx="2" ry="7" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <ellipse data-record="8" cx="590.7" cy="474.7" rx="2" ry="7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
     <line data-record="13" x1="630.7" y1="487.7" x2="620.7" y2="487.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="603.7" y1="490.7" x2="608.7" y2="496.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="608.7" y1="481.7" x2="615.7" y2="481.7" stroke="#008200" stroke-width="1"/>
@@ -305,7 +305,7 @@
     <line data-record="13" x1="589.7" y1="499.7" x2="595.7" y2="490.7" stroke="#1f2937" stroke-width="1"/>
     <line data-record="13" x1="630.7" y1="490.7" x2="620.7" y2="490.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="608.7" y1="496.7" x2="615.7" y2="496.7" stroke="#008200" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="590.7" cy="504.7" rx="2" ry="7" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <ellipse data-record="8" cx="590.7" cy="504.7" rx="2" ry="7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
     <text data-record="4" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="11" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1770.7 1551.7) rotate(0)">PROC181E1-1</text>
     <text data-record="4" x="0" y="0" fill="#1f2937" font-family="Courier New" font-size="15" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(780.7 625.7) rotate(0)">Silk: DSI_CONN</text>
     <text data-record="4" x="0" y="0" fill="#1f2937" font-family="Courier New" font-size="7" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(604.7 432.7) rotate(0)">100E</text>
@@ -359,29 +359,29 @@
     <polyline data-record="27" points="1240.7,1110.7 1090.7,1110.7 1090.7,1080.7" fill="none" stroke="#800040" stroke-width="1"/>
     <polyline data-record="27" points="1890.7,1110.7 1670.7,1110.7 1670.7,1080.7" fill="none" stroke="#800040" stroke-width="1"/>
     <polyline data-record="27" points="1490.7,520.7 1490.7,500.7 1510.7,500.7" fill="none" stroke="#800040" stroke-width="1"/>
-    <circle data-record="29" cx="280.7" cy="1220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="360.7" cy="1120.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="390.7" cy="1130.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="420.7" cy="640.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="420.7" cy="580.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="480.7" cy="580.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="750.7" cy="550.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="750.7" cy="520.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="750.7" cy="490.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="750.7" cy="460.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="750.7" cy="430.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="750.7" cy="400.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="750.7" cy="370.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="750.7" cy="350.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="750.7" cy="340.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="750.7" cy="330.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="980.7" cy="1220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1060.7" cy="1120.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1090.7" cy="1130.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1420.7" cy="490.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1580.7" cy="1210.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1650.7" cy="1120.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1680.7" cy="1130.7" r="1.8" fill="#800000"/>
+    <circle data-record="29" cx="280.7" cy="1220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="360.7" cy="1120.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="390.7" cy="1130.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="420.7" cy="640.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="420.7" cy="580.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="480.7" cy="580.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="750.7" cy="550.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="750.7" cy="520.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="750.7" cy="490.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="750.7" cy="460.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="750.7" cy="430.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="750.7" cy="400.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="750.7" cy="370.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="750.7" cy="350.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="750.7" cy="340.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="750.7" cy="330.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="980.7" cy="1220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1060.7" cy="1120.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1090.7" cy="1130.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1420.7" cy="490.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1580.7" cy="1210.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1650.7" cy="1120.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1680.7" cy="1130.7" r="2" fill="#800000"/>
     </g>
   </g>
 </svg>

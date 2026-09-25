@@ -286,18 +286,18 @@
     <polyline data-record="27" points="1050.7,950.7 1050.7,940.7 1050.7,930.7" fill="none" stroke="#800040" stroke-width="1"/>
     <text data-record="25" x="0" y="0" fill="#ff0000" font-family="Arial" font-size="7" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1220.7 1050.7) rotate(0)">UART1_FET_BUF_EN</text>
     <text data-record="25" x="0" y="0" fill="#ff0000" font-family="Arial" font-size="7" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(950.7 590.7) rotate(0)">UART1_FET_SEL</text>
-    <circle data-record="29" cx="350.7" cy="850.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="350.7" cy="600.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="760.7" cy="570.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="770.7" cy="540.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="780.7" cy="510.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="790.7" cy="480.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1050.7" cy="940.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1100.7" cy="390.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1130.7" cy="1160.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1170.7" cy="940.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1210.7" cy="1050.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1260.7" cy="1050.7" r="1.8" fill="#800000"/>
+    <circle data-record="29" cx="350.7" cy="850.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="350.7" cy="600.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="760.7" cy="570.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="770.7" cy="540.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="780.7" cy="510.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="790.7" cy="480.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1050.7" cy="940.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1100.7" cy="390.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1130.7" cy="1160.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1170.7" cy="940.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1210.7" cy="1050.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1260.7" cy="1050.7" r="2" fill="#800000"/>
     </g>
   </g>
 </svg>

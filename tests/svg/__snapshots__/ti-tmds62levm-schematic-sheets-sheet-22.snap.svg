@@ -56,14 +56,14 @@
     <g data-record="2"><line x1="1440.7" y1="1300.7" x2="1410.7" y2="1300.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1431.7 1300.7) rotate(0)">1</text></g>
     <g data-record="2"><line x1="1440.7" y1="1270.7" x2="1410.7" y2="1270.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1431.7 1270.7) rotate(0)">2</text></g>
     <g data-record="2"><line x1="1480.7" y1="1310.7" x2="1480.7" y2="1340.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1480.7 1319.7) rotate(-90)">5</text></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1441.7" cy="1300.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1441.7" cy="1270.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1508.7" cy="1270.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1508.7" cy="1300.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1441.7" cy="1300.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1.0807"/>
+    <ellipse data-record="8" cx="1441.7" cy="1270.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1.0807"/>
+    <ellipse data-record="8" cx="1508.7" cy="1270.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1.0807"/>
+    <ellipse data-record="8" cx="1508.7" cy="1300.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <line data-record="13" x1="1443.7" y1="1270.7" x2="1507.7" y2="1270.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1443.7" y1="1301.7" x2="1507.7" y2="1301.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1474.7" cy="1276.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1474.7" cy="1290.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1474.7" cy="1276.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1.0807"/>
+    <ellipse data-record="8" cx="1474.7" cy="1290.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <line data-record="13" x1="1474.7" y1="1301.7" x2="1474.7" y2="1292.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1474.7" y1="1275.7" x2="1474.7" y2="1270.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1481.7" y1="1291.7" x2="1475.7" y2="1278.7" stroke="#000bff" stroke-width="1"/>
@@ -76,7 +76,7 @@
     <g data-record="2"><line x1="1730.7" y1="370.7" x2="1700.7" y2="370.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1721.7 370.7) rotate(0)">C8</text><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(1737.7 370.7) rotate(0)">EXTINTN</text></g>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1730.7 400.7) rotate(0)">XAM62L32AOGHAANB</text>
     <g data-record="2"><line x1="810.7" y1="410.7" x2="810.7" y2="420.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="810.7" cy="405.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="810.7" cy="405.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(800.7 398.7) rotate(0)">TP110</text>
     <g data-record="2"><line x1="1370.7" y1="510.7" x2="1360.7" y2="510.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1400.7" y1="510.7" x2="1410.7" y2="510.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -117,7 +117,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1750.7 1280.7) rotate(0)">C185</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1750.7 1290.7) rotate(0)">0.1uF</text>
     <g data-record="2"><line x1="1750.7" y1="840.7" x2="1750.7" y2="850.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1750.7" cy="835.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1750.7" cy="835.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1740.7 828.7) rotate(0)">TP119</text>
     <g data-record="2"><line x1="1730.7" y1="1160.7" x2="1730.7" y2="1150.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1730.7" y1="1190.7" x2="1730.7" y2="1200.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -148,8 +148,8 @@
     <line data-record="13" x1="913.7" y1="1167.7" x2="910.7" y2="1170.7" stroke="#000bff" stroke-width="1"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(920.7 1150.7) rotate(0)">R591</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(920.7 1160.7) rotate(0)">10K</text>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="780.7,855.7 780.7,855.7 774.7,861.7 785.7,861.7 786.7,861.7 780.7,855.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="780.7,885.7 780.7,885.7 786.7,879.7 775.7,879.7 774.7,879.7 780.7,885.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <polygon data-record="7" points="780.7,855.7 780.7,855.7 774.7,861.7 785.7,861.7 786.7,861.7 780.7,855.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
+    <polygon data-record="7" points="780.7,885.7 780.7,885.7 786.7,879.7 775.7,879.7 774.7,879.7 780.7,885.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
     <g data-record="2"><line x1="780.7" y1="890.7" x2="780.7" y2="920.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(780.7 899.7) rotate(-90)">1</text></g>
     <g data-record="2"><line x1="780.7" y1="850.7" x2="780.7" y2="820.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(780.7 841.7) rotate(-90)">2</text></g>
     <polyline data-record="6" points="772.7,858.7 772.7,858.7 775.7,855.7" fill="none" stroke="#000bff" stroke-width="3"/>
@@ -164,7 +164,7 @@
     <line data-record="13" x1="780.7" y1="880.7" x2="780.7" y2="890.7" stroke="#000bff" stroke-width="1"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(790.7 860.7) rotate(0)">D22</text>
     <g data-record="2"><line x1="1480.7" y1="310.7" x2="1480.7" y2="320.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1480.7" cy="305.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1480.7" cy="305.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1470.7 298.7) rotate(0)">TP42</text>
     <g data-record="2"><line x1="1590.7" y1="870.7" x2="1580.7" y2="870.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1620.7" y1="870.7" x2="1630.7" y2="870.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -213,21 +213,21 @@
     <g data-record="2"><line x1="580.7" y1="850.7" x2="550.7" y2="850.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(571.7 850.7) rotate(0)">1</text></g>
     <g data-record="2"><line x1="580.7" y1="820.7" x2="550.7" y2="820.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(571.7 820.7) rotate(0)">2</text></g>
     <g data-record="2"><line x1="620.7" y1="860.7" x2="620.7" y2="890.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(620.7 869.7) rotate(-90)">5</text></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="581.7" cy="850.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="581.7" cy="820.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="648.7" cy="820.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="648.7" cy="850.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="581.7" cy="850.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1.0807"/>
+    <ellipse data-record="8" cx="581.7" cy="820.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1.0807"/>
+    <ellipse data-record="8" cx="648.7" cy="820.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1.0807"/>
+    <ellipse data-record="8" cx="648.7" cy="850.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <line data-record="13" x1="583.7" y1="820.7" x2="647.7" y2="820.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="583.7" y1="851.7" x2="647.7" y2="851.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="614.7" cy="826.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="614.7" cy="840.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="614.7" cy="826.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1.0807"/>
+    <ellipse data-record="8" cx="614.7" cy="840.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <line data-record="13" x1="614.7" y1="851.7" x2="614.7" y2="842.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="614.7" y1="825.7" x2="614.7" y2="820.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="621.7" y1="841.7" x2="615.7" y2="828.7" stroke="#000bff" stroke-width="1"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(580.7 810.7) rotate(0)">SW7</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(630.7 870.7) rotate(0)">KMR442G LFS</text>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="810.7,1265.7 810.7,1265.7 804.7,1271.7 815.7,1271.7 816.7,1271.7 810.7,1265.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="810.7,1295.7 810.7,1295.7 816.7,1289.7 805.7,1289.7 804.7,1289.7 810.7,1295.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <polygon data-record="7" points="810.7,1265.7 810.7,1265.7 804.7,1271.7 815.7,1271.7 816.7,1271.7 810.7,1265.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
+    <polygon data-record="7" points="810.7,1295.7 810.7,1295.7 816.7,1289.7 805.7,1289.7 804.7,1289.7 810.7,1295.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
     <g data-record="2"><line x1="810.7" y1="1300.7" x2="810.7" y2="1330.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(810.7 1309.7) rotate(-90)">1</text></g>
     <g data-record="2"><line x1="810.7" y1="1260.7" x2="810.7" y2="1230.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(810.7 1251.7) rotate(-90)">2</text></g>
     <polyline data-record="6" points="802.7,1268.7 802.7,1268.7 805.7,1265.7" fill="none" stroke="#000bff" stroke-width="3"/>
@@ -269,7 +269,7 @@
     <line data-record="13" x1="590.7" y1="410.7" x2="590.7" y2="450.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="590.7" y1="410.7" x2="620.7" y2="410.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="590.7" y1="450.7" x2="620.7" y2="450.7" stroke="#000bff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="620.7,450.7 623.3105,450.5289 625.8764,450.0185 628.3537,449.1776 630.7,448.0205 632.8752,446.5671 634.8421,444.8421 636.5671,442.8752 638.0205,440.7 639.1776,438.3537 640.0185,435.8764 640.5289,433.3105 640.7,430.7 640.5289,428.0895 640.0185,425.5236 639.1776,423.0463 638.0205,420.7 636.5671,418.5248 634.8421,416.5579 632.8752,414.8329 630.7,413.3795 628.3537,412.2224 625.8764,411.3815 623.3105,410.8711 620.7,410.7" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="11" points="620.7,450.7 623.3105,450.5289 625.8764,450.0185 628.3537,449.1776 630.7,448.0205 632.8752,446.5671 634.8421,444.8421 636.5671,442.8752 638.0205,440.7 639.1776,438.3537 640.0185,435.8764 640.5289,433.3105 640.7,430.7 640.5289,428.0895 640.0185,425.5236 639.1776,423.0463 638.0205,420.7 636.5671,418.5248 634.8421,416.5579 632.8752,414.8329 630.7,413.3795 628.3537,412.2224 625.8764,411.3815 623.3105,410.8711 620.7,410.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
     <line data-record="13" x1="640.7" y1="430.7" x2="650.7" y2="430.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="610.7" y1="410.7" x2="610.7" y2="400.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="610.7" y1="460.7" x2="610.7" y2="450.7" stroke="#000bff" stroke-width="1"/>
@@ -282,8 +282,8 @@
     <text data-record="4" x="0" y="0" fill="#000080" font-family="Courier New" font-size="7" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(593.7 424.7) rotate(0)">A</text>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(570.7 410.7) rotate(0)">U53</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(620.7 460.7) rotate(0)">SN74LVC1G11DRYR</text>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="1630.7,1285.7 1630.7,1285.7 1624.7,1291.7 1635.7,1291.7 1636.7,1291.7 1630.7,1285.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
-    <polygon data-record="7" vector-effect="non-scaling-stroke" points="1630.7,1315.7 1630.7,1315.7 1636.7,1309.7 1625.7,1309.7 1624.7,1309.7 1630.7,1315.7" fill="#0000ff" stroke="#000bff" stroke-width="1"/>
+    <polygon data-record="7" points="1630.7,1285.7 1630.7,1285.7 1624.7,1291.7 1635.7,1291.7 1636.7,1291.7 1630.7,1285.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
+    <polygon data-record="7" points="1630.7,1315.7 1630.7,1315.7 1636.7,1309.7 1625.7,1309.7 1624.7,1309.7 1630.7,1315.7" fill="#0000ff" stroke="#000bff" stroke-width="1.0807"/>
     <g data-record="2"><line x1="1630.7" y1="1320.7" x2="1630.7" y2="1350.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1630.7 1329.7) rotate(-90)">1</text></g>
     <g data-record="2"><line x1="1630.7" y1="1280.7" x2="1630.7" y2="1250.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1630.7 1271.7) rotate(-90)">2</text></g>
     <polyline data-record="6" points="1622.7,1288.7 1622.7,1288.7 1625.7,1285.7" fill="none" stroke="#000bff" stroke-width="3"/>
@@ -298,7 +298,7 @@
     <line data-record="13" x1="1630.7" y1="1310.7" x2="1630.7" y2="1320.7" stroke="#000bff" stroke-width="1"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1640.7 1290.7) rotate(0)">D15</text>
     <g data-record="2"><line x1="1750.7" y1="900.7" x2="1750.7" y2="890.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1750.7" cy="905.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1750.7" cy="905.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1740.7 920.7) rotate(0)">TP118</text>
     <rect data-record="14" x="610.7" y="1220.7" width="70" height="50" rx="0" fill="#ffffb0" stroke="#000bff" stroke-width="1"/>
     <g data-record="2"><line x1="680.7" y1="1260.7" x2="710.7" y2="1260.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(689.7 1260.7) rotate(0)">4</text></g>
@@ -306,14 +306,14 @@
     <g data-record="2"><line x1="610.7" y1="1260.7" x2="580.7" y2="1260.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(601.7 1260.7) rotate(0)">1</text></g>
     <g data-record="2"><line x1="610.7" y1="1230.7" x2="580.7" y2="1230.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(601.7 1230.7) rotate(0)">2</text></g>
     <g data-record="2"><line x1="650.7" y1="1270.7" x2="650.7" y2="1300.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(650.7 1279.7) rotate(-90)">5</text></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="611.7" cy="1260.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="611.7" cy="1230.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="678.7" cy="1230.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="678.7" cy="1260.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="611.7" cy="1260.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1.0807"/>
+    <ellipse data-record="8" cx="611.7" cy="1230.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1.0807"/>
+    <ellipse data-record="8" cx="678.7" cy="1230.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1.0807"/>
+    <ellipse data-record="8" cx="678.7" cy="1260.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <line data-record="13" x1="613.7" y1="1230.7" x2="677.7" y2="1230.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="613.7" y1="1261.7" x2="677.7" y2="1261.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="644.7" cy="1236.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="644.7" cy="1250.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="644.7" cy="1236.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1.0807"/>
+    <ellipse data-record="8" cx="644.7" cy="1250.7" rx="1" ry="1" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <line data-record="13" x1="644.7" y1="1261.7" x2="644.7" y2="1252.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="644.7" y1="1235.7" x2="644.7" y2="1230.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="651.7" y1="1251.7" x2="645.7" y2="1238.7" stroke="#000bff" stroke-width="1"/>
@@ -451,37 +451,37 @@
     <g data-record="28"><defs><clipPath id="altium-text-frame-NZMGUTEW"><rect x="770.7" y="210.7" width="280" height="170"/></clipPath></defs><text x="770.7001" y="222.7" fill="#1f2937" text-anchor="start" font-family="Courier New" font-size="12" font-style="normal" font-weight="normal" text-decoration="none" clip-path="url(#altium-text-frame-NZMGUTEW)"><tspan x="770.7001" dy="0">D-Note :-</tspan><tspan x="770.7001" dy="12">Not connecting a valid PORz input</tspan><tspan x="770.7001" dy="12">could cause unpredictable and probably</tspan><tspan x="770.7001" dy="12">random behavior, since the processor</tspan><tspan x="770.7001" dy="12">is not getting a valid reset, internal</tspan><tspan x="770.7001" dy="12">circuits could be in random states. </tspan><tspan x="770.7001" dy="12">Slow rising reset signal could cause</tspan><tspan x="770.7001" dy="12">glitches internal to the SOC reset</tspan><tspan x="770.7001" dy="12">circuit.</tspan><tspan x="770.7001" dy="12">Use a discrete buffer and have the</tspan><tspan x="770.7001" dy="12">fast rising output of the buffer drive</tspan><tspan x="770.7001" dy="12">the PORz is recommended</tspan></text></g>
     <g data-record="28"><defs><clipPath id="altium-text-frame-AQJSIHPV"><rect x="1490.7" y="410.7" width="346" height="70"/></clipPath></defs><text x="1490.7001" y="422.7001" fill="#1f2937" text-anchor="start" font-family="Courier New" font-size="12" font-style="normal" font-weight="normal" text-decoration="none" clip-path="url(#altium-text-frame-AQJSIHPV)"><tspan x="1490.7001" dy="0">D-Note :-</tspan><tspan x="1490.7001" dy="12">Open drain output type IO EXTINTn has slew rate</tspan><tspan x="1490.7001" dy="12">limit specified when pulled to 3.3V supply. An</tspan><tspan x="1490.7001" dy="12">RC is recommended at the input. Refer TMDS64EVM.</tspan></text></g>
     <g data-record="28"><defs><clipPath id="altium-text-frame-GPLEHKGN"><rect x="1270.7" y="980.7" width="470" height="90"/></clipPath></defs><text x="1270.7001" y="992.7001" fill="#1f2937" text-anchor="start" font-family="Courier New" font-size="12" font-style="normal" font-weight="normal" text-decoration="none" clip-path="url(#altium-text-frame-GPLEHKGN)"><tspan x="1270.7001" dy="0">Processor LVCMOS IOS (inputs) have slew rate requirement</tspan><tspan x="1270.7001" dy="12">specified. </tspan><tspan x="1270.7001" dy="12">A Schmitt trigger based debouncing logic is recommended for the</tspan><tspan x="1270.7001" dy="12">slow ramp pushbutton output (+ RC) connected to the processor</tspan><tspan x="1270.7001" dy="12">warm reset inputs. </tspan><tspan x="1270.7001" dy="12">Debouncing logic is recommended when push button + RC or RC is</tspan><tspan x="1270.7001" dy="12">used at the LVCMOS inputs. </tspan></text></g>
-    <circle data-record="29" cx="520.7" cy="940.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="550.7" cy="1350.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="610.7" cy="330.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="620.7" cy="940.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="650.7" cy="1350.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="730.7" cy="430.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="740.7" cy="940.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="760.7" cy="1350.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="760.7" cy="430.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="780.7" cy="940.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="780.7" cy="790.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="810.7" cy="1350.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="810.7" cy="1200.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="810.7" cy="430.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="910.7" cy="1200.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="920.7" cy="790.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1340.7" cy="1380.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1410.7" cy="750.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1450.7" cy="330.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1480.7" cy="1380.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1480.7" cy="330.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1540.7" cy="1230.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1540.7" cy="480.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1590.7" cy="1380.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1630.7" cy="1380.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1630.7" cy="1230.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1640.7" cy="480.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1670.7" cy="870.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1730.7" cy="1230.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1750.7" cy="890.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1750.7" cy="850.7" r="1.8" fill="#800000"/>
+    <circle data-record="29" cx="520.7" cy="940.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="550.7" cy="1350.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="610.7" cy="330.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="620.7" cy="940.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="650.7" cy="1350.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="730.7" cy="430.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="740.7" cy="940.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="760.7" cy="1350.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="760.7" cy="430.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="780.7" cy="940.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="780.7" cy="790.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="810.7" cy="1350.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="810.7" cy="1200.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="810.7" cy="430.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="910.7" cy="1200.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="920.7" cy="790.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1340.7" cy="1380.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1410.7" cy="750.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1450.7" cy="330.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1480.7" cy="1380.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1480.7" cy="330.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1540.7" cy="1230.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1540.7" cy="480.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1590.7" cy="1380.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1630.7" cy="1380.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1630.7" cy="1230.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1640.7" cy="480.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1670.7" cy="870.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1730.7" cy="1230.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1750.7" cy="890.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1750.7" cy="850.7" r="2" fill="#800000"/>
     </g>
   </g>
 </svg>

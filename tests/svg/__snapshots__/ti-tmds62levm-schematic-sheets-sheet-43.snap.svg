@@ -155,7 +155,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(990.7 550.7) rotate(0)">J2</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(990.7 760.7) rotate(0)">HDR_2X15</text>
     <g data-record="2"><line x1="860.7" y1="1240.7" x2="850.7" y2="1240.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="865.7" cy="1240.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="865.7" cy="1240.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(870.7 1240.7) rotate(0)">TP25</text>
     <g data-record="2"><line x1="1140.7" y1="1110.7" x2="1140.7" y2="1120.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1140.7" y1="1080.7" x2="1140.7" y2="1070.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -186,7 +186,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1160.7 300.1615) rotate(-90)">C195</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1160.7 341.9308) rotate(-90)">0.1uF</text>
     <g data-record="2"><line x1="1560.7" y1="1310.7" x2="1550.7" y2="1310.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1565.7" cy="1310.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1565.7" cy="1310.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1570.7 1310.7) rotate(0)">TP29</text>
     <g data-record="2"><line x1="1860.7" y1="320.7" x2="1860.7" y2="310.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1860.7" y1="350.7" x2="1860.7" y2="360.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -324,7 +324,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(540.7 1135.7) rotate(0)">J25</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(540.7 1206.7) rotate(0)">HDR_1X2</text>
     <g data-record="2"><line x1="1720.7" y1="1230.7" x2="1710.7" y2="1230.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1725.7" cy="1230.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1725.7" cy="1230.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1730.7 1230.7) rotate(0)">TP24</text>
     <g data-record="2"><line x1="1330.7" y1="1260.7" x2="1320.7" y2="1260.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1360.7" y1="1260.7" x2="1370.7" y2="1260.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -427,35 +427,35 @@
     <polyline data-record="27" points="1140.7,1150.7 1140.7,1280.7 1110.7,1280.7" fill="none" stroke="#800040" stroke-width="1"/>
     <polyline data-record="27" points="1550.7,1310.7 1530.7,1310.7 1530.7,1280.7" fill="none" stroke="#800040" stroke-width="1"/>
     <polyline data-record="27" points="550.7,1300.7 550.7,1280.7 680.7,1280.7" fill="none" stroke="#800040" stroke-width="1"/>
-    <circle data-record="29" cx="510.7" cy="1280.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="550.7" cy="1280.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="660.7" cy="1170.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="830.7" cy="1250.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="830.7" cy="1240.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="850.7" cy="350.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="890.7" cy="280.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="900.7" cy="700.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="900.7" cy="660.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="900.7" cy="630.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="920.7" cy="420.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="920.7" cy="410.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="920.7" cy="280.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1090.7" cy="410.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1090.7" cy="280.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1110.7" cy="680.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1110.7" cy="650.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1120.7" cy="350.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1120.7" cy="280.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1140.7" cy="1280.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1280.7" cy="1240.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1280.7" cy="1160.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1320.7" cy="1280.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1530.7" cy="1280.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1690.7" cy="1240.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1690.7" cy="1230.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1690.7" cy="280.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1740.7" cy="280.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1800.7" cy="280.7" r="1.8" fill="#800000"/>
+    <circle data-record="29" cx="510.7" cy="1280.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="550.7" cy="1280.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="660.7" cy="1170.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="830.7" cy="1250.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="830.7" cy="1240.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="850.7" cy="350.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="890.7" cy="280.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="900.7" cy="700.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="900.7" cy="660.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="900.7" cy="630.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="920.7" cy="420.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="920.7" cy="410.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="920.7" cy="280.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1090.7" cy="410.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1090.7" cy="280.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1110.7" cy="680.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1110.7" cy="650.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1120.7" cy="350.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1120.7" cy="280.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1140.7" cy="1280.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1280.7" cy="1240.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1280.7" cy="1160.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1320.7" cy="1280.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1530.7" cy="1280.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1690.7" cy="1240.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1690.7" cy="1230.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1690.7" cy="280.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1740.7" cy="280.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1800.7" cy="280.7" r="2" fill="#800000"/>
     </g>
   </g>
 </svg>

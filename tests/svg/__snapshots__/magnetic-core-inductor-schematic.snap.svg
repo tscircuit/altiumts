@@ -14,7 +14,7 @@
     <g data-record="2"><line x1="433.25" y1="363.25" x2="403.25" y2="363.25" stroke="#1f2937" stroke-width="1"/><polygon class="altium-schematic-pin-electrical-symbol" data-electrical="0" points="433.25,363.25 427.25,361.25 427.25,365.25" fill="none" stroke="#1f2937" stroke-width="0.25"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(424.25 363.25) rotate(0)">3</text><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(440.25 363.25) rotate(0)">EN</text></g>
     <g data-record="2"><line x1="483.25" y1="363.25" x2="513.25" y2="363.25" stroke="#1f2937" stroke-width="1"/><polygon class="altium-schematic-pin-electrical-symbol" data-electrical="0" points="483.25,363.25 489.25,365.25 489.25,361.25" fill="none" stroke="#1f2937" stroke-width="0.25"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(492.25 363.25) rotate(0)">4</text><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="central" transform="translate(476.25 363.25) rotate(0)">FB</text></g>
     <g data-record="2"><line x1="483.25" y1="343.25" x2="513.25" y2="343.25" stroke="#1f2937" stroke-width="1"/><polygon class="altium-schematic-pin-electrical-symbol" data-electrical="2" points="489.25,343.25 483.25,345.25 483.25,341.25" fill="none" stroke="#1f2937" stroke-width="0.25"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(492.25 343.25) rotate(0)">5</text><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="central" transform="translate(476.25 343.25) rotate(0)">SW</text></g>
-    <rect data-record="14" vector-effect="non-scaling-stroke" x="433.25" y="333.25" width="50" height="40" rx="0" fill="none" stroke="#800000" stroke-width="1"/>
+    <rect data-record="14" x="433.25" y="333.25" width="50" height="40" rx="0" fill="none" stroke="#800000" stroke-width="0.5084"/>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(433.25 383.25) rotate(0)">LM3670MF-1.2</text>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(433.25 333.25) rotate(0)">U1</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(33.25 783.25) rotate(0)">IC</text>
@@ -107,10 +107,10 @@
     <polyline data-record="27" points="403.25,363.25 373.25,363.25 373.25,343.25" fill="none" stroke="#000080" stroke-width="1"/>
     <polyline data-record="27" points="403.25,353.25 393.25,353.25 393.25,413.25" fill="none" stroke="#000080" stroke-width="1"/>
     <polyline data-record="27" points="513.25,363.25 613.25,363.25 613.25,343.25 593.25,343.25" fill="none" stroke="#000080" stroke-width="1"/>
-    <circle data-record="29" cx="363.25" cy="343.25" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="373.25" cy="343.25" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="613.25" cy="363.25" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="613.25" cy="343.25" r="1.8" fill="#800000"/>
+    <circle data-record="29" cx="363.25" cy="343.25" r="2" fill="#800000"/>
+    <circle data-record="29" cx="373.25" cy="343.25" r="2" fill="#800000"/>
+    <circle data-record="29" cx="613.25" cy="363.25" r="2" fill="#800000"/>
+    <circle data-record="29" cx="613.25" cy="343.25" r="2" fill="#800000"/>
     </g>
   </g>
 </svg>

@@ -277,10 +277,9 @@ function renderSchematicRecord(
 
   if (kind === "29") {
     const location = getSchematicLocation(record)
-    const radius = Math.max(
-      Number(record.getCaseInsensitive("SIZE") ?? 1) * 1.8,
-      1.5,
-    )
+    // SIZE is a native preset, not a radius multiplier. The smallest locked
+    // junction is 4 units across in Altium Viewer, including an omitted SIZE.
+    const radius = [2, 3, 5, 10][record.getNumber("SIZE") ?? 0] ?? 2
     return `<circle ${metadata} cx="${formatSvgNumber(viewport.toX(location.x))}" cy="${formatSvgNumber(viewport.toY(location.y))}" r="${formatSvgNumber(radius)}" fill="${color}"/>`
   }
 

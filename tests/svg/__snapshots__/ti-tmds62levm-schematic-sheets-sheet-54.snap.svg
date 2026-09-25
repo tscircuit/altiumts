@@ -206,15 +206,15 @@
     <polyline data-record="27" points="1110.7,800.7 1110.7,740.7 1050.7,740.7" fill="none" stroke="#800040" stroke-width="1"/>
     <polyline data-record="27" points="1110.7,1190.7 1110.7,1130.7 1040.7,1130.7" fill="none" stroke="#800040" stroke-width="1"/>
     <g data-record="18"><path d="M 830.7 895.7 H 950.7 V 905.7 H 830.7 Z" fill="#ffff80" stroke="#800000" stroke-width="1"/><text x="890.7" y="900.7" text-anchor="middle" dominant-baseline="central" fill="#800000" font-family="Times New Roman" font-size="8" font-style="normal" font-weight="normal" text-decoration="none">SEL_XDS</text></g>
-    <circle data-record="29" cx="1000.7" cy="470.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1040.7" cy="1130.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1040.7" cy="360.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1050.7" cy="740.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1100.7" cy="580.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1180.7" cy="360.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1190.7" cy="1130.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1190.7" cy="740.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1210.7" cy="470.7" r="1.8" fill="#800000"/>
+    <circle data-record="29" cx="1000.7" cy="470.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1040.7" cy="1130.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1040.7" cy="360.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1050.7" cy="740.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1100.7" cy="580.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1180.7" cy="360.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1190.7" cy="1130.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1190.7" cy="740.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1210.7" cy="470.7" r="2" fill="#800000"/>
     </g>
   </g>
 </svg>

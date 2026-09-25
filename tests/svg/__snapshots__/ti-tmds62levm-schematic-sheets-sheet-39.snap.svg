@@ -208,7 +208,7 @@
     <line data-record="13" x1="890.7" y1="1417.7" x2="890.7" y2="1443.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="890.7" y1="1417.7" x2="908.7" y2="1417.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="890.7" y1="1443.7" x2="909.7" y2="1443.7" stroke="#000bff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="909.6767,1443.5488 911.2799,1443.1974 912.8261,1442.6467 914.2906,1441.9055 915.65,1440.9858 916.8827,1439.9021 917.969,1438.6717 918.8916,1437.3142 919.6358,1435.8513 920.1898,1434.3063 920.5446,1432.7038 920.6948,1431.0694 920.6377,1429.4291 920.3745,1427.809 919.9092,1426.235 919.2493,1424.7322 918.4053,1423.3245 917.3906,1422.0344 916.2215,1420.8824 914.9165,1419.887 913.4965,1419.0638 911.9841,1418.4262 910.4035,1417.9842 908.7797,1417.7449" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="11" points="909.6767,1443.5488 911.2799,1443.1974 912.8261,1442.6467 914.2906,1441.9055 915.65,1440.9858 916.8827,1439.9021 917.969,1438.6717 918.8916,1437.3142 919.6358,1435.8513 920.1898,1434.3063 920.5446,1432.7038 920.6948,1431.0694 920.6377,1429.4291 920.3745,1427.809 919.9092,1426.235 919.2493,1424.7322 918.4053,1423.3245 917.3906,1422.0344 916.2215,1420.8824 914.9165,1419.887 913.4965,1419.0638 911.9841,1418.4262 910.4035,1417.9842 908.7797,1417.7449" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
     <line data-record="13" x1="920.7" y1="1430.7" x2="930.7" y2="1430.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="880.7" y1="1420.7" x2="890.7" y2="1420.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="880.7" y1="1440.7" x2="890.7" y2="1440.7" stroke="#000bff" stroke-width="1"/>
@@ -300,16 +300,16 @@
     <g data-record="2"><line x1="1320.7" y1="200.7" x2="1310.7" y2="200.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1311.7 200.7) rotate(0)">1</text></g>
     <g data-record="2"><line x1="1360.7" y1="200.7" x2="1370.7" y2="200.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1369.7 200.7) rotate(0)">2</text></g>
     <line data-record="13" x1="1320.7" y1="190.7" x2="1360.7" y2="190.7" stroke="#000bff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1355.7,195.7 1355.0474,195.7428 1354.4059,195.8704 1353.7866,196.0806 1353.2,196.3699 1352.6562,196.7332 1352.1645,197.1645 1351.7332,197.6562 1351.3699,198.2 1351.0806,198.7866 1350.8704,199.4059 1350.7428,200.0474 1350.7,200.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1345.7,195.7 1345.0474,195.7428 1344.4059,195.8704 1343.7866,196.0806 1343.2,196.3699 1342.6562,196.7332 1342.1645,197.1645 1341.7332,197.6562 1341.3699,198.2 1341.0806,198.7866 1340.8704,199.4059 1340.7428,200.0474 1340.7,200.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1325.7,195.7 1325.0474,195.7428 1324.4059,195.8704 1323.7866,196.0806 1323.2,196.3699 1322.6562,196.7332 1322.1645,197.1645 1321.7332,197.6562 1321.3699,198.2 1321.0806,198.7866 1320.8704,199.4059 1320.7428,200.0474 1320.7,200.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1350.7,200.7 1350.6572,200.0474 1350.5296,199.4059 1350.3194,198.7866 1350.0301,198.2 1349.6668,197.6562 1349.2355,197.1645 1348.7438,196.7332 1348.2,196.3699 1347.6134,196.0806 1346.9941,195.8704 1346.3526,195.7428 1345.7,195.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1330.7,200.7 1330.6572,200.0474 1330.5296,199.4059 1330.3194,198.7866 1330.0301,198.2 1329.6668,197.6562 1329.2355,197.1645 1328.7438,196.7332 1328.2,196.3699 1327.6134,196.0806 1326.9941,195.8704 1326.3526,195.7428 1325.7,195.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1340.7,200.7 1340.6572,200.0474 1340.5296,199.4059 1340.3194,198.7866 1340.0301,198.2 1339.6668,197.6562 1339.2355,197.1645 1338.7438,196.7332 1338.2,196.3699 1337.6134,196.0806 1336.9941,195.8704 1336.3526,195.7428 1335.7,195.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1360.7,200.7 1360.6572,200.0474 1360.5296,199.4059 1360.3194,198.7866 1360.0301,198.2 1359.6668,197.6562 1359.2355,197.1645 1358.7438,196.7332 1358.2,196.3699 1357.6134,196.0806 1356.9941,195.8704 1356.3526,195.7428 1355.7,195.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1335.7,195.7 1335.0474,195.7428 1334.4059,195.8704 1333.7866,196.0806 1333.2,196.3699 1332.6562,196.7332 1332.1645,197.1645 1331.7332,197.6562 1331.3699,198.2 1331.0806,198.7866 1330.8704,199.4059 1330.7428,200.0474 1330.7,200.7" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="11" points="1355.7,195.7 1355.0474,195.7428 1354.4059,195.8704 1353.7866,196.0806 1353.2,196.3699 1352.6562,196.7332 1352.1645,197.1645 1351.7332,197.6562 1351.3699,198.2 1351.0806,198.7866 1350.8704,199.4059 1350.7428,200.0474 1350.7,200.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="1345.7,195.7 1345.0474,195.7428 1344.4059,195.8704 1343.7866,196.0806 1343.2,196.3699 1342.6562,196.7332 1342.1645,197.1645 1341.7332,197.6562 1341.3699,198.2 1341.0806,198.7866 1340.8704,199.4059 1340.7428,200.0474 1340.7,200.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="1325.7,195.7 1325.0474,195.7428 1324.4059,195.8704 1323.7866,196.0806 1323.2,196.3699 1322.6562,196.7332 1322.1645,197.1645 1321.7332,197.6562 1321.3699,198.2 1321.0806,198.7866 1320.8704,199.4059 1320.7428,200.0474 1320.7,200.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="1350.7,200.7 1350.6572,200.0474 1350.5296,199.4059 1350.3194,198.7866 1350.0301,198.2 1349.6668,197.6562 1349.2355,197.1645 1348.7438,196.7332 1348.2,196.3699 1347.6134,196.0806 1346.9941,195.8704 1346.3526,195.7428 1345.7,195.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="1330.7,200.7 1330.6572,200.0474 1330.5296,199.4059 1330.3194,198.7866 1330.0301,198.2 1329.6668,197.6562 1329.2355,197.1645 1328.7438,196.7332 1328.2,196.3699 1327.6134,196.0806 1326.9941,195.8704 1326.3526,195.7428 1325.7,195.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="1340.7,200.7 1340.6572,200.0474 1340.5296,199.4059 1340.3194,198.7866 1340.0301,198.2 1339.6668,197.6562 1339.2355,197.1645 1338.7438,196.7332 1338.2,196.3699 1337.6134,196.0806 1336.9941,195.8704 1336.3526,195.7428 1335.7,195.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="1360.7,200.7 1360.6572,200.0474 1360.5296,199.4059 1360.3194,198.7866 1360.0301,198.2 1359.6668,197.6562 1359.2355,197.1645 1358.7438,196.7332 1358.2,196.3699 1357.6134,196.0806 1356.9941,195.8704 1356.3526,195.7428 1355.7,195.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="1335.7,195.7 1335.0474,195.7428 1334.4059,195.8704 1333.7866,196.0806 1333.2,196.3699 1332.6562,196.7332 1332.1645,197.1645 1331.7332,197.6562 1331.3699,198.2 1331.0806,198.7866 1330.8704,199.4059 1330.7428,200.0474 1330.7,200.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
     <line data-record="13" x1="1320.7" y1="180.7" x2="1360.7" y2="180.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1323.7" cy="202.7" rx="2" ry="2" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1323.7" cy="202.7" rx="2" ry="2" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <line data-record="13" x1="1320.7" y1="185.7" x2="1360.7" y2="185.7" stroke="#000bff" stroke-width="1"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1320.7 180.7) rotate(0)">FB1</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1320.7 220.7) rotate(0)">300E</text>
@@ -343,7 +343,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(526.7 350.7) rotate(0)">C239</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(526.7 362.7) rotate(0)">0.1uF</text>
     <g data-record="2"><line x1="1250.7" y1="1030.7" x2="1240.7" y2="1030.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1255.7" cy="1030.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1255.7" cy="1030.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1260.7 1030.7) rotate(0)">TP80</text>
     <g data-record="2"><line x1="540.7" y1="1140.7" x2="550.7" y2="1140.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="510.7" y1="1140.7" x2="500.7" y2="1140.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -409,7 +409,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1150.7 390.7) rotate(0)">C329</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1150.7 410.7) rotate(0)">0.1uF</text>
     <g data-record="2"><line x1="1250.7" y1="1020.7" x2="1240.7" y2="1020.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1255.7" cy="1020.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1255.7" cy="1020.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1260.7 1020.7) rotate(0)">TP77</text>
     <g data-record="2"><line x1="1090.7" y1="230.7" x2="1090.7" y2="220.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1090.7" y1="240.7" x2="1090.7" y2="250.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -449,7 +449,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(450.7 1060.7) rotate(0)">R143</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(510.7 1060.7) rotate(0)">0E</text>
     <g data-record="2"><line x1="1840.7" y1="440.7" x2="1840.7" y2="430.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1840.7" cy="445.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1840.7" cy="445.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1850.7 450.7) rotate(0)">TP161</text>
     <g data-record="2"><line x1="1170.7" y1="960.7" x2="1160.7" y2="960.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1200.7" y1="960.7" x2="1210.7" y2="960.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -472,7 +472,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(721.7 1420.7) rotate(0)">R452</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(788.7 1420.7) rotate(0)">0E</text>
     <g data-record="2"><line x1="1250.7" y1="920.7" x2="1240.7" y2="920.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1255.7" cy="920.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1255.7" cy="920.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1260.7 920.7) rotate(0)">TP79</text>
     <rect data-record="14" x="180.7" y="1100.7" width="110" height="60" rx="0" fill="#ffffb0" stroke="#000bff" stroke-width="1"/>
     <g data-record="2"><line x1="180.7" y1="1110.7" x2="150.7" y2="1110.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(171.7 1110.7) rotate(0)">1</text><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(187.7 1110.7) rotate(0)">OE/NC</text></g>
@@ -483,7 +483,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(180.7 1100.7) rotate(0)">U27</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(180.7 1170.7) rotate(0)">12.288MHz</text>
     <g data-record="2"><line x1="780.7" y1="650.7" x2="790.7" y2="650.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="775.7" cy="650.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="775.7" cy="650.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(740.7 655.7) rotate(0)">TP82</text>
     <g data-record="2"><line x1="300.7" y1="340.7" x2="290.7" y2="340.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="330.7" y1="340.7" x2="340.7" y2="340.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -496,13 +496,13 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(270.7 340.7) rotate(0)">R361</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(330.7 340.7) rotate(0)">0E</text>
     <g data-record="2"><line x1="520.7" y1="730.7" x2="530.7" y2="730.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="515.7" cy="730.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="515.7" cy="730.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(480.7 735.7) rotate(0)">TP165</text>
     <g data-record="2"><line x1="620.7" y1="710.7" x2="630.7" y2="710.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="615.7" cy="710.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="615.7" cy="710.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(580.7 715.7) rotate(0)">TP194</text>
     <g data-record="2"><line x1="550.7" y1="710.7" x2="560.7" y2="710.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="545.7" cy="710.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="545.7" cy="710.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(510.7 715.7) rotate(0)">TP185</text>
     <g data-record="2"><line x1="1670.7" y1="330.7" x2="1680.7" y2="330.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1660.7" y1="330.7" x2="1650.7" y2="330.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -600,7 +600,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1030.7 1470.7) rotate(0)">R463</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1030.7 1480.7) rotate(0)">10K</text>
     <g data-record="2"><line x1="530.7" y1="1030.7" x2="540.7" y2="1030.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="525.7" cy="1030.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="525.7" cy="1030.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(490.7 1035.7) rotate(0)">TP193</text>
     <g data-record="2"><line x1="1050.7" y1="230.7" x2="1050.7" y2="220.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1050.7" y1="240.7" x2="1050.7" y2="250.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -612,21 +612,21 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1028.7 230.7) rotate(0)">C327</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1026.7 250.7) rotate(0)">0.1uF</text>
     <g data-record="2"><line x1="620.7" y1="740.7" x2="630.7" y2="740.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="615.7" cy="740.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="615.7" cy="740.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(580.7 745.7) rotate(0)">TP188</text>
     <g data-record="2"><line x1="770.7" y1="430.7" x2="780.7" y2="430.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(779.7 430.7) rotate(0)">1</text></g>
     <g data-record="2"><line x1="730.7" y1="430.7" x2="720.7" y2="430.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(721.7 430.7) rotate(0)">2</text></g>
     <line data-record="13" x1="770.7" y1="420.7" x2="730.7" y2="420.7" stroke="#000bff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="740.7,430.7 740.6572,430.0474 740.5296,429.4059 740.3194,428.7866 740.0301,428.2 739.6668,427.6562 739.2355,427.1645 738.7438,426.7332 738.2,426.3699 737.6134,426.0806 736.9941,425.8704 736.3526,425.7428 735.7,425.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="750.7,430.7 750.6572,430.0474 750.5296,429.4059 750.3194,428.7866 750.0301,428.2 749.6668,427.6562 749.2355,427.1645 748.7438,426.7332 748.2,426.3699 747.6134,426.0806 746.9941,425.8704 746.3526,425.7428 745.7,425.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="770.7,430.7 770.6572,430.0474 770.5296,429.4059 770.3194,428.7866 770.0301,428.2 769.6668,427.6562 769.2355,427.1645 768.7438,426.7332 768.2,426.3699 767.6134,426.0806 766.9941,425.8704 766.3526,425.7428 765.7,425.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="745.7,425.7 745.0474,425.7428 744.4059,425.8704 743.7866,426.0806 743.2,426.3699 742.6562,426.7332 742.1645,427.1645 741.7332,427.6562 741.3699,428.2 741.0806,428.7866 740.8704,429.4059 740.7428,430.0474 740.7,430.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="765.7,425.7 765.0474,425.7428 764.4059,425.8704 763.7866,426.0806 763.2,426.3699 762.6562,426.7332 762.1645,427.1645 761.7332,427.6562 761.3699,428.2 761.0806,428.7866 760.8704,429.4059 760.7428,430.0474 760.7,430.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="755.7,425.7 755.0474,425.7428 754.4059,425.8704 753.7866,426.0806 753.2,426.3699 752.6562,426.7332 752.1645,427.1645 751.7332,427.6562 751.3699,428.2 751.0806,428.7866 750.8704,429.4059 750.7428,430.0474 750.7,430.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="735.7,425.7 735.0474,425.7428 734.4059,425.8704 733.7866,426.0806 733.2,426.3699 732.6562,426.7332 732.1645,427.1645 731.7332,427.6562 731.3699,428.2 731.0806,428.7866 730.8704,429.4059 730.7428,430.0474 730.7,430.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="760.7,430.7 760.6572,430.0474 760.5296,429.4059 760.3194,428.7866 760.0301,428.2 759.6668,427.6562 759.2355,427.1645 758.7438,426.7332 758.2,426.3699 757.6134,426.0806 756.9941,425.8704 756.3526,425.7428 755.7,425.7" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="11" points="740.7,430.7 740.6572,430.0474 740.5296,429.4059 740.3194,428.7866 740.0301,428.2 739.6668,427.6562 739.2355,427.1645 738.7438,426.7332 738.2,426.3699 737.6134,426.0806 736.9941,425.8704 736.3526,425.7428 735.7,425.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="750.7,430.7 750.6572,430.0474 750.5296,429.4059 750.3194,428.7866 750.0301,428.2 749.6668,427.6562 749.2355,427.1645 748.7438,426.7332 748.2,426.3699 747.6134,426.0806 746.9941,425.8704 746.3526,425.7428 745.7,425.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="770.7,430.7 770.6572,430.0474 770.5296,429.4059 770.3194,428.7866 770.0301,428.2 769.6668,427.6562 769.2355,427.1645 768.7438,426.7332 768.2,426.3699 767.6134,426.0806 766.9941,425.8704 766.3526,425.7428 765.7,425.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="745.7,425.7 745.0474,425.7428 744.4059,425.8704 743.7866,426.0806 743.2,426.3699 742.6562,426.7332 742.1645,427.1645 741.7332,427.6562 741.3699,428.2 741.0806,428.7866 740.8704,429.4059 740.7428,430.0474 740.7,430.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="765.7,425.7 765.0474,425.7428 764.4059,425.8704 763.7866,426.0806 763.2,426.3699 762.6562,426.7332 762.1645,427.1645 761.7332,427.6562 761.3699,428.2 761.0806,428.7866 760.8704,429.4059 760.7428,430.0474 760.7,430.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="755.7,425.7 755.0474,425.7428 754.4059,425.8704 753.7866,426.0806 753.2,426.3699 752.6562,426.7332 752.1645,427.1645 751.7332,427.6562 751.3699,428.2 751.0806,428.7866 750.8704,429.4059 750.7428,430.0474 750.7,430.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="735.7,425.7 735.0474,425.7428 734.4059,425.8704 733.7866,426.0806 733.2,426.3699 732.6562,426.7332 732.1645,427.1645 731.7332,427.6562 731.3699,428.2 731.0806,428.7866 730.8704,429.4059 730.7428,430.0474 730.7,430.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="760.7,430.7 760.6572,430.0474 760.5296,429.4059 760.3194,428.7866 760.0301,428.2 759.6668,427.6562 759.2355,427.1645 758.7438,426.7332 758.2,426.3699 757.6134,426.0806 756.9941,425.8704 756.3526,425.7428 755.7,425.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
     <line data-record="13" x1="770.7" y1="410.7" x2="730.7" y2="410.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="767.7" cy="432.7" rx="2" ry="2" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="767.7" cy="432.7" rx="2" ry="2" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <line data-record="13" x1="770.7" y1="415.7" x2="730.7" y2="415.7" stroke="#000bff" stroke-width="1"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(730.7 400.7) rotate(0)">FB2</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(730.7 450.7) rotate(0)">300E</text>
@@ -634,8 +634,8 @@
     <g data-record="2"><line x1="340.7" y1="1040.7" x2="340.7" y2="1050.7" stroke="#1f2937" stroke-width="1"/></g>
     <line data-record="13" x1="350.7" y1="1030.7" x2="330.7" y2="1030.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="340.7" y1="1034.7" x2="340.7" y2="1040.7" stroke="#000bff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="340.7,1034.7 339.3901,1034.7537 338.0889,1034.9145 336.8053,1035.1813 335.5478,1035.5522 334.325,1036.0249 333.1449,1036.5961 332.0156,1037.262 330.9445,1038.0181" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="350.4555,1038.0181 349.3844,1037.262 348.2551,1036.5961 347.075,1036.0249 345.8522,1035.5522 344.5947,1035.1813 343.3111,1034.9145 342.0099,1034.7537 340.7,1034.7" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="11" points="340.7,1034.7 339.3901,1034.7537 338.0889,1034.9145 336.8053,1035.1813 335.5478,1035.5522 334.325,1036.0249 333.1449,1036.5961 332.0156,1037.262 330.9445,1038.0181" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="350.4555,1038.0181 349.3844,1037.262 348.2551,1036.5961 347.075,1036.0249 345.8522,1035.5522 344.5947,1035.1813 343.3111,1034.9145 342.0099,1034.7537 340.7,1034.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Arial" font-size="7" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(350.7 1047.7) rotate(0)">10V</text>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(350.7 1030.7) rotate(0)">C101</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(350.7 1040.7) rotate(0)">1uF</text>
@@ -678,7 +678,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1228.7 230.7) rotate(0)">C388</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1226.7 250.7) rotate(0)">0.1uF</text>
     <g data-record="2"><line x1="1250.7" y1="1010.7" x2="1240.7" y2="1010.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1255.7" cy="1010.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1255.7" cy="1010.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1260.7 1010.7) rotate(0)">TP76</text>
     <g data-record="2"><line x1="1990.7" y1="420.7" x2="1990.7" y2="430.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1990.7" y1="390.7" x2="1990.7" y2="380.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -720,12 +720,12 @@
     <rect data-record="14" x="1780.7" y="1240.7" width="70" height="40" rx="0" fill="#ffffb0" stroke="#000bff" stroke-width="1"/>
     <g data-record="2"><line x1="1780.7" y1="1260.7" x2="1770.7" y2="1260.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1771.7 1260.7) rotate(0)">1</text></g>
     <g data-record="2"><line x1="1850.7" y1="1260.7" x2="1860.7" y2="1260.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1859.7 1260.7) rotate(0)">2</text></g>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1790.7,1260.7 1790.6572,1260.0474 1790.5296,1259.4059 1790.3194,1258.7866 1790.0301,1258.2 1789.6668,1257.6562 1789.2355,1257.1645 1788.7438,1256.7332 1788.2,1256.3699 1787.6134,1256.0806 1786.9941,1255.8704 1786.3526,1255.7428 1785.7,1255.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1810.7,1260.7 1810.6572,1260.0474 1810.5296,1259.4059 1810.3194,1258.7866 1810.0301,1258.2 1809.6668,1257.6562 1809.2355,1257.1645 1808.7438,1256.7332 1808.2,1256.3699 1807.6134,1256.0806 1806.9941,1255.8704 1806.3526,1255.7428 1805.7,1255.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1785.7,1255.7 1785.0474,1255.7428 1784.4059,1255.8704 1783.7866,1256.0806 1783.2,1256.3699 1782.6562,1256.7332 1782.1645,1257.1645 1781.7332,1257.6562 1781.3699,1258.2 1781.0806,1258.7866 1780.8704,1259.4059 1780.7428,1260.0474 1780.7,1260.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1805.7,1255.7 1805.0474,1255.7428 1804.4059,1255.8704 1803.7866,1256.0806 1803.2,1256.3699 1802.6562,1256.7332 1802.1645,1257.1645 1801.7332,1257.6562 1801.3699,1258.2 1801.0806,1258.7866 1800.8704,1259.4059 1800.7428,1260.0474 1800.7,1260.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1795.7,1255.7 1795.0474,1255.7428 1794.4059,1255.8704 1793.7866,1256.0806 1793.2,1256.3699 1792.6562,1256.7332 1792.1645,1257.1645 1791.7332,1257.6562 1791.3699,1258.2 1791.0806,1258.7866 1790.8704,1259.4059 1790.7428,1260.0474 1790.7,1260.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1800.7,1260.7 1800.6572,1260.0474 1800.5296,1259.4059 1800.3194,1258.7866 1800.0301,1258.2 1799.6668,1257.6562 1799.2355,1257.1645 1798.7438,1256.7332 1798.2,1256.3699 1797.6134,1256.0806 1796.9941,1255.8704 1796.3526,1255.7428 1795.7,1255.7" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="11" points="1790.7,1260.7 1790.6572,1260.0474 1790.5296,1259.4059 1790.3194,1258.7866 1790.0301,1258.2 1789.6668,1257.6562 1789.2355,1257.1645 1788.7438,1256.7332 1788.2,1256.3699 1787.6134,1256.0806 1786.9941,1255.8704 1786.3526,1255.7428 1785.7,1255.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="1810.7,1260.7 1810.6572,1260.0474 1810.5296,1259.4059 1810.3194,1258.7866 1810.0301,1258.2 1809.6668,1257.6562 1809.2355,1257.1645 1808.7438,1256.7332 1808.2,1256.3699 1807.6134,1256.0806 1806.9941,1255.8704 1806.3526,1255.7428 1805.7,1255.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="1785.7,1255.7 1785.0474,1255.7428 1784.4059,1255.8704 1783.7866,1256.0806 1783.2,1256.3699 1782.6562,1256.7332 1782.1645,1257.1645 1781.7332,1257.6562 1781.3699,1258.2 1781.0806,1258.7866 1780.8704,1259.4059 1780.7428,1260.0474 1780.7,1260.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="1805.7,1255.7 1805.0474,1255.7428 1804.4059,1255.8704 1803.7866,1256.0806 1803.2,1256.3699 1802.6562,1256.7332 1802.1645,1257.1645 1801.7332,1257.6562 1801.3699,1258.2 1801.0806,1258.7866 1800.8704,1259.4059 1800.7428,1260.0474 1800.7,1260.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="1795.7,1255.7 1795.0474,1255.7428 1794.4059,1255.8704 1793.7866,1256.0806 1793.2,1256.3699 1792.6562,1256.7332 1792.1645,1257.1645 1791.7332,1257.6562 1791.3699,1258.2 1791.0806,1258.7866 1790.8704,1259.4059 1790.7428,1260.0474 1790.7,1260.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="1800.7,1260.7 1800.6572,1260.0474 1800.5296,1259.4059 1800.3194,1258.7866 1800.0301,1258.2 1799.6668,1257.6562 1799.2355,1257.1645 1798.7438,1256.7332 1798.2,1256.3699 1797.6134,1256.0806 1796.9941,1255.8704 1796.3526,1255.7428 1795.7,1255.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
     <line data-record="13" x1="1829.7" y1="1263.7" x2="1835.7" y2="1257.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1841.7" y1="1263.7" x2="1847.7" y2="1257.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1835.7" y1="1257.7" x2="1841.7" y2="1263.7" stroke="#000bff" stroke-width="1"/>
@@ -733,8 +733,8 @@
     <line data-record="13" x1="1823.7" y1="1257.7" x2="1829.7" y2="1263.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1820.7" y1="1260.7" x2="1823.7" y2="1257.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="1810.7" y1="1260.7" x2="1820.7" y2="1260.7" stroke="#000bff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1821.526,1251.4101 1820.2916,1252.2599 1819.1727,1253.2569 1818.1869,1254.3856 1817.3494,1255.6284 1816.6733,1256.9659 1816.1692,1258.3772 1815.845,1259.8404 1815.7056,1261.3325 1815.7534,1262.8304 1815.9874,1264.3106 1816.4042,1265.7502 1816.9971,1267.1265 1817.7569,1268.4183 1818.6718,1269.6052 1819.7276,1270.6688" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1844.4138,1269.9848 1845.561,1269.439 1846.6297,1268.7523 1847.6027,1267.9355 1848.4643,1267.002 1849.2006,1265.9668 1849.7998,1264.8466 1850.252,1263.6595 1850.5502,1262.4246 1850.6893,1261.1619 1850.6673,1259.8917 1850.4844,1258.6346 1850.1436,1257.4108 1849.6504,1256.2401 1849.0128,1255.1414 1848.241,1254.1324 1847.3475,1253.2293 1846.3467,1252.4468 1845.2548,1251.7976 1844.0894,1251.2919 1842.8693,1250.9381" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="11" points="1821.526,1251.4101 1820.2916,1252.2599 1819.1727,1253.2569 1818.1869,1254.3856 1817.3494,1255.6284 1816.6733,1256.9659 1816.1692,1258.3772 1815.845,1259.8404 1815.7056,1261.3325 1815.7534,1262.8304 1815.9874,1264.3106 1816.4042,1265.7502 1816.9971,1267.1265 1817.7569,1268.4183 1818.6718,1269.6052 1819.7276,1270.6688" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="1844.4138,1269.9848 1845.561,1269.439 1846.6297,1268.7523 1847.6027,1267.9355 1848.4643,1267.002 1849.2006,1265.9668 1849.7998,1264.8466 1850.252,1263.6595 1850.5502,1262.4246 1850.6893,1261.1619 1850.6673,1259.8917 1850.4844,1258.6346 1850.1436,1257.4108 1849.6504,1256.2401 1849.0128,1255.1414 1848.241,1254.1324 1847.3475,1253.2293 1846.3467,1252.4468 1845.2548,1251.7976 1844.0894,1251.2919 1842.8693,1250.9381" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1780.7 1235.7) rotate(0)">FL2</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1780.7 1296.7) rotate(0)">120E</text>
     <g data-record="2"><line x1="680.7" y1="460.7" x2="680.7" y2="450.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -756,7 +756,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1640.7 300.7) rotate(0)">C400</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1670.7 300.7) rotate(0)">10uF</text>
     <g data-record="2"><line x1="580.7" y1="310.7" x2="570.7" y2="310.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="585.7" cy="310.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="585.7" cy="310.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(590.7 310.7) rotate(0)">TP41</text>
     <g data-record="2"><line x1="1410.7" y1="230.7" x2="1410.7" y2="220.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1410.7" y1="240.7" x2="1410.7" y2="250.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -777,7 +777,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1890.7 390.7) rotate(0)">C354</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1920.7 390.7) rotate(0)">0.1uF</text>
     <g data-record="2"><line x1="500.7" y1="1010.7" x2="510.7" y2="1010.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="495.7" cy="1010.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="495.7" cy="1010.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(460.7 1015.7) rotate(0)">TP192</text>
     <g data-record="2"><line x1="1420.7" y1="780.7" x2="1420.7" y2="770.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1420.7" y1="810.7" x2="1420.7" y2="820.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -850,16 +850,16 @@
     <g data-record="2"><line x1="1240.7" y1="360.7" x2="1230.7" y2="360.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1231.7 360.7) rotate(0)">1</text></g>
     <g data-record="2"><line x1="1280.7" y1="360.7" x2="1290.7" y2="360.7" stroke="#1f2937" stroke-width="1"/><text x="0" y="0" fill="#1f2937" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1289.7 360.7) rotate(0)">2</text></g>
     <line data-record="13" x1="1240.7" y1="350.7" x2="1280.7" y2="350.7" stroke="#000bff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1275.7,355.7 1275.0474,355.7428 1274.4059,355.8704 1273.7866,356.0806 1273.2,356.3699 1272.6562,356.7332 1272.1645,357.1645 1271.7332,357.6562 1271.3699,358.2 1271.0806,358.7866 1270.8704,359.4059 1270.7428,360.0474 1270.7,360.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1265.7,355.7 1265.0474,355.7428 1264.4059,355.8704 1263.7866,356.0806 1263.2,356.3699 1262.6562,356.7332 1262.1645,357.1645 1261.7332,357.6562 1261.3699,358.2 1261.0806,358.7866 1260.8704,359.4059 1260.7428,360.0474 1260.7,360.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1245.7,355.7 1245.0474,355.7428 1244.4059,355.8704 1243.7866,356.0806 1243.2,356.3699 1242.6562,356.7332 1242.1645,357.1645 1241.7332,357.6562 1241.3699,358.2 1241.0806,358.7866 1240.8704,359.4059 1240.7428,360.0474 1240.7,360.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1270.7,360.7 1270.6572,360.0474 1270.5296,359.4059 1270.3194,358.7866 1270.0301,358.2 1269.6668,357.6562 1269.2355,357.1645 1268.7438,356.7332 1268.2,356.3699 1267.6134,356.0806 1266.9941,355.8704 1266.3526,355.7428 1265.7,355.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1250.7,360.7 1250.6572,360.0474 1250.5296,359.4059 1250.3194,358.7866 1250.0301,358.2 1249.6668,357.6562 1249.2355,357.1645 1248.7438,356.7332 1248.2,356.3699 1247.6134,356.0806 1246.9941,355.8704 1246.3526,355.7428 1245.7,355.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1260.7,360.7 1260.6572,360.0474 1260.5296,359.4059 1260.3194,358.7866 1260.0301,358.2 1259.6668,357.6562 1259.2355,357.1645 1258.7438,356.7332 1258.2,356.3699 1257.6134,356.0806 1256.9941,355.8704 1256.3526,355.7428 1255.7,355.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1280.7,360.7 1280.6572,360.0474 1280.5296,359.4059 1280.3194,358.7866 1280.0301,358.2 1279.6668,357.6562 1279.2355,357.1645 1278.7438,356.7332 1278.2,356.3699 1277.6134,356.0806 1276.9941,355.8704 1276.3526,355.7428 1275.7,355.7" fill="none" stroke="#0000ff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="1255.7,355.7 1255.0474,355.7428 1254.4059,355.8704 1253.7866,356.0806 1253.2,356.3699 1252.6562,356.7332 1252.1645,357.1645 1251.7332,357.6562 1251.3699,358.2 1251.0806,358.7866 1250.8704,359.4059 1250.7428,360.0474 1250.7,360.7" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="11" points="1275.7,355.7 1275.0474,355.7428 1274.4059,355.8704 1273.7866,356.0806 1273.2,356.3699 1272.6562,356.7332 1272.1645,357.1645 1271.7332,357.6562 1271.3699,358.2 1271.0806,358.7866 1270.8704,359.4059 1270.7428,360.0474 1270.7,360.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="1265.7,355.7 1265.0474,355.7428 1264.4059,355.8704 1263.7866,356.0806 1263.2,356.3699 1262.6562,356.7332 1262.1645,357.1645 1261.7332,357.6562 1261.3699,358.2 1261.0806,358.7866 1260.8704,359.4059 1260.7428,360.0474 1260.7,360.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="1245.7,355.7 1245.0474,355.7428 1244.4059,355.8704 1243.7866,356.0806 1243.2,356.3699 1242.6562,356.7332 1242.1645,357.1645 1241.7332,357.6562 1241.3699,358.2 1241.0806,358.7866 1240.8704,359.4059 1240.7428,360.0474 1240.7,360.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="1270.7,360.7 1270.6572,360.0474 1270.5296,359.4059 1270.3194,358.7866 1270.0301,358.2 1269.6668,357.6562 1269.2355,357.1645 1268.7438,356.7332 1268.2,356.3699 1267.6134,356.0806 1266.9941,355.8704 1266.3526,355.7428 1265.7,355.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="1250.7,360.7 1250.6572,360.0474 1250.5296,359.4059 1250.3194,358.7866 1250.0301,358.2 1249.6668,357.6562 1249.2355,357.1645 1248.7438,356.7332 1248.2,356.3699 1247.6134,356.0806 1246.9941,355.8704 1246.3526,355.7428 1245.7,355.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="1260.7,360.7 1260.6572,360.0474 1260.5296,359.4059 1260.3194,358.7866 1260.0301,358.2 1259.6668,357.6562 1259.2355,357.1645 1258.7438,356.7332 1258.2,356.3699 1257.6134,356.0806 1256.9941,355.8704 1256.3526,355.7428 1255.7,355.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="1280.7,360.7 1280.6572,360.0474 1280.5296,359.4059 1280.3194,358.7866 1280.0301,358.2 1279.6668,357.6562 1279.2355,357.1645 1278.7438,356.7332 1278.2,356.3699 1277.6134,356.0806 1276.9941,355.8704 1276.3526,355.7428 1275.7,355.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
+    <polyline data-record="11" points="1255.7,355.7 1255.0474,355.7428 1254.4059,355.8704 1253.7866,356.0806 1253.2,356.3699 1252.6562,356.7332 1252.1645,357.1645 1251.7332,357.6562 1251.3699,358.2 1251.0806,358.7866 1250.8704,359.4059 1250.7428,360.0474 1250.7,360.7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
     <line data-record="13" x1="1240.7" y1="340.7" x2="1280.7" y2="340.7" stroke="#000bff" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1243.7" cy="362.7" rx="2" ry="2" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1243.7" cy="362.7" rx="2" ry="2" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <line data-record="13" x1="1240.7" y1="345.7" x2="1280.7" y2="345.7" stroke="#000bff" stroke-width="1"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1240.7 335.7) rotate(0)">FB3</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1240.7 380.7) rotate(0)">300E</text>
@@ -961,7 +961,7 @@
     <line data-record="13" x1="1310.7" y1="770.7" x2="1305.7" y2="776.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="1320.7" y1="770.7" x2="1310.7" y2="770.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="1279.7" y1="779.7" x2="1285.7" y2="770.7" stroke="#1f2937" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1280.7" cy="784.7" rx="2" ry="7" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1280.7" cy="784.7" rx="2" ry="7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
     <line data-record="13" x1="1298.7" y1="761.7" x2="1305.7" y2="761.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="1310.7" y1="767.7" x2="1305.7" y2="761.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="1320.7" y1="767.7" x2="1310.7" y2="767.7" stroke="#008200" stroke-width="1"/>
@@ -973,7 +973,7 @@
     <line data-record="13" x1="1310.7" y1="800.7" x2="1305.7" y2="806.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="1320.7" y1="800.7" x2="1310.7" y2="800.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="1279.7" y1="809.7" x2="1285.7" y2="800.7" stroke="#1f2937" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1280.7" cy="814.7" rx="2" ry="7" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1280.7" cy="814.7" rx="2" ry="7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
     <line data-record="13" x1="1298.7" y1="791.7" x2="1305.7" y2="791.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="1310.7" y1="797.7" x2="1305.7" y2="791.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="1320.7" y1="797.7" x2="1310.7" y2="797.7" stroke="#008200" stroke-width="1"/>
@@ -985,7 +985,7 @@
     <line data-record="13" x1="1310.7" y1="830.7" x2="1305.7" y2="836.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="1320.7" y1="830.7" x2="1310.7" y2="830.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="1279.7" y1="839.7" x2="1285.7" y2="830.7" stroke="#1f2937" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1280.7" cy="844.7" rx="2" ry="7" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1280.7" cy="844.7" rx="2" ry="7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
     <line data-record="13" x1="1298.7" y1="821.7" x2="1305.7" y2="821.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="1310.7" y1="827.7" x2="1305.7" y2="821.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="1320.7" y1="827.7" x2="1310.7" y2="827.7" stroke="#008200" stroke-width="1"/>
@@ -997,7 +997,7 @@
     <line data-record="13" x1="1310.7" y1="860.7" x2="1305.7" y2="866.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="1320.7" y1="860.7" x2="1310.7" y2="860.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="1279.7" y1="869.7" x2="1285.7" y2="860.7" stroke="#1f2937" stroke-width="1"/>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1280.7" cy="874.7" rx="2" ry="7" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1280.7" cy="874.7" rx="2" ry="7" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
     <line data-record="13" x1="1298.7" y1="851.7" x2="1305.7" y2="851.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="1310.7" y1="857.7" x2="1305.7" y2="851.7" stroke="#008200" stroke-width="1"/>
     <line data-record="13" x1="1320.7" y1="857.7" x2="1310.7" y2="857.7" stroke="#008200" stroke-width="1"/>
@@ -1118,92 +1118,92 @@
     <text data-record="25" x="0" y="0" fill="#ff0000" font-family="Arial" font-size="7" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(770.7 1440.7) rotate(0)">RESETSTATz</text>
     <text data-record="25" x="0" y="0" fill="#ff0000" font-family="Arial" font-size="7" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(720.7 690.7) rotate(0)">SoC_I2C1_SDA</text>
     <text data-record="25" x="0" y="0" fill="#ff0000" font-family="Arial" font-size="7" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(720.7 680.7) rotate(0)">SoC_I2C1_SCL</text>
-    <circle data-record="29" cx="240.7" cy="1040.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="240.7" cy="1010.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="250.7" cy="270.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="260.7" cy="310.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="280.7" cy="1010.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="340.7" cy="1060.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="410.7" cy="410.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="510.7" cy="310.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="520.7" cy="990.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="540.7" cy="920.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="540.7" cy="760.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="550.7" cy="310.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="560.7" cy="310.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="570.7" cy="830.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="580.7" cy="1060.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="640.7" cy="840.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="670.7" cy="910.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="680.7" cy="430.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="800.7" cy="430.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="810.7" cy="1420.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="810.7" cy="740.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="830.7" cy="1420.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="840.7" cy="500.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="840.7" cy="430.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="880.7" cy="500.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="880.7" cy="430.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="900.7" cy="1510.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="900.7" cy="1340.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="920.7" cy="590.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="940.7" cy="1140.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="960.7" cy="1140.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="960.7" cy="590.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="970.7" cy="590.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="980.7" cy="1140.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="980.7" cy="590.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="990.7" cy="590.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1000.7" cy="590.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1020.7" cy="1430.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1030.7" cy="590.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1040.7" cy="590.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1050.7" cy="270.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1050.7" cy="200.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1070.7" cy="360.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1090.7" cy="270.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1090.7" cy="200.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1110.7" cy="430.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1110.7" cy="360.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1130.7" cy="270.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1130.7" cy="200.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1150.7" cy="430.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1150.7" cy="360.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1170.7" cy="270.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1170.7" cy="200.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1190.7" cy="430.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1190.7" cy="360.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1210.7" cy="270.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1210.7" cy="200.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1240.7" cy="960.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1240.7" cy="940.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1250.7" cy="200.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1290.7" cy="570.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1330.7" cy="720.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1330.7" cy="570.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1330.7" cy="360.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1410.7" cy="200.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1620.7" cy="330.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1720.7" cy="1260.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1720.7" cy="1130.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1720.7" cy="1070.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1720.7" cy="1040.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1720.7" cy="1010.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1720.7" cy="300.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1740.7" cy="330.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1760.7" cy="700.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1760.7" cy="330.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1770.7" cy="700.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1780.7" cy="420.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1790.7" cy="300.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1840.7" cy="420.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1890.7" cy="470.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1890.7" cy="330.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1910.7" cy="1260.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1910.7" cy="1150.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1910.7" cy="1140.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1910.7" cy="1130.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1960.7" cy="420.7" r="1.8" fill="#800000"/>
+    <circle data-record="29" cx="240.7" cy="1040.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="240.7" cy="1010.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="250.7" cy="270.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="260.7" cy="310.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="280.7" cy="1010.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="340.7" cy="1060.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="410.7" cy="410.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="510.7" cy="310.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="520.7" cy="990.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="540.7" cy="920.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="540.7" cy="760.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="550.7" cy="310.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="560.7" cy="310.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="570.7" cy="830.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="580.7" cy="1060.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="640.7" cy="840.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="670.7" cy="910.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="680.7" cy="430.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="800.7" cy="430.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="810.7" cy="1420.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="810.7" cy="740.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="830.7" cy="1420.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="840.7" cy="500.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="840.7" cy="430.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="880.7" cy="500.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="880.7" cy="430.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="900.7" cy="1510.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="900.7" cy="1340.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="920.7" cy="590.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="940.7" cy="1140.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="960.7" cy="1140.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="960.7" cy="590.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="970.7" cy="590.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="980.7" cy="1140.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="980.7" cy="590.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="990.7" cy="590.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1000.7" cy="590.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1020.7" cy="1430.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1030.7" cy="590.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1040.7" cy="590.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1050.7" cy="270.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1050.7" cy="200.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1070.7" cy="360.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1090.7" cy="270.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1090.7" cy="200.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1110.7" cy="430.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1110.7" cy="360.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1130.7" cy="270.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1130.7" cy="200.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1150.7" cy="430.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1150.7" cy="360.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1170.7" cy="270.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1170.7" cy="200.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1190.7" cy="430.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1190.7" cy="360.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1210.7" cy="270.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1210.7" cy="200.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1240.7" cy="960.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1240.7" cy="940.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1250.7" cy="200.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1290.7" cy="570.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1330.7" cy="720.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1330.7" cy="570.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1330.7" cy="360.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1410.7" cy="200.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1620.7" cy="330.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1720.7" cy="1260.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1720.7" cy="1130.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1720.7" cy="1070.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1720.7" cy="1040.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1720.7" cy="1010.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1720.7" cy="300.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1740.7" cy="330.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1760.7" cy="700.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1760.7" cy="330.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1770.7" cy="700.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1780.7" cy="420.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1790.7" cy="300.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1840.7" cy="420.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1890.7" cy="470.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1890.7" cy="330.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1910.7" cy="1260.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1910.7" cy="1150.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1910.7" cy="1140.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1910.7" cy="1130.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1960.7" cy="420.7" r="2" fill="#800000"/>
     </g>
   </g>
 </svg>

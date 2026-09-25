@@ -59,7 +59,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1970.7 680.7) rotate(0)">R299</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1970.7 690.7) rotate(0)">10K</text>
     <g data-record="2"><line x1="680.7" y1="350.7" x2="690.7" y2="350.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="675.7" cy="350.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="675.7" cy="350.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(640.7 350.7) rotate(0)">TP125</text>
     <g data-record="2"><line x1="1270.7" y1="1050.7" x2="1270.7" y2="1040.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1270.7" y1="1060.7" x2="1270.7" y2="1070.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -147,7 +147,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1320.7 730.7) rotate(0)">C1</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1320.7 740.7) rotate(0)">10uF</text>
     <g data-record="2"><line x1="1440.7" y1="410.7" x2="1430.7" y2="410.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1445.7" cy="410.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1445.7" cy="410.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1450.7 410.7) rotate(0)">TP122</text>
     <g data-record="2"><line x1="300.7" y1="660.7" x2="290.7" y2="660.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="330.7" y1="660.7" x2="340.7" y2="660.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -255,7 +255,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(260.7 770.7) rotate(0)">U66</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(330.7 780.7) rotate(0)">32.768KHz</text>
     <g data-record="2"><line x1="680.7" y1="360.7" x2="690.7" y2="360.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="675.7" cy="360.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="675.7" cy="360.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(640.7 360.7) rotate(0)">TP124</text>
     <g data-record="2"><line x1="1340.7" y1="280.7" x2="1340.7" y2="290.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1340.7" y1="270.7" x2="1340.7" y2="260.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -418,7 +418,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(940.7 330.7) rotate(0)">J4</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(940.7 750.7) rotate(0)">CON_MINIPCIE_75_F</text>
     <g data-record="2"><line x1="1470.7" y1="360.7" x2="1460.7" y2="360.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1475.7" cy="360.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1475.7" cy="360.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1480.7 360.7) rotate(0)">TP123</text>
     <g data-record="2"><line x1="1670.7" y1="1270.7" x2="1670.7" y2="1260.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1670.7" y1="1300.7" x2="1670.7" y2="1310.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -739,45 +739,45 @@
     <polyline data-record="27" points="1890.7,660.7 1890.7,630.7 1890.7,620.7" fill="none" stroke="#800040" stroke-width="1"/>
     <polyline data-record="27" points="1970.7,1260.7 1970.7,1230.7 1970.7,1220.7" fill="none" stroke="#800040" stroke-width="1"/>
     <polyline data-record="27" points="460.7,1150.7 190.7,1150.7" fill="none" stroke="#000080" stroke-width="1"/>
-    <circle data-record="29" cx="320.7" cy="740.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="350.7" cy="680.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="350.7" cy="660.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="360.7" cy="1170.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="380.7" cy="1320.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="440.7" cy="1320.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="450.7" cy="1050.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="520.7" cy="1300.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="630.7" cy="1050.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="750.7" cy="380.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="780.7" cy="1140.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="880.7" cy="730.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="880.7" cy="710.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="880.7" cy="680.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="880.7" cy="650.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="880.7" cy="620.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="880.7" cy="590.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="880.7" cy="560.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="880.7" cy="530.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1130.7" cy="1030.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1210.7" cy="1260.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1270.7" cy="1030.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1270.7" cy="700.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1270.7" cy="340.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1270.7" cy="250.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1300.7" cy="250.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1310.7" cy="770.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1310.7" cy="760.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1310.7" cy="700.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1320.7" cy="310.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1350.7" cy="700.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1420.7" cy="430.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1720.7" cy="1230.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1770.7" cy="1230.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1820.7" cy="1230.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1870.7" cy="1230.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1890.7" cy="630.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1920.7" cy="1230.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1970.7" cy="1230.7" r="1.8" fill="#800000"/>
+    <circle data-record="29" cx="320.7" cy="740.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="350.7" cy="680.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="350.7" cy="660.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="360.7" cy="1170.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="380.7" cy="1320.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="440.7" cy="1320.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="450.7" cy="1050.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="520.7" cy="1300.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="630.7" cy="1050.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="750.7" cy="380.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="780.7" cy="1140.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="880.7" cy="730.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="880.7" cy="710.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="880.7" cy="680.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="880.7" cy="650.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="880.7" cy="620.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="880.7" cy="590.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="880.7" cy="560.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="880.7" cy="530.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1130.7" cy="1030.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1210.7" cy="1260.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1270.7" cy="1030.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1270.7" cy="700.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1270.7" cy="340.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1270.7" cy="250.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1300.7" cy="250.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1310.7" cy="770.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1310.7" cy="760.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1310.7" cy="700.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1320.7" cy="310.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1350.7" cy="700.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1420.7" cy="430.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1720.7" cy="1230.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1770.7" cy="1230.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1820.7" cy="1230.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1870.7" cy="1230.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1890.7" cy="630.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1920.7" cy="1230.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1970.7" cy="1230.7" r="2" fill="#800000"/>
     </g>
   </g>
 </svg>

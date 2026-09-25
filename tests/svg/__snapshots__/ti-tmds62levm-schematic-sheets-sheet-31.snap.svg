@@ -373,27 +373,27 @@
     <text data-record="25" x="0" y="0" fill="#ff0000" font-family="Arial" font-size="7" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(710.7 480.7) rotate(0)">SoC_I2C1_SDA</text>
     <g data-record="28"><rect x="1129.7" y="377.7" width="110" height="40" fill="#ffffff" stroke="none"/><defs><clipPath id="altium-text-frame-SNOUHEAE"><rect x="1129.7" y="377.7" width="110" height="40"/></clipPath></defs><text x="1129.7001" y="387.7" fill="#1f2937" text-anchor="start" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" clip-path="url(#altium-text-frame-SNOUHEAE)"><tspan x="1129.7001" dy="0">D-Note</tspan><tspan x="1129.7001" dy="10">Ok to use standard tolerance</tspan><tspan x="1129.7001" dy="10">5% resistors for I2C slew</tspan><tspan x="1129.7001" dy="10">rate limit RC</tspan></text></g>
     <g data-record="28"><defs><clipPath id="altium-text-frame-LPTHSWXL"><rect x="1026.7" y="138.7" width="284" height="143"/></clipPath></defs><text x="1026.7001" y="150.7" fill="#1f2937" text-anchor="start" font-family="Courier New" font-size="12" font-style="normal" font-weight="normal" text-decoration="none" clip-path="url(#altium-text-frame-LPTHSWXL)"><tspan x="1026.7001" dy="0">D-Note :- </tspan><tspan x="1026.7001" dy="12">SOC_I2C2_SDA </tspan><tspan x="1026.7001" dy="12">The I2C interface is I2C compliant open</tspan><tspan x="1026.7001" dy="12">drain output type IO buffer I2C</tspan><tspan x="1026.7001" dy="12">interface</tspan><tspan x="1026.7001" dy="12">Move C near to SOC pins </tspan><tspan x="1026.7001" dy="12">Reduce the load cap to be within the</tspan><tspan x="1026.7001" dy="12">processor specs including trace or PCB</tspan><tspan x="1026.7001" dy="12">capacitance. Calculate RC to limit the</tspan><tspan x="1026.7001" dy="12">slew rate as per the processor specific</tspan><tspan x="1026.7001" dy="12">data sheet</tspan></text></g>
-    <circle data-record="29" cx="470.7" cy="1070.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="470.7" cy="990.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="520.7" cy="1060.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="540.7" cy="1130.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="640.7" cy="490.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="680.7" cy="480.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="680.7" cy="360.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="730.7" cy="460.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="730.7" cy="360.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="750.7" cy="1100.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="770.7" cy="450.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="770.7" cy="360.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="790.7" cy="1110.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="790.7" cy="1010.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="830.7" cy="1120.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="830.7" cy="1010.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1260.7" cy="350.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1270.7" cy="440.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1310.7" cy="350.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1360.7" cy="440.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1360.7" cy="260.7" r="1.8" fill="#800000"/>
+    <circle data-record="29" cx="470.7" cy="1070.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="470.7" cy="990.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="520.7" cy="1060.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="540.7" cy="1130.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="640.7" cy="490.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="680.7" cy="480.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="680.7" cy="360.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="730.7" cy="460.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="730.7" cy="360.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="750.7" cy="1100.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="770.7" cy="450.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="770.7" cy="360.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="790.7" cy="1110.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="790.7" cy="1010.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="830.7" cy="1120.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="830.7" cy="1010.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1260.7" cy="350.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1270.7" cy="440.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1310.7" cy="350.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1360.7" cy="440.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1360.7" cy="260.7" r="2" fill="#800000"/>
     </g>
   </g>
 </svg>

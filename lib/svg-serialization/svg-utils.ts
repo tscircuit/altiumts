@@ -56,11 +56,14 @@ export function formatSvgNumber(value: number): string {
   return Object.is(rounded, -0) ? "0" : String(rounded)
 }
 
-/** One pixel at the requested output size, accounting for SVG's meet fit. */
+/** Native Viewer hairline (half a pixel), accounting for SVG's meet fit. */
 export function getSvgHairlineWidth(viewport: SvgViewport): number {
-  return Math.max(
-    viewport.width / viewport.outputWidth,
-    viewport.height / viewport.outputHeight,
+  return (
+    0.5 *
+    Math.max(
+      viewport.width / viewport.outputWidth,
+      viewport.height / viewport.outputHeight,
+    )
   )
 }
 

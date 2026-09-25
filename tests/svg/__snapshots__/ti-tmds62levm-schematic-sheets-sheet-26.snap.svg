@@ -102,7 +102,7 @@
     <polyline data-record="27" points="690.7,640.7 580.7,640.7" fill="none" stroke="#800040" stroke-width="1"/>
     <polyline data-record="27" points="1300.7,720.7 1300.7,690.7" fill="none" stroke="#800040" stroke-width="1"/>
     <polyline data-record="27" points="1210.7,1230.7 1210.7,1190.7" fill="none" stroke="#800040" stroke-width="1"/>
-    <circle data-record="29" cx="1810.7" cy="340.7" r="1.8" fill="#800000"/>
+    <circle data-record="29" cx="1810.7" cy="340.7" r="2" fill="#800000"/>
     <g data-record="2"><line x1="1860.7" y1="310.7" x2="1860.7" y2="300.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1860.7" y1="320.7" x2="1860.7" y2="330.7" stroke="#1f2937" stroke-width="1"/></g>
     <line data-record="13" x1="1860.7" y1="310.7" x2="1860.7" y2="312.7" stroke="#000bff" stroke-width="1"/>
@@ -123,7 +123,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1350.7 760.7) rotate(0)">R499</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1350.7 770.7) rotate(0)">10K</text>
     <g data-record="2"><line x1="1140.7" y1="1150.7" x2="1150.7" y2="1150.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1135.7" cy="1150.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1135.7" cy="1150.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1100.7 1150.7) rotate(0)">TP17</text>
     <g data-record="2"><line x1="1370.7" y1="420.7" x2="1370.7" y2="410.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1370.7" y1="450.7" x2="1370.7" y2="460.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -144,7 +144,7 @@
     <line data-record="13" x1="560.7" y1="1217.7" x2="560.7" y2="1243.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="560.7" y1="1217.7" x2="578.7" y2="1217.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="560.7" y1="1243.7" x2="579.7" y2="1243.7" stroke="#000bff" stroke-width="1"/>
-    <polyline data-record="11" vector-effect="non-scaling-stroke" points="579.6767,1243.5488 581.2799,1243.1974 582.8261,1242.6467 584.2906,1241.9055 585.65,1240.9858 586.8827,1239.9021 587.969,1238.6717 588.8916,1237.3142 589.6358,1235.8513 590.1898,1234.3063 590.5446,1232.7038 590.6948,1231.0694 590.6377,1229.4291 590.3745,1227.809 589.9092,1226.235 589.2493,1224.7322 588.4053,1223.3245 587.3906,1222.0344 586.2215,1220.8824 584.9165,1219.887 583.4965,1219.0638 581.9841,1218.4262 580.4035,1217.9842 578.7797,1217.7449" fill="none" stroke="#0000ff" stroke-width="1"/>
+    <polyline data-record="11" points="579.6767,1243.5488 581.2799,1243.1974 582.8261,1242.6467 584.2906,1241.9055 585.65,1240.9858 586.8827,1239.9021 587.969,1238.6717 588.8916,1237.3142 589.6358,1235.8513 590.1898,1234.3063 590.5446,1232.7038 590.6948,1231.0694 590.6377,1229.4291 590.3745,1227.809 589.9092,1226.235 589.2493,1224.7322 588.4053,1223.3245 587.3906,1222.0344 586.2215,1220.8824 584.9165,1219.887 583.4965,1219.0638 581.9841,1218.4262 580.4035,1217.9842 578.7797,1217.7449" fill="none" stroke="#0000ff" stroke-width="1.0807"/>
     <line data-record="13" x1="590.7" y1="1230.7" x2="600.7" y2="1230.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="550.7" y1="1220.7" x2="560.7" y2="1220.7" stroke="#000bff" stroke-width="1"/>
     <line data-record="13" x1="550.7" y1="1240.7" x2="560.7" y2="1240.7" stroke="#000bff" stroke-width="1"/>
@@ -338,7 +338,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1607.7 506.7) rotate(0)">U42</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1780.7 1230.7) rotate(0)">MTFC32GBCAQTC-IT</text>
     <g data-record="2"><line x1="1140.7" y1="1190.7" x2="1150.7" y2="1190.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1135.7" cy="1190.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1135.7" cy="1190.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1100.7 1190.7) rotate(0)">TP19</text>
     <g data-record="2"><line x1="1590.7" y1="310.7" x2="1590.7" y2="300.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1590.7" y1="320.7" x2="1590.7" y2="330.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -350,7 +350,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1599.7 320.7) rotate(0)">C405</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1599.7 329.7) rotate(0)">0.1uF</text>
     <g data-record="2"><line x1="1140.7" y1="1130.7" x2="1150.7" y2="1130.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1135.7" cy="1130.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1135.7" cy="1130.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1100.7 1130.7) rotate(0)">TP16</text>
     <g data-record="2"><line x1="600.7" y1="1130.7" x2="600.7" y2="1120.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="600.7" y1="1140.7" x2="600.7" y2="1150.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -517,7 +517,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1260.7 420.1615) rotate(-90)">R495</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1260.7 464.8538) rotate(-90)">47K</text>
     <g data-record="2"><line x1="1140.7" y1="1170.7" x2="1150.7" y2="1170.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1135.7" cy="1170.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1135.7" cy="1170.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1100.7 1170.7) rotate(0)">TP18</text>
     <g data-record="2"><line x1="1280.7" y1="420.7" x2="1280.7" y2="410.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1280.7" y1="450.7" x2="1280.7" y2="460.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -530,13 +530,13 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1290.7 420.1615) rotate(-90)">R513</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1290.7 487.8538) rotate(-90)">49.9K_1%</text>
     <g data-record="2"><line x1="1110.7" y1="550.7" x2="1120.7" y2="550.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1105.7" cy="550.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1105.7" cy="550.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1070.7 550.7) rotate(0)">TP197</text>
     <g data-record="2"><line x1="1110.7" y1="540.7" x2="1120.7" y2="540.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1105.7" cy="540.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1105.7" cy="540.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1070.7 540.7) rotate(0)">TP195</text>
     <g data-record="2"><line x1="1110.7" y1="530.7" x2="1120.7" y2="530.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1105.7" cy="530.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1105.7" cy="530.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1070.7 530.7) rotate(0)">TP199</text>
     <g data-record="2"><line x1="1760.7" y1="310.7" x2="1760.7" y2="300.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1760.7" y1="320.7" x2="1760.7" y2="330.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -557,7 +557,7 @@
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1809.7 440.7) rotate(0)">C406</text>
     <text data-record="41" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1809.7 449.7) rotate(0)">0.1uF</text>
     <g data-record="2"><line x1="1110.7" y1="560.7" x2="1120.7" y2="560.7" stroke="#1f2937" stroke-width="1"/></g>
-    <ellipse data-record="8" vector-effect="non-scaling-stroke" cx="1105.7" cy="560.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1"/>
+    <ellipse data-record="8" cx="1105.7" cy="560.7" rx="5" ry="5" fill="none" stroke="#000bff" stroke-width="1.0807"/>
     <text data-record="34" x="0" y="0" fill="#000080" font-family="Times New Roman" font-size="10" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1070.7 560.7) rotate(0)">TP198</text>
     <g data-record="2"><line x1="1460.7" y1="420.7" x2="1460.7" y2="410.7" stroke="#1f2937" stroke-width="1"/></g>
     <g data-record="2"><line x1="1460.7" y1="450.7" x2="1460.7" y2="460.7" stroke="#1f2937" stroke-width="1"/></g>
@@ -813,57 +813,57 @@
     <g data-record="28"><defs><clipPath id="altium-text-frame-ABSXSQPA"><rect x="1210.7" y="110.7" width="325" height="240"/></clipPath></defs><text x="1210.7001" y="122.7001" fill="#1f2937" text-anchor="start" font-family="Courier New" font-size="12" font-style="normal" font-weight="normal" text-decoration="none" clip-path="url(#altium-text-frame-ABSXSQPA)"><tspan x="1210.7001" dy="0">D-Note:-</tspan><tspan x="1210.7001" dy="12">The JEDEC eMMC electrical standard v5.1</tspan><tspan x="1210.7001" dy="12">(JESD84-B51) requires all eMMC devices to</tspan><tspan x="1210.7001" dy="12">have an internal pull-up that is turned on by</tspan><tspan x="1210.7001" dy="12">default for each DAT[7:1] pin. The eMMC</tspan><tspan x="1210.7001" dy="12">device will turn off the internal pulls on</tspan><tspan x="1210.7001" dy="12">DAT[7:1] when it is configured to operate in</tspan><tspan x="1210.7001" dy="12">8-bit mode or turn off the internal pulls on</tspan><tspan x="1210.7001" dy="12">DAT[3:1] when it is configured to operate in</tspan><tspan x="1210.7001" dy="12">4-bit mode. The software driver should turn</tspan><tspan x="1210.7001" dy="12">on the respective AM62x internal pull-ups at</tspan><tspan x="1210.7001" dy="12">the same time it configures the eMMC device</tspan><tspan x="1210.7001" dy="12">to operate in 8-bit mode or 4-bit mode. This</tspan><tspan x="1210.7001" dy="12">ensures the signals are not floating when not</tspan><tspan x="1210.7001" dy="12">driven. External pull-ups are not necessary</tspan><tspan x="1210.7001" dy="12">on the DAT[7:1] signals as long as the</tspan><tspan x="1210.7001" dy="12">software driver is turning on the respective</tspan><tspan x="1210.7001" dy="12">AM62x pull-ups at the appropriate time.</tspan></text></g>
     <g data-record="28"><defs><clipPath id="altium-text-frame-KSWUEZRH"><rect x="860.7" y="190.7" width="325" height="260"/></clipPath></defs><text x="860.7001" y="202.7" fill="#1f2937" text-anchor="start" font-family="Courier New" font-size="12" font-style="normal" font-weight="normal" text-decoration="none" clip-path="url(#altium-text-frame-KSWUEZRH)"><tspan x="860.7001" dy="0">D-Note : </tspan><tspan x="860.7001" dy="12">The processor IOs associated with the MMC0</tspan><tspan x="860.7001" dy="12">port will be turned off until software</tspan><tspan x="860.7001" dy="12">initializes them. This means any signals</tspan><tspan x="860.7001" dy="12">without internal pulls will be floating until</tspan><tspan x="860.7001" dy="12">software boots and initializes the IOs. </tspan><tspan x="860.7001" dy="12">The JEDEC eMMC electrical standard v5.1</tspan><tspan x="860.7001" dy="12">(JESD84-B51) requires the eMMC device to have</tspan><tspan x="860.7001" dy="12">internal pulls on the DAT[7:1] pins, but the</tspan><tspan x="860.7001" dy="12">other pins do not have internal pulls. </tspan><tspan x="860.7001" dy="12">We recommend external pull-ups on the CMD and</tspan><tspan x="860.7001" dy="12">DAT0 signals and an external pull-down on the</tspan><tspan x="860.7001" dy="12">CLK signal. The eMMC standard also says 10k</tspan><tspan x="860.7001" dy="12">pull-ups are the min value, so we do not</tspan><tspan x="860.7001" dy="12">recommend using a 10k resistor because it may</tspan><tspan x="860.7001" dy="12">be less than 10k. We typically recommend</tspan><tspan x="860.7001" dy="12">using 47k resistors to minimize loading on</tspan><tspan x="860.7001" dy="12">the signals since the pulls are only used to</tspan><tspan x="860.7001" dy="12">hold the signals </tspan><tspan x="860.7001" dy="12">in a valid logic state when not driven.</tspan></text></g>
     <g data-record="28"><defs><clipPath id="altium-text-frame-DCXCQLQE"><rect x="810.7" y="430.7" width="313" height="70"/></clipPath></defs><text x="810.7001" y="442.7001" fill="#1f2937" text-anchor="start" font-family="Courier New" font-size="12" font-style="normal" font-weight="normal" text-decoration="none" clip-path="url(#altium-text-frame-DCXCQLQE)"><tspan x="810.7001" dy="0">D-Note:-</tspan><tspan x="810.7001" dy="12">The processor family implements a soft PHY</tspan><tspan x="810.7001" dy="12">for eMMC interface. The pulls required for</tspan><tspan x="810.7001" dy="12">D0, Clock and other eMMC interface control</tspan><tspan x="810.7001" dy="12">signals are recommended to be implemented</tspan><tspan x="810.7001" dy="12">externally</tspan></text></g>
-    <circle data-record="29" cx="500.7" cy="1220.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="570.7" cy="1120.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="680.7" cy="1230.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1210.7" cy="1190.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1210.7" cy="1170.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1210.7" cy="1150.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1250.7" cy="380.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1280.7" cy="590.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1280.7" cy="380.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1300.7" cy="720.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1310.7" cy="580.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1310.7" cy="380.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1340.7" cy="720.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1340.7" cy="570.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1340.7" cy="380.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1370.7" cy="560.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1370.7" cy="380.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1400.7" cy="550.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1400.7" cy="380.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1430.7" cy="540.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1430.7" cy="380.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1460.7" cy="530.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1460.7" cy="380.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1490.7" cy="520.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1590.7" cy="340.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1590.7" cy="290.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1640.7" cy="340.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1640.7" cy="290.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1660.7" cy="1260.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1660.7" cy="460.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1670.7" cy="1260.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1670.7" cy="460.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1680.7" cy="1260.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1680.7" cy="460.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1680.7" cy="290.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1690.7" cy="1260.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1700.7" cy="1260.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1710.7" cy="460.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1720.7" cy="1260.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1720.7" cy="460.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1730.7" cy="1260.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1730.7" cy="460.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1740.7" cy="1260.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1740.7" cy="460.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1740.7" cy="290.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1750.7" cy="1260.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1760.7" cy="1260.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1760.7" cy="290.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1800.7" cy="460.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1800.7" cy="410.7" r="1.8" fill="#800000"/>
-    <circle data-record="29" cx="1810.7" cy="290.7" r="1.8" fill="#800000"/>
+    <circle data-record="29" cx="500.7" cy="1220.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="570.7" cy="1120.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="680.7" cy="1230.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1210.7" cy="1190.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1210.7" cy="1170.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1210.7" cy="1150.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1250.7" cy="380.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1280.7" cy="590.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1280.7" cy="380.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1300.7" cy="720.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1310.7" cy="580.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1310.7" cy="380.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1340.7" cy="720.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1340.7" cy="570.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1340.7" cy="380.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1370.7" cy="560.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1370.7" cy="380.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1400.7" cy="550.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1400.7" cy="380.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1430.7" cy="540.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1430.7" cy="380.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1460.7" cy="530.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1460.7" cy="380.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1490.7" cy="520.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1590.7" cy="340.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1590.7" cy="290.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1640.7" cy="340.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1640.7" cy="290.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1660.7" cy="1260.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1660.7" cy="460.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1670.7" cy="1260.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1670.7" cy="460.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1680.7" cy="1260.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1680.7" cy="460.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1680.7" cy="290.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1690.7" cy="1260.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1700.7" cy="1260.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1710.7" cy="460.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1720.7" cy="1260.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1720.7" cy="460.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1730.7" cy="1260.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1730.7" cy="460.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1740.7" cy="1260.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1740.7" cy="460.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1740.7" cy="290.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1750.7" cy="1260.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1760.7" cy="1260.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1760.7" cy="290.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1800.7" cy="460.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1800.7" cy="410.7" r="2" fill="#800000"/>
+    <circle data-record="29" cx="1810.7" cy="290.7" r="2" fill="#800000"/>
     </g>
   </g>
 </svg>
