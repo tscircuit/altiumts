@@ -26,9 +26,7 @@ test("renders native custom power hairlines at all four orientations", async () 
     margin: 0,
     showBorder: false,
   })
-  expect(
-    svg.match(/<line data-record="13" vector-effect="non-scaling-stroke"/g),
-  ).toHaveLength(24)
+  expect(svg.match(/<line data-record="13"/g)).toHaveLength(24)
   for (const angle of [0, -90, -180, -270]) {
     expect(svg.match(new RegExp(`rotate\\(${angle}\\)`, "g"))).toHaveLength(2)
   }
@@ -51,7 +49,7 @@ test("renders definition primitives independently of the power-port name and sty
     }),
   )
   const svg = serializeAltiumSheetToSvg(document)
-  expect(svg).toContain('data-record="7" vector-effect="non-scaling-stroke"')
+  expect(svg).toContain('data-record="7"')
   expect(svg).toContain('points="0,0 10,-5 10,5" fill="#ff0000"')
   expect(svg).toContain(">OTHER_NET</text>")
 })

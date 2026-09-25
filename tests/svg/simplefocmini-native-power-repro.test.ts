@@ -43,11 +43,7 @@ test("renders the converted SimpleFOC Mini power-symbol repro", async () => {
     .split("\n")
     .filter((line) => line.includes('<g data-record="17">'))
     .join("\n")
-  expect(
-    powerPortSvg.match(
-      /<line data-record="13" vector-effect="non-scaling-stroke"/g,
-    ),
-  ).toHaveLength(48)
+  expect(powerPortSvg.match(/<line data-record="13"/g)).toHaveLength(48)
   expect(powerPortSvg).not.toContain("<path ")
   await expect(svg).toMatchSvgSnapshot(import.meta.path)
 })

@@ -56,6 +56,14 @@ export function formatSvgNumber(value: number): string {
   return Object.is(rounded, -0) ? "0" : String(rounded)
 }
 
+/** One pixel at the requested output size, accounting for SVG's meet fit. */
+export function getSvgHairlineWidth(viewport: SvgViewport): number {
+  return Math.max(
+    viewport.width / viewport.outputWidth,
+    viewport.height / viewport.outputHeight,
+  )
+}
+
 export function escapeXml(value: string): string {
   return value
     .replaceAll("&", "&amp;")
