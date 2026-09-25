@@ -1,7 +1,13 @@
+import { getSchematicPoint } from "../geometry/schematic-point"
 import { parseAltiumMeasurementToMils } from "../measurement/altium-measurement"
 import { getPcbContour, getPcbRegionGeometry } from "../pcb-contours"
 import type { AltiumRecord } from "../records/altium-record"
 import type { SvgPoint } from "./svg-types"
+
+export {
+  getSchematicCoordinate,
+  readSchematicInteger,
+} from "../measurement/schematic-coordinate"
 
 export function parsePcbMeasurement(
   raw: string | undefined,
@@ -15,29 +21,6 @@ export function getPcbMeasurement(
   fallback = 0,
 ): number {
   return parsePcbMeasurement(record.getCaseInsensitive(key)) ?? fallback
-}
-
-export function getSchematicCoordinate(
-  record: AltiumRecord,
-  key: string,
-  fallback = 0,
-): number {
-  // SchDoc coordinates are two signed integers, not decimal strings. A
-  // fraction of 8000 means 0.08 even without leading zeroes. Do not repair
-  // malformed exporter output here: Altium does not accept "258.08" as X2.
-  return (
-    readSchematicInteger(record.getCaseInsensitive(key), fallback) +
-    readSchematicInteger(record.getCaseInsensitive(`${key}_FRAC`), 0) / 100_000
-  )
-}
-
-export function readSchematicInteger(
-  raw: string | undefined,
-  fallback: number,
-): number {
-  if (raw === undefined || !/^[+-]?\d+$/u.test(raw.trim())) return fallback
-  const value = Number(raw)
-  return Number.isSafeInteger(value) ? value : fallback
 }
 
 export function getPcbVertexPoints(record: AltiumRecord): SvgPoint[] {
@@ -61,17 +44,9 @@ export function getSchematicIndexedPoints(record: AltiumRecord): SvgPoint[] {
   for (let index = 1; index <= maximum; index++) {
     const xKey = `X${index}`
     const yKey = `Y${index}`
-    if (
-      !Number.isFinite(declaredCount) &&
-      record.getCaseInsensitive(xKey) === undefined &&
-      record.getCaseInsensitive(yKey) === undefined
-    ) {
-      break
-    }
-    points.push({
-      x: getSchematicCoordinate(record, xKey),
-      y: getSchematicCoordinate(record, yKey),
-    })
+    const point = getSchematicPoint(record, { xKey, yKey })
+    if (!point && !Number.isFinite(declaredCount)) break
+    points.push(point ?? { x: 0, y: 0 })
   }
 
   return points

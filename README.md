@@ -245,6 +245,13 @@ Fully contracted openings are omitted, while explicit mask primitives remain.
   test-point dimensions.
 - Schematic documents expose typed components, pins, wires, labels, ports,
   power ports, sheets, ownership indexes, sheet links, and `netGraph`.
+  `getSchematicCoordinate(record, { key, fallback })` reads schematic units as
+  `integer + signed_fraction / 100000`, shared by typed geometry and native
+  SVG rendering. For example, `X=10|X_FRAC=8000` is `10.08`, while
+  `X=10|X_FRAC=-8000` is `9.92`. Missing or invalid integer fields use the
+  fallback (zero by default); missing or invalid fraction fields use zero.
+  `getSchematicPoint(record, { xKey, yKey })` fills omitted axes with zero and
+  returns `undefined` only when neither axis nor its fraction field exists.
 - `parseAltiumPrjPcb()` and `parseAltiumOutJob()` provide source-preserving
   project/job parsing. Project references resolve Windows paths consistently
   on any host.

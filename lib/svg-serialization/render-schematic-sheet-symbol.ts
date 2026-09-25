@@ -55,11 +55,11 @@ export function renderSchematicSheetSymbol({
 }: RenderSchematicSheetSymbolInput): string {
   const location = getSchematicLocation(record)
   const widthAltiumUnits = Math.max(
-    getSchematicCoordinate(record, "XSIZE", 1),
+    getSchematicCoordinate(record, { key: "XSIZE", fallback: 1 }),
     1,
   )
   const heightAltiumUnits = Math.max(
-    getSchematicCoordinate(record, "YSIZE", 1),
+    getSchematicCoordinate(record, { key: "YSIZE", fallback: 1 }),
     1,
   )
   const left = viewport.toX(location.x)
@@ -78,11 +78,11 @@ export function renderSchematicSheetEntry({
 
   const sheetLocation = getSchematicLocation(sheetSymbol)
   const sheetWidthAltiumUnits = Math.max(
-    getSchematicCoordinate(sheetSymbol, "XSIZE", 1),
+    getSchematicCoordinate(sheetSymbol, { key: "XSIZE", fallback: 1 }),
     1,
   )
   const sheetHeightAltiumUnits = Math.max(
-    getSchematicCoordinate(sheetSymbol, "YSIZE", 1),
+    getSchematicCoordinate(sheetSymbol, { key: "YSIZE", fallback: 1 }),
     1,
   )
   const side = getSchematicSheetEntrySide(record)
@@ -204,7 +204,7 @@ function getSchematicSheetEntryTextPosition({
 
 function getSchematicLocation(record: AltiumRecord): SvgPoint {
   return {
-    x: getSchematicCoordinate(record, "LOCATION.X"),
-    y: getSchematicCoordinate(record, "LOCATION.Y"),
+    x: getSchematicCoordinate(record, { key: "LOCATION.X" }),
+    y: getSchematicCoordinate(record, { key: "LOCATION.Y" }),
   }
 }

@@ -1,5 +1,6 @@
 import type { AltiumSchDoc } from "./altium-sch-doc"
 import type { AltiumPoint } from "./geometry/altium-geometry"
+import { getSchematicPoint } from "./geometry/schematic-point"
 import type { AltiumRecord } from "./records/altium-record"
 import {
   type AltiumSchComponentRecord,
@@ -292,10 +293,12 @@ export function getSchematicRecordPoints(record: AltiumRecord): AltiumPoint[] {
       : Math.min(Math.max(declaredCount, 0), 100_000)
   const points: AltiumPoint[] = []
   for (let index = 1; index <= maximum; index++) {
-    const x = schematicCoordinate(record, `X${index}`)
-    const y = schematicCoordinate(record, `Y${index}`)
-    if (x === undefined || y === undefined) break
-    points.push({ x, y })
+    const point = getSchematicPoint(record, {
+      xKey: `X${index}`,
+      yKey: `Y${index}`,
+    })
+    if (!point && declaredCount === undefined) break
+    points.push(point ?? { x: 0, y: 0 })
   }
   return points
 }
@@ -311,21 +314,6 @@ function getSchematicNetName(record: AltiumRecord): string | undefined {
     return record.getDecoded("NAME")
   }
   return undefined
-}
-
-function schematicCoordinate(
-  record: AltiumRecord,
-  key: string,
-): number | undefined {
-  const raw = record.getCaseInsensitive(key)
-  if (raw === undefined) return undefined
-  const integer = Number(raw)
-  if (!Number.isFinite(integer)) return undefined
-  const fraction = record.getCaseInsensitive(`${key}_FRAC`)
-  if (fraction === undefined) return integer
-  const decimal = Number(`0.${fraction.replace(/^[+-]/u, "")}`)
-  if (!Number.isFinite(decimal)) return integer
-  return integer < 0 ? integer - decimal : integer + decimal
 }
 
 function pointKey(point: AltiumPoint): string {

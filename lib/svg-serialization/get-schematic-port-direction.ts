@@ -23,8 +23,8 @@ export function getSchematicPortDirection({
   const style = record.getNumber("STYLE") ?? 0
   const vertical = style >= 4 && style <= 7
   const start = {
-    x: getSchematicCoordinate(record, "LOCATION.X"),
-    y: getSchematicCoordinate(record, "LOCATION.Y"),
+    x: getSchematicCoordinate(record, { key: "LOCATION.X" }),
+    y: getSchematicCoordinate(record, { key: "LOCATION.Y" }),
   }
   const end = {
     x: start.x + (vertical ? 0 : width),
@@ -80,13 +80,16 @@ export function getSchematicConnectionSegments(
         continue
       const orientation =
         (conglomerate ?? record.getNumber("ORIENTATION") ?? 0) & 3
-      const length = getSchematicCoordinate(record, "PINLENGTH", 10)
+      const length = getSchematicCoordinate(record, {
+        key: "PINLENGTH",
+        fallback: 10,
+      })
       const point = {
         x:
-          getSchematicCoordinate(record, "LOCATION.X") +
+          getSchematicCoordinate(record, { key: "LOCATION.X" }) +
           (orientation === 0 ? length : orientation === 2 ? -length : 0),
         y:
-          getSchematicCoordinate(record, "LOCATION.Y") +
+          getSchematicCoordinate(record, { key: "LOCATION.Y" }) +
           (orientation === 1 ? length : orientation === 3 ? -length : 0),
       }
       segments.push({ start: point, end: point })

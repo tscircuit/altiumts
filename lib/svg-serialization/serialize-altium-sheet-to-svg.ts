@@ -244,14 +244,23 @@ function renderSchematicRecord(
 
   if (kind === "8") {
     const center = getSchematicLocation(record)
-    const radiusX = getSchematicCoordinate(record, "RADIUS", 1)
-    const radiusY = getSchematicCoordinate(record, "SECONDARYRADIUS", radiusX)
+    const radiusX = getSchematicCoordinate(record, {
+      key: "RADIUS",
+      fallback: 1,
+    })
+    const radiusY = getSchematicCoordinate(record, {
+      key: "SECONDARYRADIUS",
+      fallback: radiusX,
+    })
     return `<ellipse ${metadata} cx="${formatSvgNumber(viewport.toX(center.x))}" cy="${formatSvgNumber(viewport.toY(center.y))}" rx="${formatSvgNumber(radiusX)}" ry="${formatSvgNumber(radiusY)}" fill="${record.getBoolean("ISSOLID") ? altiumColorToCss(record.getCaseInsensitive("AREACOLOR"), "none") : "none"}" stroke="${color}" stroke-width="${formatSvgNumber(lineWidth)}"/>`
   }
 
   if (kind === "11" || kind === "12") {
     const center = getSchematicLocation(record)
-    const radius = getSchematicCoordinate(record, "RADIUS", 1)
+    const radius = getSchematicCoordinate(record, {
+      key: "RADIUS",
+      fallback: 1,
+    })
     const startAngleDegrees = Number(
       record.getCaseInsensitive("STARTANGLE") ?? 0,
     )
@@ -351,8 +360,14 @@ function renderSchematicRecord(
     const location = getSchematicLocation(record)
     const x = viewport.toX(location.x)
     const y = viewport.toY(location.y)
-    const width = Math.max(getSchematicCoordinate(record, "WIDTH", 16), 10)
-    const height = Math.max(getSchematicCoordinate(record, "HEIGHT", 10), 4)
+    const width = Math.max(
+      getSchematicCoordinate(record, { key: "WIDTH", fallback: 16 }),
+      10,
+    )
+    const height = Math.max(
+      getSchematicCoordinate(record, { key: "HEIGHT", fallback: 10 }),
+      4,
+    )
     const halfHeight = height / 2
     const pointDepth = Math.min(width * 0.22, height)
     const { pointAtStart, pointAtEnd, vertical } = getSchematicPortDirection({
@@ -563,7 +578,10 @@ function renderSchematicPin(
 ): string {
   const { color, metadata, options, sheetRecord, viewport } = context
   const location = getSchematicLocation(record)
-  const length = Math.max(getSchematicCoordinate(record, "PINLENGTH", 10), 0)
+  const length = Math.max(
+    getSchematicCoordinate(record, { key: "PINLENGTH", fallback: 10 }),
+    0,
+  )
   const pinConglomerate = record.getNumber("PINCONGLOMERATE")
   const orientation =
     (pinConglomerate ?? Number(record.getCaseInsensitive("ORIENTATION") ?? 0)) &
@@ -619,11 +637,10 @@ function renderSchematicPin(
       record.getCaseInsensitive(`PIN${kind}_POSITIONCONGLOMERATE`),
       0,
     )
-    const customMargin = getSchematicCoordinate(
-      record,
-      `${kind}_CUSTOMPOSITION_MARGIN`,
-      0,
-    )
+    const customMargin = getSchematicCoordinate(record, {
+      key: `${kind}_CUSTOMPOSITION_MARGIN`,
+      fallback: 0,
+    })
     // Native name margins increase the 2-unit inward gap. Designator margins
     // measure outward from the body; the two fields use opposite directions.
     return {
@@ -842,7 +859,10 @@ function renderSchematicTextFrame(
     record,
     sheetRecord,
   })
-  const margin = Math.max(getSchematicCoordinate(record, "TEXTMARGIN", 0), 0)
+  const margin = Math.max(
+    getSchematicCoordinate(record, { key: "TEXTMARGIN", fallback: 0 }),
+    0,
+  )
   const availableWidth = Math.max(width - margin * 2, font.size)
   const availableHeight = Math.max(height - margin * 2, font.size)
   const lines =
@@ -1144,8 +1164,8 @@ function getSchematicRectangle(record: AltiumRecord): SvgBounds | undefined {
 
 function getSchematicLocation(record: AltiumRecord): SvgPoint {
   return {
-    x: getSchematicCoordinate(record, "LOCATION.X"),
-    y: getSchematicCoordinate(record, "LOCATION.Y"),
+    x: getSchematicCoordinate(record, { key: "LOCATION.X" }),
+    y: getSchematicCoordinate(record, { key: "LOCATION.Y" }),
   }
 }
 
@@ -1171,7 +1191,7 @@ function getSchematicCornerIfPresent(
     return undefined
   }
   return {
-    x: getSchematicCoordinate(record, "CORNER.X"),
-    y: getSchematicCoordinate(record, "CORNER.Y"),
+    x: getSchematicCoordinate(record, { key: "CORNER.X" }),
+    y: getSchematicCoordinate(record, { key: "CORNER.Y" }),
   }
 }

@@ -1,4 +1,6 @@
 import type { AltiumPoint } from "../geometry/altium-geometry"
+import { getSchematicPoint } from "../geometry/schematic-point"
+import { getSchematicCoordinate } from "../measurement/schematic-coordinate"
 import { AltiumRecord, type AltiumRecordInit } from "./altium-record"
 import { getFirstDecoded } from "./pcb-record-helpers"
 
@@ -26,9 +28,7 @@ export class AltiumSchematicRecord extends AltiumRecord {
   }
 
   get position(): AltiumPoint | undefined {
-    const x = getSchematicCoordinateValue(this, "LOCATION.X")
-    const y = getSchematicCoordinateValue(this, "LOCATION.Y")
-    return x === undefined || y === undefined ? undefined : { x, y }
+    return getSchematicPoint(this, { xKey: "LOCATION.X", yKey: "LOCATION.Y" })
   }
 }
 
@@ -71,7 +71,12 @@ export class AltiumSchPinRecord extends AltiumSchematicRecord {
     return this.getNumber("ORIENTATION")
   }
   get pinLengthSchematicUnits(): number | undefined {
-    return this.getNumber("PINLENGTH")
+    if (
+      this.getCaseInsensitive("PINLENGTH") === undefined &&
+      this.getCaseInsensitive("PINLENGTH_FRAC") === undefined
+    )
+      return undefined
+    return getSchematicCoordinate(this, { key: "PINLENGTH", fallback: 10 })
   }
 }
 export class AltiumSchLabelRecord extends AltiumSchematicRecord {
@@ -234,19 +239,4 @@ export class AltiumSchNoteRecord extends AltiumSchematicRecord {
   get text(): string | undefined {
     return getFirstDecoded(this, "TEXT")
   }
-}
-
-function getSchematicCoordinateValue(
-  record: AltiumRecord,
-  key: string,
-): number | undefined {
-  const raw = record.getCaseInsensitive(key)
-  if (raw === undefined) return undefined
-  const integer = Number(raw)
-  if (!Number.isFinite(integer)) return undefined
-  const fraction = record.getCaseInsensitive(`${key}_FRAC`)
-  if (fraction === undefined) return integer
-  const fractionValue = Number(`0.${fraction.replace(/^[+-]/u, "")}`)
-  if (!Number.isFinite(fractionValue)) return integer
-  return integer < 0 ? integer - fractionValue : integer + fractionValue
 }
