@@ -10,7 +10,7 @@ import {
 import { readReferenceBytes } from "./svg/read-reference"
 
 test("normalizes verified PCB layer naming variants", () => {
-  expect(normalizeAltiumPcbLayerName("Mid-Layer 14")).toBe("MIDLAYER14")
+  expect(normalizeAltiumPcbLayerName("Mid-Layer 14")).toBe("MID14")
   for (const layer of [
     "TOP",
     "Top Layer",
@@ -28,6 +28,29 @@ test("normalizes verified PCB layer naming variants", () => {
   expect(isKnownAltiumPcbLayerName("LAYER123")).toBeFalse()
   expect(isAltiumPcbCopperLayerName("MID-LAYER14")).toBeTrue()
   expect(isAltiumPcbCopperLayerName("MECHANICAL16")).toBeFalse()
+})
+
+test("canonicalizes inner signal aliases without merging other layers", () => {
+  for (let ordinal = 1; ordinal <= 30; ordinal++) {
+    for (const name of [
+      `MID${ordinal}`,
+      `MID-LAYER${ordinal}`,
+      `Mid Layer ${ordinal}`,
+      `mid_layer_${ordinal}`,
+    ]) {
+      expect(normalizeAltiumPcbLayerName(name)).toBe(`MID${ordinal}`)
+    }
+  }
+  for (const name of [
+    "MIDLAYER0",
+    "MIDLAYER31",
+    "MIDLAYER1CUSTOM",
+    "INTERNALPLANE1",
+    "PLANE1",
+    "MECHANICAL1",
+  ]) {
+    expect(normalizeAltiumPcbLayerName(name)).toBe(name)
+  }
 })
 
 test("allows zero-width artwork but rejects zero-width copper", () => {

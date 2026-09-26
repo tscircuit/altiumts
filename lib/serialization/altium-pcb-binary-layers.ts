@@ -1,4 +1,5 @@
 import { AltiumSerializationError } from "../errors/altium-error"
+import { normalizeAltiumPcbLayerName } from "../pcb-layers"
 
 const NAMED_PCB_LAYER_IDS: Readonly<Record<string, number>> = {
   BACKGROUND: 76,
@@ -28,7 +29,7 @@ export function getAltiumPcbLayerId(
   fallbackLayerId = 1,
 ): number {
   if (layerName === undefined) return fallbackLayerId
-  const normalizedLayerName = layerName.toUpperCase()
+  const normalizedLayerName = normalizeAltiumPcbLayerName(layerName)
   const namedLayerId = NAMED_PCB_LAYER_IDS[normalizedLayerName]
   if (namedLayerId !== undefined) return namedLayerId
 
@@ -42,14 +43,14 @@ export function getAltiumPcbLayerId(
 function getOrdinalAltiumPcbLayerId(
   normalizedLayerName: string,
 ): number | undefined {
-  const layerMatch = /^(MID-LAYER|INTERNALPLANE|MECHANICAL)(\d{1,2})$/u.exec(
+  const layerMatch = /^(MID|INTERNALPLANE|MECHANICAL)(\d{1,2})$/u.exec(
     normalizedLayerName,
   )
   const ordinal = Number.parseInt(layerMatch?.[2] ?? "", 10)
   if (!layerMatch || !Number.isInteger(ordinal) || ordinal < 1) {
     return undefined
   }
-  if (layerMatch[1] === "MID-LAYER" && ordinal <= 30) return ordinal + 1
+  if (layerMatch[1] === "MID" && ordinal <= 30) return ordinal + 1
   if (layerMatch[1] === "INTERNALPLANE" && ordinal <= 16) {
     return ordinal + 38
   }
