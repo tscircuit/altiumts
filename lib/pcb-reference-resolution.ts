@@ -1,4 +1,5 @@
 import type { AltiumPcbDocument } from "./altium-pcb-document"
+import { normalizeAltiumPcbLayerName } from "./pcb-layers"
 import { AltiumComponentRecord } from "./records/altium-component-record"
 import { AltiumNetRecord } from "./records/altium-net-record"
 import type { AltiumPolygonRecord } from "./records/altium-polygon-record"
@@ -77,7 +78,7 @@ export class AltiumPcbDocumentIndex {
       appendMapValue(this.byKind, record.recordKind ?? "Unknown", record)
       const layer = record.getDecoded("LAYER")
       if (layer !== undefined) {
-        appendMapValue(this.byLayer, layer.toUpperCase(), record)
+        appendMapValue(this.byLayer, normalizeAltiumPcbLayerName(layer), record)
       }
       appendReference(this.byComponent, record, "COMPONENT")
       appendReference(this.byNet, record, "NET")

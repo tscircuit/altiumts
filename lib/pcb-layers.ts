@@ -32,10 +32,17 @@ const STANDARD_PCB_LAYERS = new Set([
   "VISIBLEGRID2",
 ])
 
+/** Returns a comparison key without changing a record's original layer field. */
 export function normalizeAltiumPcbLayerName(
   layer: string,
 ): NormalizedAltiumPcbLayerName {
-  return layer.replace(/[\s_-]/gu, "").toUpperCase()
+  const normalized = layer.replace(/[\s_-]/gu, "").toUpperCase()
+  // Property records use MIDn, while binary primitives use MID-LAYERn.
+  const innerLayer = /^(?:MID|MIDLAYER)(\d{1,2})$/u.exec(normalized)
+  const ordinal = Number(innerLayer?.[1])
+  return innerLayer && ordinal >= 1 && ordinal <= 30
+    ? `MID${ordinal}`
+    : normalized
 }
 
 export function isKnownAltiumPcbLayerName(
