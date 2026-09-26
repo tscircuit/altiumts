@@ -1,6 +1,7 @@
 import { decodeAltiumWideString } from "../decode-altium-wide-string"
 import { approximateAltiumArc } from "../geometry/approximateAltiumArc"
 import { getPcbRegionSemanticKind } from "../pcb-contours"
+import { isKnownAltiumPcbLayerName } from "../pcb-layers"
 import { getAltiumPcbPadGeometry } from "../pcbPadGeometry"
 import { AltiumPadRecord } from "../records/altium-pad-record"
 import type { AltiumRecord } from "../records/altium-record"
@@ -41,7 +42,12 @@ export function renderPcbRecord({
 }): string | undefined {
   const kind = record.recordKind
   const layer = record.getCaseInsensitive("LAYER")
-  const color = getPcbLayerColor(resolvedLayer ?? layer)
+  // Resolve custom display names without changing the existing standard palette.
+  const color = getPcbLayerColor(
+    layer && isKnownAltiumPcbLayerName(layer)
+      ? layer
+      : (resolvedLayer ?? layer),
+  )
   const metadata = `data-record="${escapeXml(kind ?? "Unknown")}"${layer ? ` data-layer="${escapeXml(layer)}"` : ""}`
 
   if (kind === "Track") {
