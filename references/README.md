@@ -13,6 +13,10 @@ Run `bun run download-references` to download:
   [`yasir-shahzad/STM32-ST-Link-V2.0-Programmer`](https://github.com/yasir-shahzad/STM32-ST-Link-V2.0-Programmer)
   open-source hardware repository, pinned to commit
   `3284ac4fbd9a3f8471844db3c2b368fff2c33ca9`.
+- `ch582.PcbDoc` from the MIT-licensed
+  [`iot-lorawan/CH582_PCB_SCH`](https://github.com/iot-lorawan/CH582_PCB_SCH)
+  open-source hardware repository, pinned to commit
+  `b65bce802295c6c40413c5bc3ea54682820619c1`.
 - `c17-main.PcbDoc` and `led-matrix-sheet.SchDoc` from the MIT-licensed
   [`phonght32/altium`](https://github.com/phonght32/altium) open-source hardware
   repository, pinned to commit
