@@ -2,6 +2,10 @@ import type { AltiumPcbDocument } from "../altium-pcb-document"
 import { decodeAltiumWideString } from "../decode-altium-wide-string"
 import { getPcbRegionSemanticKind } from "../pcb-contours"
 import {
+  createPcbLayerNameResolver,
+  getPcbDocumentLayerStackEntries,
+} from "../pcb-layer-identity"
+import {
   getPcbRecordComponent,
   getPcbRecordComponentIndex,
   getPcbRecordNetIndex,
@@ -39,6 +43,15 @@ export function serializeAltiumPcbToSvg(
   document: AltiumPcbDocument,
   options: AltiumPcbSvgOptions = {},
 ): string {
+  const resolveLayerName = createPcbLayerNameResolver(
+    getPcbDocumentLayerStackEntries(document),
+  )
+  options = {
+    ...options,
+    layers: options.layers
+      ? [...new Set(options.layers.map(resolveLayerName))]
+      : undefined,
+  }
   const bounds = options.viewBox
     ? pcbViewBoxToBounds(options.viewBox)
     : options.fitToContent
@@ -101,7 +114,9 @@ export function serializeAltiumPcbToSvg(
       ...document.records,
       ...getPcbSolderMaskRecords(document, options.layers),
     ]
-      .filter((record) => recordAppliesToLayers(record, options.layers))
+      .filter((record) =>
+        recordAppliesToLayers(record, options.layers, resolveLayerName),
+      )
       .filter((record) => recordAppliesToReferences(document, record, options))
       .filter(
         (record) =>
@@ -127,6 +142,7 @@ export function serializeAltiumPcbToSvg(
         !polygonIndexesWithRegionRecords.has(polygonIndex))
     const rendered = renderPcbRecord({
       record,
+      resolvedLayer: resolveLayerName(record.getCaseInsensitive("LAYER") ?? ""),
       text: resolveComponentText(
         document,
         record,

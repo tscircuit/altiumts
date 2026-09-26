@@ -26,12 +26,14 @@ const COPPER_FILL_OPACITY = 0.32
 
 export function renderPcbRecord({
   record,
+  resolvedLayer,
   text,
   shouldFillPolygon,
   svgOptions,
   viewport,
 }: {
   record: AltiumRecord
+  resolvedLayer?: string
   text?: string
   shouldFillPolygon: boolean
   svgOptions: AltiumPcbSvgOptions
@@ -39,7 +41,7 @@ export function renderPcbRecord({
 }): string | undefined {
   const kind = record.recordKind
   const layer = record.getCaseInsensitive("LAYER")
-  const color = getPcbLayerColor(layer)
+  const color = getPcbLayerColor(resolvedLayer ?? layer)
   const metadata = `data-record="${escapeXml(kind ?? "Unknown")}"${layer ? ` data-layer="${escapeXml(layer)}"` : ""}`
 
   if (kind === "Track") {
