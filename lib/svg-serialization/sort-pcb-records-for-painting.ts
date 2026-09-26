@@ -92,7 +92,7 @@ function getPcbRecordKindPaintOrder(record: AltiumRecord): number {
     record.recordKind === "Region" &&
     getPcbRegionSemanticKind(record) === "POLYGON_CUTOUT"
   ) {
-    return 25
+    return 15
   }
   return PCB_RECORD_KIND_PAINT_ORDER[record.recordKind ?? ""] ?? 100
 }

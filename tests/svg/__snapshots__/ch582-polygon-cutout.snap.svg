@@ -117,6 +117,8 @@
     <line data-record="Track" data-layer="BOTTOM" x1="1368.97" y1="1866.523" x2="1783.97" y2="1451.523" stroke="#3b82f6" stroke-width="8"/>
     <line data-record="Track" data-layer="BOTTOM" x1="1783.97" y1="1451.523" x2="1783.97" y2="1316.523" stroke="#3b82f6" stroke-width="8"/>
     <polygon data-record="Polygon" data-layer="TOP" points="2114,2356.5 2094,2376.5 719,2376.5 654,2311.5 654,211.5 684,181.5 679,181.5 774,151.5 744,181.5 2069,181.5 2114,226.5 2114,2356.5" fill="#ef4444" fill-opacity="0.32" stroke="#ef4444" stroke-width="1.5"/>
+    <path data-record="Region" data-layer="TOP" data-region-kind="POLYGON_CUTOUT" d="M 764 501.5 L 759 506.5 L 759 271.5 L 1934 271.5 L 1934 461.5 L 1564 461.5 L 1559 466.5 L 1559 501.5 L 764 501.5 Z" fill="#123d32" fill-rule="evenodd" stroke="#123d32" stroke-width="1.5"/>
+    <path data-record="Region" data-layer="TOP" data-region-kind="POLYGON_CUTOUT" d="M 1284 491.5 L 1284 656.5 L 1309 656.5 L 1314 651.5 L 1314 491.5 L 1284 491.5 Z" fill="#123d32" fill-rule="evenodd" stroke="#123d32" stroke-width="1.5"/>
     <path data-record="Region" data-layer="TOP" d="M 1308.464 283.574 L 1288.779 283.574 L 1288.779 493.468 L 1308.464 493.468 L 1308.464 283.574 Z" fill="#ef4444" fill-opacity="0.32" fill-rule="evenodd" stroke="#ef4444" stroke-width="1.5"/>
     <path data-record="Region" data-layer="TOP" d="M 1375.366 284.571 L 1339.933 284.571 L 1339.933 493.468 L 1375.366 493.468 L 1375.366 284.571 Z" fill="#ef4444" fill-opacity="0.32" fill-rule="evenodd" stroke="#ef4444" stroke-width="1.5"/>
     <path data-record="Region" data-layer="TOP" d="M 1375.378 272.988 L 1210.024 272.988 L 1210.024 292.673 L 1375.378 292.673 L 1375.378 272.988 Z" fill="#ef4444" fill-opacity="0.32" fill-rule="evenodd" stroke="#ef4444" stroke-width="1.5"/>
@@ -129,8 +131,6 @@
     <path data-record="Region" data-layer="TOP" d="M 981.661 285.571 L 961.976 285.571 L 961.976 396.594 L 981.661 396.594 L 981.661 285.571 Z" fill="#ef4444" fill-opacity="0.32" fill-rule="evenodd" stroke="#ef4444" stroke-width="1.5"/>
     <path data-record="Region" data-layer="TOP" d="M 981.677 272.988 L 891.126 272.988 L 891.126 292.673 L 981.677 292.673 L 981.677 272.988 Z" fill="#ef4444" fill-opacity="0.32" fill-rule="evenodd" stroke="#ef4444" stroke-width="1.5"/>
     <path data-record="Region" data-layer="TOP" d="M 910.811 285.586 L 891.126 285.586 L 891.126 447.791 L 910.811 447.791 L 910.811 285.586 Z" fill="#ef4444" fill-opacity="0.32" fill-rule="evenodd" stroke="#ef4444" stroke-width="1.5"/>
-    <path data-record="Region" data-layer="TOP" data-region-kind="POLYGON_CUTOUT" d="M 764 501.5 L 759 506.5 L 759 271.5 L 1934 271.5 L 1934 461.5 L 1564 461.5 L 1559 466.5 L 1559 501.5 L 764 501.5 Z" fill="#123d32" fill-rule="evenodd" stroke="#123d32" stroke-width="1.5"/>
-    <path data-record="Region" data-layer="TOP" data-region-kind="POLYGON_CUTOUT" d="M 1284 491.5 L 1284 656.5 L 1309 656.5 L 1314 651.5 L 1314 491.5 L 1284 491.5 Z" fill="#123d32" fill-rule="evenodd" stroke="#123d32" stroke-width="1.5"/>
     <line data-record="Track" data-layer="TOP" x1="1444" y1="1119.54" x2="1448.73" y2="1114.81" stroke="#ef4444" stroke-width="7"/>
     <line data-record="Track" data-layer="TOP" x1="1448.73" y1="1114.81" x2="1554" y2="1114.81" stroke="#ef4444" stroke-width="7"/>
     <line data-record="Track" data-layer="TOP" x1="1327.817" y1="872.348" x2="1327.817" y2="910.315" stroke="#ef4444" stroke-width="7"/>
