@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000" viewBox="0 0 1070 1070" role="img" aria-label="Altium PCB" class="altium-pcb" data-renderer="altiumts">
+  <title>Altium PCB</title>
+  <rect width="100%" height="100%" fill="#071a16"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <polygon data-record="BoardOutline" points="35,1035 1035,1035 1035,35 35,35 35,1035" fill="#123d32" stroke="#6ee7b7" stroke-width="3"/>
+    <polygon data-record="Polygon" data-layer="TOP" points="135,935 935,935 935,135 135,135" fill="#ef4444" fill-opacity="0.32" stroke="#ef4444" stroke-width="1.5"/>
+    <path data-record="Region" data-layer="TOP" data-region-kind="POLYGON_CUTOUT" d="M 335 735 L 735 735 L 735 335 L 335 335 Z" fill="#123d32" fill-rule="evenodd" stroke="#123d32" stroke-width="1.5"/>
+    <path data-record="Region" data-layer="TOP" d="M 485 685 L 585 685 L 585 385 L 485 385 Z" fill="#ef4444" fill-opacity="0.32" fill-rule="evenodd" stroke="#ef4444" stroke-width="1.5"/>
+  </g>
+</svg>
