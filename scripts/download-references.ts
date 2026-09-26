@@ -59,6 +59,13 @@ const references: DirectReferenceSpec[] = [
     url: "https://raw.githubusercontent.com/yasir-shahzad/STM32-ST-Link-V2.0-Programmer/3284ac4fbd9a3f8471844db3c2b368fff2c33ca9/hardware/ST_LINK_V2-1.PcbDoc",
   },
   {
+    filename: "ch582.PcbDoc",
+    sha256: "dcf82249e19f9a58f3874e9c56509bab42f3fdf00dc3dd0d52ba9a4f4aeb0649",
+    source:
+      "iot-lorawan/CH582_PCB_SCH@b65bce802295c6c40413c5bc3ea54682820619c1 (MIT)",
+    url: "https://raw.githubusercontent.com/iot-lorawan/CH582_PCB_SCH/b65bce802295c6c40413c5bc3ea54682820619c1/PCB_ch582_2022-06-16.pcbdoc",
+  },
+  {
     filename: "c17-main.PcbDoc",
     sha256: "439e050d3bb35f3f335cd3e115ba91cf643eca3ae326a85c3034e4b22cbcac03",
     source: "phonght32/altium@85e2bfc3aac1daaa4eb8dc7be4f0649d12b2fc28 (MIT)",
