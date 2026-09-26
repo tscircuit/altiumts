@@ -101,7 +101,13 @@ export function serializeAltiumPcbToSvg(
       ...document.records,
       ...getPcbSolderMaskRecords(document, options.layers),
     ]
-      .filter((record) => recordAppliesToLayers(record, options.layers))
+      .filter((record) =>
+        recordAppliesToLayers(
+          record,
+          options.layers,
+          document.board?.layerStack,
+        ),
+      )
       .filter((record) => recordAppliesToReferences(document, record, options))
       .filter(
         (record) =>
