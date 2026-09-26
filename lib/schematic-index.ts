@@ -1,10 +1,12 @@
 import type { AltiumSchDoc } from "./altium-sch-doc"
 import type { AltiumPoint } from "./geometry/altium-geometry"
+import { isPointOnSchematicSegment } from "./geometry/is-point-on-schematic-segment"
 import { getSchematicPoint } from "./geometry/schematic-point"
 import type { AltiumRecord } from "./records/altium-record"
 import {
   type AltiumSchComponentRecord,
   type AltiumSchematicRecord,
+  AltiumSchJunctionRecord,
   AltiumSchNetLabelRecord,
   AltiumSchPinRecord,
   AltiumSchPortRecord,
@@ -120,6 +122,7 @@ export class AltiumSchematicNetGraph {
     const disjointSet = new DisjointSet()
     const pointRecords = new Map<string, AltiumRecord[]>()
     const pointValues = new Map<string, AltiumPoint>()
+    const segments: Array<{ start: AltiumPoint; end: AltiumPoint }> = []
 
     for (const wire of document.wires) {
       const points = getSchematicRecordPoints(wire)
@@ -134,6 +137,7 @@ export class AltiumSchematicNetGraph {
         const point = points[index]
         if (previous && point) {
           disjointSet.union(pointKey(previous), pointKey(point))
+          segments.push({ start: previous, end: point })
         }
       }
     }
@@ -143,6 +147,10 @@ export class AltiumSchematicNetGraph {
       ...document.netLabels,
       ...document.ports,
       ...document.powerPorts,
+      ...document.records.filter(
+        (record): record is AltiumSchJunctionRecord =>
+          record instanceof AltiumSchJunctionRecord,
+      ),
     ]
     for (const record of positionedRecords) {
       const position = record.position
@@ -151,6 +159,16 @@ export class AltiumSchematicNetGraph {
       disjointSet.add(key)
       pointValues.set(key, position)
       appendRecord(pointRecords, key, record)
+    }
+
+    // Electrical points and wire vertices may meet a segment at its interior.
+    // Do not create points at bare crossings: they need a vertex or junction.
+    for (const [key, point] of pointValues) {
+      for (const segment of segments) {
+        if (isPointOnSchematicSegment({ point, ...segment })) {
+          disjointSet.union(key, pointKey(segment.start))
+        }
+      }
     }
 
     const grouped = new Map<
