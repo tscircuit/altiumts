@@ -35,13 +35,14 @@ export function getPcbLayerColor(layer: string | undefined): string {
 export function recordAppliesToLayers(
   record: AltiumRecord,
   requestedLayers: string[] | undefined,
+  resolveLayerName: (layer: string) => string = normalizeLayerName,
 ): boolean {
   if (!requestedLayers || requestedLayers.length === 0) return true
 
-  const normalizedRequested = new Set(requestedLayers.map(normalizeLayerName))
+  const normalizedRequested = new Set(requestedLayers.map(resolveLayerName))
   const recordLayer = record.getCaseInsensitive("LAYER")
   if (recordLayer) {
-    const normalizedRecordLayer = normalizeLayerName(recordLayer)
+    const normalizedRecordLayer = resolveLayerName(recordLayer)
     if (normalizedRequested.has(normalizedRecordLayer)) return true
     if (
       normalizedRecordLayer === "MULTILAYER" &&

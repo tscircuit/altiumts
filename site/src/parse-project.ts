@@ -1,20 +1,17 @@
 import { unzipSync } from "fflate"
 import {
   AltiumBinaryPcbDoc,
-  AltiumBoardRecord,
   AltiumPcbDoc,
   type AltiumPcbDocument,
   AltiumPrjPcb,
   AltiumSchDoc,
-  isPcbSolderMaskLayer,
-  type NormalizedAltiumPcbLayerName,
-  normalizeAltiumPcbLayerName,
   parseAltiumFile,
   resolveAltiumProjectPath,
   serializeAltiumPcbLayerToSvg,
   serializeAltiumPcbToSvg,
   serializeAltiumSheetToSvg,
 } from "../../lib"
+import { getPcbLayerViews } from "./pcb-layer-views"
 import type {
   AltiumProjectManifest,
   BrowserProjectFile,
@@ -89,7 +86,10 @@ export function parseBrowserProjectFiles(
         parsedDocument instanceof AltiumBinaryPcbDoc
       ) {
         const id = `pcb-${index}`
-        const layerNames = getDocumentLayerNames(parsedDocument)
+        const layerViews = getPcbLayerViews(parsedDocument)
+        const layerNames = layerViews.flatMap(({ layer }) =>
+          layer ? [layer] : [],
+        )
         const recordCount = parsedDocument.records.length
         const overviewLayers = getPcbOverviewLayers(layerNames)
         const isLargeBoard = recordCount >= LARGE_PCB_RECORD_COUNT
@@ -121,11 +121,7 @@ export function parseBrowserProjectFiles(
                   ? "Complete board (all layers, slower)"
                   : "Complete board",
               },
-              ...layerNames.map((layer) => ({
-                id: `layer:${layer}`,
-                label: formatLayerName(layer),
-                layer,
-              })),
+              ...layerViews,
             ],
           },
         })
@@ -391,33 +387,6 @@ function getProjectDisplayName(
   return "Altium design"
 }
 
-function getDocumentLayerNames(document: AltiumPcbDocument): string[] {
-  const layerNames = new Map<NormalizedAltiumPcbLayerName, string>()
-  for (const record of document.records) {
-    const layer = record.getCaseInsensitive("LAYER")?.trim()
-    if (!layer || layer.toUpperCase() === "UNKNOWN") continue
-    const normalizedLayer = normalizeAltiumPcbLayerName(layer)
-    if (!layerNames.has(normalizedLayer)) layerNames.set(normalizedLayer, layer)
-  }
-  for (const record of document.records) {
-    if (!(record instanceof AltiumBoardRecord)) continue
-    for (const { name } of record.layerStack.entries) {
-      if (!name || !isPcbSolderMaskLayer(name)) continue
-      const normalizedLayer = normalizeAltiumPcbLayerName(name)
-      if (!layerNames.has(normalizedLayer)) {
-        layerNames.set(normalizedLayer, normalizedLayer)
-      }
-    }
-  }
-  return [...layerNames.values()]
-    .sort(
-      (left, right) =>
-        getLayerPriority(left) - getLayerPriority(right) ||
-        left.localeCompare(right, undefined, { numeric: true }),
-    )
-    .slice(0, 64)
-}
-
 function getPcbOverviewLayers(layerNames: string[]): string[] {
   const overviewLayerNames = new Set([
     "BOTTOM",
@@ -429,40 +398,6 @@ function getPcbOverviewLayers(layerNames: string[]): string[] {
   return layerNames.filter((layer) =>
     overviewLayerNames.has(layer.replace(/[\s_-]/gu, "").toUpperCase()),
   )
-}
-
-function getLayerPriority(layer: string): number {
-  const normalized = layer.replace(/[\s_-]/gu, "").toUpperCase()
-  if (normalized === "TOP") return 0
-  if (normalized === "BOTTOM") return 1
-  if (normalized.startsWith("MID")) return 2
-  if (normalized === "TOPOVERLAY") return 3
-  if (normalized === "BOTTOMOVERLAY") return 4
-  if (normalized === "TOPSOLDER") return 5
-  if (normalized === "BOTTOMSOLDER") return 6
-  if (normalized === "TOPPASTE") return 7
-  if (normalized === "BOTTOMPASTE") return 8
-  if (normalized === "MULTILAYER") return 9
-  if (normalized === "KEEPOUT") return 10
-  if (normalized.startsWith("MECHANICAL")) return 30
-  return 20
-}
-
-function formatLayerName(layer: string): string {
-  const normalized = layer.replace(/[\s_-]/gu, "").toUpperCase()
-  const knownNames: Record<string, string> = {
-    BOTTOM: "Bottom copper",
-    BOTTOMOVERLAY: "Bottom overlay",
-    BOTTOMPASTE: "Bottom paste",
-    BOTTOMSOLDER: "Bottom solder mask",
-    KEEPOUT: "Keepout",
-    MULTILAYER: "Multi-layer",
-    TOP: "Top copper",
-    TOPOVERLAY: "Top overlay",
-    TOPPASTE: "Top paste",
-    TOPSOLDER: "Top solder mask",
-  }
-  return knownNames[normalized] ?? layer.replace(/([a-z])([A-Z])/gu, "$1 $2")
 }
 
 function createFailure(path: string, error: unknown): ProjectFileFailure {

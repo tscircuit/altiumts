@@ -12,6 +12,7 @@ import {
   type AltiumPcbBoardGeometry,
   getPcbBoardGeometry,
 } from "./pcb-contours"
+import { normalizeAltiumPcbLayerName } from "./pcb-layers"
 import {
   type AltiumPcbDocumentIndex,
   getPcbComponentByIndex,
@@ -186,7 +187,9 @@ export class AltiumBinaryPcbDoc extends AltiumNode {
   }
 
   getRecordsByLayer(layer: string): AltiumRecord[] {
-    return [...(this.index.byLayer.get(layer.toUpperCase()) ?? [])]
+    return [
+      ...(this.index.byLayer.get(normalizeAltiumPcbLayerName(layer)) ?? []),
+    ]
   }
 
   getComponentBounds(

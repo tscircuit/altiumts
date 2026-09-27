@@ -1,4 +1,10 @@
 import type { AltiumPcbDocument } from "../altium-pcb-document"
+import {
+  createPcbLayerNameResolver,
+  getPcbDocumentLayerStackEntries,
+  getPcbLayerIdentity,
+  getPcbStackEntryLayerName,
+} from "../pcb-layer-identity"
 import { normalizeAltiumPcbLayerName } from "../pcb-layers"
 
 type PcbLayerGroup = string[]
@@ -30,30 +36,6 @@ const MECHANICAL_LAYER_NAMES = [
   "BOTTOMPADMASTER",
   ...Array.from({ length: 32 }, (_, index) => `MECHANICAL${index + 1}`),
 ]
-
-const OTHER_LAYER_NAMES: Readonly<Record<number, string>> = {
-  6: "TOPOVERLAY",
-  7: "BOTTOMOVERLAY",
-  8: "TOPPASTE",
-  9: "BOTTOMPASTE",
-  10: "TOPSOLDER",
-  11: "BOTTOMSOLDER",
-  12: "DRILLGUIDE",
-  13: "KEEPOUT",
-  14: "DRILLDRAWING",
-  15: "MULTILAYER",
-  16: "CONNECTIONS",
-  17: "BACKGROUND",
-  18: "DRCERRORMARKERS",
-  19: "SELECTIONS",
-  20: "VISIBLEGRID1",
-  21: "VISIBLEGRID2",
-  22: "PADHOLES",
-  23: "VIAHOLES",
-  24: "TOPPADMASTER",
-  25: "BOTTOMPADMASTER",
-  26: "DRCDETAILMARKERS",
-}
 
 /**
  * Returns layer groups from front to back. The first group is painted last and
@@ -111,10 +93,13 @@ function addLayerStackAliases(
   document: AltiumPcbDocument,
   layerGroups: PcbLayerGroup[],
 ): void {
-  for (const entry of document.board?.layerStack.entries ?? []) {
+  const entries = getPcbDocumentLayerStackEntries(document)
+  const resolveLayerName = createPcbLayerNameResolver(entries)
+  for (const entry of entries) {
     if (!entry.name) continue
-    const canonicalLayerName = getCanonicalLayerNameFromStackId(entry.layerId)
+    const canonicalLayerName = getPcbStackEntryLayerName(entry)
     if (!canonicalLayerName) continue
+    if (resolveLayerName(entry.name) !== canonicalLayerName) continue
     const normalizedEntryName = normalizeAltiumPcbLayerName(entry.name)
     const group = layerGroups.find(
       (layerNames) =>
@@ -152,47 +137,8 @@ function getUnknownLayerNames(
   return [...unknownLayerNames].sort((left, right) => left.localeCompare(right))
 }
 
-function getCanonicalLayerNameFromStackId(
-  layerId: string | undefined,
-): string | undefined {
-  const numericLayerId = Number(layerId)
-  if (!Number.isSafeInteger(numericLayerId)) return undefined
-  const family = Math.floor(numericLayerId / 0x1_0000)
-  const ordinal = numericLayerId % 0x1_0000
-
-  if (family === 0x100) {
-    if (ordinal === 1) return "TOP"
-    if (ordinal >= 2 && ordinal <= 31) return `MID${ordinal - 1}`
-    if (ordinal === 0xffff) return "BOTTOM"
-  }
-  if (family === 0x101 && ordinal >= 1 && ordinal <= 16) {
-    return `INTERNALPLANE${ordinal}`
-  }
-  if (family === 0x102 && ordinal >= 1 && ordinal <= 32) {
-    return `MECHANICAL${ordinal}`
-  }
-  if (family === 0x103) return OTHER_LAYER_NAMES[ordinal]
-  return undefined
-}
-
 function cloneLayerGroups(layerGroups: PcbLayerGroup[]): PcbLayerGroup[] {
   return layerGroups.map((layerNames) => [...layerNames])
 }
 
-export function getPcbLayerDrawingOrderKey(layerName: string): string {
-  const normalizedLayerName = normalizeAltiumPcbLayerName(layerName)
-  if (normalizedLayerName === "TOPLAYER") return "TOP"
-  if (normalizedLayerName === "BOTTOMLAYER") return "BOTTOM"
-  if (normalizedLayerName === "KEEPOUTLAYER") return "KEEPOUT"
-  if (normalizedLayerName === "DRCERROR") return "DRCERRORMARKERS"
-
-  const midLayerMatch = /^(?:MID|MIDLAYER)(\d{1,2})$/u.exec(normalizedLayerName)
-  if (midLayerMatch) return `MID${midLayerMatch[1]}`
-
-  const planeLayerMatch = /^(?:PLANE|INTERNALPLANE)(\d{1,2})$/u.exec(
-    normalizedLayerName,
-  )
-  if (planeLayerMatch) return `INTERNALPLANE${planeLayerMatch[1]}`
-
-  return normalizedLayerName
-}
+export const getPcbLayerDrawingOrderKey = getPcbLayerIdentity
