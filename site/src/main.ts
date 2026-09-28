@@ -2,6 +2,7 @@ import "./styles.css"
 
 import { createBugReportUrl } from "./bug-report"
 import { downloadGitHubProjectFiles } from "./github-project"
+import { populateProjectViewSelector } from "./populate-project-view-selector"
 import type {
   BrowserProjectFile,
   ProjectDocumentManifest,
@@ -405,14 +406,10 @@ async function selectDocument(documentId: string): Promise<void> {
   documentKindIcon.textContent = selected.kind === "pcb" ? "PCB" : "SCH"
   documentFormatBadge.textContent = selected.format
   documentMetadata.textContent = `${selected.recordCount.toLocaleString()} records · ${selected.componentCount.toLocaleString()} components · ${selected.container}`
-  viewSelector.replaceChildren(
-    ...selected.views.map((view) => {
-      const option = document.createElement("option")
-      option.value = view.id
-      option.textContent = view.label
-      return option
-    }),
-  )
+  populateProjectViewSelector({
+    documentManifest: selected,
+    viewSelector,
+  })
   const firstViewId = selected.views[0]?.id
   if (firstViewId) await selectView(documentId, firstViewId)
 }

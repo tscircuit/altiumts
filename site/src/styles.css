@@ -933,6 +933,10 @@ main {
   background: #ffffff;
 }
 
+.view-selector option.is-empty {
+  color: #8794a5;
+}
+
 .zoom-controls {
   display: inline-flex;
   align-items: stretch;

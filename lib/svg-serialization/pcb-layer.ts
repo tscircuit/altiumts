@@ -1,4 +1,8 @@
-import { normalizeAltiumPcbLayerName } from "../pcb-layers"
+import {
+  type AltiumPcbLayerAliasMap,
+  getAltiumPcbLayerAliasKey,
+  normalizeAltiumPcbLayerName,
+} from "../pcb-layers"
 import type { AltiumRecord } from "../records/altium-record"
 
 export const PCB_BOARD_FILL_COLOR = "#123d32"
@@ -32,20 +36,29 @@ export function getPcbLayerColor(layer: string | undefined): string {
   return LAYER_COLORS[normalized] ?? "#f59e0b"
 }
 
-export function recordAppliesToLayers(
-  record: AltiumRecord,
-  requestedLayers: string[] | undefined,
-): boolean {
+export function recordAppliesToLayers({
+  layerAliases,
+  record,
+  requestedLayers,
+}: {
+  layerAliases?: AltiumPcbLayerAliasMap
+  record: AltiumRecord
+  requestedLayers: string[] | undefined
+}): boolean {
   if (!requestedLayers || requestedLayers.length === 0) return true
 
-  const normalizedRequested = new Set(requestedLayers.map(normalizeLayerName))
+  const requestedLayerKeys = new Set(
+    requestedLayers.map((layer) =>
+      getAltiumPcbLayerAliasKey(layer, layerAliases),
+    ),
+  )
   const recordLayer = record.getCaseInsensitive("LAYER")
   if (recordLayer) {
-    const normalizedRecordLayer = normalizeLayerName(recordLayer)
-    if (normalizedRequested.has(normalizedRecordLayer)) return true
+    const recordLayerKey = getAltiumPcbLayerAliasKey(recordLayer, layerAliases)
+    if (requestedLayerKeys.has(recordLayerKey)) return true
     if (
-      normalizedRecordLayer === "MULTILAYER" &&
-      [...normalizedRequested].some(isCopperLayer)
+      recordLayerKey === "MULTILAYER" &&
+      [...requestedLayerKeys].some(isCopperLayer)
     ) {
       return true
     }
@@ -53,7 +66,7 @@ export function recordAppliesToLayers(
   }
 
   if (record.recordKind === "Via") {
-    return [...normalizedRequested].some(isCopperLayer)
+    return [...requestedLayerKeys].some(isCopperLayer)
   }
 
   return record.recordKind === "Board"

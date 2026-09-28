@@ -32,11 +32,11 @@ workerScope.addEventListener(
         return
       }
       if (!projectState) throw new Error("Open a project before rendering it")
-      const svg = renderProjectDocument(
-        projectState,
-        data.documentId,
-        data.viewId,
-      )
+      const svg = renderProjectDocument({
+        documentId: data.documentId,
+        state: projectState,
+        viewId: data.viewId,
+      })
       post({
         documentId: data.documentId,
         requestId: data.requestId,

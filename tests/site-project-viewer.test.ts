@@ -37,13 +37,17 @@ test("opens loose schematic and PCB files and renders their SVG views", async ()
     ),
   ).toEqual([
     {
+      group: "solder_mask",
+      hasPrimitives: false,
       id: "layer:TOPSOLDER",
-      label: "Top solder mask",
+      label: "Top Solder",
       layer: "TOPSOLDER",
     },
     {
+      group: "solder_mask",
+      hasPrimitives: false,
       id: "layer:BOTTOMSOLDER",
-      label: "Bottom solder mask",
+      label: "Bottom Solder",
       layer: "BOTTOMSOLDER",
     },
   ])
@@ -52,23 +56,35 @@ test("opens loose schematic and PCB files and renders their SVG views", async ()
     throw new Error("Expected both schematic and PCB documents")
   }
 
-  const schematicSvg = renderProjectDocument(state, schematic.id, "sheet")
-  const boardSvg = renderProjectDocument(state, pcb.id, "board")
+  const schematicSvg = renderProjectDocument({
+    documentId: schematic.id,
+    state,
+    viewId: "sheet",
+  })
+  const boardSvg = renderProjectDocument({
+    documentId: pcb.id,
+    state,
+    viewId: "board",
+  })
   const topLayer = pcb.views.find(({ layer }) => layer === "TOP")
   if (!topLayer) throw new Error("Expected a top copper layer view")
-  const topLayerSvg = renderProjectDocument(state, pcb.id, topLayer.id)
-  const topSolderMaskSvg = renderProjectDocument(
+  const topLayerSvg = renderProjectDocument({
+    documentId: pcb.id,
     state,
-    pcb.id,
-    "layer:TOPSOLDER",
-  )
+    viewId: topLayer.id,
+  })
+  const topSolderMaskSvg = renderProjectDocument({
+    documentId: pcb.id,
+    state,
+    viewId: "layer:TOPSOLDER",
+  })
 
   expect(schematicSvg).toStartWith("<svg")
   expect(schematicSvg).toContain("Schematic sheet")
   expect(boardSvg).toStartWith("<svg")
   expect(boardSvg).toContain("Complete board")
   expect(topLayerSvg).toStartWith("<svg")
-  expect(topLayerSvg).toContain("Top copper")
+  expect(topLayerSvg).toContain("Top Layer")
   expect(topSolderMaskSvg).toContain('data-layer="TOPSOLDER"')
   expect(topSolderMaskSvg).toContain('data-solder-mask-opening="true"')
 })
@@ -84,19 +100,27 @@ test("offers declared solder mask layers as PCB views", async () => {
   )
   expect(solderMaskViews).toEqual([
     {
+      group: "solder_mask",
+      hasPrimitives: false,
       id: "layer:TOPSOLDER",
-      label: "Top solder mask",
+      label: "Top Solder",
       layer: "TOPSOLDER",
     },
     {
+      group: "solder_mask",
+      hasPrimitives: false,
       id: "layer:BOTTOMSOLDER",
-      label: "Bottom solder mask",
+      label: "Bottom Solder",
       layer: "BOTTOMSOLDER",
     },
   ])
 
   for (const view of solderMaskViews) {
-    const svg = renderProjectDocument(state, pcb.id, view.id)
+    const svg = renderProjectDocument({
+      documentId: pcb.id,
+      state,
+      viewId: view.id,
+    })
     expect(svg).toContain(`data-layer="${view.layer}"`)
     expect(svg).toContain('data-solder-mask-opening="true"')
   }
