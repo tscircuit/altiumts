@@ -26,10 +26,20 @@ export function getSchematicPortDirection({
     x: start.x + (vertical ? 0 : width),
     y: start.y + (vertical ? width : 0),
   }
+  const startConnected = isPointConnectedToSchematicSegments(start, segments)
+  const endConnected = isPointConnectedToSchematicSegments(end, segments)
+  const connectedEnd =
+    startConnected === endConnected
+      ? undefined
+      : endConnected
+        ? ("end" as const)
+        : ("start" as const)
+  const connection = connectedEnd ? { connectedEnd } : {}
   const ioType = record.getNumber("IOTYPE") ?? 0
 
   if (ioType !== 1 && ioType !== 2 && ioType !== 3) {
     return {
+      ...connection,
       vertical,
       pointAtStart: vertical
         ? style === 6 || style === 7
@@ -40,12 +50,15 @@ export function getSchematicPortDirection({
     }
   }
   if (ioType === 3) {
-    return { vertical, pointAtStart: true, pointAtEnd: true }
+    return { ...connection, vertical, pointAtStart: true, pointAtEnd: true }
   }
 
-  const startConnected = isPointConnectedToSchematicSegments(start, segments)
-  const endConnected = isPointConnectedToSchematicSegments(end, segments)
-  const connectedAtEnd = endConnected && !startConnected
+  const connectedAtEnd = connectedEnd === "end"
   const pointAtStart = ioType === 1 ? connectedAtEnd : !connectedAtEnd
-  return { vertical, pointAtStart, pointAtEnd: !pointAtStart }
+  return {
+    ...connection,
+    vertical,
+    pointAtStart,
+    pointAtEnd: !pointAtStart,
+  }
 }

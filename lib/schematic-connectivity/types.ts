@@ -6,6 +6,7 @@ export interface SchematicConnectionSegment {
 }
 
 export interface SchematicPortDirection {
+  connectedEnd?: "end" | "start"
   pointAtEnd: boolean
   pointAtStart: boolean
   vertical: boolean
