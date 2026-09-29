@@ -3,11 +3,11 @@ import { getPcbContour, getPcbRegionGeometry } from "../pcb-contours"
 import type { AltiumRecord } from "../records/altium-record"
 import type { SvgPoint } from "./svg-types"
 
+export { getSchematicIndexedPoints } from "../geometry/get-schematic-indexed-points"
 export {
   getSchematicCoordinate,
   readSchematicInteger,
 } from "../measurement/schematic-coordinate"
-export { getSchematicIndexedPoints } from "../geometry/get-schematic-indexed-points"
 
 export function parsePcbMeasurement(
   raw: string | undefined,
