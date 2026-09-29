@@ -1,6 +1,6 @@
 import { getSchematicCoordinate } from "../measurement/schematic-coordinate"
 import type { AltiumRecord } from "../records/altium-record"
-import { isPointConnectedToSchematicSegments } from "./is-point-connected-to-schematic-segments"
+import { getSchematicConnectedEnd } from "./get-schematic-connected-end"
 import type {
   SchematicConnectionSegment,
   SchematicPortDirection,
@@ -26,14 +26,7 @@ export function getSchematicPortDirection({
     x: start.x + (vertical ? 0 : width),
     y: start.y + (vertical ? width : 0),
   }
-  const startConnected = isPointConnectedToSchematicSegments(start, segments)
-  const endConnected = isPointConnectedToSchematicSegments(end, segments)
-  const connectedEnd =
-    startConnected === endConnected
-      ? undefined
-      : endConnected
-        ? ("end" as const)
-        : ("start" as const)
+  const connectedEnd = getSchematicConnectedEnd({ end, segments, start })
   const connection = connectedEnd ? { connectedEnd } : {}
   const ioType = record.getNumber("IOTYPE") ?? 0
 
