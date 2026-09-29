@@ -3,7 +3,18 @@ export interface BrowserProjectFile {
   path: string
 }
 
+export type ProjectPcbViewGroup =
+  | "board"
+  | "copper"
+  | "solder_mask"
+  | "paste_mask"
+  | "silkscreen"
+  | "mechanical"
+  | "other"
+
 export interface ProjectDocumentView {
+  group?: ProjectPcbViewGroup
+  hasPrimitives?: boolean
   id: string
   label: string
   layer?: string

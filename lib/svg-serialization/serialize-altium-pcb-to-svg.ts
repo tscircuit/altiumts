@@ -2,6 +2,10 @@ import type { AltiumPcbDocument } from "../altium-pcb-document"
 import { decodeAltiumWideString } from "../decode-altium-wide-string"
 import { getPcbRegionSemanticKind } from "../pcb-contours"
 import {
+  getAltiumPcbDocumentLayerStackEntries,
+  getAltiumPcbLayerAliasMap,
+} from "../pcb-layers"
+import {
   getPcbRecordComponent,
   getPcbRecordComponentIndex,
   getPcbRecordNetIndex,
@@ -39,6 +43,9 @@ export function serializeAltiumPcbToSvg(
   document: AltiumPcbDocument,
   options: AltiumPcbSvgOptions = {},
 ): string {
+  const layerAliases = getAltiumPcbLayerAliasMap(
+    getAltiumPcbDocumentLayerStackEntries(document),
+  )
   const bounds = options.viewBox
     ? pcbViewBoxToBounds(options.viewBox)
     : options.fitToContent
@@ -101,7 +108,13 @@ export function serializeAltiumPcbToSvg(
       ...document.records,
       ...getPcbSolderMaskRecords(document, options.layers),
     ]
-      .filter((record) => recordAppliesToLayers(record, options.layers))
+      .filter((record) =>
+        recordAppliesToLayers({
+          layerAliases,
+          record,
+          requestedLayers: options.layers,
+        }),
+      )
       .filter((record) => recordAppliesToReferences(document, record, options))
       .filter(
         (record) =>

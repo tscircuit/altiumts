@@ -1,5 +1,6 @@
 import { expect, test } from "bun:test"
 import {
+  getAltiumPcbLayerAliasKey,
   isAltiumPcbCopperLayerName,
   isKnownAltiumPcbLayerName,
   normalizeAltiumPcbLayerName,
@@ -11,6 +12,10 @@ import { readReferenceBytes } from "./svg/read-reference"
 
 test("normalizes verified PCB layer naming variants", () => {
   expect(normalizeAltiumPcbLayerName("Mid-Layer 14")).toBe("MIDLAYER14")
+  expect(getAltiumPcbLayerAliasKey("MID-LAYER1")).toBe("MID1")
+  expect(getAltiumPcbLayerAliasKey("MID1")).toBe("MID1")
+  expect(getAltiumPcbLayerAliasKey("Plane 2")).toBe("INTERNALPLANE2")
+  expect(getAltiumPcbLayerAliasKey("Internal Plane 2")).toBe("INTERNALPLANE2")
   for (const layer of [
     "TOP",
     "Top Layer",
