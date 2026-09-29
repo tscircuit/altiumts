@@ -1,13 +1,11 @@
 import { expect, test } from "bun:test"
 import {
   AltiumRecord,
+  getSchematicConnectionSegments,
+  getSchematicPortDirection,
   parseAltiumAscii,
   serializeAltiumSheetToSvg,
 } from "../../lib"
-import {
-  getSchematicConnectionSegments,
-  getSchematicPortDirection,
-} from "../../lib/svg-serialization/get-schematic-port-direction"
 
 function renderPort(fields: string, connections: string[] = []) {
   const lines = parseAltiumAscii(
