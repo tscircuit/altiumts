@@ -26,10 +26,11 @@ test("reproduces multiline schematic note text from the PiDP-11 I/O Expander", a
   expect(svg).toContain('data-record="209"')
   expect(svg).not.toContain("~1")
   expect(svg).toContain(
-    '<tspan x="903.5" dy="0">Single board operation is assumed by</tspan>',
+    '<tspan x="903.5" y="713.5">Single board operation is assumed by</tspan>',
   )
+  expect(svg).toContain('<tspan x="903.5" y="733.5"></tspan>')
   expect(svg).toContain(
-    '<tspan x="903.5" dy="10">Multiple boards may be connected in</tspan>',
+    '<tspan x="903.5" y="743.5">Multiple boards may be connected in</tspan>',
   )
   await expect(svg).toMatchSvgSnapshot(import.meta.path)
 })

@@ -895,7 +895,7 @@ function renderSchematicTextFrame(
   const tspans = visibleLines
     .map(
       (line, index) =>
-        `<tspan x="${formatSvgNumber(x)}" dy="${formatSvgNumber(index === 0 ? 0 : lineHeight)}">${escapeXml(line)}</tspan>`,
+        `<tspan x="${formatSvgNumber(x)}" y="${formatSvgNumber(top + margin + font.size + index * lineHeight)}">${escapeXml(line)}</tspan>`,
     )
     .join("")
   const isSolid = record.getBoolean("ISSOLID") === true

@@ -13,11 +13,15 @@ test("renders schematic notes as multiline text frames", () => {
   expect(svg).toContain('<g data-record="209">')
   expect(svg).toContain('fill="#ffff96"')
   expect(svg).toContain('font-family="Times New Roman" font-size="12"')
-  expect(svg).toContain('<tspan x="55.5" dy="0">[page 17 of 21 - PDF]</tspan>')
-  expect(svg).toContain('<tspan x="55.5" dy="12"></tspan>')
-  expect(svg).toContain('<tspan x="55.5" dy="12">- Create: SOT.SchLib</tspan>')
   expect(svg).toContain(
-    '<tspan x="55.5" dy="12">- No footprint: J19, J32, J33, X1</tspan>',
+    '<tspan x="55.5" y="107.5">[page 17 of 21 - PDF]</tspan>',
+  )
+  expect(svg).toContain('<tspan x="55.5" y="119.5"></tspan>')
+  expect(svg).toContain(
+    '<tspan x="55.5" y="131.5">- Create: SOT.SchLib</tspan>',
+  )
+  expect(svg).toContain(
+    '<tspan x="55.5" y="155.5">- No footprint: J19, J32, J33, X1</tspan>',
   )
   expect(svg).not.toContain("~1")
 })
