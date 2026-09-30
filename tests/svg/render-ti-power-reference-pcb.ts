@@ -5,10 +5,14 @@ import {
 } from "../../lib"
 import { readReferenceBytes } from "./read-reference"
 
+interface RenderTiPowerReferencePcbOptions {
+  title: string
+  projectFilename?: string
+}
+
 export async function renderTiPowerReferencePcb(
   filename: string,
-  title: string,
-  projectFilename?: string,
+  { title, projectFilename }: RenderTiPowerReferencePcbOptions,
 ): Promise<string> {
   const source = await readReferenceBytes(filename)
   const document = parseAltiumBinaryPcbDoc(source)

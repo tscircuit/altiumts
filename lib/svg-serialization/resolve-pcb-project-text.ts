@@ -1,20 +1,30 @@
+import type { ProjectParameterName } from "../project-parameters"
+
 /** Resolve PCB dot-prefixed parameters without guessing missing project values. */
 export function resolvePcbProjectText(
   text: string,
-  parameters: ReadonlyMap<string, string>,
+  parameters: ReadonlyMap<ProjectParameterName, string>,
 ): string {
-  const valueFor = (name: string): string | undefined => {
-    const value = parameters.get(name.toLowerCase())
-    return value === "*" ? undefined : value
+  if (text.startsWith(".")) {
+    return getPcbProjectParameterValue(parameters, text.slice(1)) ?? text
   }
-  if (text.startsWith(".")) return valueFor(text.slice(1)) ?? text
 
   // PCB expressions quote dot-prefixed references, unlike schematic formulas.
   // TI headings also append a bare reference: '.PRJ_Number'.PCB_Rev.
   return text.replace(
     /'\.([^'\r\n]+)'(\.[A-Za-z][A-Za-z0-9_]*)?/gu,
-    (_match, name: string, suffix: string | undefined) =>
-      (valueFor(name) ?? `'.${name}'`) +
-      (suffix ? (valueFor(suffix.slice(1)) ?? suffix) : ""),
+    (_match, name: ProjectParameterName, suffix: string | undefined) =>
+      (getPcbProjectParameterValue(parameters, name) ?? `'.${name}'`) +
+      (suffix
+        ? (getPcbProjectParameterValue(parameters, suffix.slice(1)) ?? suffix)
+        : ""),
   )
+}
+
+function getPcbProjectParameterValue(
+  parameters: ReadonlyMap<ProjectParameterName, string>,
+  parameterName: ProjectParameterName,
+): string | undefined {
+  const value = parameters.get(parameterName.toLowerCase())
+  return value === "*" ? undefined : value
 }

@@ -1,17 +1,19 @@
 import type { AltiumPrjPcb } from "./altium-prj-pcb"
 
+export type ProjectParameterName = string
+
 const PROJECT_PARAMETER_CACHE = new WeakMap<
   AltiumPrjPcb,
-  { parameters: Map<string, string>; revision: number }
+  { parameters: Map<ProjectParameterName, string>; revision: number }
 >()
 
 export function getProjectParameters(
   project: AltiumPrjPcb,
-): Map<string, string> {
+): Map<ProjectParameterName, string> {
   const cached = PROJECT_PARAMETER_CACHE.get(project)
   if (cached?.revision === project.revision) return cached.parameters
 
-  const parameters = new Map<string, string>()
+  const parameters = new Map<ProjectParameterName, string>()
   for (const section of project.sections) {
     if (/^PARAMETER\d+$/iu.test(section.name)) {
       const parameterName = section.entries.find(

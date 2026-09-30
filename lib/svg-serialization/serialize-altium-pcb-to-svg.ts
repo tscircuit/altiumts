@@ -11,7 +11,10 @@ import {
   getPcbRecordNetIndex,
   getPcbRecordPolygonIndex,
 } from "../pcb-reference-resolution"
-import { getProjectParameters } from "../project-parameters"
+import {
+  getProjectParameters,
+  type ProjectParameterName,
+} from "../project-parameters"
 import type { AltiumRecord } from "../records/altium-record"
 import {
   getPcbBoardOutline,
@@ -60,7 +63,7 @@ export function serializeAltiumPcbToSvg(
   const content: string[] = []
   const projectParameters = options.project
     ? getProjectParameters(options.project)
-    : new Map<string, string>()
+    : new Map<ProjectParameterName, string>()
   const outline = getPcbBoardOutline(document)
   const boardCutouts =
     options.showBoardCutouts === false ? [] : document.boardGeometry.cutouts

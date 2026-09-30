@@ -5,8 +5,10 @@ import { renderTiPowerReferencePcb } from "./render-ti-power-reference-pcb"
 test("renders the TI PMP22712 PCB", async () => {
   const svg = await renderTiPowerReferencePcb(
     TI_POWER_REFERENCE_PCB_FILENAMES.pmp22712,
-    "TI PMP22712 PCB",
-    "ti-pmp22712.PrjPcb",
+    {
+      title: "TI PMP22712 PCB",
+      projectFilename: "ti-pmp22712.PrjPcb",
+    },
   )
 
   expect(svg).toContain('data-record="BoardOutline"')
