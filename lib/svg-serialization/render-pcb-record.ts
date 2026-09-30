@@ -151,9 +151,22 @@ export function renderPcbRecord({
     const rotation = Number(record.getCaseInsensitive("ROTATION") ?? 0)
     const mirror = record.getBoolean("MIRROR") ? -1 : 1
     const fontName = record.getDecoded("FONTNAME") || "Arial"
+    const usesTrueType =
+      record.getBoolean("USETTFONTS") ?? record.getNumber("FONTTYPE") === 1
+    // Calibrate Arial TrueType height using its Windows character cell.
+    // SVG font-size is the em square: Arial uses 2048 units per em and
+    // Windows ascent/descent of 1854/434 (also for bold and italic).
+    const fontSize =
+      usesTrueType && fontName.toLowerCase() === "arial"
+        ? (height * 2048) / (1854 + 434)
+        : height
     const fontWeight = record.getBoolean("BOLD") ? "bold" : "normal"
     const fontStyle = record.getBoolean("ITALIC") ? "italic" : "normal"
-    const positioning = getPcbTextPositioning(record.getNumber("JUSTIFICATION"))
+    const positioning = getPcbTextPositioning(
+      record.getBoolean("JUSTIFICATIONVALID") === false
+        ? undefined
+        : record.getNumber("JUSTIFICATION"),
+    )
     const lines = normalizedText.split("\n")
     const textContent =
       lines.length === 1
@@ -161,10 +174,10 @@ export function renderPcbRecord({
         : lines
             .map(
               (line, index) =>
-                `<tspan x="0" dy="${index === 0 ? "0" : formatSvgNumber(height * 1.2)}">${escapeXml(line)}</tspan>`,
+                `<tspan x="0" dy="${index === 0 ? "0" : formatSvgNumber(fontSize * 1.2)}">${escapeXml(line)}</tspan>`,
             )
             .join("")
-    return `<text ${metadata} x="0" y="0" fill="${color}" font-family="${escapeXml(fontName)}, sans-serif" font-size="${formatSvgNumber(height)}" font-weight="${fontWeight}" font-style="${fontStyle}" text-anchor="${positioning.anchor}" dominant-baseline="${positioning.baseline}" transform="translate(${formatSvgNumber(x)} ${formatSvgNumber(y)}) rotate(${formatSvgNumber(-rotation)}) scale(${mirror} 1)">${textContent}</text>`
+    return `<text ${metadata} x="0" y="0" fill="${color}" font-family="${escapeXml(fontName)}, sans-serif" font-size="${formatSvgNumber(fontSize)}" font-weight="${fontWeight}" font-style="${fontStyle}" text-anchor="${positioning.anchor}" dominant-baseline="${positioning.baseline}" transform="translate(${formatSvgNumber(x)} ${formatSvgNumber(y)}) rotate(${formatSvgNumber(-rotation)}) scale(${mirror} 1)">${textContent}</text>`
   }
 
   if (kind === "Component" && svgOptions.showComponentOrigins) {

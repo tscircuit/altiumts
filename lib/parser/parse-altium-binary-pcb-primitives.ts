@@ -483,6 +483,12 @@ function decodeText(
     )
   }
 
+  if (payload.byteLength >= 241) {
+    items.push(
+      field("JUSTIFICATIONVALID", booleanText(view.getUint8(240) !== 0)),
+    )
+  }
+
   return new AltiumTextRecord({
     items,
     originalBinaryPayload: payload,

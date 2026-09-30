@@ -1,5 +1,6 @@
 import type { AltiumPrjPcb } from "./altium-prj-pcb"
 import type { AltiumSchDoc } from "./altium-sch-doc"
+import { getProjectParameters } from "./project-parameters"
 import type { AltiumRecord } from "./records/altium-record"
 
 type SchematicParameterName = string
@@ -37,10 +38,6 @@ const DOCUMENT_PARAMETER_CACHE = new WeakMap<
   AltiumSchDoc,
   CachedSchematicParameters
 >()
-const PROJECT_PARAMETER_CACHE = new WeakMap<
-  AltiumPrjPcb,
-  CachedSchematicParameters
->()
 
 /**
  * Resolves an Altium `=ParameterName` reference against document-level
@@ -71,7 +68,7 @@ export function resolveSchematicParameterReferenceWithContext({
   if (!parameterName) return undefined
 
   const parameters = new Map<SchematicParameterName, string>(
-    project ? getSchematicProjectParameters(project) : [],
+    project ? getProjectParameters(project) : [],
   )
   for (const [name, text] of getSchematicDocumentParameters(document)) {
     parameters.set(name, text)
@@ -151,46 +148,6 @@ function getSchematicDocumentParameters(
   DOCUMENT_PARAMETER_CACHE.set(document, {
     parameters,
     revision: document.revision,
-  })
-  return parameters
-}
-
-function getSchematicProjectParameters(
-  project: AltiumPrjPcb,
-): Map<SchematicParameterName, string> {
-  const cached = PROJECT_PARAMETER_CACHE.get(project)
-  if (cached?.revision === project.revision) return cached.parameters
-
-  const parameters = new Map<SchematicParameterName, string>()
-  for (const section of project.sections) {
-    if (/^PARAMETER\d+$/iu.test(section.name)) {
-      const parameterName = section.entries.find(
-        (entry) => entry.key.toUpperCase() === "NAME",
-      )?.value
-      const parameterText = section.entries.find(
-        (entry) => entry.key.toUpperCase() === "VALUE",
-      )?.value
-      if (parameterName && parameterText !== undefined) {
-        parameters.set(parameterName.toLowerCase(), parameterText)
-      }
-      continue
-    }
-
-    if (!/^PARAMETERS?$/iu.test(section.name)) continue
-    for (const entry of section.entries) {
-      const separatorIndex = entry.value.indexOf("=")
-      if (separatorIndex <= 0) continue
-      const parameterName = entry.value.slice(0, separatorIndex).trim()
-      const parameterText = entry.value.slice(separatorIndex + 1)
-      if (parameterName) {
-        parameters.set(parameterName.toLowerCase(), parameterText)
-      }
-    }
-  }
-
-  PROJECT_PARAMETER_CACHE.set(project, {
-    parameters,
-    revision: project.revision,
   })
   return parameters
 }
