@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="435" viewBox="0 0 1029.34 447.34" role="img" aria-label="GeneratedSystem top sheet" class="altium-sheet" data-renderer="altiumts">
+  <title>GeneratedSystem top sheet</title>
+  <rect width="100%" height="100%" fill="#fffcf8"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <defs><clipPath id="altium-sheet-paper"><rect x="33.67" y="33.67" width="962" height="380"/></clipPath></defs>
+    <g data-record="SheetBorder" fill="#fffef8" stroke="#334155" stroke-width="1"><rect x="33.67" y="33.67" width="962" height="380"/><rect x="43.67" y="43.67" width="942" height="360" fill="none"/><path d="M 200.67 33.67 V 43.67 M 200.67 403.67 V 413.67"/><path d="M 357.67 33.67 V 43.67 M 357.67 403.67 V 413.67"/><path d="M 514.67 33.67 V 43.67 M 514.67 403.67 V 413.67"/><path d="M 671.67 33.67 V 43.67 M 671.67 403.67 V 413.67"/><path d="M 828.67 33.67 V 43.67 M 828.67 403.67 V 413.67"/><path d="M 33.67 133.67 H 43.67 M 985.67 133.67 H 995.67"/><path d="M 33.67 223.67 H 43.67 M 985.67 223.67 H 995.67"/><path d="M 33.67 313.67 H 43.67 M 985.67 313.67 H 995.67"/></g>
+    <g data-sheet-content="true" clip-path="url(#altium-sheet-paper)">
+    <rect data-record="15" x="93.67" y="93.67" width="170" height="60" fill="#ffffc2" stroke="#840000" stroke-width="1"/>
+    <text data-record="32" x="0" y="0" fill="#000080" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(93.67 83.67) rotate(0)">TCAN1042 CAN Interface</text>
+    <text data-record="33" x="0" y="0" fill="#000080" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(93.67 93.67) rotate(0)">GeneratedSystem-01.SchDoc</text>
+    <rect data-record="15" x="387.67" y="93.67" width="170" height="60" fill="#ffffc2" stroke="#840000" stroke-width="1"/>
+    <text data-record="32" x="0" y="0" fill="#000080" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(387.67 83.67) rotate(0)">TIDA-00356 Lamp Driver</text>
+    <text data-record="33" x="0" y="0" fill="#000080" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(387.67 93.67) rotate(0)">GeneratedSystem-02.SchDoc</text>
+    <rect data-record="15" x="681.67" y="93.67" width="212" height="60" fill="#ffffc2" stroke="#840000" stroke-width="1"/>
+    <text data-record="32" x="0" y="0" fill="#000080" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(681.67 83.67) rotate(0)">TIDA-01539 Ambient Light Sensors</text>
+    <text data-record="33" x="0" y="0" fill="#000080" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(681.67 93.67) rotate(0)">GeneratedSystem-03.SchDoc</text>
+    <rect data-record="15" x="93.67" y="193.67" width="176" height="60" fill="#ffffc2" stroke="#840000" stroke-width="1"/>
+    <text data-record="32" x="0" y="0" fill="#000080" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(93.67 183.67) rotate(0)">MSPM0G3507 Microcontroller</text>
+    <text data-record="33" x="0" y="0" fill="#000080" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(93.67 193.67) rotate(0)">GeneratedSystem-04.SchDoc</text>
+    <rect data-record="15" x="387.67" y="193.67" width="254" height="60" fill="#ffffc2" stroke="#840000" stroke-width="1"/>
+    <text data-record="32" x="0" y="0" fill="#000080" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(387.67 183.67) rotate(0)">TIDA-01539 Electrochromic Mirror Driver</text>
+    <text data-record="33" x="0" y="0" fill="#000080" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(387.67 193.67) rotate(0)">GeneratedSystem-05.SchDoc</text>
+    <rect data-record="15" x="681.67" y="193.67" width="230" height="60" fill="#ffffc2" stroke="#840000" stroke-width="1"/>
+    <text data-record="32" x="0" y="0" fill="#000080" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(681.67 183.67) rotate(0)">LM74202 and TPS7E81-Q1 Power Supply</text>
+    <text data-record="33" x="0" y="0" fill="#000080" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(681.67 193.67) rotate(0)">GeneratedSystem-06.SchDoc</text>
+    <rect data-record="15" x="93.67" y="293.67" width="188" height="60" fill="#ffffc2" stroke="#840000" stroke-width="1"/>
+    <text data-record="32" x="0" y="0" fill="#000080" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(93.67 283.67) rotate(0)">LM50HV-Q1 Temperature Sensor</text>
+    <text data-record="33" x="0" y="0" fill="#000080" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(93.67 293.67) rotate(0)">GeneratedSystem-07.SchDoc</text>
+    </g>
+  </g>
+</svg>
