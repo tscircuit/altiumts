@@ -163,7 +163,7 @@ function getSchematicProjectParameters(
 
   const parameters = new Map<SchematicParameterName, string>()
   for (const section of project.sections) {
-    if (/^PARAMETER\d+$/iu.test(section.name)) {
+    if (/^PARAMETER\d+(?:_\d+)*$/iu.test(section.name)) {
       const parameterName = section.entries.find(
         (entry) => entry.key.toUpperCase() === "NAME",
       )?.value
