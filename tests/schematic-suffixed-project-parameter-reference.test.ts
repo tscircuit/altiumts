@@ -5,9 +5,16 @@ import {
   resolveSchematicParameterReferenceWithContext,
 } from "../lib"
 
-test("resolves project parameters stored in suffixed sections", () => {
+test("does not use variant parameters without a selected variant", () => {
   const project = parseAltiumPrjPcb(
-    ["[Parameter2_1]", "Name=EVM_Orderable", "Value=LM5155EVM-FLY"].join("\n"),
+    [
+      "[ProjectVariant1]",
+      "Description=001",
+      "ParameterCount=1",
+      "[Parameter2_1]",
+      "Name=EVM_Orderable",
+      "Value=LM5155EVM-FLY",
+    ].join("\n"),
   )
   const document = parseAltiumSchDoc(
     "|HEADER=Protel for Windows - Schematic Capture Ascii File Version 5.0",
@@ -19,5 +26,5 @@ test("resolves project parameters stored in suffixed sections", () => {
       project,
       reference: "=EVM_orderable",
     }),
-  ).toBe("LM5155EVM-FLY")
+  ).toBeUndefined()
 })

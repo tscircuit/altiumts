@@ -430,6 +430,7 @@ function renderSchematicRecord(
           projectName: options.projectName,
           record,
           reference: sourceText,
+          variantName: options.variantName,
         }) ?? sourceText)
       : sourceText
     if (!text) return undefined

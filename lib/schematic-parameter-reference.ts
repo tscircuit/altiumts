@@ -1,11 +1,21 @@
-import type { AltiumPrjPcb } from "./altium-prj-pcb"
+import type { AltiumPrjPcb, AltiumProjectVariant } from "./altium-prj-pcb"
 import type { AltiumSchDoc } from "./altium-sch-doc"
+import type { AltiumIniSection } from "./ini/altium-ini"
 import type { AltiumRecord } from "./records/altium-record"
 
 type SchematicParameterName = string
+type SchematicVariantName = string
 
 interface CachedSchematicParameters {
   parameters: Map<SchematicParameterName, string>
+  revision: number
+}
+
+interface CachedSchematicVariantParameters {
+  parametersByVariantName: Map<
+    SchematicVariantName,
+    Map<SchematicParameterName, string>
+  >
   revision: number
 }
 
@@ -24,6 +34,8 @@ export interface ResolveSchematicParameterReferenceInput {
   /** Record containing the reference, used to resolve component parameters. */
   record?: AltiumRecord
   reference: string
+  /** Selected project variant whose parameters override document parameters. */
+  variantName?: string
 }
 
 interface ResolveParameterInput {
@@ -41,6 +53,12 @@ const PROJECT_PARAMETER_CACHE = new WeakMap<
   AltiumPrjPcb,
   CachedSchematicParameters
 >()
+const VARIANT_PARAMETER_CACHE = new WeakMap<
+  AltiumPrjPcb,
+  CachedSchematicVariantParameters
+>()
+const EMPTY_SCHEMATIC_PARAMETERS: ReadonlyMap<SchematicParameterName, string> =
+  new Map()
 
 /**
  * Resolves an Altium `=ParameterName` reference against document-level
@@ -65,6 +83,7 @@ export function resolveSchematicParameterReferenceWithContext({
   projectName,
   record,
   reference,
+  variantName,
 }: ResolveSchematicParameterReferenceInput): string | undefined {
   const match = PARAMETER_REFERENCE.exec(reference)
   const parameterName = match?.[1]
@@ -76,10 +95,19 @@ export function resolveSchematicParameterReferenceWithContext({
   for (const [name, text] of getSchematicDocumentParameters(document)) {
     parameters.set(name, text)
   }
+  if (project && variantName) {
+    for (const [name, text] of getSchematicVariantParameters(
+      project,
+      variantName,
+    )) {
+      parameters.set(name, text)
+    }
+  }
   if (currentDate !== undefined) parameters.set("currentdate", currentDate)
   if (currentTime !== undefined) parameters.set("currenttime", currentTime)
   if (projectName) parameters.set("projectname", projectName)
   if (documentName) parameters.set("documentname", documentName)
+  if (variantName) parameters.set("variantname", variantName)
   if (record) {
     for (const [name, text] of getSchematicComponentParameters(
       document,
@@ -163,16 +191,8 @@ function getSchematicProjectParameters(
 
   const parameters = new Map<SchematicParameterName, string>()
   for (const section of project.sections) {
-    if (/^PARAMETER\d+(?:_\d+)*$/iu.test(section.name)) {
-      const parameterName = section.entries.find(
-        (entry) => entry.key.toUpperCase() === "NAME",
-      )?.value
-      const parameterText = section.entries.find(
-        (entry) => entry.key.toUpperCase() === "VALUE",
-      )?.value
-      if (parameterName && parameterText !== undefined) {
-        parameters.set(parameterName.toLowerCase(), parameterText)
-      }
+    if (/^PARAMETER\d+$/iu.test(section.name)) {
+      addNamedParameterSection(parameters, section)
       continue
     }
 
@@ -193,6 +213,108 @@ function getSchematicProjectParameters(
     revision: project.revision,
   })
   return parameters
+}
+
+function getSchematicVariantParameters(
+  project: AltiumPrjPcb,
+  variantName: string,
+): ReadonlyMap<SchematicParameterName, string> {
+  const cached = VARIANT_PARAMETER_CACHE.get(project)
+  const parametersByVariantName =
+    cached?.revision === project.revision
+      ? cached.parametersByVariantName
+      : createSchematicVariantParameterScopes(project)
+
+  if (cached?.revision !== project.revision) {
+    VARIANT_PARAMETER_CACHE.set(project, {
+      parametersByVariantName,
+      revision: project.revision,
+    })
+  }
+
+  return (
+    parametersByVariantName.get(variantName.toLowerCase()) ??
+    EMPTY_SCHEMATIC_PARAMETERS
+  )
+}
+
+function createSchematicVariantParameterScopes(
+  project: AltiumPrjPcb,
+): Map<SchematicVariantName, Map<SchematicParameterName, string>> {
+  const parametersByVariantName = new Map<
+    SchematicVariantName,
+    Map<SchematicParameterName, string>
+  >()
+
+  for (const variant of project.variants) {
+    const parameters = new Map<SchematicParameterName, string>()
+    addInlineVariantParameters(parameters, variant)
+    addVariantParameterSections(parameters, project, variant)
+
+    for (const variantName of getSchematicVariantNames(variant)) {
+      parametersByVariantName.set(variantName.toLowerCase(), parameters)
+    }
+  }
+
+  return parametersByVariantName
+}
+
+function addInlineVariantParameters(
+  parameters: Map<SchematicParameterName, string>,
+  variant: AltiumProjectVariant,
+): void {
+  for (const setting of variant.parameters) {
+    if (!/^PARAMETER\d+$/iu.test(setting.key)) continue
+    const separatorIndex = setting.value.indexOf("=")
+    if (separatorIndex <= 0) continue
+    const parameterName = setting.value.slice(0, separatorIndex).trim()
+    const parameterText = setting.value.slice(separatorIndex + 1)
+    if (parameterName) {
+      parameters.set(parameterName.toLowerCase(), parameterText)
+    }
+  }
+}
+
+function addVariantParameterSections(
+  parameters: Map<SchematicParameterName, string>,
+  project: AltiumPrjPcb,
+  variant: AltiumProjectVariant,
+): void {
+  const variantMatch = /^(?:PROJECT)?VARIANT(\d+)$/iu.exec(variant.section.name)
+  const variantIndex = Number(variantMatch?.[1])
+  if (!Number.isSafeInteger(variantIndex) || variantIndex < 1) return
+
+  // Altium reserves parameter owner 1 for the base project, so
+  // ProjectVariant1 owns Parameter2_*, ProjectVariant2 owns Parameter3_*, etc.
+  const parameterOwnerIndex = variantIndex + 1
+  for (const section of project.sections) {
+    const parameterMatch = /^PARAMETER(\d+)_(\d+)$/iu.exec(section.name)
+    if (Number(parameterMatch?.[1]) !== parameterOwnerIndex) continue
+    addNamedParameterSection(parameters, section)
+  }
+}
+
+function addNamedParameterSection(
+  parameters: Map<SchematicParameterName, string>,
+  section: AltiumIniSection,
+): void {
+  const parameterName = section.entries.find(
+    (entry) => entry.key.toUpperCase() === "NAME",
+  )?.value
+  const parameterText = section.entries.find(
+    (entry) => entry.key.toUpperCase() === "VALUE",
+  )?.value
+  if (parameterName && parameterText !== undefined) {
+    parameters.set(parameterName.toLowerCase(), parameterText)
+  }
+}
+
+function getSchematicVariantNames(
+  variant: AltiumProjectVariant,
+): SchematicVariantName[] {
+  return [variant.name, variant.description, variant.section.name].filter(
+    (variantName): variantName is string => variantName !== undefined,
+  )
 }
 
 function resolveParameter({

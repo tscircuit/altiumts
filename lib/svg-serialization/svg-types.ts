@@ -81,6 +81,8 @@ export interface AltiumSheetSvgOptions extends AltiumSvgRenderOptions {
   project?: AltiumPrjPcb
   /** Current project filename, including its extension. */
   projectName?: string
+  /** Selected project variant whose parameters override document parameters. */
+  variantName?: string
   showBorder?: boolean
   /**
    * Region to render and clip. Defaults to the declared schematic paper,
