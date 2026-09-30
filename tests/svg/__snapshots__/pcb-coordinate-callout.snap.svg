@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000" viewBox="0 0 1070 1070" role="img" aria-label="Coordinate callout" class="altium-pcb" data-renderer="altiumts">
+  <title>Coordinate callout</title>
+  <rect width="100%" height="100%" fill="#071a16"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <polygon data-record="BoardOutline" points="35,1035 1035,1035 1035,35 35,35 35,1035" fill="#123d32" stroke="#6ee7b7" stroke-width="3"/>
+  </g>
+</svg>
