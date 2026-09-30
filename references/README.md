@@ -53,6 +53,8 @@ Run `bun run download-references` to download:
 - `ti-pmp22650-main.PcbDoc`, `ti-pmp22712.PcbDoc`, and `ti-pmp22773.PcbDoc`
   from the official Texas Instruments [PMP22650 CAD/CAE files](https://www.ti.com/lit/zip/TIDM925),
   TIDM925. The three boards are extracted from separate nested Altium ZIPs.
+  `ti-pmp22712.PrjPcb` comes from the matching PMP22712 ZIP and supplies the
+  project number/revision used by its PCB annotation snapshot.
 - `ti-pmp23595.PcbDoc` from the official Texas Instruments
   [PMP23595 CAD/CAE files](https://www.ti.com/lit/zip/SLVMEP2), SLVMEP2A.
 - `ti-pmp23653-main.PcbDoc` and `ti-pmp23653-planar-transformer.PcbDoc`
@@ -67,7 +69,7 @@ external fabrication drawings do not shrink the PCB. Strict validation passes
 for five boards; PMP22650 retains its two original negative-pad-size diagnostics
 (`/Pads6/Data` records 26 and 27), which the parser test explicitly checks.
 
-Downloaded `.PcbDoc` and `.SchDoc` files are ignored by git. Each imported
+Downloaded `.PcbDoc`, `.SchDoc`, and `.PrjPcb` files are ignored by git. Each imported
 file has a corresponding SVG visual snapshot test. The download script stores
 and verifies a pinned SHA-256 digest for every file before writing it. Nested
 archives are filtered during extraction so unrelated design-package content is

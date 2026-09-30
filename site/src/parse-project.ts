@@ -33,6 +33,7 @@ const ZIP_FILE_PATTERN = /\.zip$/iu
 interface ParsedViewableDocument {
   document: AltiumPcbDocument | AltiumSchDoc
   manifest: ProjectDocumentManifest
+  project?: AltiumPrjPcb
 }
 
 interface ParsedProjectDocument {
@@ -132,6 +133,14 @@ export function parseBrowserProjectFiles(
   }
 
   const projects = createProjectManifests(projectDocuments, documents)
+  for (const [index, project] of projects.entries()) {
+    for (const reference of project.documents) {
+      const entry = reference.documentId
+        ? documents.get(reference.documentId)
+        : undefined
+      if (entry) entry.project ??= projectDocuments[index]?.document
+    }
+  }
   const orderedDocuments = orderDocumentManifests(projects, documents)
   if (orderedDocuments.length === 0) {
     const reason =
@@ -179,6 +188,7 @@ export function renderProjectDocument({
     return serializeAltiumPcbToSvg(entry.document, {
       height: 1000,
       layers: view.layers,
+      project: entry.project,
       title,
       width: 1600,
     })
@@ -186,12 +196,14 @@ export function renderProjectDocument({
   if (view.layer) {
     return serializeAltiumPcbLayerToSvg(entry.document, view.layer, {
       height: 1000,
+      project: entry.project,
       title,
       width: 1600,
     })
   }
   return serializeAltiumPcbToSvg(entry.document, {
     height: 1000,
+    project: entry.project,
     title,
     width: 1600,
   })
