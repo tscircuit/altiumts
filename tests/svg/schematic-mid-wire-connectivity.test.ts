@@ -8,7 +8,7 @@ const verticalWire =
 const scenarios = [
   {
     name: "mid-wire-label",
-    netCount: 2,
+    netCount: 1,
     records: [
       horizontalWire,
       "|RECORD=25|TEXT=SIGNAL|FONTID=1|LOCATION.X=60|LOCATION.Y=60",
@@ -16,7 +16,7 @@ const scenarios = [
   },
   {
     name: "t-connection",
-    netCount: 2,
+    netCount: 1,
     records: [
       horizontalWire,
       "|RECORD=27|COLOR=128|LOCATIONCOUNT=2|X1=60|Y1=60|X2=60|Y2=100",
@@ -24,7 +24,7 @@ const scenarios = [
   },
   {
     name: "diagonal-connection",
-    netCount: 2,
+    netCount: 1,
     records: [
       "|RECORD=27|COLOR=128|LOCATIONCOUNT=2|X1=20|Y1=20|X2=100|Y2=100",
       "|RECORD=27|COLOR=128|LOCATIONCOUNT=2|X1=60|Y1=60|X2=100|Y2=20",
@@ -37,7 +37,7 @@ const scenarios = [
   },
   {
     name: "junction-crossing",
-    netCount: 2,
+    netCount: 1,
     records: [
       horizontalWire,
       verticalWire,
@@ -101,7 +101,7 @@ test.each(scenarios)(
     })
     const annotatedSvg = svg.replace(
       "</svg>",
-      `<text x="8" y="114" font-family="Arial" font-size="6" fill="#111827">${graph.nets.length} electrical nets</text></svg>`,
+      `<text x="8" y="114" font-family="Arial" font-size="6" fill="#111827">${graph.nets.length} electrical net${graph.nets.length === 1 ? "" : "s"}</text></svg>`,
     )
     await expect(annotatedSvg).toMatchSvgSnapshot(import.meta.path, name)
   },

@@ -5,8 +5,8 @@
     <defs><clipPath id="altium-sheet-paper"><rect x="0" y="0" width="120" height="120"/></clipPath></defs>
     <g data-sheet-content="true" clip-path="url(#altium-sheet-paper)">
     <polyline data-record="27" points="20,60 100,60" fill="none" stroke="#1166cc" stroke-width="0.25"/>
-    <polyline data-record="27" points="60,100 60,20" fill="none" stroke="#cc5522" stroke-width="0.25"/>
-    <circle data-record="29" cx="60" cy="60" r="1.8" fill="#800000"/>
+    <polyline data-record="27" points="60,100 60,20" fill="none" stroke="#1166cc" stroke-width="0.25"/>
+    <circle data-record="29" cx="60" cy="60" r="1.8" fill="#1166cc"/>
     </g>
   </g>
-<text x="8" y="114" font-family="Arial" font-size="6" fill="#111827">2 electrical nets</text></svg>
+<text x="8" y="114" font-family="Arial" font-size="6" fill="#111827">1 electrical net</text></svg>
