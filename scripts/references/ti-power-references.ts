@@ -66,6 +66,12 @@ export const TI_POWER_REFERENCE_ZIP_BUNDLES = [
         archivePath: "PMP22712 - E2 Altium.zip",
         outputs: [
           {
+            archivePath: "PMP22712.PrjPcb",
+            filename: "ti-pmp22712.PrjPcb",
+            sha256:
+              "633f5d0011e577fd0ab47351dfc99e1886b00f2af86532fe23a2bec8fb84bf56",
+          },
+          {
             archivePath: "PMP22712_PCB.PcbDoc",
             filename: TI_POWER_REFERENCE_PCB_FILENAMES.pmp22712,
             sha256:

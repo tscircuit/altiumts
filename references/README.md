@@ -76,3 +76,7 @@ not written into the repository.
 Run `bun run inventory-references` for a concise corpus report, or
 `bun run inventory-references --json` for machine-readable record and stream
 counts.
+
+- `ti-pmp22712.PrjPcb` is extracted from the same TIDM925 nested PMP22712
+  archive as the PCB. It supplies the real `PRJ_Number` and `PCB_Rev`
+  parameters used by the board title. Its checksum is pinned by the downloader.
