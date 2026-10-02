@@ -31,6 +31,7 @@ const VIEWABLE_FILE_PATTERN = /\.(?:pcbdoc|prjpcb|schdoc)$/iu
 const ZIP_FILE_PATTERN = /\.zip$/iu
 
 interface ParsedViewableDocument {
+  project?: AltiumPrjPcb
   document: AltiumPcbDocument | AltiumSchDoc
   manifest: ProjectDocumentManifest
 }
@@ -177,6 +178,7 @@ export function renderProjectDocument({
   }
   if (view.layers?.length) {
     return serializeAltiumPcbToSvg(entry.document, {
+      project: entry.project,
       height: 1000,
       layers: view.layers,
       title,
@@ -185,12 +187,14 @@ export function renderProjectDocument({
   }
   if (view.layer) {
     return serializeAltiumPcbLayerToSvg(entry.document, view.layer, {
+      project: entry.project,
       height: 1000,
       title,
       width: 1600,
     })
   }
   return serializeAltiumPcbToSvg(entry.document, {
+    project: entry.project,
     height: 1000,
     title,
     width: 1600,
@@ -337,8 +341,14 @@ function createProjectManifests(
         const resolvedPath = normalizeProjectPath(
           resolveAltiumProjectPath(baseDirectory, reference.path),
         )
+        const documentId = documentIdByPath.get(resolvedPath.toUpperCase())
+        const entry = documentId ? documents.get(documentId) : undefined
+        // Match the project's resolved document path, not a coincidental basename.
+        if (entry?.manifest.kind === "pcb" && !entry.project) {
+          entry.project = document
+        }
         return {
-          documentId: documentIdByPath.get(resolvedPath.toUpperCase()),
+          documentId,
           kind: reference.kind,
           path: reference.path,
           resolvedPath,
