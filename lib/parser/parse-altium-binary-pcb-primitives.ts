@@ -483,6 +483,14 @@ function decodeText(
     )
   }
 
+  if (payload.byteLength >= 252) {
+    // Modern Texts6 records retain a text-box justification even when it is
+    // inactive for the string. The validity byte follows the frame settings.
+    items.push(
+      field("JUSTIFICATIONVALID", booleanText(view.getUint8(240) !== 0)),
+    )
+  }
+
   return new AltiumTextRecord({
     items,
     originalBinaryPayload: payload,
