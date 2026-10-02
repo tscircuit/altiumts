@@ -1,9 +1,9 @@
-import { getSchematicPoint } from "../geometry/schematic-point"
 import { parseAltiumMeasurementToMils } from "../measurement/altium-measurement"
 import { getPcbContour, getPcbRegionGeometry } from "../pcb-contours"
 import type { AltiumRecord } from "../records/altium-record"
 import type { SvgPoint } from "./svg-types"
 
+export { getSchematicIndexedPoints } from "../geometry/get-schematic-indexed-points"
 export {
   getSchematicCoordinate,
   readSchematicInteger,
@@ -32,24 +32,6 @@ export function getPcbRegionContours(record: AltiumRecord): SvgPoint[][] {
   return [geometry.outline, ...geometry.holes]
     .map(({ points }) => points)
     .filter((contour) => contour.length >= 3)
-}
-
-export function getSchematicIndexedPoints(record: AltiumRecord): SvgPoint[] {
-  const points: SvgPoint[] = []
-  const declaredCount = Number(record.getCaseInsensitive("LOCATIONCOUNT"))
-  const maximum = Number.isFinite(declaredCount)
-    ? Math.min(Math.max(declaredCount, 0), 10_000)
-    : 10_000
-
-  for (let index = 1; index <= maximum; index++) {
-    const xKey = `X${index}`
-    const yKey = `Y${index}`
-    const point = getSchematicPoint(record, { xKey, yKey })
-    if (!point && !Number.isFinite(declaredCount)) break
-    points.push(point ?? { x: 0, y: 0 })
-  }
-
-  return points
 }
 
 export function altiumColorToCss(
