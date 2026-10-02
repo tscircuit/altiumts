@@ -18,10 +18,13 @@ export function getPcbBoardOutline(document: AltiumPcbDocument): SvgPoint[] {
   return document.boardGeometry.outline.points
 }
 
-export function getPcbDocumentBounds(document: AltiumPcbDocument): SvgBounds {
+export function getPcbDocumentBounds(
+  document: AltiumPcbDocument,
+  records: readonly AltiumRecord[] = document.records,
+): SvgBounds {
   const outlineBounds = boundsFromPoints(getPcbBoardOutline(document))
   if (outlineBounds) {
-    return document.records.reduce(
+    return records.reduce(
       (bounds, record) =>
         record.recordKind === "Dimension" ||
         isBoardMountedOverlayTrack({
@@ -36,16 +39,19 @@ export function getPcbDocumentBounds(document: AltiumPcbDocument): SvgBounds {
   }
 
   let bounds: SvgBounds | undefined
-  for (const record of document.records) {
+  for (const record of records) {
     bounds = mergeBounds(bounds, getPcbRecordBounds(record))
   }
 
   return bounds ?? { minX: 0, minY: 0, maxX: 1000, maxY: 800 }
 }
 
-export function getPcbContentBounds(document: AltiumPcbDocument): SvgBounds {
+export function getPcbContentBounds(
+  document: AltiumPcbDocument,
+  records: readonly AltiumRecord[] = document.records,
+): SvgBounds {
   let bounds = boundsFromPoints(getPcbBoardOutline(document))
-  for (const record of document.records) {
+  for (const record of records) {
     bounds = mergeBounds(bounds, getPcbRecordBounds(record))
   }
 

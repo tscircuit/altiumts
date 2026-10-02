@@ -105,7 +105,7 @@ export function parseBrowserProjectFiles(
             path: file.path,
             recordCount,
             views: [
-              ...(isLargeBoard && overviewLayers.length > 0
+              ...(overviewLayers.length > 0
                 ? [
                     {
                       group: "board" as const,
@@ -181,6 +181,7 @@ export function renderProjectDocument({
       project: entry.project,
       height: 1000,
       layers: view.layers,
+      viewSide: "top",
       title,
       width: 1600,
     })
