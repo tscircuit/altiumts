@@ -1,137 +1,137 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="369" viewBox="0 0 1945.5033 717.8271" role="img" aria-label="STM32 ST-Link V2.1 Mechanical 7" class="altium-pcb" data-renderer="altiumts">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="533" viewBox="0 0 1263.7796 673.2284" role="img" aria-label="STM32 ST-Link V2.1 Mechanical 7" class="altium-pcb" data-renderer="altiumts">
   <title>STM32 ST-Link V2.1 Mechanical 7</title>
   <rect width="100%" height="100%" fill="#071a16"/>
   <g stroke-linecap="round" stroke-linejoin="round">
-    <path data-record="BoardOutline" data-board-cutouts="1" d="M 700.763 632.142 L 811.3492 632.142 L 834.6213 654.1892 L 1881.8654 654.1892 L 1881.8654 63.638 L 834.6213 63.638 L 810.9992 87.2601 L 700.763 87.2601 L 700.763 632.142 Z M 652.102 119.1892 L 652.102 599.1892 L 62.102 599.1892 L 62.102 119.1892 L 652.102 119.1892 Z" fill="#123d32" fill-rule="evenodd" stroke="#6ee7b7" stroke-width="3"/>
-    <path data-record="Region" data-layer="MECHANICAL7" d="M 1043.263 498.6656 L 1043.263 567.6656 L 1072.263 567.6656 L 1072.263 498.6656 L 1043.263 498.6656 Z" fill="#ec4899" fill-opacity="0.32" fill-rule="evenodd" stroke="#ec4899" stroke-width="1.5"/>
-    <path data-record="Region" data-layer="MECHANICAL7" d="M 939.263 498.6656 L 939.263 567.6656 L 968.263 567.6656 L 968.263 498.6656 L 939.263 498.6656 Z" fill="#ec4899" fill-opacity="0.32" fill-rule="evenodd" stroke="#ec4899" stroke-width="1.5"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1182.0621" y1="438.6724" x2="1182.0621" y2="403.2393" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1182.0621" y1="438.6724" x2="1248.9913" y2="438.6723" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1248.9913" y1="438.6723" x2="1248.9913" y2="403.2393" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1182.0621" y1="403.2393" x2="1248.9913" y2="403.2393" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="975.138" y1="416.6714" x2="975.138" y2="385.1754" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="912.1459" y1="416.6714" x2="975.138" y2="416.6714" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="912.5209" y1="416.6714" x2="912.5209" y2="385.1754" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="912.1459" y1="385.1754" x2="975.138" y2="385.1754" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="976.9442" y1="296.0837" x2="976.9442" y2="260.6506" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="910.015" y1="260.6507" x2="976.9442" y2="260.6506" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="910.015" y1="296.0837" x2="910.015" y2="260.6507" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="910.015" y1="296.0837" x2="976.9442" y2="296.0837" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="975.138" y1="171.7434" x2="975.138" y2="140.2474" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="912.1459" y1="171.7434" x2="975.138" y2="171.7434" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="912.5209" y1="171.7434" x2="912.5209" y2="140.2474" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="912.1459" y1="140.2474" x2="975.138" y2="140.2474" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="976.9442" y1="234.8517" x2="976.9442" y2="199.4186" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="910.015" y1="199.4187" x2="976.9442" y2="199.4186" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="910.015" y1="234.8517" x2="910.015" y2="199.4187" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="910.015" y1="234.8517" x2="976.9442" y2="234.8517" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="976.9442" y1="479.7797" x2="976.9442" y2="444.3466" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="910.015" y1="444.3467" x2="976.9442" y2="444.3466" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="910.015" y1="479.7797" x2="910.015" y2="444.3467" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="910.015" y1="479.7797" x2="976.9442" y2="479.7797" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1399.5699" y1="336.742" x2="1399.5699" y2="305.246" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1336.5778" y1="336.742" x2="1399.5699" y2="336.742" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1336.9528" y1="336.742" x2="1336.9528" y2="305.246" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1336.5778" y1="305.246" x2="1399.5699" y2="305.246" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1335.8593" y1="397.3908" x2="1335.8593" y2="365.8948" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1335.8593" y1="365.8948" x2="1398.8514" y2="365.8948" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1398.4764" y1="397.3908" x2="1398.4764" y2="365.8948" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1335.8593" y1="397.3908" x2="1398.8514" y2="397.3908" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1399.5699" y1="275.52" x2="1399.5699" y2="244.024" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1336.5778" y1="275.52" x2="1399.5699" y2="275.52" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1336.9528" y1="275.52" x2="1336.9528" y2="244.024" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1336.5778" y1="244.024" x2="1399.5699" y2="244.024" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="997.6031" y1="112.0221" x2="997.6031" y2="80.5261" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="934.611" y1="112.0221" x2="997.6031" y2="112.0221" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="934.986" y1="112.0221" x2="934.986" y2="80.5261" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="934.611" y1="80.5261" x2="997.6031" y2="80.5261" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1119.9579" y1="436.796" x2="1119.9579" y2="405.3" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1056.9658" y1="436.796" x2="1119.9579" y2="436.796" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1057.3408" y1="436.796" x2="1057.3408" y2="405.3" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1056.9658" y1="405.3" x2="1119.9579" y2="405.3" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1334.4469" y1="534.5312" x2="1401.3761" y2="534.5312" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1334.4469" y1="534.5312" x2="1334.4469" y2="499.0982" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1334.4469" y1="499.0982" x2="1401.3761" y2="499.0981" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1401.3761" y1="534.5312" x2="1401.3761" y2="499.0981" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1334.4469" y1="462.7298" x2="1401.3761" y2="462.7298" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1334.4469" y1="462.7298" x2="1334.4469" y2="427.2968" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1334.4469" y1="427.2968" x2="1401.3761" y2="427.2967" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1401.3761" y1="462.7298" x2="1401.3761" y2="427.2967" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1067.2053" y1="113.8984" x2="1134.1345" y2="113.8984" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1067.2053" y1="113.8984" x2="1067.2053" y2="78.4654" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1067.2053" y1="78.4654" x2="1134.1345" y2="78.4653" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1134.1345" y1="113.8984" x2="1134.1345" y2="78.4653" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1334.4469" y1="596.7136" x2="1401.3761" y2="596.7136" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1334.4469" y1="596.7136" x2="1334.4469" y2="561.2806" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1334.4469" y1="561.2806" x2="1401.3761" y2="561.2805" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1401.3761" y1="596.7136" x2="1401.3761" y2="561.2805" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1674.0483" y1="366.7766" x2="1674.0483" y2="335.2806" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1611.0562" y1="366.7766" x2="1674.0483" y2="366.7766" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1611.4312" y1="366.7766" x2="1611.4312" y2="335.2806" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1611.0562" y1="335.2806" x2="1674.0483" y2="335.2806" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1531.6509" y1="111.3788" x2="1531.6509" y2="79.8828" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1468.6588" y1="111.3788" x2="1531.6509" y2="111.3788" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1469.0338" y1="111.3788" x2="1469.0338" y2="79.8828" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1468.6588" y1="79.8828" x2="1531.6509" y2="79.8828" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1601.3805" y1="111.1944" x2="1601.3805" y2="79.6984" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1601.3805" y1="79.6984" x2="1664.3726" y2="79.6984" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1663.9976" y1="111.1944" x2="1663.9976" y2="79.6984" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1601.3805" y1="111.1944" x2="1664.3726" y2="111.1944" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1185.23" y1="268.4788" x2="1216.726" y2="268.4788" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1185.23" y1="268.4788" x2="1185.23" y2="205.4867" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1185.23" y1="205.8617" x2="1216.726" y2="205.8617" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1216.726" y1="268.4788" x2="1216.726" y2="205.4867" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1122.1059" y1="204.7682" x2="1153.6019" y2="204.7682" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1153.6019" y1="267.7603" x2="1153.6019" y2="204.7682" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1122.1059" y1="267.3853" x2="1153.6019" y2="267.3853" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1122.1059" y1="267.7603" x2="1122.1059" y2="204.7682" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1399.5699" y1="172.9606" x2="1399.5699" y2="141.4646" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1336.5778" y1="172.9606" x2="1399.5699" y2="172.9606" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1336.9528" y1="172.9606" x2="1336.9528" y2="141.4646" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1336.5778" y1="141.4646" x2="1399.5699" y2="141.4646" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1056.4193" y1="204.7682" x2="1087.9153" y2="204.7682" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1087.9153" y1="267.7603" x2="1087.9153" y2="204.7682" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1056.4193" y1="267.3853" x2="1087.9153" y2="267.3853" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1056.4193" y1="267.7603" x2="1056.4193" y2="204.7682" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1701.2041" y1="616.0919" x2="1701.2041" y2="580.6588" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1634.2749" y1="616.0918" x2="1701.2041" y2="616.0919" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1634.2749" y1="616.0918" x2="1634.2749" y2="580.6588" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1634.2749" y1="580.6588" x2="1701.2041" y2="580.6588" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1278.5399" y1="123.7816" x2="1278.5399" y2="88.3485" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1278.5399" y1="88.3485" x2="1345.4691" y2="88.3486" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1345.4691" y1="123.7816" x2="1345.4691" y2="88.3486" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="1278.5399" y1="123.7816" x2="1345.4691" y2="123.7816" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="975.138" y1="355.4394" x2="975.138" y2="323.9434" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="912.1459" y1="355.4394" x2="975.138" y2="355.4394" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="912.5209" y1="355.4394" x2="912.5209" y2="323.9434" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="912.1459" y1="323.9434" x2="975.138" y2="323.9434" stroke="#ec4899" stroke-width="3.937"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="967.763" y1="565.1656" x2="1043.263" y2="565.1656" stroke="#ec4899" stroke-width="6"/>
-    <line data-record="Track" data-layer="MECHANICAL7" x1="967.763" y1="501.1656" x2="1043.263" y2="501.1656" stroke="#ec4899" stroke-width="6"/>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1236.196 428.4361) rotate(-360) scale(-1 1)">C3</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(991.7221 418.2817) rotate(-360) scale(-1 1)">R2</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(922.8103 270.8869) rotate(-180) scale(-1 1)">C14</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(991.7221 172.9169) rotate(-360) scale(-1 1)">R5</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(922.8103 209.6549) rotate(-180) scale(-1 1)">C16</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(922.8103 454.5829) rotate(-180) scale(-1 1)">C15</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1416.154 338.3523) rotate(-360) scale(-1 1)">R24</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1319.2752 364.7213) rotate(-180) scale(-1 1)">R20</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1416.154 277.1303) rotate(-360) scale(-1 1)">R27</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1014.1872 113.1956) rotate(-360) scale(-1 1)">R25</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1136.542 437.9695) rotate(-360) scale(-1 1)">R26</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1347.2422 509.3344) rotate(-180) scale(-1 1)">C13</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1347.2422 437.533) rotate(-180) scale(-1 1)">C11</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1080.0006 88.7016) rotate(-180) scale(-1 1)">C12</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1347.2422 571.5168) rotate(-180) scale(-1 1)">C10</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1690.6324 367.9501) rotate(-360) scale(-1 1)">R15</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1548.235 112.9891) rotate(-360) scale(-1 1)">R14</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1584.7964 78.5249) rotate(-180) scale(-1 1)">R13</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1184.0566 285.063) rotate(-270) scale(-1 1)">R6</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1155.2122 188.1841) rotate(-90) scale(-1 1)">R12</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1416.154 174.5709) rotate(-360) scale(-1 1)">R1</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1089.5256 188.1841) rotate(-90) scale(-1 1)">R4</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1647.0702 605.8556) rotate(0) scale(1 1)">C2</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1332.6738 98.5848) rotate(-180) scale(1 1)">C1</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(991.7221 356.6129) rotate(-360) scale(-1 1)">R3</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="23.8189" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-before-edge" transform="translate(1087.5032 541.9816) rotate(-360) scale(-1 1)">F1</text>
+    <path data-record="BoardOutline" data-board-cutouts="1" d="M 41.3386 609.8426 L 151.9248 609.8426 L 175.1969 631.8898 L 1222.441 631.8898 L 1222.441 41.3386 L 175.1969 41.3386 L 151.5748 64.9607 L 41.3386 64.9607 L 41.3386 609.8426 Z M -7.3224 96.8898 L -7.3224 576.8898 L -597.3224 576.8898 L -597.3224 96.8898 L -7.3224 96.8898 Z" fill="#123d32" fill-rule="evenodd" stroke="#6ee7b7" stroke-width="3"/>
+    <path data-record="Region" data-layer="MECHANICAL7" d="M 383.8386 476.3662 L 383.8386 545.3662 L 412.8386 545.3662 L 412.8386 476.3662 L 383.8386 476.3662 Z" fill="#ec4899" fill-opacity="0.32" fill-rule="evenodd" stroke="#ec4899" stroke-width="1.5"/>
+    <path data-record="Region" data-layer="MECHANICAL7" d="M 279.8386 476.3662 L 279.8386 545.3662 L 308.8386 545.3662 L 308.8386 476.3662 L 279.8386 476.3662 Z" fill="#ec4899" fill-opacity="0.32" fill-rule="evenodd" stroke="#ec4899" stroke-width="1.5"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="522.6377" y1="416.373" x2="522.6377" y2="380.9399" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="522.6377" y1="416.373" x2="589.5669" y2="416.3729" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="589.5669" y1="416.3729" x2="589.5669" y2="380.9399" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="522.6377" y1="380.9399" x2="589.5669" y2="380.9399" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="315.7136" y1="394.372" x2="315.7136" y2="362.876" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="252.7215" y1="394.372" x2="315.7136" y2="394.372" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="253.0965" y1="394.372" x2="253.0965" y2="362.876" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="252.7215" y1="362.876" x2="315.7136" y2="362.876" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="317.5198" y1="273.7843" x2="317.5198" y2="238.3512" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="250.5906" y1="238.3513" x2="317.5198" y2="238.3512" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="250.5906" y1="273.7843" x2="250.5906" y2="238.3513" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="250.5906" y1="273.7843" x2="317.5198" y2="273.7843" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="315.7136" y1="149.444" x2="315.7136" y2="117.948" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="252.7215" y1="149.444" x2="315.7136" y2="149.444" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="253.0965" y1="149.444" x2="253.0965" y2="117.948" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="252.7215" y1="117.948" x2="315.7136" y2="117.948" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="317.5198" y1="212.5523" x2="317.5198" y2="177.1192" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="250.5906" y1="177.1193" x2="317.5198" y2="177.1192" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="250.5906" y1="212.5523" x2="250.5906" y2="177.1193" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="250.5906" y1="212.5523" x2="317.5198" y2="212.5523" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="317.5198" y1="457.4803" x2="317.5198" y2="422.0472" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="250.5906" y1="422.0473" x2="317.5198" y2="422.0472" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="250.5906" y1="457.4803" x2="250.5906" y2="422.0473" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="250.5906" y1="457.4803" x2="317.5198" y2="457.4803" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="740.1455" y1="314.4426" x2="740.1455" y2="282.9466" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="677.1534" y1="314.4426" x2="740.1455" y2="314.4426" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="677.5284" y1="314.4426" x2="677.5284" y2="282.9466" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="677.1534" y1="282.9466" x2="740.1455" y2="282.9466" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="676.4349" y1="375.0914" x2="676.4349" y2="343.5954" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="676.4349" y1="343.5954" x2="739.427" y2="343.5954" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="739.052" y1="375.0914" x2="739.052" y2="343.5954" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="676.4349" y1="375.0914" x2="739.427" y2="375.0914" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="740.1455" y1="253.2206" x2="740.1455" y2="221.7246" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="677.1534" y1="253.2206" x2="740.1455" y2="253.2206" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="677.5284" y1="253.2206" x2="677.5284" y2="221.7246" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="677.1534" y1="221.7246" x2="740.1455" y2="221.7246" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="338.1787" y1="89.7227" x2="338.1787" y2="58.2267" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="275.1866" y1="89.7227" x2="338.1787" y2="89.7227" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="275.5616" y1="89.7227" x2="275.5616" y2="58.2267" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="275.1866" y1="58.2267" x2="338.1787" y2="58.2267" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="460.5335" y1="414.4966" x2="460.5335" y2="383.0006" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="397.5414" y1="414.4966" x2="460.5335" y2="414.4966" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="397.9164" y1="414.4966" x2="397.9164" y2="383.0006" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="397.5414" y1="383.0006" x2="460.5335" y2="383.0006" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="675.0225" y1="512.2318" x2="741.9517" y2="512.2318" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="675.0225" y1="512.2318" x2="675.0225" y2="476.7988" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="675.0225" y1="476.7988" x2="741.9517" y2="476.7987" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="741.9517" y1="512.2318" x2="741.9517" y2="476.7987" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="675.0225" y1="440.4304" x2="741.9517" y2="440.4304" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="675.0225" y1="440.4304" x2="675.0225" y2="404.9974" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="675.0225" y1="404.9974" x2="741.9517" y2="404.9973" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="741.9517" y1="440.4304" x2="741.9517" y2="404.9973" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="407.7809" y1="91.599" x2="474.7101" y2="91.599" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="407.7809" y1="91.599" x2="407.7809" y2="56.166" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="407.7809" y1="56.166" x2="474.7101" y2="56.1659" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="474.7101" y1="91.599" x2="474.7101" y2="56.1659" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="675.0225" y1="574.4142" x2="741.9517" y2="574.4142" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="675.0225" y1="574.4142" x2="675.0225" y2="538.9812" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="675.0225" y1="538.9812" x2="741.9517" y2="538.9811" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="741.9517" y1="574.4142" x2="741.9517" y2="538.9811" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="1014.6239" y1="344.4772" x2="1014.6239" y2="312.9812" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="951.6318" y1="344.4772" x2="1014.6239" y2="344.4772" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="952.0068" y1="344.4772" x2="952.0068" y2="312.9812" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="951.6318" y1="312.9812" x2="1014.6239" y2="312.9812" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="872.2265" y1="89.0794" x2="872.2265" y2="57.5834" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="809.2344" y1="89.0794" x2="872.2265" y2="89.0794" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="809.6094" y1="89.0794" x2="809.6094" y2="57.5834" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="809.2344" y1="57.5834" x2="872.2265" y2="57.5834" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="941.9561" y1="88.895" x2="941.9561" y2="57.399" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="941.9561" y1="57.399" x2="1004.9482" y2="57.399" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="1004.5732" y1="88.895" x2="1004.5732" y2="57.399" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="941.9561" y1="88.895" x2="1004.9482" y2="88.895" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="525.8056" y1="246.1794" x2="557.3016" y2="246.1794" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="525.8056" y1="246.1794" x2="525.8056" y2="183.1873" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="525.8056" y1="183.5623" x2="557.3016" y2="183.5623" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="557.3016" y1="246.1794" x2="557.3016" y2="183.1873" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="462.6815" y1="182.4688" x2="494.1775" y2="182.4688" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="494.1775" y1="245.4609" x2="494.1775" y2="182.4688" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="462.6815" y1="245.0859" x2="494.1775" y2="245.0859" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="462.6815" y1="245.4609" x2="462.6815" y2="182.4688" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="740.1455" y1="150.6612" x2="740.1455" y2="119.1652" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="677.1534" y1="150.6612" x2="740.1455" y2="150.6612" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="677.5284" y1="150.6612" x2="677.5284" y2="119.1652" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="677.1534" y1="119.1652" x2="740.1455" y2="119.1652" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="396.9949" y1="182.4688" x2="428.4909" y2="182.4688" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="428.4909" y1="245.4609" x2="428.4909" y2="182.4688" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="396.9949" y1="245.0859" x2="428.4909" y2="245.0859" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="396.9949" y1="245.4609" x2="396.9949" y2="182.4688" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="1041.7797" y1="593.7925" x2="1041.7797" y2="558.3594" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="974.8505" y1="593.7924" x2="1041.7797" y2="593.7925" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="974.8505" y1="593.7924" x2="974.8505" y2="558.3594" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="974.8505" y1="558.3594" x2="1041.7797" y2="558.3594" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="619.1155" y1="101.4822" x2="619.1155" y2="66.0491" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="619.1155" y1="66.0491" x2="686.0447" y2="66.0492" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="686.0447" y1="101.4822" x2="686.0447" y2="66.0492" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="619.1155" y1="101.4822" x2="686.0447" y2="101.4822" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="315.7136" y1="333.14" x2="315.7136" y2="301.644" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="252.7215" y1="333.14" x2="315.7136" y2="333.14" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="253.0965" y1="333.14" x2="253.0965" y2="301.644" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="252.7215" y1="301.644" x2="315.7136" y2="301.644" stroke="#ec4899" stroke-width="3.937"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="308.3386" y1="542.8662" x2="383.8386" y2="542.8662" stroke="#ec4899" stroke-width="6"/>
+    <line data-record="Track" data-layer="MECHANICAL7" x1="308.3386" y1="478.8662" x2="383.8386" y2="478.8662" stroke="#ec4899" stroke-width="6"/>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(576.7716 406.1367) rotate(-360) scale(-1 1)">C3</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(332.2977 395.9823) rotate(-360) scale(-1 1)">R2</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(263.3859 248.5875) rotate(-180) scale(-1 1)">C14</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(332.2977 150.6175) rotate(-360) scale(-1 1)">R5</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(263.3859 187.3555) rotate(-180) scale(-1 1)">C16</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(263.3859 432.2835) rotate(-180) scale(-1 1)">C15</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(756.7296 316.0529) rotate(-360) scale(-1 1)">R24</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(659.8508 342.4219) rotate(-180) scale(-1 1)">R20</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(756.7296 254.8309) rotate(-360) scale(-1 1)">R27</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(354.7628 90.8962) rotate(-360) scale(-1 1)">R25</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(477.1176 415.6701) rotate(-360) scale(-1 1)">R26</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(687.8178 487.035) rotate(-180) scale(-1 1)">C13</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(687.8178 415.2336) rotate(-180) scale(-1 1)">C11</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(420.5762 66.4022) rotate(-180) scale(-1 1)">C12</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(687.8178 549.2174) rotate(-180) scale(-1 1)">C10</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1031.208 345.6507) rotate(-360) scale(-1 1)">R15</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(888.8106 90.6897) rotate(-360) scale(-1 1)">R14</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(925.372 56.2255) rotate(-180) scale(-1 1)">R13</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(524.6322 262.7636) rotate(-270) scale(-1 1)">R6</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(495.7878 165.8847) rotate(-90) scale(-1 1)">R12</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(756.7296 152.2715) rotate(-360) scale(-1 1)">R1</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(430.1012 165.8847) rotate(-90) scale(-1 1)">R4</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(987.6458 583.5562) rotate(0) scale(1 1)">C2</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(673.2494 76.2854) rotate(-180) scale(1 1)">C1</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(332.2977 334.3135) rotate(-360) scale(-1 1)">R3</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="23.8189" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-before-edge" transform="translate(428.0788 519.6822) rotate(-360) scale(-1 1)">F1</text>
   </g>
 </svg>
