@@ -12,6 +12,7 @@ import {
 } from "./altium-values"
 import { getPcbLayerColor, PCB_BOARD_FILL_COLOR } from "./pcb-layer"
 import { isPcbSolderMaskLayer } from "./pcb-solder-mask"
+import { getPcbTextFontSize } from "./pcb-text-font-size"
 import { getPcbTextPositioning } from "./pcb-text-positioning"
 import { renderPcbDimension } from "./render-pcb-dimension"
 import type { AltiumPcbSvgOptions, SvgViewport } from "./svg-types"
@@ -147,7 +148,7 @@ export function renderPcbRecord({
     if (!normalizedText) return undefined
     const x = viewport.toX(getPcbMeasurement(record, "X"))
     const y = viewport.toY(getPcbMeasurement(record, "Y"))
-    const height = Math.max(getPcbMeasurement(record, "HEIGHT", 30), 3)
+    const fontSize = getPcbTextFontSize(record)
     const rotation = Number(record.getCaseInsensitive("ROTATION") ?? 0)
     const mirror = record.getBoolean("MIRROR") ? -1 : 1
     const fontName = record.getDecoded("FONTNAME") || "Arial"
@@ -161,10 +162,10 @@ export function renderPcbRecord({
         : lines
             .map(
               (line, index) =>
-                `<tspan x="0" dy="${index === 0 ? "0" : formatSvgNumber(height * 1.2)}">${escapeXml(line)}</tspan>`,
+                `<tspan x="0" dy="${index === 0 ? "0" : formatSvgNumber(fontSize * 1.2)}">${escapeXml(line)}</tspan>`,
             )
             .join("")
-    return `<text ${metadata} x="0" y="0" fill="${color}" font-family="${escapeXml(fontName)}, sans-serif" font-size="${formatSvgNumber(height)}" font-weight="${fontWeight}" font-style="${fontStyle}" text-anchor="${positioning.anchor}" dominant-baseline="${positioning.baseline}" transform="translate(${formatSvgNumber(x)} ${formatSvgNumber(y)}) rotate(${formatSvgNumber(-rotation)}) scale(${mirror} 1)">${textContent}</text>`
+    return `<text ${metadata} x="0" y="0" fill="${color}" font-family="${escapeXml(fontName)}, sans-serif" font-size="${formatSvgNumber(fontSize)}" font-weight="${fontWeight}" font-style="${fontStyle}" text-anchor="${positioning.anchor}" dominant-baseline="${positioning.baseline}" transform="translate(${formatSvgNumber(x)} ${formatSvgNumber(y)}) rotate(${formatSvgNumber(-rotation)}) scale(${mirror} 1)">${textContent}</text>`
   }
 
   if (kind === "Component" && svgOptions.showComponentOrigins) {

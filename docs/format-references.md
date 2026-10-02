@@ -14,6 +14,24 @@ available format research. Code must not be copied from incompatible licenses.
   metadata. The importer also confirms that `Models/Data` record order maps to
   numeric `Models/<index>` streams containing zlib-compressed STEP data.
 
+### Arial PCB text metrics
+
+Native TrueType text uses a font-cell height; SVG `font-size` uses em units.
+The Arial regular, bold, italic and bold-italic font tables were checked for
+`head.unitsPerEm = 2048`, `OS/2.usWinAscent = 1854`, and
+`OS/2.usWinDescent = 434`. Their conversion is therefore
+`HEIGHT * 2048 / (1854 + 434)`, including multiline spacing. The field meanings
+are defined in Microsoft's OpenType [head table](https://learn.microsoft.com/en-us/typography/opentype/spec/head)
+and [Windows metrics](https://learn.microsoft.com/en-us/typography/opentype/spec/os2#uswinascent).
+
+The real PMP22712/PMP22773 titles and PMP22712/PMP23595 warnings cover this
+conversion alongside the original Altium comparison images. These metrics
+apply only to Arial TrueType text; explicit stroke-font selection, unknown
+families and related but different fonts such as Arial Narrow retain their
+existing sizing. Font binaries are not bundled, so host font substitution can
+still affect glyph shapes. Placement and stroke-font rendering are separate
+from this conversion.
+
 ## Corpus and structural references
 
 - [`tscircuit/kicadts`](https://github.com/tscircuit/kicadts) for the general
