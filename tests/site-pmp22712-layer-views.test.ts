@@ -1,5 +1,8 @@
 import { expect, test } from "bun:test"
-import { parseBrowserProjectFiles } from "../site/src/parse-project"
+import {
+  parseBrowserProjectFiles,
+  renderProjectDocument,
+} from "../site/src/parse-project"
 import { readReferenceBytes } from "./svg/read-reference"
 
 test("matches the declared PMP22712 Altium layer panel", async () => {
@@ -78,3 +81,43 @@ function getLayerSummary({
 }): string {
   return `${layer}:${label}`
 }
+
+test("defaults PMP22712 to a clean overview while retaining mechanical views", async () => {
+  const source = await readReferenceBytes("ti-pmp22712.PcbDoc")
+  const state = parseBrowserProjectFiles([
+    { path: "PMP22712_PCB.PcbDoc", bytes: Uint8Array.from(source).buffer },
+  ])
+  const pcb = state.manifest.documents[0]!
+  expect(pcb.views[0]).toMatchObject({
+    id: "overview",
+    layers: ["TOP", "BOTTOM", "TOPOVERLAY", "BOTTOMOVERLAY", "MULTILAYER"],
+  })
+  const overview = renderProjectDocument({
+    documentId: pcb.id,
+    state,
+    viewId: pcb.views[0]!.id,
+  })
+  // Hidden dimensions include control coordinates far outside the physical board.
+  const viewBox = overview
+    .match(/viewBox="([^"]+)"/)![1]!
+    .split(" ")
+    .map(Number)
+  expect(viewBox[2]).toBeLessThan(2000)
+  expect(viewBox[3]).toBeLessThan(2000)
+  expect(overview).toContain('data-layer="TOP"')
+  expect(overview).toContain('data-layer="TOPOVERLAY"')
+  expect(overview).not.toContain('data-layer="MECHANICAL')
+  expect(overview).not.toContain('data-record="Dimension"')
+  const dimensions = renderProjectDocument({
+    documentId: pcb.id,
+    state,
+    viewId: "layer:MECHANICAL2",
+  })
+  expect(dimensions).toContain('data-record="Dimension"')
+  const complete = renderProjectDocument({
+    documentId: pcb.id,
+    state,
+    viewId: "board",
+  })
+  expect(complete).toContain('data-record="Dimension"')
+})

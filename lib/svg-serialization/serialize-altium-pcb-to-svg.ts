@@ -48,11 +48,21 @@ export function serializeAltiumPcbToSvg(
   const layerAliases = getAltiumPcbLayerAliasMap(
     getAltiumPcbDocumentLayerStackEntries(document),
   )
+  const layerRecords = [
+    ...document.records,
+    ...getPcbSolderMaskRecords(document, options.layers),
+  ].filter((record) =>
+    recordAppliesToLayers({
+      layerAliases,
+      record,
+      requestedLayers: options.layers,
+    }),
+  )
   const bounds = options.viewBox
     ? pcbViewBoxToBounds(options.viewBox)
     : options.fitToContent
-      ? getPcbContentBounds(document)
-      : getPcbDocumentBounds(document)
+      ? getPcbContentBounds(document, layerRecords)
+      : getPcbDocumentBounds(document, layerRecords)
   const viewport = createSvgViewport(bounds, {
     ...options,
     margin: options.margin ?? (options.viewBox ? 0 : undefined),
@@ -110,17 +120,7 @@ export function serializeAltiumPcbToSvg(
     document,
     layerDrawingOrder: options.layerDrawingOrder,
     viewSide: options.viewSide,
-    records: [
-      ...document.records,
-      ...getPcbSolderMaskRecords(document, options.layers),
-    ]
-      .filter((record) =>
-        recordAppliesToLayers({
-          layerAliases,
-          record,
-          requestedLayers: options.layers,
-        }),
-      )
+    records: layerRecords
       .filter((record) => recordAppliesToReferences(document, record, options))
       .filter(
         (record) =>
