@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="643" viewBox="0 0 1400 900" role="img" aria-label="Native PCB text: rotation and mirror" class="altium-pcb" data-renderer="altiumts">
+  <title>Native PCB text: rotation and mirror</title>
+  <rect width="100%" height="100%" fill="#071a16"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <polygon data-record="BoardOutline" points="0,900 1400,900 1400,0 0,0" fill="#123d32" stroke="#6ee7b7" stroke-width="3"/>
+    <line data-record="Track" data-layer="BOTTOMOVERLAY" x1="185" y1="700" x2="215" y2="700" stroke="#fde68a" stroke-width="2"/>
+    <line data-record="Track" data-layer="BOTTOMOVERLAY" x1="200" y1="715" x2="200" y2="685" stroke="#fde68a" stroke-width="2"/>
+    <line data-record="Track" data-layer="BOTTOMOVERLAY" x1="515" y1="700" x2="545" y2="700" stroke="#fde68a" stroke-width="2"/>
+    <line data-record="Track" data-layer="BOTTOMOVERLAY" x1="530" y1="715" x2="530" y2="685" stroke="#fde68a" stroke-width="2"/>
+    <line data-record="Track" data-layer="BOTTOMOVERLAY" x1="845" y1="700" x2="875" y2="700" stroke="#fde68a" stroke-width="2"/>
+    <line data-record="Track" data-layer="BOTTOMOVERLAY" x1="860" y1="715" x2="860" y2="685" stroke="#fde68a" stroke-width="2"/>
+    <line data-record="Track" data-layer="BOTTOMOVERLAY" x1="1175" y1="700" x2="1205" y2="700" stroke="#fde68a" stroke-width="2"/>
+    <line data-record="Track" data-layer="BOTTOMOVERLAY" x1="1190" y1="715" x2="1190" y2="685" stroke="#fde68a" stroke-width="2"/>
+    <text data-record="Text" data-layer="BOTTOMOVERLAY" x="0" y="0" fill="#fde68a" font-family="Arial, sans-serif" font-size="40" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(200 700) rotate(0) scale(-1 1)">F12 0</text>
+    <text data-record="Text" data-layer="BOTTOMOVERLAY" x="0" y="0" fill="#fde68a" font-family="Arial, sans-serif" font-size="40" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(530 700) rotate(-90) scale(-1 1)">F12 90</text>
+    <text data-record="Text" data-layer="BOTTOMOVERLAY" x="0" y="0" fill="#fde68a" font-family="Arial, sans-serif" font-size="40" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(860 700) rotate(-180) scale(-1 1)">F12 180</text>
+    <text data-record="Text" data-layer="BOTTOMOVERLAY" x="0" y="0" fill="#fde68a" font-family="Arial, sans-serif" font-size="40" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1190 700) rotate(-270) scale(-1 1)">F12 270</text>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="185" y1="200" x2="215" y2="200" stroke="#f8fafc" stroke-width="2"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="200" y1="215" x2="200" y2="185" stroke="#f8fafc" stroke-width="2"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="515" y1="200" x2="545" y2="200" stroke="#f8fafc" stroke-width="2"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="530" y1="215" x2="530" y2="185" stroke="#f8fafc" stroke-width="2"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="845" y1="200" x2="875" y2="200" stroke="#f8fafc" stroke-width="2"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="860" y1="215" x2="860" y2="185" stroke="#f8fafc" stroke-width="2"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="1175" y1="200" x2="1205" y2="200" stroke="#f8fafc" stroke-width="2"/>
+    <line data-record="Track" data-layer="TOPOVERLAY" x1="1190" y1="215" x2="1190" y2="185" stroke="#f8fafc" stroke-width="2"/>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="40" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(200 200) rotate(0) scale(1 1)">F12 0</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="40" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(530 200) rotate(-90) scale(1 1)">F12 90</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="40" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(860 200) rotate(-180) scale(1 1)">F12 180</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="40" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1190 200) rotate(-270) scale(1 1)">F12 270</text>
+  </g>
+</svg>
