@@ -4,9 +4,19 @@ import type { SvgPoint } from "./svg-types"
 
 export interface PcbDimensionGeometry {
   arrowSize: number
+  openArrows: boolean
+  arrowLineWidth: number
+  arrowLength: number
+  arrowsOutside: boolean
+  extensionLines: { start: SvgPoint; end: SvgPoint }[]
+  extensionLineWidth: number
+  textAngle: number
+  textCorners: SvgPoint[]
+  textGap: number
+  textMirror: boolean
+  textAtSavedOrigin: boolean
   dimensionEnd: SvgPoint
   dimensionStart: SvgPoint
-  estimatedTextHalfWidth: number
   label: string
   lineWidth: number
   referenceEnd: SvgPoint
@@ -26,23 +36,32 @@ export function getPcbDimensionGeometry(
 
   const deltaX = referenceEnd.x - referenceStart.x
   const deltaY = referenceEnd.y - referenceStart.y
-  const measuredDistanceMils = Math.hypot(deltaX, deltaY)
-  if (measuredDistanceMils === 0) return undefined
+  const referenceDistance = Math.hypot(deltaX, deltaY)
+  if (referenceDistance === 0) return undefined
 
-  const perpendicularX = -deltaY / measuredDistanceMils
-  const perpendicularY = deltaX / measuredDistanceMils
+  // Linear dimensions measure along their saved angle, not the chord between
+  // references (PMP22712's bottom corners have different Y coordinates).
+  const angle =
+    dimension.dimensionKind === "1" ? dimension.getNumber("ANGLE") : undefined
+  const radians =
+    angle === undefined ? Math.atan2(deltaY, deltaX) : (angle * Math.PI) / 180
+  const direction = { x: Math.cos(radians), y: Math.sin(radians) }
+  const measuredDistanceMils = Math.abs(
+    deltaX * direction.x + deltaY * direction.y,
+  )
+  if (measuredDistanceMils < 1e-6) return undefined
   const lineAnchor = dimension.dimensionLineAnchor ?? referenceStart
-  const perpendicularOffsetMils =
-    (lineAnchor.x - referenceStart.x) * perpendicularX +
-    (lineAnchor.y - referenceStart.y) * perpendicularY
-  const dimensionStart = {
-    x: referenceStart.x + perpendicularX * perpendicularOffsetMils,
-    y: referenceStart.y + perpendicularY * perpendicularOffsetMils,
+  const projectToLine = (point: SvgPoint): SvgPoint => {
+    const distance =
+      (point.x - lineAnchor.x) * direction.x +
+      (point.y - lineAnchor.y) * direction.y
+    return {
+      x: lineAnchor.x + distance * direction.x,
+      y: lineAnchor.y + distance * direction.y,
+    }
   }
-  const dimensionEnd = {
-    x: referenceEnd.x + perpendicularX * perpendicularOffsetMils,
-    y: referenceEnd.y + perpendicularY * perpendicularOffsetMils,
-  }
+  const dimensionStart = projectToLine(referenceStart)
+  const dimensionEnd = projectToLine(referenceEnd)
   const textPosition = dimension.textPoints[0] ?? {
     x: (dimensionStart.x + dimensionEnd.x) / 2,
     y: (dimensionStart.y + dimensionEnd.y) / 2,
@@ -56,7 +75,97 @@ export function getPcbDimensionGeometry(
     record,
   })
 
+  const extensionGap = getMeasurementMils({
+    fallbackMils: 0,
+    fieldName: "EXTENSIONPICKGAP",
+    record,
+  })
+  const extensionOffset = getMeasurementMils({
+    fallbackMils: 0,
+    fieldName: "EXTENSIONOFFSET",
+    record,
+  })
+  const extensionLines = [
+    [referenceStart, dimensionStart],
+    [referenceEnd, dimensionEnd],
+  ].flatMap(([start, end]) => {
+    if (!start || !end) return []
+    const distance = Math.hypot(end.x - start.x, end.y - start.y)
+    if (distance <= extensionGap) return []
+    const x = (end.x - start.x) / distance
+    const y = (end.y - start.y) / distance
+    return [
+      {
+        start: { x: start.x + x * extensionGap, y: start.y + y * extensionGap },
+        end: { x: end.x + x * extensionOffset, y: end.y + y * extensionOffset },
+      },
+    ]
+  })
+  const textAngle =
+    dimension.getNumber("TEXT1ANGLE") ?? (radians * 180) / Math.PI
+  const textAtSavedOrigin =
+    dimension.getAltiumMeasurement("TEXT1X") !== undefined &&
+    dimension.getAltiumMeasurement("TEXT1Y") !== undefined
+
+  const textMirror = dimension.getBoolean("TEXT1MIRROR") === true
+  const textWidth = label.length * textHeight * 0.6
+  const textRadians = (textAngle * Math.PI) / 180
+  const textCorners = [
+    [
+      textAtSavedOrigin ? 0 : -textWidth / 2,
+      textAtSavedOrigin ? 0 : -textHeight / 2,
+    ],
+    [
+      textAtSavedOrigin ? textWidth : textWidth / 2,
+      textAtSavedOrigin ? 0 : -textHeight / 2,
+    ],
+    [
+      textAtSavedOrigin ? textWidth : textWidth / 2,
+      textAtSavedOrigin ? textHeight : textHeight / 2,
+    ],
+    [
+      textAtSavedOrigin ? 0 : -textWidth / 2,
+      textAtSavedOrigin ? textHeight : textHeight / 2,
+    ],
+  ].map(([x = 0, y = 0]) => {
+    const mirroredX = textMirror ? -x : x
+    return {
+      x:
+        textPosition.x +
+        mirroredX * Math.cos(textRadians) -
+        y * Math.sin(textRadians),
+      y:
+        textPosition.y +
+        mirroredX * Math.sin(textRadians) +
+        y * Math.cos(textRadians),
+    }
+  })
+
   return {
+    openArrows: dimension.dimensionKind === "1",
+    arrowLineWidth: getMeasurementMils({
+      fallbackMils: dimension.lineWidthMils ?? 8,
+      fieldName: "ARROWLINEWIDTH",
+      record,
+    }),
+    textCorners,
+    textGap,
+    arrowLength: getMeasurementMils({
+      fallbackMils: 100,
+      fieldName: "ARROWLENGTH",
+      record,
+    }),
+    arrowsOutside:
+      dimension.getDecoded("ARROWPOSITION")?.toLowerCase() === "outside",
+    extensionLines,
+    extensionLineWidth: getMeasurementMils({
+      fallbackMils: dimension.lineWidthMils ?? 8,
+      fieldName: "EXTENSIONLINEWIDTH",
+      record,
+    }),
+    textAngle,
+    textMirror,
+    textAtSavedOrigin,
     arrowSize: getMeasurementMils({
       fallbackMils: 40,
       fieldName: "ARROWSIZE",
@@ -64,7 +173,6 @@ export function getPcbDimensionGeometry(
     }),
     dimensionEnd,
     dimensionStart,
-    estimatedTextHalfWidth: label.length * textHeight * 0.3 + textGap,
     label,
     lineWidth: dimension.lineWidthMils ?? 8,
     referenceEnd,
@@ -82,7 +190,12 @@ function getDimensionLabel({
   measuredDistanceMils: number
 }): string {
   const textFormat = dimension.getDecoded("TEXTFORMAT")?.trim()
-  if (textFormat && textFormat !== "<>") return textFormat
+  // Native linear dimensions use a sample value (10mil), not a literal label.
+  const nativeValueAndUnit =
+    dimension.dimensionKind === "1" && textFormat?.toLowerCase() === "10mil"
+  if (textFormat?.toLowerCase() === "none") return ""
+  if (textFormat && textFormat !== "<>" && !nativeValueAndUnit)
+    return textFormat
 
   const precision = Math.min(Math.max(dimension.precision ?? 2, 0), 6)
   const normalizedUnit = dimension.unit?.toUpperCase() ?? "MILS"
@@ -91,8 +204,8 @@ function getDimensionLabel({
     normalizedUnit,
   })
   const prefix = dimension.prefix ?? ""
-  const suffix = dimension.suffix ?? ` ${unitLabel}`
-  return `${prefix}${amount.toFixed(precision)}${suffix}`
+  const suffix = dimension.suffix ?? (nativeValueAndUnit ? "" : ` ${unitLabel}`)
+  return `${prefix}${amount.toFixed(precision)}${nativeValueAndUnit ? unitLabel : ""}${suffix}`
 }
 
 function convertMilsForDimensionUnit({
