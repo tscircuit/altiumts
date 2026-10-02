@@ -39,13 +39,15 @@ export class AltiumDimensionRecord extends AltiumRecord {
   }
 
   get textPoints(): AltiumPoint[] {
-    const unindexedTextPoint = getPcbRecordPoint(this, ["TEXTX"], ["TEXTY"])
-    if (unindexedTextPoint) return [unindexedTextPoint]
-    return getIndexedDimensionPoints({
+    // Native dimensions save the rendered text separately from the control point.
+    const indexedPoints = getIndexedDimensionPoints({
       pointInfix: "",
       prefix: "TEXT",
       record: this,
     })
+    if (indexedPoints.length > 0) return indexedPoints
+    const unindexedTextPoint = getPcbRecordPoint(this, ["TEXTX"], ["TEXTY"])
+    return unindexedTextPoint ? [unindexedTextPoint] : []
   }
 
   get unit(): string | undefined {

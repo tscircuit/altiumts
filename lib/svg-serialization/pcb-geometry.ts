@@ -87,38 +87,22 @@ export function getPcbRecordBounds(
   if (kind === "Dimension") {
     const geometry = getPcbDimensionGeometry(record)
     if (!geometry) return undefined
-    const dimensionDeltaX = geometry.dimensionEnd.x - geometry.dimensionStart.x
-    const dimensionDeltaY = geometry.dimensionEnd.y - geometry.dimensionStart.y
-    const dimensionLength = Math.hypot(dimensionDeltaX, dimensionDeltaY)
-    const textDirection = {
-      x: dimensionDeltaX / dimensionLength,
-      y: dimensionDeltaY / dimensionLength,
-    }
     const bounds = boundsFromPoints([
+      ...geometry.extensionLines.flatMap(({ start, end }) => [start, end]),
       geometry.referenceStart,
       geometry.referenceEnd,
       geometry.dimensionStart,
       geometry.dimensionEnd,
-      geometry.textPosition,
-      {
-        x:
-          geometry.textPosition.x -
-          textDirection.x * geometry.estimatedTextHalfWidth,
-        y:
-          geometry.textPosition.y -
-          textDirection.y * geometry.estimatedTextHalfWidth,
-      },
-      {
-        x:
-          geometry.textPosition.x +
-          textDirection.x * geometry.estimatedTextHalfWidth,
-        y:
-          geometry.textPosition.y +
-          textDirection.y * geometry.estimatedTextHalfWidth,
-      },
+      ...geometry.textCorners,
     ])
     return bounds
-      ? expandBounds(bounds, Math.max(geometry.arrowSize, geometry.textHeight))
+      ? expandBounds(
+          bounds,
+          Math.max(
+            geometry.arrowsOutside ? geometry.arrowLength : geometry.arrowSize,
+            geometry.textHeight,
+          ),
+        )
       : undefined
   }
 
