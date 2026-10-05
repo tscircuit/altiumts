@@ -45,9 +45,8 @@ test("shows knockout text against anchors for all nine alignments", async () => 
 test("renders knockout backgrounds at all nine anchors", () => {
   const { svg, alignments } = renderAlignmentBoard()
   expect(svg.match(/data-knockout="true"/g)).toHaveLength(9)
-  for (const [index] of alignments.entries()) {
-    const left =
-      [-10, -10, -10, -81.25, -51.85, -106.3, -127.3, -169, -177.4][index] ?? 0
+  for (const [index, text] of alignments.entries()) {
+    const left = -(Math.floor(index / 3) * text.length * 30 * 0.8) / 2 - 10
     const top = -(index % 3) * 15
     expect(svg).toContain(`x="${left}" y="${top - 10}"`)
   }

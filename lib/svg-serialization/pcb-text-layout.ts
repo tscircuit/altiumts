@@ -2,7 +2,6 @@ import { decodeAltiumWideString } from "../decode-altium-wide-string"
 import type { AltiumRecord } from "../records/altium-record"
 import { getPcbMeasurement } from "./altium-values"
 import { getPcbTextPositioning } from "./pcb-text-positioning"
-import { getArialTextWidth } from "./pcb-text-width"
 
 export function getPcbTextLayout(record: AltiumRecord, text?: string) {
   const normalizedText = trimPcbTextLineEnds(
@@ -18,16 +17,7 @@ export function getPcbTextLayout(record: AltiumRecord, text?: string) {
   const layout = { normalizedText, height, fontName, positioning, lines }
   if (!record.getBoolean("INVERTED")) return { ...layout, knockout: undefined }
   const margin = Math.max(getPcbMeasurement(record, "MARGINBORDERWIDTH"), 0)
-  const textWidth = Math.max(
-    ...lines.map((line) => {
-      if (
-        fontName.trim().toLowerCase() !== "arial" ||
-        /[^\x20-\x7e]/.test(line)
-      )
-        return line.length * height * 0.8
-      return getArialTextWidth(line, height, record.getBoolean("BOLD") === true)
-    }),
-  )
+  const textWidth = Math.max(...lines.map((line) => line.length)) * height * 0.8
   const textHeight = height * (1 + (lines.length - 1) * 1.2)
   const horizontalOffset = { start: 0, middle: 0.5, end: 1 }[positioning.anchor]
   const verticalOffset = {

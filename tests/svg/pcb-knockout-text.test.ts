@@ -88,21 +88,3 @@ test("aligns explicit knockout rectangles at all nine anchors", () => {
     }
   }
 })
-
-test("fits Arial knockout backgrounds to character widths without changing font size", () => {
-  for (const [text, textWidth, bold] of [
-    ["DATA", 106.8, false],
-    ["DATA", 110.8, true],
-    ["III", 33.6, false],
-    ["WWW", 112.8, false],
-  ] as const) {
-    const svg = serializeAltiumPcbToSvg(
-      parseAltiumPcbDoc(
-        `|RECORD=Board\n|RECORD=Text|LAYER=TOPOVERLAY|HEIGHT=40mil|TEXT=${text}|FONTNAME=Arial|BOLD=${bold}|JUSTIFICATION=5|INVERTED=TRUE|MARGINBORDERWIDTH=10mil`,
-      ),
-    )
-    expect(svg).toContain(`width="${textWidth + 20}"`)
-    expect(svg).toContain(`x="${-textWidth / 2 - 10}"`)
-    expect(svg).toContain('font-size="40"')
-  }
-})
