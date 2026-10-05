@@ -31,7 +31,23 @@ test("compares complete nema17 knockout text with the Circuit JSON reference", a
   const rendered = serializeAltiumPcbToSvg(document, {
     width: 800,
     height: 800,
+    viewSide: "top",
   })
+  const logo = document.records.filter(
+    (record) =>
+      record.recordKind === "Region" &&
+      record.getCaseInsensitive("LAYER") === "BOTTOMOVERLAY",
+  )
+  expect(logo).toHaveLength(1)
+  const logoTag = 'data-record="Region" data-layer="BOTTOMOVERLAY"'
+  expect(rendered.indexOf(logoTag)).toBeGreaterThan(-1)
+  expect(rendered.indexOf(logoTag)).toBeLessThan(
+    rendered.indexOf('data-record="BoardOutline"'),
+  )
+  const bottom = serializeAltiumPcbToSvg(document, { viewSide: "bottom" })
+  expect(bottom.indexOf(logoTag)).toBeGreaterThan(
+    bottom.indexOf('data-record="BoardOutline"'),
+  )
   const panel = (svg: string, x: number) =>
     svg.replace(
       /<svg\b([^>]*)>/,

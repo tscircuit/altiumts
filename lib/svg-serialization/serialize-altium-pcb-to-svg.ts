@@ -3,6 +3,7 @@ import { decodeAltiumWideString } from "../decode-altium-wide-string"
 import { getPcbRegionSemanticKind } from "../pcb-contours"
 import {
   getAltiumPcbDocumentLayerStackEntries,
+  getAltiumPcbLayerAliasKey,
   getAltiumPcbLayerAliasMap,
 } from "../pcb-layers"
 import {
@@ -56,9 +57,17 @@ export function serializeAltiumPcbToSvg(
     margin: options.margin ?? (options.viewBox ? 0 : undefined),
   })
   const content: string[] = []
+  const backOverlayContent: string[] = []
   const outline = getPcbBoardOutline(document)
   const boardCutouts =
     options.showBoardCutouts === false ? [] : document.boardGeometry.cutouts
+  const backOverlay =
+    options.viewSide === "bottom" ? "TOPOVERLAY" : "BOTTOMOVERLAY"
+  const obscureBackOverlay = Boolean(
+    options.viewSide &&
+      outline.length >= 3 &&
+      options.showBoardOutline !== false,
+  )
   const componentDesignatorTextLookup = createComponentTextLookup(
     document,
     "DESIGNATOR",
@@ -165,7 +174,17 @@ export function serializeAltiumPcbToSvg(
       },
       viewport,
     })
-    if (rendered) content.push(rendered)
+    if (!rendered) continue
+    const layer = record.getCaseInsensitive("LAYER")
+    if (
+      obscureBackOverlay &&
+      layer &&
+      getAltiumPcbLayerAliasKey(layer, layerAliases) === backOverlay
+    ) {
+      backOverlayContent.push(rendered)
+    } else {
+      content.push(rendered)
+    }
   }
 
   const layerTitle = options.layers?.length
@@ -174,7 +193,7 @@ export function serializeAltiumPcbToSvg(
   return createSvgDocument({
     backgroundColor: options.backgroundColor ?? "#071a16",
     className: "altium-pcb",
-    content,
+    content: [...backOverlayContent, ...content],
     title: options.title ?? `Altium PCB${layerTitle}`,
     viewport,
   })
