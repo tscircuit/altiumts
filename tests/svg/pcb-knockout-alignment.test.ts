@@ -42,7 +42,7 @@ test("shows knockout text against anchors for all nine alignments", async () => 
   await expect(svg).toMatchSvgSnapshot(import.meta.path)
 })
 
-test.failing("renders knockout backgrounds at all nine anchors", () => {
+test("renders knockout backgrounds at all nine anchors", () => {
   const { svg, alignments } = renderAlignmentBoard()
   expect(svg.match(/data-knockout="true"/g)).toHaveLength(9)
   for (const [index, text] of alignments.entries()) {

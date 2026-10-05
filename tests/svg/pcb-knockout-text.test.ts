@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test"
 import { parseAltiumPcbDoc, serializeAltiumPcbToSvg } from "../../lib"
 
-test.failing("renders knockout backgrounds with transparent letters", () => {
+test("renders knockout backgrounds with transparent letters", () => {
   const document = parseAltiumPcbDoc(
     [
       "|RECORD=Board|VX0=0mil|VY0=0mil|VX1=700mil|VY1=0mil|VX2=700mil|VY2=500mil|VX3=0mil|VY3=500mil",
@@ -21,7 +21,7 @@ test.failing("renders knockout backgrounds with transparent letters", () => {
   expect(svg).toContain(">Normal</text>")
 })
 
-test.failing("uses explicit knockout rectangle dimensions", () => {
+test("uses explicit knockout rectangle dimensions", () => {
   const svg = serializeAltiumPcbToSvg(
     parseAltiumPcbDoc(
       "|RECORD=Board\n|RECORD=Text|LAYER=TOPOVERLAY|X=0mil|Y=0mil|HEIGHT=40mil|TEXT=DATA|INVERTED=TRUE|INVERTEDRECT=TRUE|TEXTBOXWIDTH=200mil|TEXTBOXHEIGHT=80mil|MARGINBORDERWIDTH=10mil",

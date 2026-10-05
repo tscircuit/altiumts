@@ -129,7 +129,7 @@ export function serializeAltiumPcbToSvg(
       }),
   })
 
-  for (const record of records) {
+  for (const [recordIndex, record] of records.entries()) {
     const polygonIndex =
       record.recordKind === "Polygon"
         ? getPcbRecordPolygonIndex(document, record)
@@ -141,6 +141,7 @@ export function serializeAltiumPcbToSvg(
         !polygonIndexesWithRegionRecords.has(polygonIndex))
     const rendered = renderPcbRecord({
       record,
+      recordIndex,
       text: resolveComponentText(
         document,
         record,
