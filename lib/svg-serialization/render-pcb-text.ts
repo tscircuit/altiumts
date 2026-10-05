@@ -1,8 +1,8 @@
-import pixelWidth from "string-pixel-width"
 import { decodeAltiumWideString } from "../decode-altium-wide-string"
 import type { AltiumRecord } from "../records/altium-record"
 import { getPcbMeasurement } from "./altium-values"
 import { getPcbTextPositioning } from "./pcb-text-positioning"
+import { getArialTextWidth } from "./pcb-text-width"
 import type { SvgViewport } from "./svg-types"
 import { escapeXml, formatSvgNumber } from "./svg-utils"
 
@@ -62,12 +62,11 @@ export function renderPcbText({
         ) {
           return line.length * height * 0.8
         }
-        return pixelWidth(line, {
-          font: "arial",
-          size: height,
-          bold: record.getBoolean("BOLD") === true,
-          italic: record.getBoolean("ITALIC") === true,
-        })
+        return getArialTextWidth(
+          line,
+          height,
+          record.getBoolean("BOLD") === true,
+        )
       }),
     )
     const textHeight = height * (1 + (lines.length - 1) * 1.2)
