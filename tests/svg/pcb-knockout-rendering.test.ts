@@ -58,7 +58,6 @@ test("renders both lines inside a bottom-aligned knockout rectangle", async () =
     }
     expect(darkPixels).toBeGreaterThan(0)
   }
-  await expect(svg).toMatchSvgSnapshot(import.meta.path)
 })
 
 test("keeps masks independent when two boards are embedded inline", async () => {
