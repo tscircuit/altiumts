@@ -1,3 +1,4 @@
+import pixelWidth from "string-pixel-width"
 import { decodeAltiumWideString } from "../decode-altium-wide-string"
 import type { AltiumRecord } from "../records/altium-record"
 import { getPcbMeasurement } from "./altium-values"
@@ -51,10 +52,24 @@ export function renderPcbText({
   const transform = `translate(${formatSvgNumber(x)} ${formatSvgNumber(y)}) rotate(${formatSvgNumber(-rotation)}) scale(${mirror} 1)`
   if (record.getBoolean("INVERTED")) {
     const margin = Math.max(getPcbMeasurement(record, "MARGINBORDERWIDTH"), 0)
-    // Estimate only the background bounds. Glyphs use the same natural
-    // font sizing and line layout as ordinary text.
-    const textWidth =
-      Math.max(...lines.map((line) => line.length)) * height * 0.8
+    // Use character advances for Arial instead of treating every letter as wide.
+    // Keep the existing estimate for fonts and characters without known metrics.
+    const textWidth = Math.max(
+      ...lines.map((line) => {
+        if (
+          fontName.trim().toLowerCase() !== "arial" ||
+          /[^\x20-\x7e]/.test(line)
+        ) {
+          return line.length * height * 0.8
+        }
+        return pixelWidth(line, {
+          font: "arial",
+          size: height,
+          bold: record.getBoolean("BOLD") === true,
+          italic: record.getBoolean("ITALIC") === true,
+        })
+      }),
+    )
     const textHeight = height * (1 + (lines.length - 1) * 1.2)
     const horizontalOffset = { start: 0, middle: 0.5, end: 1 }[
       positioning.anchor
