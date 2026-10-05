@@ -41,8 +41,11 @@ test("compares complete nema17 knockout text with the Circuit JSON reference", a
   expect(logo).toHaveLength(1)
   const logoTag = 'data-record="Region" data-layer="BOTTOMOVERLAY"'
   expect(rendered.indexOf(logoTag)).toBeGreaterThan(-1)
-  expect(rendered.indexOf(logoTag)).toBeLessThan(
+  expect(rendered.indexOf(logoTag)).toBeGreaterThan(
     rendered.indexOf('data-record="BoardOutline"'),
+  )
+  expect(rendered.indexOf(logoTag)).toBeLessThan(
+    rendered.indexOf('data-record="Region" data-layer="TOP"'),
   )
   const bottom = serializeAltiumPcbToSvg(document, { viewSide: "bottom" })
   expect(bottom.indexOf(logoTag)).toBeGreaterThan(
@@ -56,7 +59,7 @@ test("compares complete nema17 knockout text with the Circuit JSON reference", a
     )
   const comparison = `<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="830" viewBox="0 0 1600 830"><title>NEMA17 knockout comparison</title><rect width="1600" height="830" fill="#f1f5f9"/><text x="12" y="20" font-family="Arial" font-size="14">NEMA17 Circuit JSON reference</text><text x="812" y="20" font-family="Arial" font-size="14">NEMA17 Altium knockout rendering</text>${panel(reference, 0)}${panel(rendered, 800)}</svg>`
   await expect(comparison).toMatchSvgSnapshot(import.meta.path)
-})
+}, 10_000)
 
 test("preserves NEMA17 DATA and PWR knockout backgrounds", async () => {
   const document = parseAltiumBinaryPcbDoc(

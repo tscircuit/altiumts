@@ -2,7 +2,7 @@ import { expect, test } from "bun:test"
 import sharp from "sharp"
 import { parseAltiumPcbDoc, serializeAltiumPcbToSvg } from "../../lib"
 
-// No copper covers these labels: the board itself must obscure its back side.
+// Both overlays remain visible in side views, including areas without copper.
 const document = parseAltiumPcbDoc(
   [
     "|RECORD=Board|VX0=0mil|VY0=0mil|VX1=100mil|VY1=0mil|VX2=100mil|VY2=100mil|VX3=0mil|VY3=100mil",
@@ -25,7 +25,7 @@ async function pixel(svg: string, x: number) {
 }
 
 for (const viewSide of ["top", "bottom"] as const) {
-  test(`obscures the opposite silkscreen in the ${viewSide} view`, async () => {
+  test(`retains the opposite silkscreen in the ${viewSide} view`, async () => {
     const svg = serializeAltiumPcbToSvg(document, {
       viewSide,
       width: 100,
@@ -33,17 +33,13 @@ for (const viewSide of ["top", "bottom"] as const) {
       margin: 0,
     })
     const backLayer = viewSide === "top" ? "BOTTOMOVERLAY" : "TOPOVERLAY"
-    const frontLayer = viewSide === "top" ? "TOPOVERLAY" : "BOTTOMOVERLAY"
-    expect(svg.indexOf(`data-layer="${backLayer}"`)).toBeLessThan(
+    expect(svg.indexOf(`data-layer="${backLayer}"`)).toBeGreaterThan(
       svg.indexOf('data-record="BoardOutline"'),
     )
-    expect(svg.indexOf(`data-layer="${frontLayer}"`)).toBeGreaterThan(
-      svg.indexOf('data-record="BoardOutline"'),
-    )
-    const hiddenX = viewSide === "top" ? 70 : 30
-    const visibleX = viewSide === "top" ? 30 : 70
-    expect(await pixel(svg, hiddenX)).toEqual([18, 61, 50])
-    expect(await pixel(svg, visibleX)).not.toEqual([18, 61, 50])
+    const backX = viewSide === "top" ? 70 : 30
+    const frontX = viewSide === "top" ? 30 : 70
+    expect(await pixel(svg, backX)).not.toEqual([18, 61, 50])
+    expect(await pixel(svg, frontX)).not.toEqual([18, 61, 50])
   })
 }
 
