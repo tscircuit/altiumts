@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="180" viewBox="0 0 4494 794" role="img" aria-label="Altium default PCB layer drawing order" class="altium-pcb" data-renderer="altiumts">
-  <title>Altium default PCB layer drawing order</title>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="180" viewBox="0 0 4494 794" role="img" aria-label="Default top-side PCB layer drawing order" class="altium-pcb" data-renderer="altiumts">
+  <title>Default top-side PCB layer drawing order</title>
   <rect width="100%" height="100%" fill="#071a16"/>
   <g stroke-linecap="round" stroke-linejoin="round">
     <polygon data-record="BoardOutline" points="147,647 4347,647 4347,147 147,147 147,647" fill="#123d32" stroke="#6ee7b7" stroke-width="3"/>
@@ -13,10 +13,10 @@
     <line data-record="Track" data-layer="TOPSOLDER" x1="2047" y1="547" x2="2047" y2="247" stroke="#4ade80" stroke-width="80"/>
     <line data-record="Track" data-layer="BOTTOMPASTE" x1="1747" y1="547" x2="1747" y2="247" stroke="#94a3b8" stroke-width="80"/>
     <line data-record="Track" data-layer="TOPPASTE" x1="1447" y1="547" x2="1447" y2="247" stroke="#cbd5e1" stroke-width="80"/>
+    <line data-record="Track" data-layer="BOTTOMOVERLAY" x1="547" y1="547" x2="547" y2="247" stroke="#fde68a" stroke-width="80"/>
     <line data-record="Track" data-layer="BOTTOM" x1="1147" y1="547" x2="1147" y2="247" stroke="#3b82f6" stroke-width="80"/>
     <rect data-record="Fill" data-layer="TOP" data-keepout="false" x="997" y="297" width="300" height="200" fill="#ef4444" fill-opacity="0.6"/>
     <line data-record="Track" data-layer="CONNECTIONS" x1="847" y1="547" x2="847" y2="247" stroke="#f59e0b" stroke-width="80"/>
-    <line data-record="Track" data-layer="BOTTOMOVERLAY" x1="547" y1="547" x2="547" y2="247" stroke="#fde68a" stroke-width="80"/>
     <line data-record="Track" data-layer="TOPOVERLAY" x1="397" y1="547" x2="697" y2="247" stroke="#f8fafc" stroke-width="80"/>
     <line data-record="Track" data-layer="MULTILAYER" x1="247" y1="547" x2="247" y2="247" stroke="#22c55e" stroke-width="80"/>
   </g>

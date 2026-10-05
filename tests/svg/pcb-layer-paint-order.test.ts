@@ -25,10 +25,10 @@ function getSvgLayerIndex(svg: string, layerName: string): number {
   return svg.indexOf(`data-layer="${layerName}"`)
 }
 
-test("renders PCB layers in Altium's default drawing order", async () => {
+test("renders PCB layers in the default top-side drawing order", async () => {
   const document = parseAltiumPcbDoc(source)
   const svg = serializeAltiumPcbToSvg(document, {
-    title: "Altium default PCB layer drawing order",
+    title: "Default top-side PCB layer drawing order",
   })
   expect(getSvgLayerIndex(svg, "VISIBLEGRID1")).toBeLessThan(
     getSvgLayerIndex(svg, "DRILLDRAWING"),
@@ -58,6 +58,9 @@ test("renders PCB layers in Altium's default drawing order", async () => {
     getSvgLayerIndex(svg, "TOPPASTE"),
   )
   expect(getSvgLayerIndex(svg, "TOPPASTE")).toBeLessThan(
+    getSvgLayerIndex(svg, "BOTTOMOVERLAY"),
+  )
+  expect(getSvgLayerIndex(svg, "BOTTOMOVERLAY")).toBeLessThan(
     getSvgLayerIndex(svg, "BOTTOM"),
   )
   expect(getSvgLayerIndex(svg, "BOTTOM")).toBeLessThan(
@@ -67,9 +70,6 @@ test("renders PCB layers in Altium's default drawing order", async () => {
     getSvgLayerIndex(svg, "CONNECTIONS"),
   )
   expect(getSvgLayerIndex(svg, "CONNECTIONS")).toBeLessThan(
-    getSvgLayerIndex(svg, "BOTTOMOVERLAY"),
-  )
-  expect(getSvgLayerIndex(svg, "BOTTOMOVERLAY")).toBeLessThan(
     getSvgLayerIndex(svg, "TOPOVERLAY"),
   )
   expect(getSvgLayerIndex(svg, "TOPOVERLAY")).toBeLessThan(

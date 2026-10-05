@@ -52,3 +52,19 @@ test("retains both overlays in the all-layer overview", async () => {
   expect(await pixel(svg, 30)).not.toEqual([18, 61, 50])
   expect(await pixel(svg, 70)).not.toEqual([18, 61, 50])
 })
+
+test("paints bottom silkscreen behind top copper without selecting a view side", async () => {
+  const withCopper = parseAltiumPcbDoc(
+    `${document.getString()}\n|RECORD=Track|LAYER=TOP|X1=70mil|Y1=40mil|X2=70mil|Y2=60mil|WIDTH=6mil`,
+  )
+  const svg = serializeAltiumPcbToSvg(withCopper, {
+    width: 100,
+    height: 100,
+    margin: 0,
+  })
+  expect(await pixel(svg, 70)).toEqual([239, 68, 68])
+  expect(await pixel(svg, 63)).not.toEqual([18, 61, 50])
+  expect(svg.indexOf('data-layer="BOTTOMOVERLAY"')).toBeLessThan(
+    svg.indexOf('data-layer="TOP"'),
+  )
+})

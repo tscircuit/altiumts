@@ -38,9 +38,9 @@ const MECHANICAL_LAYER_NAMES = [
 
 /**
  * Returns layer groups from front to back. The first group is painted last and
- * appears on top. The default groups follow Altium Designer's system Layer
- * Drawing Order. Altium keeps the active layer in its own group; a static SVG
- * defaults that active layer to Top Layer unless the caller supplies another.
+ * appears on top. The default is a top-side view, with the opposite silkscreen
+ * behind copper. The active copper layer retains its own higher-priority group
+ * and defaults to Top Layer unless the caller supplies another.
  */
 export function getPcbLayerDrawingOrder({
   currentLayer,
@@ -70,11 +70,10 @@ export function getPcbLayerDrawingOrder({
     ...cloneLayerGroups(SYSTEM_OVERLAY_LAYER_GROUPS),
     ["MULTILAYER"],
     [frontOverlay],
-    ...(viewSide ? [] : [[backOverlay]]),
     ["CONNECTIONS"],
     [currentLayer ?? (viewSide === "bottom" ? "BOTTOM" : "TOP")],
     signalLayerGroup,
-    ...(viewSide ? [[backOverlay]] : []),
+    [backOverlay],
     ["TOPPASTE"],
     ["BOTTOMPASTE"],
     ["TOPSOLDER"],

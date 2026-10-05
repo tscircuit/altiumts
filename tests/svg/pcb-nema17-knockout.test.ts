@@ -31,7 +31,6 @@ test("compares complete nema17 knockout text with the Circuit JSON reference", a
   const rendered = serializeAltiumPcbToSvg(document, {
     width: 800,
     height: 800,
-    viewSide: "top",
   })
   const logo = document.records.filter(
     (record) =>
