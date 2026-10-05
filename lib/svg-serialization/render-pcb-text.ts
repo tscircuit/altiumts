@@ -64,15 +64,18 @@ export function renderPcbText({
       central: 0.5,
       "text-after-edge": 1,
     }[positioning.baseline]
-    const left = -textWidth * horizontalOffset
-    const top = -height * verticalOffset
+    let left = -textWidth * horizontalOffset - margin
+    let top = -height * verticalOffset - margin
     let width = textWidth + 2 * margin
     let boxHeight = textHeight + 2 * margin
     if (record.getBoolean("INVERTEDRECT")) {
       width = getPcbMeasurement(record, "TEXTBOXWIDTH", width)
       boxHeight = getPcbMeasurement(record, "TEXTBOXHEIGHT", boxHeight)
+      // Explicit dimensions describe the complete rectangle, including margins.
+      left = -width * horizontalOffset
+      top = -boxHeight * verticalOffset
     }
-    const rectangle = `x="${formatSvgNumber(left - margin)}" y="${formatSvgNumber(top - margin)}" width="${formatSvgNumber(width)}" height="${formatSvgNumber(boxHeight)}"`
+    const rectangle = `x="${formatSvgNumber(left)}" y="${formatSvgNumber(top)}" width="${formatSvgNumber(width)}" height="${formatSvgNumber(boxHeight)}"`
     const maskId = `pcb-knockout-${recordIndex}`
     const maskedText = renderText("black")
     return `<g ${metadata} data-knockout="true" transform="${transform}"><defs><mask id="${maskId}" maskUnits="userSpaceOnUse" ${rectangle} style="mask-type:luminance"><rect ${rectangle} fill="white"/>${maskedText}</mask></defs><rect ${rectangle} fill="${color}" mask="url(#${maskId})"/></g>`

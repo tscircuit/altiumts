@@ -28,7 +28,7 @@ test("uses explicit knockout rectangle dimensions", () => {
     ),
   )
   expect(svg).toContain('width="200" height="80"')
-  expect(svg).toContain('x="-10" y="-50"')
+  expect(svg).toContain('x="0" y="-80"')
 })
 
 test("uses the same text layout for ordinary and knockout text", () => {
@@ -53,4 +53,36 @@ test("uses the same text layout for ordinary and knockout text", () => {
   expect(knockout).toContain('<tspan x="0" dy="48">PWR</tspan>')
   expect(knockout).not.toContain("textLength=")
   expect(knockout).not.toContain("lengthAdjust=")
+})
+
+test("aligns explicit knockout rectangles at all nine anchors", () => {
+  const origins = [
+    [0, 0],
+    [0, -40],
+    [0, -80],
+    [-100, 0],
+    [-100, -40],
+    [-100, -80],
+    [-200, 0],
+    [-200, -40],
+    [-200, -80],
+  ]
+  for (const margin of [0, 10]) {
+    for (const [index, [x, y]] of origins.entries()) {
+      const svg = serializeAltiumPcbToSvg(
+        parseAltiumPcbDoc(
+          `|RECORD=Board\n|RECORD=Text|LAYER=TOPOVERLAY|X=0mil|Y=0mil|HEIGHT=40mil|TEXT=DATA|JUSTIFICATION=${index + 1}|INVERTED=TRUE|INVERTEDRECT=TRUE|TEXTBOXWIDTH=200mil|TEXTBOXHEIGHT=80mil|MARGINBORDERWIDTH=${margin}mil|ROTATION=90|MIRROR=TRUE`,
+        ),
+      )
+      const bounds = `x="${x}" y="${y}" width="200" height="80"`
+      expect(svg).toContain(`<rect ${bounds} fill="white"/>`)
+      expect(svg).toContain(
+        `<mask id="pcb-knockout-1" maskUnits="userSpaceOnUse" ${bounds}`,
+      )
+      expect(svg).toContain(
+        `<rect ${bounds} fill="#f8fafc" mask="url(#pcb-knockout-1)"/>`,
+      )
+      expect(svg).toContain("rotate(-90) scale(-1 1)")
+    }
+  }
 })
