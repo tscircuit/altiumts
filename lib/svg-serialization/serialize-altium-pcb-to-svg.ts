@@ -100,6 +100,14 @@ export function serializeAltiumPcbToSvg(
     }
   }
 
+  const idPrefix = document.records.some(
+    (record) => record.recordKind === "Text" && record.getBoolean("INVERTED"),
+  )
+    ? document.getStructuralHash()
+    : ""
+  const recordIndices = new Map(
+    document.records.map((record, index) => [record, index]),
+  )
   const records = sortPcbRecordsForPainting({
     currentLayer: options.currentLayer,
     document,
@@ -141,7 +149,8 @@ export function serializeAltiumPcbToSvg(
         !polygonIndexesWithRegionRecords.has(polygonIndex))
     const rendered = renderPcbRecord({
       record,
-      recordIndex,
+      recordIndex: recordIndices.get(record) ?? recordIndex,
+      idPrefix,
       text: resolveComponentText(
         document,
         record,

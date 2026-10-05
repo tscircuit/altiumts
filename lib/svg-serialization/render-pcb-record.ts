@@ -26,6 +26,7 @@ const COPPER_FILL_OPACITY = 0.32
 export function renderPcbRecord({
   record,
   recordIndex,
+  idPrefix,
   text,
   shouldFillPolygon,
   svgOptions,
@@ -33,6 +34,7 @@ export function renderPcbRecord({
 }: {
   record: AltiumRecord
   recordIndex: number
+  idPrefix: string
   text?: string
   shouldFillPolygon: boolean
   svgOptions: AltiumPcbSvgOptions
@@ -142,6 +144,7 @@ export function renderPcbRecord({
     return renderPcbText({
       record,
       recordIndex,
+      idPrefix,
       text,
       metadata,
       color,

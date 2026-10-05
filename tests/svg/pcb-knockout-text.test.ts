@@ -31,7 +31,7 @@ test("uses explicit knockout rectangle dimensions", () => {
   expect(svg).toContain('x="0" y="-80"')
 })
 
-test("uses the same text layout for ordinary and knockout text", () => {
+test("preserves font styling and line spacing when aligning a knockout block", () => {
   const source =
     "|RECORD=Board\n|RECORD=Text|LAYER=TOPOVERLAY|X=100mil|Y=100mil|HEIGHT=40mil|WIDESTRING=68,65,84,65,10,80,87,82|JUSTIFICATION=5|BOLD=TRUE|ITALIC=TRUE"
   const ordinary = serializeAltiumPcbToSvg(parseAltiumPcbDoc(source))
@@ -47,9 +47,11 @@ test("uses the same text layout for ordinary and knockout text", () => {
         "",
       )
       .replace(/fill="[^"]*"/, 'fill="shared"')
+      .replace(/ y="[^"]*"/, ' y="shared"')
       .replace(/\s+/g, " ")
   }
   expect(text(knockout)).toBe(text(ordinary))
+  expect(knockout).toContain('x="0" y="-24" fill="black"')
   expect(knockout).toContain('<tspan x="0" dy="48">PWR</tspan>')
   expect(knockout).not.toContain("textLength=")
   expect(knockout).not.toContain("lengthAdjust=")
@@ -76,11 +78,11 @@ test("aligns explicit knockout rectangles at all nine anchors", () => {
       )
       const bounds = `x="${x}" y="${y}" width="200" height="80"`
       expect(svg).toContain(`<rect ${bounds} fill="white"/>`)
+      expect(svg).toContain(`maskUnits="userSpaceOnUse" ${bounds}`)
+      const maskId = svg.match(/<mask id="([^"]+)"/)?.[1]
+      expect(maskId).toBeDefined()
       expect(svg).toContain(
-        `<mask id="pcb-knockout-1" maskUnits="userSpaceOnUse" ${bounds}`,
-      )
-      expect(svg).toContain(
-        `<rect ${bounds} fill="#f8fafc" mask="url(#pcb-knockout-1)"/>`,
+        `<rect ${bounds} fill="#f8fafc" mask="url(#${maskId})"/>`,
       )
       expect(svg).toContain("rotate(-90) scale(-1 1)")
     }
