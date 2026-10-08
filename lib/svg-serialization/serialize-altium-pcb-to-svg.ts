@@ -11,6 +11,10 @@ import {
   getPcbRecordNetIndex,
   getPcbRecordPolygonIndex,
 } from "../pcb-reference-resolution"
+import {
+  getProjectParameters,
+  type ProjectParameterName,
+} from "../project-parameters"
 import type { AltiumRecord } from "../records/altium-record"
 import {
   getPcbBoardOutline,
@@ -24,6 +28,7 @@ import {
   recordAppliesToLayers,
 } from "./pcb-layer"
 import { getPcbSolderMaskRecords } from "./pcb-solder-mask"
+import { resolvePcbSpecialStrings } from "./pcb-special-strings"
 import { renderPcbRecord } from "./render-pcb-record"
 import { sortPcbRecordsForPainting } from "./sort-pcb-records-for-painting"
 import type {
@@ -55,6 +60,9 @@ export function serializeAltiumPcbToSvg(
     ...options,
     margin: options.margin ?? (options.viewBox ? 0 : undefined),
   })
+  const projectParameters = options.project
+    ? getProjectParameters(options.project)
+    : new Map<ProjectParameterName, string>()
   const content: string[] = []
   const outline = getPcbBoardOutline(document)
   const boardCutouts =
@@ -141,12 +149,16 @@ export function serializeAltiumPcbToSvg(
         !polygonIndexesWithRegionRecords.has(polygonIndex))
     const rendered = renderPcbRecord({
       record,
-      text: resolveComponentText(
-        document,
-        record,
-        componentDesignatorTextLookup,
-        componentCommentTextLookup,
-      ),
+      text:
+        resolveComponentText(
+          document,
+          record,
+          componentDesignatorTextLookup,
+          componentCommentTextLookup,
+        ) ??
+        (record.recordKind === "Text"
+          ? resolvePcbSpecialStrings(getPcbText(record), projectParameters)
+          : undefined),
       shouldFillPolygon,
       svgOptions: {
         showHoles: true,

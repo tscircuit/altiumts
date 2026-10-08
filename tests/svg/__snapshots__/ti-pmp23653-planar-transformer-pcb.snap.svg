@@ -6,7 +6,7 @@
   </g>
   <g fill="#c6cbd3" font-family="Arial, sans-serif" font-size="16">
     <text x="16" y="55">Real Altium viewer — original reference pixels</text>
-    <text x="840" y="55">AltiumTS — current PCB test output</text>
+    <text x="840" y="55">AltiumTS — matching project parameters</text>
   </g>
   <svg x="16" y="70" width="800" height="600" viewBox="399.6416599895377 62.26059788856537 428.9642964916036 307.1024778050306">
     <title>Original Altium reference pixels</title>

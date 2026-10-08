@@ -198,6 +198,15 @@ designator/comment text follows the parent component's `NAMEON` and `COMMENTON`
 visibility flags; pass `{ showHidden: true }` when debugging hidden source
 text.
 
+For PCB project special strings, pass the matching parsed `.PrjPcb` as
+`serializeAltiumPcbToSvg(board, { project })` (or the same option to
+`serializeAltiumPcbLayerToSvg`). Parameter names are case-insensitive;
+expressions such as `'.PRJ_Number'.PCB_Rev` concatenate project values.
+Unresolved or unsupported expressions remain visible, and source documents
+are never rewritten. A standalone `.PcbDoc` cannot supply values stored only
+in its project. The browser viewer matches uploaded projects to their declared
+PCB paths, including files inside ZIPs.
+
 Binary schematic rendering includes embedded images, Altium font-table sizes,
 ordinary graphic lines, text frames, No-ERC markers, and paper-bound clipping.
 Embedded Windows bitmaps are decoded with bounded allocation and emitted as

@@ -13,5 +13,6 @@
   "sourceSha256": "3343b2cb765db52243ccfa584cdded44588d3ad85067e89192f09931b9a309c1",
   "screenshotSha256": "c4c8bbc1a27fd7b8347dda947ecd00aca50615ad9ad7d8ed33531f98425a6e31",
   "layers": "default",
-  "source": "https://www.altium.com/viewer/"
+  "source": "https://www.altium.com/viewer/",
+  "converterLabel": "AltiumTS — matching project parameters"
 }

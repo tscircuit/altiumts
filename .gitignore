@@ -13,3 +13,5 @@ references/*.PcbDoc
 references/*.SchDoc
 references/**/*.PcbDoc
 references/**/*.SchDoc
+
+/references/*.PrjPcb

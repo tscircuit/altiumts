@@ -1,10 +1,20 @@
-import { parseAltiumBinaryPcbDoc, serializeAltiumPcbToSvg } from "../../lib"
-import { readReferenceBytes } from "./read-reference"
+import {
+  parseAltiumBinaryPcbDoc,
+  parseAltiumPrjPcb,
+  serializeAltiumPcbToSvg,
+} from "../../lib"
+import { readReference, readReferenceBytes } from "./read-reference"
 
-export async function renderTiPowerReferencePcb(
-  filename: string,
-  title: string,
-): Promise<string> {
+export async function renderTiPowerReferencePcb({
+  filename,
+  title,
+  projectFilename,
+}: {
+  filename: string
+  title: string
+  projectFilename: string
+}): Promise<string> {
+  const project = parseAltiumPrjPcb(await readReference(projectFilename))
   const source = await readReferenceBytes(filename)
   const document = parseAltiumBinaryPcbDoc(source)
   const bounds = document.boardGeometry.outline.bounds
@@ -16,6 +26,7 @@ export async function renderTiPowerReferencePcb(
   const padding = Math.max(width, height) * 0.05
   return serializeAltiumPcbToSvg(document, {
     title,
+    project,
     width: 800,
     height: 600,
     viewBox: {

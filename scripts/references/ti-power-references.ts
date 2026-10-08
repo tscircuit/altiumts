@@ -7,12 +7,27 @@ export const TI_POWER_REFERENCE_PCB_FILENAMES = {
   pmp23653PlanarTransformer: "ti-pmp23653-planar-transformer.PcbDoc",
 } as const
 
+export const TI_POWER_REFERENCE_PROJECT_FILENAMES = {
+  pmp22650: "ti-pmp22650-main.PrjPcb",
+  pmp22712: "ti-pmp22712.PrjPcb",
+  pmp22773: "ti-pmp22773.PrjPcb",
+  pmp23595: "ti-pmp23595.PrjPcb",
+  pmp23653Main: "ti-pmp23653-main.PrjPcb",
+  pmp23653PlanarTransformer: "ti-pmp23653-planar-transformer.PrjPcb",
+} as const
+
 export const TI_POWER_REFERENCE_ZIP_BUNDLES = [
   {
     archiveSha256:
       "73a47918b97d87275e6365ebde58fefc874f80eb2d473e28ee95a8d13b8751d5",
     nestedArchives: [],
     outputs: [
+      {
+        archivePath: "PMP23595.PrjPcb",
+        filename: TI_POWER_REFERENCE_PROJECT_FILENAMES.pmp23595,
+        sha256:
+          "30d184e28a3e5f45e823db7fdb4ee9d9b8a7c465f331a5c7b1de3622c2e9d356",
+      },
       {
         archivePath: "PMP23595.PcbDoc",
         filename: TI_POWER_REFERENCE_PCB_FILENAMES.pmp23595,
@@ -29,10 +44,24 @@ export const TI_POWER_REFERENCE_ZIP_BUNDLES = [
     nestedArchives: [],
     outputs: [
       {
+        archivePath: "PMP23653B Main CAD/PMP23653B.PrjPcb",
+        filename: TI_POWER_REFERENCE_PROJECT_FILENAMES.pmp23653Main,
+        sha256:
+          "c582f83c20a29edc8597677ce76a75d0a84918823dab174bfcd0ad052a68293c",
+      },
+      {
         archivePath: "PMP23653B Main CAD/PMP23653B.PcbDoc",
         filename: TI_POWER_REFERENCE_PCB_FILENAMES.pmp23653Main,
         sha256:
           "18a785d61c6fbe381c504f416bb25fa50f16475710b9ce00f36b13b58d57c544",
+      },
+      {
+        archivePath:
+          "PMP23653-Planar-Transformer CAD/PMP23653-Planar-Transformer.PrjPcb",
+        filename:
+          TI_POWER_REFERENCE_PROJECT_FILENAMES.pmp23653PlanarTransformer,
+        sha256:
+          "14cffa6b2deb9799c375cb73e251f44dd92b615e0795eefc378c1e1ac95f2f50",
       },
       {
         archivePath:
@@ -53,6 +82,12 @@ export const TI_POWER_REFERENCE_ZIP_BUNDLES = [
         archivePath: "PMP22650 - E2 Altium.zip",
         outputs: [
           {
+            archivePath: "PMP22650 - E2.PrjPcb",
+            filename: TI_POWER_REFERENCE_PROJECT_FILENAMES.pmp22650,
+            sha256:
+              "bea65beaa5a358238b6ecc23352c0a14931ae1c770dad40f353bc770d5d7ff06",
+          },
+          {
             archivePath: "PMP22650 PCB.PcbDoc",
             filename: TI_POWER_REFERENCE_PCB_FILENAMES.pmp22650,
             sha256:
@@ -66,6 +101,12 @@ export const TI_POWER_REFERENCE_ZIP_BUNDLES = [
         archivePath: "PMP22712 - E2 Altium.zip",
         outputs: [
           {
+            archivePath: "PMP22712.PrjPcb",
+            filename: TI_POWER_REFERENCE_PROJECT_FILENAMES.pmp22712,
+            sha256:
+              "633f5d0011e577fd0ab47351dfc99e1886b00f2af86532fe23a2bec8fb84bf56",
+          },
+          {
             archivePath: "PMP22712_PCB.PcbDoc",
             filename: TI_POWER_REFERENCE_PCB_FILENAMES.pmp22712,
             sha256:
@@ -78,6 +119,12 @@ export const TI_POWER_REFERENCE_ZIP_BUNDLES = [
       {
         archivePath: "PMP22773 - E3 Altium.zip",
         outputs: [
+          {
+            archivePath: "PMP22773.PrjPCB",
+            filename: TI_POWER_REFERENCE_PROJECT_FILENAMES.pmp22773,
+            sha256:
+              "2a9b2e2009bff03cb9660a269772bc5ce3d775e04840da1b43b21a5e47a94961",
+          },
           {
             archivePath: "PMP22773 Rev E3 PCB.PcbDoc",
             filename: TI_POWER_REFERENCE_PCB_FILENAMES.pmp22773,

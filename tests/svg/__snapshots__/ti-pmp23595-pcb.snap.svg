@@ -6,7 +6,7 @@
   </g>
   <g fill="#c6cbd3" font-family="Arial, sans-serif" font-size="16">
     <text x="16" y="55">Real Altium viewer — original reference pixels</text>
-    <text x="840" y="55">AltiumTS — current PCB test output</text>
+    <text x="840" y="55">AltiumTS — matching project parameters</text>
   </g>
   <svg x="16" y="70" width="800" height="600" viewBox="324.35122349109133 131.47574431591693 642.8231229013696 435.8533543935489">
     <title>Original Altium reference pixels</title>
@@ -5517,7 +5517,7 @@
     <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="60" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(4217 2803) rotate(-90) scale(1 1)">PH4</text>
     <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="60" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(4272.9988 2669.7889) rotate(0) scale(1 1)">PH1</text>
     <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="60" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(3484.0555 570.334) rotate(0) scale(1 1)">VOUT</text>
-    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="108.2677" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="central" transform="translate(925 669) rotate(-360) scale(1 1)">&apos;.PRJ_Number&apos;.PCB_Rev</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="108.2677" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="central" transform="translate(925 669) rotate(-360) scale(1 1)">PMP23595A</text>
     <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="60" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="central" transform="translate(3946.8618 2826.9532) rotate(0) scale(1 1)">J102</text>
     <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="40" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="central" transform="translate(1912.6354 825.5531) rotate(-90) scale(1 1)">T503</text>
     <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="40" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="central" transform="translate(3145.6354 846.0741) rotate(-90) scale(1 1)">T501</text>

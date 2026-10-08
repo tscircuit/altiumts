@@ -35,5 +35,6 @@
     "width": 1248,
     "height": 656
   },
-  "layers": "default"
+  "layers": "default",
+  "converterLabel": "AltiumTS — matching project parameters"
 }

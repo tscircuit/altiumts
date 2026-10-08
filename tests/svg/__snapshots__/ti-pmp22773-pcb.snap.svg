@@ -6,7 +6,7 @@
   </g>
   <g fill="#c6cbd3" font-family="Arial, sans-serif" font-size="16">
     <text x="16" y="55">Real Altium viewer — original reference pixels</text>
-    <text x="840" y="55">AltiumTS — current PCB test output</text>
+    <text x="840" y="55">AltiumTS — matching project parameters</text>
   </g>
   <svg x="16" y="70" width="800" height="600" viewBox="110.69999999999999 222.7 778.6 820.6">
     <title>Original Altium reference pixels</title>
@@ -931,7 +931,7 @@
     <g data-record="Pad" data-layer="TOP" data-pad-name="1" data-pad-shape="ROUNDRECT" data-pad-stack-layer="0" data-pad-stack-mode="SIMPLE" data-plated="true" transform="rotate(-90 1231.437 961.3977)"><rect x="1221.5945" y="951.5552" width="19.685" height="19.685" rx="1.9685" ry="1.9685" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
     <g data-record="Pad" data-layer="TOP" data-pad-name="2" data-pad-shape="RECTANGLE" data-pad-stack-layer="0" data-pad-stack-mode="SIMPLE" data-plated="true" transform="rotate(-180 1178.0905 836.5551)"><rect x="1166.2795" y="820.8071" width="23.622" height="31.4961" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
     <g data-record="Pad" data-layer="TOP" data-pad-name="1" data-pad-shape="RECTANGLE" data-pad-stack-layer="0" data-pad-stack-mode="SIMPLE" data-plated="true" transform="rotate(-180 1178.0905 883.7992)"><rect x="1166.2795" y="868.0512" width="23.622" height="31.4961" fill="#ef4444" stroke="#111827" stroke-width="1"/></g>
-    <text data-record="Text" data-layer="BOTTOMOVERLAY" x="0" y="0" fill="#fde68a" font-family="Arial, sans-serif" font-size="108.2677" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="central" transform="translate(1266.437 420.1772) rotate(-360) scale(-1 1)">&apos;.PRJ_Number&apos;.PCB_Rev</text>
+    <text data-record="Text" data-layer="BOTTOMOVERLAY" x="0" y="0" fill="#fde68a" font-family="Arial, sans-serif" font-size="108.2677" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="central" transform="translate(1266.437 420.1772) rotate(-360) scale(-1 1)">PMP22773E3</text>
     <line data-record="Track" data-layer="TOPOVERLAY" x1="1152.4999" y1="515.8465" x2="1152.4999" y2="474.5079" stroke="#f8fafc" stroke-width="5.9055"/>
     <line data-record="Track" data-layer="TOPOVERLAY" x1="1203.6811" y1="515.8465" x2="1203.6811" y2="474.5079" stroke="#f8fafc" stroke-width="5.9055"/>
     <line data-record="Track" data-layer="TOPOVERLAY" x1="529.6417" y1="1028.7807" x2="805.2323" y2="1028.7807" stroke="#f8fafc" stroke-width="5.9055"/>

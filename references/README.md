@@ -67,7 +67,7 @@ external fabrication drawings do not shrink the PCB. Strict validation passes
 for five boards; PMP22650 retains its two original negative-pad-size diagnostics
 (`/Pads6/Data` records 26 and 27), which the parser test explicitly checks.
 
-Downloaded `.PcbDoc` and `.SchDoc` files are ignored by git. Each imported
+Downloaded `.PcbDoc`, `.SchDoc`, and `.PrjPcb` files are ignored by git. Each imported
 file has a corresponding SVG visual snapshot test. The download script stores
 and verifies a pinned SHA-256 digest for every file before writing it. Nested
 archives are filtered during extraction so unrelated design-package content is
@@ -76,3 +76,11 @@ not written into the repository.
 Run `bun run inventory-references` for a concise corpus report, or
 `bun run inventory-references --json` for machine-readable record and stream
 counts.
+
+Each of the six TI power-board fixtures also has a matching `.PrjPcb`,
+extracted from the same pinned archive as its PCB. These supply the original
+project parameters, including `PRJ_Number` and `PCB_Rev`, for the full-board
+snapshots. Project filenames are listed in
+`TI_POWER_REFERENCE_PROJECT_FILENAMES`, and every project's checksum is
+verified by the downloader. The render helper requires a project filename,
+so a new board snapshot cannot silently omit its project context.
