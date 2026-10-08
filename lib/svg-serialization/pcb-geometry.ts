@@ -11,6 +11,7 @@ import {
 import { getRotatedRectangleBounds } from "./getRotatedRectangleBounds"
 import { getPcbDimensionGeometry } from "./pcb-dimension-geometry"
 import { normalizeLayerName } from "./pcb-layer"
+import { getPcbTextLayout } from "./pcb-text-layout"
 import type { SvgBounds, SvgPoint } from "./svg-types"
 import { boundsFromPoints, expandBounds, mergeBounds } from "./svg-utils"
 
@@ -189,6 +190,31 @@ export function getPcbRecordBounds(
     const x = getPcbMeasurement(record, "X")
     const y = getPcbMeasurement(record, "Y")
     const height = getPcbMeasurement(record, "HEIGHT", 30)
+    const knockout = record.getBoolean("INVERTED")
+      ? getPcbTextLayout(record).knockout
+      : undefined
+    if (knockout) {
+      const { left, top, width, height: boxHeight } = knockout
+      const radians =
+        (Number(record.getCaseInsensitive("ROTATION") ?? 0) * Math.PI) / 180
+      const cos = Math.cos(radians)
+      const sin = Math.sin(radians)
+      const mirror = record.getBoolean("MIRROR") ? -1 : 1
+      return boundsFromPoints(
+        (
+          [
+            [left, top],
+            [left + width, top],
+            [left + width, top + boxHeight],
+            [left, top + boxHeight],
+          ] as const
+        ).map(([localX, localY]) => {
+          const dx = localX * mirror
+          const dy = -localY
+          return { x: x + dx * cos - dy * sin, y: y + dx * sin + dy * cos }
+        }),
+      )
+    }
     return expandBounds({ minX: x, minY: y, maxX: x, maxY: y }, height)
   }
 

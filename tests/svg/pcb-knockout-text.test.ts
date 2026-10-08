@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test"
 import { parseAltiumPcbDoc, serializeAltiumPcbToSvg } from "../../lib"
 
-test.failing("renders knockout backgrounds with transparent letters", () => {
+test("renders knockout backgrounds with transparent letters", () => {
   const document = parseAltiumPcbDoc(
     [
       "|RECORD=Board|VX0=0mil|VY0=0mil|VX1=700mil|VY1=0mil|VX2=700mil|VY2=500mil|VX3=0mil|VY3=500mil",
@@ -21,17 +21,17 @@ test.failing("renders knockout backgrounds with transparent letters", () => {
   expect(svg).toContain(">Normal</text>")
 })
 
-test.failing("uses explicit knockout rectangle dimensions", () => {
+test("uses explicit knockout rectangle dimensions", () => {
   const svg = serializeAltiumPcbToSvg(
     parseAltiumPcbDoc(
       "|RECORD=Board\n|RECORD=Text|LAYER=TOPOVERLAY|X=0mil|Y=0mil|HEIGHT=40mil|TEXT=DATA|INVERTED=TRUE|INVERTEDRECT=TRUE|TEXTBOXWIDTH=200mil|TEXTBOXHEIGHT=80mil|MARGINBORDERWIDTH=10mil",
     ),
   )
   expect(svg).toContain('width="200" height="80"')
-  expect(svg).toContain('x="-10" y="-50"')
+  expect(svg).toContain('x="0" y="-80"')
 })
 
-test("uses the same text layout for ordinary and knockout text", () => {
+test("preserves font styling and line spacing when aligning a knockout block", () => {
   const source =
     "|RECORD=Board\n|RECORD=Text|LAYER=TOPOVERLAY|X=100mil|Y=100mil|HEIGHT=40mil|WIDESTRING=68,65,84,65,10,80,87,82|JUSTIFICATION=5|BOLD=TRUE|ITALIC=TRUE"
   const ordinary = serializeAltiumPcbToSvg(parseAltiumPcbDoc(source))
@@ -47,10 +47,44 @@ test("uses the same text layout for ordinary and knockout text", () => {
         "",
       )
       .replace(/fill="[^"]*"/, 'fill="shared"')
+      .replace(/ y="[^"]*"/, ' y="shared"')
       .replace(/\s+/g, " ")
   }
   expect(text(knockout)).toBe(text(ordinary))
+  expect(knockout).toContain('x="0" y="-24" fill="black"')
   expect(knockout).toContain('<tspan x="0" dy="48">PWR</tspan>')
   expect(knockout).not.toContain("textLength=")
   expect(knockout).not.toContain("lengthAdjust=")
+})
+
+test("aligns explicit knockout rectangles at all nine anchors", () => {
+  const origins = [
+    [0, 0],
+    [0, -40],
+    [0, -80],
+    [-100, 0],
+    [-100, -40],
+    [-100, -80],
+    [-200, 0],
+    [-200, -40],
+    [-200, -80],
+  ]
+  for (const margin of [0, 10]) {
+    for (const [index, [x, y]] of origins.entries()) {
+      const svg = serializeAltiumPcbToSvg(
+        parseAltiumPcbDoc(
+          `|RECORD=Board\n|RECORD=Text|LAYER=TOPOVERLAY|X=0mil|Y=0mil|HEIGHT=40mil|TEXT=DATA|JUSTIFICATION=${index + 1}|INVERTED=TRUE|INVERTEDRECT=TRUE|TEXTBOXWIDTH=200mil|TEXTBOXHEIGHT=80mil|MARGINBORDERWIDTH=${margin}mil|ROTATION=90|MIRROR=TRUE`,
+        ),
+      )
+      const bounds = `x="${x}" y="${y}" width="200" height="80"`
+      expect(svg).toContain(`<rect ${bounds} fill="white"/>`)
+      expect(svg).toContain(`maskUnits="userSpaceOnUse" ${bounds}`)
+      const maskId = svg.match(/<mask id="([^"]+)"/)?.[1]
+      expect(maskId).toBeDefined()
+      expect(svg).toContain(
+        `<rect ${bounds} fill="#f8fafc" mask="url(#${maskId})"/>`,
+      )
+      expect(svg).toContain("rotate(-90) scale(-1 1)")
+    }
+  }
 })

@@ -42,7 +42,7 @@ test("compares complete nema17 knockout text with the Circuit JSON reference", a
   await expect(comparison).toMatchSvgSnapshot(import.meta.path)
 })
 
-test.failing("preserves NEMA17 DATA and PWR knockout backgrounds", async () => {
+test("preserves NEMA17 DATA and PWR knockout backgrounds", async () => {
   const document = parseAltiumBinaryPcbDoc(
     new Uint8Array(
       await Bun.file(
