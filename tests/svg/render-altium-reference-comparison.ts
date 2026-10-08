@@ -11,6 +11,18 @@ type AltiumReferenceView = {
   canvasBounds?: { x: number; y: number; width: number; height: number }
 }
 
+function escapeXml(text: string): string {
+  return text.replace(/[&<>"']/gu, (char) => {
+    return {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&apos;",
+    }[char]!
+  })
+}
+
 export async function renderAltiumReferenceComparison({
   reference,
   converterSvg,
@@ -29,16 +41,6 @@ export async function renderAltiumReferenceComparison({
   if (!(panelWidth > 0 && panelHeight > 0)) {
     throw new Error("PCB comparison requires numeric SVG width and height")
   }
-  const escapeXml = (text: string) =>
-    text.replace(/[&<>"']/gu, (char) => {
-      return {
-        "&": "&amp;",
-        "<": "&lt;",
-        ">": "&gt;",
-        '"': "&quot;",
-        "'": "&apos;",
-      }[char]!
-    })
   const title = escapeXml(view.title)
   const converterLabel = escapeXml(
     view.converterLabel ?? "AltiumTS — current PCB test output",

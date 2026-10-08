@@ -65,6 +65,39 @@ the AltiumTS side keeps its original component/net filters. Small detail crops
 remain limited by the captured raster resolution. These are visual baselines,
 not pixel-equality or font-metric measurements.
 
+## Elk Pi baseline verification
+
+The comparison panels were checked against a separate copy of the PR base
+commit, `4cf4aad7357c733b72dd85f97fdfeab70e4ba502`, using the same fixture and
+the original tests' layer, title, and `viewBox` options. Both panels embed the
+base renderer's output **byte for byte**. Production rendering has not changed.
+
+The old checked-in SVG markup differs from a fresh base render in two cases:
+
+- Bottom routing still contains all **42 pads, including all 20 MULTILAYER
+  pads**. Its complete SVG-line multiset is unchanged; the apparent pad deletions
+  are moves caused by the renderer's existing paint order. The test now checks
+  both pad counts in addition to the visual snapshot.
+- The middle-layer view gains one `MID1` polygon outline with `fill="none"`
+  and the standard `xmlns:xlink` namespace. The outline is already emitted by
+  the base renderer; its edges are outside the 120-by-120 crop. The existing
+  board outline, region, and pad are unchanged.
+
+Rasterizing each old golden and fresh base output at its original size produces
+**zero changed pixel channels** for both cases. `bun-match-svg` compares rendered
+pixels and retains an existing golden when pixels match, even during snapshot
+updates. That left the older element order/off-crop markup in these two goldens;
+creating comparison snapshots exposed the already-existing renderer output.
+
+For reproducing the check, the Elk Pi source SHA-256 is
+`8d61c6c9b9eff6748340794db203a86057857b8ce0348b7510859d73e3bce210`.
+The fresh standalone base-render SVG hashes (before comparison wrapping) are:
+
+| View | SHA-256 |
+| --- | --- |
+| Bottom routing | `dc9a9d430eb18445d17da73a41909367a89d14949e6e2fbcfbde6e323acf2cac` |
+| Middle-layer pad stack | `a19ba8b8991b7fe0f1d29bff1cc5066d4686776c15a1abe4852534f0c7dc4a88` |
+
 ## Remaining captures
 
 The exact cases and reasons are in `coverage.json`:

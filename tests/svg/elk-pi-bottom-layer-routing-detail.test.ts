@@ -22,6 +22,11 @@ test("renders dense Elk Pi bottom routing in a board-unit crop", async () => {
   expect(svg).toContain('viewBox="0 0 1400 1100"')
   expect(svg).toContain('data-layer="BOTTOM"')
   expect(svg).not.toContain('data-layer="TOP"')
+  // Pixel comparisons alone cannot detect missing pads hidden by other copper.
+  expect(svg.match(/data-record="Pad"/gu)).toHaveLength(42)
+  expect(svg.match(/data-record="Pad" data-layer="MULTILAYER"/gu)).toHaveLength(
+    20,
+  )
   const comparison = await renderAltiumReferenceComparison({
     reference: "elk-pi-bottom-layer-routing-detail",
     converterSvg: svg,
