@@ -56,6 +56,8 @@ export interface AltiumPcbSvgOptions extends AltiumSvgRenderOptions {
   viewSide?: "top" | "bottom"
   layers?: string[]
   netIndices?: number[]
+  /** Parsed project that supplies PCB special-string parameter values. */
+  project?: AltiumPrjPcb
   showBoardCutouts?: boolean
   showBoardOutline?: boolean
   viewBox?: AltiumPcbViewBox

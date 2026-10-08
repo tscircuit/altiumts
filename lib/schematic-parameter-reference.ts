@@ -1,6 +1,7 @@
 import type { AltiumPrjPcb, AltiumProjectVariant } from "./altium-prj-pcb"
 import type { AltiumSchDoc } from "./altium-sch-doc"
 import type { AltiumIniSection } from "./ini/altium-ini"
+import { getProjectParameters } from "./project-parameters"
 import type { AltiumRecord } from "./records/altium-record"
 
 type SchematicParameterName = string
@@ -55,10 +56,6 @@ const DOCUMENT_PARAMETER_CACHE = new WeakMap<
   AltiumSchDoc,
   CachedSchematicParameters
 >()
-const PROJECT_PARAMETER_CACHE = new WeakMap<
-  AltiumPrjPcb,
-  CachedSchematicParameters
->()
 const VARIANT_PARAMETER_CACHE = new WeakMap<
   AltiumPrjPcb,
   CachedSchematicVariantParameters
@@ -97,10 +94,7 @@ export function resolveSchematicParameterReferenceWithContext({
 
   const parameters = new Map<SchematicParameterName, string>()
   if (project) {
-    applySchematicParameterScope(
-      parameters,
-      getSchematicProjectParameters(project),
-    )
+    applySchematicParameterScope(parameters, getProjectParameters(project))
   }
   applySchematicParameterScope(
     parameters,
@@ -197,38 +191,6 @@ function getSchematicDocumentParameters(
   DOCUMENT_PARAMETER_CACHE.set(document, {
     parameters,
     revision: document.revision,
-  })
-  return parameters
-}
-
-function getSchematicProjectParameters(
-  project: AltiumPrjPcb,
-): Map<SchematicParameterName, string> {
-  const cached = PROJECT_PARAMETER_CACHE.get(project)
-  if (cached?.revision === project.revision) return cached.parameters
-
-  const parameters = new Map<SchematicParameterName, string>()
-  for (const section of project.sections) {
-    if (/^PARAMETER\d+$/iu.test(section.name)) {
-      addNamedParameterSection(parameters, section)
-      continue
-    }
-
-    if (!/^PARAMETERS?$/iu.test(section.name)) continue
-    for (const entry of section.entries) {
-      const separatorIndex = entry.value.indexOf("=")
-      if (separatorIndex <= 0) continue
-      const parameterName = entry.value.slice(0, separatorIndex).trim()
-      const parameterText = entry.value.slice(separatorIndex + 1)
-      if (parameterName) {
-        parameters.set(parameterName.toLowerCase(), parameterText)
-      }
-    }
-  }
-
-  PROJECT_PARAMETER_CACHE.set(project, {
-    parameters,
-    revision: project.revision,
   })
   return parameters
 }

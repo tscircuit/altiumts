@@ -1,9 +1,18 @@
-import { parseAltiumBinaryPcbDoc, serializeAltiumPcbToSvg } from "../../lib"
+import {
+  parseAltiumBinaryPcbDoc,
+  parseAltiumPrjPcb,
+  serializeAltiumPcbToSvg,
+} from "../../lib"
 import { readReferenceBytes } from "./read-reference"
+
+interface RenderTiPowerReferencePcbOptions {
+  title: string
+  projectFilename?: string
+}
 
 export async function renderTiPowerReferencePcb(
   filename: string,
-  title: string,
+  { title, projectFilename }: RenderTiPowerReferencePcbOptions,
 ): Promise<string> {
   const source = await readReferenceBytes(filename)
   const document = parseAltiumBinaryPcbDoc(source)
@@ -16,6 +25,13 @@ export async function renderTiPowerReferencePcb(
   const padding = Math.max(width, height) * 0.05
   return serializeAltiumPcbToSvg(document, {
     title,
+    project: projectFilename
+      ? parseAltiumPrjPcb(
+          new TextDecoder("windows-1252").decode(
+            await readReferenceBytes(projectFilename),
+          ),
+        )
+      : undefined,
     width: 800,
     height: 600,
     viewBox: {
