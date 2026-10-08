@@ -207,6 +207,14 @@ are never rewritten. A standalone `.PcbDoc` cannot supply values stored only
 in its project. The browser viewer matches uploaded projects to their declared
 PCB paths, including files inside ZIPs.
 
+Binary PCB TrueType text uses matching fonts from `EmbeddedFonts6` when
+available, including custom logo fonts. Glyphs are emitted as SVG paths with
+an `aria-label`, so browsers and SVG rasterizers do not require installed
+fonts. Family/full name and bold/italic style must match. Missing, damaged,
+unsupported fonts or missing glyphs retain the system-font fallback; stroke
+text keeps its existing rendering. Font outlines do not resolve unrelated
+PCB text placement, justification, or knockout differences.
+
 Binary schematic rendering includes embedded images, Altium font-table sizes,
 ordinary graphic lines, text frames, No-ERC markers, and paper-bound clipping.
 Embedded Windows bitmaps are decoded with bounded allocation and emitted as
@@ -239,6 +247,9 @@ Fully contracted openings are omitted, while explicit mask primitives remain.
   body's stored 3D rotation, and `getDecompressedBytes()` extracts the
   corresponding zlib-compressed STEP payload with a configurable output-size
   limit.
+- Binary PCB `embeddedFonts` exposes font metadata and bounded
+  `getDecompressedBytes(maximumOutputSize?)` extraction (16 MiB by default).
+  Reading fonts and rendering SVG preserve the original compound-file bytes.
 - PCB documents resolve component and net indexes through
   `getComponentForRecord()`, `getNetForRecord()`,
   `getRecordsOwnedByComponent()`, and `getRecordsOnNet()`. The SVG serializer
