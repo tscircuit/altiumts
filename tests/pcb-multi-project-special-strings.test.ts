@@ -57,7 +57,12 @@ test("resolves each real PCB from its own project when six project ZIPs are open
     )!
     expect(entry).toBeDefined()
     const svg = renderProjectDocument({ state, documentId: entry.id, viewId })
-    expect(svg).toContain(`>${label}</text>`)
+    // Embedded glyph outlines retain the resolved label on their SVG group.
+    expect(svg).toMatch(
+      new RegExp(
+        `(?:>${label}</text>|data-font-source="embedded"[^>]*aria-label="${label}")`,
+      ),
+    )
     expect(svg).not.toContain(".PRJ_Number")
     expect(svg).not.toContain(".PCB_Rev")
   }

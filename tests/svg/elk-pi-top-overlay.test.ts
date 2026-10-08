@@ -17,6 +17,12 @@ test("renders the binary Elk Pi top overlay", async () => {
   expect(svg).toContain('data-layer="TOPOVERLAY"')
   expect(svg).toContain(">DOUT</text>")
   expect(svg).not.toContain(">T491C107K010AT</text>")
+  for (const name of ["elk_logo_new", "open-hardware-logo-neg"]) {
+    expect(svg).toContain(
+      `data-font-source="embedded" data-font-name="${name}" aria-label="a"`,
+    )
+    expect(svg).not.toContain(`font-family="${name}, sans-serif"`)
+  }
   const comparison = await renderAltiumReferenceComparison({
     reference: "elk-pi-top-overlay",
     converterSvg: svg,
