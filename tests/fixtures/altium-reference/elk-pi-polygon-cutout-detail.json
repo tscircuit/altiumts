@@ -1,0 +1,39 @@
+{
+  "title": "Elk Pi polygon-cutout detail",
+  "image": "elk-pi-cutout-detail.jpg",
+  "width": 1280,
+  "height": 720,
+  "viewBox": {
+    "x": 532.6164882353401,
+    "y": 257.61114867791684,
+    "width": 111.13767905807018,
+    "height": 177.8202864929123
+  },
+  "source": "https://www.altium.com/viewer/",
+  "sourceSha256": "8d61c6c9b9eff6748340794db203a86057857b8ce0348b7510859d73e3bce210",
+  "screenshotSha256": "9b38882b92a8ad21a5c1b1b059e4dbd82355c19621941fd1d5d160537186c2b9",
+  "alignment": {
+    "worldViewBox": {
+      "x": 7000,
+      "y": 4350,
+      "width": 250,
+      "height": 400
+    },
+    "matrix": "matrix(0.4445507162322807 0 0 0.4445507162322807 -2595.238525390625 2353.22705078125)",
+    "iframe": {
+      "height": 688,
+      "width": 1248,
+      "x": 16,
+      "y": 16
+    },
+    "note": "Top Layer only; selection cleared."
+  },
+  "canvasBounds": {
+    "x": 16,
+    "y": 48,
+    "width": 1248,
+    "height": 656
+  },
+  "mimeType": "image/jpeg",
+  "layers": ["TOP"]
+}

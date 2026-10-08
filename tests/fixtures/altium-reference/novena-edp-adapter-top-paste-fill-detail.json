@@ -1,0 +1,39 @@
+{
+  "title": "Novena eDP adapter rotated top-paste fills",
+  "image": "novena-top-paste.jpg",
+  "width": 1280,
+  "height": 720,
+  "viewBox": {
+    "x": 505.7530706970674,
+    "y": 320.36795856740036,
+    "width": 122.83617563525513,
+    "height": 136.4842842936653
+  },
+  "source": "https://www.altium.com/viewer/",
+  "sourceSha256": "17896fdfeaac33a84ac3063db063d0a4d211c127c997632c8000837c0ce6fc12",
+  "screenshotSha256": "2131a1c974d0db227300dec116be8b723b1aecb2c4ab9fe3ae65841303967155",
+  "alignment": {
+    "worldViewBox": {
+      "x": 6750,
+      "y": 4730,
+      "width": 180,
+      "height": 200
+    },
+    "matrix": "matrix(0.6824231979736396 0 0 0.6824214214683265 -4116.603515625 3668.70556640625)",
+    "iframe": {
+      "height": 688,
+      "width": 1248,
+      "x": 16,
+      "y": 16
+    },
+    "note": "Top Paste only; zoomed to U10P before clearing selection."
+  },
+  "canvasBounds": {
+    "x": 16,
+    "y": 48,
+    "width": 1248,
+    "height": 656
+  },
+  "mimeType": "image/jpeg",
+  "layers": ["TOPPASTE"]
+}

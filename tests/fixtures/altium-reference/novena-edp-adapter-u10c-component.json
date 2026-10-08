@@ -1,0 +1,39 @@
+{
+  "title": "Novena U10C owned primitives",
+  "image": "novena-u10c.jpg",
+  "width": 1280,
+  "height": 720,
+  "viewBox": {
+    "x": 276.59118505856713,
+    "y": 115.0192774969446,
+    "width": 560.2990069661423,
+    "height": 560.2974312246539
+  },
+  "source": "https://www.altium.com/viewer/",
+  "sourceSha256": "17896fdfeaac33a84ac3063db063d0a4d211c127c997632c8000837c0ce6fc12",
+  "screenshotSha256": "f4aa6f007adbade140af1c45ee40a691317a917d2db555ad96d862e7041c4b97",
+  "alignment": {
+    "worldViewBox": {
+      "x": 5700,
+      "y": 4450,
+      "width": 760,
+      "height": 760
+    },
+    "matrix": "matrix(0.7372355354817662 0 0 0.7372334621377026 -3941.6513671875 3940.005615234375)",
+    "iframe": {
+      "height": 688,
+      "width": 1248,
+      "x": 16,
+      "y": 16
+    },
+    "note": "U10C selected in Altium 365; unrelated primitives are dimmed by the real viewer."
+  },
+  "canvasBounds": {
+    "x": 16,
+    "y": 48,
+    "width": 1248,
+    "height": 656
+  },
+  "mimeType": "image/jpeg",
+  "layers": "default"
+}

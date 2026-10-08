@@ -4,6 +4,7 @@ import {
   serializeAltiumPcbLayerToSvg,
 } from "../../lib"
 import { readReferenceBytes } from "./read-reference"
+import { renderAltiumReferenceComparison } from "./render-altium-reference-comparison"
 
 test("renders rotated Elk Pi top-layer pads in a board-unit crop", async () => {
   const source = await readReferenceBytes("elk-pi.PcbDoc")
@@ -24,5 +25,9 @@ test("renders rotated Elk Pi top-layer pads in a board-unit crop", async () => {
   expect(svg).toContain('rx="11.811" ry="11.811"')
   expect(svg).not.toContain("<ellipse")
   expect(svg).toContain('data-layer="TOP"')
-  await expect(svg).toMatchSvgSnapshot(import.meta.path)
+  const comparison = await renderAltiumReferenceComparison({
+    reference: "elk-pi-top-layer-pad-detail",
+    converterSvg: svg,
+  })
+  await expect(comparison).toMatchSvgSnapshot(import.meta.path)
 }, 15_000)

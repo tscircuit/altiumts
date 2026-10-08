@@ -4,6 +4,7 @@ import {
   serializeAltiumPcbLayerToSvg,
 } from "../../lib"
 import { readReferenceBytes } from "./read-reference"
+import { renderAltiumReferenceComparison } from "./render-altium-reference-comparison"
 
 test("renders Elk Pi plated slot holes as rotated obrounds", async () => {
   const source = await readReferenceBytes("elk-pi.PcbDoc")
@@ -27,5 +28,9 @@ test("renders Elk Pi plated slot holes as rotated obrounds", async () => {
   expect(svg).toContain('transform="rotate(-270')
   expect(svg).toContain('data-plated="false"')
   expect(svg).toContain('stroke="#f8fafc"')
-  await expect(svg).toMatchSvgSnapshot(import.meta.path)
+  const comparison = await renderAltiumReferenceComparison({
+    reference: "elk-pi-slot-pad-detail",
+    converterSvg: svg,
+  })
+  await expect(comparison).toMatchSvgSnapshot(import.meta.path)
 }, 15_000)

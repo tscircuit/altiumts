@@ -4,6 +4,7 @@ import {
   serializeAltiumPcbLayerToSvg,
 } from "../../lib"
 import { readReferenceBytes } from "./read-reference"
+import { renderAltiumReferenceComparison } from "./render-altium-reference-comparison"
 
 test("renders Elk Pi middle-layer pad-stack geometry", async () => {
   const source = await readReferenceBytes("elk-pi.PcbDoc")
@@ -35,5 +36,9 @@ test("renders Elk Pi middle-layer pad-stack geometry", async () => {
   })
   expect(topSvg).toContain('data-pad-shape="RECTANGLE"')
   expect(topSvg).toContain('data-pad-stack-layer="0"')
-  await expect(svg).toMatchSvgSnapshot(import.meta.path)
+  const comparison = await renderAltiumReferenceComparison({
+    reference: "elk-pi-mid-layer-pad-stack-detail",
+    converterSvg: svg,
+  })
+  await expect(comparison).toMatchSvgSnapshot(import.meta.path)
 }, 25_000)

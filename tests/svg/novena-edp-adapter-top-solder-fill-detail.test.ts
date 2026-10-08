@@ -4,6 +4,7 @@ import {
   serializeAltiumPcbLayerToSvg,
 } from "../../lib"
 import { readReferenceBytes } from "./read-reference"
+import { renderAltiumReferenceComparison } from "./render-altium-reference-comparison"
 
 test("renders 45-degree Novena top-solder fills in a board-unit crop", async () => {
   const source = await readReferenceBytes("novena-edp-adapter-dvt1.PcbDoc")
@@ -31,5 +32,9 @@ test("renders 45-degree Novena top-solder fills in a board-unit crop", async () 
   expect(svg).not.toContain('data-pad-name="65"')
   expect(svg).not.toContain('data-record="Via"')
   expect(document.getBytes()).toEqual(source)
-  await expect(svg).toMatchSvgSnapshot(import.meta.path)
+  const comparison = await renderAltiumReferenceComparison({
+    reference: "novena-edp-adapter-top-solder-fill-detail",
+    converterSvg: svg,
+  })
+  await expect(comparison).toMatchSvgSnapshot(import.meta.path)
 })

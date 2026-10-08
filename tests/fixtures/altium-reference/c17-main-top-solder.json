@@ -1,0 +1,26 @@
+{
+  "title": "c17-main.PcbDoc — Top Solder Mask",
+  "image": "c17-main-top-solder.jpg",
+  "width": 1280,
+  "height": 720,
+  "viewBox": {
+    "x": 388.7657525823906,
+    "y": 64.75,
+    "width": 504.46849483521885,
+    "height": 588.5
+  },
+  "source": "https://www.altium.com/viewer/",
+  "screenshotSha256": "d41eae161a415f7b2720d38ce11983f20ea907a36c2c2a5e93e2e5466efee07a",
+  "alignment": {
+    "screenshotBoardBounds": {
+      "left": 408,
+      "top": 84,
+      "right": 874,
+      "bottom": 634
+    },
+    "note": "Board outline alignment; original pixels preserved and aspect ratio retained."
+  },
+  "mimeType": "image/jpeg",
+  "sourceSha256": "439e050d3bb35f3f335cd3e115ba91cf643eca3ae326a85c3034e4b22cbcac03",
+  "layers": ["TOPSOLDER"]
+}

@@ -1,0 +1,39 @@
+{
+  "title": "Novena net — EDP_TXAUX_P",
+  "image": "novena-aux-net.jpg",
+  "width": 1280,
+  "height": 720,
+  "viewBox": {
+    "x": 420.1671070001762,
+    "y": 273.25026567943405,
+    "width": 288.3006798013981,
+    "height": 198.2067173634612
+  },
+  "source": "https://www.altium.com/viewer/",
+  "sourceSha256": "17896fdfeaac33a84ac3063db063d0a4d211c127c997632c8000837c0ce6fc12",
+  "screenshotSha256": "ad7a41ecbdd2ed16fbac388e67c610d9735f7cc60cd476fc3f961b3bc14657bd",
+  "alignment": {
+    "worldViewBox": {
+      "x": 5425,
+      "y": 4585,
+      "width": 480,
+      "height": 330
+    },
+    "matrix": "matrix(0.6006264162529127 0 0 0.6006264162529127 -2854.231201171875 3209.3291015625)",
+    "iframe": {
+      "height": 688,
+      "width": 1248,
+      "x": 16,
+      "y": 16
+    },
+    "note": "EDP_TXAUX_P selected; unrelated primitives remain dimmed in the real viewer."
+  },
+  "canvasBounds": {
+    "x": 16,
+    "y": 48,
+    "width": 1248,
+    "height": 656
+  },
+  "mimeType": "image/jpeg",
+  "layers": "default"
+}

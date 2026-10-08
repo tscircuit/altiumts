@@ -1,0 +1,39 @@
+{
+  "title": "TI PMP22650 PCB",
+  "image": "ti-pmp22650.jpg",
+  "width": 1280,
+  "height": 720,
+  "viewBox": {
+    "x": 82.62910247926492,
+    "y": 33.074113282584335,
+    "width": 1119.4983503364888,
+    "height": 572.6201933326469
+  },
+  "source": "https://www.altium.com/viewer/",
+  "sourceSha256": "bc20338d29b9323b5af9182f91041c14b192aa363cf2d7a323441a7f28210002",
+  "screenshotSha256": "ddd32892d120117835008c35288728e45eb66b1dd33ecbb02746710ca3c3d4fd",
+  "alignment": {
+    "worldViewBox": {
+      "x": 126.44979000000001,
+      "y": 968.4498899999999,
+      "width": 12442.10022,
+      "height": 6364.09992
+    },
+    "matrix": "matrix(0.08997663823161912 0 0 0.08997661892974283 55.2515754699707 676.8321533203125)",
+    "iframe": {
+      "height": 688,
+      "width": 1248,
+      "x": 16,
+      "y": 16
+    },
+    "note": "Default PCB view, browser controls excluded."
+  },
+  "mimeType": "image/jpeg",
+  "layers": "default",
+  "canvasBounds": {
+    "x": 16,
+    "y": 48,
+    "width": 1248,
+    "height": 656
+  }
+}

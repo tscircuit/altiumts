@@ -1,0 +1,26 @@
+{
+  "title": "DSP5509 CIII PCB",
+  "image": "dsp5509-ciii.jpg",
+  "width": 1280,
+  "height": 720,
+  "viewBox": {
+    "x": 51.53183833333333,
+    "y": 150.54226250000005,
+    "width": 1176.0266566666667,
+    "height": 423.56047499999994
+  },
+  "source": "https://www.altium.com/viewer/",
+  "screenshotSha256": "801001a6333eeaab1f8a7c045dbfc7d38d80f6e63e2f547ff7190ab2ec0285bf",
+  "alignment": {
+    "screenshotBoardBounds": {
+      "left": 90,
+      "top": 347,
+      "right": 358,
+      "bottom": 527
+    },
+    "note": "Board outline alignment; original pixels preserved and aspect ratio retained."
+  },
+  "mimeType": "image/jpeg",
+  "sourceSha256": "20ab6308a67eb4b694c53e55095c6fe18fd0a9bb49fe69575d8eb32fc74579fd",
+  "layers": "default"
+}

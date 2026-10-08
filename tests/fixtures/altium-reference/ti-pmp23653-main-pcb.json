@@ -1,0 +1,39 @@
+{
+  "title": "TI PMP23653 main PCB",
+  "image": "ti-pmp23653-main.jpg",
+  "width": 1280,
+  "height": 720,
+  "viewBox": {
+    "x": 214.6119010560874,
+    "y": 42.83634777809846,
+    "width": 855.5992094988928,
+    "height": 337.0541391784305
+  },
+  "source": "https://www.altium.com/viewer/",
+  "sourceSha256": "18a785d61c6fbe381c504f416bb25fa50f16475710b9ce00f36b13b58d57c544",
+  "screenshotSha256": "4bffa4cfeec7891387fc8ba81a560a03fbddfcf1a63ce6a5a2e9a4ce077d334d",
+  "alignment": {
+    "worldViewBox": {
+      "x": 573.889765,
+      "y": 1415.8897650000001,
+      "width": 2598.4251699999995,
+      "height": 1023.6220700000001
+    },
+    "matrix": "matrix(0.32927606281572963 0 0 0.3292759594157934 9.643738746643066 830.1089477539062)",
+    "iframe": {
+      "height": 688,
+      "width": 1248,
+      "x": 16,
+      "y": 16
+    },
+    "note": "Default PCB view; search panel and tooltip closed."
+  },
+  "mimeType": "image/jpeg",
+  "layers": "default",
+  "canvasBounds": {
+    "x": 16,
+    "y": 48,
+    "width": 1248,
+    "height": 656
+  }
+}

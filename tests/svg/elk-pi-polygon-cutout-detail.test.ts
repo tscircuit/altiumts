@@ -4,6 +4,7 @@ import {
   serializeAltiumPcbLayerToSvg,
 } from "../../lib"
 import { readReferenceBytes } from "./read-reference"
+import { renderAltiumReferenceComparison } from "./render-altium-reference-comparison"
 
 test("renders the Elk Pi multilayer polygon cutout in a board-unit crop", async () => {
   const source = await readReferenceBytes("elk-pi.PcbDoc")
@@ -23,5 +24,9 @@ test("renders the Elk Pi multilayer polygon cutout in a board-unit crop", async 
   expect(svg).toContain('data-region-kind="POLYGON_CUTOUT"')
   expect(svg).toContain('fill="#123d32"')
   expect(svg).toContain('stroke="#123d32"')
-  await expect(svg).toMatchSvgSnapshot(import.meta.path)
+  const comparison = await renderAltiumReferenceComparison({
+    reference: "elk-pi-polygon-cutout-detail",
+    converterSvg: svg,
+  })
+  await expect(comparison).toMatchSvgSnapshot(import.meta.path)
 }, 15_000)

@@ -1,0 +1,39 @@
+{
+  "title": "Elk Pi rotated top-pad detail",
+  "image": "elk-pi-top-pad-detail.jpg",
+  "width": 1280,
+  "height": 720,
+  "viewBox": {
+    "x": 418.72143262016675,
+    "y": 289.35601522301977,
+    "width": 222.27535811614035,
+    "height": 177.8202864929123
+  },
+  "source": "https://www.altium.com/viewer/",
+  "sourceSha256": "8d61c6c9b9eff6748340794db203a86057857b8ce0348b7510859d73e3bce210",
+  "screenshotSha256": "bdea35352b4443be6da557fb7af08e93752b77b49c4c11fd14dd3a1a9ab789cb",
+  "alignment": {
+    "worldViewBox": {
+      "x": 3800,
+      "y": 4250,
+      "width": 500,
+      "height": 400
+    },
+    "matrix": "matrix(0.4445507162322807 0 0 0.4445507162322807 -1286.5712890625 2340.516845703125)",
+    "iframe": {
+      "height": 688,
+      "width": 1248,
+      "x": 16,
+      "y": 16
+    },
+    "note": "Top Layer only; selection cleared."
+  },
+  "canvasBounds": {
+    "x": 16,
+    "y": 48,
+    "width": 1248,
+    "height": 656
+  },
+  "mimeType": "image/jpeg",
+  "layers": ["TOP"]
+}

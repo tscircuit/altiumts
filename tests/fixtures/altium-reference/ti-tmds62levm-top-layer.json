@@ -1,0 +1,40 @@
+{
+  "title": "TI TMDS62LEVM Rev. B top PCB layer",
+  "converterLabel": "AltiumTS — existing golden; render run timed out (120s)",
+  "image": "ti-tmds62levm-top.jpg",
+  "width": 1280,
+  "height": 720,
+  "viewBox": {
+    "x": 417.9095957963757,
+    "y": 76.30828007828222,
+    "width": 431.4854148926954,
+    "height": 452.4221419850146
+  },
+  "source": "https://www.altium.com/viewer/",
+  "sourceSha256": "8444ad8456ff028b7aa11389362ba2fbc01291e87ff46e394576cb044c3612fc",
+  "screenshotSha256": "b93ea32edd99405efb082c40997d161ac214af229cf473f4281adce0adca3e46",
+  "alignment": {
+    "worldViewBox": {
+      "x": -100.515,
+      "y": -300.5150000000003,
+      "width": 5555.4636,
+      "height": 5825.03
+    },
+    "matrix": "matrix(0.07766866025234967 0 0 0.07766863724049741 409.7164611816406 489.38983154296875)",
+    "iframe": {
+      "height": 688,
+      "width": 1248,
+      "x": 16,
+      "y": 16
+    },
+    "note": "TOP copper only; Texts hidden to match showText:false."
+  },
+  "mimeType": "image/jpeg",
+  "layers": ["TOP"],
+  "canvasBounds": {
+    "x": 16,
+    "y": 48,
+    "width": 1248,
+    "height": 656
+  }
+}

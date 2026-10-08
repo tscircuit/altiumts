@@ -4,6 +4,7 @@ import {
   serializeAltiumPcbLayerToSvg,
 } from "../../lib"
 import { readReferenceBytes } from "./read-reference"
+import { renderAltiumReferenceComparison } from "./render-altium-reference-comparison"
 
 test("renders Novena shape-based component bodies without legacy duplicates", async () => {
   const source = await readReferenceBytes("novena-edp-adapter-dvt1.PcbDoc")
@@ -17,5 +18,9 @@ test("renders Novena shape-based component bodies without legacy duplicates", as
   expect(svg).toContain('data-component="102"')
   expect(svg.match(/data-record="ComponentBody"/gu)).toHaveLength(99)
   expect(svg).not.toContain('data-record="ComponentBodyLegacy"')
-  await expect(svg).toMatchSvgSnapshot(import.meta.path)
+  const comparison = await renderAltiumReferenceComparison({
+    reference: "novena-edp-adapter-component-bodies",
+    converterSvg: svg,
+  })
+  await expect(comparison).toMatchSvgSnapshot(import.meta.path)
 })

@@ -1,0 +1,39 @@
+{
+  "title": "Elk Pi plated slot-pad detail",
+  "image": "elk-pi-slot-detail.jpg",
+  "width": 1280,
+  "height": 720,
+  "viewBox": {
+    "x": 380.77577039446624,
+    "y": 290.01024904724727,
+    "width": 209.27307858988522,
+    "height": 70.46962086566644
+  },
+  "source": "https://www.altium.com/viewer/",
+  "sourceSha256": "8d61c6c9b9eff6748340794db203a86057857b8ce0348b7510859d73e3bce210",
+  "screenshotSha256": "fa78ddbf268a4474659c8f1c825dea02358c0beae08973b8c15e651f8a7d390e",
+  "alignment": {
+    "worldViewBox": {
+      "x": 3000,
+      "y": 5140,
+      "width": 490,
+      "height": 165
+    },
+    "matrix": "matrix(0.42708791548956165 0 0 0.4270886113070693 -916.4879760742188 2539.71533203125)",
+    "iframe": {
+      "height": 688,
+      "width": 1248,
+      "x": 16,
+      "y": 16
+    },
+    "note": "Top Layer only; selection cleared."
+  },
+  "canvasBounds": {
+    "x": 16,
+    "y": 48,
+    "width": 1248,
+    "height": 656
+  },
+  "mimeType": "image/jpeg",
+  "layers": ["TOP"]
+}

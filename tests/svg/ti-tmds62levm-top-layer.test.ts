@@ -4,6 +4,7 @@ import {
   serializeAltiumPcbLayerToSvg,
 } from "../../lib"
 import { readReferenceBytes } from "./read-reference"
+import { renderAltiumReferenceComparison } from "./render-altium-reference-comparison"
 
 test("renders the complete TI TMDS62LEVM Rev. B top PCB layer", async () => {
   const source = await readReferenceBytes("ti-tmds62levm-rev-b.PcbDoc")
@@ -27,5 +28,9 @@ test("renders the complete TI TMDS62LEVM Rev. B top PCB layer", async () => {
   expect(svg).toContain('data-record="Via"')
   expect(svg).toContain('data-layer="TOP"')
   expect(svg).not.toContain('data-layer="BOTTOM"')
-  await expect(svg).toMatchSvgSnapshot(import.meta.path)
+  const comparison = await renderAltiumReferenceComparison({
+    reference: "ti-tmds62levm-top-layer",
+    converterSvg: svg,
+  })
+  await expect(comparison).toMatchSvgSnapshot(import.meta.path)
 }, 45_000)

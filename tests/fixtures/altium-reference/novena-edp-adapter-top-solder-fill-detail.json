@@ -1,0 +1,39 @@
+{
+  "title": "Novena eDP adapter 45-degree top-solder fills",
+  "image": "novena-top-solder.jpg",
+  "width": 1280,
+  "height": 720,
+  "viewBox": {
+    "x": 386.49304728169227,
+    "y": 210.40871228056085,
+    "width": 354.8340449051645,
+    "height": 354.8330442874667
+  },
+  "source": "https://www.altium.com/viewer/",
+  "sourceSha256": "17896fdfeaac33a84ac3063db063d0a4d211c127c997632c8000837c0ce6fc12",
+  "screenshotSha256": "ff757bd56103357da7e736bfa669b6d8642133d514eb3ef48ad9bfc449d63ff7",
+  "alignment": {
+    "worldViewBox": {
+      "x": 5850,
+      "y": 4600,
+      "width": 480,
+      "height": 480
+    },
+    "matrix": "matrix(0.739237593552426 0 0 0.7392355089322222 -3954.046875 3949.72509765625)",
+    "iframe": {
+      "height": 688,
+      "width": 1248,
+      "x": 16,
+      "y": 16
+    },
+    "note": "Top Solder only, same crop as test."
+  },
+  "canvasBounds": {
+    "x": 16,
+    "y": 48,
+    "width": 1248,
+    "height": 656
+  },
+  "mimeType": "image/jpeg",
+  "layers": ["TOPSOLDER"]
+}

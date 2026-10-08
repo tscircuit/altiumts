@@ -1,0 +1,39 @@
+{
+  "title": "TI PMP23653 planar transformer PCB",
+  "image": "ti-pmp23653-planar-transformer.jpg",
+  "width": 1280,
+  "height": 720,
+  "viewBox": {
+    "x": 399.6416599895377,
+    "y": 62.26059788856537,
+    "width": 428.9642964916036,
+    "height": 307.1024778050306
+  },
+  "source": "https://www.altium.com/viewer/",
+  "sourceSha256": "e291efae1b3d42c8a90d3a01295a3a3129e6721d14163fc7c81045ffa2e29a5c",
+  "screenshotSha256": "c8030883b24bdaa0302be2e4aec12788033d35e917545907b9d91c367c07f803",
+  "alignment": {
+    "worldViewBox": {
+      "x": 630.17248,
+      "y": 1456.42448,
+      "width": 1316.56844,
+      "height": 942.5526400000001
+    },
+    "matrix": "matrix(0.3258199752164829 0 0 0.3258199752164829 178.31887817382812 827.895263671875)",
+    "iframe": {
+      "height": 688,
+      "width": 1248,
+      "x": 16,
+      "y": 16
+    },
+    "note": "Default PCB view."
+  },
+  "mimeType": "image/jpeg",
+  "layers": "default",
+  "canvasBounds": {
+    "x": 16,
+    "y": 48,
+    "width": 1248,
+    "height": 656
+  }
+}

@@ -4,6 +4,7 @@ import {
   serializeAltiumPcbLayerToSvg,
 } from "../../lib"
 import { readReferenceBytes } from "./read-reference"
+import { renderAltiumReferenceComparison } from "./render-altium-reference-comparison"
 
 test("renders rotated Novena top-paste fills in a board-unit crop", async () => {
   const source = await readReferenceBytes("novena-edp-adapter-dvt1.PcbDoc")
@@ -24,5 +25,9 @@ test("renders rotated Novena top-paste fills in a board-unit crop", async () => 
   expect(svg).toContain('data-keepout="false"')
   expect(svg).toContain('transform="rotate(-270')
   expect(svg).toContain('transform="rotate(-90')
-  await expect(svg).toMatchSvgSnapshot(import.meta.path)
+  const comparison = await renderAltiumReferenceComparison({
+    reference: "novena-edp-adapter-top-paste-fill-detail",
+    converterSvg: svg,
+  })
+  await expect(comparison).toMatchSvgSnapshot(import.meta.path)
 })

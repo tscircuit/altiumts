@@ -1,6 +1,7 @@
 import { expect, test } from "bun:test"
 import { parseAltiumBinaryPcbDoc, serializeAltiumPcbToSvg } from "../../lib"
 import { readReferenceBytes } from "./read-reference"
+import { renderAltiumReferenceComparison } from "./render-altium-reference-comparison"
 
 test("renders DSP5509 CIII after accepting opaque Connections6 records", async () => {
   const source = await readReferenceBytes("dsp5509-ciii.PcbDoc")
@@ -15,5 +16,9 @@ test("renders DSP5509 CIII after accepting opaque Connections6 records", async (
   const viewBox = svg.match(/viewBox="0 0 ([\d.]+) ([\d.]+)"/)
   expect(Number(viewBox?.[1])).toBeGreaterThan(25_000)
   expect(Number(viewBox?.[2])).toBeGreaterThan(8_000)
-  await expect(svg).toMatchSvgSnapshot(import.meta.path)
+  const comparison = await renderAltiumReferenceComparison({
+    reference: "dsp5509-ciii-pcb",
+    converterSvg: svg,
+  })
+  await expect(comparison).toMatchSvgSnapshot(import.meta.path)
 })

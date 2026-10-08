@@ -4,6 +4,7 @@ import {
   serializeAltiumPcbLayerToSvg,
 } from "../../lib"
 import { readReferenceBytes } from "./read-reference"
+import { renderAltiumReferenceComparison } from "./render-altium-reference-comparison"
 
 test("renders Elk Pi custom-radius roundrect pads", async () => {
   const source = await readReferenceBytes("elk-pi.PcbDoc")
@@ -21,5 +22,9 @@ test("renders Elk Pi custom-radius roundrect pads", async () => {
   expect(svg).toContain('viewBox="0 0 180 210"')
   expect(svg).toContain('data-pad-shape="ROUNDRECT"')
   expect(svg).toContain('rx="11.811" ry="11.811"')
-  await expect(svg).toMatchSvgSnapshot(import.meta.path)
+  const comparison = await renderAltiumReferenceComparison({
+    reference: "elk-pi-roundrect-pad-detail",
+    converterSvg: svg,
+  })
+  await expect(comparison).toMatchSvgSnapshot(import.meta.path)
 }, 15_000)

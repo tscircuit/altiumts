@@ -1,0 +1,39 @@
+{
+  "title": "Elk Pi middle-layer pad-stack detail",
+  "image": "elk-pi-mid1-detail.jpg",
+  "width": 1280,
+  "height": 720,
+  "viewBox": {
+    "x": 436.2070200006592,
+    "y": 242.42868532124726,
+    "width": 53.34608594787368,
+    "height": 53.34608594787368
+  },
+  "source": "https://www.altium.com/viewer/",
+  "sourceSha256": "8d61c6c9b9eff6748340794db203a86057857b8ce0348b7510859d73e3bce210",
+  "screenshotSha256": "466aa7016e44f1c750afdfeea0c430f9266434d733fa696410fb28e7c732030d",
+  "alignment": {
+    "worldViewBox": {
+      "x": 5430,
+      "y": 2490,
+      "width": 120,
+      "height": 120
+    },
+    "matrix": "matrix(0.4445507162322807 0 0 0.4445507162322807 -1993.703369140625 1386.7060546875)",
+    "iframe": {
+      "height": 688,
+      "width": 1248,
+      "x": 16,
+      "y": 16
+    },
+    "note": "Ground Layer only (MID-LAYER1); J9 pad crop."
+  },
+  "canvasBounds": {
+    "x": 16,
+    "y": 48,
+    "width": 1248,
+    "height": 656
+  },
+  "mimeType": "image/jpeg",
+  "layers": ["MID-LAYER1"]
+}

@@ -1,58 +1,81 @@
 import { readFile } from "node:fs/promises"
 
-const references = {
-  pmp22712: {
-    title: "PMP22712 E2",
-    width: 986,
-    height: 954,
-    board: { x: 80, y: 214, width: 848, height: 695 },
-  },
-  pmp22773: {
-    title: "PMP22773 E3",
-    width: 1034,
-    height: 1188,
-    board: { x: 148, y: 260, width: 704, height: 746 },
-  },
-} as const
+type AltiumReferenceView = {
+  title: string
+  converterLabel?: string
+  image: string
+  mimeType: "image/png" | "image/jpeg"
+  width: number
+  height: number
+  viewBox: { x: number; y: number; width: number; height: number }
+  canvasBounds?: { x: number; y: number; width: number; height: number }
+}
 
 export async function renderAltiumReferenceComparison({
   reference,
   converterSvg,
 }: {
-  reference: keyof typeof references
+  reference: string
   converterSvg: string
 }): Promise<string> {
-  const { title, width, height, board } = references[reference]
-  const image = await readFile(
-    new URL(`../fixtures/altium-reference/${reference}.png`, import.meta.url),
+  const directory = new URL("../fixtures/altium-reference/", import.meta.url)
+  const view: AltiumReferenceView = JSON.parse(
+    await readFile(new URL(`${reference}.json`, directory), "utf8"),
   )
-  // Align the screenshot's board rectangle with the existing full-board
-  // snapshot, which adds 5% padding around the PCB outline. Keep the image's
-  // aspect ratio and pixels intact; screenshot bounds are approximate.
-  const padding = Math.max(board.width, board.height) * 0.05
-  const viewBox = [
-    board.x - padding,
-    board.y - padding,
-    board.width + padding * 2,
-    board.height + padding * 2,
-  ].join(" ")
+  const image = await readFile(new URL(view.image, directory))
+  const openingTag = converterSvg.match(/^<svg\b[^>]*>/u)?.[0] ?? ""
+  const panelWidth = Number(openingTag.match(/\bwidth="([\d.]+)"/u)?.[1])
+  const panelHeight = Number(openingTag.match(/\bheight="([\d.]+)"/u)?.[1])
+  if (!(panelWidth > 0 && panelHeight > 0)) {
+    throw new Error("PCB comparison requires numeric SVG width and height")
+  }
+  const escapeXml = (text: string) =>
+    text.replace(/[&<>"']/gu, (char) => {
+      return {
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&apos;",
+      }[char]!
+    })
+  const title = escapeXml(view.title)
+  const converterLabel = escapeXml(
+    view.converterLabel ?? "AltiumTS — current PCB test output",
+  )
+  const width = 2 * panelWidth + 56
+  const height = panelHeight + 114
+  const rightX = panelWidth + 40
+  const { x, y, width: cropWidth, height: cropHeight } = view.viewBox
+  const viewBox = `${x} ${y} ${cropWidth} ${cropHeight}`
+  const clipId = `reference-${reference}`
+  const canvas = view.canvasBounds
+  const clip = canvas
+    ? `<defs><clipPath id="${clipId}"><rect x="${canvas.x}" y="${canvas.y}" width="${canvas.width}" height="${canvas.height}"/></clipPath></defs>`
+    : ""
+  const clipAttribute = canvas ? ` clip-path="url(#${clipId})"` : ""
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="1656" height="714" viewBox="0 0 1656 714" role="img" aria-label="${title}: real Altium reference and current AltiumTS, side by side">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" data-altium-reference="${reference}" role="img" aria-label="${title}: real Altium reference and current AltiumTS, side by side">
   <title>${title}: real Altium versus current AltiumTS</title>
-  <rect width="1656" height="714" fill="#171a20"/>
+  <rect width="${width}" height="${height}" fill="#171a20"/>
   <g fill="#f5f5f5" font-family="Arial, sans-serif" font-size="22">
-    <text x="16" y="30">${title} — real Altium reference</text>
-    <text x="840" y="30">${title} — current AltiumTS</text>
+    <text x="16" y="30">${title}</text>
   </g>
   <g fill="#c6cbd3" font-family="Arial, sans-serif" font-size="16">
-    <text x="16" y="55">Original uploaded screenshot, aligned to the board outline</text>
-    <text x="840" y="55">Existing PCB snapshot output, with its default visible layers</text>
+    <text x="16" y="55">Real Altium viewer — original reference pixels</text>
+    <text x="${rightX}" y="55">${converterLabel}</text>
   </g>
-  <svg x="16" y="70" width="800" height="600" viewBox="${viewBox}">
-    <title>Original Altium reference pixels</title>
-    <image width="${width}" height="${height}" href="data:image/png;base64,${image.toString("base64")}"/>
+  <svg x="16" y="70" width="${panelWidth}" height="${panelHeight}" viewBox="${viewBox}">
+    <title>Original Altium reference pixels</title>${
+      canvas
+        ? `
+    <rect x="${x}" y="${y}" width="${cropWidth}" height="${cropHeight}" fill="#ccc"/>
+    ${clip}`
+        : ""
+    }
+    <image${clipAttribute} width="${view.width}" height="${view.height}" href="data:${view.mimeType};base64,${image.toString("base64")}"/>
   </svg>
-  <g transform="translate(840 70)">${converterSvg}</g>
-  <text x="16" y="699" fill="#c6cbd3" font-family="Arial, sans-serif" font-size="16">Baseline comparison: text, colors, layer visibility and dimension differences remain visible. No rendering fixes applied.</text>
+  <g transform="translate(${rightX} 70)">${converterSvg}</g>
+  <text x="16" y="${height - 15}" fill="#c6cbd3" font-family="Arial, sans-serif" font-size="16">Same PCB and crop. Current rendering differences are preserved.</text>
 </svg>`
 }

@@ -1,0 +1,39 @@
+{
+  "title": "Elk Pi roundrect-pad detail",
+  "image": "elk-pi-roundrect-detail.jpg",
+  "width": 1280,
+  "height": 720,
+  "viewBox": {
+    "x": 484.42457205373603,
+    "y": 324.3525362024491,
+    "width": 80.01912892181053,
+    "height": 93.35565040877894
+  },
+  "source": "https://www.altium.com/viewer/",
+  "sourceSha256": "8d61c6c9b9eff6748340794db203a86057857b8ce0348b7510859d73e3bce210",
+  "screenshotSha256": "762906aaa91b1772b8b2af99ade96c4033be33c61f281156b60f23d393b24a95",
+  "alignment": {
+    "worldViewBox": {
+      "x": 5080,
+      "y": 2750,
+      "width": 180,
+      "height": 210
+    },
+    "matrix": "matrix(0.4445507162322807 0 0 0.4445507162322807 -1789.89306640625 1624.22265625)",
+    "iframe": {
+      "height": 688,
+      "width": 1248,
+      "x": 16,
+      "y": 16
+    },
+    "note": "Top copper only; roundrect pad crop."
+  },
+  "canvasBounds": {
+    "x": 16,
+    "y": 48,
+    "width": 1248,
+    "height": 656
+  },
+  "mimeType": "image/jpeg",
+  "layers": ["TOP"]
+}

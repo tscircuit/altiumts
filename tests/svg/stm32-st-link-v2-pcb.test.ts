@@ -2,6 +2,7 @@ import { expect, test } from "bun:test"
 import { parseAltiumBinaryPcbDoc, serializeAltiumPcbToSvg } from "../../lib"
 import { getPcbDocumentBounds } from "../../lib/svg-serialization/pcb-geometry"
 import { readReferenceBytes } from "./read-reference"
+import { renderAltiumReferenceComparison } from "./render-altium-reference-comparison"
 
 test("renders the complete STM32 ST-Link V2.1 binary PCB", async () => {
   const source = await readReferenceBytes("stm32-st-link-v2.PcbDoc")
@@ -17,5 +18,9 @@ test("renders the complete STM32 ST-Link V2.1 binary PCB", async () => {
     maxY: 2477.7401,
   })
   expect(svg).not.toContain(".Designator")
-  await expect(svg).toMatchSvgSnapshot(import.meta.path)
+  const comparison = await renderAltiumReferenceComparison({
+    reference: "stm32-st-link-v2-pcb",
+    converterSvg: svg,
+  })
+  await expect(comparison).toMatchSvgSnapshot(import.meta.path)
 }, 20_000)

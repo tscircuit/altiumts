@@ -5,6 +5,7 @@ import {
   serializeAltiumPcbLayerToSvg,
 } from "../../lib"
 import { readReferenceBytes } from "./read-reference"
+import { renderAltiumReferenceComparison } from "./render-altium-reference-comparison"
 
 test("renders top-solder pad openings in c17-main.PcbDoc", async () => {
   const source = await readReferenceBytes("c17-main.PcbDoc")
@@ -32,5 +33,9 @@ test("renders top-solder pad openings in c17-main.PcbDoc", async () => {
     'data-layer="TOPSOLDER" data-solder-mask-opening="true"',
   )
   expect(svg).not.toContain('data-record="Via"')
-  await expect(svg).toMatchSvgSnapshot(import.meta.path)
+  const comparison = await renderAltiumReferenceComparison({
+    reference: "c17-main-top-solder",
+    converterSvg: svg,
+  })
+  await expect(comparison).toMatchSvgSnapshot(import.meta.path)
 }, 30_000)

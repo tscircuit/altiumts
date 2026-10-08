@@ -1,0 +1,37 @@
+{
+  "title": "Novena eDP adapter DVT1 PCB",
+  "image": "novena.jpg",
+  "width": 1280,
+  "height": 720,
+  "viewBox": {
+    "x": 374.40530663421237,
+    "y": 259.4242403906544,
+    "width": 481.4352909106,
+    "height": 389.01284455157577
+  },
+  "source": "https://www.altium.com/viewer/",
+  "sourceSha256": "17896fdfeaac33a84ac3063db063d0a4d211c127c997632c8000837c0ce6fc12",
+  "screenshotSha256": "effc0c25c7188a8d39c2a6d211bbe5b69e23e0bb9350e32c54a727968fe181bf",
+  "alignment": {
+    "worldViewBox": {
+      "x": 4953.8774,
+      "y": 3765.8851999999997,
+      "width": 2102.0866,
+      "height": 1698.5433
+    },
+    "matrix": "matrix(0.22902733451162285 0 0 0.22902733451162285 -776.1680297851562 1494.927734375)",
+    "iframe": {
+      "x": 16,
+      "y": 16
+    },
+    "note": "Full board; novena"
+  },
+  "canvasBounds": {
+    "x": 16,
+    "y": 48,
+    "width": 1248,
+    "height": 656
+  },
+  "mimeType": "image/jpeg",
+  "layers": "default"
+}

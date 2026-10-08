@@ -1,0 +1,37 @@
+{
+  "title": "Elk Pi top PCB layer",
+  "image": "elk-pi-top.jpg",
+  "width": 1280,
+  "height": 720,
+  "viewBox": {
+    "x": 213.3927048198558,
+    "y": 55.406438421448684,
+    "width": 856.0319966270737,
+    "height": 606.3851659579409
+  },
+  "source": "https://www.altium.com/viewer/",
+  "sourceSha256": "8d61c6c9b9eff6748340794db203a86057857b8ce0348b7510859d73e3bce210",
+  "screenshotSha256": "003d4f0a4c8506bd0d18b9a702bc6c8d651518feba2f81653fc578235a0afead",
+  "alignment": {
+    "worldViewBox": {
+      "x": 1968.1711999999995,
+      "y": 1433.9184999998597,
+      "width": 5737.6519,
+      "height": 4064.3656
+    },
+    "matrix": "matrix(0.14919552659286872 0 0 0.14919552659286872 -96.2496337890625 859.725830078125)",
+    "iframe": {
+      "x": 16,
+      "y": 16
+    },
+    "note": "Full board; elk-pi-top"
+  },
+  "canvasBounds": {
+    "x": 16,
+    "y": 48,
+    "width": 1248,
+    "height": 656
+  },
+  "mimeType": "image/jpeg",
+  "layers": ["TOP"]
+}

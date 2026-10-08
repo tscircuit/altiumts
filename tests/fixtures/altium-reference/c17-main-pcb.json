@@ -1,0 +1,26 @@
+{
+  "title": "C17 main PCB",
+  "image": "c17-main.jpg",
+  "width": 1280,
+  "height": 720,
+  "viewBox": {
+    "x": 388.7657525823906,
+    "y": 64.75,
+    "width": 504.46849483521885,
+    "height": 588.5
+  },
+  "source": "https://www.altium.com/viewer/",
+  "screenshotSha256": "489aa8bec1d520fe22867df20e23c703d03ed34e23e899cfe850fe8530448bf0",
+  "alignment": {
+    "screenshotBoardBounds": {
+      "left": 408,
+      "top": 84,
+      "right": 874,
+      "bottom": 634
+    },
+    "note": "Board outline alignment; original pixels preserved and aspect ratio retained."
+  },
+  "mimeType": "image/jpeg",
+  "sourceSha256": "439e050d3bb35f3f335cd3e115ba91cf643eca3ae326a85c3034e4b22cbcac03",
+  "layers": "default"
+}

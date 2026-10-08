@@ -1,0 +1,39 @@
+{
+  "title": "TI PMP23595 PCB",
+  "image": "ti-pmp23595.jpg",
+  "width": 1280,
+  "height": 720,
+  "viewBox": {
+    "x": 324.35122349109133,
+    "y": 131.47574431591693,
+    "width": 642.8231229013696,
+    "height": 435.8533543935489
+  },
+  "source": "https://www.altium.com/viewer/",
+  "sourceSha256": "18913410812b0993e4c8c3a00a489335d0fa58d27b79ec02e1294a8a6471e0f6",
+  "screenshotSha256": "d1770fbbe93c7b2827df6384870fe32721ef773ab76e64aa7caa8379b1efa3b2",
+  "alignment": {
+    "worldViewBox": {
+      "x": 552,
+      "y": 1198,
+      "width": 5280,
+      "height": 3580
+    },
+    "matrix": "matrix(0.12174680357980484 0 0 0.12174674703730416 241.14698791503906 697.1817016601562)",
+    "iframe": {
+      "height": 688,
+      "width": 1248,
+      "x": 16,
+      "y": 16
+    },
+    "note": "Default PCB view in Altium 365 Viewer."
+  },
+  "mimeType": "image/jpeg",
+  "canvasBounds": {
+    "x": 16,
+    "y": 48,
+    "width": 1248,
+    "height": 656
+  },
+  "layers": "default"
+}

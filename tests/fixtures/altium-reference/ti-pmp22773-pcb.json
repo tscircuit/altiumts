@@ -1,0 +1,17 @@
+{
+  "title": "PMP22773 E3",
+  "image": "pmp22773.png",
+  "width": 1034,
+  "height": 1188,
+  "viewBox": {
+    "x": 110.69999999999999,
+    "y": 222.7,
+    "width": 778.6,
+    "height": 820.6
+  },
+  "mimeType": "image/png",
+  "sourceSha256": "a84ae2b3f463084053987c1bac0ce6c51c1b38b16bf53097d769366cd0eb59f7",
+  "screenshotSha256": "48ee04bc03187e103e503ec56de8856c43c923ccaef0a2b2911b869aacb1cfc2",
+  "layers": "default",
+  "source": "https://www.altium.com/viewer/"
+}

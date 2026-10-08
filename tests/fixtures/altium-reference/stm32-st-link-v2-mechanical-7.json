@@ -1,0 +1,39 @@
+{
+  "title": "STM32 ST-Link V2.1 Mechanical 7",
+  "image": "stm32-mechanical7.jpg",
+  "width": 1280,
+  "height": 720,
+  "viewBox": {
+    "x": 56.72266778730085,
+    "y": 137.05458807843183,
+    "width": 1177.8558594781946,
+    "height": 434.5901709555834
+  },
+  "source": "https://www.altium.com/viewer/",
+  "sourceSha256": "b8c8cf965461f522091e3a046414de7ffe6c06097657cb9a8cb11db2aa923df2",
+  "screenshotSha256": "c259a0a92b6bfdc40ee3ab01622ad7b5e36d9d236582b80947ab6e21c6f91568",
+  "alignment": {
+    "worldViewBox": {
+      "x": 619.237,
+      "y": 1823.551,
+      "width": 1945.5033,
+      "height": 717.8271
+    },
+    "matrix": "matrix(0.6054247553721418 0 0 0.605424580592713 -334.1787414550781 1659.6673583984375)",
+    "iframe": {
+      "height": 688,
+      "width": 1248,
+      "x": 16,
+      "y": 16
+    },
+    "note": "Dimensions only; selection cleared."
+  },
+  "canvasBounds": {
+    "x": 16,
+    "y": 48,
+    "width": 1248,
+    "height": 656
+  },
+  "mimeType": "image/jpeg",
+  "layers": ["MECHANICAL7"]
+}

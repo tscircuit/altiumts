@@ -1,0 +1,324 @@
+[
+  {
+    "name": "c17-main-pcb",
+    "test": "c17-main-pcb.test.ts",
+    "sourceSha256": "439e050d3bb35f3f335cd3e115ba91cf643eca3ae326a85c3034e4b22cbcac03",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "c17-main-top-solder",
+    "test": "c17-main-top-solder.test.ts",
+    "sourceSha256": "439e050d3bb35f3f335cd3e115ba91cf643eca3ae326a85c3034e4b22cbcac03",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "ch582-polygon-cutout",
+    "test": "ch582-polygon-cutout.test.ts",
+    "sourceSha256": "dcf82249e19f9a58f3874e9c56509bab42f3fdf00dc3dd0d52ba9a4f4aeb0649",
+    "status": "awaiting-reference",
+    "reason": "Altium 365 rejected the original ASCII fixture in a single-design ZIP; a desktop Altium capture is required. Safe native serialization is unavailable: AltiumSerializationError: Region binary serialization does not support fields: SELECTION, POLYGONOUTLINE, ISSHAPEBASED, KIND, MAINCONTOURVERTEXCOUNT"
+  },
+  {
+    "name": "copper-polygon-cutout",
+    "test": "copper-polygon-cutout.test.ts",
+    "sourceSha256": "b8ce816abfa49eb838b6ca1bf29b104276a6164fd131c6a3dd779738d4da1150",
+    "status": "awaiting-reference",
+    "reason": "The generated native test fixture did not produce a usable Altium 365 view; a native Altium capture is still required."
+  },
+  {
+    "name": "copper-polygon-outline",
+    "test": "copper-polygon-outline.test.ts",
+    "sourceSha256": "669ce3710baa4337347b049dfd98c801b5eecf4e8977c3d6e003c4c81f760953",
+    "status": "awaiting-reference",
+    "reason": "The generated native test fixture did not produce a usable Altium 365 view; a native Altium capture is still required."
+  },
+  {
+    "name": "copper-region-in-polygon-cutout",
+    "test": "copper-region-in-polygon-cutout.test.ts",
+    "sourceSha256": "cca3d049376b8ddd7635263d9357484ff57c7133e710356f45678a4388001b36",
+    "status": "awaiting-reference",
+    "reason": "Altium 365 rejected the original ASCII fixture in a single-design ZIP; a desktop Altium capture is required. Safe native serialization is unavailable: AltiumSerializationError: Altium contour outline must repeat its first vertex"
+  },
+  {
+    "name": "dsp5509-ciii-pcb",
+    "test": "dsp5509-ciii-pcb.test.ts",
+    "sourceSha256": "20ab6308a67eb4b694c53e55095c6fe18fd0a9bb49fe69575d8eb32fc74579fd",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "elk-pi-bottom-layer-routing-detail",
+    "test": "elk-pi-bottom-layer-routing-detail.test.ts",
+    "sourceSha256": "8d61c6c9b9eff6748340794db203a86057857b8ce0348b7510859d73e3bce210",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "elk-pi-mid-layer-pad-stack-detail",
+    "test": "elk-pi-mid-layer-pad-stack-detail.test.ts",
+    "sourceSha256": "8d61c6c9b9eff6748340794db203a86057857b8ce0348b7510859d73e3bce210",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "elk-pi-pcb",
+    "test": "elk-pi-pcb.test.ts",
+    "sourceSha256": "8d61c6c9b9eff6748340794db203a86057857b8ce0348b7510859d73e3bce210",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "elk-pi-polygon-cutout-detail",
+    "test": "elk-pi-polygon-cutout-detail.test.ts",
+    "sourceSha256": "8d61c6c9b9eff6748340794db203a86057857b8ce0348b7510859d73e3bce210",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "elk-pi-roundrect-pad-detail",
+    "test": "elk-pi-roundrect-pad-detail.test.ts",
+    "sourceSha256": "8d61c6c9b9eff6748340794db203a86057857b8ce0348b7510859d73e3bce210",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "elk-pi-slot-pad-detail",
+    "test": "elk-pi-slot-pad-detail.test.ts",
+    "sourceSha256": "8d61c6c9b9eff6748340794db203a86057857b8ce0348b7510859d73e3bce210",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "elk-pi-top-layer-pad-detail",
+    "test": "elk-pi-top-layer-pad-detail.test.ts",
+    "sourceSha256": "8d61c6c9b9eff6748340794db203a86057857b8ce0348b7510859d73e3bce210",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "elk-pi-top-layer",
+    "test": "elk-pi-top-layer.test.ts",
+    "sourceSha256": "8d61c6c9b9eff6748340794db203a86057857b8ce0348b7510859d73e3bce210",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "elk-pi-top-overlay",
+    "test": "elk-pi-top-overlay.test.ts",
+    "sourceSha256": "8d61c6c9b9eff6748340794db203a86057857b8ce0348b7510859d73e3bce210",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "novena-edp-adapter-aux-net",
+    "test": "novena-edp-adapter-aux-net.test.ts",
+    "sourceSha256": "17896fdfeaac33a84ac3063db063d0a4d211c127c997632c8000837c0ce6fc12",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "novena-edp-adapter-component-bodies",
+    "test": "novena-edp-adapter-component-bodies.test.ts",
+    "sourceSha256": "17896fdfeaac33a84ac3063db063d0a4d211c127c997632c8000837c0ce6fc12",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "novena-edp-adapter-pcb",
+    "test": "novena-edp-adapter-pcb.test.ts",
+    "sourceSha256": "17896fdfeaac33a84ac3063db063d0a4d211c127c997632c8000837c0ce6fc12",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "novena-edp-adapter-top-paste-fill-detail",
+    "test": "novena-edp-adapter-top-paste-fill-detail.test.ts",
+    "sourceSha256": "17896fdfeaac33a84ac3063db063d0a4d211c127c997632c8000837c0ce6fc12",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "novena-edp-adapter-top-solder-fill-detail",
+    "test": "novena-edp-adapter-top-solder-fill-detail.test.ts",
+    "sourceSha256": "17896fdfeaac33a84ac3063db063d0a4d211c127c997632c8000837c0ce6fc12",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "novena-edp-adapter-u10c-component",
+    "test": "novena-edp-adapter-u10c-component.test.ts",
+    "sourceSha256": "17896fdfeaac33a84ac3063db063d0a4d211c127c997632c8000837c0ce6fc12",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "pcb-component-body-creation",
+    "test": "pcb-component-body-creation.test.ts",
+    "sourceSha256": "438917963405a3ed8b249be01dab74f02d8dad4e051c963d5a691364b348b7ff",
+    "status": "awaiting-reference",
+    "reason": "The generated native test fixture did not produce a usable Altium 365 view; a native Altium capture is still required."
+  },
+  {
+    "name": "pcb-configured-layer-drawing-order",
+    "test": "pcb-configured-layer-drawing-order.test.ts",
+    "sourceSha256": "416bbb274da2f83a70cd6099233e5904c9ab272517107363d475407362f4026d",
+    "status": "awaiting-reference",
+    "reason": "The generated native test fixture did not produce a usable Altium 365 view; a native Altium capture is still required."
+  },
+  {
+    "name": "pcb-current-layer-drawing-order",
+    "test": "pcb-current-layer-drawing-order.test.ts",
+    "sourceSha256": "1648c4f89bb2e36af8023cc17bcc6e7c2469eac82f48fc48dd491b2848f89d35",
+    "status": "awaiting-reference",
+    "reason": "The generated native test fixture did not produce a usable Altium 365 view; a native Altium capture is still required."
+  },
+  {
+    "name": "pcb-keepout-arc",
+    "test": "pcb-keepout-arc.test.ts",
+    "sourceSha256": "3ac2c8aba73dc51bf44cb5177c3c6c67b851b65bbd61b5892ce1d88ef41d5a6a",
+    "status": "awaiting-reference",
+    "reason": "Altium 365 rejected the original ASCII fixture in a single-design ZIP; a desktop Altium capture is required. Safe native serialization is unavailable: AltiumSerializationError: Unsupported PCB record kind for binary serialization: \"Arc\""
+  },
+  {
+    "name": "pcb-layer-paint-order",
+    "test": "pcb-layer-paint-order.test.ts",
+    "sourceSha256": "a1212e85ae5df1ddc3d18326d8416509bdee474b84437887bb43313267c9aca1",
+    "status": "awaiting-reference",
+    "reason": "The generated native test fixture did not produce a usable Altium 365 view; a native Altium capture is still required."
+  },
+  {
+    "name": "pcb-linear-dimension",
+    "test": "pcb-linear-dimension.test.ts",
+    "sourceSha256": "f115ba28803654e13ed2d84efe0b58c709bdf75e1f9a55e12f87642072da5260",
+    "status": "awaiting-reference",
+    "reason": "The generated native test fixture did not produce a usable Altium 365 view; a native Altium capture is still required."
+  },
+  {
+    "name": "pcb-text-justification",
+    "test": "pcb-text-justification.test.ts",
+    "sourceSha256": "ad614438c9ec81ab0ad176e0ab652de1404c1370e8f4362fd3058f2835fa365f",
+    "status": "awaiting-reference",
+    "reason": "The generated native test fixture did not produce a usable Altium 365 view; a native Altium capture is still required."
+  },
+  {
+    "name": "pcb-text-orientation",
+    "test": "pcb-text-orientation.test.ts",
+    "sourceSha256": "862330f1b07f39fe40b27aa92403e9f30c1b3260f8f881b985ff3f2d60e9d941",
+    "status": "awaiting-reference",
+    "reason": "The generated native test fixture did not produce a usable Altium 365 view; a native Altium capture is still required."
+  },
+  {
+    "name": "sample-board-design-pcb",
+    "test": "sample-board-design-pcb.test.ts",
+    "sourceSha256": "745a27e3b876767c9bc4caf7706c19b6f97b3313efdb00bc2771f22db8410174",
+    "status": "awaiting-reference",
+    "reason": "Altium 365 rejected the original ASCII fixture in a single-design ZIP; a desktop Altium capture is required. Safe native serialization is unavailable: AltiumSerializationError: Unsupported PCB record kind for binary serialization: \"EngineeringChangeOrderOptions\""
+  },
+  {
+    "name": "simplefoc-shield-v3-pcb",
+    "test": "simplefoc-shield-v3-pcb.test.ts",
+    "sourceSha256": "507a0feb04cf539edd110ff1fe6da8ca8025009140b1934a6fc4df78308bfec5",
+    "status": "awaiting-reference",
+    "reason": "Altium 365 rejected the original ASCII fixture in a single-design ZIP; a desktop Altium capture is required. Safe native serialization is unavailable: AltiumSerializationError: Track binary serialization does not support fields: SELECTION, POLYGONOUTLINE"
+  },
+  {
+    "name": "simplefocmini-board-detail",
+    "test": "simplefocmini-board-detail.test.ts",
+    "sourceSha256": "8328cebe97ba8623fb2b707490e3473c6f7dc13fb0502b596b0e40c7e1613d24",
+    "status": "awaiting-reference",
+    "reason": "Altium 365 rejected the original ASCII fixture in a single-design ZIP; a desktop Altium capture is required. Safe native serialization is unavailable: AltiumSerializationError: Track binary serialization does not support fields: SELECTION, POLYGONOUTLINE"
+  },
+  {
+    "name": "simplefocmini-bottom-layer",
+    "test": "simplefocmini-bottom-layer.test.ts",
+    "sourceSha256": "8328cebe97ba8623fb2b707490e3473c6f7dc13fb0502b596b0e40c7e1613d24",
+    "status": "awaiting-reference",
+    "reason": "Altium 365 rejected the original ASCII fixture in a single-design ZIP; a desktop Altium capture is required. Safe native serialization is unavailable: AltiumSerializationError: Track binary serialization does not support fields: SELECTION, POLYGONOUTLINE"
+  },
+  {
+    "name": "simplefocmini-pcb",
+    "test": "simplefocmini-pcb.test.ts",
+    "sourceSha256": "8328cebe97ba8623fb2b707490e3473c6f7dc13fb0502b596b0e40c7e1613d24",
+    "status": "awaiting-reference",
+    "reason": "Altium 365 rejected the original ASCII fixture in a single-design ZIP; a desktop Altium capture is required. Safe native serialization is unavailable: AltiumSerializationError: Track binary serialization does not support fields: SELECTION, POLYGONOUTLINE"
+  },
+  {
+    "name": "simplefocmini-top-layer",
+    "test": "simplefocmini-top-layer.test.ts",
+    "sourceSha256": "8328cebe97ba8623fb2b707490e3473c6f7dc13fb0502b596b0e40c7e1613d24",
+    "status": "awaiting-reference",
+    "reason": "Altium 365 rejected the original ASCII fixture in a single-design ZIP; a desktop Altium capture is required. Safe native serialization is unavailable: AltiumSerializationError: Track binary serialization does not support fields: SELECTION, POLYGONOUTLINE"
+  },
+  {
+    "name": "simplefocmini-top-overlay-detail",
+    "test": "simplefocmini-top-overlay-detail.test.ts",
+    "sourceSha256": "8328cebe97ba8623fb2b707490e3473c6f7dc13fb0502b596b0e40c7e1613d24",
+    "status": "awaiting-reference",
+    "reason": "Altium 365 rejected the original ASCII fixture in a single-design ZIP; a desktop Altium capture is required. Safe native serialization is unavailable: AltiumSerializationError: Track binary serialization does not support fields: SELECTION, POLYGONOUTLINE"
+  },
+  {
+    "name": "stm32-st-link-v2-mechanical-7",
+    "test": "stm32-st-link-v2-mechanical-7.test.ts",
+    "sourceSha256": "b8c8cf965461f522091e3a046414de7ffe6c06097657cb9a8cb11db2aa923df2",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "stm32-st-link-v2-pcb",
+    "test": "stm32-st-link-v2-pcb.test.ts",
+    "sourceSha256": "b8c8cf965461f522091e3a046414de7ffe6c06097657cb9a8cb11db2aa923df2",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "ti-pmp22650-pcb",
+    "test": "ti-pmp22650-pcb.test.ts",
+    "sourceSha256": "bc20338d29b9323b5af9182f91041c14b192aa363cf2d7a323441a7f28210002",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "ti-pmp22712-pcb",
+    "test": "ti-pmp22712-pcb.test.ts",
+    "sourceSha256": "3343b2cb765db52243ccfa584cdded44588d3ad85067e89192f09931b9a309c1",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "ti-pmp22773-pcb",
+    "test": "ti-pmp22773-pcb.test.ts",
+    "sourceSha256": "a84ae2b3f463084053987c1bac0ce6c51c1b38b16bf53097d769366cd0eb59f7",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "ti-pmp23595-pcb",
+    "test": "ti-pmp23595-pcb.test.ts",
+    "sourceSha256": "18913410812b0993e4c8c3a00a489335d0fa58d27b79ec02e1294a8a6471e0f6",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "ti-pmp23653-main-pcb",
+    "test": "ti-pmp23653-main-pcb.test.ts",
+    "sourceSha256": "18a785d61c6fbe381c504f416bb25fa50f16475710b9ce00f36b13b58d57c544",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "ti-pmp23653-planar-transformer-pcb",
+    "test": "ti-pmp23653-planar-transformer-pcb.test.ts",
+    "sourceSha256": "e291efae1b3d42c8a90d3a01295a3a3129e6721d14163fc7c81045ffa2e29a5c",
+    "status": "captured",
+    "reason": ""
+  },
+  {
+    "name": "ti-tmds62levm-top-layer",
+    "test": "ti-tmds62levm-top-layer.test.ts",
+    "sourceSha256": "8444ad8456ff028b7aa11389362ba2fbc01291e87ff46e394576cb044c3612fc",
+    "status": "captured",
+    "reason": "Reference captured. The comparison wraps the existing golden SVG because the original renderer still stalled in a bounded 120-second run."
+  }
+]

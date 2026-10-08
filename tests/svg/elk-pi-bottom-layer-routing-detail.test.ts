@@ -4,6 +4,7 @@ import {
   serializeAltiumPcbLayerToSvg,
 } from "../../lib"
 import { readReferenceBytes } from "./read-reference"
+import { renderAltiumReferenceComparison } from "./render-altium-reference-comparison"
 
 test("renders dense Elk Pi bottom routing in a board-unit crop", async () => {
   const source = await readReferenceBytes("elk-pi.PcbDoc")
@@ -21,7 +22,11 @@ test("renders dense Elk Pi bottom routing in a board-unit crop", async () => {
   expect(svg).toContain('viewBox="0 0 1400 1100"')
   expect(svg).toContain('data-layer="BOTTOM"')
   expect(svg).not.toContain('data-layer="TOP"')
-  await expect(svg).toMatchSvgSnapshot(import.meta.path)
+  const comparison = await renderAltiumReferenceComparison({
+    reference: "elk-pi-bottom-layer-routing-detail",
+    converterSvg: svg,
+  })
+  await expect(comparison).toMatchSvgSnapshot(import.meta.path)
 }, 15_000)
 
 test("rejects invalid PCB viewBox dimensions", async () => {

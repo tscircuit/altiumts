@@ -4,6 +4,7 @@ import {
   serializeAltiumPcbLayerToSvg,
 } from "../../lib"
 import { readReferenceBytes } from "./read-reference"
+import { renderAltiumReferenceComparison } from "./render-altium-reference-comparison"
 
 test("renders the binary Elk Pi top PCB layer", async () => {
   const source = await readReferenceBytes("elk-pi.PcbDoc")
@@ -15,5 +16,9 @@ test("renders the binary Elk Pi top PCB layer", async () => {
   expect(svg).toContain('data-record="Track"')
   expect(svg).toContain('data-record="Via"')
   expect(svg).toContain('data-layer="TOP"')
-  await expect(svg).toMatchSvgSnapshot(import.meta.path)
+  const comparison = await renderAltiumReferenceComparison({
+    reference: "elk-pi-top-layer",
+    converterSvg: svg,
+  })
+  await expect(comparison).toMatchSvgSnapshot(import.meta.path)
 })

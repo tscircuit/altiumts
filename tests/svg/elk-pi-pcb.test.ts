@@ -1,6 +1,7 @@
 import { expect, test } from "bun:test"
 import { parseAltiumBinaryPcbDoc, serializeAltiumPcbToSvg } from "../../lib"
 import { readReferenceBytes } from "./read-reference"
+import { renderAltiumReferenceComparison } from "./render-altium-reference-comparison"
 
 test("renders the complete binary Elk Pi PCB", async () => {
   const source = await readReferenceBytes("elk-pi.PcbDoc")
@@ -14,5 +15,9 @@ test("renders the complete binary Elk Pi PCB", async () => {
   expect(svg).toContain('data-record="Text"')
   expect(svg).toContain('fill-rule="evenodd"')
   expect(svg).toContain(">DOUT</text>")
-  await expect(svg).toMatchSvgSnapshot(import.meta.path)
+  const comparison = await renderAltiumReferenceComparison({
+    reference: "elk-pi-pcb",
+    converterSvg: svg,
+  })
+  await expect(comparison).toMatchSvgSnapshot(import.meta.path)
 }, 20_000)

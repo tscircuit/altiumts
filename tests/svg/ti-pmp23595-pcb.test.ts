@@ -1,5 +1,6 @@
 import { expect, test } from "bun:test"
 import { TI_POWER_REFERENCE_PCB_FILENAMES } from "../../scripts/references/ti-power-references"
+import { renderAltiumReferenceComparison } from "./render-altium-reference-comparison"
 import { renderTiPowerReferencePcb } from "./render-ti-power-reference-pcb"
 
 test("renders the TI PMP23595 PCB", async () => {
@@ -13,5 +14,9 @@ test("renders the TI PMP23595 PCB", async () => {
   expect(svg).toContain('data-record="Pad"')
   expect(svg).toContain('data-record="Via"')
   expect(svg).not.toMatch(/NaN|Infinity/)
-  await expect(svg).toMatchSvgSnapshot(import.meta.path)
+  const comparison = await renderAltiumReferenceComparison({
+    reference: "ti-pmp23595-pcb",
+    converterSvg: svg,
+  })
+  await expect(comparison).toMatchSvgSnapshot(import.meta.path)
 }, 45_000)

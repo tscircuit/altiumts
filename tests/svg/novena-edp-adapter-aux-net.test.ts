@@ -1,6 +1,7 @@
 import { expect, test } from "bun:test"
 import { parseAltiumBinaryPcbDoc, serializeAltiumPcbToSvg } from "../../lib"
 import { readReferenceBytes } from "./read-reference"
+import { renderAltiumReferenceComparison } from "./render-altium-reference-comparison"
 
 test("isolates the Novena EDP_TXAUX_P net", async () => {
   const source = await readReferenceBytes("novena-edp-adapter-dvt1.PcbDoc")
@@ -23,5 +24,9 @@ test("isolates the Novena EDP_TXAUX_P net", async () => {
   expect(svg.match(/data-record="Track"/gu)).toHaveLength(34)
   expect(svg.match(/data-record="Via"/gu)).toHaveLength(2)
   expect(svg).not.toContain('data-record="ComponentBody"')
-  await expect(svg).toMatchSvgSnapshot(import.meta.path)
+  const comparison = await renderAltiumReferenceComparison({
+    reference: "novena-edp-adapter-aux-net",
+    converterSvg: svg,
+  })
+  await expect(comparison).toMatchSvgSnapshot(import.meta.path)
 })

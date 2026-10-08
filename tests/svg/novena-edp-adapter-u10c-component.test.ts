@@ -1,6 +1,7 @@
 import { expect, test } from "bun:test"
 import { parseAltiumBinaryPcbDoc, serializeAltiumPcbToSvg } from "../../lib"
 import { readReferenceBytes } from "./read-reference"
+import { renderAltiumReferenceComparison } from "./render-altium-reference-comparison"
 
 test("isolates the owned primitives of Novena component U10C", async () => {
   const source = await readReferenceBytes("novena-edp-adapter-dvt1.PcbDoc")
@@ -22,5 +23,9 @@ test("isolates the owned primitives of Novena component U10C", async () => {
   expect(svg.match(/data-record="Pad"/gu)).toHaveLength(65)
   expect(svg.match(/data-record="Track"/gu)).toHaveLength(18)
   expect(svg.match(/data-record="Arc"/gu)).toHaveLength(2)
-  await expect(svg).toMatchSvgSnapshot(import.meta.path)
+  const comparison = await renderAltiumReferenceComparison({
+    reference: "novena-edp-adapter-u10c-component",
+    converterSvg: svg,
+  })
+  await expect(comparison).toMatchSvgSnapshot(import.meta.path)
 })

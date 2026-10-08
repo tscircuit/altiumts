@@ -1,0 +1,39 @@
+{
+  "title": "Elk Pi bottom routing detail",
+  "image": "elk-pi-bottom-detail.jpg",
+  "width": 1280,
+  "height": 720,
+  "viewBox": {
+    "x": 289.24788936911955,
+    "y": 115.75572722785205,
+    "width": 622.371002725193,
+    "height": 489.0057878555088
+  },
+  "source": "https://www.altium.com/viewer/",
+  "sourceSha256": "8d61c6c9b9eff6748340794db203a86057857b8ce0348b7510859d73e3bce210",
+  "screenshotSha256": "d55e61b1c29c3bc606dd0df5122a6803e121ce13349f5d89a197d2f45d596ef4",
+  "alignment": {
+    "worldViewBox": {
+      "x": 4300,
+      "y": 2500,
+      "width": 1400,
+      "height": 1100
+    },
+    "matrix": "matrix(0.4445507162322807 0 0 0.4445507162322807 -1638.3201904296875 1700.1383056640625)",
+    "iframe": {
+      "height": 688,
+      "width": 1248,
+      "x": 16,
+      "y": 16
+    },
+    "note": "Bottom Layer only; selection cleared."
+  },
+  "canvasBounds": {
+    "x": 16,
+    "y": 48,
+    "width": 1248,
+    "height": 656
+  },
+  "mimeType": "image/jpeg",
+  "layers": ["BOTTOM"]
+}
