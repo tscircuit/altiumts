@@ -14,6 +14,22 @@ available format research. Code must not be copied from incompatible licenses.
   metadata. The importer also confirms that `Models/Data` record order maps to
   numeric `Models/<index>` streams containing zlib-compressed STEP data.
 
+### Native PCB string origins
+
+The PMP22712 evaluation warning and PMP23595 caution label both use 252-byte
+`Texts6` property payloads. Byte 230 distinguishes frames from free strings;
+byte 240 activates the saved justification. The parser exposes these only for
+the corresponding complete 240- and 252-byte extensions.
+
+For active free strings, saved X/Y is the lower-left origin of the unrotated
+text cell. Horizontal alignment within an automatically sized glyph run leaves
+its start at that origin; the cached `TEXTBOXWIDTH` can be stale after resolving
+special strings. Top and center baselines need local Y offsets of `-HEIGHT` and
+`-HEIGHT / 2` before applying rotation and mirroring. These observations agree
+with KiCad's `ATEXT6` decoder and `HelperSetTextAlignmentAndPos`; SVG font metrics
+remain a separate concern. ASCII anchors, framed text and older layouts are
+not inferred from these two modern flags.
+
 ## Corpus and structural references
 
 - [`tscircuit/kicadts`](https://github.com/tscircuit/kicadts) for the general
