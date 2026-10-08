@@ -153,7 +153,10 @@ export function renderPcbRecord({
     const fontName = record.getDecoded("FONTNAME") || "Arial"
     const fontWeight = record.getBoolean("BOLD") ? "bold" : "normal"
     const fontStyle = record.getBoolean("ITALIC") ? "italic" : "normal"
-    const positioning = getPcbTextPositioning(record.getNumber("JUSTIFICATION"))
+    const positioning = getPcbTextPositioning(
+      record.getNumber("JUSTIFICATION"),
+      record.getBoolean("JUSTIFICATIONVALID"),
+    )
     const lines = normalizedText.split("\n")
     const textContent =
       lines.length === 1
