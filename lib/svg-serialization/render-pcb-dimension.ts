@@ -17,14 +17,6 @@ export function renderPcbDimension({
   const geometry = getPcbDimensionGeometry(record)
   if (!geometry) return undefined
 
-  const referenceStart = toViewportPoint({
-    point: geometry.referenceStart,
-    viewport,
-  })
-  const referenceEnd = toViewportPoint({
-    point: geometry.referenceEnd,
-    viewport,
-  })
   const dimensionStart = toViewportPoint({
     point: geometry.dimensionStart,
     viewport,
@@ -44,59 +36,69 @@ export function renderPcbDimension({
   const directionY = measuredDeltaY / measuredLength
   const perpendicularX = -directionY
   const perpendicularY = directionX
-  const arrowHalfWidth = geometry.arrowSize * 0.35
-  const startArrowPoints = [
+  const arrowHalfWidth =
+    geometry.arrowSize * (geometry.openArrows ? Math.sin(Math.PI / 9) : 0.35)
+  const arrowDepth =
+    geometry.arrowSize * (geometry.openArrows ? Math.cos(Math.PI / 9) : 1)
+  const arrowDirection = geometry.arrowsOutside ? -1 : 1
+  const startArrowPoints: [SvgPoint, SvgPoint, SvgPoint] = [
     dimensionStart,
     {
       x:
         dimensionStart.x +
-        directionX * geometry.arrowSize +
+        directionX * arrowDepth * arrowDirection +
         perpendicularX * arrowHalfWidth,
       y:
         dimensionStart.y +
-        directionY * geometry.arrowSize +
+        directionY * arrowDepth * arrowDirection +
         perpendicularY * arrowHalfWidth,
     },
     {
       x:
         dimensionStart.x +
-        directionX * geometry.arrowSize -
+        directionX * arrowDepth * arrowDirection -
         perpendicularX * arrowHalfWidth,
       y:
         dimensionStart.y +
-        directionY * geometry.arrowSize -
+        directionY * arrowDepth * arrowDirection -
         perpendicularY * arrowHalfWidth,
     },
   ]
-  const endArrowPoints = [
+  const endArrowPoints: [SvgPoint, SvgPoint, SvgPoint] = [
     dimensionEnd,
     {
       x:
         dimensionEnd.x -
-        directionX * geometry.arrowSize +
+        directionX * arrowDepth * arrowDirection +
         perpendicularX * arrowHalfWidth,
       y:
         dimensionEnd.y -
-        directionY * geometry.arrowSize +
+        directionY * arrowDepth * arrowDirection +
         perpendicularY * arrowHalfWidth,
     },
     {
       x:
         dimensionEnd.x -
-        directionX * geometry.arrowSize -
+        directionX * arrowDepth * arrowDirection -
         perpendicularX * arrowHalfWidth,
       y:
         dimensionEnd.y -
-        directionY * geometry.arrowSize -
+        directionY * arrowDepth * arrowDirection -
         perpendicularY * arrowHalfWidth,
     },
   ]
-  const dimensionAngleDegrees =
-    (Math.atan2(measuredDeltaY, measuredDeltaX) * 180) / Math.PI
-  const readableTextAngleDegrees =
-    dimensionAngleDegrees > 90 || dimensionAngleDegrees < -90
+  const dimensionAngleDegrees = -geometry.textAngle
+  const readableTextAngleDegrees = geometry.textAtSavedOrigin
+    ? dimensionAngleDegrees
+    : dimensionAngleDegrees > 90 || dimensionAngleDegrees < -90
       ? dimensionAngleDegrees + 180
       : dimensionAngleDegrees
+  const extensionPath = geometry.extensionLines
+    .map(
+      ({ start, end }) =>
+        `M ${formatSvgPoint(toViewportPoint({ point: start, viewport }))} L ${formatSvgPoint(toViewportPoint({ point: end, viewport }))}`,
+    )
+    .join(" ")
   const dimensionLinePath = getDimensionLinePath({
     dimensionEnd,
     dimensionStart,
@@ -106,15 +108,24 @@ export function renderPcbDimension({
     measuredLength,
     perpendicularX,
     perpendicularY,
-    textPosition,
+    textCorners: geometry.textCorners.map((point) =>
+      toViewportPoint({ point, viewport }),
+    ),
   })
+
+  const arrows = [startArrowPoints, endArrowPoints].map(
+    ([tip, first, second]) =>
+      geometry.openArrows
+        ? `<path d="M ${formatSvgPoint(first)} L ${formatSvgPoint(tip)} L ${formatSvgPoint(second)}" fill="none" stroke="${color}" stroke-width="${formatSvgNumber(geometry.arrowLineWidth)}"/>`
+        : `<polygon points="${formatSvgPoints([tip, first, second])}" fill="${color}"/>`,
+  )
 
   return [
     `<g ${metadata}>`,
-    `<path d="M ${formatSvgPoint(referenceStart)} L ${formatSvgPoint(dimensionStart)} M ${formatSvgPoint(referenceEnd)} L ${formatSvgPoint(dimensionEnd)} ${dimensionLinePath}" fill="none" stroke="${color}" stroke-width="${formatSvgNumber(geometry.lineWidth)}"/>`,
-    `<polygon points="${formatSvgPoints(startArrowPoints)}" fill="${color}"/>`,
-    `<polygon points="${formatSvgPoints(endArrowPoints)}" fill="${color}"/>`,
-    `<text x="0" y="0" fill="${color}" font-family="Arial, sans-serif" font-size="${formatSvgNumber(geometry.textHeight)}" text-anchor="middle" dominant-baseline="central" transform="translate(${formatSvgNumber(textPosition.x)} ${formatSvgNumber(textPosition.y)}) rotate(${formatSvgNumber(readableTextAngleDegrees)})">${escapeXml(geometry.label)}</text>`,
+    `<path d="${extensionPath}" fill="none" stroke="${color}" stroke-width="${formatSvgNumber(geometry.extensionLineWidth)}"/>`,
+    `<path d="${dimensionLinePath}" fill="none" stroke="${color}" stroke-width="${formatSvgNumber(geometry.lineWidth)}"/>`,
+    ...arrows,
+    `<text x="0" y="0" fill="${color}" font-family="Arial, sans-serif" font-size="${formatSvgNumber(geometry.textHeight)}" text-anchor="${geometry.textAtSavedOrigin ? "start" : "middle"}" dominant-baseline="${geometry.textAtSavedOrigin ? "text-after-edge" : "central"}" transform="translate(${formatSvgNumber(textPosition.x)} ${formatSvgNumber(textPosition.y)}) rotate(${formatSvgNumber(readableTextAngleDegrees)}) scale(${geometry.textMirror ? -1 : 1} 1)">${escapeXml(geometry.label)}</text>`,
     "</g>",
   ].join("")
 }
@@ -128,7 +139,7 @@ function getDimensionLinePath({
   measuredLength,
   perpendicularX,
   perpendicularY,
-  textPosition,
+  textCorners,
 }: {
   dimensionEnd: SvgPoint
   dimensionStart: SvgPoint
@@ -138,26 +149,43 @@ function getDimensionLinePath({
   measuredLength: number
   perpendicularX: number
   perpendicularY: number
-  textPosition: SvgPoint
+  textCorners: SvgPoint[]
 }): string {
-  const textDeltaX = textPosition.x - dimensionStart.x
-  const textDeltaY = textPosition.y - dimensionStart.y
-  const textDistanceFromLine = Math.abs(
-    textDeltaX * perpendicularX + textDeltaY * perpendicularY,
+  if (geometry.arrowsOutside) {
+    const startTail = {
+      x: dimensionStart.x - directionX * geometry.arrowLength,
+      y: dimensionStart.y - directionY * geometry.arrowLength,
+    }
+    const endTail = {
+      x: dimensionEnd.x + directionX * geometry.arrowLength,
+      y: dimensionEnd.y + directionY * geometry.arrowLength,
+    }
+    return `M ${formatSvgPoint(startTail)} L ${formatSvgPoint(dimensionStart)} M ${formatSvgPoint(dimensionEnd)} L ${formatSvgPoint(endTail)}`
+  }
+  if (!geometry.label)
+    return `M ${formatSvgPoint(dimensionStart)} L ${formatSvgPoint(dimensionEnd)}`
+  const along = textCorners.map(
+    (point) =>
+      (point.x - dimensionStart.x) * directionX +
+      (point.y - dimensionStart.y) * directionY,
   )
-  if (textDistanceFromLine > geometry.textHeight) {
+  const across = textCorners.map(
+    (point) =>
+      (point.x - dimensionStart.x) * perpendicularX +
+      (point.y - dimensionStart.y) * perpendicularY,
+  )
+  const textStart = Math.min(...along) - geometry.textGap
+  const textEnd = Math.max(...along) + geometry.textGap
+  if (
+    Math.min(...across) > geometry.textGap ||
+    Math.max(...across) < -geometry.textGap ||
+    textEnd <= 0 ||
+    textStart >= measuredLength
+  ) {
     return `M ${formatSvgPoint(dimensionStart)} L ${formatSvgPoint(dimensionEnd)}`
   }
-
-  const textCenterAlongLine = textDeltaX * directionX + textDeltaY * directionY
-  const gapStart = Math.max(
-    0,
-    textCenterAlongLine - geometry.estimatedTextHalfWidth,
-  )
-  const gapEnd = Math.min(
-    measuredLength,
-    textCenterAlongLine + geometry.estimatedTextHalfWidth,
-  )
+  const gapStart = Math.max(0, textStart)
+  const gapEnd = Math.min(measuredLength, textEnd)
   const beforeGap = {
     x: dimensionStart.x + directionX * gapStart,
     y: dimensionStart.y + directionY * gapStart,
