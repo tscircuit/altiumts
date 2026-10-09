@@ -53,7 +53,10 @@ pixels. PMP22712 and PMP22773 show the project-aware real Altium screenshots.
 Some standalone Altium 365 captures (including PMP23595 and PMP23653 main) show
 raw expressions because the project was not loaded in those reference captures.
 That input-context difference is intentional and must not be read as an expected
-unresolved title. Font size, text placement, and the board viewport are unchanged.
+unresolved title. Font sizes and board viewports are retained. Modern native text
+with an explicitly disabled justification flag uses its saved origin with
+lower-left alignment, before applying rotation and mirroring. Active alignment
+and older records without that flag keep their existing behavior.
 
 ## Crop and layer alignment
 

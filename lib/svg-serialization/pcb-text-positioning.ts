@@ -7,8 +7,10 @@ const DEFAULT_ALTIUM_PCB_TEXT_JUSTIFICATION = 3
 
 export function getPcbTextPositioning(
   justification: number | undefined,
+  valid = true,
 ): PcbTextPositioning {
   const normalizedJustification =
+    !valid ||
     justification === undefined ||
     !Number.isInteger(justification) ||
     justification < 1 ||
