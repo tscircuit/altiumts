@@ -66,6 +66,13 @@ const references: DirectReferenceSpec[] = [
     url: "https://raw.githubusercontent.com/iot-lorawan/CH582_PCB_SCH/b65bce802295c6c40413c5bc3ea54682820619c1/PCB_ch582_2022-06-16.pcbdoc",
   },
   {
+    filename: "bw0253.PcbDoc",
+    sha256: "74b97c6bb046f36ff03339e3e5b7d8950fb30d1585eb6a2208bd9b08db3a4483",
+    source:
+      "luxonis/oak-hardware@7d569e3ccdff30014a498dc6c64a2e0dcad6964c (MIT)",
+    url: "https://raw.githubusercontent.com/luxonis/oak-hardware/7d569e3ccdff30014a498dc6c64a2e0dcad6964c/BW0253_R0M0E0_RPIHQ_ADAPTER/PCB/BW0253.PcbDoc",
+  },
+  {
     filename: "c17-main.PcbDoc",
     sha256: "439e050d3bb35f3f335cd3e115ba91cf643eca3ae326a85c3034e4b22cbcac03",
     source: "phonght32/altium@85e2bfc3aac1daaa4eb8dc7be4f0649d12b2fc28 (MIT)",

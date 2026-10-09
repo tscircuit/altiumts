@@ -112,6 +112,13 @@
     "reason": ""
   },
   {
+    "name": "bw0253-pcb",
+    "test": "bw0253-pcb.test.ts",
+    "sourceSha256": "74b97c6bb046f36ff03339e3e5b7d8950fb30d1585eb6a2208bd9b08db3a4483",
+    "status": "awaiting-reference",
+    "reason": "Standalone full-board reproduction without an embedded Altium reference."
+  },
+  {
     "name": "novena-edp-adapter-aux-net",
     "test": "novena-edp-adapter-aux-net.test.ts",
     "sourceSha256": "17896fdfeaac33a84ac3063db063d0a4d211c127c997632c8000837c0ce6fc12",
