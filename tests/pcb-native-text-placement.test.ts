@@ -47,11 +47,12 @@ test("anchors resolved PMP22712/PMP22773 titles at their saved origins, includin
 })
 
 test("honors modern validity flags without reinterpreting shorter native text records", () => {
-  for (const { length, active, expectedValid, anchor, baseline } of [
+  for (const { length, active, expectedValid, anchor, baseline, y } of [
     // Shorter layouts have no modern flag; retain their explicit alignment.
     {
       length: 137,
       active: false,
+      y: 0,
       expectedValid: undefined,
       anchor: "middle",
       baseline: "central",
@@ -59,6 +60,7 @@ test("honors modern validity flags without reinterpreting shorter native text re
     {
       length: 251,
       active: false,
+      y: 0,
       expectedValid: undefined,
       anchor: "middle",
       baseline: "central",
@@ -66,6 +68,7 @@ test("honors modern validity flags without reinterpreting shorter native text re
     {
       length: 252,
       active: false,
+      y: 0,
       expectedValid: false,
       anchor: "start",
       baseline: "text-after-edge",
@@ -73,8 +76,9 @@ test("honors modern validity flags without reinterpreting shorter native text re
     {
       length: 252,
       active: true,
+      y: -20,
       expectedValid: true,
-      anchor: "middle",
+      anchor: "start",
       baseline: "central",
     },
   ]) {
@@ -103,6 +107,7 @@ test("honors modern validity flags without reinterpreting shorter native text re
     expect(svg).toContain(
       `text-anchor="${anchor}" dominant-baseline="${baseline}"`,
     )
+    expect(svg).toContain(`x="0" y="${y}"`)
     expect(svg).toContain(
       'transform="translate(100 200) rotate(-90) scale(-1 1)"',
     )

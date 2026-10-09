@@ -9,17 +9,18 @@ import { getPcbTextFontSize } from "../lib/svg-serialization/pcb-text-font-size"
 import { readReference, readReferenceBytes } from "./svg/read-reference"
 
 test("uses Arial em height for native titles and warnings across TI boards", async () => {
-  for (const [name, index, height, expectedSize, label] of [
-    ["ti-pmp22712", 3, 108.2677, 96.91094825, "PMP22712E2"],
+  for (const [name, index, height, expectedSize, label, expectedY] of [
+    ["ti-pmp22712", 3, 108.2677, 96.91094825, "PMP22712E2", 0],
     [
       "ti-pmp22712",
       2,
       60,
       53.70629371,
       "For evaluation only; not FCC approved for resale.",
+      -60,
     ],
-    ["ti-pmp22773", 110, 108.2677, 96.91094825, "PMP22773E3"],
-    ["ti-pmp23595", 97, 78.7402, 70.48073846, "CAUTION HOT SURFACE"],
+    ["ti-pmp22773", 110, 108.2677, 96.91094825, "PMP22773E3", 0],
+    ["ti-pmp23595", 97, 78.7402, 70.48073846, "CAUTION HOT SURFACE", -39.3701],
   ] as const) {
     const bytes = await readReferenceBytes(`${name}.PcbDoc`)
     const board = parseAltiumBinaryPcbDoc(bytes)
@@ -39,6 +40,8 @@ test("uses Arial em height for native titles and warnings across TI boards", asy
     const renderedSize = Number(/font-size="([^"]+)"/u.exec(svg)?.[1])
     expect(renderedSize).toBeCloseTo(expectedSize, 2)
     expect(svg).toContain(`>${label}</text>`)
+    // Active native origins use the saved cell height, not the converted em size.
+    expect(svg).toContain(`x="0" y="${expectedY}"`)
     expect(text.getString()).toBe(originalText)
     expect(board.getBytes()).toEqual(bytes)
     expect(project.getString()).toBe(projectSource)

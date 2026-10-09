@@ -158,6 +158,23 @@ export function renderPcbRecord({
       record.getNumber("JUSTIFICATION"),
       record.getBoolean("JUSTIFICATIONVALID"),
     )
+    const activeNativeString =
+      record.getBoolean("ISFRAME") === false &&
+      record.getBoolean("JUSTIFICATIONVALID") === true
+    // Native free strings store the lower-left origin, not the justified
+    // anchor. Their horizontal box auto-sizes with the glyph run, so using
+    // its start avoids stale cached widths after special-string resolution.
+    const anchor = activeNativeString ? "start" : positioning.anchor
+    // Offset in text-local coordinates so rotation and mirroring also apply
+    // to the origin correction. Use the saved cell height, not SVG font size.
+    const justificationHeight = getPcbMeasurement(record, "HEIGHT", 30)
+    const textY = activeNativeString
+      ? positioning.baseline === "text-before-edge"
+        ? -justificationHeight
+        : positioning.baseline === "central"
+          ? -justificationHeight / 2
+          : 0
+      : 0
     const lines = normalizedText.split("\n")
     const textContent =
       lines.length === 1
@@ -168,7 +185,7 @@ export function renderPcbRecord({
                 `<tspan x="0" dy="${index === 0 ? "0" : formatSvgNumber(fontSize * 1.2)}">${escapeXml(line)}</tspan>`,
             )
             .join("")
-    return `<text ${metadata} x="0" y="0" fill="${color}" font-family="${escapeXml(fontName)}, sans-serif" font-size="${formatSvgNumber(fontSize)}" font-weight="${fontWeight}" font-style="${fontStyle}" text-anchor="${positioning.anchor}" dominant-baseline="${positioning.baseline}" transform="translate(${formatSvgNumber(x)} ${formatSvgNumber(y)}) rotate(${formatSvgNumber(-rotation)}) scale(${mirror} 1)">${textContent}</text>`
+    return `<text ${metadata} x="0" y="${formatSvgNumber(textY)}" fill="${color}" font-family="${escapeXml(fontName)}, sans-serif" font-size="${formatSvgNumber(fontSize)}" font-weight="${fontWeight}" font-style="${fontStyle}" text-anchor="${anchor}" dominant-baseline="${positioning.baseline}" transform="translate(${formatSvgNumber(x)} ${formatSvgNumber(y)}) rotate(${formatSvgNumber(-rotation)}) scale(${mirror} 1)">${textContent}</text>`
   }
 
   if (kind === "Component" && svgOptions.showComponentOrigins) {

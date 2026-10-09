@@ -483,6 +483,10 @@ function decodeText(
     )
   }
 
+  if (payload.byteLength >= 240) {
+    items.push(field("ISFRAME", booleanText(view.getUint8(230) !== 0)))
+  }
+
   if (payload.byteLength >= 252) {
     // Modern Texts6 records retain a text-box justification even when it is
     // inactive for the string. The validity byte follows the frame settings.
