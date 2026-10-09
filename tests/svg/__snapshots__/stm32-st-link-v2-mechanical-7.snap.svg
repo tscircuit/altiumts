@@ -148,7 +148,7 @@
     <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1647.0702 605.8556) rotate(0) scale(1 1)">C2</text>
     <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1332.6738 98.5848) rotate(-180) scale(1 1)">C1</text>
     <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="39.3701" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(991.7221 356.6129) rotate(-360) scale(-1 1)">R3</text>
-    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="23.8189" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-before-edge" transform="translate(1087.5032 541.9816) rotate(-360) scale(-1 1)">F1</text>
+    <text data-record="Text" data-layer="MECHANICAL7" x="0" y="0" fill="#ec4899" font-family="Arial, sans-serif" font-size="23.8189" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(1087.5032 541.9816) rotate(-360) scale(-1 1)">F1</text>
   </g>
 </svg></g>
   <text x="16" y="468" fill="#c6cbd3" font-family="Arial, sans-serif" font-size="16">Same PCB and crop. Current rendering differences are preserved.</text>

@@ -82,6 +82,7 @@ test("retains ASCII, frame, inactive and older native text alignment", () => {
     { length: 240 },
     { length: 251 },
     { active: false },
+    { active: false, frame: true },
     { frame: true },
   ]) {
     const bytes = nativeText(options)
@@ -95,9 +96,11 @@ test("retains ASCII, frame, inactive and older native text alignment", () => {
     )
     const svg = renderText(record.getString())
     expect(svg).toContain('x="0" y="0"')
-    if (options.active !== false) {
-      expect(svg).toContain('text-anchor="middle" dominant-baseline="central"')
-    }
+    expect(svg).toContain(
+      options.active === false
+        ? 'text-anchor="start" dominant-baseline="text-after-edge"'
+        : 'text-anchor="middle" dominant-baseline="central"',
+    )
   }
 })
 
