@@ -11,7 +11,7 @@ import {
 } from "../../lib/svg-serialization/svg-utils"
 import { readReferenceBytes } from "./read-reference"
 
-test("reproduces BW0253 keepout fill rendered as copper on the full board", async () => {
+test("renders the BW0253 full board with a crosshatched keepout fill", async () => {
   const source = await readReferenceBytes("bw0253.PcbDoc")
   const document = parseAltiumBinaryPcbDoc(source)
   const keepoutFills = document.records.filter(
@@ -20,7 +20,6 @@ test("reproduces BW0253 keepout fill rendered as copper on the full board", asyn
   )
   expect(keepoutFills).toHaveLength(1)
   expect(keepoutFills[0]?.get("LAYER")).toBe("TOP")
-  expect(document.getBytes()).toEqual(source)
   const boardBounds = keepoutFills.reduce(
     (bounds, record) =>
       mergeBounds(bounds, getPcbRecordBounds(record)) ?? bounds,
@@ -43,5 +42,7 @@ test("reproduces BW0253 keepout fill rendered as copper on the full board", asyn
       height: viewport.height,
     },
   })
+  expect(document.getBytes()).toEqual(source)
+  expect(svg.match(/<rect[^>]*data-keepout="true"/g)).toHaveLength(1)
   await expect(svg).toMatchSvgSnapshot(import.meta.path)
 }, 20_000)

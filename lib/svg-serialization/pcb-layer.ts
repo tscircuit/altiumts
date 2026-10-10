@@ -7,6 +7,8 @@ import type { AltiumRecord } from "../records/altium-record"
 
 export const PCB_BOARD_FILL_COLOR = "#123d32"
 export const PCB_BOARD_OUTLINE_COLOR = "#6ee7b7"
+export const PCB_KEEPOUT_HATCH_PITCH_MILS = 10
+export const PCB_KEEPOUT_STROKE_WIDTH_MILS = 1
 const BOTTOM_COURTYARD_COLOR = "#26e9ff"
 const MECHANICAL_LAYER_COLOR = "#ec4899"
 
