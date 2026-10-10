@@ -17,7 +17,7 @@ test("matches the original Altium title and warning ink bounds on PMP22712", asy
     projectFilename: "ti-pmp22712.PrjPcb",
     title: "PMP22712 text metrics",
   })
-  const comparison = await renderAltiumReferenceComparison({
+  const comparisonSvg = await renderAltiumReferenceComparison({
     reference: "ti-pmp22712-pcb",
     converterSvg,
   })
@@ -27,49 +27,73 @@ test("matches the original Altium title and warning ink bounds on PMP22712", asy
     { left: 80, top: 45, width: 345, height: 65 },
     { left: 70, top: 110, width: 670, height: 48 },
   ]) {
-    const reference = await textInkBounds(comparison, crop, true)
-    const rendered = await textInkBounds(comparison, crop, false)
-    for (let edge = 0; edge < 4; edge++) {
+    const referenceInkBounds = await textInkBounds({
+      comparisonSvg,
+      crop,
+      isReference: true,
+    })
+    const renderedInkBounds = await textInkBounds({
+      comparisonSvg,
+      crop,
+      isReference: false,
+    })
+    for (let edgeIndex = 0; edgeIndex < 4; edgeIndex++) {
       // Allow screenshot antialiasing and subpixel board registration; the
       // old cell-edge baselines displace these strings by 9–12 pixels.
-      expect(Math.abs(rendered[edge]! - reference[edge]!)).toBeLessThanOrEqual(
-        5,
-      )
+      expect(
+        Math.abs(
+          renderedInkBounds[edgeIndex]! - referenceInkBounds[edgeIndex]!,
+        ),
+      ).toBeLessThanOrEqual(5)
     }
   }
 })
 
-async function textInkBounds(
-  comparison: string,
-  crop: { left: number; top: number; width: number; height: number },
-  reference: boolean,
-): Promise<number[]> {
-  const { data, info } = await sharp(Buffer.from(comparison))
+async function textInkBounds({
+  comparisonSvg,
+  crop,
+  isReference,
+}: {
+  comparisonSvg: string
+  crop: { left: number; top: number; width: number; height: number }
+  isReference: boolean
+}): Promise<number[]> {
+  const { data: pixelBuffer, info: imageMetadata } = await sharp(
+    Buffer.from(comparisonSvg),
+  )
     .extract({
       ...crop,
-      left: crop.left + (reference ? 16 : 840),
+      left: crop.left + (isReference ? 16 : 840),
       top: crop.top + 70,
     })
     .removeAlpha()
     .raw()
     .toBuffer({ resolveWithObject: true })
-  const bounds = [info.width, info.height, -1, -1]
-  for (let y = 0; y < info.height; y++) {
-    for (let x = 0; x < info.width; x++) {
-      const offset = (y * info.width + x) * info.channels
+  const inkBounds = [imageMetadata.width, imageMetadata.height, -1, -1]
+  for (let y = 0; y < imageMetadata.height; y++) {
+    for (let x = 0; x < imageMetadata.width; x++) {
+      const pixelOffset = (y * imageMetadata.width + x) * imageMetadata.channels
       // Altium top-overlay ink is bright yellow, AltiumTS text is white.
       // Exclude the dim frame/bottom-layer labels without altering the image.
-      if (data[offset]! <= 200 || data[offset + 1]! <= 200) continue
-      if (reference ? data[offset + 2]! >= 100 : data[offset + 2]! <= 200)
+      if (
+        pixelBuffer[pixelOffset]! <= 200 ||
+        pixelBuffer[pixelOffset + 1]! <= 200
+      )
         continue
-      bounds[0] = Math.min(bounds[0]!, x)
-      bounds[1] = Math.min(bounds[1]!, y)
-      bounds[2] = Math.max(bounds[2]!, x)
-      bounds[3] = Math.max(bounds[3]!, y)
+      if (
+        isReference
+          ? pixelBuffer[pixelOffset + 2]! >= 100
+          : pixelBuffer[pixelOffset + 2]! <= 200
+      )
+        continue
+      inkBounds[0] = Math.min(inkBounds[0]!, x)
+      inkBounds[1] = Math.min(inkBounds[1]!, y)
+      inkBounds[2] = Math.max(inkBounds[2]!, x)
+      inkBounds[3] = Math.max(inkBounds[3]!, y)
     }
   }
-  expect(bounds[2]).toBeGreaterThanOrEqual(0)
-  return bounds
+  expect(inkBounds[2]).toBeGreaterThanOrEqual(0)
+  return inkBounds
 }
 
 test("uses Arial em height for native titles and warnings across TI boards", async () => {
