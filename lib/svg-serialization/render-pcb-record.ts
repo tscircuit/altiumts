@@ -12,7 +12,10 @@ import {
 } from "./altium-values"
 import { getPcbLayerColor, PCB_BOARD_FILL_COLOR } from "./pcb-layer"
 import { isPcbSolderMaskLayer } from "./pcb-solder-mask"
-import { getPcbTextFontSize } from "./pcb-text-font-size"
+import {
+  getPcbTextFontSize,
+  isArialTrueTypePcbText,
+} from "./pcb-text-font-size"
 import { getPcbTextPositioning } from "./pcb-text-positioning"
 import { renderPcbDimension } from "./render-pcb-dimension"
 import type { AltiumPcbSvgOptions, SvgViewport } from "./svg-types"
@@ -161,20 +164,29 @@ export function renderPcbRecord({
     const activeNativeString =
       record.getBoolean("ISFRAME") === false &&
       record.getBoolean("JUSTIFICATIONVALID") === true
-    // Native free strings store the lower-left origin, not the justified
-    // anchor. Their horizontal box auto-sizes with the glyph run, so using
+    // Modern native Arial strings store the alphabetic baseline origin.
+    // SVG cell-edge baselines add font ascent/descent a second time, lifting
+    // the title and warning above their positions in the Altium reference.
+    const nativeArialString =
+      record.getBoolean("ISFRAME") === false &&
+      record.getBoolean("JUSTIFICATIONVALID") !== undefined &&
+      isArialTrueTypePcbText(record)
+    const baseline = nativeArialString ? "alphabetic" : positioning.baseline
+    // Native free strings' horizontal box auto-sizes with the glyph run. Using
     // its start avoids stale cached widths after special-string resolution.
-    const anchor = activeNativeString ? "start" : positioning.anchor
-    // Offset in text-local coordinates so rotation and mirroring also apply
-    // to the origin correction. Use the saved cell height, not SVG font size.
+    const anchor =
+      nativeArialString || activeNativeString ? "start" : positioning.anchor
+    // Retain cell-based alignment for other fonts. Offset in text-local
+    // coordinates so rotation and mirroring apply to the origin correction.
     const justificationHeight = getPcbMeasurement(record, "HEIGHT", 30)
-    const textY = activeNativeString
-      ? positioning.baseline === "text-before-edge"
-        ? -justificationHeight
-        : positioning.baseline === "central"
-          ? -justificationHeight / 2
-          : 0
-      : 0
+    const textY =
+      activeNativeString && !nativeArialString
+        ? positioning.baseline === "text-before-edge"
+          ? -justificationHeight
+          : positioning.baseline === "central"
+            ? -justificationHeight / 2
+            : 0
+        : 0
     const lines = normalizedText.split("\n")
     const textContent =
       lines.length === 1
@@ -185,7 +197,7 @@ export function renderPcbRecord({
                 `<tspan x="0" dy="${index === 0 ? "0" : formatSvgNumber(fontSize * 1.2)}">${escapeXml(line)}</tspan>`,
             )
             .join("")
-    return `<text ${metadata} x="0" y="${formatSvgNumber(textY)}" fill="${color}" font-family="${escapeXml(fontName)}, sans-serif" font-size="${formatSvgNumber(fontSize)}" font-weight="${fontWeight}" font-style="${fontStyle}" text-anchor="${anchor}" dominant-baseline="${positioning.baseline}" transform="translate(${formatSvgNumber(x)} ${formatSvgNumber(y)}) rotate(${formatSvgNumber(-rotation)}) scale(${mirror} 1)">${textContent}</text>`
+    return `<text ${metadata} x="0" y="${formatSvgNumber(textY)}" fill="${color}" font-family="${escapeXml(fontName)}, sans-serif" font-size="${formatSvgNumber(fontSize)}" font-weight="${fontWeight}" font-style="${fontStyle}" text-anchor="${anchor}" dominant-baseline="${baseline}" transform="translate(${formatSvgNumber(x)} ${formatSvgNumber(y)}) rotate(${formatSvgNumber(-rotation)}) scale(${mirror} 1)">${textContent}</text>`
   }
 
   if (kind === "Component" && svgOptions.showComponentOrigins) {
