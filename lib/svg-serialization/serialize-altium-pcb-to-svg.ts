@@ -29,6 +29,10 @@ import {
 } from "./pcb-layer"
 import { getPcbSolderMaskRecords } from "./pcb-solder-mask"
 import { resolvePcbSpecialStrings } from "./pcb-special-strings"
+import {
+  isKeepoutFill,
+  renderPcbKeepoutFillPattern,
+} from "./render-pcb-keepout-fill-pattern"
 import { renderPcbRecord } from "./render-pcb-record"
 import { sortPcbRecordsForPainting } from "./sort-pcb-records-for-painting"
 import type {
@@ -137,6 +141,12 @@ export function serializeAltiumPcbToSvg(
       }),
   })
 
+  const hasSharedKeepoutFillPattern = records.some(isKeepoutFill)
+  const keepoutFillPattern = hasSharedKeepoutFillPattern
+    ? renderPcbKeepoutFillPattern()
+    : ""
+  if (keepoutFillPattern) content.push(keepoutFillPattern)
+
   for (const record of records) {
     const polygonIndex =
       record.recordKind === "Polygon"
@@ -149,6 +159,7 @@ export function serializeAltiumPcbToSvg(
         !polygonIndexesWithRegionRecords.has(polygonIndex))
     const rendered = renderPcbRecord({
       record,
+      hasSharedKeepoutFillPattern,
       text:
         resolveComponentText(
           document,
