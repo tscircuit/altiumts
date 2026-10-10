@@ -37,9 +37,7 @@ test("anchors resolved PMP22712/PMP22773 titles at their saved origins, includin
       { project, viewBox: { x: 0, y: 0, width: 4000, height: 4000 } },
     )
     expect(svg).toContain(`>${label}</text>`)
-    expect(svg).toContain(
-      'text-anchor="start" dominant-baseline="text-after-edge"',
-    )
+    expect(svg).toContain('text-anchor="start" dominant-baseline="alphabetic"')
     expect(svg).toContain(`transform="${transform}"`)
     expect(document.getBytes()).toEqual(bytes)
     expect(project.getString()).toBe(projectSource)

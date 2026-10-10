@@ -14,6 +14,37 @@ available format research. Code must not be copied from incompatible licenses.
   metadata. The importer also confirms that `Models/Data` record order maps to
   numeric `Models/<index>` streams containing zlib-compressed STEP data.
 
+### Arial PCB text metrics
+
+Native TrueType text uses a font-cell height; SVG `font-size` uses em units.
+The Arial regular, bold, italic and bold-italic font tables were checked for
+`head.unitsPerEm = 2048`, `OS/2.usWinAscent = 1854`, and
+`OS/2.usWinDescent = 434`. Their conversion is therefore
+`HEIGHT * 2048 / (1854 + 434)`, including multiline spacing. The field meanings
+are defined in Microsoft's OpenType [head table](https://learn.microsoft.com/en-us/typography/opentype/spec/head)
+and [Windows metrics](https://learn.microsoft.com/en-us/typography/opentype/spec/os2#uswinascent).
+
+The real PMP22712/PMP22773 titles and PMP22712/PMP23595 warnings cover this
+conversion alongside the original Altium comparison images. These metrics
+apply only to Arial TrueType text; explicit stroke-font selection, unknown
+families and related but different fonts such as Arial Narrow retain their
+existing sizing. Font binaries are not bundled, so host font substitution can
+still affect glyph shapes. Stroke-font rendering remains separate.
+
+For modern native Arial free strings (`ISFRAME=FALSE` with a present
+`JUSTIFICATIONVALID` flag), the saved X/Y locates the alphabetic glyph origin.
+Use `dominant-baseline="alphabetic"` at that origin for either validity state
+(see the [SVG baseline definitions](https://www.w3.org/TR/SVG11/text.html#BaselineAlignmentProperties)).
+The previous SVG cell-edge baselines introduced an extra font-dependent
+vertical offset: in the existing 800×600 PMP22712 comparison, the title and
+warning sat roughly 9–12 pixels above their reference positions. A pixel-bound
+regression compares both strings with the original uploaded Altium image at
+the unchanged board scale, allowing five pixels for antialiasing and board
+registration. It checks both position and size, rather than only SVG attributes.
+Rotation and mirroring operate around the same saved origin. ASCII, frames,
+older native layouts, unknown families and stroke fonts keep their existing
+alignment rules.
+
 ### Native PCB string origins
 
 The PMP22712 evaluation warning and PMP23595 caution label both use 252-byte
@@ -21,13 +52,15 @@ The PMP22712 evaluation warning and PMP23595 caution label both use 252-byte
 byte 240 activates the saved justification. The parser exposes these only for
 the corresponding complete 240- and 252-byte extensions.
 
-For active free strings, saved X/Y is the lower-left origin of the unrotated
+For active free strings outside the Arial case above, saved X/Y is treated as
+the lower-left origin of the unrotated
 text cell. Horizontal alignment within an automatically sized glyph run leaves
 its start at that origin; the cached `TEXTBOXWIDTH` can be stale after resolving
 special strings. Top and center baselines need local Y offsets of `-HEIGHT` and
 `-HEIGHT / 2` before applying rotation and mirroring. These observations agree
-with KiCad's `ATEXT6` decoder and `HelperSetTextAlignmentAndPos`; SVG font metrics
-remain a separate concern. ASCII anchors, framed text and older layouts are
+with KiCad's `ATEXT6` decoder and `HelperSetTextAlignmentAndPos`. These generic
+cell offsets are not reapplied to the verified Arial alphabetic origin.
+ASCII anchors, framed text and older layouts are
 not inferred from these two modern flags.
 
 ## Corpus and structural references

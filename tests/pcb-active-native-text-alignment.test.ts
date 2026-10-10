@@ -7,22 +7,22 @@ import {
 import { parseAltiumBinaryPcbPrimitiveStream } from "../lib/parser/parse-altium-binary-pcb-primitives"
 import { readReferenceBytes } from "./svg/read-reference"
 
-test("positions the PMP22712 warning and PMP23595 caution from their native lower-left origins", async () => {
+test("positions the PMP22712 warning and PMP23595 caution from their native alphabetic origins", async () => {
   for (const { name, index, label, y, baseline, transform } of [
     {
       name: "ti-pmp22712",
       index: 2,
       label: "For evaluation only; not FCC approved for resale.",
-      y: -60,
-      baseline: "text-before-edge",
+      y: 0,
+      baseline: "alphabetic",
       transform: "translate(717.4891 1658.6708) rotate(-360) scale(1 1)",
     },
     {
       name: "ti-pmp23595",
       index: 97,
       label: "CAUTION HOT SURFACE",
-      y: -39.3701,
-      baseline: "central",
+      y: 0,
+      baseline: "alphabetic",
       transform: "translate(908.6719 140.7737) rotate(0) scale(1 1)",
     },
   ]) {
