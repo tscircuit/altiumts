@@ -1,0 +1,237 @@
+// Bun Snapshot v1, https://bun.sh/docs/test/snapshots
+
+exports[`snapshots schematic connectivity: mid-wire-label 1`] = `
+[
+  {
+    "names": [
+      "SIGNAL",
+    ],
+    "points": [
+      {
+        "x": 20,
+        "y": 60,
+      },
+      {
+        "x": 60,
+        "y": 60,
+      },
+      {
+        "x": 100,
+        "y": 60,
+      },
+    ],
+    "records": [
+      {
+        "index": 1,
+        "kind": "27",
+      },
+      {
+        "index": 2,
+        "kind": "25",
+      },
+    ],
+  },
+]
+`;
+
+exports[`snapshots schematic connectivity: t-connection 1`] = `
+[
+  {
+    "names": [],
+    "points": [
+      {
+        "x": 20,
+        "y": 60,
+      },
+      {
+        "x": 60,
+        "y": 60,
+      },
+      {
+        "x": 60,
+        "y": 100,
+      },
+      {
+        "x": 100,
+        "y": 60,
+      },
+    ],
+    "records": [
+      {
+        "index": 1,
+        "kind": "27",
+      },
+      {
+        "index": 2,
+        "kind": "27",
+      },
+    ],
+  },
+]
+`;
+
+exports[`snapshots schematic connectivity: diagonal-connection 1`] = `
+[
+  {
+    "names": [],
+    "points": [
+      {
+        "x": 20,
+        "y": 20,
+      },
+      {
+        "x": 60,
+        "y": 60,
+      },
+      {
+        "x": 100,
+        "y": 20,
+      },
+      {
+        "x": 100,
+        "y": 100,
+      },
+    ],
+    "records": [
+      {
+        "index": 1,
+        "kind": "27",
+      },
+      {
+        "index": 2,
+        "kind": "27",
+      },
+    ],
+  },
+]
+`;
+
+exports[`snapshots schematic connectivity: bare-crossing 1`] = `
+[
+  {
+    "names": [],
+    "points": [
+      {
+        "x": 20,
+        "y": 60,
+      },
+      {
+        "x": 100,
+        "y": 60,
+      },
+    ],
+    "records": [
+      {
+        "index": 1,
+        "kind": "27",
+      },
+    ],
+  },
+  {
+    "names": [],
+    "points": [
+      {
+        "x": 60,
+        "y": 20,
+      },
+      {
+        "x": 60,
+        "y": 100,
+      },
+    ],
+    "records": [
+      {
+        "index": 2,
+        "kind": "27",
+      },
+    ],
+  },
+]
+`;
+
+exports[`snapshots schematic connectivity: junction-crossing 1`] = `
+[
+  {
+    "names": [],
+    "points": [
+      {
+        "x": 20,
+        "y": 60,
+      },
+      {
+        "x": 60,
+        "y": 20,
+      },
+      {
+        "x": 60,
+        "y": 60,
+      },
+      {
+        "x": 60,
+        "y": 100,
+      },
+      {
+        "x": 100,
+        "y": 60,
+      },
+    ],
+    "records": [
+      {
+        "index": 1,
+        "kind": "27",
+      },
+      {
+        "index": 2,
+        "kind": "27",
+      },
+      {
+        "index": 3,
+        "kind": "29",
+      },
+    ],
+  },
+]
+`;
+
+exports[`snapshots schematic connectivity: generic-text-crossing 1`] = `
+[
+  {
+    "names": [],
+    "points": [
+      {
+        "x": 20,
+        "y": 60,
+      },
+      {
+        "x": 100,
+        "y": 60,
+      },
+    ],
+    "records": [
+      {
+        "index": 1,
+        "kind": "27",
+      },
+    ],
+  },
+  {
+    "names": [],
+    "points": [
+      {
+        "x": 60,
+        "y": 20,
+      },
+      {
+        "x": 60,
+        "y": 100,
+      },
+    ],
+    "records": [
+      {
+        "index": 2,
+        "kind": "27",
+      },
+    ],
+  },
+]
+`;
