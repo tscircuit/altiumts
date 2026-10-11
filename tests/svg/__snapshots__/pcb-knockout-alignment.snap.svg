@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="626" viewBox="0 0 1605 1005" role="img" aria-label="Altium PCB" class="altium-pcb" data-renderer="altiumts">
+  <title>Altium PCB</title>
+  <rect width="100%" height="100%" fill="#071a16"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <polygon data-record="BoardOutline" points="52.5,952.5 1552.5,952.5 1552.5,52.5 52.5,52.5" fill="#123d32" stroke="#6ee7b7" stroke-width="3"/>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="30" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-before-edge" transform="translate(302.5 252.5) rotate(0) scale(1 1)">top_left</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="30" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="central" transform="translate(302.5 502.5) rotate(0) scale(1 1)">center_left</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="30" font-weight="normal" font-style="normal" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(302.5 752.5) rotate(0) scale(1 1)">bottom_left</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="30" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(802.5 252.5) rotate(0) scale(1 1)">top_center</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="30" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="central" transform="translate(802.5 502.5) rotate(0) scale(1 1)">center</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="30" font-weight="normal" font-style="normal" text-anchor="middle" dominant-baseline="text-after-edge" transform="translate(802.5 752.5) rotate(0) scale(1 1)">bottom_center</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="30" font-weight="normal" font-style="normal" text-anchor="end" dominant-baseline="text-before-edge" transform="translate(1302.5 252.5) rotate(0) scale(1 1)">top_right</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="30" font-weight="normal" font-style="normal" text-anchor="end" dominant-baseline="central" transform="translate(1302.5 502.5) rotate(0) scale(1 1)">center_right</text>
+    <text data-record="Text" data-layer="TOPOVERLAY" x="0" y="0" fill="#f8fafc" font-family="Arial, sans-serif" font-size="30" font-weight="normal" font-style="normal" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(1302.5 752.5) rotate(0) scale(1 1)">bottom_right</text>
+    <line data-record="Track" data-layer="TOP" x1="282.5" y1="252.5" x2="322.5" y2="252.5" stroke="#ef4444" stroke-width="3"/>
+    <line data-record="Track" data-layer="TOP" x1="302.5" y1="272.5" x2="302.5" y2="232.5" stroke="#ef4444" stroke-width="3"/>
+    <line data-record="Track" data-layer="TOP" x1="282.5" y1="502.5" x2="322.5" y2="502.5" stroke="#ef4444" stroke-width="3"/>
+    <line data-record="Track" data-layer="TOP" x1="302.5" y1="522.5" x2="302.5" y2="482.5" stroke="#ef4444" stroke-width="3"/>
+    <line data-record="Track" data-layer="TOP" x1="282.5" y1="752.5" x2="322.5" y2="752.5" stroke="#ef4444" stroke-width="3"/>
+    <line data-record="Track" data-layer="TOP" x1="302.5" y1="772.5" x2="302.5" y2="732.5" stroke="#ef4444" stroke-width="3"/>
+    <line data-record="Track" data-layer="TOP" x1="782.5" y1="252.5" x2="822.5" y2="252.5" stroke="#ef4444" stroke-width="3"/>
+    <line data-record="Track" data-layer="TOP" x1="802.5" y1="272.5" x2="802.5" y2="232.5" stroke="#ef4444" stroke-width="3"/>
+    <line data-record="Track" data-layer="TOP" x1="782.5" y1="502.5" x2="822.5" y2="502.5" stroke="#ef4444" stroke-width="3"/>
+    <line data-record="Track" data-layer="TOP" x1="802.5" y1="522.5" x2="802.5" y2="482.5" stroke="#ef4444" stroke-width="3"/>
+    <line data-record="Track" data-layer="TOP" x1="782.5" y1="752.5" x2="822.5" y2="752.5" stroke="#ef4444" stroke-width="3"/>
+    <line data-record="Track" data-layer="TOP" x1="802.5" y1="772.5" x2="802.5" y2="732.5" stroke="#ef4444" stroke-width="3"/>
+    <line data-record="Track" data-layer="TOP" x1="1282.5" y1="252.5" x2="1322.5" y2="252.5" stroke="#ef4444" stroke-width="3"/>
+    <line data-record="Track" data-layer="TOP" x1="1302.5" y1="272.5" x2="1302.5" y2="232.5" stroke="#ef4444" stroke-width="3"/>
+    <line data-record="Track" data-layer="TOP" x1="1282.5" y1="502.5" x2="1322.5" y2="502.5" stroke="#ef4444" stroke-width="3"/>
+    <line data-record="Track" data-layer="TOP" x1="1302.5" y1="522.5" x2="1302.5" y2="482.5" stroke="#ef4444" stroke-width="3"/>
+    <line data-record="Track" data-layer="TOP" x1="1282.5" y1="752.5" x2="1322.5" y2="752.5" stroke="#ef4444" stroke-width="3"/>
+    <line data-record="Track" data-layer="TOP" x1="1302.5" y1="772.5" x2="1302.5" y2="732.5" stroke="#ef4444" stroke-width="3"/>
+  </g>
+</svg>
