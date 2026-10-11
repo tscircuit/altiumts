@@ -287,6 +287,13 @@
     "reason": ""
   },
   {
+    "name": "ti-pmp22712-overview",
+    "test": "ti-pmp22712-overview.test.ts",
+    "sourceSha256": "3343b2cb765db52243ccfa584cdded44588d3ad85067e89192f09931b9a309c1",
+    "status": "captured",
+    "reason": ""
+  },
+  {
     "name": "ti-pmp22712-pcb",
     "test": "ti-pmp22712-pcb.test.ts",
     "sourceSha256": "3343b2cb765db52243ccfa584cdded44588d3ad85067e89192f09931b9a309c1",
