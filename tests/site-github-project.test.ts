@@ -49,7 +49,7 @@ test("downloads current Altium project files and excludes generated history", as
       "",
     ].join("\r\n"),
   )
-  const rawFiles = new Map<string, Uint8Array>([
+  const rawFiles = new Map<string, Uint8Array<ArrayBuffer>>([
     ["Demo/Main.PcbDoc", new Uint8Array(pcbBytes)],
     ["Demo/Main.PrjPcb", projectBytes],
     ["Demo/Main.SchDoc", new Uint8Array(schematicBytes)],

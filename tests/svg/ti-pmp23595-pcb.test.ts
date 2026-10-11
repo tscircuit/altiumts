@@ -17,7 +17,7 @@ test("renders the TI PMP23595 PCB", async () => {
   expect(svg).toContain('data-record="Track"')
   expect(svg).toContain('data-record="Pad"')
   expect(svg).toContain('data-record="Via"')
-  expect(svg).toContain(">PMP23595A</text>")
+  expect(svg).toContain('aria-label="PMP23595A"')
   expect(svg).not.toContain(".PRJ_Number")
   expect(svg).not.toContain(".PCB_Rev")
   expect(svg).not.toMatch(/NaN|Infinity/)

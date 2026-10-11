@@ -1,3 +1,4 @@
+import type { AltiumEmbeddedFont } from "../altium-embedded-font"
 import { decodeAltiumWideString } from "../decode-altium-wide-string"
 import { approximateAltiumArc } from "../geometry/approximateAltiumArc"
 import { getPcbRegionSemanticKind } from "../pcb-contours"
@@ -10,6 +11,7 @@ import {
   getPcbVertexPoints,
   parsePcbMeasurement,
 } from "./altium-values"
+import { getPcbEmbeddedTextPath } from "./pcb-embedded-font"
 import { getPcbLayerColor, PCB_BOARD_FILL_COLOR } from "./pcb-layer"
 import { isPcbSolderMaskLayer } from "./pcb-solder-mask"
 import {
@@ -31,12 +33,14 @@ const COPPER_FILL_OPACITY = 0.32
 export function renderPcbRecord({
   record,
   text,
+  embeddedFont,
   shouldFillPolygon,
   svgOptions,
   viewport,
 }: {
   record: AltiumRecord
   text?: string
+  embeddedFont?: AltiumEmbeddedFont
   shouldFillPolygon: boolean
   svgOptions: AltiumPcbSvgOptions
   viewport: SvgViewport
@@ -187,6 +191,19 @@ export function renderPcbRecord({
             ? -justificationHeight / 2
             : 0
         : 0
+    const transform = `translate(${formatSvgNumber(x)} ${formatSvgNumber(y)}) rotate(${formatSvgNumber(-rotation)}) scale(${mirror} 1)`
+    const embeddedPath =
+      embeddedFont &&
+      getPcbEmbeddedTextPath({
+        embeddedFont,
+        text: normalizedText,
+        height: Math.max(justificationHeight, 3),
+        lineHeight: fontSize * 1.2,
+        positioning: { anchor, baseline, y: textY },
+      })
+    if (embeddedPath !== undefined) {
+      return `<g ${metadata} data-font-source="embedded" data-font-name="${escapeXml(fontName)}" aria-label="${escapeXml(normalizedText)}" fill="${color}" transform="${transform}"><path d="${embeddedPath}"/></g>`
+    }
     const lines = normalizedText.split("\n")
     const textContent =
       lines.length === 1
@@ -197,7 +214,7 @@ export function renderPcbRecord({
                 `<tspan x="0" dy="${index === 0 ? "0" : formatSvgNumber(fontSize * 1.2)}">${escapeXml(line)}</tspan>`,
             )
             .join("")
-    return `<text ${metadata} x="0" y="${formatSvgNumber(textY)}" fill="${color}" font-family="${escapeXml(fontName)}, sans-serif" font-size="${formatSvgNumber(fontSize)}" font-weight="${fontWeight}" font-style="${fontStyle}" text-anchor="${anchor}" dominant-baseline="${baseline}" transform="translate(${formatSvgNumber(x)} ${formatSvgNumber(y)}) rotate(${formatSvgNumber(-rotation)}) scale(${mirror} 1)">${textContent}</text>`
+    return `<text ${metadata} x="0" y="${formatSvgNumber(textY)}" fill="${color}" font-family="${escapeXml(fontName)}, sans-serif" font-size="${formatSvgNumber(fontSize)}" font-weight="${fontWeight}" font-style="${fontStyle}" text-anchor="${anchor}" dominant-baseline="${baseline}" transform="${transform}">${textContent}</text>`
   }
 
   if (kind === "Component" && svgOptions.showComponentOrigins) {
