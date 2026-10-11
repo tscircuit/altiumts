@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="766" viewBox="0 0 428 328" role="img" aria-label="GeneratedSystem-07 LM50HV-Q1 Temperature Sensor" class="altium-sheet" data-renderer="altiumts">
+  <title>GeneratedSystem-07 LM50HV-Q1 Temperature Sensor</title>
+  <rect width="100%" height="100%" fill="#fffcf8"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <defs><clipPath id="altium-sheet-paper"><rect x="14" y="14" width="400" height="300"/></clipPath></defs>
+    <g data-record="SheetBorder" fill="#fffef8" stroke="#334155" stroke-width="1"><rect x="14" y="14" width="400" height="300"/><rect x="24" y="24" width="380" height="280" fill="none"/><path d="M 87.3333 14 V 24 M 87.3333 304 V 314"/><path d="M 150.6667 14 V 24 M 150.6667 304 V 314"/><path d="M 214 14 V 24 M 214 304 V 314"/><path d="M 277.3333 14 V 24 M 277.3333 304 V 314"/><path d="M 340.6667 14 V 24 M 340.6667 304 V 314"/><path d="M 14 94 H 24 M 404 94 H 414"/><path d="M 14 164 H 24 M 404 164 H 414"/><path d="M 14 234 H 24 M 404 234 H 414"/></g>
+    <g data-sheet-content="true" clip-path="url(#altium-sheet-paper)">
+    <polyline data-record="6" points="144,170 144,165.2" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="144,162.8 144,158" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="147.2004,165.2 140.7996,165.2" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="147.2004,162.8 140.7996,162.8" fill="none" stroke="#840000" stroke-width="1"/>
+    <text data-record="34" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(146 160) rotate(0)">C_BYPASS</text>
+    <text data-record="41" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-before-edge" transform="translate(146 168) rotate(0)">0.1uF</text>
+    <g data-record="2"><line x1="144" y1="163" x2="144" y2="158" stroke="#840000" stroke-width="1"/></g>
+    <g data-record="2"><line x1="144" y1="165" x2="144" y2="170" stroke="#840000" stroke-width="1"/></g>
+    <rect data-record="14" x="186" y="140" width="56" height="48" rx="0" fill="#ffffc2" stroke="#880000" stroke-width="1"/>
+    <text data-record="34" x="0" y="0" fill="#006464" font-family="Arial" font-size="3.6" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(244 129) rotate(0)">U1</text>
+    <g data-record="2"><line x1="214" y1="140" x2="214" y2="132" stroke="#840000" stroke-width="1"/><polygon class="altium-schematic-pin-clock-symbol" points="214,140 217,135 211,135" fill="#fff" stroke="#840000" stroke-width="1"/><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(214 133) rotate(-90)">1</text><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="central" transform="translate(214 142) rotate(-90)">VS</text></g>
+    <g data-record="2"><line x1="242" y1="164" x2="250" y2="164" stroke="#840000" stroke-width="1"/><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(244 164) rotate(0)">2</text><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="central" transform="translate(240 164) rotate(0)">VO</text></g>
+    <g data-record="2"><line x1="214" y1="188" x2="214" y2="196" stroke="#840000" stroke-width="1"/><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="text-after-edge" transform="translate(214 190) rotate(-90)">3</text><text x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(214 186) rotate(-90)">GND</text></g>
+    <text data-record="4" x="0" y="0" fill="#006464" font-family="Arial" font-size="3.6" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(244 133) rotate(0)">LM50HVQDBZRQ1</text>
+    <polyline data-record="6" points="284,195 284,190.2" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="284,187.8 284,183" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="287.2004,190.2 280.7996,190.2" fill="none" stroke="#840000" stroke-width="1"/>
+    <polyline data-record="6" points="287.2004,187.8 280.7996,187.8" fill="none" stroke="#840000" stroke-width="1"/>
+    <text data-record="34" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(286 185) rotate(0)">C_LOAD</text>
+    <text data-record="41" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-before-edge" transform="translate(286 193) rotate(0)">1uF</text>
+    <g data-record="2"><line x1="284" y1="188" x2="284" y2="183" stroke="#840000" stroke-width="1"/></g>
+    <g data-record="2"><line x1="284" y1="190" x2="284" y2="195" stroke="#840000" stroke-width="1"/></g>
+    <polyline data-record="27" points="214,132 214,129" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="214,129 213,129" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="214,196 214,199" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="214,199 213,199" fill="none" stroke="#008800" stroke-width="1"/>
+    <polyline data-record="27" points="284,183 284,143" fill="none" stroke="#008800" stroke-width="1"/>
+    <g data-record="17"><path d="M 144 158 L 144 150 M 139 150 L 149 150" fill="none" stroke="#840000" stroke-width="1"/><text x="144" y="146" text-anchor="middle" dominant-baseline="auto" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none">VS</text></g>
+    <g data-record="17"><path d="M 144 170 L 144 178 M 149 178 L 139 178" fill="none" stroke="#840000" stroke-width="1"/><text x="144" y="182" text-anchor="middle" dominant-baseline="hanging" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none">GND</text></g>
+    <g data-record="17"><path d="M 284 195 L 284 203 M 289 203 L 279 203" fill="none" stroke="#840000" stroke-width="1"/><text x="284" y="207" text-anchor="middle" dominant-baseline="hanging" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none">GND</text></g>
+    <text data-record="25" x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="central" transform="translate(213 129) rotate(0)">U2_OUT</text>
+    <text data-record="25" x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(250 164) rotate(0)">U1_GPIO_PA27</text>
+    <text data-record="25" x="0" y="0" fill="#840000" font-family="Arial" font-size="4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="end" dominant-baseline="central" transform="translate(213 199) rotate(0)">U2_GND</text>
+    <text data-record="4" x="0" y="0" fill="#840000" font-family="Arial" font-size="2.4" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="central" transform="translate(283 163) rotate(-90)">TEMP_SENSE</text>
+    </g>
+  </g>
+</svg>
