@@ -97,13 +97,13 @@ export function getPcbLayerStack(
       (field) => [field.key.toUpperCase(), field.value] as const,
     ),
   )
-  const entries = [
+  const modernEntries = [
     ...readIndexedLayers(fields, "LAYER_V8_", "v8"),
     ...readIndexedLayers(fields, "LAYERV7_", "v7"),
   ]
-  if (entries.length === 0) {
-    entries.push(...readIndexedLayers(fields, "LAYER", "legacy"))
-  }
+  const entries = modernEntries.some(isCopperLayerStackEntry)
+    ? modernEntries
+    : readIndexedLayers(fields, "LAYER", "legacy")
   const masterPrefix = fields.has("V9_MASTERSTACK_ID")
     ? "V9_MASTERSTACK_"
     : "LAYERMASTERSTACK_V8"
@@ -124,6 +124,16 @@ export function getPcbLayerStack(
     subStacks: readLayerSubStacks(fields),
     traceImpedanceConfigurations,
   }
+}
+
+function isCopperLayerStackEntry(entry: AltiumPcbLayerStackEntry): boolean {
+  const numericLayerId = Number(entry.layerId)
+  if (!Number.isSafeInteger(numericLayerId)) {
+    return entry.layerId === undefined
+  }
+
+  const layerFamily = Math.floor(numericLayerId / 0x1_0000)
+  return layerFamily === 0x100 || layerFamily === 0x101
 }
 
 function readImpedanceProfiles(
