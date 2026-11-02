@@ -53,7 +53,7 @@ interface AddVariantParameterSectionsInput {
   variant: AltiumProjectVariant
 }
 
-const PARAMETER_REFERENCE = /^=([A-Za-z][A-Za-z0-9_]*)$/u
+const PARAMETER_REFERENCE = /^=([A-Za-z][A-Za-z0-9_ ]*)$/u
 const DOCUMENT_PARAMETER_CACHE = new WeakMap<
   AltiumSchDoc,
   CachedSchematicParameters
@@ -161,7 +161,12 @@ function getSchematicComponentParameters(
     if (ownedRecord.recordKind !== "41") continue
     const name = ownedRecord.getDecoded("NAME")
     const text = ownedRecord.getDecoded("TEXT")
-    if (name && text !== undefined) parameters.set(name.toLowerCase(), text)
+    if (!name || text === undefined) continue
+    // Title-block fields such as NAME=Revision, TEXT==Revision refer to
+    // the document parameter rather than replacing it with a self-reference.
+    const referencedName = PARAMETER_REFERENCE.exec(text)?.[1]
+    if (referencedName?.toLowerCase() === name.toLowerCase()) continue
+    parameters.set(name.toLowerCase(), text)
   }
 
   return parameters
