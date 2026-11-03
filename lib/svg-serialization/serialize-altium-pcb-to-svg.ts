@@ -30,6 +30,7 @@ import {
 import { getPcbSolderMaskRecords } from "./pcb-solder-mask"
 import { resolvePcbSpecialStrings } from "./pcb-special-strings"
 import { renderPcbRecord } from "./render-pcb-record"
+import { resolvePcbComponentSpecialStrings } from "./resolve-pcb-component-special-strings"
 import { sortPcbRecordsForPainting } from "./sort-pcb-records-for-painting"
 import type {
   AltiumPcbSvgOptions,
@@ -150,12 +151,12 @@ export function serializeAltiumPcbToSvg(
     const rendered = renderPcbRecord({
       record,
       text:
-        resolveComponentText(
+        resolveComponentText({
           document,
           record,
           componentDesignatorTextLookup,
           componentCommentTextLookup,
-        ) ??
+        }) ??
         (record.recordKind === "Text"
           ? resolvePcbSpecialStrings(getPcbText(record), projectParameters)
           : undefined),
@@ -182,34 +183,40 @@ export function serializeAltiumPcbToSvg(
   })
 }
 
-function resolveComponentText(
-  document: AltiumPcbDocument,
-  record: AltiumRecord,
-  componentDesignatorTextLookup: ReadonlyMap<number, string>,
-  componentCommentTextLookup: ReadonlyMap<number, string>,
-): string | undefined {
+function resolveComponentText({
+  document,
+  record,
+  componentDesignatorTextLookup,
+  componentCommentTextLookup,
+}: {
+  document: AltiumPcbDocument
+  record: AltiumRecord
+  componentDesignatorTextLookup: ReadonlyMap<number, string>
+  componentCommentTextLookup: ReadonlyMap<number, string>
+}): string | undefined {
   if (record.recordKind !== "Text") return undefined
   const text = getPcbText(record)
-  const specialString = text.toLowerCase()
-  if (specialString !== ".designator" && specialString !== ".comment") {
-    return undefined
-  }
+  if (!text.includes(".")) return undefined
   const componentIndex = record.getNumber("COMPONENT")
   const component = getPcbRecordComponent(document, record)
   // Resolve SVG text from placed records or raw board fields. The component
   // accessor retains SOURCECOMMENT compatibility for API callers.
-  const value =
-    specialString === ".designator"
-      ? ((componentIndex === undefined
-          ? undefined
-          : componentDesignatorTextLookup.get(componentIndex)) ??
-        component?.getDecoded("SOURCEDESIGNATOR") ??
-        component?.getDecoded("DESIGNATOR"))
-      : ((componentIndex === undefined
-          ? undefined
-          : componentCommentTextLookup.get(componentIndex)) ??
-        component?.getDecoded("COMMENT"))
-  return value ?? ""
+  const componentDesignatorText =
+    (componentIndex === undefined
+      ? undefined
+      : componentDesignatorTextLookup.get(componentIndex)) ??
+    component?.getDecoded("SOURCEDESIGNATOR") ??
+    component?.getDecoded("DESIGNATOR")
+  const componentCommentText =
+    (componentIndex === undefined
+      ? undefined
+      : componentCommentTextLookup.get(componentIndex)) ??
+    component?.getDecoded("COMMENT")
+  return resolvePcbComponentSpecialStrings({
+    text,
+    componentDesignatorText,
+    componentCommentText,
+  })
 }
 
 function createComponentTextLookup(
