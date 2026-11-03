@@ -269,3 +269,29 @@ function toArrayBuffer(bytes: Uint8Array): ArrayBuffer {
     bytes.byteOffset + bytes.byteLength,
   ) as ArrayBuffer
 }
+
+test("applies top-side painting only to the Board overview", () => {
+  const source = [
+    "|RECORD=Board",
+    "|RECORD=Track|LAYER=TOP|X1=100mil|Y1=100mil|X2=500mil|Y2=200mil|WIDTH=10mil",
+    "|RECORD=Track|LAYER=BOTTOMOVERLAY|X1=100mil|Y1=100mil|X2=500mil|Y2=200mil|WIDTH=10mil",
+  ].join("\n")
+  const state = parseBrowserProjectFiles([
+    { path: "board.PcbDoc", bytes: new TextEncoder().encode(source).buffer },
+  ])
+  const pcb = state.manifest.documents[0]!
+  const overview = pcb.views.find(({ id }) => id === "overview")!
+  pcb.views.push({ ...overview, id: "custom_layers", label: "Custom layers" })
+  for (const viewId of ["overview", "custom_layers", "board"]) {
+    const svg = renderProjectDocument({ state, documentId: pcb.id, viewId })
+    const copperIndex = svg.indexOf('data-layer="TOP"')
+    const overlayIndex = svg.indexOf('data-layer="BOTTOMOVERLAY"')
+    expect(copperIndex).toBeGreaterThan(-1)
+    expect(overlayIndex).toBeGreaterThan(-1)
+    if (viewId === "overview") {
+      expect(overlayIndex).toBeLessThan(copperIndex)
+    } else {
+      expect(copperIndex).toBeLessThan(overlayIndex)
+    }
+  }
+})

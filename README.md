@@ -24,6 +24,10 @@ complete PCBs, and individual PCB layers as SVGs. Local project contents stay
 in the browser and are never uploaded; GitHub projects are downloaded directly
 from GitHub and parsed locally.
 
+PCBs open in a Board overview of outer copper, silkscreen, and multilayer
+pads/vias. Mechanical drawings and dimensions remain available in individual
+layer views and Complete board. Hidden layers do not affect the viewport fit.
+
 [Open the hosted Altium File Viewer by tscircuit](https://altiumviewer.tscircuit.com)
 
 This is an open-source community tool by tscircuit. It is not affiliated with
