@@ -16,6 +16,7 @@ import {
   type ProjectParameterName,
 } from "../project-parameters"
 import type { AltiumRecord } from "../records/altium-record"
+import { getPcbEmbeddedFont } from "./pcb-embedded-font"
 import {
   getPcbBoardOutline,
   getPcbContentBounds,
@@ -149,6 +150,10 @@ export function serializeAltiumPcbToSvg(
         !polygonIndexesWithRegionRecords.has(polygonIndex))
     const rendered = renderPcbRecord({
       record,
+      embeddedFont:
+        options.showText === false
+          ? undefined
+          : getPcbEmbeddedFont(document, record),
       text:
         resolveComponentText(
           document,

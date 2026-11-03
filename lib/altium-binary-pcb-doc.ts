@@ -1,8 +1,10 @@
+import type { AltiumEmbeddedFont } from "./altium-embedded-font"
 import { AltiumEmbeddedModel } from "./altium-embedded-model"
 import { AltiumNode } from "./base/altium-node"
 import type { AltiumCompoundFile } from "./compound-file/altium-compound-file"
 import { AltiumSerializationError } from "./errors/altium-error"
 import type { AltiumBounds } from "./geometry/altium-geometry"
+import { parseAltiumEmbeddedFonts } from "./parser/parse-altium-embedded-fonts"
 import {
   type AltiumPcbConnectivityGraph,
   getPcbComponentBounds,
@@ -56,6 +58,32 @@ export class AltiumBinaryPcbDoc extends AltiumNode {
   readonly propertyRecords: ReadonlyMap<string, AltiumRecord[]>
   readonly streamSummaries: AltiumPcbStreamSummary[]
   readonly wideStrings: ReadonlyMap<number, string>
+  private parsedEmbeddedFonts?: AltiumEmbeddedFont[]
+
+  get embeddedFonts(): readonly AltiumEmbeddedFont[] {
+    if (!this.parsedEmbeddedFonts) {
+      const fontStream = this.compoundFile.getStream("/EmbeddedFonts6/Data")
+      const fontHeader = this.compoundFile.getStream(
+        "/EmbeddedFonts6/Header",
+      )?.content
+      const expectedCount =
+        fontHeader && fontHeader.length >= 4
+          ? new DataView(
+              fontHeader.buffer,
+              fontHeader.byteOffset,
+              fontHeader.byteLength,
+            ).getUint32(0, true)
+          : undefined
+      this.parsedEmbeddedFonts = fontStream
+        ? parseAltiumEmbeddedFonts(fontStream.content, {
+            expectedCount,
+            tolerateInvalidRecords: true,
+          })
+        : []
+      this.adoptChildren(this.parsedEmbeddedFonts)
+    }
+    return this.parsedEmbeddedFonts
+  }
 
   constructor(init: {
     compoundFile: AltiumCompoundFile
