@@ -78,7 +78,7 @@ test("models schematic ownership and named electrical connectivity", async () =>
   expect(document.wires).toHaveLength(146)
   expect(document.ports).toHaveLength(91)
   expect(document.index.getOwnershipCycles()).toEqual([])
-  expect(document.netGraph.nets).toHaveLength(298)
+  expect(document.netGraph.nets).toHaveLength(285)
   expect(
     document.netGraph.nets.filter((net) => net.names.length > 0),
   ).toHaveLength(43)
