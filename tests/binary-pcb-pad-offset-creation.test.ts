@@ -2,7 +2,7 @@ import { expect, test } from "bun:test"
 import { parseAltiumBinaryPcbDoc, serializeAltiumPcbDocToBinary } from "../lib"
 
 for (const holeShape of ["ROUND", "SLOT", "SQUARE"]) {
-  test.failing(`writes signed per-layer drill offsets for ${holeShape} holes`, () => {
+  test(`writes signed per-layer drill offsets for ${holeShape} holes`, () => {
     const offsets = Array.from(
       { length: 32 },
       (_, ordinal) =>
