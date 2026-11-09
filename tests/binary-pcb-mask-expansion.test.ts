@@ -42,7 +42,7 @@ test("snapshots mask expansion input and actual binary export", async () => {
 })
 
 for (const margin of [-0.1, 0, 0.3]) {
-  test.failing(`writes signed manual solder mask expansion ${margin} mm`, () => {
+  test(`writes signed manual solder mask expansion ${margin} mm`, () => {
     const pcb = parseAltiumBinaryPcbDoc(
       serializeAltiumPcbDocToBinary(
         `${outline}\n${pad}|X=80mil|SOLDERMASKEXPANSIONMODE=Manual|SOLDERMASKEXPANSION_MANUAL=${margin}mm`,
@@ -57,3 +57,39 @@ for (const margin of [-0.1, 0, 0.3]) {
     ).toBeCloseTo(margin, 5)
   })
 }
+
+for (const [mode, expected] of [
+  ["None", "None"],
+  ["0", "None"],
+  ["Rule", "Rule"],
+  ["1", "Rule"],
+  ["manual", "Manual"],
+  ["2", "Manual"],
+]) {
+  test(`round-trips solder mask mode ${mode}`, () => {
+    const pcb = parseAltiumBinaryPcbDoc(
+      serializeAltiumPcbDocToBinary(
+        `${outline}\n${pad}|SOLDERMASKEXPANSIONMODE=${mode}`,
+      ),
+    )
+    expect(pcb.getRecordsByKind("Pad")[0]?.get("SOLDERMASKEXPANSIONMODE")).toBe(
+      expected,
+    )
+  })
+}
+
+test("rejects unknown mask modes instead of silently changing fabrication intent", () => {
+  expect(() =>
+    serializeAltiumPcbDocToBinary(
+      `${outline}\n${pad}|SOLDERMASKEXPANSIONMODE=unexpected`,
+    ),
+  ).toThrow("Unsupported solder mask expansion mode")
+})
+
+test("omitted mask fields preserve the zero/default encoding", () => {
+  expect(serializeAltiumPcbDocToBinary(`${outline}\n${pad}`)).toEqual(
+    serializeAltiumPcbDocToBinary(
+      `${outline}\n${pad}|SOLDERMASKEXPANSIONMODE=None|SOLDERMASKEXPANSION_MANUAL=0mil`,
+    ),
+  )
+})
