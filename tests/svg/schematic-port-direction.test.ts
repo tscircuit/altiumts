@@ -1,13 +1,11 @@
 import { expect, test } from "bun:test"
 import {
   AltiumRecord,
+  getSchematicConnectionSegments,
+  getSchematicPortDirection,
   parseAltiumAscii,
   serializeAltiumSheetToSvg,
 } from "../../lib"
-import {
-  getSchematicConnectionSegments,
-  getSchematicPortDirection,
-} from "../../lib/svg-serialization/get-schematic-port-direction"
 
 function renderPort(fields: string, connections: string[] = []) {
   const lines = parseAltiumAscii(
@@ -43,6 +41,7 @@ for (const ioType of [1, 2]) {
         atEnd ? rightWire : leftWire,
       ])
       const pointsLeft = ioType === 1 ? atEnd : !atEnd
+      expect(direction.connectedEnd).toBe(atEnd ? "end" : "start")
       expect(direction.pointAtStart).toBe(pointsLeft)
       expect(direction.pointAtEnd).toBe(!pointsLeft)
       expect(svg).toContain(pointsLeft ? 'd="M 50 150 L ' : "L 90 150 L ")
@@ -81,11 +80,18 @@ test("unspecified ports preserve all eight saved arrow styles", () => {
 test("bidirectional ports have arrowheads at both ends", () => {
   for (const connections of [[], [leftWire], [rightWire]]) {
     const { direction, svg } = renderPort("|IOTYPE=3", connections)
-    expect(direction).toEqual({
+    expect(direction).toMatchObject({
       vertical: false,
       pointAtStart: true,
       pointAtEnd: true,
     })
+    expect(direction.connectedEnd).toBe(
+      connections[0] === leftWire
+        ? "start"
+        : connections[0] === rightWire
+          ? "end"
+          : undefined,
+    )
     expect(svg).toContain('d="M 50 150 L ')
     expect(svg).toContain("L 90 150 L ")
   }

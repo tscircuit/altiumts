@@ -7,6 +7,10 @@ import {
   AltiumSchImageRecord,
   type AltiumSchSheetRecord,
 } from "../records/altium-schematic-records"
+import {
+  getSchematicConnectionSegments,
+  getSchematicPortDirection,
+} from "../schematic-connectivity"
 import { resolveSchematicParameterReferenceWithContext } from "../schematic-parameter-reference"
 import {
   altiumColorToCss,
@@ -16,10 +20,6 @@ import {
 } from "./altium-values"
 import { getSchematicFont } from "./get-schematic-font"
 import { getSchematicGraphicRightEdge } from "./get-schematic-graphic-right-edge"
-import {
-  getSchematicConnectionSegments,
-  getSchematicPortDirection,
-} from "./get-schematic-port-direction"
 import { getSchematicSheetSize } from "./get-schematic-sheet-size"
 import { renderAltiumNegatedText } from "./render-altium-negated-text"
 import { renderSchematicPinEdgeSymbols } from "./render-schematic-pin-edge-symbols"
