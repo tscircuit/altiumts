@@ -250,6 +250,12 @@ function serializeAltiumPadStack(fields: AltiumRecordFields): Uint8Array {
   const hasAlternatePadShape = Array.from({ length: 32 }, (_, ordinal) =>
     fields.has(`LAYER${ordinal}ALTSHAPE`),
   ).some(Boolean)
+  const hasHoleOffset = Array.from(
+    { length: 32 },
+    (_, ordinal) =>
+      fields.has(`LAYER${ordinal}HOLEXOFFSET`) ||
+      fields.has(`LAYER${ordinal}HOLEYOFFSET`),
+  ).some(Boolean)
   const hasCornerRadius = Array.from({ length: 32 }, (_, ordinal) =>
     fields.has(`LAYER${ordinal}CORNERRADIUS`),
   ).some(Boolean)
@@ -257,7 +263,8 @@ function serializeAltiumPadStack(fields: AltiumRecordFields): Uint8Array {
     holeShape !== "SLOT" &&
     holeShape !== "SQUARE" &&
     !hasAlternatePadShape &&
-    !hasCornerRadius
+    !hasCornerRadius &&
+    !hasHoleOffset
   ) {
     return new Uint8Array()
   }
@@ -290,6 +297,16 @@ function serializeAltiumPadStack(fields: AltiumRecordFields): Uint8Array {
           parseAltiumFiniteNumber(fields.get(`LAYER${ordinal}CORNERRADIUS`)),
         ),
       ),
+    )
+    view.setInt32(
+      275 + ordinal * 4,
+      parseAltiumInternalUnits(fields.get(`LAYER${ordinal}HOLEXOFFSET`)),
+      true,
+    )
+    view.setInt32(
+      403 + ordinal * 4,
+      parseAltiumInternalUnits(fields.get(`LAYER${ordinal}HOLEYOFFSET`)),
+      true,
     )
     view.setUint8(532 + ordinal, alternateShapeId)
     view.setUint8(564 + ordinal, cornerRadius)

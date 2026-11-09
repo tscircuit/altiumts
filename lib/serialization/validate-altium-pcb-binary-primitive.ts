@@ -264,7 +264,9 @@ function isSupportedPrimitiveFieldName(
   if (SUPPORTED_PRIMITIVE_FIELDS[recordKind].has(fieldName)) return true
   if (
     recordKind === "Pad" &&
-    /^LAYER(?:[0-9]|[12][0-9]|3[01])(?:ALTSHAPE|CORNERRADIUS)$/u.test(fieldName)
+    /^LAYER(?:[0-9]|[12][0-9]|3[01])(?:ALTSHAPE|CORNERRADIUS|HOLEXOFFSET|HOLEYOFFSET)$/u.test(
+      fieldName,
+    )
   ) {
     return true
   }
