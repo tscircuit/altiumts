@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="480" height="480" viewBox="0 0 120 120" role="img" aria-label="mid-wire-label" class="altium-sheet" data-renderer="altiumts">
+  <title>mid-wire-label</title>
+  <rect width="100%" height="100%" fill="#fff"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <defs><clipPath id="altium-sheet-paper"><rect x="0" y="0" width="120" height="120"/></clipPath></defs>
+    <g data-sheet-content="true" clip-path="url(#altium-sheet-paper)">
+    <polyline data-record="27" points="20,60 100,60" fill="none" stroke="#800000" stroke-width="0.25"/>
+    <text data-record="25" x="0" y="0" fill="#1f2937" font-family="Arial" font-size="6" font-style="normal" font-weight="normal" text-decoration="none" text-anchor="start" dominant-baseline="text-after-edge" transform="translate(60 60) rotate(0)">SIGNAL</text>
+    </g>
+  </g>
+</svg>
