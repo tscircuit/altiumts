@@ -26,5 +26,7 @@ test("reproduces inactive polarized capacitor display modes on a real board", as
     title: "Altium DSP/FPGA power schematic display-mode reproduction",
   })
 
+  expect(svg).not.toContain("@DESIGNATOR")
+  expect(svg).not.toContain("INITIAL VOLTAGE")
   await expect(svg).toMatchSvgSnapshot(import.meta.path)
 })
