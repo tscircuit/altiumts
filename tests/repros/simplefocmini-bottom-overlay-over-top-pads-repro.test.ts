@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test"
 import { parseAltiumPcbDoc, serializeAltiumPcbToSvg } from "../../lib"
-import { readReference } from "./read-reference"
+import { readReference } from "../svg/read-reference"
 
 test("reproduces bottom overlay painted over top pads on SimpleFOC Mini", async () => {
   const source = await readReference("simplefocmini-2024-04-26.PcbDoc")
