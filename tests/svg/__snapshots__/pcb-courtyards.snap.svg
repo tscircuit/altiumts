@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="800" viewBox="0 0 588.5 588.5" role="img" aria-label="PCB courtyard layer colors" class="altium-pcb" data-renderer="altiumts">
+  <title>PCB courtyard layer colors</title>
+  <rect width="100%" height="100%" fill="#071a16"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <polygon data-record="BoardOutline" points="19.25,569.25 569.25,569.25 569.25,19.25 19.25,19.25 19.25,569.25" fill="#123d32" stroke="#6ee7b7" stroke-width="3"/>
+    <path data-record="Region" data-layer="MECHANICAL15" d="M 419.25 169.25 L 469.25 169.25 L 444.25 119.25 L 419.25 169.25 Z" fill="#ec4899" fill-opacity="0.32" fill-rule="evenodd" stroke="#ec4899" stroke-width="1.5"/>
+    <line data-record="Track" data-layer="MECHANICAL15" x1="119.25" y1="469.25" x2="219.25" y2="469.25" stroke="#ec4899" stroke-width="2"/>
+    <line data-record="Track" data-layer="MECHANICAL15" x1="219.25" y1="369.25" x2="119.25" y2="369.25" stroke="#ec4899" stroke-width="2"/>
+    <line data-record="Track" data-layer="MECHANICAL15" x1="219.25" y1="469.25" x2="219.25" y2="369.25" stroke="#ec4899" stroke-width="2"/>
+    <line data-record="Track" data-layer="MECHANICAL15" x1="119.25" y1="469.25" x2="119.25" y2="369.25" stroke="#ec4899" stroke-width="2"/>
+    <polyline data-record="Arc" data-layer="MECHANICAL16" points="369.25,269.25 368.8222,262.7237 367.5463,256.309 365.444,250.1158 362.5513,244.25 358.9177,238.8119 354.6053,233.8947 349.6881,229.5823 344.25,225.9487 338.3842,223.056 332.191,220.9537 325.7763,219.6778 319.25,219.25 312.7237,219.6778 306.309,220.9537 300.1158,223.056 294.25,225.9487 288.8119,229.5823 283.8947,233.8947 279.5823,238.8119 275.9487,244.25 273.056,250.1158 270.9537,256.309 269.6778,262.7237 269.25,269.25 269.6778,275.7763 270.9537,282.191 273.056,288.3842 275.9487,294.25 279.5823,299.6881 283.8947,304.6053 288.8119,308.9177 294.25,312.5513 300.1158,315.444 306.309,317.5463 312.7237,318.8222 319.25,319.25 325.7763,318.8222 332.191,317.5463 338.3842,315.444 344.25,312.5513 349.6881,308.9177 354.6053,304.6053 358.9177,299.6881 362.5513,294.25 365.444,288.3842 367.5463,282.191 368.8222,275.7763 369.25,269.25" fill="none" stroke="#ec4899" stroke-width="2"/>
+  </g>
+</svg>
