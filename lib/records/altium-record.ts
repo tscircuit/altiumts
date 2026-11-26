@@ -235,11 +235,17 @@ export class AltiumRecord extends AltiumLine implements AltiumRecordNode {
 
   delete(key: string): number {
     const originalLength = this.items.length
+    const removed = this.items.filter(
+      (item) => item instanceof AltiumField && item.key === key,
+    )
     this.items = this.items.filter(
       (item) => !(item instanceof AltiumField && item.key === key),
     )
     const deleted = originalLength - this.items.length
-    if (deleted > 0) this.markDirty()
+    if (deleted > 0) {
+      for (const item of removed) item.setParent(undefined)
+      this.markDirty()
+    }
     return deleted
   }
 
