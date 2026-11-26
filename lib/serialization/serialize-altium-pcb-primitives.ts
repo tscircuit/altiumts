@@ -12,6 +12,7 @@ import {
   toLegacyAltiumText,
 } from "./altium-binary-record-encoding"
 import { getAltiumPcbLayerId } from "./altium-pcb-binary-layers"
+import { parseAltiumMaskExpansionMode } from "./parse-altium-mask-expansion-mode"
 import { getAltiumPadShapeId } from "./validate-altium-pcb-binary-primitive"
 
 const NO_INDEX = 0xffff
@@ -64,7 +65,12 @@ export function serializeAltiumPadRecord(recordSource: string): Uint8Array[] {
     .uint8(0)
     .uint8(0)
     .int32(0)
-    .writeBytes(new Uint8Array(38))
+    // Pads6: signed solder-mask expansion at byte 90, mode at byte 102.
+    .writeBytes(new Uint8Array(23))
+    .int32(parseAltiumInternalUnits(fields.get("SOLDERMASKEXPANSION_MANUAL")))
+    .writeBytes(new Uint8Array(8))
+    .uint8(parseAltiumMaskExpansionMode(fields.get("SOLDERMASKEXPANSIONMODE")))
+    .writeBytes(new Uint8Array(2))
     .uint8(0)
     .float64(parseAltiumFiniteNumber(fields.get("HOLEROTATION")))
 
